@@ -1,0 +1,55 @@
+name: Chu-kei Search and Filter Contract
+
+on:
+  pull_request:
+    paths:
+      - 'site/assets/app.js'
+      - 'site/assets/search-core.js'
+      - 'tests/e2e/portal.spec.mjs'
+      - 'scripts/validate_search_filter_contract_v1.mjs'
+      - 'docs/SEARCH_FILTER_CONTRACT_V1.md'
+      - '.github/workflows/search-filter-contract.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/assets/app.js'
+      - 'site/assets/search-core.js'
+      - 'tests/e2e/portal.spec.mjs'
+      - 'scripts/validate_search_filter_contract_v1.mjs'
+      - 'docs/SEARCH_FILTER_CONTRACT_V1.md'
+      - '.github/workflows/search-filter-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  search-filter-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check JavaScript syntax
+        run: |
+          node --check site/assets/search-core.js
+          node --check site/assets/app.js
+          node --check scripts/validate_search_filter_contract_v1.mjs
+      - name: Run strict data and search gates
+        run: |
+          npm run quality:v43
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_search_filter_contract_v1.mjs
+      - name: Upload search contract report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-search-filter-contract
+          path: artifacts/search-filter-contract-report-v1.json
+          if-no-files-found: error
+          retention-days: 30

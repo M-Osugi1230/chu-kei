@@ -1,0 +1,47 @@
+name: One-time Quality Priority Patch
+
+on:
+  push:
+    branches:
+      - fix/quality-priority-ab
+    paths:
+      - '.github/workflows/patch-quality-priority.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/quality-priority-ab
+          fetch-depth: 0
+      - name: Patch A/B priority classification
+        shell: python
+        run: |
+          from pathlib import Path
+          path = Path('site/assets/quality.js')
+          text = path.read_text(encoding='utf-8')
+          old = "priority:r.score>=100?'A':r.score>=85?'B':'C'"
+          new = "priority:page(c)?'A':'B'"
+          if old not in text:
+              raise SystemExit('expected priority expression was not found')
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+      - name: Validate JavaScript and quality gates
+        run: |
+          node --check site/assets/quality.js
+          npm run quality:v43
+          node scripts/validate_quality_dashboard_v1.mjs
+      - name: Commit patch and remove one-time workflow
+        shell: bash
+        run: |
+          rm .github/workflows/patch-quality-priority.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/assets/quality.js .github/workflows/patch-quality-priority.yml
+          git commit -m "fix: align quality dashboard priorities with A/B policy"
+          git push origin HEAD:fix/quality-priority-ab

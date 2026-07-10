@@ -1,0 +1,82 @@
+name: Chu-kei Source Audit
+
+on:
+  pull_request:
+    paths:
+      - 'site/data/**'
+      - 'scripts/validate_source_registry_v1.mjs'
+      - 'scripts/check_live_links_v1.mjs'
+      - 'schemas/source-audit-report-v1.schema.json'
+      - 'docs/SOURCE_AUDIT_V1.md'
+      - '.github/workflows/source-audit.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/data/**'
+      - 'scripts/validate_source_registry_v1.mjs'
+      - 'scripts/check_live_links_v1.mjs'
+      - 'schemas/source-audit-report-v1.schema.json'
+      - 'docs/SOURCE_AUDIT_V1.md'
+      - '.github/workflows/source-audit.yml'
+  schedule:
+    - cron: '30 22 * * 6'
+  workflow_dispatch:
+    inputs:
+      link_limit:
+        description: '0 checks all unique URLs; positive values limit the run'
+        required: false
+        default: '0'
+
+permissions:
+  contents: read
+
+jobs:
+  source-registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run strict quality gate
+        run: npm run quality:v43
+      - name: Validate source registry
+        run: node scripts/validate_source_registry_v1.mjs
+      - name: Upload source registry report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-source-registry-report
+          path: artifacts/source-registry-report-v1.json
+          if-no-files-found: error
+          retention-days: 30
+
+  live-links:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check live source links
+        env:
+          LINK_CHECK_LIMIT: ${{ inputs.link_limit || '0' }}
+          LINK_CHECK_CONCURRENCY: '6'
+          LINK_CHECK_TIMEOUT_MS: '15000'
+        run: node scripts/check_live_links_v1.mjs
+      - name: Upload live link report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-live-link-report
+          path: artifacts/live-link-report-v1.json
+          if-no-files-found: error
+          retention-days: 90

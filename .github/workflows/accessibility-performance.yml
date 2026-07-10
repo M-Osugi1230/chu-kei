@@ -1,0 +1,84 @@
+name: Chu-kei Accessibility and Performance
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'tests/e2e/accessibility-performance.spec.mjs'
+      - 'scripts/validate_frontend_budget_v1.mjs'
+      - 'docs/ACCESSIBILITY_PERFORMANCE_GATE_V1.md'
+      - 'playwright.config.mjs'
+      - '.github/workflows/accessibility-performance.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - 'tests/e2e/accessibility-performance.spec.mjs'
+      - 'scripts/validate_frontend_budget_v1.mjs'
+      - 'docs/ACCESSIBILITY_PERFORMANCE_GATE_V1.md'
+      - 'playwright.config.mjs'
+      - '.github/workflows/accessibility-performance.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: accessibility-performance-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  static-budget:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate frontend budgets
+        run: node scripts/validate_frontend_budget_v1.mjs
+      - name: Upload static budget report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-frontend-budget-report
+          path: artifacts/frontend-budget-report-v1.json
+          if-no-files-found: error
+          retention-days: 30
+
+  browser-accessibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install pinned browser test dependencies
+        run: npm install --no-save --ignore-scripts --no-audit --no-fund @playwright/test@1.53.0 @axe-core/playwright@4.10.2
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run strict quality gates
+        run: |
+          npm run quality:v43
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_quality_dashboard_v1.mjs
+          node scripts/validate_data_contract_v1.mjs
+      - name: Run accessibility and performance E2E
+        run: npx playwright test tests/e2e/accessibility-performance.spec.mjs
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-accessibility-performance-report
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: warn
+          retention-days: 30

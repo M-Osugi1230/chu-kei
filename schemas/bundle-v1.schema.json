@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.example/schemas/bundle-v1.schema.json",
+  "title": "Chu-kei Data Bundle v1",
+  "type": "object",
+  "required": ["companies", "progress"],
+  "properties": {
+    "companies": {"type": "array", "items": {"$ref": "company-v1.schema.json"}, "minItems": 570, "maxItems": 570},
+    "progress": {"type": "array", "items": {"$ref": "progress-v1.schema.json"}, "minItems": 149, "maxItems": 149}
+  },
+  "additionalProperties": true
+}

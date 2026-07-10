@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.example/schemas/quality-profile-v1.schema.json",
+  "title": "Chu-kei Quality Profile v1",
+  "type": "object",
+  "required": ["stars", "score", "label", "reasons"],
+  "properties": {
+    "stars": {"type": "integer", "minimum": 1, "maximum": 5},
+    "score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+    "label": {"type": "string", "minLength": 1},
+    "reasons": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+  },
+  "additionalProperties": true
+}

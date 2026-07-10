@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.example/schemas/progress-v1.schema.json",
+  "title": "Chu-kei Plan Progress v1",
+  "type": "object",
+  "required": ["code", "fiscalYear", "metric"],
+  "properties": {
+    "code": {"type": "string", "pattern": "^[0-9A-Z]{4}$"},
+    "fiscalYear": {"type": ["string", "number"]},
+    "metric": {"type": "string", "minLength": 1},
+    "targetValue": {"type": ["number", "null"]},
+    "actualValue": {"type": ["number", "null"]},
+    "progressRate": {"type": ["number", "null"]},
+    "unit": {"type": ["string", "null"]},
+    "sourceUrl": {"type": ["string", "null"]},
+    "sourcePage": {"type": ["string", "number", "null"]},
+    "lastVerifiedDate": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,47 @@
+name: Chu-kei Data Contract Gate
+
+on:
+  pull_request:
+    paths:
+      - 'site/data/**'
+      - 'schemas/**'
+      - 'scripts/validate_data_contract_v1.mjs'
+      - 'docs/DATA_CONTRACT_V1.md'
+      - '.github/workflows/data-contract.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/data/**'
+      - 'schemas/**'
+      - 'scripts/validate_data_contract_v1.mjs'
+      - 'docs/DATA_CONTRACT_V1.md'
+      - '.github/workflows/data-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  data-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run strict quality gate
+        run: npm run quality:v43
+      - name: Validate data contract
+        run: node scripts/validate_data_contract_v1.mjs
+      - name: Upload contract report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-data-contract-report
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,55 @@
+name: Chu-kei Production Repair Queue
+
+on:
+  pull_request:
+    paths:
+      - 'site/data/**'
+      - 'scripts/build_production_repair_queue_v1.mjs'
+      - 'scripts/validate_production_repair_queue_v1.mjs'
+      - 'docs/PRODUCTION_REPAIR_QUEUE_V1.md'
+      - '.github/workflows/production-repair-queue.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/data/**'
+      - 'scripts/build_production_repair_queue_v1.mjs'
+      - 'scripts/validate_production_repair_queue_v1.mjs'
+      - 'docs/PRODUCTION_REPAIR_QUEUE_V1.md'
+      - '.github/workflows/production-repair-queue.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  production-repair-queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run strict quality and score gates
+        run: |
+          npm run quality:v43
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+      - name: Build production repair queue
+        run: node scripts/build_production_repair_queue_v1.mjs
+      - name: Validate production repair queue
+        run: node scripts/validate_production_repair_queue_v1.mjs
+      - name: Upload repair queue
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-production-repair-queue
+          path: |
+            artifacts/production-repair-queue-v1.json
+            artifacts/production-repair-queue-v1.csv
+            artifacts/production-repair-queue-validation-v1.json
+          if-no-files-found: error
+          retention-days: 30

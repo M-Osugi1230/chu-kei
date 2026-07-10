@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.example/schemas/review-decision-v1.schema.json",
+  "title": "Chu-kei Review Decision v1",
+  "type": "object",
+  "required": ["id", "companyCode", "fromStage", "targetStage", "status", "checklist", "author", "sourceUrl", "sourcePages", "createdAt"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^review-[0-9A-Z]{4}-[0-9]{8}-[a-z0-9-]+$"},
+    "companyCode": {"type": "string", "pattern": "^[0-9A-Z]{4}$"},
+    "fromStage": {"enum": ["detailed_extracted", "source_indexed", "jpx_indexed", "core"]},
+    "targetStage": {"enum": ["detailed_extracted", "source_indexed", "core"]},
+    "status": {"enum": ["pending", "in_review", "approved", "changes_requested", "rejected"]},
+    "checklist": {
+      "type": "object",
+      "required": ["officialSource", "publicationDate", "pageEvidence", "numbersUnitsYears", "strategyClassification", "comparisonDisplay", "mobileDisplay"],
+      "properties": {
+        "officialSource": {"type": "boolean"},
+        "publicationDate": {"type": "boolean"},
+        "pageEvidence": {"type": "boolean"},
+        "numbersUnitsYears": {"type": "boolean"},
+        "strategyClassification": {"type": "boolean"},
+        "comparisonDisplay": {"type": "boolean"},
+        "mobileDisplay": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "author": {"type": "string", "minLength": 1},
+    "reviewer": {"type": ["string", "null"]},
+    "sourceUrl": {"type": "string", "pattern": "^https://"},
+    "sourcePages": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "note": {"type": ["string", "null"]},
+    "decisionReason": {"type": ["string", "null"]},
+    "createdAt": {"type": "string", "format": "date-time"},
+    "reviewedAt": {"type": ["string", "null"], "format": "date-time"}
+  },
+  "additionalProperties": false
+}

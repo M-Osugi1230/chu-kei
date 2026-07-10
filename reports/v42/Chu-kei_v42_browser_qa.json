@@ -1,31 +1,92 @@
 {
   "release": "Chu-kei 570社 Coverage 30% Beta v42",
   "checkedAt": "2026-07-10",
-  "summary": {
-    "companies": 570,
-    "sourceConfirmed": 200,
-    "coverageBeta": 370,
-    "actualsConnected": 16,
-    "estimatedCoveragePercent": 30.0
-  },
   "checks": [
-    {"name":"570社読込","passed":true},
-    {"name":"30%表示","passed":true},
-    {"name":"最近追加6社","passed":true},
-    {"name":"データ状態6選択肢","passed":true},
-    {"name":"カバレッジβ370社","passed":true},
-    {"name":"一覧初期50社表示","passed":true},
-    {"name":"さらに表示ボタン","passed":true},
-    {"name":"新規会社検索","passed":true},
-    {"name":"カバレッジβ注意表示","passed":true},
-    {"name":"JPX原文入口","passed":true},
-    {"name":"会社URL共有","passed":true},
-    {"name":"比較トレイ2社","passed":true},
-    {"name":"本番とカバレッジβの比較","passed":true},
-    {"name":"スマホフィルター初期折畳","passed":true},
-    {"name":"スマホフィルター展開","passed":true},
-    {"name":"スマホ一覧50社上限","passed":true},
-    {"name":"コンソールエラーなし","passed":true}
+    {
+      "name": "570社読込",
+      "passed": true,
+      "detail": "掲載企業\n570社\n中計ソース確認済み\n200社\nカバレッジβ\n370社\n実績接続\n16社\n推定母集団カバー\n30.0%"
+    },
+    {
+      "name": "30%表示",
+      "passed": true,
+      "detail": "掲載企業\n570社\n中計ソース確認済み\n200社\nカバレッジβ\n370社\n実績接続\n16社\n推定母集団カバー\n30.0%"
+    },
+    {
+      "name": "最近追加6社",
+      "passed": true,
+      "detail": "6"
+    },
+    {
+      "name": "データ状態6選択肢",
+      "passed": true,
+      "detail": "6"
+    },
+    {
+      "name": "カバレッジβ370社",
+      "passed": true,
+      "detail": "370社が該当。会社名を開いて詳細を読み、比較に追加すると任意の会社だけを横並びにできます。"
+    },
+    {
+      "name": "一覧初期50社表示",
+      "passed": true,
+      "detail": "50"
+    },
+    {
+      "name": "さらに表示ボタン",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "新規会社検索",
+      "passed": true,
+      "detail": "1社が該当。会社名を開いて詳細を読み、比較に追加すると任意の会社だけを横並びにできます。 / rows=1"
+    },
+    {
+      "name": "カバレッジβ注意表示",
+      "passed": true,
+      "detail": "カバレッジβ: JPXで上場・市場・業種を確認済みですが、中計または中計相当資料は未特定です。中計開示企業と確定したデータではありません。会社公式IRを確認してください。"
+    },
+    {
+      "name": "JPX原文入口",
+      "passed": true,
+      "detail": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6178"
+    },
+    {
+      "name": "会社URL共有",
+      "passed": true,
+      "detail": "#company=6178"
+    },
+    {
+      "name": "比較トレイ2社",
+      "passed": true,
+      "detail": "2社選択"
+    },
+    {
+      "name": "本番とカバレッジβの比較",
+      "passed": true,
+      "detail": "2"
+    },
+    {
+      "name": "スマホフィルター初期折畳",
+      "passed": true,
+      "detail": "toolbar collapsed"
+    },
+    {
+      "name": "スマホフィルター展開",
+      "passed": true,
+      "detail": "toolbar"
+    },
+    {
+      "name": "スマホ一覧50社上限",
+      "passed": true,
+      "detail": "50"
+    },
+    {
+      "name": "コンソールエラーなし",
+      "passed": true,
+      "detail": ""
+    }
   ],
   "errors": [],
   "passed": true

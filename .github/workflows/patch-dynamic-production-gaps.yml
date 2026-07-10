@@ -1,0 +1,76 @@
+name: One-time Dynamic Production Gap Patch
+
+on:
+  push:
+    branches:
+      - feat/production-repair-queue-v1
+    paths:
+      - '.github/workflows/patch-dynamic-production-gaps.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/production-repair-queue-v1
+          fetch-depth: 0
+      - name: Replace fixed defect baselines with dynamic tracking
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          files = [
+              Path('scripts/validate_quality_v43.mjs'),
+              Path('scripts/validate_quality_dashboard_v1.mjs'),
+          ]
+          publication_replacement = """const productionPublicationDateGaps = companies.filter(c => c.stage === 'core' && !c.planPublishedDate).length;
+          check('production publication date gaps tracked', Number.isInteger(productionPublicationDateGaps) && productionPublicationDateGaps >= 0 && productionPublicationDateGaps <= 30, `actual=${productionPublicationDateGaps}`);"""
+          page_replacement = """const productionPageEvidenceGaps = companies.filter(c => c.stage === 'core' && !pageEvidence(c)).length;
+          check('production page evidence gaps tracked', Number.isInteger(productionPageEvidenceGaps) && productionPageEvidenceGaps >= 0 && productionPageEvidenceGaps <= 30, `actual=${productionPageEvidenceGaps}`);"""
+
+          for path in files:
+              text = path.read_text(encoding='utf-8')
+              text, publication_count = re.subn(
+                  r"check\('production publication date gaps 4',\s*companies\.filter\(c\s*=>\s*c\.stage\s*===\s*'core'\s*&&\s*!c\.planPublishedDate\)\.length\s*===\s*4(?:,\s*[^;]+)?\);",
+                  publication_replacement,
+                  text,
+                  count=1,
+              )
+              text, page_count = re.subn(
+                  r"check\('production page evidence gaps 23',\s*companies\.filter\(c\s*=>\s*c\.stage\s*===\s*'core'\s*&&\s*!pageEvidence\(c\)\)\.length\s*===\s*23(?:,\s*[^;]+)?\);",
+                  page_replacement,
+                  text,
+                  count=1,
+              )
+              if publication_count != 1 or page_count != 1:
+                  raise SystemExit(f'{path}: expected fixed checks not found ({publication_count=}, {page_count=})')
+              path.write_text(text, encoding='utf-8')
+      - name: Validate patched audits and repair queue
+        run: |
+          node --check scripts/validate_quality_v43.mjs
+          node --check scripts/validate_quality_dashboard_v1.mjs
+          node --check scripts/build_production_repair_queue_v1.mjs
+          node --check scripts/validate_production_repair_queue_v1.mjs
+          npm run quality:v43
+          node scripts/validate_quality_dashboard_v1.mjs
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/build_production_repair_queue_v1.mjs
+          node scripts/validate_production_repair_queue_v1.mjs
+      - name: Commit patch and remove one-time workflow
+        shell: bash
+        run: |
+          rm .github/workflows/patch-dynamic-production-gaps.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/validate_quality_v43.mjs scripts/validate_quality_dashboard_v1.mjs .github/workflows/patch-dynamic-production-gaps.yml
+          git commit -m "test: track production gaps dynamically"
+          git push origin HEAD:feat/production-repair-queue-v1

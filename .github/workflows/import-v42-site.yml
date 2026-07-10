@@ -42,7 +42,7 @@ jobs:
       - name: Commit generated site
         shell: bash
         run: |
-          if git diff --quiet -- site; then
+          if [ -z "$(git status --porcelain -- site)" ]; then
             echo "No generated site changes."
             exit 0
           fi

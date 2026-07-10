@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.example/schemas/source-audit-report-v1.schema.json",
+  "title": "Chu-kei Source Audit Report v1",
+  "type": "object",
+  "required": ["version", "checkedAt", "summary", "checks", "warnings", "issues"],
+  "properties": {
+    "version": {"const": "source-audit-v1"},
+    "checkedAt": {"type": "string", "format": "date-time"},
+    "summary": {
+      "type": "object",
+      "required": ["sourceConfirmedCompanies", "uniqueUrls", "uniqueHosts", "duplicateUrlGroups"],
+      "properties": {
+        "sourceConfirmedCompanies": {"type": "integer", "minimum": 0},
+        "uniqueUrls": {"type": "integer", "minimum": 0},
+        "uniqueHosts": {"type": "integer", "minimum": 0},
+        "duplicateUrlGroups": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": true
+    },
+    "checks": {"type": "array", "items": {"type": "object"}},
+    "warnings": {"type": "array", "items": {"type": "object"}},
+    "issues": {"type": "array", "items": {"type": "object"}}
+  },
+  "additionalProperties": true
+}

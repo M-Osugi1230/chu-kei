@@ -1,0 +1,43 @@
+{
+  "version": "v43",
+  "harness": "Playwright set_content + intercepted local JSON",
+  "passed": 28,
+  "total": 28,
+  "allPassed": true,
+  "results": [
+    {"name": "570社読込", "ok": true, "detail": "企業探索 / 570社 / 30.0%相当 / 中計ソース確認済み / 200社 / 10.5%相当 / 主要論点構造化済み / 100社 / 5.3%相当 / 実績接続 / 16社 / カバレッジβ / 370社（企業探索専用）"},
+    {"name": "3段階カバレッジ表示", "ok": true, "detail": "企業探索570社、中計ソース確認済み200社、主要論点構造化済み100社を分離表示"},
+    {"name": "表caption", "ok": true, "detail": "2"},
+    {"name": "列見出しscope", "ok": true, "detail": "0"},
+    {"name": "動的件数status通知", "ok": true, "detail": "3"},
+    {"name": "企業・中計一覧", "ok": true, "detail": "570社が該当。会社名を開いて詳細を読み、比較に追加すると任意の会社だけを横並びにできます。"},
+    {"name": "カバレッジβ370社", "ok": true, "detail": "370社が該当。"},
+    {"name": "日本郵政検索", "ok": true, "detail": "1社が該当。"},
+    {"name": "確認日と公表日を分離", "ok": true, "detail": "6178 / 資料公表日 未確認 / ソース確認 2026-07-10"},
+    {"name": "探索専用はスコア算定外", "ok": true, "detail": "算定対象外"},
+    {"name": "カバレッジβ注意表示", "ok": true, "detail": "JPXで上場・市場・業種を確認済みだが、中計または中計相当資料は未特定である旨を表示"},
+    {"name": "本番企業検索", "ok": true, "detail": "1社が該当。"},
+    {"name": "本番企業の公表日表示", "ok": true, "detail": "7011 / 資料公表日 2026-05-27 / ソース確認 2026-07-10"},
+    {"name": "本番企業スコア表示", "ok": true, "detail": "91 / 100"},
+    {"name": "進捗4件接続", "ok": true, "detail": "三菱重工業の利益率・営業利益・売上・ROEの4件を表示"},
+    {"name": "比較対象2社目検索", "ok": true, "detail": "1社が該当。"},
+    {"name": "任意2社比較", "ok": true, "detail": "rows=2 / 選択した2社を現在の比較軸で表示"},
+    {"name": "比較軸説明", "ok": true, "detail": "資本政策の比較軸説明を表示"},
+    {"name": "公表日並び替え", "ok": true, "detail": "最新公表日順の並び替えを確認"},
+    {"name": "探索専用データの未確認表示", "ok": true, "detail": "企業探索用・中計資料特定待ち・未抽出を明示"},
+    {"name": "スキップリンク", "ok": true, "detail": "本文へ移動"},
+    {"name": "スマホ絞り込み開閉", "ok": true, "detail": "false->true"},
+    {"name": "スマホ全体横はみ出しなし", "ok": true, "detail": "390/390"},
+    {"name": "スマホ比較表横スクロール可能", "ok": true, "detail": "1000/364"},
+    {"name": "デスクトップコンソールエラーなし", "ok": true, "detail": "[]"},
+    {"name": "デスクトップページエラーなし", "ok": true, "detail": "[]"},
+    {"name": "スマホコンソールエラーなし", "ok": true, "detail": "[]"},
+    {"name": "スマホページエラーなし", "ok": true, "detail": "[]"}
+  ],
+  "errors": {
+    "desktopConsole": [],
+    "desktopPage": [],
+    "mobileConsole": [],
+    "mobilePage": []
+  }
+}

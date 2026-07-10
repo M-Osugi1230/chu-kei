@@ -1,0 +1,46 @@
+name: One-time Quality Score v2 Rebuild
+
+on:
+  push:
+    branches:
+      - feat/quality-score-v2
+    paths:
+      - '.github/workflows/rebuild-quality-score-v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/quality-score-v2
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Rebuild evidence-based quality profiles
+        run: node scripts/rebuild_quality_scores_v2.mjs
+      - name: Run quality gates
+        run: |
+          npm run quality:v43
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_quality_dashboard_v1.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_source_registry_v1.mjs
+          node scripts/validate_review_governance_v1.mjs
+      - name: Commit generated bundle and remove one-time workflow
+        shell: bash
+        run: |
+          rm .github/workflows/rebuild-quality-score-v2.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data reports/v43/QUALITY_SCORE_V2_REPORT.json .github/workflows/rebuild-quality-score-v2.yml
+          git commit -m "build: apply evidence-based quality scores v2"
+          git push origin HEAD:feat/quality-score-v2

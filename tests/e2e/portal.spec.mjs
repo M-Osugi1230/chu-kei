@@ -77,9 +77,12 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('#queue-body tr')).toHaveCount(53);
     await expect(page.locator('#queue-summary')).toHaveText('53社を表示');
 
-    await page.locator('#queue-search').fill('9432');
     await page.locator('#queue-priority').selectOption('');
-    await expect(page.locator('#queue-body')).toContainText('9432');
+    const firstCodeText = await page.locator('#queue-body tr').first().locator('th small').textContent();
+    const firstCode = firstCodeText.split('・')[0];
+    await page.locator('#queue-search').fill(firstCode);
+    await expect(page.locator('#queue-body tr')).toHaveCount(1);
+    await expect(page.locator('#queue-body')).toContainText(firstCode);
 
     if (testInfo.project.name === 'mobile') {
       const width = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));

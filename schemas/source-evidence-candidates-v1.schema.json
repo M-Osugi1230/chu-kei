@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.example/schemas/source-evidence-candidates-v1.schema.json",
+  "title": "Chu-kei Source Evidence Candidates v1",
+  "type": "object",
+  "required": ["version", "generatedAt", "mode", "summary", "policy", "results"],
+  "properties": {
+    "version": {"const": "source-evidence-candidates-v1"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "mode": {"enum": ["dry_run", "live"]},
+    "summary": {
+      "type": "object",
+      "required": ["targets", "publicationDateTargets", "pageEvidenceTargets", "collected", "failed"]
+    },
+    "policy": {
+      "type": "object",
+      "required": ["candidateOnly", "automaticUpdateAllowed", "humanReviewRequired", "publicationDateMustComeFromOfficialDocument"],
+      "properties": {
+        "candidateOnly": {"const": true},
+        "automaticUpdateAllowed": {"const": false},
+        "humanReviewRequired": {"const": true},
+        "publicationDateMustComeFromOfficialDocument": {"const": true}
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "name", "sourceUrl", "gaps", "collectionStatus", "automaticUpdateAllowed"],
+        "properties": {
+          "code": {"type": "string", "pattern": "^[0-9A-Z]{4}$"},
+          "name": {"type": "string", "minLength": 1},
+          "sourceUrl": {"type": "string", "pattern": "^https://"},
+          "gaps": {"type": "array", "items": {"enum": ["publicationDate", "pageEvidence"]}, "minItems": 1},
+          "collectionStatus": {"enum": ["dry_run", "collected", "failed"]},
+          "automaticUpdateAllowed": {"const": false},
+          "dateCandidates": {"type": "array"},
+          "keywordPages": {"type": "array"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

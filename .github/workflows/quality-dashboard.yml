@@ -1,0 +1,47 @@
+name: Chu-kei Quality Dashboard Gate
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'scripts/validate_quality_dashboard_v1.mjs'
+      - 'docs/QUALITY_DASHBOARD_V1.md'
+      - '.github/workflows/quality-dashboard.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - 'scripts/validate_quality_dashboard_v1.mjs'
+      - 'docs/QUALITY_DASHBOARD_V1.md'
+      - '.github/workflows/quality-dashboard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality-dashboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check dashboard JavaScript syntax
+        run: node --check site/assets/quality.js
+      - name: Run existing strict quality gate
+        run: npm run quality:v43
+      - name: Run dashboard quality gate
+        run: node scripts/validate_quality_dashboard_v1.mjs
+      - name: Upload quality reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-quality-dashboard-reports
+          path: artifacts/*.json
+          if-no-files-found: error
+          retention-days: 30

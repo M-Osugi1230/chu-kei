@@ -1,0 +1,51 @@
+name: One-time Browser Test Patch
+
+on:
+  push:
+    branches:
+      - feat/browser-e2e-v1
+    paths:
+      - '.github/workflows/patch-browser-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/browser-e2e-v1
+          fetch-depth: 0
+      - name: Make queue search data-driven
+        shell: python
+        run: |
+          from pathlib import Path
+          path = Path('tests/e2e/portal.spec.mjs')
+          text = path.read_text(encoding='utf-8')
+          old = """    await page.locator('#queue-search').fill('9432');
+              await page.locator('#queue-priority').selectOption('');
+              await expect(page.locator('#queue-body')).toContainText('9432');"""
+          new = """    await page.locator('#queue-priority').selectOption('');
+              const firstCodeText = await page.locator('#queue-body tr').first().locator('th small').textContent();
+              const firstCode = firstCodeText.split('・')[0];
+              await page.locator('#queue-search').fill(firstCode);
+              await expect(page.locator('#queue-body tr')).toHaveCount(1);
+              await expect(page.locator('#queue-body')).toContainText(firstCode);"""
+          if old not in text:
+              raise SystemExit('expected queue search block was not found')
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+      - name: Check test syntax
+        run: node --check tests/e2e/portal.spec.mjs
+      - name: Commit patch and remove one-time workflow
+        shell: bash
+        run: |
+          rm .github/workflows/patch-browser-test.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tests/e2e/portal.spec.mjs .github/workflows/patch-browser-test.yml
+          git commit -m "test: make review queue search data-driven"
+          git push origin HEAD:feat/browser-e2e-v1

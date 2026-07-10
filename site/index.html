@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="日本上場企業の中期経営計画を、戦略の違いから探し、比較・理解・調査するポータルです。">
+  <meta name="theme-color" content="#102a43">
+  <title>Chu-kei｜日本上場企業 中期経営計画ポータル</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./" aria-label="Chu-kei トップ">Chu-kei</a>
+    <span class="subtitle">日本上場企業 中期経営計画ポータル</span>
+    <button id="open-quality" class="text-button" type="button">品質の見方</button>
+  </div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">読む前に、違いをつかむ。</p>
+      <h1>中計の違いから、<br>見るべき会社を探す。</h1>
+      <p>企業が示した成長戦略、経営資源配分、資本政策、株主還元、進捗を共通軸で整理します。投資判断や銘柄推奨を目的とするサービスではありません。</p>
+    </div>
+    <dl class="summary-grid" aria-label="掲載データ概要">
+      <div><dt>掲載企業</dt><dd id="stat-total">570社</dd></div>
+      <div><dt>中計ソース確認済み</dt><dd id="stat-confirmed">200社</dd></div>
+      <div><dt>主要論点構造化済み</dt><dd id="stat-structured">100社</dd></div>
+      <div><dt>進捗データ</dt><dd id="stat-progress">149件</dd></div>
+    </dl>
+  </section>
+
+  <section class="section" aria-labelledby="strategy-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">Strategy Explorer</p><h2 id="strategy-title">どんな会社を探しますか？</h2></div>
+      <button id="clear-strategy" class="text-button" type="button" hidden>選択を解除</button>
+    </div>
+    <div id="strategy-grid" class="strategy-grid" role="list"></div>
+  </section>
+
+  <section class="section directory" aria-labelledby="directory-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">Company Directory</p><h2 id="directory-title">企業を検索・比較する</h2></div>
+      <p id="result-summary" class="result-summary" aria-live="polite"></p>
+    </div>
+    <form id="filters" class="filters" role="search">
+      <label class="search-field"><span>会社名・証券コード・キーワード</span><input id="search" type="search" autocomplete="off" placeholder="例：M&A、ROIC、海外展開"></label>
+      <label><span>市場</span><select id="market"><option value="">すべて</option><option>Prime</option><option>Standard</option><option>Growth</option></select></label>
+      <label><span>データ品質</span><select id="stage"><option value="">すべて</option><option value="core">本番</option><option value="detailed_extracted">詳細抽出済みβ</option><option value="source_indexed">一次確認β</option><option value="jpx_indexed">カバレッジβ</option></select></label>
+      <button class="secondary-button" type="reset">条件をリセット</button>
+    </form>
+    <div id="loading" class="status-panel" role="status">570社のデータを読み込んでいます…</div>
+    <div id="error" class="status-panel error" role="alert" hidden></div>
+    <div id="company-grid" class="company-grid"></div>
+    <button id="load-more" class="load-more" type="button" hidden>さらに表示</button>
+  </section>
+</main>
+
+<aside id="compare-tray" class="compare-tray" aria-label="比較トレイ" hidden>
+  <div><strong><span id="compare-count">0</span>社選択</strong><span id="compare-names"></span></div>
+  <div class="tray-actions"><button id="clear-compare" class="text-button" type="button">クリア</button><button id="open-compare" class="primary-button" type="button">比較する</button></div>
+</aside>
+
+<dialog id="company-dialog" class="dialog"><div id="company-detail"></div></dialog>
+<dialog id="compare-dialog" class="dialog wide"><div id="compare-detail"></div></dialog>
+<dialog id="quality-dialog" class="dialog">
+  <article class="dialog-card">
+    <div class="dialog-head"><div><p class="eyebrow">Data Quality</p><h2>品質表示の見方</h2></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div>
+    <p>570社を同一品質として扱いません。確認状況に応じて4段階に分け、未確認情報は推測で補いません。</p>
+    <dl class="quality-list"><div><dt>★★★★★ 本番</dt><dd>公式資料、主要論点、数値、ページ証跡、人手レビューを確認。</dd></div><div><dt>★★★★☆〜★★★☆☆ 詳細抽出済みβ</dt><dd>主要論点を構造化。本番昇格前の確認項目が残る場合があります。</dd></div><div><dt>★★☆☆☆ 一次確認β</dt><dd>会社公式IRの起点を確認。中計本文の詳細抽出前です。</dd></div><div><dt>★☆☆☆☆ カバレッジβ</dt><dd>JPX上場情報を確認した企業探索用データ。中計資料は未特定で、スコア算定対象外です。</dd></div></dl>
+  </article>
+</dialog>
+<footer><p>Chu-keiは中期経営計画の比較・理解・調査を支援する情報プラットフォームです。重要な確認は各社の最新公式資料で行ってください。</p></footer>
+<script type="module" src="./assets/app.js"></script>
+</body>
+</html>

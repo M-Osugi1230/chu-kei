@@ -1,0 +1,59 @@
+name: Chu-kei Release and Deployment Gate
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'netlify.toml'
+      - 'scripts/build_release_manifest_v1.mjs'
+      - 'scripts/validate_release_deployment_v1.mjs'
+      - 'docs/RELEASE_DEPLOYMENT_GATE_V1.md'
+      - '.github/workflows/release-deployment-gate.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - 'netlify.toml'
+      - 'scripts/build_release_manifest_v1.mjs'
+      - 'scripts/validate_release_deployment_v1.mjs'
+      - 'docs/RELEASE_DEPLOYMENT_GATE_V1.md'
+      - '.github/workflows/release-deployment-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-deployment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run core quality gates
+        run: |
+          npm run quality:v43
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_search_filter_contract_v1.mjs
+          node scripts/validate_source_registry_v1.mjs
+          node scripts/validate_review_governance_v1.mjs
+      - name: Build release manifest
+        run: node scripts/build_release_manifest_v1.mjs
+      - name: Validate release and deployment
+        run: node scripts/validate_release_deployment_v1.mjs
+      - name: Upload release evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-release-deployment-evidence
+          path: |
+            artifacts/release-manifest-v1.json
+            artifacts/release-deployment-report-v1.json
+          if-no-files-found: error
+          retention-days: 90

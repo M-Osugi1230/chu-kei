@@ -1,0 +1,43 @@
+name: One-time Production Repair Snapshot
+
+on:
+  push:
+    branches:
+      - ops/production-repair-snapshot-20260711
+    paths:
+      - '.github/workflows/snapshot-production-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ops/production-repair-snapshot-20260711
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build and validate production repair queue
+        run: |
+          node scripts/build_production_repair_queue_v1.mjs
+          node scripts/validate_production_repair_queue_v1.mjs
+      - name: Save operational snapshot
+        shell: bash
+        run: |
+          mkdir -p operations/queues
+          cp artifacts/production-repair-queue-v1.json operations/queues/production-repair-queue-20260711.json
+          cp artifacts/production-repair-queue-v1.csv operations/queues/production-repair-queue-20260711.csv
+          rm .github/workflows/snapshot-production-repair.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add operations/queues .github/workflows/snapshot-production-repair.yml
+          git commit -m "ops: snapshot production repair queue for 2026-07-11"
+          git push origin HEAD:ops/production-repair-snapshot-20260711

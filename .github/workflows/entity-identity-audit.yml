@@ -1,0 +1,49 @@
+name: Chu-kei Entity Identity Audit
+
+on:
+  pull_request:
+    paths:
+      - 'site/data/**'
+      - 'operations/entities/**'
+      - 'schemas/company-alias-v1.schema.json'
+      - 'scripts/validate_entity_identity_v1.mjs'
+      - 'docs/ENTITY_IDENTITY_AUDIT_V1.md'
+      - '.github/workflows/entity-identity-audit.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/data/**'
+      - 'operations/entities/**'
+      - 'schemas/company-alias-v1.schema.json'
+      - 'scripts/validate_entity_identity_v1.mjs'
+      - 'docs/ENTITY_IDENTITY_AUDIT_V1.md'
+      - '.github/workflows/entity-identity-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  identity-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run core data gates
+        run: |
+          npm run quality:v43
+          node scripts/validate_data_contract_v1.mjs
+      - name: Audit company identity
+        run: node scripts/validate_entity_identity_v1.mjs
+      - name: Upload identity report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-entity-identity-report
+          path: artifacts/entity-identity-report-v1.json
+          if-no-files-found: error
+          retention-days: 30

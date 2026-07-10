@@ -1,0 +1,106 @@
+name: One-time Search Contract Integration
+
+on:
+  push:
+    branches:
+      - feat/search-filter-contract-v1
+    paths:
+      - '.github/workflows/patch-search-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/search-filter-contract-v1
+          fetch-depth: 0
+      - name: Integrate normalized search core
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          core = Path('site/assets/search-core.js')
+          core_text = core.read_text(encoding='utf-8')
+          old = """  const tokens = tokenizeSearchQuery(query);
+            if (!tokens.length) return true;
+            const document = company.__searchDocument || buildSearchDocument(company);"""
+          new = """  const tokens = tokenizeSearchQuery(query);
+            if (!tokens.length) return true;
+            if (tokens.length === 1 && /^[0-9a-z]{4}$/.test(tokens[0])) {
+              return normalizeSearchText(company.code) === tokens[0];
+            }
+            const document = company.__searchDocument || buildSearchDocument(company);"""
+          if old not in core_text:
+              raise SystemExit('search-core exact-code insertion point not found')
+          core.write_text(core_text.replace(old, new, 1), encoding='utf-8')
+
+          app = Path('site/assets/app.js')
+          app_text = app.read_text(encoding='utf-8')
+          import_line = "import { prepareCompaniesForSearch, filterAndRankCompanies } from './search-core.js';\n\n"
+          if not app_text.startswith('import '):
+              app_text = import_line + app_text
+
+          pattern = re.compile(r"function searchable\(company\) \{.*?\n\}\nfunction applyFilters\(\) \{.*?\n\}", re.S)
+          replacement = """function applyFilters() {
+            const filters = {
+              query: $('#search').value,
+              market: $('#market').value,
+              stage: $('#stage').value,
+              strategy: state.strategy,
+            };
+            state.filtered = filterAndRankCompanies(state.data.companies, filters);
+            renderCompanies();
+          }"""
+          app_text, count = pattern.subn(replacement, app_text, count=1)
+          if count != 1:
+              raise SystemExit(f'app search block replacement failed: {count}')
+
+          old_init = "state.data = await loadData(); state.filtered = state.data.companies; updateStats();"
+          new_init = "state.data = await loadData(); state.data.companies = prepareCompaniesForSearch(state.data.companies); state.filtered = state.data.companies; updateStats();"
+          if old_init not in app_text:
+              raise SystemExit('app init insertion point not found')
+          app.write_text(app_text.replace(old_init, new_init, 1), encoding='utf-8')
+
+          test = Path('tests/e2e/portal.spec.mjs')
+          test_text = test.read_text(encoding='utf-8')
+          marker = """    await expect(page.locator('.company-card')).toContainText('三菱重工業');
+
+              await page.getByRole('button', { name: '条件をリセット' }).click();"""
+          addition = """    await expect(page.locator('.company-card')).toContainText('三菱重工業');
+
+              await page.locator('#search').fill('７０１１');
+              await expect(page.locator('.company-card')).toHaveCount(1);
+              await expect(page.locator('.company-card')).toContainText('三菱重工業');
+
+              await page.locator('#search').fill('7011 Prime');
+              await expect(page.locator('.company-card')).toHaveCount(1);
+              await expect(page.locator('.company-card')).toContainText('三菱重工業');
+
+              await page.getByRole('button', { name: '条件をリセット' }).click();"""
+          if marker not in test_text:
+              raise SystemExit('portal E2E insertion point not found')
+          test.write_text(test_text.replace(marker, addition, 1), encoding='utf-8')
+      - name: Validate search integration
+        run: |
+          node --check site/assets/search-core.js
+          node --check site/assets/app.js
+          node --check tests/e2e/portal.spec.mjs
+          node scripts/validate_search_filter_contract_v1.mjs
+          npm run quality:v43
+      - name: Commit integration and remove one-time workflow
+        shell: bash
+        run: |
+          rm .github/workflows/patch-search-contract.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/assets/search-core.js site/assets/app.js tests/e2e/portal.spec.mjs .github/workflows/patch-search-contract.yml
+          git commit -m "feat: integrate normalized AND search contract"
+          git push origin HEAD:feat/search-filter-contract-v1

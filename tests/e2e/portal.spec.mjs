@@ -30,6 +30,14 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('.company-card')).toHaveCount(1);
     await expect(page.locator('.company-card')).toContainText('三菱重工業');
 
+    await page.locator('#search').fill('７０１１');
+    await expect(page.locator('.company-card')).toHaveCount(1);
+    await expect(page.locator('.company-card')).toContainText('三菱重工業');
+
+    await page.locator('#search').fill('7011 Prime');
+    await expect(page.locator('.company-card')).toHaveCount(1);
+    await expect(page.locator('.company-card')).toContainText('三菱重工業');
+
     await page.getByRole('button', { name: '条件をリセット' }).click();
     await expect(page.locator('.company-card')).toHaveCount(50);
 

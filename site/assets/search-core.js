@@ -26,6 +26,9 @@ export function buildSearchDocument(company) {
 export function matchesSearchQuery(company, query) {
   const tokens = tokenizeSearchQuery(query);
   if (!tokens.length) return true;
+  if (tokens.length === 1 && /^[0-9a-z]{4}$/.test(tokens[0])) {
+    return normalizeSearchText(company.code) === tokens[0];
+  }
   const document = company.__searchDocument || buildSearchDocument(company);
   return tokens.every(token => document.includes(token));
 }

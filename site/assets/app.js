@@ -1,3 +1,5 @@
+import { prepareCompaniesForSearch, filterAndRankCompanies } from './search-core.js';
+
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const state = { data: null, filtered: [], visible: 50, strategy: '', compare: new Set() };
@@ -45,14 +47,14 @@ function renderStrategies() {
   $('#clear-strategy').hidden = !state.strategy;
 }
 
-function searchable(company) {
-  return [company.code, company.name, company.market, company.industry, company.category, company.summary, company.document, ...(company.themes || [])].join(' ').toLowerCase();
-}
 function applyFilters() {
-  const query = $('#search').value.trim().toLowerCase();
-  const market = $('#market').value;
-  const stage = $('#stage').value;
-  state.filtered = state.data.companies.filter(company => (!query || searchable(company).includes(query)) && (!market || company.market === market) && (!stage || company.stage === stage) && (!state.strategy || company.flags?.[state.strategy]));
+  const filters = {
+    query: $('#search').value,
+    market: $('#market').value,
+    stage: $('#stage').value,
+    strategy: state.strategy,
+  };
+  state.filtered = filterAndRankCompanies(state.data.companies, filters);
   renderCompanies();
 }
 function qualityText(company) { return `${stars(company.quality?.stars)} ${company.quality?.label || stageLabels[company.stage]}`; }
@@ -105,7 +107,7 @@ function updateStats() {
 }
 async function init() {
   try {
-    state.data = await loadData(); state.filtered = state.data.companies; updateStats(); renderStrategies(); applyFilters(); $('#loading').hidden = true;
+    state.data = await loadData(); state.data.companies = prepareCompaniesForSearch(state.data.companies); state.filtered = state.data.companies; updateStats(); renderStrategies(); applyFilters(); $('#loading').hidden = true;
     const code = new URLSearchParams(location.hash.replace(/^#/, '')).get('company'); if (code) openCompany(code);
   } catch (error) { $('#loading').hidden = true; $('#error').hidden = false; $('#error').textContent = `データを読み込めませんでした: ${error.message}`; console.error(error); }
 }

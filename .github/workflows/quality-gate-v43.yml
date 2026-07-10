@@ -1,0 +1,44 @@
+name: Chu-kei v43 Quality Gate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run v43 quality gate
+        shell: bash
+        run: |
+          if [ -d site/data ]; then
+            npm run quality:v43
+          else
+            echo "site/data is not imported yet. Running foundation bootstrap validation."
+            npm run quality:v43 -- --allow-missing
+          fi
+
+      - name: Upload quality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-quality-report-v43
+          path: artifacts/quality-report-v43.json
+          if-no-files-found: error
+          retention-days: 30

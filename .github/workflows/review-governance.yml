@@ -1,0 +1,63 @@
+name: Chu-kei Review Governance
+
+on:
+  pull_request:
+    paths:
+      - 'operations/**'
+      - 'schemas/review-decision-v1.schema.json'
+      - 'schemas/correction-entry-v1.schema.json'
+      - 'scripts/build_review_queue_v1.mjs'
+      - 'scripts/validate_review_governance_v1.mjs'
+      - 'docs/REVIEW_GOVERNANCE_V1.md'
+      - 'site/assets/quality.js'
+      - '.github/workflows/review-governance.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'operations/**'
+      - 'schemas/review-decision-v1.schema.json'
+      - 'schemas/correction-entry-v1.schema.json'
+      - 'scripts/build_review_queue_v1.mjs'
+      - 'scripts/validate_review_governance_v1.mjs'
+      - 'docs/REVIEW_GOVERNANCE_V1.md'
+      - 'site/assets/quality.js'
+      - '.github/workflows/review-governance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  review-governance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check JavaScript syntax
+        run: |
+          node --check scripts/build_review_queue_v1.mjs
+          node --check scripts/validate_review_governance_v1.mjs
+          node --check site/assets/quality.js
+      - name: Run strict quality gate
+        run: npm run quality:v43
+      - name: Build review queue
+        run: node scripts/build_review_queue_v1.mjs
+      - name: Validate review governance
+        run: node scripts/validate_review_governance_v1.mjs
+      - name: Upload review artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-review-governance
+          path: |
+            artifacts/review-queue-v1.json
+            artifacts/review-queue-v1.csv
+            artifacts/review-governance-report-v1.json
+          if-no-files-found: error
+          retention-days: 30

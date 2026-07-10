@@ -1,0 +1,58 @@
+name: Chu-kei Browser E2E
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'tests/e2e/**'
+      - 'playwright.config.mjs'
+      - '.github/workflows/browser-e2e.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/**'
+      - 'tests/e2e/**'
+      - 'playwright.config.mjs'
+      - '.github/workflows/browser-e2e.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: browser-e2e-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Playwright test runner
+        run: npm install --no-save --ignore-scripts --no-audit --no-fund @playwright/test@1.53.0
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run strict data and quality gates
+        run: |
+          npm run quality:v43
+          node scripts/validate_quality_dashboard_v1.mjs
+          node scripts/validate_data_contract_v1.mjs
+      - name: Run browser E2E
+        run: npx playwright test
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: warn
+          retention-days: 30

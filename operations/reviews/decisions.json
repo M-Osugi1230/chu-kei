@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "review-2282-20260711-nipponham-evidence",
+    "companyCode": "2282",
+    "fromStage": "core",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.nipponham.co.jp/corporate/ir/library/briefing-session/pdf/20240517.pdf",
+    "sourcePages": [
+      "p.1 資料日付 2024/5/17",
+      "p.9 2029年3月期 事業利益790億円以上",
+      "p.10 2025年3月期-2027年3月期の売上高・事業利益・利益率・ROE・ROIC"
+    ],
+    "note": "既存の本番区分は変更せず、公式PDFに基づく公表日・ページ証跡・数値表現のみを補修する。人間による本番昇格を代替する判断ではない。",
+    "decisionReason": "公式PDF表紙の日付と、計画数値を掲載するページを独立に照合し、既存の未確認表現を原文記載へ置き換えるため。",
+    "createdAt": "2026-07-11T09:30:00Z",
+    "reviewedAt": "2026-07-11T09:35:00Z"
+  }
+]

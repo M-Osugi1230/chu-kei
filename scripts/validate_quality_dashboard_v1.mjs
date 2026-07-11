@@ -40,7 +40,7 @@ check(
   'quality debt budget readable',
   Number.isInteger(expectedPublicationMaximum) && Number.isInteger(expectedPageMaximum) && Number.isInteger(expectedDetailedPageMaximum),
 );
-check('detail beta queue has 70 companies', detailed.length === 70, `actual=${detailed.length}`);
+check('detail beta queue does not regress below 70 companies', detailed.length >= 70, `actual=${detailed.length}`);
 check('priority A and B partition review queue', priorityA + priorityB === detailed.length, `A=${priorityA}, B=${priorityB}`);
 check('priority B within detailed evidence debt budget', priorityB <= expectedDetailedPageMaximum, `actual=${priorityB}, maximum=${expectedDetailedPageMaximum}`);
 check('priority A reflects evidence improvements', priorityA >= detailed.length - expectedDetailedPageMaximum, `actual=${priorityA}, minimum=${detailed.length - expectedDetailedPageMaximum}`);

@@ -26,5 +26,33 @@
     "decisionReason": "公式PDF表紙の日付と、計画数値を掲載するページを独立に照合し、既存の未確認表現を原文記載へ置き換えるため。",
     "createdAt": "2026-07-11T09:30:00Z",
     "reviewedAt": "2026-07-11T09:35:00Z"
+  },
+  {
+    "id": "review-3744-20260711-sios-evidence",
+    "companyCode": "3744",
+    "fromStage": "core",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.sios.com/ja/ir/news/docs/20260212setsumei.pdf",
+    "sourcePages": [
+      "p.1 資料日付 2026年2月12日",
+      "p.41 2026年中期経営計画の売上高・営業利益・EBITDA・ROIC・配当方針",
+      "p.42-p.44 セグメント別中期経営計画"
+    ],
+    "note": "既存の本番区分は変更せず、公式決算説明資料に基づく公表日・ページ証跡・表記精度のみを補修する。",
+    "decisionReason": "公式PDFの表紙日付と中期経営計画ページを独立に確認でき、Webページのみでは不足していた公表日とページ証跡を確定できるため。",
+    "createdAt": "2026-07-11T10:30:00Z",
+    "reviewedAt": "2026-07-11T10:35:00Z"
   }
 ]

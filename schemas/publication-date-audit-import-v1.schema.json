@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.local/schemas/publication-date-audit-import-v1.schema.json",
+  "title": "Chu-kei publication date audit import v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "siteRelease",
+    "publicUrl",
+    "status",
+    "expectedCounts",
+    "automaticUpdateAllowed",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "publication-date-audit-import-v1" },
+    "siteRelease": { "type": "string", "minLength": 1 },
+    "publicUrl": { "type": "string", "pattern": "^https://" },
+    "status": {
+      "enum": ["awaiting_export", "review_ready", "approved"]
+    },
+    "expectedCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "verified", "underReview"],
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "verified": { "type": "integer", "minimum": 0 },
+        "underReview": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "automaticUpdateAllowed": { "const": false },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/record" }
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "companyName",
+        "planDocument",
+        "auditStatus",
+        "sourceUrl",
+        "candidatePublishedDate",
+        "datePrecision",
+        "evidence",
+        "extractedAt",
+        "reviewStatus"
+      ],
+      "properties": {
+        "code": { "type": "string", "pattern": "^[0-9A-Z]{4}$" },
+        "companyName": { "type": "string", "minLength": 1 },
+        "planDocument": { "type": "string", "minLength": 1 },
+        "auditStatus": { "enum": ["verified", "under_review"] },
+        "sourceUrl": { "type": "string", "pattern": "^https://" },
+        "candidatePublishedDate": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}(?:-\\d{2}(?:-\\d{2})?)?$"
+        },
+        "datePrecision": { "enum": ["day", "month", "year", "unconfirmed"] },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["kind", "value"],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "official_release_date",
+                  "pdf_cover_date",
+                  "document_body_date",
+                  "exchange_disclosure_date",
+                  "manual_note"
+                ]
+              },
+              "value": { "type": "string", "minLength": 1 },
+              "page": { "type": ["integer", "null"], "minimum": 1 }
+            }
+          }
+        },
+        "extractedAt": { "type": "string", "format": "date" },
+        "extractor": { "type": ["string", "null"] },
+        "reviewStatus": { "enum": ["unreviewed", "reviewed", "approved"] },
+        "reviewer": { "type": ["string", "null"] },
+        "reviewedAt": { "type": ["string", "null"], "format": "date" },
+        "notes": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

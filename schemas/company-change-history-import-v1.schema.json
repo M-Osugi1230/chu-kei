@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.local/schemas/company-change-history-import-v1.schema.json",
+  "title": "Chu-kei company change history import v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "siteRelease",
+    "publicUrl",
+    "status",
+    "expectedCount",
+    "automaticUpdateAllowed",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "company-change-history-import-v1" },
+    "siteRelease": { "type": "string", "minLength": 1 },
+    "publicUrl": { "type": "string", "pattern": "^https://" },
+    "status": {
+      "enum": ["awaiting_export", "review_ready", "approved"]
+    },
+    "expectedCount": { "type": "integer", "minimum": 0 },
+    "automaticUpdateAllowed": { "const": false },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/record" }
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "changeId",
+        "code",
+        "companyName",
+        "changeType",
+        "field",
+        "beforeValue",
+        "afterValue",
+        "sourceUrl",
+        "sourceEvidence",
+        "detectedAt",
+        "reviewStatus"
+      ],
+      "properties": {
+        "changeId": { "type": "string", "pattern": "^[a-zA-Z0-9._:-]+$" },
+        "code": { "type": "string", "pattern": "^[0-9A-Z]{4}$" },
+        "companyName": { "type": "string", "minLength": 1 },
+        "fromPlanId": { "type": ["string", "null"] },
+        "toPlanId": { "type": ["string", "null"] },
+        "changeType": {
+          "enum": [
+            "added",
+            "removed",
+            "increased",
+            "decreased",
+            "delayed",
+            "accelerated",
+            "reframed",
+            "corrected",
+            "source_changed"
+          ]
+        },
+        "field": { "type": "string", "minLength": 1 },
+        "beforeValue": { "type": ["string", "number", "boolean", "null"] },
+        "afterValue": { "type": ["string", "number", "boolean", "null"] },
+        "unit": { "type": ["string", "null"] },
+        "sourceUrl": { "type": "string", "pattern": "^https://" },
+        "sourceEvidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["description"],
+            "properties": {
+              "description": { "type": "string", "minLength": 1 },
+              "page": { "type": ["integer", "null"], "minimum": 1 },
+              "quote": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "detectedAt": { "type": "string", "format": "date" },
+        "detector": { "type": ["string", "null"] },
+        "reviewStatus": { "enum": ["unreviewed", "reviewed", "approved"] },
+        "reviewer": { "type": ["string", "null"] },
+        "reviewedAt": { "type": ["string", "null"], "format": "date" },
+        "notes": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

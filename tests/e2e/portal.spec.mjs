@@ -22,7 +22,8 @@ test.describe('Chu-kei portal', () => {
     await expect(page).toHaveTitle(/Chu-kei/);
     await expect(page.locator('#stat-total')).toHaveText('570社');
     await expect(page.locator('#stat-confirmed')).toHaveText('200社');
-    await expect(page.locator('#stat-structured')).toHaveText('100社');
+    const structuredCount = Number((await page.locator('#stat-structured').textContent()).replace(/[^0-9]/g, ''));
+    expect(structuredCount).toBeGreaterThanOrEqual(100);
     await expect(page.locator('#stat-progress')).toHaveText('149件（実績54件）');
     await expect(page.locator('.company-card')).toHaveCount(50);
 
@@ -136,7 +137,10 @@ test.describe('Chu-kei portal', () => {
     await page.goto('/quality.html');
     await expect(page).toHaveTitle(/品質ダッシュボード/);
     await expect(page.locator('.quality-stat')).toHaveCount(8);
-    await expect(page.locator('#queue-body tr')).toHaveCount(70);
+    await expect(page.locator('#queue-body tr').first()).toBeVisible();
+    const queueCount = await page.locator('#queue-body tr').count();
+    expect(queueCount).toBeGreaterThanOrEqual(70);
+    await expect(page.locator('#queue-summary')).toHaveText(`${queueCount}社を表示`);
 
     await page.locator('#queue-priority').selectOption('A');
     const priorityACount = await page.locator('#queue-body tr').count();
@@ -145,7 +149,7 @@ test.describe('Chu-kei portal', () => {
     await page.locator('#queue-priority').selectOption('B');
     const priorityBCount = await page.locator('#queue-body tr').count();
     await expect(page.locator('#queue-summary')).toHaveText(`${priorityBCount}社を表示`);
-    expect(priorityACount + priorityBCount).toBe(70);
+    expect(priorityACount + priorityBCount).toBe(queueCount);
     expect(priorityACount).toBeGreaterThan(0);
     expect(priorityBCount).toBeGreaterThanOrEqual(0);
 

@@ -8,7 +8,6 @@ import {
   countSavedUpdates,
 } from './saved-research-state.js';
 import { buildProgressIndex, progressForCode, progressSummary } from './progress-view.js';
-import { loadSharedPortalData } from './data-fetch-cache.js';
 
 const $ = selector => document.querySelector(selector);
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
@@ -18,6 +17,12 @@ let companyByCode = new Map();
 let progressIndex = new Map();
 let metadata = new Map();
 let ready = false;
+
+function loadSharedPortalData() {
+  const loader = globalThis.ChuKeiDataLoader?.loadSharedPortalData;
+  if (typeof loader !== 'function') throw new Error('共有データローダーを初期化できませんでした。');
+  return loader();
+}
 
 function legacyCodes() {
   try {
@@ -104,6 +109,7 @@ document.addEventListener('click', event => {
   if (detailButton) markOneSeen(detailButton.dataset.detail);
 });
 
+window.addEventListener('chukei:saved-change', refreshAfterAppMutation);
 $('#show-saved-results').addEventListener('click', () => navigateWith({ savedOnly: true }));
 $('#compare-saved').addEventListener('click', () => {
   const codes = sortedSavedCompanies().map(company => company.code).slice(0, 4);

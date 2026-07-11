@@ -74,21 +74,46 @@ jobs:
               for raw in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?', text, re.I):
                   candidates.add(urllib.parse.urljoin(url, html.unescape(raw)))
           eir_base = 'https://ssl4.eir-parts.net/Custom/public/v5parts/5201/jp/20250804/'
-          core_url = eir_base + 'core/eir_common.js'
-          core_text = fetch(core_url)
-          open('artifacts/agc-eir/eir_common.js', 'w', encoding='utf-8').write(core_text)
-          referenced = set()
-          for raw in re.findall(r'["\']([^"\']+\.(?:js|json|xml|html)(?:\?[^"\']*)?)["\']', core_text, re.I):
-              referenced.add(urllib.parse.urljoin(core_url, html.unescape(raw)))
-          for raw in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?', core_text, re.I):
-              candidates.add(urllib.parse.urljoin(core_url, html.unescape(raw)))
+          direct_urls = [
+              eir_base + 'core/eir_common.js',
+              eir_base + 'app/conf/common_conf.js',
+              eir_base + 'app/conf/file_ir_material_014.js',
+              eir_base + 'app/file_ir_material_014.js',
+              eir_base + 'app/custom.js',
+              eir_base + 'app/drawHtml.js',
+              eir_base + 'core/eir_main.js',
+          ]
+          direct_text = {}
+          for index, url in enumerate(direct_urls):
+              try:
+                  text = fetch(url)
+              except Exception as error:
+                  text = f'ERROR: {error}'
+              direct_text[url] = text
+              open(f'artifacts/agc-eir/direct-{index:03d}.txt', 'w', encoding='utf-8').write(f'URL: {url}\n\n{text}')
+              for raw in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?', text, re.I):
+                  candidates.add(urllib.parse.urljoin(url, html.unescape(raw)))
+          all_text = '\n'.join(direct_text.values())
+          json_refs = sorted(set(
+              urllib.parse.urljoin(eir_base, html.unescape(raw))
+              for raw in re.findall(r'["\']([^"\']*(?:announcement|new_release)[^"\']*\.js(?:\?[^"\']*)?)["\']', all_text, re.I)
+          ))
+          json_payloads = {}
+          for index, url in enumerate(json_refs):
+              try:
+                  text = fetch(url)
+              except Exception as error:
+                  text = f'ERROR: {error}'
+              json_payloads[url] = text
+              open(f'artifacts/agc-eir/json-{index:03d}.txt', 'w', encoding='utf-8').write(f'URL: {url}\n\n{text}')
+              for raw in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?', text, re.I):
+                  candidates.add(urllib.parse.urljoin(url, html.unescape(raw)))
           result = {
               'pages': pages,
               'resourcesScanned': len(resources),
-              'jsUrls': js_urls,
               'eirBase': eir_base,
-              'eirCommonUrl': core_url,
-              'eirReferencedResources': sorted(referenced),
+              'directUrls': direct_urls,
+              'jsonRefs': json_refs,
               'pdfCandidates': sorted(candidates),
           }
           open('artifacts/agc-official-pdf-links.json', 'w', encoding='utf-8').write(json.dumps(result, ensure_ascii=False, indent=2))

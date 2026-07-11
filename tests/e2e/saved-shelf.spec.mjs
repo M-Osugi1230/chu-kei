@@ -15,21 +15,30 @@ async function expectNoErrors(errors) {
   expect(errors.pageErrors, `page errors: ${errors.pageErrors.join(' | ')}`).toEqual([]);
 }
 
+async function waitForPortal(page) {
+  await expect(page.locator('#loading')).toBeHidden({ timeout: 30_000 });
+  await expect(page.locator('#error')).toBeHidden();
+}
+
 async function setStorage(page, values) {
   await page.goto('/');
+  await waitForPortal(page);
   await page.evaluate(entries => {
     localStorage.clear();
     for (const [key, value] of Object.entries(entries)) localStorage.setItem(key, value);
   }, values);
   await page.reload();
+  await waitForPortal(page);
 }
 
 test.describe('Saved research shelf', () => {
   test('stays hidden without saved companies and appears after save', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     await page.goto('/?q=7011');
+    await waitForPortal(page);
     await page.evaluate(() => localStorage.clear());
     await page.reload();
+    await waitForPortal(page);
 
     await expect(page.locator('#saved-research-shelf')).toBeHidden();
     await page.locator('[data-save="7011"]').click();
@@ -41,6 +50,7 @@ test.describe('Saved research shelf', () => {
     await expect(page.locator('#compare-saved')).toBeDisabled();
 
     await page.reload();
+    await waitForPortal(page);
     await expect(page.locator('#saved-research-shelf')).toBeVisible();
     await expect(page.locator('.saved-shelf-card')).toContainText('三菱重工業');
 
@@ -69,10 +79,12 @@ test.describe('Saved research shelf', () => {
 
     await page.locator('[data-shelf-detail="7011"]').click();
     await expect(page).toHaveURL(/#company=7011/);
+    await waitForPortal(page);
     await expect(page.locator('#company-dialog')).toBeVisible();
     await expect(page.locator('#saved-shelf-summary')).toContainText('更新あり 0社');
     await page.locator('#company-dialog [data-close]').click();
     await page.reload();
+    await waitForPortal(page);
     await expect(page.locator('#saved-shelf-summary')).toContainText('更新あり 0社');
     await expect(page.locator('.saved-shelf-card')).toContainText('確認済み');
 
@@ -93,6 +105,7 @@ test.describe('Saved research shelf', () => {
     await expect(page.locator('#compare-saved')).toBeEnabled();
 
     await page.locator('#compare-saved').click();
+    await waitForPortal(page);
     await expect(page).toHaveURL(/compare=/);
     await expect(page.locator('#compare-count')).toHaveText('4');
     await page.locator('#open-compare').click();
@@ -101,6 +114,7 @@ test.describe('Saved research shelf', () => {
     await page.locator('#compare-dialog [data-close]').click();
 
     await page.locator('#show-saved-results').click();
+    await waitForPortal(page);
     await expect(page).toHaveURL(/saved=1/);
     await expect(page.locator('#saved-only')).toBeChecked();
     await expect(page.locator('#result-summary')).toContainText('5社が該当');

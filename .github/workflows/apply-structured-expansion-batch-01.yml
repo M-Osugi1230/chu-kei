@@ -1,6 +1,15 @@
 name: Apply Structured Expansion Batch 01
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'operations/patches/fujifilm-vision2030-20260711.json'
+      - 'operations/patches/olc-2035-strategy-20260711.json'
+      - 'operations/patches/structured-expansion-batch-01-ledger.json'
+      - 'scripts/apply_governance_ledger_batch_v1.mjs'
+      - '.github/workflows/apply-structured-expansion-batch-01.yml'
   push:
     branches:
       - data/structured-expansion-batch-01
@@ -35,12 +44,28 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Detect existing application
+        id: state
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const applied = ['4901', '4661'].every(code => data.companies.find(company => company.code === code)?.stage === 'detailed_extracted');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `already_applied=${applied}\n`);
+          console.log(`already_applied=${applied}`);
+          NODE
+
       - name: Apply governance ledger batch
+        if: steps.state.outputs.already_applied != 'true'
         env:
           GOVERNANCE_LEDGER_BATCH: operations/patches/structured-expansion-batch-01-ledger.json
         run: node scripts/apply_governance_ledger_batch_v1.mjs
 
       - name: Apply deterministic company patches
+        if: steps.state.outputs.already_applied != 'true'
         run: |
           COMPANY_PATCH=operations/patches/fujifilm-vision2030-20260711.json node scripts/apply_company_data_patch_v1.mjs
           COMPANY_PATCH=operations/patches/olc-2035-strategy-20260711.json node scripts/apply_company_data_patch_v1.mjs
@@ -97,7 +122,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
           else
-            git commit -m "data: add Fujifilm and Oriental Land structured plans [skip ci]"
+            git commit -m "data: add Fujifilm and Oriental Land structured plans"
             git push origin HEAD:data/structured-expansion-batch-01
           fi
 

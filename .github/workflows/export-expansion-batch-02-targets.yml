@@ -1,9 +1,9 @@
 name: Export Expansion Batch 02 Targets
 
 on:
-  push:
+  pull_request:
     branches:
-      - data/structured-expansion-batch-02
+      - main
     paths:
       - '.github/workflows/export-expansion-batch-02-targets.yml'
   workflow_dispatch:

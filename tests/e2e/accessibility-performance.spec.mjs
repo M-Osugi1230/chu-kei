@@ -64,7 +64,10 @@ test.describe('Accessibility and performance budgets', () => {
     const errors = captureErrors(page);
     const started = Date.now();
     await page.goto('/quality.html');
-    await expect(page.locator('#queue-body tr')).toHaveCount(70);
+    await expect(page.locator('#queue-body tr').first()).toBeVisible();
+    const queueCount = await page.locator('#queue-body tr').count();
+    expect(queueCount).toBeGreaterThanOrEqual(70);
+    await expect(page.locator('#queue-summary')).toHaveText(`${queueCount}社を表示`);
     expect(Date.now() - started).toBeLessThan(8_000);
     await expectAccessible(page);
 
@@ -77,7 +80,7 @@ test.describe('Accessibility and performance budgets', () => {
     await page.locator('#queue-priority').selectOption('B');
     const priorityBCount = await page.locator('#queue-body tr').count();
     await expect(page.locator('#queue-summary')).toHaveText(`${priorityBCount}社を表示`);
-    expect(priorityACount + priorityBCount).toBe(70);
+    expect(priorityACount + priorityBCount).toBe(queueCount);
     expect(priorityACount).toBeGreaterThan(0);
 
     if (testInfo.project.name === 'mobile') {

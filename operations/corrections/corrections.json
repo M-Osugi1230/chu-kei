@@ -48,5 +48,29 @@
     "reviewDecisionId": "review-3744-20260711-sios-evidence",
     "detectedAt": "2026-07-11T10:30:00Z",
     "correctedAt": "2026-07-11T10:40:00Z"
+  },
+  {
+    "id": "correction-6324-20260711-publication-evidence",
+    "companyCode": "6324",
+    "fieldPath": "sourceUrl,document,planPublishedDate,summary,capital,highlights,warnings,evidenceRefs",
+    "before": {
+      "planPublishedDate": null,
+      "sourceUrl": "https://www.hds.co.jp/ir/management_policy/strategy/",
+      "wacc": "8%以下",
+      "pageEvidence": false
+    },
+    "after": {
+      "planPublishedDate": "2026-05-21",
+      "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS06879/61f5b1be/3f14/4734/bbdb/bb22b2c58118/20260522143822479s.pdf",
+      "wacc": "9%程度",
+      "pageEvidence": true
+    },
+    "reason": "公式決算説明資料で公表日と2026・2028・2030年度KPIのページ証跡を確認し、公式IR Webの現行記載に合わせてWACC8%以下を9%程度へ訂正する。",
+    "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS06879/61f5b1be/3f14/4734/bbdb/bb22b2c58118/20260522143822479s.pdf",
+    "sourcePage": "p.1, p.18-p.20 / 公式IR Web『目標とする経営指標』",
+    "status": "corrected",
+    "reviewDecisionId": "review-6324-20260711-hds-evidence",
+    "detectedAt": "2026-07-11T11:00:00Z",
+    "correctedAt": "2026-07-11T11:15:00Z"
   }
 ]

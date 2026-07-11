@@ -6,6 +6,7 @@ on:
       - 'site/**'
       - 'tests/e2e/**'
       - 'scripts/validate_workspace_state_v1.mjs'
+      - 'scripts/validate_progress_experience_v1.mjs'
       - 'playwright.config.mjs'
       - '.github/workflows/browser-e2e.yml'
   push:
@@ -15,6 +16,7 @@ on:
       - 'site/**'
       - 'tests/e2e/**'
       - 'scripts/validate_workspace_state_v1.mjs'
+      - 'scripts/validate_progress_experience_v1.mjs'
       - 'playwright.config.mjs'
       - '.github/workflows/browser-e2e.yml'
   workflow_dispatch:
@@ -37,8 +39,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Validate research workspace contract
-        run: node scripts/validate_workspace_state_v1.mjs
+      - name: Validate research workspace and progress contracts
+        run: |
+          node scripts/validate_workspace_state_v1.mjs
+          node scripts/validate_progress_experience_v1.mjs
       - name: Install Playwright test runner
         run: npm install --no-save --ignore-scripts --no-audit --no-fund @playwright/test@1.53.0
       - name: Install Chromium
@@ -58,5 +62,6 @@ jobs:
           path: |
             playwright-report/
             test-results/
+            artifacts/progress-experience-v1.json
           if-no-files-found: warn
           retention-days: 30

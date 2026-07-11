@@ -23,7 +23,7 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('#stat-total')).toHaveText('570社');
     await expect(page.locator('#stat-confirmed')).toHaveText('200社');
     await expect(page.locator('#stat-structured')).toHaveText('100社');
-    await expect(page.locator('#stat-progress')).toHaveText('149件');
+    await expect(page.locator('#stat-progress')).toHaveText('149件（実績54件）');
     await expect(page.locator('.company-card')).toHaveCount(50);
 
     await page.locator('#search').fill('三菱重工業');
@@ -60,7 +60,30 @@ test.describe('Chu-kei portal', () => {
     await page.locator('#open-compare').click();
     await expect(page.locator('#compare-dialog')).toBeVisible();
     await expect(page.locator('#compare-dialog thead th')).toHaveCount(3);
+    await expect(page.locator('#compare-dialog')).toContainText('進捗データ');
     await page.locator('#compare-dialog [data-close]').click();
+
+    if (testInfo.project.name === 'mobile') {
+      const width = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+      expect(width.scroll).toBeLessThanOrEqual(width.client);
+    }
+    await expectNoErrors(errors);
+  });
+
+  test('shows target, actual, progress rate, years and evidence without hiding negative values', async ({ page }, testInfo) => {
+    const errors = captureErrors(page);
+    await page.goto('/?q=175A#company=175A');
+    await expect(page.locator('#company-dialog')).toBeVisible();
+    await expect(page.locator('#company-dialog h2')).not.toBeEmpty();
+    await expect(page.locator('.progress-card')).toHaveCount(3);
+    await expect(page.locator('.progress-section')).toContainText('3目標・実績3件');
+    await expect(page.locator('.progress-section')).toContainText('実績接続済み');
+    await expect(page.locator('.progress-section')).toContainText('FY2030');
+    await expect(page.locator('.progress-section')).toContainText('FY2025');
+    await expect(page.locator('.progress-section')).toContainText('単純進捗率 -291.7%');
+    await expect(page.locator('.progress-section')).toContainText('目標の根拠');
+    await expect(page.locator('.progress-section')).toContainText('実績の根拠');
+    await expect(page.locator('.progress-note')).toContainText('達成確率');
 
     if (testInfo.project.name === 'mobile') {
       const width = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));

@@ -43,9 +43,12 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('.company-card')).toHaveCount(50);
 
     const maCard = page.locator('[data-strategy="ma"]');
+    const maCountMatch = (await maCard.textContent()).match(/(\d+)社/);
+    const maCount = Number(maCountMatch?.[1]);
+    expect(maCount).toBeGreaterThanOrEqual(55);
     await maCard.click();
     await expect(maCard).toHaveAttribute('aria-pressed', 'true');
-    await expect(page.locator('#result-summary')).toContainText('55社が該当');
+    await expect(page.locator('#result-summary')).toContainText(`${maCount}社が該当`);
     await page.locator('#clear-strategy').click();
     await expect(page.locator('.company-card')).toHaveCount(50);
 

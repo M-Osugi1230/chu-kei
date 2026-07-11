@@ -73,14 +73,22 @@ jobs:
               open(f'artifacts/agc-eir/script-{index:03d}.txt', 'w', encoding='utf-8').write(f'URL: {url}\n\n{text}')
               for raw in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?', text, re.I):
                   candidates.add(urllib.parse.urljoin(url, html.unescape(raw)))
-          eir_url = 'https://www.agc.com/ir/eir/eir_v5.js'
-          eir_text = fetched.get(eir_url, '')
-          core_matches = re.findall(r'(?:eirPassCore|scriptPass|jsonPass)\s*=\s*["\']([^"\']+)', eir_text)
+          eir_base = 'https://ssl4.eir-parts.net/Custom/public/v5parts/5201/jp/20250804/'
+          core_url = eir_base + 'core/eir_common.js'
+          core_text = fetch(core_url)
+          open('artifacts/agc-eir/eir_common.js', 'w', encoding='utf-8').write(core_text)
+          referenced = set()
+          for raw in re.findall(r'["\']([^"\']+\.(?:js|json|xml|html)(?:\?[^"\']*)?)["\']', core_text, re.I):
+              referenced.add(urllib.parse.urljoin(core_url, html.unescape(raw)))
+          for raw in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?', core_text, re.I):
+              candidates.add(urllib.parse.urljoin(core_url, html.unescape(raw)))
           result = {
               'pages': pages,
               'resourcesScanned': len(resources),
               'jsUrls': js_urls,
-              'eirCoreMatches': core_matches,
+              'eirBase': eir_base,
+              'eirCommonUrl': core_url,
+              'eirReferencedResources': sorted(referenced),
               'pdfCandidates': sorted(candidates),
           }
           open('artifacts/agc-official-pdf-links.json', 'w', encoding='utf-8').write(json.dumps(result, ensure_ascii=False, indent=2))

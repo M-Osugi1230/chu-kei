@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "structured-expansion-batch-01",
+  "automaticApprovalAllowed": false,
+  "reviews": [
+    {
+      "id": "review-4901-20260711-structured-expansion",
+      "companyCode": "4901",
+      "fromStage": "source_indexed",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "source-research-agent",
+      "reviewer": "quality-evidence-agent",
+      "sourceUrl": "https://ir.fujifilm.com/ja/investors/policies-and-systems/plan/main/00/teaserItems2/00/link/20240417_VISION2030_j.pdf",
+      "sourcePages": [
+        "p.1 公表日",
+        "p.20 2026年度・2030年度財務目標",
+        "p.24 成長投資・財務規律",
+        "p.26 株主還元方針"
+      ],
+      "note": "公式PDFの公表日・定量KPI・キャッシュアロケーション・株主還元を構造化。詳細抽出済みβへの昇格であり、本番承認ではない。",
+      "decisionReason": "一次確認βの公式IR起点だけでは比較に不足していたため、VISION2030のページ証跡と年度・単位を確認して比較可能なデータへ拡張する。",
+      "createdAt": "2026-07-11T15:00:00Z",
+      "reviewedAt": "2026-07-11T15:20:00Z"
+    },
+    {
+      "id": "review-4661-20260711-structured-expansion",
+      "companyCode": "4661",
+      "fromStage": "source_indexed",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "source-research-agent",
+      "reviewer": "quality-evidence-agent",
+      "sourceUrl": "https://www.olc.co.jp/ja/ir/other-materials/main/011111117/teaserItems1/0116/linkList/0/link/ms2025-04.pdf",
+      "sourcePages": [
+        "p.1 公表日",
+        "p.6 2029年度・2035年度財務目標",
+        "p.13 テーマパーク成長投資",
+        "p.28 クルーズ投資・収益計画",
+        "p.34-p.35 資本構成・株主還元・キャッシュアロケーション"
+      ],
+      "note": "長期戦略と5カ年財務目標、事業別KPIを区別して構造化。詳細抽出済みβへの昇格であり、本番承認ではない。",
+      "decisionReason": "2035長期経営戦略に含まれる連結目標、5カ年資本配分、クルーズ事業目標の対象範囲を分離し、比較画面で誤解なく利用できるデータへ拡張する。",
+      "createdAt": "2026-07-11T15:00:00Z",
+      "reviewedAt": "2026-07-11T15:25:00Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-4901-20260711-structured-expansion",
+      "companyCode": "4901",
+      "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+      "before": {
+        "stage": "source_indexed",
+        "pageEvidence": false,
+        "planPublishedDate": null,
+        "revenue": "未抽出"
+      },
+      "after": {
+        "stage": "detailed_extracted",
+        "pageEvidence": true,
+        "planPublishedDate": "2024-04-17",
+        "revenue": "2026年度 売上高3兆4,500億円、2030年度4兆円"
+      },
+      "reason": "公式VISION2030 PDFから財務目標、成長投資、財務規律、株主還元をページ単位で抽出し、一次確認βから詳細抽出済みβへ拡張する。",
+      "sourceUrl": "https://ir.fujifilm.com/ja/investors/policies-and-systems/plan/main/00/teaserItems2/00/link/20240417_VISION2030_j.pdf",
+      "sourcePage": "p.1, p.20, p.24, p.26",
+      "status": "corrected",
+      "reviewDecisionId": "review-4901-20260711-structured-expansion",
+      "detectedAt": "2026-07-11T15:00:00Z",
+      "correctedAt": "2026-07-11T15:30:00Z"
+    },
+    {
+      "id": "correction-4661-20260711-structured-expansion",
+      "companyCode": "4661",
+      "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+      "before": {
+        "stage": "source_indexed",
+        "pageEvidence": false,
+        "planPublishedDate": null,
+        "revenue": "未抽出"
+      },
+      "after": {
+        "stage": "detailed_extracted",
+        "pageEvidence": true,
+        "planPublishedDate": "2025-04-28",
+        "revenue": "2035年度 売上高1兆円以上"
+      },
+      "reason": "公式2035長期経営戦略PDFから連結目標、5カ年資本配分、株主還元、クルーズ事業目標を対象範囲別に抽出し、一次確認βから詳細抽出済みβへ拡張する。",
+      "sourceUrl": "https://www.olc.co.jp/ja/ir/other-materials/main/011111117/teaserItems1/0116/linkList/0/link/ms2025-04.pdf",
+      "sourcePage": "p.1, p.6, p.13, p.28, p.34-p.35",
+      "status": "corrected",
+      "reviewDecisionId": "review-4661-20260711-structured-expansion",
+      "detectedAt": "2026-07-11T15:00:00Z",
+      "correctedAt": "2026-07-11T15:35:00Z"
+    }
+  ]
+}

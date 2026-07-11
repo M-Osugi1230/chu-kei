@@ -36,6 +36,15 @@
     </dl>
   </section>
 
+  <section id="saved-research-shelf" class="section saved-research-shelf" aria-labelledby="saved-shelf-title" hidden>
+    <div class="section-heading">
+      <div><p class="eyebrow">Your Research Shelf</p><h2 id="saved-shelf-title">保存した調査候補</h2><p id="saved-shelf-summary" class="section-description" aria-live="polite"></p></div>
+      <div class="shelf-actions"><button id="show-saved-results" class="secondary-button" type="button">保存企業を一覧表示</button><button id="compare-saved" class="primary-button" type="button">保存企業を比較</button></div>
+    </div>
+    <div id="saved-shelf-grid" class="saved-shelf-grid"></div>
+    <div class="shelf-footer"><p>保存日時と確認済み日はこのブラウザ内だけに保持され、外部へ送信されません。</p><button id="mark-saved-seen" class="text-button" type="button" hidden>すべて確認済みにする</button></div>
+  </section>
+
   <section class="section" aria-labelledby="strategy-title">
     <div class="section-heading">
       <div><p class="eyebrow">Strategy Explorer</p><h2 id="strategy-title">どんな会社を探しますか？</h2></div>
@@ -85,5 +94,6 @@
 <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 <footer><p>Chu-keiは中期経営計画の比較・理解・調査を支援する情報プラットフォームです。進捗率は単純比率であり、達成確率や投資評価ではありません。重要な確認は各社の最新公式資料で行ってください。</p></footer>
 <script type="module" src="./assets/app.js"></script>
+<script type="module" src="./assets/saved-shelf.js"></script>
 </body>
 </html>

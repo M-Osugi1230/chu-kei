@@ -26,5 +26,27 @@
     "reviewDecisionId": "review-2282-20260711-nipponham-evidence",
     "detectedAt": "2026-07-11T09:30:00Z",
     "correctedAt": "2026-07-11T09:40:00Z"
+  },
+  {
+    "id": "correction-3744-20260711-publication-evidence",
+    "companyCode": "3744",
+    "fieldPath": "sourceUrl,document,planPublishedDate,revenue,profit,margin,capital,returnPolicy,evidenceRefs",
+    "before": {
+      "planPublishedDate": null,
+      "sourceUrl": "https://www.sios.com/ja/ir/management/strategy/",
+      "pageEvidence": false
+    },
+    "after": {
+      "planPublishedDate": "2026-02-12",
+      "sourceUrl": "https://www.sios.com/ja/ir/news/docs/20260212setsumei.pdf",
+      "pageEvidence": true
+    },
+    "reason": "公式決算説明資料の表紙と中期経営計画ページを確認し、Webページだけでは未確認だった公表日とページ証跡を補修する。",
+    "sourceUrl": "https://www.sios.com/ja/ir/news/docs/20260212setsumei.pdf",
+    "sourcePage": "p.1, p.41-p.44",
+    "status": "corrected",
+    "reviewDecisionId": "review-3744-20260711-sios-evidence",
+    "detectedAt": "2026-07-11T10:30:00Z",
+    "correctedAt": "2026-07-11T10:40:00Z"
   }
 ]

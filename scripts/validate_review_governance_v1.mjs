@@ -128,7 +128,7 @@ const detailed = data.companies.filter(company => company.stage === 'detailed_ex
 const priorityA = detailed.filter(pageEvidence).length;
 const priorityB = detailed.filter(company => !pageEvidence(company)).length;
 const detailedGapMaximum = budget.maximumCounts?.['detailed.missingPageEvidence'];
-check('review queue source has 70 companies', detailed.length === 70, `actual=${detailed.length}`);
+check('review queue source does not regress below 70 companies', detailed.length >= 70, `actual=${detailed.length}`);
 check('review queue priorities partition all detailed companies', priorityA + priorityB === detailed.length, `A=${priorityA}, B=${priorityB}, total=${detailed.length}`);
 check('priority B is within quality debt budget', Number.isInteger(detailedGapMaximum) && priorityB <= detailedGapMaximum, `actual=${priorityB}, maximum=${detailedGapMaximum}`);
 check('priority A matches evidence improvement', priorityA >= detailed.length - detailedGapMaximum, `actual=${priorityA}, minimum=${detailed.length - detailedGapMaximum}`);

@@ -1,11 +1,22 @@
 import { prepareCompaniesForSearch, filterAndRankCompanies } from './search-core.js';
 import { parseWorkspaceUrl, buildWorkspaceUrl } from './workspace-state.js';
+import {
+  buildProgressIndex,
+  progressForCode,
+  progressSummary,
+  progressMetricLabel,
+  formatProgressValue,
+  formatProgressNumber,
+  progressRateText,
+  latestActualProgress,
+} from './progress-view.js';
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const STORAGE_KEY = 'chukei.savedCompanies.v1';
 const state = {
   data: null,
+  progressIndex: new Map(),
   filtered: [],
   visible: 50,
   strategy: '',
@@ -163,10 +174,18 @@ function applyFilters({ sync = true } = {}) {
 
 function qualityText(company) { return `${stars(company.quality?.stars)} ${company.quality?.label || stageLabels[company.stage]}`; }
 function metricCount(company) { return ['revenue', 'profit', 'margin', 'capital', 'returnPolicy'].filter(key => nonempty(company[key])).length; }
+function companyProgress(company) { return progressForCode(state.progressIndex, company.code); }
+function companyProgressShort(company) {
+  const rows = companyProgress(company);
+  if (!rows.length) return '';
+  const actual = rows.filter(row => row.actualValue != null).length;
+  return `進捗目標 ${rows.length}件${actual ? `・実績 ${actual}件` : '・実績未接続'}`;
+}
 function researchStatus(company) {
-  if (!['core', 'detailed_extracted'].includes(company.stage)) return '詳細抽出前';
+  const progress = companyProgressShort(company);
+  if (!['core', 'detailed_extracted'].includes(company.stage)) return progress || '詳細抽出前';
   const count = metricCount(company);
-  return `構造化項目 ${count}/5${company.flags?.progress ? '・進捗接続済み' : ''}`;
+  return `構造化項目 ${count}/5${progress ? `・${progress}` : ''}`;
 }
 
 function renderCompanies() {
@@ -224,13 +243,41 @@ function clearFilter(key) {
 
 function companyByCode(code) { return state.data.companies.find(c => c.code === code); }
 
+function progressEvidence(row) {
+  const target = row.source || [row.sourceUrl, row.sourcePage].filter(Boolean).join(' ');
+  const actual = row.actualSource;
+  return `<div class="progress-evidence">
+    ${target ? `<p><strong>目標の根拠</strong> ${escapeHtml(target)}</p>` : ''}
+    ${actual ? `<p><strong>実績の根拠</strong> ${escapeHtml(actual)}</p>` : ''}
+    ${(row.updatedAt || row.lastVerifiedDate) ? `<p><strong>最終確認</strong> ${escapeHtml(row.updatedAt || row.lastVerifiedDate)}</p>` : ''}
+  </div>`;
+}
+
+function renderProgressSection(company) {
+  const rows = companyProgress(company);
+  if (!rows.length) return '';
+  const actualCount = rows.filter(row => row.actualValue != null).length;
+  return `<section class="detail-section progress-section" aria-labelledby="progress-${escapeHtml(company.code)}">
+    <div class="progress-section-head"><div><p class="eyebrow">Plan Progress</p><h3 id="progress-${escapeHtml(company.code)}">中計目標と実績</h3></div><span class="progress-count">${rows.length}目標・実績${actualCount}件</span></div>
+    <p class="progress-note">進捗率は「実績÷目標」の単純比率です。達成確率、将来予測、企業評価を示すものではありません。目標年度と実績年度を分けて確認してください。</p>
+    <div class="progress-grid">${rows.map(row => {
+      const hasActual = row.actualValue != null;
+      return `<article class="progress-card ${hasActual ? 'has-actual' : 'target-only'}">
+        <div class="progress-card-head"><div><span class="progress-status">${hasActual ? '実績接続済み' : '目標のみ'}</span><h4>${escapeHtml(progressMetricLabel(row.metric))}</h4></div><strong>${escapeHtml(progressRateText(row))}</strong></div>
+        <dl class="progress-values"><div><dt>目標</dt><dd>${escapeHtml(formatProgressValue(row.targetValue, row.unit))}</dd><small>${escapeHtml(row.fiscalYear || '目標年度未確認')}</small></div><div><dt>実績</dt><dd>${escapeHtml(formatProgressValue(row.actualValue, row.unit))}</dd><small>${escapeHtml(row.actualFiscalYear || (hasActual ? '実績年度未確認' : '未接続'))}</small></div></dl>
+        ${progressEvidence(row)}
+      </article>`;
+    }).join('')}</div>
+  </section>`;
+}
+
 function renderCompanyDetail(company) {
   const metrics = [['売上目標', company.revenue], ['利益目標', company.profit], ['収益性', company.margin], ['資本効率', company.capital], ['株主還元', company.returnPolicy]];
   const saved = state.saved.has(company.code);
   $('#company-detail').innerHTML = `<article class="dialog-card"><div class="dialog-head"><div><p class="eyebrow">${escapeHtml(stageLabels[company.stage])}・${escapeHtml(company.code)}</p><h2>${escapeHtml(company.name)}</h2><p>${escapeHtml(company.document || '中計資料未特定')} ${company.period ? `／ ${escapeHtml(company.period)}` : ''}</p></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div>
     <div class="detail-actions"><button class="secondary-button" type="button" data-save-detail="${escapeHtml(company.code)}" aria-pressed="${saved}">${saved ? '保存済み' : '調査候補に保存'}</button><button class="text-button" type="button" data-share-company="${escapeHtml(company.code)}">この企業のリンクをコピー</button></div>
-    <p>${escapeHtml(company.summary)}</p><div class="detail-grid"><div><dt>品質</dt><dd>${escapeHtml(qualityText(company))}</dd></div><div><dt>抽出状況</dt><dd>${escapeHtml(researchStatus(company))}</dd></div><div><dt>資料公表日</dt><dd>${escapeHtml(company.planPublishedDate || '未確認')}</dd></div><div><dt>最終確認日</dt><dd>${escapeHtml(company.lastVerifiedDate || '未確認')}</dd></div><div><dt>業種</dt><dd>${escapeHtml(company.industry)}</dd></div>${metrics.filter(([, value]) => nonempty(value)).map(([key, value]) => `<div><dt>${key}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</div>
-    ${section('戦略テーマ', company.themes)}${section('主なポイント', company.highlights)}${section('確認上の注意', company.warnings)}${section('原文証跡', company.evidenceRefs)}
+    <p>${escapeHtml(company.summary)}</p><div class="detail-grid"><div><dt>品質</dt><dd>${escapeHtml(qualityText(company))}</dd></div><div><dt>抽出状況</dt><dd>${escapeHtml(researchStatus(company))}</dd></div><div><dt>進捗データ</dt><dd>${escapeHtml(progressSummary(companyProgress(company)))}</dd></div><div><dt>資料公表日</dt><dd>${escapeHtml(company.planPublishedDate || '未確認')}</dd></div><div><dt>最終確認日</dt><dd>${escapeHtml(company.lastVerifiedDate || '未確認')}</dd></div><div><dt>業種</dt><dd>${escapeHtml(company.industry)}</dd></div>${metrics.filter(([, value]) => nonempty(value)).map(([key, value]) => `<div><dt>${key}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</div>
+    ${renderProgressSection(company)}${section('戦略テーマ', company.themes)}${section('主なポイント', company.highlights)}${section('確認上の注意', company.warnings)}${section('原文証跡', company.evidenceRefs)}
     <div class="detail-section">${company.sourceUrl ? `<a class="primary-button" href="${escapeHtml(company.sourceUrl)}" target="_blank" rel="noopener noreferrer">公式資料を開く</a>` : '<p>公式中計資料は未特定です。</p>'}</div></article>`;
   $('[data-save-detail]', $('#company-dialog'))?.addEventListener('click', () => toggleSaved(company.code));
   $('[data-share-company]', $('#company-dialog'))?.addEventListener('click', () => shareWorkspace(company.code, '企業リンクをコピーしました。'));
@@ -274,6 +321,12 @@ function renderCompareTray() {
   $('#compare-names').textContent = companies.map(c => c.name).join('、');
 }
 
+function latestActualText(company) {
+  const row = latestActualProgress(companyProgress(company));
+  if (!row) return '実績未接続';
+  return `${progressMetricLabel(row.metric)} ${formatProgressValue(row.actualValue, row.unit)}（${row.actualFiscalYear || '実績年度未確認'}）`;
+}
+
 function openCompare() {
   const companies = [...state.compare].map(companyByCode).filter(Boolean);
   if (companies.length < 2) { showToast('比較する企業を2社以上選択してください。'); return; }
@@ -289,11 +342,12 @@ function openCompare() {
     ['収益性', c => c.margin],
     ['資本効率', c => c.capital],
     ['株主還元', c => c.returnPolicy],
-    ['進捗接続', c => c.flags?.progress ? '接続済み' : '未接続'],
+    ['進捗データ', c => progressSummary(companyProgress(c))],
+    ['最新接続実績', c => latestActualText(c)],
     ['資料公表日', c => c.planPublishedDate || '未確認'],
     ['最終確認日', c => c.lastVerifiedDate || '未確認'],
   ];
-  $('#compare-detail').innerHTML = `<article class="dialog-card"><div class="dialog-head"><div><p class="eyebrow">Company Comparison</p><h2>中計比較</h2><p>${companies.length}社の戦略・目標・資本政策を同じ軸で確認します。</p></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div><div class="detail-actions"><button class="text-button" type="button" data-share-compare-dialog>比較リンクをコピー</button></div><div class="compare-table-wrap" tabindex="0" role="region" aria-label="中計比較表"><table class="compare-table"><thead><tr><th scope="col">比較項目</th>${companies.map(c => `<th scope="col">${escapeHtml(c.name)}</th>`).join('')}</tr></thead><tbody>${rows.map(([label, getter]) => `<tr><th scope="row">${label}</th>${companies.map(c => `<td>${escapeHtml(getter(c) || '未抽出')}</td>`).join('')}</tr>`).join('')}</tbody></table></div></article>`;
+  $('#compare-detail').innerHTML = `<article class="dialog-card"><div class="dialog-head"><div><p class="eyebrow">Company Comparison</p><h2>中計比較</h2><p>${companies.length}社の戦略・目標・資本政策・進捗を同じ軸で確認します。</p></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div><div class="detail-actions"><button class="text-button" type="button" data-share-compare-dialog>比較リンクをコピー</button></div><div class="compare-table-wrap" tabindex="0" role="region" aria-label="中計比較表"><table class="compare-table"><thead><tr><th scope="col">比較項目</th>${companies.map(c => `<th scope="col">${escapeHtml(c.name)}</th>`).join('')}</tr></thead><tbody>${rows.map(([label, getter]) => `<tr><th scope="row">${label}</th>${companies.map(c => `<td>${escapeHtml(getter(c) || '未抽出')}</td>`).join('')}</tr>`).join('')}</tbody></table></div></article>`;
   $('[data-share-compare-dialog]', $('#compare-dialog'))?.addEventListener('click', () => shareWorkspace('', '比較リンクをコピーしました。'));
   bindClose($('#compare-dialog'));
   $('#compare-dialog').showModal();
@@ -307,10 +361,11 @@ function bindClose(dialog, onClose) {
 
 function updateStats() {
   const companies = state.data.companies;
+  const actualRows = state.data.progress.filter(row => row.actualValue != null).length;
   $('#stat-total').textContent = `${companies.length}社`;
   $('#stat-confirmed').textContent = `${companies.filter(c => c.stage !== 'jpx_indexed').length}社`;
   $('#stat-structured').textContent = `${companies.filter(c => ['core', 'detailed_extracted'].includes(c.stage)).length}社`;
-  $('#stat-progress').textContent = `${state.data.progress.length}件`;
+  $('#stat-progress').textContent = `${state.data.progress.length}件（実績${actualRows}件）`;
 }
 
 function restoreWorkspace(validCodes) {
@@ -330,6 +385,7 @@ async function init() {
   try {
     state.saved = loadSaved();
     state.data = await loadData();
+    state.progressIndex = buildProgressIndex(state.data.progress);
     state.data.companies = prepareCompaniesForSearch(state.data.companies);
     const validCodes = new Set(state.data.companies.map(company => company.code));
     state.saved = new Set([...state.saved].filter(code => validCodes.has(code)));

@@ -23,7 +23,7 @@ jobs:
           node-version: '24'
       - name: Export target company records
         run: |
-          mkdir -p artifacts
+          mkdir -p artifacts/agc-pages
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
           import zlib from 'node:zlib';
@@ -41,22 +41,47 @@ jobs:
       - name: Discover AGC official PDF links
         run: |
           python - <<'PY'
-          import html, re, urllib.request
-          urls = [
+          import html, json, os, re, urllib.parse, urllib.request
+          pages = [
               'https://www.agc.com/company/strategy/plan/index.html',
               'https://www.agc.com/ir/library/strategy/index.html',
           ]
-          results = {}
-          for url in urls:
-              req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+          headers = {'User-Agent': 'Mozilla/5.0'}
+          fetched = {}
+          candidates = set()
+          resources = set()
+          def fetch(url):
+              req = urllib.request.Request(url, headers=headers)
               with urllib.request.urlopen(req, timeout=30) as response:
-                  text = response.read().decode('utf-8', errors='replace')
-              links = sorted(set(html.unescape(x) for x in re.findall(r'(?:href|src)=["\']([^"\']+)', text, re.I) if '.pdf' in x.lower()))
-              results[url] = links
-          import json
-          with open('artifacts/agc-official-pdf-links.json', 'w', encoding='utf-8') as f:
-              json.dump(results, f, ensure_ascii=False, indent=2)
-          print(json.dumps(results, ensure_ascii=False, indent=2))
+                  return response.read().decode('utf-8', errors='replace')
+          for index, url in enumerate(pages):
+              text = fetch(url)
+              fetched[url] = text
+              open(f'artifacts/agc-pages/page-{index}.html', 'w', encoding='utf-8').write(text)
+              for raw in re.findall(r'(?:href|src)=["\']([^"\']+)', text, re.I):
+                  absolute = urllib.parse.urljoin(url, html.unescape(raw))
+                  if urllib.parse.urlparse(absolute).netloc.endswith('agc.com'):
+                      resources.add(absolute)
+                  if '.pdf' in absolute.lower(): candidates.add(absolute)
+          for index, url in enumerate(sorted(resources)):
+              if not re.search(r'\.(?:js|json)(?:\?|$)', url, re.I):
+                  continue
+              try:
+                  text = fetch(url)
+              except Exception as error:
+                  fetched[url] = f'ERROR: {error}'
+                  continue
+              fetched[url] = text[:200000]
+              for raw in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?', text, re.I):
+                  candidates.add(urllib.parse.urljoin(url, html.unescape(raw)))
+          result = {
+              'pages': pages,
+              'resourcesScanned': len(resources),
+              'pdfCandidates': sorted(candidates),
+              'resourceUrls': sorted(resources),
+          }
+          open('artifacts/agc-official-pdf-links.json', 'w', encoding='utf-8').write(json.dumps(result, ensure_ascii=False, indent=2))
+          print(json.dumps(result, ensure_ascii=False, indent=2))
           PY
       - uses: actions/upload-artifact@v4
         with:
@@ -64,4 +89,5 @@ jobs:
           path: |
             artifacts/structured-expansion-batch-02-targets.json
             artifacts/agc-official-pdf-links.json
+            artifacts/agc-pages/
           retention-days: 7

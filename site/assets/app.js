@@ -38,7 +38,7 @@ function renderStrategies() {
   const companies = state.data.companies;
   $('#strategy-grid').innerHTML = strategies.map(([key, label, description]) => {
     const count = companies.filter(c => c.flags?.[key]).length;
-    return `<button class="strategy-card" type="button" role="listitem" data-strategy="${key}" aria-pressed="${state.strategy === key}"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(description)}・${count}社</span></button>`;
+    return `<button class="strategy-card" type="button" data-strategy="${key}" aria-pressed="${state.strategy === key}"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(description)}・${count}社</span></button>`;
   }).join('');
   $$('.strategy-card').forEach(button => button.addEventListener('click', () => {
     state.strategy = state.strategy === button.dataset.strategy ? '' : button.dataset.strategy;

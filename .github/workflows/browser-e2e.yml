@@ -7,6 +7,7 @@ on:
       - 'tests/e2e/**'
       - 'scripts/validate_workspace_state_v1.mjs'
       - 'scripts/validate_progress_experience_v1.mjs'
+      - 'scripts/validate_saved_research_state_v1.mjs'
       - 'playwright.config.mjs'
       - '.github/workflows/browser-e2e.yml'
   push:
@@ -17,6 +18,7 @@ on:
       - 'tests/e2e/**'
       - 'scripts/validate_workspace_state_v1.mjs'
       - 'scripts/validate_progress_experience_v1.mjs'
+      - 'scripts/validate_saved_research_state_v1.mjs'
       - 'playwright.config.mjs'
       - '.github/workflows/browser-e2e.yml'
   workflow_dispatch:
@@ -39,10 +41,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Validate research workspace and progress contracts
+      - name: Validate research workspace, progress and saved state contracts
         run: |
           node scripts/validate_workspace_state_v1.mjs
           node scripts/validate_progress_experience_v1.mjs
+          node scripts/validate_saved_research_state_v1.mjs
       - name: Install Playwright test runner
         run: npm install --no-save --ignore-scripts --no-audit --no-fund @playwright/test@1.53.0
       - name: Install Chromium
@@ -53,7 +56,7 @@ jobs:
           node scripts/validate_quality_dashboard_v1.mjs
           node scripts/validate_data_contract_v1.mjs
       - name: Run portal browser E2E
-        run: npx playwright test tests/e2e/portal.spec.mjs
+        run: npx playwright test tests/e2e/portal.spec.mjs tests/e2e/saved-shelf.spec.mjs
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4

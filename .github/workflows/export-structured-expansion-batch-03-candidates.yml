@@ -1,0 +1,111 @@
+name: Export Structured Expansion Batch 03 Candidates
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/export-structured-expansion-batch-03-candidates.yml'
+      - 'operations/patches/structured-expansion-batch-03-plan.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout expansion branch
+        uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-03
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Export authoritative source-indexed candidates
+        run: |
+          mkdir -p artifacts
+          node --input-type=module <<'NODE'
+          import crypto from 'node:crypto';
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const digest = crypto.createHash('sha256').update(compressed).digest('hex');
+          if (digest !== manifest.sha256) throw new Error(`bundle digest mismatch: ${digest}`);
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const counts = data.companies.reduce((result, company) => {
+            result[company.stage] = (result[company.stage] || 0) + 1;
+            return result;
+          }, {});
+          if (data.companies.length !== 570) throw new Error(`company count mismatch: ${data.companies.length}`);
+          if (counts.core !== 30 || counts.detailed_extracted !== 75 || counts.source_indexed !== 95 || counts.jpx_indexed !== 370) {
+            throw new Error(`unexpected stage counts: ${JSON.stringify(counts)}`);
+          }
+
+          const candidates = data.companies
+            .filter(company => company.stage === 'source_indexed')
+            .map(company => ({
+              code: company.code,
+              name: company.name,
+              market: company.market,
+              industry: company.industry,
+              sourceUrl: company.sourceUrl,
+              category: company.category,
+              document: company.document,
+              planPublishedDate: company.planPublishedDate,
+              lastVerifiedDate: company.lastVerifiedDate,
+              themes: company.themes,
+              summary: company.summary,
+              revenue: company.revenue,
+              profit: company.profit,
+              margin: company.margin,
+              capital: company.capital,
+              returnPolicy: company.returnPolicy,
+              evidenceRefs: company.evidenceRefs,
+              flags: company.flags,
+            }))
+            .sort((left, right) => String(left.code).localeCompare(String(right.code), 'ja'));
+
+          const industryDistribution = candidates.reduce((result, company) => {
+            result[company.industry] = (result[company.industry] || 0) + 1;
+            return result;
+          }, {});
+          const output = {
+            generatedAt: new Date().toISOString(),
+            manifest: {
+              sha256: manifest.sha256,
+              companyCount: manifest.companyCount,
+              progressCount: manifest.progressCount,
+            },
+            stageCounts: counts,
+            candidateCount: candidates.length,
+            industryDistribution,
+            candidates,
+          };
+          fs.writeFileSync('artifacts/structured-expansion-batch-03-candidates.json', `${JSON.stringify(output, null, 2)}\n`);
+          fs.writeFileSync(
+            'artifacts/structured-expansion-batch-03-candidates.csv',
+            [
+              'code,name,market,industry,sourceUrl,lastVerifiedDate',
+              ...candidates.map(row => [row.code, row.name, row.market, row.industry, row.sourceUrl, row.lastVerifiedDate]
+                .map(value => `"${String(value ?? '').replaceAll('"', '""')}"`).join(',')),
+            ].join('\n') + '\n',
+          );
+          console.log(JSON.stringify({ candidateCount: candidates.length, stageCounts: counts, sha256: digest }, null, 2));
+          NODE
+
+      - name: Upload candidate inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-03-candidates
+          path: |
+            artifacts/structured-expansion-batch-03-candidates.json
+            artifacts/structured-expansion-batch-03-candidates.csv
+          retention-days: 14

@@ -1,6 +1,5 @@
 import {
   LEGACY_SAVED_KEY,
-  SAVED_RESEARCH_KEY,
   loadSavedResearch,
   persistSavedResearch,
   syncSavedResearch,
@@ -18,7 +17,6 @@ let companyByCode = new Map();
 let progressIndex = new Map();
 let metadata = new Map();
 let ready = false;
-let loadingPromise;
 
 function legacyCodes() {
   try {
@@ -27,49 +25,6 @@ function legacyCodes() {
   } catch {
     return [];
   }
-}
-
-function hasStoredResearch() {
-  return legacyCodes().length > 0 || Boolean(localStorage.getItem(SAVED_RESEARCH_KEY));
-}
-
-async function waitForPortalLoad() {
-  for (let attempt = 0; attempt < 400; attempt += 1) {
-    const error = $('#error');
-    if (error && !error.hidden) throw new Error(error.textContent || '企業ポータルのデータ読込に失敗しました。');
-    if ($('#loading')?.hidden) return;
-    await new Promise(resolve => setTimeout(resolve, 50));
-  }
-  throw new Error('企業ポータルのデータ読込完了を確認できませんでした。');
-}
-
-async function loadDataSequentially() {
-  if (!('DecompressionStream' in window)) throw new Error('圧縮データの展開に対応していません。');
-  await waitForPortalLoad();
-  const manifestResponse = await fetch('./data/bundle.manifest.json', { cache: 'no-cache' });
-  if (!manifestResponse.ok) throw new Error('保存企業用データマニフェストを取得できません。');
-  const manifest = await manifestResponse.json();
-  const buffers = [];
-  for (const part of manifest.parts) {
-    const response = await fetch(`./data/${part.file}`);
-    if (!response.ok) throw new Error(`${part.file}を取得できません。`);
-    buffers.push(await response.arrayBuffer());
-  }
-  const bytes = new Uint8Array(buffers.reduce((sum, buffer) => sum + buffer.byteLength, 0));
-  let offset = 0;
-  for (const buffer of buffers) {
-    bytes.set(new Uint8Array(buffer), offset);
-    offset += buffer.byteLength;
-  }
-  const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))]
-    .map(value => value.toString(16).padStart(2, '0')).join('');
-  if (digest !== manifest.sha256) throw new Error('保存企業用データの整合性確認に失敗しました。');
-  const text = await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
-  const data = JSON.parse(text);
-  if (data.companies.length !== manifest.companyCount || data.progress.length !== manifest.progressCount) {
-    throw new Error('保存企業用データ件数がマニフェストと一致しません。');
-  }
-  return data;
 }
 
 function navigateWith({ company = '', savedOnly = false, compare = [] } = {}) {
@@ -130,30 +85,8 @@ function render() {
   }));
 }
 
-async function ensureReady() {
-  if (ready) return true;
-  if (!hasStoredResearch()) return false;
-  if (!loadingPromise) {
-    loadingPromise = loadDataSequentially().then(data => {
-      companyByCode = new Map((data.companies ?? []).map(company => [String(company.code), company]));
-      progressIndex = buildProgressIndex(data.progress ?? []);
-      metadata = loadSavedResearch(localStorage, companyByCode);
-      persistSavedResearch(localStorage, metadata);
-      ready = true;
-      render();
-      return true;
-    }).catch(error => {
-      loadingPromise = undefined;
-      console.error('保存した調査候補を読み込めませんでした。', error);
-      return false;
-    });
-  }
-  return loadingPromise;
-}
-
-async function refreshAfterAppMutation() {
-  if (!ready) await ensureReady();
-  render();
+function refreshAfterAppMutation() {
+  setTimeout(render, 0);
 }
 
 function markOneSeen(code) {
@@ -163,9 +96,19 @@ function markOneSeen(code) {
   render();
 }
 
+function initialize(data) {
+  if (ready || !data) return;
+  companyByCode = new Map((data.companies ?? []).map(company => [String(company.code), company]));
+  progressIndex = buildProgressIndex(data.progress ?? []);
+  metadata = loadSavedResearch(localStorage, companyByCode);
+  persistSavedResearch(localStorage, metadata);
+  ready = true;
+  render();
+}
+
 document.addEventListener('click', event => {
   const saveButton = event.target.closest('[data-save],[data-save-detail]');
-  if (saveButton) setTimeout(refreshAfterAppMutation, 0);
+  if (saveButton) refreshAfterAppMutation();
   const detailButton = event.target.closest('[data-detail]');
   if (detailButton) markOneSeen(detailButton.dataset.detail);
 });
@@ -181,4 +124,10 @@ $('#mark-saved-seen').addEventListener('click', () => {
   render();
 });
 
-ensureReady();
+const bridge = globalThis.ChuKeiDataBridge;
+if (!bridge?.ready) {
+  console.error('保存した調査候補を初期化できませんでした。');
+} else {
+  initialize(bridge.current?.());
+  bridge.ready.then(initialize).catch(error => console.error('保存した調査候補を読み込めませんでした。', error));
+}

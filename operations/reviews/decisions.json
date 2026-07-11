@@ -82,5 +82,89 @@
     "decisionReason": "公式PDFで公表日とKPIページを確認し、公式IR Webの現行記載により旧WACC8%以下が誤りであることを確認したため。",
     "createdAt": "2026-07-11T11:00:00Z",
     "reviewedAt": "2026-07-11T11:10:00Z"
+  },
+  {
+    "id": "review-8766-20260711-page-evidence",
+    "companyCode": "8766",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.tokiomarinehd.com/newsroom/release/2024/uh7ekg00000037gj-att/240520_MTP2026_j.pdf",
+    "sourcePages": [
+      "p.8 修正EPS・修正純利益CAGR",
+      "p.9-p.10 修正ROEターゲット",
+      "p.11 政策保有株式削減"
+    ],
+    "note": "ページ証跡と数値表現の補修は完了。本番昇格の承認ではなく、詳細抽出済みβのまま別確認者レビューを継続する。",
+    "decisionReason": "公式PDFの定量計画ページと既存抽出値を照合し、比較画面で定義差を明示できる状態へ補修するため。",
+    "createdAt": "2026-07-11T12:00:00Z",
+    "reviewedAt": "2026-07-11T12:20:00Z"
+  },
+  {
+    "id": "review-5401-20260711-page-evidence",
+    "companyCode": "5401",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.nipponsteel.com/ir/library/strategy/pdf/20251212_200.pdf",
+    "sourcePages": [
+      "p.8 連結実力利益1兆円以上",
+      "p.9 投資総額約6兆円",
+      "p.10-p.11 配当・財務指標"
+    ],
+    "note": "ページ証跡とKPI表記の補修は完了。本番昇格の承認ではなく、詳細抽出済みβのままレビューを継続する。",
+    "decisionReason": "公式PDFの利益・投資・財務・配当ページを独立に照合し、年度と定義を明確にするため。",
+    "createdAt": "2026-07-11T12:00:00Z",
+    "reviewedAt": "2026-07-11T12:25:00Z"
+  },
+  {
+    "id": "review-9202-20260711-page-evidence",
+    "companyCode": "9202",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.ana.co.jp/group/investors/data/kessan/pdf/2026_01_4.pdf",
+    "sourcePages": [
+      "p.13 利益・利益率・ROE・EPS・設備投資",
+      "p.14 2030年度事業ポートフォリオ",
+      "p.16 2028年度・2030年度KPI"
+    ],
+    "note": "定量KPIとページ証跡の補修は完了。本番昇格の承認ではなく、詳細抽出済みβのままレビューを継続する。",
+    "decisionReason": "公式PDF内の定量KPIを追加抽出し、従来の定性的な表示を比較可能な数値へ置き換えるため。",
+    "createdAt": "2026-07-11T12:00:00Z",
+    "reviewedAt": "2026-07-11T12:30:00Z"
   }
 ]

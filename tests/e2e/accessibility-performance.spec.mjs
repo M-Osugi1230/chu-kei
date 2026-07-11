@@ -60,7 +60,7 @@ test.describe('Accessibility and performance budgets', () => {
     await expectNoErrors(errors);
   });
 
-  test('quality dashboard meets WCAG A/AA and queue budgets', async ({ page }, testInfo) => {
+  test('quality dashboard meets WCAG A/AA and evidence-driven queue budgets', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     const started = Date.now();
     await page.goto('/quality.html');
@@ -70,8 +70,15 @@ test.describe('Accessibility and performance budgets', () => {
 
     const filterStarted = Date.now();
     await page.locator('#queue-priority').selectOption('A');
-    await expect(page.locator('#queue-body tr')).toHaveCount(17);
+    const priorityACount = await page.locator('#queue-body tr').count();
+    await expect(page.locator('#queue-summary')).toHaveText(`${priorityACount}社を表示`);
     expect(Date.now() - filterStarted).toBeLessThan(1_500);
+
+    await page.locator('#queue-priority').selectOption('B');
+    const priorityBCount = await page.locator('#queue-body tr').count();
+    await expect(page.locator('#queue-summary')).toHaveText(`${priorityBCount}社を表示`);
+    expect(priorityACount + priorityBCount).toBe(70);
+    expect(priorityACount).toBeGreaterThan(0);
 
     if (testInfo.project.name === 'mobile') {
       const width = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));

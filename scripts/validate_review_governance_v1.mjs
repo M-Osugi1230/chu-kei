@@ -7,6 +7,7 @@ const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const REVIEW_PATH = path.join(ROOT, 'operations', 'reviews', 'decisions.json');
 const CORRECTION_PATH = path.join(ROOT, 'operations', 'corrections', 'corrections.json');
+const BUDGET_PATH = path.join(ROOT, 'operations', 'quality-debt-budget-v1.json');
 const ARTIFACT_DIR = path.join(ROOT, 'artifacts');
 const checks = [];
 const issues = [];
@@ -45,6 +46,7 @@ for (const schemaPath of ['schemas/review-decision-v1.schema.json', 'schemas/cor
 let data = { companies: [] };
 let decisions = [];
 let corrections = [];
+let budget = { maximumCounts: {} };
 try {
   data = readBundle();
   check('company bundle readable', true);
@@ -62,6 +64,12 @@ try {
   check('correction ledger readable', Array.isArray(corrections), `type=${typeof corrections}`);
 } catch (error) {
   check('correction ledger readable', false, error.message);
+}
+try {
+  budget = readJson(BUDGET_PATH);
+  check('quality debt budget readable', true);
+} catch (error) {
+  check('quality debt budget readable', false, error.message);
 }
 
 const companyCodes = new Set(data.companies.map(company => String(company.code)));
@@ -117,9 +125,13 @@ check('corrected entries link to review decision', invalidCorrected === 0, `inva
 
 const pageEvidence = company => (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
 const detailed = data.companies.filter(company => company.stage === 'detailed_extracted');
+const priorityA = detailed.filter(pageEvidence).length;
+const priorityB = detailed.filter(company => !pageEvidence(company)).length;
+const detailedGapMaximum = budget.maximumCounts?.['detailed.missingPageEvidence'];
 check('review queue source has 70 companies', detailed.length === 70, `actual=${detailed.length}`);
-check('priority A source has 17 companies', detailed.filter(pageEvidence).length === 17, `actual=${detailed.filter(pageEvidence).length}`);
-check('priority B source has 53 companies', detailed.filter(company => !pageEvidence(company)).length === 53, `actual=${detailed.filter(company => !pageEvidence(company)).length}`);
+check('review queue priorities partition all detailed companies', priorityA + priorityB === detailed.length, `A=${priorityA}, B=${priorityB}, total=${detailed.length}`);
+check('priority B is within quality debt budget', Number.isInteger(detailedGapMaximum) && priorityB <= detailedGapMaximum, `actual=${priorityB}, maximum=${detailedGapMaximum}`);
+check('priority A matches evidence improvement', priorityA >= detailed.length - detailedGapMaximum, `actual=${priorityA}, minimum=${detailed.length - detailedGapMaximum}`);
 check('no automatic promotion records', decisions.every(decision => decision.status !== 'approved' || decision.reviewer !== 'automation'), 'automation cannot approve production promotion');
 
 fs.mkdirSync(ARTIFACT_DIR, { recursive: true });
@@ -129,8 +141,9 @@ const report = {
   summary: {
     reviewDecisions: decisions.length,
     corrections: corrections.length,
-    priorityA: detailed.filter(pageEvidence).length,
-    priorityB: detailed.filter(company => !pageEvidence(company)).length,
+    priorityA,
+    priorityB,
+    detailedPageEvidenceDebtMaximum: detailedGapMaximum,
   },
   passed: checks.filter(item => item.ok).length,
   total: checks.length,

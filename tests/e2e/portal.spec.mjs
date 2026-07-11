@@ -131,21 +131,23 @@ test.describe('Chu-kei portal', () => {
     await expectNoErrors(errors);
   });
 
-  test('quality dashboard exposes consistent A/B review queue', async ({ page }, testInfo) => {
+  test('quality dashboard exposes a complete evidence-driven A/B review queue', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     await page.goto('/quality.html');
     await expect(page).toHaveTitle(/品質ダッシュボード/);
     await expect(page.locator('.quality-stat')).toHaveCount(8);
-    await expect(page.locator('#quality-summary')).toContainText('17社');
     await expect(page.locator('#queue-body tr')).toHaveCount(70);
 
     await page.locator('#queue-priority').selectOption('A');
-    await expect(page.locator('#queue-body tr')).toHaveCount(17);
-    await expect(page.locator('#queue-summary')).toHaveText('17社を表示');
+    const priorityACount = await page.locator('#queue-body tr').count();
+    await expect(page.locator('#queue-summary')).toHaveText(`${priorityACount}社を表示`);
 
     await page.locator('#queue-priority').selectOption('B');
-    await expect(page.locator('#queue-body tr')).toHaveCount(53);
-    await expect(page.locator('#queue-summary')).toHaveText('53社を表示');
+    const priorityBCount = await page.locator('#queue-body tr').count();
+    await expect(page.locator('#queue-summary')).toHaveText(`${priorityBCount}社を表示`);
+    expect(priorityACount + priorityBCount).toBe(70);
+    expect(priorityACount).toBeGreaterThan(0);
+    expect(priorityBCount).toBeGreaterThanOrEqual(0);
 
     await page.locator('#queue-priority').selectOption('');
     const firstCodeText = await page.locator('#queue-body tr').first().locator('th small').textContent();

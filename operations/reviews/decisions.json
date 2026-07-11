@@ -166,5 +166,61 @@
     "decisionReason": "公式PDF内の定量KPIを追加抽出し、従来の定性的な表示を比較可能な数値へ置き換えるため。",
     "createdAt": "2026-07-11T12:00:00Z",
     "reviewedAt": "2026-07-11T12:30:00Z"
+  },
+  {
+    "id": "review-4755-20260711-page-evidence",
+    "companyCode": "4755",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://corp.rakuten.co.jp/investors/assets/doc/stock/agm_PPT_20260327.pdf",
+    "sourcePages": [
+      "p.17 フィンテック再編・調達コスト抑制・One App",
+      "p.20 モバイルEBITDA・PMCF・売上・営業損失",
+      "p.28 2026年度モバイル設備投資",
+      "p.40 AI利益貢献"
+    ],
+    "note": "ページ証跡と定量KPIの補修は完了。本番昇格の承認ではなく、詳細抽出済みβのまま別確認者レビューを継続する。",
+    "decisionReason": "公式株主総会資料からフィンテック再編、モバイル収益化、設備投資、AI利益貢献をページ単位で確認し、比較画面の定量情報を補強するため。",
+    "createdAt": "2026-07-11T13:00:00Z",
+    "reviewedAt": "2026-07-11T13:20:00Z"
+  },
+  {
+    "id": "review-8604-20260711-page-evidence",
+    "companyCode": "8604",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.nomuraholdings.com/jp/investor/presentation/main/018/teaserItems1/00/tableContents/00/multiFileUpload30/link/2026_0529_01_prem.pdf",
+    "sourcePages": [
+      "p.1 2030年ROE・税前利益目標と主要成長施策",
+      "p.3 WM・IM・BK・WS各部門の新KGI/KPI"
+    ],
+    "note": "ページ証跡と部門別KPIの補修は完了。本番昇格の承認ではなく、詳細抽出済みβのままレビューを継続する。",
+    "decisionReason": "公式Investor Day資料で上方修正後の2030年目標と部門別残高・収益性・費用効率KPIをページ単位で確認したため。",
+    "createdAt": "2026-07-11T13:00:00Z",
+    "reviewedAt": "2026-07-11T13:25:00Z"
   }
 ]

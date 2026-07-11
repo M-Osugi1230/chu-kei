@@ -17,13 +17,28 @@
   },
   "githubSync": {
     "status": "partial",
+    "verifiedBundle": {
+      "version": "v43-quality-score-v2",
+      "sha256": "3fc7e9fc74ddf9074b9cad11ecdbb12c4baebd53c59d6476f6fd620e4e640cd2",
+      "companies": 570,
+      "progressRows": 149,
+      "qualityDistribution": {
+        "fiveStars": 7,
+        "fourStars": 93,
+        "threeStars": 0,
+        "twoStars": 100,
+        "oneStar": 370
+      }
+    },
     "synced": [
       "570社の品質階層",
       "品質スコアv2",
+      "Data Contract Gate修復",
       "本番30社補修キュー",
       "出典候補収集基盤",
       "レビュー・修正台帳Schema",
-      "検索・比較・ブラウザ品質ゲート"
+      "検索・比較・ブラウザ品質ゲート",
+      "品質ダッシュボードへのメイン導線"
     ],
     "pending": [
       "詳細β70社の公表日監査59社分の根拠台帳",
@@ -34,9 +49,9 @@
   },
   "automaticDataUpdateAllowed": false,
   "nextGate": [
-    "Data Contract Gateをグリーンへ戻す",
     "59社の監査根拠をGitHubへ取り込む",
     "14件の変更履歴を修正台帳へ接続する",
-    "公開サイトとGitHubデータの差分レポートを作る"
+    "公開サイトとGitHubデータの差分レポートを作る",
+    "本番30社と詳細β70社の根拠不足を順次補修する"
   ]
 }

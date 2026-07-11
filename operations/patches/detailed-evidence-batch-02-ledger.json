@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "detailed-evidence-batch-02",
+  "automaticApprovalAllowed": false,
+  "reviews": [
+    {
+      "id": "review-4755-20260711-page-evidence",
+      "companyCode": "4755",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "source-research-agent",
+      "reviewer": "quality-evidence-agent",
+      "sourceUrl": "https://corp.rakuten.co.jp/investors/assets/doc/stock/agm_PPT_20260327.pdf",
+      "sourcePages": [
+        "p.17 フィンテック再編・調達コスト抑制・One App",
+        "p.20 モバイルEBITDA・PMCF・売上・営業損失",
+        "p.28 2026年度モバイル設備投資",
+        "p.40 AI利益貢献"
+      ],
+      "note": "ページ証跡と定量KPIの補修は完了。本番昇格の承認ではなく、詳細抽出済みβのまま別確認者レビューを継続する。",
+      "decisionReason": "公式株主総会資料からフィンテック再編、モバイル収益化、設備投資、AI利益貢献をページ単位で確認し、比較画面の定量情報を補強するため。",
+      "createdAt": "2026-07-11T13:00:00Z",
+      "reviewedAt": "2026-07-11T13:20:00Z"
+    },
+    {
+      "id": "review-8604-20260711-page-evidence",
+      "companyCode": "8604",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "source-research-agent",
+      "reviewer": "quality-evidence-agent",
+      "sourceUrl": "https://www.nomuraholdings.com/jp/investor/presentation/main/018/teaserItems1/00/tableContents/00/multiFileUpload30/link/2026_0529_01_prem.pdf",
+      "sourcePages": [
+        "p.1 2030年ROE・税前利益目標と主要成長施策",
+        "p.3 WM・IM・BK・WS各部門の新KGI/KPI"
+      ],
+      "note": "ページ証跡と部門別KPIの補修は完了。本番昇格の承認ではなく、詳細抽出済みβのままレビューを継続する。",
+      "decisionReason": "公式Investor Day資料で上方修正後の2030年目標と部門別残高・収益性・費用効率KPIをページ単位で確認したため。",
+      "createdAt": "2026-07-11T13:00:00Z",
+      "reviewedAt": "2026-07-11T13:25:00Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-4755-20260711-page-evidence",
+      "companyCode": "4755",
+      "fieldPath": "profit,margin,capital,highlights,warnings,evidenceRefs",
+      "before": {
+        "pageEvidence": false,
+        "profit": "モバイルEBITDA黒字化後の収益改善を継続",
+        "margin": "フィンテック・モバイルの収益性向上"
+      },
+      "after": {
+        "pageEvidence": true,
+        "profit": "2025年 モバイルセグメントEBITDA288億円で通期黒字、PMCF675億円。2026年度は連結Non-GAAP・IFRS営業利益の大幅増益を目指す",
+        "margin": "フィンテック再編で数百億円の調達コスト抑制を企図。AI利益貢献は2025年255億円、2026年は2024年比3倍を目標"
+      },
+      "reason": "公式株主総会資料からフィンテック再編、モバイル収益化、設備投資、AI利益貢献のページ証跡と定量値を追加する。",
+      "sourceUrl": "https://corp.rakuten.co.jp/investors/assets/doc/stock/agm_PPT_20260327.pdf",
+      "sourcePage": "p.17, p.20, p.28, p.40",
+      "status": "corrected",
+      "reviewDecisionId": "review-4755-20260711-page-evidence",
+      "detectedAt": "2026-07-11T13:00:00Z",
+      "correctedAt": "2026-07-11T13:30:00Z"
+    },
+    {
+      "id": "correction-8604-20260711-page-evidence",
+      "companyCode": "8604",
+      "fieldPath": "profit,margin,capital,highlights,warnings,evidenceRefs",
+      "before": {
+        "pageEvidence": false,
+        "profit": "2030年 税前利益7,500億円超",
+        "margin": "2030年 ROE10～12%+"
+      },
+      "after": {
+        "pageEvidence": true,
+        "profit": "2030年 税前利益7,500億円超（2026年3月期実績5,398億円）",
+        "margin": "2030年 ROE10～12%+（2026年3月期実績10.1%）"
+      },
+      "reason": "公式Investor Day資料から2030年の上方修正目標とWM・IM・WS等の部門KPIをページ証跡付きで追加する。",
+      "sourceUrl": "https://www.nomuraholdings.com/jp/investor/presentation/main/018/teaserItems1/00/tableContents/00/multiFileUpload30/link/2026_0529_01_prem.pdf",
+      "sourcePage": "p.1, p.3",
+      "status": "corrected",
+      "reviewDecisionId": "review-8604-20260711-page-evidence",
+      "detectedAt": "2026-07-11T13:00:00Z",
+      "correctedAt": "2026-07-11T13:35:00Z"
+    }
+  ]
+}

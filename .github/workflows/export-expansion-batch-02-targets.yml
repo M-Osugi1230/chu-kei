@@ -33,17 +33,35 @@ jobs:
           const digest = crypto.createHash('sha256').update(compressed).digest('hex');
           if (digest !== manifest.sha256) throw new Error('bundle digest mismatch');
           const data = JSON.parse(zlib.gunzipSync(compressed));
-          const codes = new Set(['8630', '1925', '5802']);
+          const codes = new Set(['8630', '1925', '5201']);
           const companies = data.companies.filter(company => codes.has(String(company.code)));
           if (companies.length !== codes.size) throw new Error(`target count mismatch: ${companies.length}`);
-          const sourceIndexed = data.companies
-            .filter(company => company.stage === 'source_indexed')
-            .map(company => ({ code: company.code, name: company.name, industry: company.industry, sourceUrl: company.sourceUrl }))
-            .sort((left, right) => String(left.code).localeCompare(String(right.code)));
-          fs.writeFileSync('artifacts/structured-expansion-batch-02-targets.json', `${JSON.stringify({ manifest: { sha256: manifest.sha256, companyCount: manifest.companyCount }, companies, sourceIndexed }, null, 2)}\n`);
+          fs.writeFileSync('artifacts/structured-expansion-batch-02-targets.json', `${JSON.stringify({ manifest: { sha256: manifest.sha256, companyCount: manifest.companyCount }, companies }, null, 2)}\n`);
           NODE
+      - name: Discover AGC official PDF links
+        run: |
+          python - <<'PY'
+          import html, re, urllib.request
+          urls = [
+              'https://www.agc.com/company/strategy/plan/index.html',
+              'https://www.agc.com/ir/library/strategy/index.html',
+          ]
+          results = {}
+          for url in urls:
+              req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  text = response.read().decode('utf-8', errors='replace')
+              links = sorted(set(html.unescape(x) for x in re.findall(r'(?:href|src)=["\']([^"\']+)', text, re.I) if '.pdf' in x.lower()))
+              results[url] = links
+          import json
+          with open('artifacts/agc-official-pdf-links.json', 'w', encoding='utf-8') as f:
+              json.dump(results, f, ensure_ascii=False, indent=2)
+          print(json.dumps(results, ensure_ascii=False, indent=2))
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: structured-expansion-batch-02-targets
-          path: artifacts/structured-expansion-batch-02-targets.json
+          path: |
+            artifacts/structured-expansion-batch-02-targets.json
+            artifacts/agc-official-pdf-links.json
           retention-days: 7

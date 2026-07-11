@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "quality-debt-budget-v1",
+  "recordedAt": "2026-07-11",
+  "policy": {
+    "asOfDate": "2026-07-11",
+    "staleAfterDays": {
+      "core": 90,
+      "detailed_extracted": 180,
+      "source_indexed": 365,
+      "jpx_indexed": 365
+    }
+  },
+  "maximumCounts": {
+    "core.missingPageEvidence": 23,
+    "core.missingPublicationDate": 4,
+    "core.notFiveStar": 23,
+    "detailed.missingPageEvidence": 53,
+    "core.missingMetricExtraction": 0,
+    "core.missingProgressConnection": 0,
+    "core.placeholderSummary": 0,
+    "core.noEvidenceRefs": 0,
+    "core.missingOfficialSource": 0,
+    "core.missingDocumentLabel": 0,
+    "core.staleVerification": 0,
+    "detailed.missingPublicationDate": 0,
+    "detailed.missingMetricExtraction": 0,
+    "detailed.placeholderSummary": 0,
+    "detailed.noEvidenceRefs": 0,
+    "detailed_extracted.missingOfficialSource": 0,
+    "detailed_extracted.missingDocumentLabel": 0,
+    "detailed_extracted.staleVerification": 0,
+    "source_indexed.missingOfficialSource": 0,
+    "source_indexed.missingDocumentLabel": 0,
+    "source_indexed.staleVerification": 0,
+    "sourceIndexed.unexpectedAnalysis": 0,
+    "jpx_indexed.staleVerification": 0,
+    "coverage.unexpectedAnalysis": 0,
+    "coverage.invalidJpxSource": 0,
+    "coverage.unexpectedPublicationDate": 0,
+    "invalidLastVerifiedDate": 0,
+    "futureLastVerifiedDate": 0,
+    "invalidPlanPublishedDate": 0,
+    "futurePlanPublishedDate": 0,
+    "publicationAfterVerification": 0,
+    "emptyEvidenceRef": 0,
+    "duplicateEvidenceRef": 0,
+    "duplicateSourceUrlGroup": 0,
+    "duplicateStructuredSummaryGroup": 0
+  },
+  "rules": {
+    "regressionPolicy": "actual count must be less than or equal to maximum count for every dimension",
+    "improvementPolicy": "when actual count falls below maximum, lower the maximum in the same or next quality PR",
+    "automaticFactCompletion": false,
+    "automaticPromotion": false
+  }
+}

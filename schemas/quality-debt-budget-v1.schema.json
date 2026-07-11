@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.local/schemas/quality-debt-budget-v1.schema.json",
+  "title": "Chu-kei quality debt budget v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "recordedAt", "policy", "maximumCounts", "rules"],
+  "properties": {
+    "schemaVersion": { "const": "quality-debt-budget-v1" },
+    "recordedAt": { "type": "string", "format": "date" },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["asOfDate", "staleAfterDays"],
+      "properties": {
+        "asOfDate": { "type": "string", "format": "date" },
+        "staleAfterDays": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["core", "detailed_extracted", "source_indexed", "jpx_indexed"],
+          "properties": {
+            "core": { "type": "integer", "minimum": 1 },
+            "detailed_extracted": { "type": "integer", "minimum": 1 },
+            "source_indexed": { "type": "integer", "minimum": 1 },
+            "jpx_indexed": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    },
+    "maximumCounts": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["regressionPolicy", "improvementPolicy", "automaticFactCompletion", "automaticPromotion"],
+      "properties": {
+        "regressionPolicy": { "type": "string", "minLength": 1 },
+        "improvementPolicy": { "type": "string", "minLength": 1 },
+        "automaticFactCompletion": { "const": false },
+        "automaticPromotion": { "const": false }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+name: Chu-kei Quality Debt Budget
+
+on:
+  pull_request:
+    paths:
+      - 'site/data/**'
+      - 'operations/quality-debt-budget-v1.json'
+      - 'schemas/quality-debt-budget-v1.schema.json'
+      - 'scripts/validate_quality_debt_budget_v1.mjs'
+      - 'docs/QUALITY_DEBT_BUDGET_V1.md'
+      - '.github/workflows/quality-debt-budget.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'site/data/**'
+      - 'operations/quality-debt-budget-v1.json'
+      - 'schemas/quality-debt-budget-v1.schema.json'
+      - 'scripts/validate_quality_debt_budget_v1.mjs'
+      - 'docs/QUALITY_DEBT_BUDGET_V1.md'
+      - '.github/workflows/quality-debt-budget.yml'
+  schedule:
+    - cron: '17 21 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-debt-budget-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Use current UTC date for scheduled freshness watch
+        if: github.event_name == 'schedule'
+        run: echo "QUALITY_AS_OF_DATE=$(date -u +%F)" >> "$GITHUB_ENV"
+
+      - name: Run existing strict gates
+        run: |
+          node scripts/validate_quality_v43.mjs
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+
+      - name: Validate quality debt budget
+        run: node scripts/validate_quality_debt_budget_v1.mjs
+
+      - name: Upload quality debt report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-quality-debt-report
+          path: |
+            artifacts/quality-debt-report-v1.json
+            artifacts/quality-debt-items-v1.csv
+          if-no-files-found: warn
+          retention-days: 90

@@ -19,9 +19,20 @@ let progressIndex = new Map();
 let metadata = new Map();
 let ready = false;
 
+async function waitForPortalLoad() {
+  for (let attempt = 0; attempt < 300; attempt += 1) {
+    const error = $('#error');
+    if (error && !error.hidden) throw new Error(error.textContent || '企業ポータルのデータ読込に失敗しました。');
+    const loading = $('#loading');
+    if (loading?.hidden) return;
+    await new Promise(resolve => setTimeout(resolve, 50));
+  }
+  throw new Error('企業ポータルのデータ読込完了を確認できませんでした。');
+}
+
 async function loadData() {
   if (!('DecompressionStream' in window)) throw new Error('圧縮データの展開に対応していません。');
-  const manifest = await fetch('./data/bundle.manifest.json', { cache: 'no-cache' }).then(response => {
+  const manifest = await fetch('./data/bundle.manifest.json').then(response => {
     if (!response.ok) throw new Error('保存企業用データマニフェストを取得できません。');
     return response.json();
   });
@@ -137,6 +148,7 @@ $('#mark-saved-seen').addEventListener('click', () => {
 });
 
 try {
+  await waitForPortalLoad();
   const data = await loadData();
   companies = data.companies ?? [];
   companyByCode = new Map(companies.map(company => [String(company.code), company]));

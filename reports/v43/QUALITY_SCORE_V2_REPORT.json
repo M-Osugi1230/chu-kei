@@ -1,0 +1,90 @@
+{
+  "version": "quality-score-v2",
+  "generatedAt": "2026-07-11T08:43:48.032Z",
+  "rule": {
+    "weights": {
+      "officialSource": 15,
+      "publicationDate": 10,
+      "pageEvidence": 15,
+      "structuredAnalysis": 15,
+      "metricExtraction": 15,
+      "progressConnected": 10,
+      "humanReviewed": 10,
+      "doubleChecked": 10
+    },
+    "extractionStages": [
+      "core",
+      "detailed_extracted"
+    ],
+    "fiveStars": "all eight evidence and review checks must be true",
+    "fourStars": "score >= 65",
+    "threeStars": "score >= 45",
+    "twoStars": "official source confirmed",
+    "oneStar": "coverage only or insufficient evidence"
+  },
+  "before": {
+    "1": 370,
+    "2": 100,
+    "3": 55,
+    "4": 15,
+    "5": 30
+  },
+  "after": {
+    "1": 370,
+    "2": 100,
+    "3": 0,
+    "4": 93,
+    "5": 7
+  },
+  "byStage": {
+    "core": {
+      "companies": 30,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 23,
+        "5": 7
+      },
+      "averageScore": 87.2
+    },
+    "detailed_extracted": {
+      "companies": 70,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 70,
+        "5": 0
+      },
+      "averageScore": 68.6
+    },
+    "source_indexed": {
+      "companies": 100,
+      "distribution": {
+        "1": 0,
+        "2": 100,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "averageScore": 15
+    },
+    "jpx_indexed": {
+      "companies": 370,
+      "distribution": {
+        "1": 370,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "averageScore": null
+    }
+  },
+  "bundle": {
+    "sha256": "3fc7e9fc74ddf9074b9cad11ecdbb12c4baebd53c59d6476f6fd620e4e640cd2",
+    "compressedBytes": 70371,
+    "parts": 46
+  }
+}

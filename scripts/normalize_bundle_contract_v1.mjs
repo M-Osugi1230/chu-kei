@@ -73,6 +73,17 @@ for (const company of payload.companies ?? []) {
   }
 }
 
+const qualityV2Ready = (payload.companies ?? []).every((company) => (
+  company.quality?.version === '2.0'
+  && Object.keys(company.quality?.checks ?? {}).length === 8
+));
+if (!qualityV2Ready) {
+  blocking.push({
+    field: 'quality',
+    reason: '全570社のquality.version=2.0と8項目checksを確認できないため、v2マニフェストへ昇格できません',
+  });
+}
+
 if (blocking.length > 0) {
   throw new Error(`安全に正規化できない項目があります: ${JSON.stringify(blocking)}`);
 }
@@ -103,6 +114,7 @@ for (let index = 0; index < TARGET_PARTS; index += 1) {
 
 const nextManifest = {
   ...manifest,
+  version: 'v43-quality-score-v2',
   compressedBytes: nextCompressed.length,
   uncompressedBytes: json.length,
   sha256: crypto.createHash('sha256').update(nextCompressed).digest('hex'),
@@ -119,6 +131,7 @@ const report = {
   automaticFactCompletion: false,
   companyCount: payload.companies?.length ?? 0,
   progressCount: payload.progress?.length ?? 0,
+  qualityManifestVersion: nextManifest.version,
   changes,
   blocking,
   outputSha256: nextManifest.sha256,

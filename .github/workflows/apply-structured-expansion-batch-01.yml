@@ -77,16 +77,29 @@ jobs:
           node scripts/rebuild_quality_scores_v2.mjs
           node scripts/normalize_bundle_contract_v1.mjs
 
-      - name: Run quality and governance gates
-        run: |
-          node scripts/validate_quality_v43.mjs
-          node scripts/validate_quality_score_v2.mjs
-          node scripts/validate_data_contract_v1.mjs
-          node scripts/validate_quality_dashboard_v1.mjs
-          node scripts/validate_quality_debt_budget_v1.mjs
-          node scripts/validate_review_governance_v1.mjs
-          node scripts/validate_source_registry_v1.mjs
-          node scripts/validate_progress_experience_v1.mjs
+      - name: Validate v43 quality
+        run: node scripts/validate_quality_v43.mjs
+
+      - name: Validate quality scores
+        run: node scripts/validate_quality_score_v2.mjs
+
+      - name: Validate data contract
+        run: node scripts/validate_data_contract_v1.mjs
+
+      - name: Validate quality dashboard
+        run: node scripts/validate_quality_dashboard_v1.mjs
+
+      - name: Validate quality debt budget
+        run: node scripts/validate_quality_debt_budget_v1.mjs
+
+      - name: Validate review governance
+        run: node scripts/validate_review_governance_v1.mjs
+
+      - name: Validate source registry
+        run: node scripts/validate_source_registry_v1.mjs
+
+      - name: Validate progress experience
+        run: node scripts/validate_progress_experience_v1.mjs
 
       - name: Verify structured population growth
         run: |

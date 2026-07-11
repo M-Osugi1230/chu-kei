@@ -1,0 +1,55 @@
+name: Normalize Chu-kei Data Contract
+
+on:
+  push:
+    branches:
+      - fix/data-contract-and-site-v15-sync
+    paths:
+      - scripts/normalize_bundle_contract_v1.mjs
+      - .github/workflows/normalize-data-contract.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: normalize-data-contract-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  normalize-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Normalize safe contract fields
+        run: node scripts/normalize_bundle_contract_v1.mjs
+
+      - name: Run strict quality gate
+        run: node scripts/validate_quality_v43.mjs
+
+      - name: Run data contract gate
+        run: node scripts/validate_data_contract_v1.mjs
+
+      - name: Commit normalized bundle
+        shell: bash
+        run: |
+          if [ -z "$(git status --porcelain -- site/data)" ]; then
+            echo "Bundle is already normalized."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data
+          git commit -m "fix: normalize company themes for data contract"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

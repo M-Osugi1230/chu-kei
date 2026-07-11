@@ -27,14 +27,25 @@ function legacyCodes() {
   }
 }
 
-function navigateWith({ company = '', savedOnly = false, compare = [] } = {}) {
+function navigateWith({ savedOnly = false, compare = [] } = {}) {
   const url = new URL(location.href);
   if (savedOnly) url.searchParams.set('saved', '1');
   else url.searchParams.delete('saved');
   if (compare.length) url.searchParams.set('compare', compare.slice(0, 4).join(','));
   else url.searchParams.delete('compare');
-  url.hash = company ? `company=${encodeURIComponent(company)}` : '';
-  location.href = `${url.pathname}${url.search}${url.hash}`;
+  url.hash = '';
+  location.href = `${url.pathname}${url.search}`;
+}
+
+function openExistingCompanyDetail(code) {
+  const search = $('#search');
+  if (!search) return;
+  search.value = code;
+  search.dispatchEvent(new Event('input', { bubbles: true }));
+  requestAnimationFrame(() => {
+    const detailButton = document.querySelector(`[data-detail="${CSS.escape(code)}"]`);
+    detailButton?.click();
+  });
 }
 
 function savedCompanies() {
@@ -79,9 +90,11 @@ function render() {
   }).join('');
 
   document.querySelectorAll('[data-shelf-detail]').forEach(button => button.addEventListener('click', () => {
-    const company = companyByCode.get(button.dataset.shelfDetail);
+    const code = button.dataset.shelfDetail;
+    const company = companyByCode.get(code);
     if (company && markSavedSeen(metadata, company)) persistSavedResearch(localStorage, metadata);
-    navigateWith({ company: button.dataset.shelfDetail });
+    render();
+    openExistingCompanyDetail(code);
   }));
 }
 

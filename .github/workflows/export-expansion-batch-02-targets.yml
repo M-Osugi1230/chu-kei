@@ -1,0 +1,45 @@
+name: Export Expansion Batch 02 Targets
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-02
+    paths:
+      - '.github/workflows/export-expansion-batch-02-targets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-02
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Export target company records
+        run: |
+          mkdir -p artifacts
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          import crypto from 'node:crypto';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const digest = crypto.createHash('sha256').update(compressed).digest('hex');
+          if (digest !== manifest.sha256) throw new Error('bundle digest mismatch');
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const codes = new Set(['8630', '1925', '5802']);
+          const companies = data.companies.filter(company => codes.has(String(company.code)));
+          if (companies.length !== codes.size) throw new Error(`target count mismatch: ${companies.length}`);
+          fs.writeFileSync('artifacts/structured-expansion-batch-02-targets.json', `${JSON.stringify({ manifest: { sha256: manifest.sha256, companyCount: manifest.companyCount }, companies }, null, 2)}\n`);
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-02-targets
+          path: artifacts/structured-expansion-batch-02-targets.json
+          retention-days: 7

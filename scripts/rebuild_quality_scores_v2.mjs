@@ -27,6 +27,7 @@ const CHECK_LABELS = {
   humanReviewed: '人手レビュー済み',
   doubleChecked: 'ダブルチェック済み',
 };
+const EXTRACTION_STAGES = new Set(['core', 'detailed_extracted']);
 
 function readBundle() {
   const manifest = JSON.parse(fs.readFileSync(path.join(SITE_DATA, 'bundle.manifest.json'), 'utf8'));
@@ -39,10 +40,12 @@ function hasPageEvidence(company) {
   return (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
 }
 function hasStructuredAnalysis(company) {
+  if (!EXTRACTION_STAGES.has(company.stage)) return false;
   return Boolean(company.summary && company.summary.length >= 20)
     && Boolean((company.highlights || []).length || (company.themes || []).length);
 }
 function hasMetricExtraction(company) {
+  if (!EXTRACTION_STAGES.has(company.stage)) return false;
   return ['revenue', 'profit', 'margin', 'capital', 'returnPolicy'].some(key => Boolean(company[key]));
 }
 function buildChecks(company) {
@@ -153,7 +156,7 @@ fs.mkdirSync(REPORT_DIR, { recursive: true });
 const report = {
   version: 'quality-score-v2',
   generatedAt: new Date().toISOString(),
-  rule: { weights: WEIGHTS, fiveStars: 'all eight evidence and review checks must be true', fourStars: 'score >= 65', threeStars: 'score >= 45', twoStars: 'official source confirmed', oneStar: 'coverage only or insufficient evidence' },
+  rule: { weights: WEIGHTS, extractionStages: [...EXTRACTION_STAGES], fiveStars: 'all eight evidence and review checks must be true', fourStars: 'score >= 65', threeStars: 'score >= 45', twoStars: 'official source confirmed', oneStar: 'coverage only or insufficient evidence' },
   before,
   after,
   byStage,

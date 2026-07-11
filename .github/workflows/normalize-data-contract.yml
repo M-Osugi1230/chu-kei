@@ -1,0 +1,67 @@
+name: Normalize Chu-kei Data Contract
+
+on:
+  pull_request:
+    paths:
+      - 'site/data/**'
+      - 'site/index.html'
+      - 'scripts/normalize_bundle_contract_v1.mjs'
+      - 'scripts/rebuild_quality_scores_v2.mjs'
+      - 'scripts/validate_quality_score_v2.mjs'
+      - 'scripts/validate_data_contract_v1.mjs'
+      - '.github/workflows/normalize-data-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: normalize-data-contract-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  normalize-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout pull request
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Rebuild evidence-based quality profiles
+        run: node scripts/rebuild_quality_scores_v2.mjs
+
+      - name: Normalize safe contract fields and chunk manifest
+        run: node scripts/normalize_bundle_contract_v1.mjs
+
+      - name: Validate strict v43 quality
+        run: node scripts/validate_quality_v43.mjs
+
+      - name: Validate quality score v2
+        run: node scripts/validate_quality_score_v2.mjs
+
+      - name: Validate data contract v1
+        run: node scripts/validate_data_contract_v1.mjs
+
+      - name: Validate quality dashboard
+        run: node scripts/validate_quality_dashboard_v1.mjs
+
+      - name: Upload normalized bundle and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-normalized-bundle
+          path: |
+            site/data
+            reports/v43/QUALITY_SCORE_V2_REPORT.json
+            artifacts/bundle-contract-normalization-v1.json
+            artifacts/quality-report-v43.json
+            artifacts/quality-score-v2-validation.json
+            artifacts/data-contract-report-v1.json
+            artifacts/quality-dashboard-v1.json
+          if-no-files-found: warn
+          retention-days: 30

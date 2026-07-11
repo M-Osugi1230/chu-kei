@@ -1,0 +1,61 @@
+name: Apply Reviewed Nipponham Evidence Once
+
+on:
+  push:
+    branches:
+      - fix/nipponham-publication-evidence
+    paths:
+      - '.github/workflows/apply-nipponham-evidence-once.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-nipponham-evidence-once
+  cancel-in-progress: true
+
+jobs:
+  apply-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/nipponham-publication-evidence
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Apply reviewed company patch
+        env:
+          COMPANY_PATCH: operations/patches/nipponham-evidence-20260711.json
+        run: node scripts/apply_company_data_patch_v1.mjs
+
+      - name: Rebuild quality profiles and normalized bundle
+        run: |
+          node scripts/rebuild_quality_scores_v2.mjs
+          node scripts/normalize_bundle_contract_v1.mjs
+
+      - name: Run all affected quality gates
+        run: |
+          node scripts/validate_quality_v43.mjs
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_quality_debt_budget_v1.mjs
+          node scripts/validate_review_governance_v1.mjs
+          node scripts/validate_source_registry_v1.mjs
+
+      - name: Commit verified data and remove one-time workflow
+        shell: bash
+        run: |
+          rm .github/workflows/apply-nipponham-evidence-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data reports/v43/QUALITY_SCORE_V2_REPORT.json .github/workflows/apply-nipponham-evidence-once.yml
+          git commit -m "build: apply reviewed Nipponham evidence patch"
+          git push origin HEAD:fix/nipponham-publication-evidence

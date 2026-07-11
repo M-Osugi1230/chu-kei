@@ -1,0 +1,89 @@
+name: Apply Detailed Beta Evidence Batch 01
+
+on:
+  push:
+    branches:
+      - fix/detailed-beta-evidence-batch-01
+    paths:
+      - 'operations/patches/tokiomarine-evidence-20260711.json'
+      - 'operations/patches/nipponsteel-evidence-20260711.json'
+      - 'operations/patches/ana-evidence-20260711.json'
+      - 'operations/reviews/decisions.json'
+      - 'operations/corrections/corrections.json'
+      - 'operations/quality-debt-budget-v1.json'
+      - '.github/workflows/apply-detailed-evidence-batch-01.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-detailed-evidence-batch-01
+  cancel-in-progress: true
+
+jobs:
+  apply-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repair branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/detailed-beta-evidence-batch-01
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Apply deterministic company patches
+        run: |
+          COMPANY_PATCH=operations/patches/tokiomarine-evidence-20260711.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/nipponsteel-evidence-20260711.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/ana-evidence-20260711.json node scripts/apply_company_data_patch_v1.mjs
+
+      - name: Rebuild quality profiles and normalize bundle
+        run: |
+          node scripts/rebuild_quality_scores_v2.mjs
+          node scripts/normalize_bundle_contract_v1.mjs
+
+      - name: Run quality and governance gates
+        run: |
+          node scripts/validate_quality_v43.mjs
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_quality_dashboard_v1.mjs
+          node scripts/validate_quality_debt_budget_v1.mjs
+          node scripts/validate_review_governance_v1.mjs
+          node scripts/validate_source_registry_v1.mjs
+          node scripts/validate_progress_experience_v1.mjs
+
+      - name: Commit regenerated authoritative data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data reports/v43/QUALITY_SCORE_V2_REPORT.json
+          if git diff --cached --quiet; then
+            echo "No generated data changes to commit"
+          else
+            git commit -m "fix: apply detailed beta page evidence batch 01 [skip ci]"
+            git push origin HEAD:fix/detailed-beta-evidence-batch-01
+          fi
+
+      - name: Upload repair diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-detailed-evidence-batch-01
+          path: |
+            artifacts/tokiomarine-evidence-20260711-report.json
+            artifacts/nipponsteel-evidence-20260711-report.json
+            artifacts/ana-evidence-20260711-report.json
+            artifacts/quality-debt-report-v1.json
+            artifacts/quality-debt-items-v1.csv
+            artifacts/review-governance-report-v1.json
+            artifacts/source-registry-report-v1.json
+            artifacts/progress-experience-v1.json
+          if-no-files-found: warn
+          retention-days: 90

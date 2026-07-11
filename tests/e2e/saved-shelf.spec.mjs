@@ -16,13 +16,12 @@ async function expectNoErrors(errors) {
 }
 
 test.describe('Saved research shelf', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.addInitScript(() => localStorage.clear());
-  });
-
   test('stays hidden without saved companies and appears after save', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     await page.goto('/?q=7011');
+    await page.evaluate(() => localStorage.clear());
+    await page.reload();
+
     await expect(page.locator('#saved-research-shelf')).toBeHidden();
     await page.locator('[data-save="7011"]').click();
     await expect(page.locator('#saved-research-shelf')).toBeVisible();
@@ -46,6 +45,7 @@ test.describe('Saved research shelf', () => {
   test('shows local update status and marks company seen when research resumes', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     await page.addInitScript(() => {
+      localStorage.clear();
       localStorage.setItem('chukei.savedCompanies.v1', JSON.stringify(['7011']));
       localStorage.setItem('chukei.savedResearch.v2', JSON.stringify({
         version: 2,
@@ -63,6 +63,10 @@ test.describe('Saved research shelf', () => {
     await expect(page).toHaveURL(/#company=7011/);
     await expect(page.locator('#company-dialog')).toBeVisible();
     await page.locator('#company-dialog [data-close]').click();
+    const seenState = await page.evaluate(() => localStorage.getItem('chukei.savedResearch.v2'));
+    await page.removeInitScript?.();
+    await page.goto('/');
+    await page.evaluate(value => localStorage.setItem('chukei.savedResearch.v2', value), seenState);
     await page.reload();
     await expect(page.locator('#saved-shelf-summary')).toContainText('更新あり 0社');
     await expect(page.locator('.saved-shelf-card')).toContainText('確認済み');
@@ -77,6 +81,7 @@ test.describe('Saved research shelf', () => {
   test('resumes saved-only view and compares up to four saved companies', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     await page.addInitScript(() => {
+      localStorage.clear();
       localStorage.setItem('chukei.savedCompanies.v1', JSON.stringify(['7011', '6501', '9432', '2282', '4755']));
     });
     await page.goto('/');

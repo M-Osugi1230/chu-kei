@@ -10,6 +10,7 @@ on:
       - 'operations/patches/structured-expansion-batch-01-ledger.json'
       - 'scripts/apply_governance_ledger_batch_v1.mjs'
       - 'scripts/validate_quality_v43.mjs'
+      - 'scripts/validate_quality_dashboard_v1.mjs'
       - '.github/workflows/apply-structured-expansion-batch-01.yml'
   push:
     branches:
@@ -20,6 +21,7 @@ on:
       - 'operations/patches/structured-expansion-batch-01-ledger.json'
       - 'scripts/apply_governance_ledger_batch_v1.mjs'
       - 'scripts/validate_quality_v43.mjs'
+      - 'scripts/validate_quality_dashboard_v1.mjs'
       - '.github/workflows/apply-structured-expansion-batch-01.yml'
   workflow_dispatch:
 

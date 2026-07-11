@@ -8,50 +8,16 @@ import {
   countSavedUpdates,
 } from './saved-research-state.js';
 import { buildProgressIndex, progressForCode, progressSummary } from './progress-view.js';
+import { loadSharedPortalData } from './data-fetch-cache.js';
 
 const $ = selector => document.querySelector(selector);
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
 const stars = value => value ? `${'★'.repeat(value)}${'☆'.repeat(5 - value)} ${value}/5` : '算定対象外';
 const stageLabels = { core: '本番', detailed_extracted: '詳細抽出済みβ', source_indexed: '一次確認β', jpx_indexed: 'カバレッジβ' };
-let companies = [];
 let companyByCode = new Map();
 let progressIndex = new Map();
 let metadata = new Map();
 let ready = false;
-
-async function waitForPortalLoad() {
-  for (let attempt = 0; attempt < 300; attempt += 1) {
-    const error = $('#error');
-    if (error && !error.hidden) throw new Error(error.textContent || '企業ポータルのデータ読込に失敗しました。');
-    const loading = $('#loading');
-    if (loading?.hidden) return;
-    await new Promise(resolve => setTimeout(resolve, 50));
-  }
-  throw new Error('企業ポータルのデータ読込完了を確認できませんでした。');
-}
-
-async function loadData() {
-  if (!('DecompressionStream' in window)) throw new Error('圧縮データの展開に対応していません。');
-  const manifest = await fetch('./data/bundle.manifest.json').then(response => {
-    if (!response.ok) throw new Error('保存企業用データマニフェストを取得できません。');
-    return response.json();
-  });
-  const buffers = await Promise.all(manifest.parts.map(part => fetch(`./data/${part.file}`).then(response => {
-    if (!response.ok) throw new Error(`${part.file}を取得できません。`);
-    return response.arrayBuffer();
-  })));
-  const bytes = new Uint8Array(buffers.reduce((sum, buffer) => sum + buffer.byteLength, 0));
-  let offset = 0;
-  for (const buffer of buffers) {
-    bytes.set(new Uint8Array(buffer), offset);
-    offset += buffer.byteLength;
-  }
-  const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))]
-    .map(value => value.toString(16).padStart(2, '0')).join('');
-  if (digest !== manifest.sha256) throw new Error('保存企業用データの整合性確認に失敗しました。');
-  const text = await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
-  return JSON.parse(text);
-}
 
 function legacyCodes() {
   try {
@@ -65,6 +31,7 @@ function legacyCodes() {
 function navigateWith({ company = '', savedOnly = false, compare = [] } = {}) {
   const url = new URL(location.href);
   if (savedOnly) url.searchParams.set('saved', '1');
+  else url.searchParams.delete('saved');
   if (compare.length) url.searchParams.set('compare', compare.slice(0, 4).join(','));
   else url.searchParams.delete('compare');
   url.hash = company ? `company=${encodeURIComponent(company)}` : '';
@@ -75,11 +42,8 @@ function savedCompanies() {
   return [...metadata.keys()].map(code => companyByCode.get(code)).filter(Boolean);
 }
 
-function render() {
-  if (!ready) return;
-  metadata = syncSavedResearch(metadata, legacyCodes(), companyByCode);
-  persistSavedResearch(localStorage, metadata);
-  const rows = savedCompanies().sort((left, right) => {
+function sortedSavedCompanies() {
+  return savedCompanies().sort((left, right) => {
     const leftUpdate = Number(hasSavedUpdate(metadata.get(left.code), left));
     const rightUpdate = Number(hasSavedUpdate(metadata.get(right.code), right));
     return rightUpdate - leftUpdate
@@ -87,6 +51,13 @@ function render() {
       || String(right.lastVerifiedDate ?? '').localeCompare(String(left.lastVerifiedDate ?? ''))
       || left.code.localeCompare(right.code, 'ja');
   });
+}
+
+function render() {
+  if (!ready) return;
+  metadata = syncSavedResearch(metadata, legacyCodes(), companyByCode);
+  persistSavedResearch(localStorage, metadata);
+  const rows = sortedSavedCompanies();
   const section = $('#saved-research-shelf');
   section.hidden = rows.length === 0;
   if (!rows.length) return;
@@ -135,10 +106,7 @@ document.addEventListener('click', event => {
 
 $('#show-saved-results').addEventListener('click', () => navigateWith({ savedOnly: true }));
 $('#compare-saved').addEventListener('click', () => {
-  const codes = savedCompanies()
-    .sort((left, right) => Number(hasSavedUpdate(metadata.get(right.code), right)) - Number(hasSavedUpdate(metadata.get(left.code), left)))
-    .map(company => company.code)
-    .slice(0, 4);
+  const codes = sortedSavedCompanies().map(company => company.code).slice(0, 4);
   if (codes.length >= 2) navigateWith({ compare: codes });
 });
 $('#mark-saved-seen').addEventListener('click', () => {
@@ -148,10 +116,8 @@ $('#mark-saved-seen').addEventListener('click', () => {
 });
 
 try {
-  await waitForPortalLoad();
-  const data = await loadData();
-  companies = data.companies ?? [];
-  companyByCode = new Map(companies.map(company => [String(company.code), company]));
+  const data = await loadSharedPortalData();
+  companyByCode = new Map((data.companies ?? []).map(company => [String(company.code), company]));
   progressIndex = buildProgressIndex(data.progress ?? []);
   metadata = loadSavedResearch(localStorage, companyByCode);
   persistSavedResearch(localStorage, metadata);

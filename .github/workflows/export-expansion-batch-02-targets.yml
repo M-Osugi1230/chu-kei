@@ -36,7 +36,11 @@ jobs:
           const codes = new Set(['8630', '1925', '5802']);
           const companies = data.companies.filter(company => codes.has(String(company.code)));
           if (companies.length !== codes.size) throw new Error(`target count mismatch: ${companies.length}`);
-          fs.writeFileSync('artifacts/structured-expansion-batch-02-targets.json', `${JSON.stringify({ manifest: { sha256: manifest.sha256, companyCount: manifest.companyCount }, companies }, null, 2)}\n`);
+          const sourceIndexed = data.companies
+            .filter(company => company.stage === 'source_indexed')
+            .map(company => ({ code: company.code, name: company.name, industry: company.industry, sourceUrl: company.sourceUrl }))
+            .sort((left, right) => String(left.code).localeCompare(String(right.code)));
+          fs.writeFileSync('artifacts/structured-expansion-batch-02-targets.json', `${JSON.stringify({ manifest: { sha256: manifest.sha256, companyCount: manifest.companyCount }, companies, sourceIndexed }, null, 2)}\n`);
           NODE
       - uses: actions/upload-artifact@v4
         with:

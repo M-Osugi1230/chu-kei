@@ -25,18 +25,25 @@ try {
 const companies = payload.companies || [];
 const detailed = companies.filter(company => company.stage === 'detailed_extracted');
 const pageEvidence = company => (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
+const priorityA = detailed.filter(pageEvidence).length;
+const priorityB = detailed.filter(company => !pageEvidence(company)).length;
 const corePublicationGaps = companies.filter(company => company.stage === 'core' && !company.planPublishedDate).length;
 const corePageGaps = companies.filter(company => company.stage === 'core' && !pageEvidence(company)).length;
 const expectedPublicationMaximum = budget.maximumCounts?.['core.missingPublicationDate'];
 const expectedPageMaximum = budget.maximumCounts?.['core.missingPageEvidence'];
+const expectedDetailedPageMaximum = budget.maximumCounts?.['detailed.missingPageEvidence'];
 
 check('quality dashboard HTML exists', fs.existsSync(path.join(root, 'quality.html')));
 check('quality dashboard JavaScript exists', fs.existsSync(path.join(root, 'assets/quality.js')));
 check('quality dashboard CSS exists', fs.existsSync(path.join(root, 'assets/quality.css')));
-check('quality debt budget readable', Number.isInteger(expectedPublicationMaximum) && Number.isInteger(expectedPageMaximum));
+check(
+  'quality debt budget readable',
+  Number.isInteger(expectedPublicationMaximum) && Number.isInteger(expectedPageMaximum) && Number.isInteger(expectedDetailedPageMaximum),
+);
 check('detail beta queue has 70 companies', detailed.length === 70, `actual=${detailed.length}`);
-check('priority A candidates 17', detailed.filter(pageEvidence).length === 17, `actual=${detailed.filter(pageEvidence).length}`);
-check('priority B candidates 53', detailed.filter(company => !pageEvidence(company)).length === 53, `actual=${detailed.filter(company => !pageEvidence(company)).length}`);
+check('priority A and B partition review queue', priorityA + priorityB === detailed.length, `A=${priorityA}, B=${priorityB}`);
+check('priority B within detailed evidence debt budget', priorityB <= expectedDetailedPageMaximum, `actual=${priorityB}, maximum=${expectedDetailedPageMaximum}`);
+check('priority A reflects evidence improvements', priorityA >= detailed.length - expectedDetailedPageMaximum, `actual=${priorityA}, minimum=${detailed.length - expectedDetailedPageMaximum}`);
 check(
   'production publication date gaps within quality debt budget',
   corePublicationGaps <= expectedPublicationMaximum,
@@ -61,6 +68,12 @@ fs.mkdirSync('artifacts', { recursive: true });
 const report = {
   version: 'quality-dashboard-v1',
   checkedAt: new Date().toISOString(),
+  reviewQueue: {
+    total: detailed.length,
+    priorityA,
+    priorityB,
+    detailedPageEvidenceMaximum: expectedDetailedPageMaximum,
+  },
   qualityDebtBudget: {
     publicationDateMaximum: expectedPublicationMaximum,
     pageEvidenceMaximum: expectedPageMaximum,

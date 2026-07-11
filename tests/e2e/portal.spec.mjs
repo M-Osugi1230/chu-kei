@@ -69,6 +69,45 @@ test.describe('Chu-kei portal', () => {
     await expectNoErrors(errors);
   });
 
+  test('restores a shared workspace and persists saved companies locally', async ({ page }, testInfo) => {
+    const errors = captureErrors(page);
+    await page.goto('/?q=7011&market=Prime&sort=quality&compare=7011,6501#company=7011');
+
+    await expect(page.locator('#search')).toHaveValue('7011');
+    await expect(page.locator('#market')).toHaveValue('Prime');
+    await expect(page.locator('#sort')).toHaveValue('quality');
+    await expect(page.locator('#compare-count')).toHaveText('2');
+    await expect(page.locator('#company-dialog')).toBeVisible();
+    await expect(page.locator('#company-dialog h2')).toContainText('三菱重工業');
+    await page.locator('#company-dialog [data-close]').click();
+    await expect(page).not.toHaveURL(/#company=/);
+
+    const saveButton = page.locator('[data-save="7011"]');
+    await saveButton.click();
+    await expect(page.locator('#saved-summary')).toHaveText('保存 1社');
+    await expect(saveButton).toHaveAttribute('aria-pressed', 'true');
+
+    await page.reload();
+    await expect(page.locator('#saved-summary')).toHaveText('保存 1社');
+    await expect(page.locator('[data-save="7011"]')).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.locator('#compare-count')).toHaveText('2');
+
+    await page.locator('#saved-summary').click();
+    await expect(page.locator('#saved-only')).toBeChecked();
+    await expect(page.locator('#result-summary')).toContainText('保存企業のみ');
+    await expect(page).toHaveURL(/saved=1/);
+    await expect(page.locator('[data-clear-filter="saved"]')).toBeVisible();
+
+    await page.locator('#share-workspace').click();
+    await expect(page.locator('#toast')).toContainText('調査リンクをコピーしました');
+
+    if (testInfo.project.name === 'mobile') {
+      const width = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+      expect(width.scroll).toBeLessThanOrEqual(width.client);
+    }
+    await expectNoErrors(errors);
+  });
+
   test('quality dashboard exposes consistent A/B review queue', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     await page.goto('/quality.html');

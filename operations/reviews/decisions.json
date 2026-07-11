@@ -281,5 +281,94 @@
     "decisionReason": "2035長期経営戦略に含まれる連結目標、5カ年資本配分、クルーズ事業目標の対象範囲を分離し、比較画面で誤解なく利用できるデータへ拡張する。",
     "createdAt": "2026-07-11T15:00:00Z",
     "reviewedAt": "2026-07-11T15:25:00Z"
+  },
+  {
+    "id": "review-1925-20260712-structured-expansion",
+    "companyCode": "1925",
+    "fromStage": "source_indexed",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+    "sourcePages": [
+      "p.1 公表日・当初期間",
+      "p.15 財務目標・資本効率・還元目標",
+      "p.21-p.23 不動産開発投資",
+      "p.30 キャッシュアロケーション",
+      "2026年3月期経営説明会 p.4-p.6 前倒し終了・達成状況"
+    ],
+    "note": "第7次中計の当初目標、投資、資本効率、還元方針と、FY2025での前倒し終了を区別して構造化する。 詳細抽出済みβへの昇格であり、本番承認ではない。",
+    "decisionReason": "公式計画と最新振り返り資料を突合し、当初FY2026目標を現行目標と誤認しない比較データへ拡張する。",
+    "createdAt": "2026-07-12T05:00:00Z",
+    "reviewedAt": "2026-07-12T05:20:00Z"
+  },
+  {
+    "id": "review-8630-20260712-structured-expansion",
+    "companyCode": "8630",
+    "fromStage": "source_indexed",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.sompo-hd.com/-/media/hd/files/doc/pdf/ir/2026/20260522_1.pdf?la=ja-JP",
+    "sourcePages": [
+      "公式IRイベント一覧 2024年5月28日公表",
+      "経営戦略ページ 中計KPI",
+      "2026年5月IRミーティング p.10-p.12 利益・ROE・EPS",
+      "p.21 成長投資・M&A",
+      "p.23 株主還元"
+    ],
+    "note": "SOMPO独自の修正指標、成長投資、M&A、株主還元を年度・対象範囲別に構造化する。 詳細抽出済みβへの昇格であり、本番承認ではない。",
+    "decisionReason": "保険会社特有のKPIを売上高と混同せず、独自調整指標の比較注意を付した実用データへ拡張する。",
+    "createdAt": "2026-07-12T05:05:00Z",
+    "reviewedAt": "2026-07-12T05:25:00Z"
+  },
+  {
+    "id": "review-5201-20260712-structured-expansion",
+    "companyCode": "5201",
+    "fromStage": "source_indexed",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+    "sourcePages": [
+      "E-IR資料一覧 2024年2月8日公表・文書ID176339",
+      "公式中計ページ 図版 p.01-p.03 財務目標・進捗・主要戦略",
+      "図版 p.04-p.09 事業戦略・サステナビリティ・DX",
+      "図版 p.10 キャッシュアロケーション・還元"
+    ],
+    "note": "当初目標と公式ページ上の最新見込みを分離し、両利きの経営、ROCE、投資、DOEを構造化する。 詳細抽出済みβへの昇格であり、本番承認ではない。",
+    "decisionReason": "動的E-IRから公表日と原本を特定し、公式図版番号を証跡として比較可能なデータへ拡張する。",
+    "createdAt": "2026-07-12T05:10:00Z",
+    "reviewedAt": "2026-07-12T05:30:00Z"
   }
 ]

@@ -10,7 +10,13 @@ on:
       - 'operations/patches/structured-expansion-batch-01-ledger.json'
       - 'scripts/apply_governance_ledger_batch_v1.mjs'
       - 'scripts/validate_quality_v43.mjs'
+      - 'scripts/validate_quality_score_v2.mjs'
+      - 'scripts/validate_data_contract_v1.mjs'
       - 'scripts/validate_quality_dashboard_v1.mjs'
+      - 'scripts/validate_quality_debt_budget_v1.mjs'
+      - 'scripts/validate_review_governance_v1.mjs'
+      - 'scripts/validate_source_registry_v1.mjs'
+      - 'scripts/validate_progress_experience_v1.mjs'
       - '.github/workflows/apply-structured-expansion-batch-01.yml'
   push:
     branches:
@@ -21,7 +27,13 @@ on:
       - 'operations/patches/structured-expansion-batch-01-ledger.json'
       - 'scripts/apply_governance_ledger_batch_v1.mjs'
       - 'scripts/validate_quality_v43.mjs'
+      - 'scripts/validate_quality_score_v2.mjs'
+      - 'scripts/validate_data_contract_v1.mjs'
       - 'scripts/validate_quality_dashboard_v1.mjs'
+      - 'scripts/validate_quality_debt_budget_v1.mjs'
+      - 'scripts/validate_review_governance_v1.mjs'
+      - 'scripts/validate_source_registry_v1.mjs'
+      - 'scripts/validate_progress_experience_v1.mjs'
       - '.github/workflows/apply-structured-expansion-batch-01.yml'
   workflow_dispatch:
 

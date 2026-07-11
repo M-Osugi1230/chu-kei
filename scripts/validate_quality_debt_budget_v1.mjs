@@ -23,8 +23,9 @@ const DEFAULT_POLICY = {
 
 const STAGES = ['core', 'detailed_extracted', 'source_indexed', 'jpx_indexed'];
 const METRIC_FIELDS = ['revenue', 'profit', 'margin', 'capital', 'returnPolicy'];
-const STRUCTURED_FIELDS = ['summary', 'themes', 'highlights', ...METRIC_FIELDS];
 const PLACEHOLDER_RE = /^(?:未確認|未抽出|未特定|確認中|要確認|n\/?a|none|-)+$/i;
+const COVERAGE_SUMMARY_PREFIX = '企業探索用。JPXで上場・市場・業種を確認済み';
+const SOURCE_INDEXED_REQUIRED_SUMMARY_TERMS = ['一次確認β', '未抽出'];
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -60,11 +61,15 @@ function hasPageEvidence(company) {
   return (company.evidenceRefs ?? []).some((ref) => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
 }
 
+function isMeaningfulValue(value) {
+  if (value == null) return false;
+  if (typeof value !== 'string') return Boolean(value);
+  const text = value.trim();
+  return Boolean(text) && !PLACEHOLDER_RE.test(text);
+}
+
 function hasMetricExtraction(company) {
-  return METRIC_FIELDS.some((field) => {
-    const value = company[field];
-    return typeof value === 'string' ? value.trim() && !PLACEHOLDER_RE.test(value.trim()) : Boolean(value);
-  });
+  return METRIC_FIELDS.some((field) => isMeaningfulValue(company[field]));
 }
 
 function isPlaceholder(value) {
@@ -74,12 +79,40 @@ function isPlaceholder(value) {
   return !text || PLACEHOLDER_RE.test(text);
 }
 
-function hasStructuredLeak(company) {
-  return STRUCTURED_FIELDS.some((field) => {
-    const value = company[field];
-    if (Array.isArray(value)) return value.length > 0;
-    return typeof value === 'string' ? value.trim() && !PLACEHOLDER_RE.test(value.trim()) : Boolean(value);
-  });
+function hasUnexpectedSourceIndexedAnalysis(company) {
+  const allowedThemes = new Set([
+    String(company.industry ?? '').trim(),
+    '公式IR起点確認',
+    '詳細抽出前',
+  ]);
+  const unexpectedThemes = (company.themes ?? []).filter((theme) => !allowedThemes.has(String(theme).trim()));
+  const summary = String(company.summary ?? '');
+  return hasMetricExtraction(company)
+    || Boolean(company.highlights?.length)
+    || Object.values(company.flags ?? {}).some(Boolean)
+    || unexpectedThemes.length > 0
+    || !SOURCE_INDEXED_REQUIRED_SUMMARY_TERMS.every((term) => summary.includes(term));
+}
+
+function hasUnexpectedCoverageAnalysis(company) {
+  const summary = String(company.summary ?? '').trim();
+  return hasMetricExtraction(company)
+    || Boolean(company.themes?.length)
+    || Boolean(company.highlights?.length)
+    || Object.values(company.flags ?? {}).some(Boolean)
+    || !summary.startsWith(COVERAGE_SUMMARY_PREFIX);
+}
+
+function hasValidCoverageSource(company) {
+  try {
+    const url = new URL(company.sourceUrl);
+    return url.protocol === 'https:'
+      && url.hostname === 'www2.jpx.co.jp'
+      && url.pathname === '/tseHpFront/StockSearch.do'
+      && url.searchParams.get('topSearchStr') === String(company.code);
+  } catch {
+    return false;
+  }
 }
 
 function normalizeUrl(value) {
@@ -101,8 +134,9 @@ const { manifest, payload } = readBundle();
 const companies = payload.companies ?? [];
 const budgetFile = fs.existsSync(BUDGET_PATH) ? readJson(BUDGET_PATH) : null;
 const policy = budgetFile?.policy ?? DEFAULT_POLICY;
-const asOfDate = parseIsoDate(policy.asOfDate);
-if (!asOfDate) throw new Error(`Invalid policy.asOfDate: ${policy.asOfDate}`);
+const effectiveAsOfDate = process.env.QUALITY_AS_OF_DATE || policy.asOfDate;
+const asOfDate = parseIsoDate(effectiveAsOfDate);
+if (!asOfDate) throw new Error(`Invalid quality as-of date: ${effectiveAsOfDate}`);
 
 const items = [];
 const counts = {};
@@ -151,7 +185,9 @@ for (const company of companies) {
   if (duplicateEvidence) addDebt(company, 'duplicateEvidenceRef', `${duplicateEvidence} duplicate references`);
 
   if (company.stage !== 'jpx_indexed') {
-    if (!(typeof company.sourceUrl === 'string' && company.sourceUrl.startsWith('https://'))) addDebt(company, `${company.stage}.missingOfficialSource`, 'sourceUrl missing or not HTTPS', 'structural');
+    if (!(typeof company.sourceUrl === 'string' && company.sourceUrl.startsWith('https://'))) {
+      addDebt(company, `${company.stage}.missingOfficialSource`, 'sourceUrl missing or not HTTPS', 'structural');
+    }
     if (isPlaceholder(company.document)) addDebt(company, `${company.stage}.missingDocumentLabel`, String(company.document ?? ''));
   }
 
@@ -173,14 +209,18 @@ for (const company of companies) {
     if (!evidenceRefs.length) addDebt(company, 'detailed.noEvidenceRefs', 'evidenceRefs is empty');
   }
 
-  if (company.stage === 'source_indexed' && hasStructuredLeak(company)) {
-    addDebt(company, 'sourceIndexed.structuredContentLeak', 'analysis content exists before detailed extraction', 'structural');
+  if (company.stage === 'source_indexed' && hasUnexpectedSourceIndexedAnalysis(company)) {
+    addDebt(company, 'sourceIndexed.unexpectedAnalysis', 'content exceeds official IR starting-point scope', 'structural');
   }
 
   if (company.stage === 'jpx_indexed') {
-    if (hasStructuredLeak(company)) addDebt(company, 'coverage.structuredContentLeak', 'analysis content exists in coverage tier', 'structural');
-    if (company.sourceUrl) addDebt(company, 'coverage.unexpectedSourceUrl', String(company.sourceUrl));
-    if (company.planPublishedDate) addDebt(company, 'coverage.unexpectedPublicationDate', String(company.planPublishedDate));
+    if (hasUnexpectedCoverageAnalysis(company)) {
+      addDebt(company, 'coverage.unexpectedAnalysis', 'content exceeds JPX coverage scope', 'structural');
+    }
+    if (!hasValidCoverageSource(company)) {
+      addDebt(company, 'coverage.invalidJpxSource', String(company.sourceUrl ?? ''), 'structural');
+    }
+    if (company.planPublishedDate) addDebt(company, 'coverage.unexpectedPublicationDate', String(company.planPublishedDate), 'structural');
   }
 }
 
@@ -230,6 +270,8 @@ if (budget) {
   }
 }
 
+const affectedCodes = new Set(items.map((item) => item.code).filter(Boolean));
+const affectedByStage = Object.fromEntries(STAGES.map((stage) => [stage, new Set(items.filter((item) => item.stage === stage).map((item) => item.code).filter(Boolean)).size]));
 const report = {
   version: 'quality-debt-budget-v1',
   generatedAt: new Date().toISOString(),
@@ -239,10 +281,12 @@ const report = {
     companyCount: companies.length,
     stageCounts,
   },
-  policy,
+  policy: { ...policy, effectiveAsOfDate },
   budgetMode: budget ? 'enforced' : 'bootstrap',
   debtCounts: normalizedCounts,
   totalDebtItems: items.length,
+  affectedCompanies: affectedCodes.size,
+  affectedByStage,
   structuralDimensions: [...structuralDimensions].sort(),
   regressions,
   improvements,
@@ -257,7 +301,16 @@ const lines = [headers.map(csvCell).join(',')];
 for (const item of items) lines.push(headers.map((header) => csvCell(item[header])).join(','));
 fs.writeFileSync(CSV_PATH, `${lines.join('\n')}\n`);
 
-console.log(JSON.stringify({ budgetMode: report.budgetMode, totalDebtItems: report.totalDebtItems, debtCounts: report.debtCounts, regressions, improvements }, null, 2));
+console.log(JSON.stringify({
+  budgetMode: report.budgetMode,
+  effectiveAsOfDate,
+  totalDebtItems: report.totalDebtItems,
+  affectedCompanies: report.affectedCompanies,
+  affectedByStage,
+  debtCounts: report.debtCounts,
+  regressions,
+  improvements,
+}, null, 2));
 console.log(`Report: ${REPORT_PATH}`);
 console.log(`Items: ${CSV_PATH}`);
 

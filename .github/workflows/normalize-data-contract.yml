@@ -32,24 +32,28 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Normalize safe contract fields
+      - name: Rebuild evidence-based quality profiles
+        run: node scripts/rebuild_quality_scores_v2.mjs
+
+      - name: Normalize safe contract fields and chunk manifest
         run: node scripts/normalize_bundle_contract_v1.mjs
 
-      - name: Run strict quality gate
-        run: node scripts/validate_quality_v43.mjs
-
-      - name: Run data contract gate
-        run: node scripts/validate_data_contract_v1.mjs
+      - name: Run quality gates
+        run: |
+          node scripts/validate_quality_v43.mjs
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_quality_dashboard_v1.mjs
 
       - name: Commit normalized bundle
         shell: bash
         run: |
-          if [ -z "$(git status --porcelain -- site/data)" ]; then
+          if [ -z "$(git status --porcelain -- site/data reports/v43/QUALITY_SCORE_V2_REPORT.json)" ]; then
             echo "Bundle is already normalized."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/data
-          git commit -m "fix: normalize company themes for data contract"
+          git add site/data reports/v43/QUALITY_SCORE_V2_REPORT.json
+          git commit -m "fix: rebuild quality v2 and normalize data contract"
           git push origin "HEAD:${GITHUB_REF_NAME}"

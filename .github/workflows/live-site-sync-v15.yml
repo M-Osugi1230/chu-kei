@@ -1,0 +1,57 @@
+name: Chu-kei Live Site v15 Sync Contract
+
+on:
+  pull_request:
+    paths:
+      - 'operations/site-sync/**'
+      - 'schemas/publication-date-audit-import-v1.schema.json'
+      - 'schemas/company-change-history-import-v1.schema.json'
+      - 'scripts/validate_live_site_sync_v1.mjs'
+      - '.github/workflows/live-site-sync-v15.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'operations/site-sync/**'
+      - 'schemas/publication-date-audit-import-v1.schema.json'
+      - 'schemas/company-change-history-import-v1.schema.json'
+      - 'scripts/validate_live_site_sync_v1.mjs'
+      - '.github/workflows/live-site-sync-v15.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: live-site-sync-v15-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-import-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run strict quality and data contract gates
+        run: |
+          node scripts/validate_quality_v43.mjs
+          node scripts/validate_data_contract_v1.mjs
+
+      - name: Validate live site v15 sync contract
+        run: node scripts/validate_live_site_sync_v1.mjs
+
+      - name: Upload sync report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-live-site-v15-sync-report
+          path: artifacts/live-site-sync-v15-report.json
+          if-no-files-found: warn
+          retention-days: 30

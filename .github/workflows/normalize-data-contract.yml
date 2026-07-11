@@ -38,14 +38,20 @@ jobs:
       - name: Normalize safe contract fields and chunk manifest
         run: node scripts/normalize_bundle_contract_v1.mjs
 
-      - name: Run quality gates
-        run: |
-          node scripts/validate_quality_v43.mjs
-          node scripts/validate_quality_score_v2.mjs
-          node scripts/validate_data_contract_v1.mjs
-          node scripts/validate_quality_dashboard_v1.mjs
+      - name: Validate strict v43 quality
+        run: node scripts/validate_quality_v43.mjs
 
-      - name: Upload verified normalized bundle
+      - name: Validate quality score v2
+        run: node scripts/validate_quality_score_v2.mjs
+
+      - name: Validate data contract v1
+        run: node scripts/validate_data_contract_v1.mjs
+
+      - name: Validate quality dashboard
+        run: node scripts/validate_quality_dashboard_v1.mjs
+
+      - name: Upload normalized bundle and diagnostics
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: chu-kei-normalized-bundle
@@ -53,7 +59,9 @@ jobs:
             site/data
             reports/v43/QUALITY_SCORE_V2_REPORT.json
             artifacts/bundle-contract-normalization-v1.json
+            artifacts/quality-report-v43.json
             artifacts/quality-score-v2-validation.json
             artifacts/data-contract-report-v1.json
-          if-no-files-found: error
+            artifacts/quality-dashboard-v1.json
+          if-no-files-found: warn
           retention-days: 30

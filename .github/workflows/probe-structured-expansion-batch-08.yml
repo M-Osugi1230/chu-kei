@@ -1,0 +1,107 @@
+name: Probe Structured Expansion Batch 08 Materials
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/probe-structured-expansion-batch-08.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-08
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install requests beautifulsoup4 pypdf
+      - name: Probe plan pages and PDFs
+        run: |
+          python - <<'PY'
+          import hashlib, html, json, re, urllib.parse
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          out = Path('artifacts/batch-08-probe')
+          out.mkdir(parents=True, exist_ok=True)
+          s = requests.Session()
+          s.headers.update({'User-Agent': 'Mozilla/5.0 (compatible; Chu-kei evidence audit/1.0)', 'Accept-Language': 'ja,en;q=0.7'})
+          targets = {
+            '2267': ['https://www.yakult.co.jp/company/ir/management/', 'https://www.yakult.co.jp/company/ir/'],
+            '2914': ['https://www.jti.co.jp/investors/management_plan/', 'https://www.jti.co.jp/investors/'],
+            '4324': ['https://www.group.dentsu.com/jp/ir/strategy/', 'https://www.group.dentsu.com/jp/ir/'],
+            '5802': ['https://sumitomoelectric.com/jp/company/segmid-term2028', 'https://sumitomoelectric.com/jp/ir/management'],
+            '6762': ['https://www.tdk.com/ja/ir/management/', 'https://www.tdk.com/ja/ir/'],
+            '6963': ['https://www.rohm.co.jp/ir/management-plan', 'https://www.rohm.co.jp/ir'],
+            '8233': ['https://www.takashimaya.co.jp/corp/info/plan/', 'https://www.takashimaya.co.jp/corp/ir/'],
+            '9022': ['https://company.jr-central.co.jp/ir/management-plan/', 'https://company.jr-central.co.jp/ir/'],
+          }
+          keys = ['中期','長期','経営計画','経営戦略','management','strategy','plan','説明会','資本','vision']
+          result = {}
+          for code, starts in targets.items():
+            cdir = out/code; cdir.mkdir(exist_ok=True)
+            pages = []
+            page_urls = list(starts)
+            pdfs = {}
+            for url in list(page_urls):
+              try:
+                r=s.get(url,timeout=35,allow_redirects=True); r.raise_for_status()
+              except Exception as e:
+                pages.append({'url':url,'error':str(e)}); continue
+              text=r.text; final=r.url
+              pages.append({'url':final,'status':r.status_code})
+              soup=BeautifulSoup(text,'html.parser')
+              for a in soup.find_all('a',href=True):
+                absolute=urllib.parse.urljoin(final,html.unescape(a['href']))
+                label=' '.join(a.get_text(' ',strip=True).split())
+                combined=(label+' '+absolute).lower()
+                if '.pdf' in absolute.lower():
+                  pdfs[absolute]={'label':label,'from':final}
+                elif any(k.lower() in combined for k in keys) and urllib.parse.urlparse(absolute).hostname==urllib.parse.urlparse(final).hostname:
+                  if absolute not in page_urls and len(page_urls)<12: page_urls.append(absolute)
+              for m in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?',text,re.I):
+                absolute=urllib.parse.urljoin(final,html.unescape(m)); pdfs.setdefault(absolute,{'label':'','from':final})
+            for url in page_urls[len(starts):]:
+              try:
+                r=s.get(url,timeout=35,allow_redirects=True); r.raise_for_status(); text=r.text; final=r.url
+              except Exception as e:
+                pages.append({'url':url,'error':str(e)}); continue
+              pages.append({'url':final,'status':r.status_code})
+              soup=BeautifulSoup(text,'html.parser')
+              for a in soup.find_all('a',href=True):
+                absolute=urllib.parse.urljoin(final,html.unescape(a['href'])); label=' '.join(a.get_text(' ',strip=True).split())
+                if '.pdf' in absolute.lower(): pdfs[absolute]={'label':label,'from':final}
+            extracted=[]
+            ranked=sorted(pdfs.items(),key=lambda x: (0 if any(k.lower() in (x[1]['label']+' '+x[0]).lower() for k in keys) else 1,x[0]))[:12]
+            for i,(url,meta) in enumerate(ranked):
+              try:
+                r=s.get(url,timeout=60,allow_redirects=True); r.raise_for_status(); data=r.content
+                if not data.startswith(b'%PDF') or len(data)>50_000_000: continue
+                p=cdir/f'{i:02d}.pdf'; p.write_bytes(data); reader=PdfReader(p)
+                rows=[]
+                for n,page in enumerate(reader.pages,1):
+                  t=re.sub(r'\s+',' ',(page.extract_text() or '').strip())
+                  if t: rows.append({'page':n,'text':t[:15000]})
+                pf=cdir/f'{i:02d}.pages.json'; pf.write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf-8')
+                extracted.append({'url':url,**meta,'file':p.name,'pagesFile':pf.name,'pageCount':len(reader.pages),'textPages':len(rows),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+              except Exception as e:
+                meta['error']=str(e)
+            result[code]={'pages':pages,'pdfCandidates':[{'url':u,**m} for u,m in ranked],'extracted':extracted}
+          (out/'report.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps({c:{'pages':len(v['pages']),'candidates':len(v['pdfCandidates']),'extracted':len(v['extracted']),'best':v['extracted'][0] if v['extracted'] else None} for c,v in result.items()},ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-08-probe
+          path: artifacts/batch-08-probe/
+          retention-days: 14

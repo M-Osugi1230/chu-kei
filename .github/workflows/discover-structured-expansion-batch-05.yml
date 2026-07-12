@@ -1,0 +1,180 @@
+name: Discover Structured Expansion Batch 05 Materials
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/discover-structured-expansion-batch-05.yml'
+  push:
+    branches:
+      - data/structured-expansion-batch-05
+    paths:
+      - '.github/workflows/discover-structured-expansion-batch-05.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-05
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 pypdf
+      - name: Discover official materials
+        run: |
+          python - <<'PY'
+          import hashlib
+          import html
+          import json
+          import re
+          import time
+          import urllib.parse
+          from pathlib import Path
+
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          OUT = Path('artifacts/structured-expansion-batch-05')
+          OUT.mkdir(parents=True, exist_ok=True)
+          session = requests.Session()
+          session.headers.update({
+              'User-Agent': 'Mozilla/5.0 (compatible; Chu-kei official evidence audit/1.0)',
+              'Accept-Language': 'ja,en-US;q=0.8,en;q=0.6',
+          })
+
+          targets = {
+              '1801': {'name': '大成建設', 'starts': ['https://www.taisei.co.jp/ir/management-policy/plan/group.html', 'https://www.taisei.co.jp/about_us/ir/'], 'domains': ['taisei.co.jp']},
+              '5711': {'name': '三菱マテリアル', 'starts': ['https://ir.mmc.co.jp/ja/ir/policy/strategy.html', 'https://ir.mmc.co.jp/ja/ir.html'], 'domains': ['mmc.co.jp']},
+              '6762': {'name': 'TDK', 'starts': ['https://www.tdk.com/ja/ir/index.html', 'https://www.tdk.com/ja/ir/ir_events/conference.html'], 'domains': ['tdk.com']},
+              '8233': {'name': '高島屋', 'starts': ['https://www.takashimaya.co.jp/corp/ir/', 'https://www.takashimaya.co.jp/corp/ir/library/'], 'domains': ['takashimaya.co.jp']},
+              '9005': {'name': '東急', 'starts': ['https://ir.tokyu.co.jp/', 'https://ir.tokyu.co.jp/ja/ir/management.html'], 'domains': ['tokyu.co.jp']},
+              '5333': {'name': 'NGK', 'starts': ['https://www.ngk.co.jp/ir/', 'https://www.ngk.co.jp/ir/management/'], 'domains': ['ngk.co.jp']},
+              '5802': {'name': '住友電気工業', 'starts': ['https://sumitomoelectric.com/jp/ir', 'https://sumitomoelectric.com/jp/ir/management'], 'domains': ['sumitomoelectric.com']},
+              '7532': {'name': 'パン・パシフィック・インターナショナルホールディングス', 'starts': ['https://ppih.co.jp/ir/', 'https://ppih.co.jp/ir/management/'], 'domains': ['ppih.co.jp']},
+              '9022': {'name': '東海旅客鉄道', 'starts': ['https://company.jr-central.co.jp/ir/', 'https://company.jr-central.co.jp/ir/management-plan/'], 'domains': ['jr-central.co.jp']},
+              '2002': {'name': '日清製粉グループ本社', 'starts': ['https://www.nisshin.com/ir/', 'https://www.nisshin.com/ir/management/'], 'domains': ['nisshin.com']},
+          }
+
+          page_keywords = ['中期', '経営計画', '経営戦略', '長期', 'vision', 'strategy', 'management', 'plan', '資本', '説明会', 'presentation', '方針']
+          pdf_keywords = ['中期', '経営計画', '経営戦略', 'vision', 'strategy', 'management', 'plan', '資本', '説明会', 'presentation', '統合報告']
+
+          def is_allowed(url, domains):
+              host = (urllib.parse.urlparse(url).hostname or '').lower()
+              return any(host == d or host.endswith('.' + d) for d in domains)
+
+          def relevance(label, url):
+              text = html.unescape(f'{label} {url}').lower().replace(' ', '')
+              points = 0
+              for key in pdf_keywords:
+                  if key.lower().replace(' ', '') in text:
+                      points += 6
+              for year in ['2031', '2030', '2029', '2028', '2027', '2026', '2025', '2024']:
+                  if year in text:
+                      points += 2
+              if 'integrated' in text or '統合報告' in text:
+                  points -= 2
+              return points
+
+          def get(url, binary=False):
+              r = session.get(url, timeout=45, allow_redirects=True)
+              r.raise_for_status()
+              return r.content if binary else (r.text, r.url, r.headers.get('content-type', ''))
+
+          result = {'generatedAt': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'targets': {}}
+          for code, target in targets.items():
+              company_dir = OUT / code
+              company_dir.mkdir(exist_ok=True)
+              queue = [(url, 0) for url in target['starts']]
+              visited = set()
+              pages = []
+              pdf_candidates = {}
+
+              while queue and len(visited) < 70:
+                  url, depth = queue.pop(0)
+                  if url in visited or not is_allowed(url, target['domains']):
+                      continue
+                  visited.add(url)
+                  try:
+                      text, final_url, content_type = get(url)
+                  except Exception as exc:
+                      pages.append({'url': url, 'error': str(exc)})
+                      continue
+                  if 'pdf' in content_type.lower() or final_url.lower().split('?')[0].endswith('.pdf'):
+                      pdf_candidates[final_url] = {'label': '', 'score': relevance('', final_url), 'from': url}
+                      continue
+                  name = hashlib.sha256(final_url.encode()).hexdigest()[:14] + '.html'
+                  (company_dir / name).write_text(text, encoding='utf-8', errors='replace')
+                  pages.append({'url': final_url, 'file': name, 'contentType': content_type})
+                  soup = BeautifulSoup(text, 'html.parser')
+                  for node in soup.find_all(['a', 'iframe', 'embed', 'object']):
+                      raw = node.get('href') or node.get('src') or node.get('data')
+                      if not raw:
+                          continue
+                      absolute = urllib.parse.urljoin(final_url, html.unescape(raw))
+                      label = ' '.join(node.get_text(' ', strip=True).split())
+                      lower = absolute.lower().split('#')[0]
+                      if '.pdf' in lower or 'pdf' in (node.get('type') or '').lower():
+                          candidate = {'label': label, 'score': relevance(label, absolute), 'from': final_url}
+                          old = pdf_candidates.get(absolute)
+                          if old is None or candidate['score'] > old['score']:
+                              pdf_candidates[absolute] = candidate
+                      elif depth < 2 and is_allowed(absolute, target['domains']):
+                          combined = f'{label} {absolute}'.lower()
+                          if any(key.lower() in combined for key in page_keywords):
+                              queue.append((absolute, depth + 1))
+                  for match in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?', text, re.I):
+                      absolute = urllib.parse.urljoin(final_url, html.unescape(match))
+                      pdf_candidates.setdefault(absolute, {'label': '', 'score': relevance('', absolute), 'from': final_url})
+
+              ranked = sorted(({'url': url, **meta} for url, meta in pdf_candidates.items()), key=lambda x: (-x['score'], x['url']))[:25]
+              extracted = []
+              for idx, item in enumerate(ranked):
+                  try:
+                      data = get(item['url'], binary=True)
+                      if not data.startswith(b'%PDF'):
+                          item['error'] = f'not PDF bytes={len(data)}'
+                          continue
+                      if len(data) > 40_000_000:
+                          item['error'] = f'PDF too large bytes={len(data)}'
+                          continue
+                      pdf_name = f'{idx:02d}-{hashlib.sha256(item["url"].encode()).hexdigest()[:14]}.pdf'
+                      pdf_path = company_dir / pdf_name
+                      pdf_path.write_bytes(data)
+                      reader = PdfReader(pdf_path)
+                      page_rows = []
+                      metric_hits = []
+                      for page_no, page in enumerate(reader.pages, start=1):
+                          text = re.sub(r'\s+', ' ', (page.extract_text() or '').strip())
+                          if text:
+                              page_rows.append({'page': page_no, 'text': text[:10000]})
+                              if re.search(r'(ROE|ROIC|ROCE|営業利益|売上|キャッシュ|配当|還元|投資)', text, re.I):
+                                  metric_hits.append(page_no)
+                      pages_name = pdf_name.replace('.pdf', '.pages.json')
+                      (company_dir / pages_name).write_text(json.dumps(page_rows, ensure_ascii=False, indent=2), encoding='utf-8')
+                      item.update({'file': pdf_name, 'pagesFile': pages_name, 'bytes': len(data), 'pageCount': len(reader.pages), 'textPages': len(page_rows), 'metricHitPages': metric_hits[:80], 'sha256': hashlib.sha256(data).hexdigest()})
+                      extracted.append(item)
+                  except Exception as exc:
+                      item['error'] = str(exc)
+
+              result['targets'][code] = {'name': target['name'], 'visited': pages, 'rankedPdfCandidates': ranked, 'extractedPdfs': extracted}
+
+          (OUT / 'discovery-report.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+          summary = {code: {'name': row['name'], 'visited': len(row['visited']), 'candidates': len(row['rankedPdfCandidates']), 'extracted': len(row['extractedPdfs']), 'best': row['extractedPdfs'][0] if row['extractedPdfs'] else None} for code, row in result['targets'].items()}
+          (OUT / 'discovery-summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(json.dumps(summary, ensure_ascii=False, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-05-materials
+          path: artifacts/structured-expansion-batch-05/
+          retention-days: 14

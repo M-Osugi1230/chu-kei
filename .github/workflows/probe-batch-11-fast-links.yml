@@ -1,0 +1,78 @@
+name: Probe Batch 11 Fast Links
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-11
+    paths:
+      - '.github/workflows/probe-batch-11-fast-links.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/probe-batch-11-fast-links.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save playwright@1.55.0
+      - run: npx playwright install --with-deps chromium
+      - name: Collect links without waiting for network idle
+        run: |
+          mkdir -p artifacts/batch-11-fast-links
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { chromium } from 'playwright';
+          const targets = {
+            '4443': ['https://ir.corp-sansan.com/ja/ir/library/presentation.html'],
+            '5253': ['https://cover-corp.com/ir/news'],
+            '6777': ['https://www.santec.com/jp/ir/library.html'],
+            '7826': ['https://www.furuyametals.co.jp/ir/library/plan/', 'https://www.furuyametals.co.jp/ir/library/'],
+            '9022': ['https://company.jr-central.co.jp/ir/management-plan/']
+          };
+          const browser = await chromium.launch({ headless: true });
+          const result = {};
+          for (const [code, urls] of Object.entries(targets)) {
+            result[code] = [];
+            for (const url of urls) {
+              const page = await browser.newPage();
+              const responses = [];
+              page.on('response', response => {
+                const value = response.url();
+                const type = response.headers()['content-type'] || '';
+                if (/pdf|json|api|library|financial|presentation|plan|ir/i.test(`${value} ${type}`)) responses.push({url:value,status:response.status(),contentType:type});
+              });
+              try {
+                await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+                await page.waitForTimeout(7000);
+                const links = await page.locator('a').evaluateAll(nodes => nodes.map(node => ({text:(node.textContent||'').replace(/\s+/g,' ').trim(),href:node.href||''})).filter(row=>row.href));
+                result[code].push({url,finalUrl:page.url(),title:await page.title(),links,responses});
+              } catch (error) {
+                result[code].push({url,error:String(error),responses});
+              }
+              await page.close();
+            }
+          }
+          await browser.close();
+          fs.writeFileSync('artifacts/batch-11-fast-links/report.json', JSON.stringify(result,null,2));
+          const summary=Object.fromEntries(Object.entries(result).map(([code,pages])=>[code,pages.map(row=>({url:row.url,title:row.title,links:row.links?.filter(link=>/pdf|中期|長期|計画|決算|説明|financial|presentation/i.test(`${link.text} ${link.href}`)).slice(0,120),responses:row.responses?.filter(response=>/pdf|json|api/i.test(`${response.url} ${response.contentType}`)).slice(0,120),error:row.error}))]));
+          fs.writeFileSync('artifacts/batch-11-fast-links/summary.json',JSON.stringify(summary,null,2));
+          console.log(JSON.stringify(summary,null,2));
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batch-11-fast-links
+          path: artifacts/batch-11-fast-links/
+          retention-days: 14

@@ -1,1 +1,117 @@
-{"schemaVersion":"progress-events-v1","updatedAt":"2026-07-12","events":[]}
+{
+  "schemaVersion": "progress-events-v1",
+  "updatedAt": "2026-07-12",
+  "events": [
+    {
+      "eventId": "mhi-2024-business-profit-target-20240528",
+      "companyCode": "7011",
+      "metric": "businessProfit",
+      "eventType": "target_set",
+      "effectiveDate": "2024-05-28",
+      "afterValue": 450,
+      "unit": "billion_yen",
+      "sourceUrl": "https://www.mhi.com/finance/library/plan/pdf/240528presentation.pdf",
+      "evidenceRef": "p.10",
+      "note": "FY2026事業利益4,500億円以上"
+    },
+    {
+      "eventId": "mhi-2024-business-profit-margin-target-20240528",
+      "companyCode": "7011",
+      "metric": "businessProfitMargin",
+      "eventType": "target_set",
+      "effectiveDate": "2024-05-28",
+      "afterValue": 8,
+      "unit": "%_minimum",
+      "sourceUrl": "https://www.mhi.com/finance/library/plan/pdf/240528presentation.pdf",
+      "evidenceRef": "p.10",
+      "note": "FY2026事業利益率8%以上"
+    },
+    {
+      "eventId": "mhi-2024-roe-target-20240528",
+      "companyCode": "7011",
+      "metric": "roe",
+      "eventType": "target_set",
+      "effectiveDate": "2024-05-28",
+      "afterValue": 12,
+      "unit": "%_minimum",
+      "sourceUrl": "https://www.mhi.com/finance/library/plan/pdf/240528presentation.pdf",
+      "evidenceRef": "p.10",
+      "note": "FY2026 ROE12%以上"
+    },
+    {
+      "eventId": "mhi-2024-cash-inflows-target-20240528",
+      "companyCode": "7011",
+      "metric": "cashInflows",
+      "eventType": "target_set",
+      "effectiveDate": "2024-05-28",
+      "afterValue": 1.5,
+      "unit": "trillion_yen",
+      "sourceUrl": "https://www.mhi.com/finance/library/plan/pdf/240528presentation.pdf",
+      "evidenceRef": "p.12",
+      "note": "FY2024-FY2026の3年間キャッシュ流入計画"
+    },
+    {
+      "eventId": "mhi-2024-business-profit-forecast-20260527",
+      "companyCode": "7011",
+      "metric": "businessProfit",
+      "eventType": "forecast_updated",
+      "effectiveDate": "2026-05-27",
+      "beforeValue": 450,
+      "afterValue": 540,
+      "unit": "billion_yen",
+      "sourceUrl": "https://www.mhi.com/finance/library/plan/pdf/260527presentation.pdf",
+      "evidenceRef": "p.3",
+      "note": "FY2026見通しを当初計画4,500億円以上から5,400億円へ更新"
+    },
+    {
+      "eventId": "mhi-2024-business-profit-margin-forecast-20260527",
+      "companyCode": "7011",
+      "metric": "businessProfitMargin",
+      "eventType": "forecast_updated",
+      "effectiveDate": "2026-05-27",
+      "beforeValue": 8,
+      "afterValue": 10,
+      "unit": "%",
+      "sourceUrl": "https://www.mhi.com/finance/library/plan/pdf/260527presentation.pdf",
+      "evidenceRef": "p.3",
+      "note": "FY2026見通しを当初計画8%以上から10%へ更新"
+    },
+    {
+      "eventId": "mhi-2024-cash-inflows-forecast-20260527",
+      "companyCode": "7011",
+      "metric": "cashInflows",
+      "eventType": "forecast_updated",
+      "effectiveDate": "2026-05-27",
+      "beforeValue": 1.5,
+      "afterValue": 2.6,
+      "unit": "trillion_yen",
+      "sourceUrl": "https://www.mhi.com/finance/library/plan/pdf/260527presentation.pdf",
+      "evidenceRef": "p.3",
+      "note": "3年間キャッシュ流入見通しを1.5兆円から2.6兆円へ更新"
+    },
+    {
+      "eventId": "mhi-fy2025-business-profit-actual-20260527",
+      "companyCode": "7011",
+      "metric": "businessProfit",
+      "eventType": "actual_reported",
+      "effectiveDate": "2026-05-27",
+      "afterValue": 432.2,
+      "unit": "billion_yen",
+      "sourceUrl": "https://www.mhi.com/finance/library/plan/pdf/260527presentation.pdf",
+      "evidenceRef": "p.29",
+      "note": "FY2025事業利益実績4,322億円、事業利益率8.7%"
+    },
+    {
+      "eventId": "mhi-fy2025-roe-actual-20260527",
+      "companyCode": "7011",
+      "metric": "roe",
+      "eventType": "actual_reported",
+      "effectiveDate": "2026-05-27",
+      "afterValue": 12.2,
+      "unit": "%",
+      "sourceUrl": "https://www.mhi.com/finance/library/plan/pdf/260527presentation.pdf",
+      "evidenceRef": "p.29",
+      "note": "FY2025 ROE実績12.2%"
+    }
+  ]
+}

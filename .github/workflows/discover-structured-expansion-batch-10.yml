@@ -1,0 +1,147 @@
+name: Discover Structured Expansion Batch 10
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-10
+    paths:
+      - '.github/workflows/discover-structured-expansion-batch-10.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/discover-structured-expansion-batch-10.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-10
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install requests beautifulsoup4 pypdf
+      - name: Export candidates and discover official evidence
+        run: |
+          mkdir -p artifacts/batch-10
+          node --input-type=module <<'NODE'
+          import crypto from 'node:crypto';
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest=JSON.parse(fs.readFileSync('site/data/bundle.manifest.json','utf8'));
+          const compressed=Buffer.concat(manifest.parts.map(p=>fs.readFileSync(`site/data/${p.file}`)));
+          const digest=crypto.createHash('sha256').update(compressed).digest('hex');
+          if(digest!==manifest.sha256) throw new Error(`digest mismatch ${digest}`);
+          const data=JSON.parse(zlib.gunzipSync(compressed));
+          const sourceIndexed=data.companies.filter(c=>c.stage==='source_indexed').sort((a,b)=>String(a.code).localeCompare(String(b.code),'ja'));
+          const structured=data.companies.filter(c=>['core','detailed_extracted'].includes(c.stage)).length;
+          if(sourceIndexed.length!==60||structured!==140) throw new Error(`unexpected counts source=${sourceIndexed.length} structured=${structured}`);
+          const targets=new Set(['2587','2702','2914','2998','3092','3994','4324','6146','6637','6723','6963','7685','7741','8473','9022']);
+          fs.writeFileSync('artifacts/batch-10/candidates.json',JSON.stringify({manifest:{sha256:manifest.sha256},sourceIndexedCount:sourceIndexed.length,structuredCount:structured,companies:sourceIndexed},null,2));
+          fs.writeFileSync('artifacts/batch-10/target-records.json',JSON.stringify(sourceIndexed.filter(c=>targets.has(String(c.code))),null,2));
+          NODE
+          python - <<'PY'
+          import hashlib, html, json, re, urllib.parse
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          out=Path('artifacts/batch-10/evidence'); out.mkdir(parents=True,exist_ok=True)
+          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 (compatible; Chu-kei official evidence audit/1.0)','Accept-Language':'ja,en-US;q=0.8,en;q=0.6'})
+          targets={
+            '2587': {'name':'サントリービバレッジ&フード','starts':['https://www.suntory.co.jp/softdrink/ir/','https://www.suntory.co.jp/softdrink/ir/library/'], 'domains':['suntory.co.jp']},
+            '2702': {'name':'日本マクドナルドホールディングス','starts':['https://www.mcd-holdings.co.jp/ir/','https://www.mcd-holdings.co.jp/ir/library/'], 'domains':['mcd-holdings.co.jp']},
+            '2914': {'name':'日本たばこ産業','starts':['https://www.jti.co.jp/investors/','https://www.jti.co.jp/investors/library/'], 'domains':['jti.co.jp']},
+            '2998': {'name':'クリアル','starts':['https://corp.creal.jp/ir/','https://corp.creal.jp/ir/library/'], 'domains':['corp.creal.jp']},
+            '3092': {'name':'ZOZO','starts':['https://corp.zozo.com/ir/','https://corp.zozo.com/ir/library/'], 'domains':['corp.zozo.com']},
+            '3994': {'name':'マネーフォワード','starts':['https://corp.moneyforward.com/ir/','https://corp.moneyforward.com/ir/library/'], 'domains':['corp.moneyforward.com']},
+            '4324': {'name':'電通グループ','starts':['https://www.group.dentsu.com/jp/ir/','https://www.group.dentsu.com/jp/ir/library/'], 'domains':['group.dentsu.com']},
+            '6146': {'name':'ディスコ','starts':['https://www.disco.co.jp/jp/ir/','https://www.disco.co.jp/jp/ir/library/'], 'domains':['disco.co.jp']},
+            '6637': {'name':'寺崎電気産業','starts':['https://www.terasaki.co.jp/investor/','https://www.terasaki.co.jp/investor/library/'], 'domains':['terasaki.co.jp']},
+            '6723': {'name':'ルネサスエレクトロニクス','starts':['https://www.renesas.com/jp/ja/about/investor-relations','https://www.renesas.com/jp/ja/about/investor-relations/financial-information'], 'domains':['renesas.com']},
+            '6963': {'name':'ローム','starts':['https://www.rohm.co.jp/ir','https://www.rohm.co.jp/ir/library','https://www.rohm.co.jp/company/about/philosophy/mediumterm-management-plan'], 'domains':['rohm.co.jp']},
+            '7685': {'name':'BuySell Technologies','starts':['https://buysell-technologies.com/ir/','https://buysell-technologies.com/ir/plan/','https://buysell-technologies.com/ir/settlement/'], 'domains':['buysell-technologies.com']},
+            '7741': {'name':'HOYA','starts':['https://www.hoya.com/ir/','https://www.hoya.com/ir/library/'], 'domains':['hoya.com']},
+            '8473': {'name':'SBIホールディングス','starts':['https://www.sbigroup.co.jp/investors/','https://www.sbigroup.co.jp/investors/library/'], 'domains':['sbigroup.co.jp']},
+            '9022': {'name':'東海旅客鉄道','starts':['https://company.jr-central.co.jp/ir/','https://company.jr-central.co.jp/ir/management-plan/'], 'domains':['jr-central.co.jp']},
+          }
+          link_keys=['中期','長期','経営計画','経営戦略','成長戦略','事業計画','management','strategy','plan','説明会','決算','資本','vision','2030','2029','2028','2027','2026']
+          patterns={
+            'plan':r'(中期経営計画|中長期経営計画|長期経営計画|経営戦略|成長戦略|事業計画|medium.?term|mid.?term|long.?term)',
+            'revenue':r'(売上高|売上収益|revenue)',
+            'profit':r'(営業利益|事業利益|経常利益|EBITDA|EBITA|operating profit)',
+            'capital':r'(ROE|ROIC|ROCE|PBR|資本効率)',
+            'investment':r'(設備投資|成長投資|戦略投資|研究開発|M&A|投資総額)',
+            'return':r'(配当性向|DOE|総還元性向|株主還元|自己株式取得|累進配当)',
+            'future':r'(202[6-9]|203[0-5])年?度?'
+          }
+          def allowed(u,domains):
+            h=(urllib.parse.urlparse(u).hostname or '').lower(); return any(h==d or h.endswith('.'+d) for d in domains)
+          def get(u,b=False):
+            r=s.get(u,timeout=45,allow_redirects=True); r.raise_for_status(); return r.content if b else (r.text,r.url,r.headers.get('content-type',''))
+          def lscore(label,u):
+            x=html.unescape(label+' '+u).lower().replace(' ',''); sc=sum(5 for k in link_keys if k.lower().replace(' ','') in x)
+            if any(w in x for w in ['招集通知','有価証券報告書','決算短信','コーポレートガバナンス']): sc-=8
+            if '統合報告' in x or 'integrated' in x: sc-=2
+            return sc
+          result={}
+          for code,t in targets.items():
+            cdir=out/code; cdir.mkdir(exist_ok=True); q=[(u,0) for u in t['starts']]; seen=set(); visited=[]; pdfs={}
+            while q and len(seen)<80:
+              u,depth=q.pop(0)
+              if u in seen or not allowed(u,t['domains']): continue
+              seen.add(u)
+              try: text,final,ctype=get(u)
+              except Exception as e: visited.append({'url':u,'error':str(e)}); continue
+              if 'pdf' in ctype.lower() or final.lower().split('?')[0].endswith('.pdf'):
+                pdfs.setdefault(final,{'label':'','from':u,'linkScore':lscore('',final)}); continue
+              visited.append({'url':final,'contentType':ctype})
+              soup=BeautifulSoup(text,'html.parser')
+              for n in soup.find_all(['a','iframe','embed','object']):
+                raw=n.get('href') or n.get('src') or n.get('data')
+                if not raw: continue
+                x=urllib.parse.urljoin(final,html.unescape(raw)); label=' '.join(n.get_text(' ',strip=True).split()); combined=(label+' '+x).lower()
+                if '.pdf' in x.lower() or 'pdf' in (n.get('type') or '').lower():
+                  cand={'label':label,'from':final,'linkScore':lscore(label,x)}; old=pdfs.get(x)
+                  if old is None or cand['linkScore']>old['linkScore']: pdfs[x]=cand
+                elif depth<3 and allowed(x,t['domains']) and any(k.lower() in combined for k in link_keys): q.append((x,depth+1))
+              for m in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?',text,re.I):
+                x=urllib.parse.urljoin(final,html.unescape(m)); pdfs.setdefault(x,{'label':'','from':final,'linkScore':lscore('',x)})
+            candidates=sorted(({'url':u,**m} for u,m in pdfs.items()),key=lambda r:(-r['linkScore'],r['url']))[:24]; extracted=[]
+            for i,item in enumerate(candidates):
+              try:
+                data=get(item['url'],True)
+                if not data.startswith(b'%PDF') or len(data)>45_000_000: continue
+                p=cdir/f'{i:02d}.pdf'; p.write_bytes(data); reader=PdfReader(p); rows=[]; ev=[]
+                for n,page in enumerate(reader.pages,1):
+                  txt=re.sub(r'\s+',' ',(page.extract_text() or '').strip())
+                  if txt:
+                    rows.append({'page':n,'text':txt[:16000]})
+                    if re.search(r'(中期経営計画|長期経営計画|売上高|営業利益|ROE|ROIC|設備投資|成長投資|配当性向|株主還元|自己株式取得)',txt,re.I): ev.append(n)
+                joined='\n'.join(x['text'] for x in rows[:120]); hits={k:bool(re.search(v,joined,re.I)) for k,v in patterns.items()}; weights={'plan':30,'revenue':12,'profit':12,'capital':12,'investment':12,'return':12,'future':10}; score=sum(weights[k] for k,v in hits.items() if v)
+                pf=cdir/f'{i:02d}.pages.json'; pf.write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf-8')
+                extracted.append({**item,'file':p.name,'pagesFile':pf.name,'pageCount':len(reader.pages),'textPages':len(rows),'contentScore':score,'contentHits':hits,'evidencePages':ev[:120],'metadata':{str(k):str(v) for k,v in (reader.metadata or {}).items()},'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+              except Exception as e: item['error']=str(e)
+            extracted.sort(key=lambda r:(-r['contentScore'],-r['linkScore'],r['url']))
+            result[code]={'name':t['name'],'visited':visited,'pdfCandidates':candidates,'extractedPdfs':extracted}
+          (out/'report.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+          summary={c:{'name':v['name'],'visited':len(v['visited']),'candidates':len(v['pdfCandidates']),'extracted':len(v['extractedPdfs']),'best':v['extractedPdfs'][0] if v['extractedPdfs'] else None} for c,v in result.items()}
+          (out/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-10-discovery
+          path: artifacts/batch-10/
+          retention-days: 14

@@ -1,17 +1,6 @@
 name: Apply Structured Expansion Batch 05
 
 on:
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'operations/patches/taisei-midterm-2024-2026-20260712.json'
-      - 'operations/patches/nisshin-seifun-plan-2026-revision-20260712.json'
-      - 'operations/patches/mitsubishi-materials-strategy-2026-2028-20260712.json'
-      - 'operations/patches/ppih-double-impact-2035-20260712.json'
-      - 'operations/patches/tokyu-midterm-2024-2026-20260712.json'
-      - 'operations/patches/structured-expansion-batch-05-ledger.json'
-      - '.github/workflows/apply-structured-expansion-batch-05.yml'
   push:
     branches:
       - data/structured-expansion-batch-05

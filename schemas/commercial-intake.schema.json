@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chu-kei.example/schemas/commercial-intake.schema.json",
+  "title": "Chu-kei Commercial Intake v1",
+  "type": "object",
+  "required": ["schemaVersion", "requestId", "receivedAt", "requestType", "status", "contact", "scope", "consent"],
+  "properties": {
+    "schemaVersion": {"const": "commercial-intake-v1"},
+    "requestId": {"type": "string", "pattern": "^REQ-[0-9]{8}-[A-Z0-9]{6}$"},
+    "receivedAt": {"type": "string", "format": "date-time"},
+    "requestType": {"enum": ["spot-report", "product-waitlist"]},
+    "status": {"enum": ["received", "qualification", "quoted", "accepted", "researching", "reviewing", "delivered", "closed", "declined"]},
+    "contact": {
+      "type": "object",
+      "required": ["name", "email"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "email": {"type": "string", "format": "email"},
+        "company": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "offerId": {"type": "string"},
+        "plan": {"type": "string"},
+        "targets": {"type": "string"},
+        "purpose": {"type": "string"},
+        "format": {"type": "string"},
+        "conditions": {"type": "string"},
+        "users": {"type": "string"},
+        "needs": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "consent": {"const": true},
+    "commercial": {
+      "type": "object",
+      "properties": {
+        "quotedAmount": {"type": "integer", "minimum": 0},
+        "taxIncluded": {"type": "boolean"},
+        "deliveryDate": {"type": "string", "format": "date"},
+        "includedRevisions": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "assignment": {
+      "type": "object",
+      "properties": {
+        "researcher": {"type": "string"},
+        "reviewer": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

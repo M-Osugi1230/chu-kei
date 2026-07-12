@@ -9,6 +9,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="stylesheet" href="./assets/styles.css">
   <link rel="stylesheet" href="./assets/saved-shelf.css">
+  <link rel="stylesheet" href="./assets/platform-pages.css">
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -16,8 +17,8 @@
   <div class="header-inner">
     <a class="brand" href="./" aria-label="Chu-kei トップ">Chu-kei</a>
     <span class="subtitle">日本上場企業 中期経営計画ポータル</span>
+    <nav class="header-nav" aria-label="主要ナビゲーション"><a class="text-link" href="./quality.html">品質</a><a class="text-link" href="./history.html">過去中計</a><a class="text-link" href="./reports.html">調査依頼</a><a class="text-link" href="./pricing.html">Pro・Team</a></nav>
     <button id="saved-summary" class="text-button saved-summary" type="button" aria-pressed="false">保存 0社</button>
-    <a class="text-button" href="./quality.html">品質ダッシュボード</a>
     <button id="open-quality" class="text-button" type="button">品質の見方</button>
   </div>
 </header>
@@ -32,70 +33,30 @@
     <dl class="summary-grid" aria-label="掲載データ概要">
       <div><dt>掲載企業</dt><dd id="stat-total">570社</dd></div>
       <div><dt>中計ソース確認済み</dt><dd id="stat-confirmed">200社</dd></div>
-      <div><dt>主要論点構造化済み</dt><dd id="stat-structured">100社</dd></div>
+      <div><dt>主要論点構造化済み</dt><dd id="stat-structured">110社</dd></div>
       <div><dt>進捗目標・実績</dt><dd id="stat-progress">149件（実績54件）</dd></div>
     </dl>
   </section>
 
   <section id="saved-research-shelf" class="section saved-research-shelf" aria-labelledby="saved-shelf-title" hidden>
-    <div class="section-heading">
-      <div><p class="eyebrow">Your Research Shelf</p><h2 id="saved-shelf-title">保存した調査候補</h2><p id="saved-shelf-summary" class="section-description" aria-live="polite"></p></div>
-      <div class="shelf-actions"><button id="show-saved-results" class="secondary-button" type="button">保存企業を一覧表示</button><button id="compare-saved" class="primary-button" type="button">保存企業を比較</button></div>
-    </div>
+    <div class="section-heading"><div><p class="eyebrow">Your Research Shelf</p><h2 id="saved-shelf-title">保存した調査候補</h2><p id="saved-shelf-summary" class="section-description" aria-live="polite"></p></div><div class="shelf-actions"><button id="show-saved-results" class="secondary-button" type="button">保存企業を一覧表示</button><button id="compare-saved" class="primary-button" type="button">保存企業を比較</button></div></div>
     <div id="saved-shelf-grid" class="saved-shelf-grid"></div>
     <div class="shelf-footer"><p>保存日時と確認済み日はこのブラウザ内だけに保持され、外部へ送信されません。</p><button id="mark-saved-seen" class="text-button" type="button" hidden>すべて確認済みにする</button></div>
   </section>
 
-  <section class="section" aria-labelledby="strategy-title">
-    <div class="section-heading">
-      <div><p class="eyebrow">Strategy Explorer</p><h2 id="strategy-title">どんな会社を探しますか？</h2></div>
-      <button id="clear-strategy" class="text-button" type="button" hidden>選択を解除</button>
-    </div>
-    <div id="strategy-grid" class="strategy-grid"></div>
-  </section>
+  <section class="section" aria-labelledby="strategy-title"><div class="section-heading"><div><p class="eyebrow">Strategy Explorer</p><h2 id="strategy-title">どんな会社を探しますか？</h2></div><button id="clear-strategy" class="text-button" type="button" hidden>選択を解除</button></div><div id="strategy-grid" class="strategy-grid"></div></section>
+
+  <section class="section" aria-labelledby="platform-title"><div class="section-heading"><div><p class="eyebrow">Research Platform</p><h2 id="platform-title">調査を次の工程へ進める</h2><p class="section-description">企業探索だけでなく、計画履歴、公開品質、調査依頼、継続利用へ接続します。</p></div></div><div class="platform-grid"><article class="platform-card"><h3>過去中計比較</h3><p>前中計・現中計、目標修正、達成・未達を追跡する基盤です。</p><a class="text-link" href="./history.html">過去中計を見る</a></article><article class="platform-card"><h3>公開同期状況</h3><p>GitHub正本と公開サイトの件数・未同期項目を確認します。</p><a class="text-link" href="./release.html">同期状況を見る</a></article><article class="platform-card"><h3>スポット調査</h3><p>公式証跡付きの1社分析、3社比較、業界スクリーニングを依頼できます。</p><a class="text-link" href="./reports.html">調査メニューを見る</a></article><article class="platform-card"><h3>Pro・Team</h3><p>クラウド保存、アラート、チーム共有、Data/APIの先行利用を受け付けます。</p><a class="text-link" href="./pricing.html">提供予定を見る</a></article></div></section>
 
   <section class="section directory" aria-labelledby="directory-title">
-    <div class="section-heading">
-      <div><p class="eyebrow">Research Workspace</p><h2 id="directory-title">企業を検索・保存・比較する</h2><p class="section-description">検索条件と比較対象はURLに保存されます。企業の保存情報はこのブラウザ内だけに保持されます。</p></div>
-      <p id="result-summary" class="result-summary" aria-live="polite"></p>
-    </div>
-    <form id="filters" class="filters" role="search">
-      <label class="search-field"><span>会社名・証券コード・キーワード</span><input id="search" type="search" autocomplete="off" placeholder="例：M&A、ROIC、海外展開"></label>
-      <label><span>市場</span><select id="market"><option value="">すべて</option><option>Prime</option><option>Standard</option><option>Growth</option></select></label>
-      <label><span>データ品質</span><select id="stage"><option value="">すべて</option><option value="core">本番</option><option value="detailed_extracted">詳細抽出済みβ</option><option value="source_indexed">一次確認β</option><option value="jpx_indexed">カバレッジβ</option></select></label>
-      <label><span>並べ替え</span><select id="sort"><option value="relevance">検索との関連順</option><option value="quality">品質の高い順</option><option value="verified">最終確認日の新しい順</option><option value="code">証券コード順</option></select></label>
-      <label class="saved-toggle-field"><input id="saved-only" type="checkbox"><span>保存企業のみ</span></label>
-      <button class="secondary-button" type="reset">条件をリセット</button>
-    </form>
-    <div class="workspace-toolbar">
-      <div id="active-filters" class="active-filters" aria-label="適用中の条件"></div>
-      <button id="share-workspace" class="text-button" type="button">この条件のリンクをコピー</button>
-    </div>
-    <div id="loading" class="status-panel" role="status">570社のデータを読み込んでいます…</div>
-    <div id="error" class="status-panel error" role="alert" hidden></div>
-    <div id="company-grid" class="company-grid"></div>
-    <button id="load-more" class="load-more" type="button" hidden>さらに表示</button>
+    <div class="section-heading"><div><p class="eyebrow">Research Workspace</p><h2 id="directory-title">企業を検索・保存・比較する</h2><p class="section-description">検索条件と比較対象はURLに保存されます。企業の保存情報はこのブラウザ内だけに保持されます。</p></div><p id="result-summary" class="result-summary" aria-live="polite"></p></div>
+    <form id="filters" class="filters" role="search"><label class="search-field"><span>会社名・証券コード・キーワード</span><input id="search" type="search" autocomplete="off" placeholder="例：M&A、ROIC、海外展開"></label><label><span>市場</span><select id="market"><option value="">すべて</option><option>Prime</option><option>Standard</option><option>Growth</option></select></label><label><span>データ品質</span><select id="stage"><option value="">すべて</option><option value="core">本番</option><option value="detailed_extracted">詳細抽出済みβ</option><option value="source_indexed">一次確認β</option><option value="jpx_indexed">カバレッジβ</option></select></label><label><span>並べ替え</span><select id="sort"><option value="relevance">検索との関連順</option><option value="quality">品質の高い順</option><option value="verified">最終確認日の新しい順</option><option value="code">証券コード順</option></select></label><label class="saved-toggle-field"><input id="saved-only" type="checkbox"><span>保存企業のみ</span></label><button class="secondary-button" type="reset">条件をリセット</button></form>
+    <div class="workspace-toolbar"><div id="active-filters" class="active-filters" aria-label="適用中の条件"></div><button id="share-workspace" class="text-button" type="button">この条件のリンクをコピー</button></div>
+    <div id="loading" class="status-panel" role="status">570社のデータを読み込んでいます…</div><div id="error" class="status-panel error" role="alert" hidden></div><div id="company-grid" class="company-grid"></div><button id="load-more" class="load-more" type="button" hidden>さらに表示</button>
   </section>
 </main>
-
-<aside id="compare-tray" class="compare-tray" aria-label="比較トレイ" hidden>
-  <div><strong><span id="compare-count">0</span>社選択</strong><span id="compare-names"></span></div>
-  <div class="tray-actions"><button id="share-compare" class="text-button" type="button">比較リンクをコピー</button><button id="clear-compare" class="text-button" type="button">クリア</button><button id="open-compare" class="primary-button" type="button">比較する</button></div>
-</aside>
-
-<dialog id="company-dialog" class="dialog"><div id="company-detail"></div></dialog>
-<dialog id="compare-dialog" class="dialog wide"><div id="compare-detail"></div></dialog>
-<dialog id="quality-dialog" class="dialog">
-  <article class="dialog-card">
-    <div class="dialog-head"><div><p class="eyebrow">Data Quality</p><h2>品質表示の見方</h2></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div>
-    <p>570社を同一品質として扱いません。確認状況に応じて4段階に分け、未確認情報は推測で補いません。</p>
-    <dl class="quality-list"><div><dt>★★★★★ 本番</dt><dd>公式資料、主要論点、数値、ページ証跡、人手レビューを確認。</dd></div><div><dt>★★★★☆〜★★★☆☆ 詳細抽出済みβ</dt><dd>主要論点を構造化。本番昇格前の確認項目が残る場合があります。</dd></div><div><dt>★★☆☆☆ 一次確認β</dt><dd>会社公式IRの起点を確認。中計本文の詳細抽出前です。</dd></div><div><dt>★☆☆☆☆ カバレッジβ</dt><dd>JPX上場情報を確認した企業探索用データ。中計資料は未特定で、スコア算定対象外です。</dd></div></dl>
-  </article>
-</dialog>
-<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
-<footer><p>Chu-keiは中期経営計画の比較・理解・調査を支援する情報プラットフォームです。進捗率は単純比率であり、達成確率や投資評価ではありません。重要な確認は各社の最新公式資料で行ってください。</p></footer>
-<script src="./assets/data-fetch-cache.js"></script>
-<script type="module" src="./assets/app.js"></script>
-<script type="module" src="./assets/saved-shelf.js"></script>
-</body>
-</html>
+<aside id="compare-tray" class="compare-tray" aria-label="比較トレイ" hidden><div><strong><span id="compare-count">0</span>社選択</strong><span id="compare-names"></span></div><div class="tray-actions"><button id="share-compare" class="text-button" type="button">比較リンクをコピー</button><button id="clear-compare" class="text-button" type="button">クリア</button><button id="open-compare" class="primary-button" type="button">比較する</button></div></aside>
+<dialog id="company-dialog" class="dialog"><div id="company-detail"></div></dialog><dialog id="compare-dialog" class="dialog wide"><div id="compare-detail"></div></dialog><dialog id="quality-dialog" class="dialog"><article class="dialog-card"><div class="dialog-head"><div><p class="eyebrow">Data Quality</p><h2>品質表示の見方</h2></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div><p>570社を同一品質として扱いません。確認状況に応じて4段階に分け、未確認情報は推測で補いません。</p><dl class="quality-list"><div><dt>★★★★★ 本番</dt><dd>公式資料、主要論点、数値、ページ証跡、人手レビューを確認。</dd></div><div><dt>★★★★☆〜★★★☆☆ 詳細抽出済みβ</dt><dd>主要論点を構造化。本番昇格前の確認項目が残る場合があります。</dd></div><div><dt>★★☆☆☆ 一次確認β</dt><dd>会社公式IRの起点を確認。中計本文の詳細抽出前です。</dd></div><div><dt>★☆☆☆☆ カバレッジβ</dt><dd>JPX上場情報を確認した企業探索用データ。中計資料は未特定で、スコア算定対象外です。</dd></div></dl></article></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div><footer><p>Chu-keiは中期経営計画の比較・理解・調査を支援する情報プラットフォームです。進捗率は単純比率であり、達成確率や投資評価ではありません。重要な確認は各社の最新公式資料で行ってください。 <a href="./privacy.html">プライバシー</a></p></footer>
+<script src="./assets/data-fetch-cache.js"></script><script type="module" src="./assets/app.js"></script><script type="module" src="./assets/saved-shelf.js"></script><script src="./assets/local-metrics.js"></script>
+</body></html>

@@ -1,0 +1,30 @@
+{
+  "batchId": "structured-expansion-batch-04",
+  "issue": 41,
+  "baseline": {
+    "companyCount": 570,
+    "core": 30,
+    "detailedExtracted": 80,
+    "sourceIndexed": 90,
+    "jpxIndexed": 370,
+    "structuredCount": 110,
+    "sourceConfirmed": 200,
+    "qualityDebt": 89,
+    "detailedMissingPageEvidence": 48,
+    "bundleSha256": "01d729dbfa2a7dad67b5873fe8f89850a71929ad4d6b0465ce366b5a4b346e5b"
+  },
+  "target": {
+    "detailedExtracted": 85,
+    "sourceIndexed": 85,
+    "structuredCount": 115
+  },
+  "qualityPolicy": {
+    "officialSourcesOnly": true,
+    "pageEvidenceRequired": true,
+    "exactBeforeMatchRequired": true,
+    "automaticPromotion": false,
+    "qualityDebtMayIncrease": false,
+    "missingPageEvidenceMayIncrease": false,
+    "unknownValuesMayBeInferred": false
+  }
+}

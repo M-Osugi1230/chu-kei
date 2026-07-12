@@ -1,0 +1,144 @@
+name: Apply Structured Expansion Batch 07 PR
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/apply-structured-expansion-batch-07.yml'
+      - '.github/workflows/apply-structured-expansion-batch-07-pr.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-structured-expansion-batch-07-pr
+  cancel-in-progress: true
+
+jobs:
+  apply-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout expansion branch
+        uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-07
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Restore reviewed patches from the audited workflow
+        run: |
+          mkdir -p operations/patches
+          python - <<'PY'
+          import base64
+          import pathlib
+          import re
+          import tarfile
+
+          workflow = pathlib.Path('.github/workflows/apply-structured-expansion-batch-07.yml').read_text(encoding='utf-8')
+          match = re.search(r"echo '([A-Za-z0-9+/=]+)' \| base64 -d > /tmp/batch07\.tar\.gz", workflow)
+          if not match:
+              raise SystemExit('reviewed patch archive was not found')
+          archive = pathlib.Path('/tmp/batch07.tar.gz')
+          archive.write_bytes(base64.b64decode(match.group(1)))
+          with tarfile.open(archive, 'r:gz') as handle:
+              handle.extractall('.')
+          PY
+
+      - name: Detect existing application
+        id: state
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const codes = ['1803', '2871', '6504', '6988', '9042'];
+          const applied = codes.every(code => data.companies.find(company => String(company.code) === code)?.stage === 'detailed_extracted');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `already_applied=${applied}\n`);
+          NODE
+
+      - name: Apply governance ledger batch
+        if: steps.state.outputs.already_applied != 'true'
+        env:
+          GOVERNANCE_LEDGER_BATCH: operations/patches/structured-expansion-batch-07-ledger.json
+        run: node scripts/apply_governance_ledger_batch_v1.mjs
+
+      - name: Apply deterministic company patches
+        if: steps.state.outputs.already_applied != 'true'
+        run: |
+          COMPANY_PATCH=operations/patches/shimizu-midterm-2024-2026-20260713.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/nichirei-compass-growth-2027-20260713.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/fuji-electric-midterm-2024-2026-20260713.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/nitto-rise-2028-20260713.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/hankyu-hanshin-long-term-2025-2040-20260713.json node scripts/apply_company_data_patch_v1.mjs
+
+      - name: Rebuild and validate
+        run: |
+          node scripts/rebuild_quality_scores_v2.mjs
+          node scripts/normalize_bundle_contract_v1.mjs
+          node scripts/validate_quality_v43.mjs
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_quality_dashboard_v1.mjs
+          node scripts/validate_quality_debt_budget_v1.mjs
+          node scripts/validate_review_governance_v1.mjs
+          node scripts/validate_source_registry_v1.mjs
+          node scripts/validate_progress_experience_v1.mjs
+
+      - name: Verify structured population growth
+        run: |
+          node --input-type=module <<'NODE'
+          import crypto from 'node:crypto';
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const digest = crypto.createHash('sha256').update(compressed).digest('hex');
+          if (digest !== manifest.sha256) throw new Error(`bundle digest mismatch: ${digest}`);
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const counts = data.companies.reduce((result, company) => {
+            result[company.stage] = (result[company.stage] || 0) + 1;
+            return result;
+          }, {});
+          const expected = { core: 30, detailed_extracted: 100, source_indexed: 70, jpx_indexed: 370 };
+          if (data.companies.length !== 570) throw new Error(`company count changed: ${data.companies.length}`);
+          for (const [stage, count] of Object.entries(expected)) {
+            if (counts[stage] !== count) throw new Error(`unexpected ${stage}: ${counts[stage]} (expected ${count})`);
+          }
+          if (counts.core + counts.detailed_extracted !== 130) throw new Error('structured company count is not 130');
+          if (counts.core + counts.detailed_extracted + counts.source_indexed !== 200) throw new Error('source-confirmed company count changed');
+          for (const code of ['1803', '2871', '6504', '6988', '9042']) {
+            const company = data.companies.find(row => String(row.code) === code);
+            if (!company || company.stage !== 'detailed_extracted' || !company.quality?.checks?.pageEvidence) throw new Error(`structured expansion failed: ${code}`);
+          }
+          console.log(JSON.stringify({ counts, structuredCount: 130, sourceConfirmed: 200, sha256: digest }, null, 2));
+          NODE
+
+      - name: Commit authoritative data, patches and ledgers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add operations/patches site/data reports/v43/QUALITY_SCORE_V2_REPORT.json operations/reviews/decisions.json operations/corrections/corrections.json
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "data: add Shimizu Nichirei Fuji Electric Nitto and Hankyu plans"
+            git push origin HEAD:data/structured-expansion-batch-07
+          fi
+
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-structured-expansion-batch-07
+          path: artifacts/
+          if-no-files-found: warn
+          retention-days: 90

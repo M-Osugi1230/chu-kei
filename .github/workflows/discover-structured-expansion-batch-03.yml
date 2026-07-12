@@ -1,0 +1,211 @@
+name: Discover Structured Expansion Batch 03 Materials
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/discover-structured-expansion-batch-03.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-03
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install discovery dependencies
+        run: pip install requests beautifulsoup4 pypdf
+      - name: Discover and extract official materials
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          import re
+          import time
+          import urllib.parse
+          from pathlib import Path
+
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          OUT = Path('artifacts/structured-expansion-batch-03')
+          OUT.mkdir(parents=True, exist_ok=True)
+          session = requests.Session()
+          session.headers.update({
+              'User-Agent': 'Mozilla/5.0 (compatible; Chu-kei evidence audit/1.0)',
+              'Accept-Language': 'ja,en-US;q=0.8,en;q=0.6',
+          })
+
+          targets = {
+              '1928': {
+                  'name': '積水ハウス',
+                  'starts': ['https://www.sekisuihouse.co.jp/company/financial/plan/'],
+                  'allowed': ['sekisuihouse.co.jp'],
+              },
+              '4183': {
+                  'name': '三井化学',
+                  'starts': [
+                      'https://jp.mitsuichemicals.com/jp/corporate/vision/index.htm',
+                      'https://jp.mitsuichemicals.com/jp/ir/index.htm',
+                  ],
+                  'allowed': ['mitsuichemicals.com'],
+              },
+              '6503': {
+                  'name': '三菱電機',
+                  'starts': ['https://www.mitsubishielectric.co.jp/investors/data/management-report/'],
+                  'allowed': ['mitsubishielectric.co.jp'],
+              },
+              '6762': {
+                  'name': 'TDK',
+                  'starts': [
+                      'https://www.tdk.com/ja/ir/index.html',
+                      'https://www.tdk.com/ja/ir/ir_events/conference.html',
+                  ],
+                  'allowed': ['tdk.com'],
+              },
+              '3086': {
+                  'name': 'J.フロント リテイリング',
+                  'starts': [
+                      'https://www.j-front-retailing.com/ir/policy/management_plan.html',
+                      'https://www.j-front-retailing.com/ir/library/presentation.html',
+                  ],
+                  'allowed': ['j-front-retailing.com'],
+              },
+          }
+
+          keywords = [
+              '中期', '経営計画', '経営戦略', 'strategy', 'management', 'vision',
+              'capital', '資本', 'ir day', '説明会', 'presentation', '2024', '2025', '2026',
+          ]
+          pdf_keywords = [
+              '中期', '経営計画', '経営戦略', 'strategy', 'management', 'vision',
+              'capital', '資本', 'irday', '説明会', 'presentation', 'plan',
+          ]
+
+          def allowed(url, domains):
+              host = urllib.parse.urlparse(url).hostname or ''
+              return any(host == d or host.endswith('.' + d) for d in domains)
+
+          def score(label, url):
+              text = f'{label} {url}'.lower().replace(' ', '')
+              return sum(5 if k in text else 0 for k in pdf_keywords) + sum(1 for y in ['2026', '2025', '2024'] if y in text)
+
+          def fetch(url, binary=False):
+              response = session.get(url, timeout=45, allow_redirects=True)
+              response.raise_for_status()
+              return response.content if binary else (response.text, response.url, response.headers.get('content-type', ''))
+
+          report = {'targets': {}, 'generatedAt': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}
+          for code, target in targets.items():
+              target_dir = OUT / code
+              target_dir.mkdir(exist_ok=True)
+              queue = [(url, 0) for url in target['starts']]
+              visited = set()
+              pdfs = {}
+              html_pages = []
+
+              while queue and len(visited) < 35:
+                  url, depth = queue.pop(0)
+                  if url in visited or not allowed(url, target['allowed']):
+                      continue
+                  visited.add(url)
+                  try:
+                      text, final_url, content_type = fetch(url)
+                  except Exception as error:
+                      html_pages.append({'url': url, 'error': str(error)})
+                      continue
+                  if 'pdf' in content_type.lower() or final_url.lower().split('?')[0].endswith('.pdf'):
+                      pdfs[final_url] = {'label': '', 'score': score('', final_url), 'discoveredFrom': url}
+                      continue
+                  safe_name = hashlib.sha256(final_url.encode()).hexdigest()[:12] + '.html'
+                  (target_dir / safe_name).write_text(text, encoding='utf-8', errors='replace')
+                  html_pages.append({'url': final_url, 'file': safe_name, 'contentType': content_type})
+                  soup = BeautifulSoup(text, 'html.parser')
+                  for node in soup.find_all(['a', 'iframe'], href=True):
+                      raw = node.get('href')
+                      absolute = urllib.parse.urljoin(final_url, raw)
+                      label = ' '.join(node.get_text(' ', strip=True).split())
+                      if '.pdf' in absolute.lower() or 'pdf' in (node.get('type') or '').lower():
+                          current = pdfs.get(absolute)
+                          candidate = {'label': label, 'score': score(label, absolute), 'discoveredFrom': final_url}
+                          if not current or candidate['score'] > current['score']:
+                              pdfs[absolute] = candidate
+                      elif depth < 1 and allowed(absolute, target['allowed']):
+                          combined = f'{label} {absolute}'.lower()
+                          if any(keyword.lower() in combined for keyword in keywords):
+                              queue.append((absolute, depth + 1))
+                  for node in soup.find_all(['iframe', 'embed', 'object']):
+                      raw = node.get('src') or node.get('data')
+                      if raw:
+                          absolute = urllib.parse.urljoin(final_url, raw)
+                          if '.pdf' in absolute.lower():
+                              pdfs[absolute] = {'label': '', 'score': score('', absolute), 'discoveredFrom': final_url}
+
+              ranked = sorted(
+                  [{'url': url, **meta} for url, meta in pdfs.items()],
+                  key=lambda item: (-item['score'], item['url'])
+              )[:18]
+              extracted = []
+              for index, item in enumerate(ranked):
+                  try:
+                      data = fetch(item['url'], binary=True)
+                      if len(data) > 35_000_000 or not data.startswith(b'%PDF'):
+                          item['downloadError'] = f'not accepted PDF bytes={len(data)}'
+                          continue
+                      pdf_name = f'{index:02d}-{hashlib.sha256(item["url"].encode()).hexdigest()[:12]}.pdf'
+                      pdf_path = target_dir / pdf_name
+                      pdf_path.write_bytes(data)
+                      reader = PdfReader(pdf_path)
+                      pages = []
+                      for page_index, page in enumerate(reader.pages):
+                          text = (page.extract_text() or '').strip()
+                          normalized = re.sub(r'\s+', ' ', text)
+                          if normalized:
+                              pages.append({'page': page_index + 1, 'text': normalized[:7000]})
+                      text_name = pdf_name.replace('.pdf', '.pages.json')
+                      (target_dir / text_name).write_text(json.dumps(pages, ensure_ascii=False, indent=2), encoding='utf-8')
+                      item.update({
+                          'file': pdf_name,
+                          'pagesFile': text_name,
+                          'bytes': len(data),
+                          'pageCount': len(reader.pages),
+                          'sha256': hashlib.sha256(data).hexdigest(),
+                      })
+                      extracted.append(item)
+                  except Exception as error:
+                      item['downloadError'] = str(error)
+
+              report['targets'][code] = {
+                  'name': target['name'],
+                  'visitedPages': html_pages,
+                  'rankedPdfCandidates': ranked,
+                  'extractedPdfs': extracted,
+              }
+
+          (OUT / 'discovery-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(json.dumps({
+              code: {
+                  'name': row['name'],
+                  'pages': len(row['visitedPages']),
+                  'pdfCandidates': len(row['rankedPdfCandidates']),
+                  'extracted': len(row['extractedPdfs']),
+              }
+              for code, row in report['targets'].items()
+          }, ensure_ascii=False, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-03-materials
+          path: artifacts/structured-expansion-batch-03/
+          retention-days: 14

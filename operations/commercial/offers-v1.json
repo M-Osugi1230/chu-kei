@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "commercial-offers-v1",
+  "updatedAt": "2026-07-12",
+  "currency": "JPY",
+  "taxIncluded": false,
+  "offers": [
+    {
+      "id": "single-company-evidence-report",
+      "name": "1社エビデンスレポート",
+      "status": "pilot",
+      "priceFrom": 49800,
+      "scope": {
+        "maximumCompanies": 1,
+        "deliverables": ["中計要約", "定量目標", "資本政策", "株主還元", "進捗", "公式資料・ページ証跡"]
+      },
+      "requiredReview": ["公式一次資料確認", "数値・単位・年度確認", "ページ証跡確認", "別確認者レビュー"]
+    },
+    {
+      "id": "three-company-comparison",
+      "name": "3社比較レポート",
+      "status": "pilot",
+      "priceFrom": 99800,
+      "scope": {
+        "maximumCompanies": 3,
+        "deliverables": ["共通比較表", "戦略差分", "KPI比較", "投資配分", "株主還元", "進捗・変更点", "公式資料・ページ証跡"]
+      },
+      "requiredReview": ["比較軸統一", "会計年度・単位の差異確認", "公式一次資料確認", "別確認者レビュー"]
+    },
+    {
+      "id": "industry-screening",
+      "name": "業界スクリーニング",
+      "status": "pilot",
+      "priceFrom": 198000,
+      "scope": {
+        "maximumCompanies": 10,
+        "deliverables": ["調査条件定義", "候補企業一覧", "戦略テーマ分類", "比較表", "優先確認企業", "出典一覧"]
+      },
+      "requiredReview": ["対象母集団確認", "抽出条件確認", "公式一次資料確認", "候補企業の品質状態表示"]
+    }
+  ],
+  "commonTerms": {
+    "investmentAdvice": false,
+    "officialSourcesFirst": true,
+    "unknownValuesRemainUnknown": true,
+    "deliverySchedule": "個別見積時に合意",
+    "includedRevisions": 1,
+    "confidentialHandling": "依頼情報を調査・見積・納品の目的に限定して扱う"
+  }
+}

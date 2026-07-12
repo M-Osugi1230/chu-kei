@@ -1,0 +1,54 @@
+name: Diagnose Structured Expansion Batch 11
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/diagnose-structured-expansion-batch-11.yml'
+  push:
+    branches:
+      - data/structured-expansion-batch-11
+    paths:
+      - '.github/workflows/diagnose-structured-expansion-batch-11.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Diagnose each deterministic patch
+        run: |
+          mkdir -p artifacts/batch-11-diagnosis
+          set +e
+          for patch in \
+            operations/patches/sansan-midterm-financial-policy-2027-20260713.json \
+            operations/patches/hennge-growth-strategy-2029-2037-20260713.json \
+            operations/patches/cover-growth-plan-2030-20260713.json \
+            operations/patches/furuya-kfk-vision-2030-20260713.json \
+            operations/patches/ispace-growth-plan-2025-2030-20260713.json
+          do
+            name=$(basename "$patch" .json)
+            echo "=== $patch ===" | tee "artifacts/batch-11-diagnosis/${name}.log"
+            COMPANY_PATCH="$patch" node scripts/apply_company_data_patch_v1.mjs >> "artifacts/batch-11-diagnosis/${name}.log" 2>&1
+            echo "exit=$?" >> "artifacts/batch-11-diagnosis/${name}.log"
+            git reset --hard HEAD >/dev/null 2>&1
+            git clean -fd site/data reports operations/reviews operations/corrections >/dev/null 2>&1
+          done
+          cat artifacts/batch-11-diagnosis/*.log
+          exit 0
+      - uses: actions/upload-artifact@v4
+        with:
+          name: batch-11-diagnosis
+          path: artifacts/batch-11-diagnosis/
+          retention-days: 14

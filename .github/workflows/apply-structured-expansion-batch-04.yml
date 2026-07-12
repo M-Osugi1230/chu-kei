@@ -12,6 +12,10 @@ on:
       - 'operations/patches/secom-roadmap-2027-20260712.json'
       - 'operations/patches/olympus-strategy-fy27-fy29-20260712.json'
       - 'operations/patches/structured-expansion-batch-04-ledger.json'
+      - 'operations/patches/mitsubishielectric-page-evidence-correction-20260712.json'
+      - 'operations/patches/secom-page-evidence-correction-20260712.json'
+      - 'operations/patches/olympus-page-evidence-correction-20260712.json'
+      - 'operations/patches/structured-expansion-batch-04-page-evidence-ledger.json'
       - '.github/workflows/apply-structured-expansion-batch-04.yml'
   push:
     branches:
@@ -23,6 +27,10 @@ on:
       - 'operations/patches/secom-roadmap-2027-20260712.json'
       - 'operations/patches/olympus-strategy-fy27-fy29-20260712.json'
       - 'operations/patches/structured-expansion-batch-04-ledger.json'
+      - 'operations/patches/mitsubishielectric-page-evidence-correction-20260712.json'
+      - 'operations/patches/secom-page-evidence-correction-20260712.json'
+      - 'operations/patches/olympus-page-evidence-correction-20260712.json'
+      - 'operations/patches/structured-expansion-batch-04-page-evidence-ledger.json'
       - '.github/workflows/apply-structured-expansion-batch-04.yml'
   workflow_dispatch:
 
@@ -49,7 +57,7 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Detect existing application
+      - name: Detect existing application and evidence corrections
         id: state
         run: |
           node --input-type=module <<'NODE'
@@ -58,10 +66,20 @@ jobs:
           const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
           const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
           const data = JSON.parse(zlib.gunzipSync(compressed));
+          const byCode = new Map(data.companies.map(company => [String(company.code), company]));
           const codes = ['2269', '3086', '6503', '9735', '7733'];
-          const applied = codes.every(code => data.companies.find(company => company.code === code)?.stage === 'detailed_extracted');
-          fs.appendFileSync(process.env.GITHUB_OUTPUT, `already_applied=${applied}\n`);
-          console.log(`already_applied=${applied}`);
+          const applied = codes.every(code => byCode.get(code)?.stage === 'detailed_extracted');
+          const includesEvidence = (code, text) => (byCode.get(code)?.evidenceRefs ?? []).some(ref => String(ref).includes(text));
+          const states = {
+            already_applied: applied,
+            corrected_6503: includesEvidence('6503', '同 p.21: キャッシュ創出力4.6兆円'),
+            corrected_9735: includesEvidence('9735', '同 p.16: 2027年度の売上高'),
+            corrected_7733: includesEvidence('7733', '同 p.14: 成長ドライバーへの投資'),
+          };
+          for (const [key, value] of Object.entries(states)) {
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, `${key}=${value}\n`);
+            console.log(`${key}=${value}`);
+          }
           NODE
 
       - name: Apply governance ledger batch
@@ -79,6 +97,23 @@ jobs:
           COMPANY_PATCH=operations/patches/secom-roadmap-2027-20260712.json node scripts/apply_company_data_patch_v1.mjs
           COMPANY_PATCH=operations/patches/olympus-strategy-fy27-fy29-20260712.json node scripts/apply_company_data_patch_v1.mjs
 
+      - name: Apply page-evidence correction ledger
+        env:
+          GOVERNANCE_LEDGER_BATCH: operations/patches/structured-expansion-batch-04-page-evidence-ledger.json
+        run: node scripts/apply_governance_ledger_batch_v1.mjs
+
+      - name: Apply page-evidence corrections
+        run: |
+          if [ "${{ steps.state.outputs.corrected_6503 }}" != "true" ]; then
+            COMPANY_PATCH=operations/patches/mitsubishielectric-page-evidence-correction-20260712.json node scripts/apply_company_data_patch_v1.mjs
+          fi
+          if [ "${{ steps.state.outputs.corrected_9735 }}" != "true" ]; then
+            COMPANY_PATCH=operations/patches/secom-page-evidence-correction-20260712.json node scripts/apply_company_data_patch_v1.mjs
+          fi
+          if [ "${{ steps.state.outputs.corrected_7733 }}" != "true" ]; then
+            COMPANY_PATCH=operations/patches/olympus-page-evidence-correction-20260712.json node scripts/apply_company_data_patch_v1.mjs
+          fi
+
       - name: Rebuild quality profiles and normalize bundle
         run: |
           node scripts/rebuild_quality_scores_v2.mjs
@@ -95,7 +130,7 @@ jobs:
           node scripts/validate_source_registry_v1.mjs
           node scripts/validate_progress_experience_v1.mjs
 
-      - name: Verify structured population growth
+      - name: Verify structured population growth and corrected evidence
         run: |
           node --input-type=module <<'NODE'
           import crypto from 'node:crypto';
@@ -123,7 +158,18 @@ jobs:
               throw new Error(`structured expansion failed: ${code}`);
             }
           }
-          console.log(JSON.stringify({ companyCount: data.companies.length, counts, structuredCount: 115, sourceConfirmed: 200, sha256: digest }, null, 2));
+          const requiredEvidence = {
+            '6503': ['同 p.6:', '同 p.21:', '同 p.23:'],
+            '9735': ['同 p.16:'],
+            '7733': ['同 p.9:', '同 p.10-p.11:', '同 p.14:'],
+          };
+          for (const [code, terms] of Object.entries(requiredEvidence)) {
+            const refs = data.companies.find(row => row.code === code)?.evidenceRefs ?? [];
+            for (const term of terms) {
+              if (!refs.some(ref => String(ref).includes(term))) throw new Error(`corrected evidence missing: ${code}:${term}`);
+            }
+          }
+          console.log(JSON.stringify({ companyCount: data.companies.length, counts, structuredCount: 115, sourceConfirmed: 200, correctedEvidence: Object.keys(requiredEvidence), sha256: digest }, null, 2));
           NODE
 
       - name: Commit authoritative data and ledgers
@@ -134,7 +180,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
           else
-            git commit -m "data: add five structured plans in batch 04"
+            git commit -m "data: add five structured plans and correct page evidence"
             git push origin HEAD:data/structured-expansion-batch-04
           fi
 
@@ -145,11 +191,15 @@ jobs:
           name: chu-kei-structured-expansion-batch-04
           path: |
             artifacts/structured-expansion-batch-04-governance-report.json
+            artifacts/structured-expansion-batch-04-page-evidence-correction-governance-report.json
             artifacts/meiji-2026-plan-20260712-report.json
             artifacts/jfront-2024-2026-plan-20260712-report.json
             artifacts/mitsubishielectric-strategy-2030-20260712-report.json
             artifacts/secom-roadmap-2027-20260712-report.json
             artifacts/olympus-strategy-fy27-fy29-20260712-report.json
+            artifacts/mitsubishielectric-page-evidence-correction-20260712-report.json
+            artifacts/secom-page-evidence-correction-20260712-report.json
+            artifacts/olympus-page-evidence-correction-20260712-report.json
             artifacts/quality-debt-report-v1.json
             artifacts/quality-debt-items-v1.csv
             artifacts/review-governance-report-v1.json

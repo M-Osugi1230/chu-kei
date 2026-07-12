@@ -422,5 +422,179 @@
     "reviewDecisionId": "review-9021-20260712-structured-expansion",
     "detectedAt": "2026-07-12T12:20:00Z",
     "correctedAt": "2026-07-12T12:55:00Z"
+  },
+  {
+    "id": "correction-2269-20260712-structured-expansion",
+    "companyCode": "2269",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-05-10",
+      "revenue": "連結売上高の絶対目標は主要KPI図版で示さず、2026年度の海外売上高2,525億円を目標"
+    },
+    "reason": "明治ホールディングスの公式計画から財務・戦略・資本配分を証跡付きで抽出し、一次確認βから詳細抽出済みβへ拡張する。",
+    "sourceUrl": "https://www.meiji.com/investor/vision/mid-term-plan/",
+    "sourcePage": "公式中計ページ 15（図版15）, 公式中計ページ 17（図版17）, 公式中計ページ 18（図版18）, 公式中計ページ 19（図版19）",
+    "status": "corrected",
+    "reviewDecisionId": "review-2269-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T13:00:00Z",
+    "correctedAt": "2026-07-12T13:35:00Z"
+  },
+  {
+    "id": "correction-3086-20260712-structured-expansion",
+    "companyCode": "3086",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-04-15",
+      "revenue": "連結売上収益の目標は主要KPI表で設定せず、百貨店の2026年度外商・准外商売上高3,000億円を事業KPIとして設定"
+    },
+    "reason": "J.フロント リテイリングの公式計画から財務・戦略・資本配分を証跡付きで抽出し、一次確認βから詳細抽出済みβへ拡張する。",
+    "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+    "sourcePage": "p.1, p.36, p.53, p.54-p.55",
+    "status": "corrected",
+    "reviewDecisionId": "review-3086-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T13:05:00Z",
+    "correctedAt": "2026-07-12T13:40:00Z"
+  },
+  {
+    "id": "correction-6503-20260712-structured-expansion",
+    "companyCode": "6503",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-29",
+      "revenue": "2025年度〜2030年度 売上高CAGR3〜5%"
+    },
+    "reason": "三菱電機の公式計画から財務・戦略・資本配分を証跡付きで抽出し、一次確認βから詳細抽出済みβへ拡張する。",
+    "sourceUrl": "https://www.mitsubishielectric.co.jp/ja/pr/2026/pdf/0529_co1.pdf",
+    "sourcePage": "p.1, p.5-p.6, p.19, p.21",
+    "status": "corrected",
+    "reviewDecisionId": "review-6503-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T13:10:00Z",
+    "correctedAt": "2026-07-12T13:45:00Z"
+  },
+  {
+    "id": "correction-9735-20260712-structured-expansion",
+    "companyCode": "9735",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2023",
+      "revenue": "2027年度 連結売上高1兆2,500億円以上。将来の海外売上高比率10%を志向"
+    },
+    "reason": "セコムの公式計画から財務・戦略・資本配分を証跡付きで抽出し、一次確認βから詳細抽出済みβへ拡張する。",
+    "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+    "sourcePage": "p.1-p.3, p.5, p.10, p.15",
+    "status": "corrected",
+    "reviewDecisionId": "review-9735-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T13:15:00Z",
+    "correctedAt": "2026-07-12T13:50:00Z"
+  },
+  {
+    "id": "correction-7733-20260712-structured-expansion",
+    "companyCode": "7733",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-11-07",
+      "revenue": "為替影響を固定した前年比売上成長率をFY27 3%、FY28 4%、FY29 5%へ段階的に引き上げ"
+    },
+    "reason": "オリンパスの公式計画から財務・戦略・資本配分を証跡付きで抽出し、一次確認βから詳細抽出済みβへ拡張する。",
+    "sourceUrl": "https://www.olympus.co.jp/ir/data/pdf/01_Corporate_Strategy_Q2FY2026_jp.pdf",
+    "sourcePage": "p.1, p.8, p.9-p.10, p.11",
+    "status": "corrected",
+    "reviewDecisionId": "review-7733-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T13:20:00Z",
+    "correctedAt": "2026-07-12T13:55:00Z"
+  },
+  {
+    "id": "correction-6503-20260712-page-evidence-correction",
+    "companyCode": "6503",
+    "fieldPath": "evidenceRefs",
+    "before": {
+      "sourcePage": "p.5-p.6, p.19, p.21"
+    },
+    "after": {
+      "sourcePage": "p.6, p.21, p.23"
+    },
+    "reason": "公式PDFの表示ページを再確認し、章扉ではなく数値掲載ページへ証跡を補正する。",
+    "sourceUrl": "https://www.mitsubishielectric.co.jp/ja/pr/2026/pdf/0529_co1.pdf",
+    "sourcePage": "p.6, p.21, p.23",
+    "status": "corrected",
+    "reviewDecisionId": "review-6503-20260712-page-evidence-correction",
+    "detectedAt": "2026-07-12T14:00:00Z",
+    "correctedAt": "2026-07-12T14:35:00Z"
+  },
+  {
+    "id": "correction-9735-20260712-page-evidence-correction",
+    "companyCode": "9735",
+    "fieldPath": "evidenceRefs",
+    "before": {
+      "sourcePage": "p.15"
+    },
+    "after": {
+      "sourcePage": "p.16"
+    },
+    "reason": "2027年度数値目標と株主還元方針の表示ページを公式PDFで再確認した。",
+    "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+    "sourcePage": "p.16",
+    "status": "corrected",
+    "reviewDecisionId": "review-9735-20260712-page-evidence-correction",
+    "detectedAt": "2026-07-12T14:05:00Z",
+    "correctedAt": "2026-07-12T14:40:00Z"
+  },
+  {
+    "id": "correction-7733-20260712-page-evidence-correction",
+    "companyCode": "7733",
+    "fieldPath": "evidenceRefs",
+    "before": {
+      "sourcePage": "p.8, p.9-p.10"
+    },
+    "after": {
+      "sourcePage": "p.9, p.10-p.11, p.14"
+    },
+    "reason": "公式PDFの表示ページ番号とファイル内ページ順の差を確認し、証跡を実際の表示番号へ補正する。",
+    "sourceUrl": "https://www.olympus.co.jp/ir/data/pdf/01_Corporate_Strategy_Q2FY2026_jp.pdf",
+    "sourcePage": "p.9, p.10-p.11, p.14",
+    "status": "corrected",
+    "reviewDecisionId": "review-7733-20260712-page-evidence-correction",
+    "detectedAt": "2026-07-12T14:10:00Z",
+    "correctedAt": "2026-07-12T14:45:00Z"
   }
 ]

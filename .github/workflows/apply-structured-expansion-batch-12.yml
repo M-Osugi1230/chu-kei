@@ -1,0 +1,104 @@
+name: Apply Structured Expansion Batch 12
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/apply-structured-expansion-batch-12.yml'
+  push:
+    branches:
+      - data/structured-expansion-batch-12
+    paths:
+      - '.github/workflows/apply-structured-expansion-batch-12.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-12
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply deterministic patches and governance ledger
+        run: |
+          set -euo pipefail
+          structured_count=$(node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          console.log(data.companies.filter(row => ['core', 'detailed_extracted'].includes(row.stage)).length);
+          NODE
+          )
+          if [ "$structured_count" -eq 150 ]; then
+            node scripts/generate_structured_expansion_batch_12.mjs
+            while IFS= read -r patch
+            do
+              [ -n "$patch" ] || continue
+              COMPANY_PATCH="$patch" node scripts/apply_company_data_patch_v1.mjs
+            done < operations/patches/structured-expansion-batch-12-patch-list.txt
+            GOVERNANCE_LEDGER_BATCH=operations/patches/structured-expansion-batch-12-ledger.json node scripts/apply_governance_ledger_batch_v1.mjs
+            node scripts/rebuild_quality_scores_v2.mjs
+            node scripts/normalize_bundle_contract_v1.mjs
+          elif [ "$structured_count" -ne 170 ]; then
+            echo "Unexpected structured count: $structured_count" >&2
+            exit 1
+          fi
+      - name: Validate generated counts and debt
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const count = stage => data.companies.filter(row => row.stage === stage).length;
+          const pageEvidence = company => (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
+          const structured = count('core') + count('detailed_extracted');
+          const detailedMissingPageEvidence = data.companies.filter(row => row.stage === 'detailed_extracted' && !pageEvidence(row)).length;
+          const sourceConfirmed = data.companies.filter(row => row.stage !== 'jpx_indexed').length;
+          const selectedCodes = new Set(['2702','4324','4369','4375','4593','6239','6291','6626','6637','6677','6855','7214','7373','7746','8029','8704','9033','9380','9708','9972']);
+          const selected = data.companies.filter(row => selectedCodes.has(String(row.code)));
+          if (data.companies.length !== 570) throw new Error(`company count: ${data.companies.length}`);
+          if (structured !== 170) throw new Error(`structured count: ${structured}`);
+          if (count('core') !== 30) throw new Error(`core count: ${count('core')}`);
+          if (count('detailed_extracted') !== 140) throw new Error(`detailed count: ${count('detailed_extracted')}`);
+          if (count('source_indexed') !== 30) throw new Error(`source indexed count: ${count('source_indexed')}`);
+          if (sourceConfirmed !== 200) throw new Error(`source confirmed count: ${sourceConfirmed}`);
+          if (selected.length !== 20 || selected.some(row => row.stage !== 'detailed_extracted')) throw new Error('selected company stage mismatch');
+          if (detailedMissingPageEvidence > 48) throw new Error(`detailed missing page evidence: ${detailedMissingPageEvidence}`);
+          console.log(JSON.stringify({structured, core: count('core'), detailed: count('detailed_extracted'), sourceIndexed: count('source_indexed'), sourceConfirmed, selected: selected.length, detailedMissingPageEvidence, compressedBytes: manifest.compressedBytes}, null, 2));
+          NODE
+      - name: Validate quality contracts
+        run: |
+          npm run quality:v43
+          npm run quality:local
+      - name: Commit generated source of truth
+        run: |
+          set -euo pipefail
+          rm -rf artifacts node_modules
+          rm -f package-lock.json
+          rm -f .github/workflows/export-structured-expansion-batch-12-candidates.yml
+          rm -f .github/workflows/discover-structured-expansion-batch-12.yml
+          rm -f .github/workflows/probe-structured-expansion-batch-12-fast.yml
+          rm -f .github/workflows/apply-structured-expansion-batch-12.yml
+          rm -f scripts/generate_structured_expansion_batch_12.mjs
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "data: add twenty structured company plans in batch 12"
+          git push origin HEAD:data/structured-expansion-batch-12

@@ -26,36 +26,11 @@
     "9735"
   ],
   "companyChecks": [
-    {
-      "code": "2269",
-      "checksPassed": 15,
-      "checksTotal": 15,
-      "allPassed": true
-    },
-    {
-      "code": "3086",
-      "checksPassed": 15,
-      "checksTotal": 15,
-      "allPassed": true
-    },
-    {
-      "code": "6503",
-      "checksPassed": 15,
-      "checksTotal": 15,
-      "allPassed": true
-    },
-    {
-      "code": "7733",
-      "checksPassed": 15,
-      "checksTotal": 15,
-      "allPassed": true
-    },
-    {
-      "code": "9735",
-      "checksPassed": 15,
-      "checksTotal": 15,
-      "allPassed": true
-    }
+    {"code": "2269", "checksPassed": 15, "checksTotal": 15, "allPassed": true},
+    {"code": "3086", "checksPassed": 15, "checksTotal": 15, "allPassed": true},
+    {"code": "6503", "checksPassed": 15, "checksTotal": 15, "allPassed": true},
+    {"code": "7733", "checksPassed": 15, "checksTotal": 15, "allPassed": true},
+    {"code": "9735", "checksPassed": 15, "checksTotal": 15, "allPassed": true}
   ],
   "crossBatchChecks": {
     "batch04DisjointFromBatch03": true,
@@ -68,12 +43,23 @@
     "projectedStructuredCount": 115,
     "projectedSourceConfirmedCount": 200
   },
+  "executionVerification": {
+    "repositoryVisibility": "public",
+    "verifiedAt": "2026-07-12T09:30:00Z",
+    "applyWorkflowRunId": 29185560243,
+    "applyWorkflowConclusion": "success",
+    "reviewGovernanceRunId": 29185560206,
+    "reviewGovernanceConclusion": "success",
+    "qualityGateRunId": 29185560242,
+    "qualityGateConclusion": "success",
+    "materializedCommit": "e7a386bd5962788176b8249b1bb689f34bde3275"
+  },
   "checksPassed": 79,
   "checksTotal": 79,
   "allPassed": true,
   "limitations": [
     "Validates before-state identity and population arithmetic from the preserved Batch 03 candidate snapshot.",
-    "Does not replace repository quality, browser, accessibility, performance, or deployment gates.",
-    "Authoritative bundle materialization remains blocked until a GitHub Actions runner starts."
+    "Does not replace browser, accessibility, performance, or deployment gates; those gates must pass against the PR merge ref before merge.",
+    "Automatic production promotion remains prohibited; the five companies remain detailed_extracted and in_review."
   ]
 }

@@ -1,0 +1,79 @@
+{
+  "version": "structured-expansion-batch-04-preflight-v1",
+  "generatedAt": "2026-07-12T08:15:00Z",
+  "sourceSnapshot": {
+    "artifact": "structured-expansion-batch-03-candidates",
+    "bundleSha256": "f6c3b1dfd1892a94cbe8f567bf642ae615f3b9753deaab7bdeb3fd72abde9417",
+    "stageCounts": {
+      "core": 30,
+      "detailed_extracted": 75,
+      "source_indexed": 95,
+      "jpx_indexed": 370
+    }
+  },
+  "batch03SelectedCodes": [
+    "1928",
+    "4183",
+    "5332",
+    "7735",
+    "9021"
+  ],
+  "batch04SelectedCodes": [
+    "2269",
+    "3086",
+    "6503",
+    "7733",
+    "9735"
+  ],
+  "companyChecks": [
+    {
+      "code": "2269",
+      "checksPassed": 15,
+      "checksTotal": 15,
+      "allPassed": true
+    },
+    {
+      "code": "3086",
+      "checksPassed": 15,
+      "checksTotal": 15,
+      "allPassed": true
+    },
+    {
+      "code": "6503",
+      "checksPassed": 15,
+      "checksTotal": 15,
+      "allPassed": true
+    },
+    {
+      "code": "7733",
+      "checksPassed": 15,
+      "checksTotal": 15,
+      "allPassed": true
+    },
+    {
+      "code": "9735",
+      "checksPassed": 15,
+      "checksTotal": 15,
+      "allPassed": true
+    }
+  ],
+  "crossBatchChecks": {
+    "batch04DisjointFromBatch03": true,
+    "projectedStageCounts": {
+      "core": 30,
+      "detailed_extracted": 85,
+      "source_indexed": 85,
+      "jpx_indexed": 370
+    },
+    "projectedStructuredCount": 115,
+    "projectedSourceConfirmedCount": 200
+  },
+  "checksPassed": 79,
+  "checksTotal": 79,
+  "allPassed": true,
+  "limitations": [
+    "Validates before-state identity and population arithmetic from the preserved Batch 03 candidate snapshot.",
+    "Does not replace repository quality, browser, accessibility, performance, or deployment gates.",
+    "Authoritative bundle materialization remains blocked until a GitHub Actions runner starts."
+  ]
+}

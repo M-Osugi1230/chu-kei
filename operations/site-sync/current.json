@@ -1,1 +1,45 @@
-{"schemaVersion":"site-release-status-v1","updatedAt":"2026-07-12","repository":{"release":"v43 Quality Hardened Beta","companies":570,"sourceConfirmed":200,"structured":110,"production":30,"detailedBeta":80,"sourceIndexed":90,"coverageBeta":370,"progressCompanies":44,"progressRows":149,"actualCompanies":16,"actualRows":54,"qualityDebt":89},"publicSite":{"release":"v15 alignment record","verifiedAt":"2026-07-11","detailedBeta":70,"publicationDateAudited":59,"underReview":11,"companyChangeHistory":14},"sync":{"status":"partial","label":"一部未同期","pending":["GitHubの構造化済み110社と公開サイト同期記録の差分解消","公開サイト側59社の監査根拠と14件の変更履歴の正本同期","mainマージから公開確認までの自動リリース証跡"]}}
+{
+  "schemaVersion": "site-release-status-v1",
+  "updatedAt": "2026-07-12",
+  "repository": {
+    "release": "v43 Quality Hardened Beta + Research Platform v2",
+    "lastVerifiedMainSha": "5abfa5f0f7a42bab3e288729d003b21d8d1a7c17",
+    "companies": 570,
+    "sourceConfirmed": 200,
+    "structured": 110,
+    "production": 30,
+    "detailedBeta": 80,
+    "sourceIndexed": 90,
+    "coverageBeta": 370,
+    "progressCompanies": 44,
+    "progressRows": 149,
+    "actualCompanies": 16,
+    "actualRows": 54,
+    "qualityDebt": 89,
+    "historyCompanies": 1,
+    "historyPlans": 2,
+    "progressEvents": 9,
+    "commercialOffers": 3,
+    "forms": ["spot-report-request", "product-waitlist"]
+  },
+  "publicSite": {
+    "release": "v15 alignment record; current main deployment unverified",
+    "verifiedAt": "2026-07-11",
+    "verificationStatus": "unverified",
+    "verificationIssue": 49,
+    "detailedBeta": 70,
+    "publicationDateAudited": 59,
+    "underReview": 11,
+    "companyChangeHistory": 14
+  },
+  "sync": {
+    "status": "blocked",
+    "label": "公開確認待ち",
+    "pending": [
+      "Issue #45: GitHub Actionsがjob step開始前に失敗する実行基盤ブロッカーの解消",
+      "Issue #49: Research Platform v2、新規ページ、三菱重工の過去中計、Netlify Formsの公開確認",
+      "PR #42: 第4構造化拡張バッチの正本データ生成と品質ゲート",
+      "公開サイト側59社の監査根拠と14件の変更履歴の正本同期"
+    ]
+  }
+}

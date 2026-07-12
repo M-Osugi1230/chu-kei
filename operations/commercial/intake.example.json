@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "commercial-intake-v1",
+  "requestId": "REQ-20260712-EXAMPL",
+  "receivedAt": "2026-07-12T00:00:00Z",
+  "requestType": "spot-report",
+  "status": "received",
+  "contact": {
+    "name": "サンプル利用者",
+    "email": "sample@example.invalid",
+    "company": "サンプル株式会社"
+  },
+  "scope": {
+    "offerId": "single-company-evidence-report",
+    "targets": "架空企業 0000",
+    "purpose": "Schema確認用の架空データ",
+    "format": "PDF",
+    "conditions": "実在の依頼情報を使用しない"
+  },
+  "consent": true,
+  "commercial": {
+    "quotedAmount": 49800,
+    "taxIncluded": false,
+    "includedRevisions": 1
+  },
+  "assignment": {
+    "researcher": "researcher-example",
+    "reviewer": "reviewer-example"
+  }
+}

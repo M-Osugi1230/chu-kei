@@ -1,0 +1,209 @@
+name: Discover Structured Expansion Batch 13
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-13
+    paths:
+      - '.github/workflows/discover-structured-expansion-batch-13.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/discover-structured-expansion-batch-13.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4]
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-13
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: npm install --no-save playwright@1.55.0
+      - run: npx playwright install --with-deps chromium
+      - run: pip install requests pypdf cryptography
+      - name: Render official IR pages and collect PDFs
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          mkdir -p "artifacts/batch-13/shard-${SHARD}/links"
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { chromium } from 'playwright';
+
+          const shard = Number(process.env.SHARD);
+          const allTargets = [
+            ['147A','ソラコム','https://soracom.com/ja-jp/company/ir/'],
+            ['2160','ジーエヌアイグループ','https://www.gnipharma.com/ir/'],
+            ['290A','Synspective','https://synspective.com/jp/ir/'],
+            ['2998','クリアル','https://corp.creal.jp/ir/'],
+            ['3491','GA technologies','https://www.ga-tech.co.jp/ir/'],
+            ['3994','マネーフォワード','https://corp.moneyforward.com/ir/'],
+            ['4165','プレイド','https://plaid.co.jp/ir/'],
+            ['4894','クオリプス','https://cuorips.co.jp/ir/'],
+            ['5038','eWeLL','https://ewell.co.jp/ir/'],
+            ['5574','ABEJA','https://www.abejainc.com/ir/'],
+            ['6146','ディスコ','https://www.disco.co.jp/jp/ir/'],
+            ['6227','AIメカテック','https://www.ai-mech.com/ir/'],
+            ['6264','マルマエ','https://www.marumae.com/ir/'],
+            ['6273','SMC','https://www.smcworld.com/ir/'],
+            ['6338','タカトリ','https://www.takatori-g.co.jp/ir/'],
+            ['6521','オキサイド','https://www.opt-oxide.com/ir/'],
+            ['6613','QDレーザ','https://www.qdlaser.com/ja/ir/'],
+            ['6627','テラプローブ','https://www.teraprobe.com/ir/'],
+            ['6723','ルネサスエレクトロニクス','https://www.renesas.com/jp/ja/about/investor-relations'],
+            ['6777','santec Holdings','https://www.santec.com/jp/ir/index.html'],
+            ['7741','HOYA','https://www.hoya.com/ir/'],
+            ['8198','マックスバリュ東海','https://www.mv-tokai.co.jp/company/profile/ir/'],
+            ['8473','SBIホールディングス','https://www.sbigroup.co.jp/investors/'],
+            ['8772','アサックス','https://www.asax.co.jp/ir/'],
+            ['8871','ゴールドクレスト','https://www.goldcrest.co.jp/ir/'],
+            ['9022','東海旅客鉄道','https://company.jr-central.co.jp/ir/'],
+            ['9051','センコン物流','https://www.senkon.co.jp/ir/'],
+            ['9414','日本BS放送','https://corp.bs11.jp/ja/ir.html'],
+            ['9475','昭文社ホールディングス','https://www.mapple.co.jp/ir/'],
+            ['9761','東海リース','https://www.tokai-lease.co.jp/ir/'],
+          ];
+          const targets = allTargets.filter((_, index) => index % 5 === shard);
+          const browser = await chromium.launch({ headless: true });
+          const output = {};
+          const interesting = /pdf|中期|長期|経営|成長|事業計画|決算|説明|統合報告|financial|presentation|strategy|plan|vision|library|2030|2029|2028|2027|2026/i;
+          const follow = /library|presentation|financial|strategy|plan|vision|決算|説明|経営|成長|IR資料|ir[-_]?library/i;
+          for (const [code, name, startUrl] of targets) {
+            const queue = [startUrl];
+            const seen = new Set();
+            const pages = [];
+            while (queue.length && seen.size < 6) {
+              const url = queue.shift();
+              if (seen.has(url)) continue;
+              seen.add(url);
+              const page = await browser.newPage();
+              const responses = [];
+              page.on('response', response => {
+                const responseUrl = response.url();
+                const contentType = response.headers()['content-type'] || '';
+                if (/pdf|json|api|ir|library|financial|presentation|strategy|plan/i.test(`${responseUrl} ${contentType}`)) {
+                  responses.push({ url: responseUrl, status: response.status(), contentType });
+                }
+              });
+              try {
+                await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+                await page.waitForTimeout(5000);
+                const links = await page.locator('a').evaluateAll(nodes => nodes.map(node => ({
+                  text: (node.textContent || '').replace(/\s+/g, ' ').trim(),
+                  href: node.href || ''
+                })).filter(row => row.href));
+                const selected = links.filter(link => interesting.test(`${link.text} ${link.href}`));
+                pages.push({ url, finalUrl: page.url(), title: await page.title(), links: selected, responses });
+                for (const link of selected) {
+                  if (follow.test(`${link.text} ${link.href}`) && !/\.pdf(?:$|\?)/i.test(link.href) && queue.length < 10) queue.push(link.href);
+                }
+              } catch (error) {
+                pages.push({ url, error: String(error), responses });
+              }
+              await page.close();
+            }
+            output[code] = { name, startUrl, pages };
+          }
+          await browser.close();
+          fs.writeFileSync(`artifacts/batch-13/shard-${shard}/links/report.json`, JSON.stringify(output, null, 2));
+          console.log(JSON.stringify(output, null, 2));
+          NODE
+      - name: Download and extract discovered official PDFs
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, re
+          from pathlib import Path
+          import requests
+          from pypdf import PdfReader
+
+          shard = int(os.environ['SHARD'])
+          root = Path(f'artifacts/batch-13/shard-{shard}')
+          links_report = json.loads((root / 'links/report.json').read_text())
+          session = requests.Session()
+          session.headers.update({'User-Agent':'Mozilla/5.0 (compatible; Chu-kei official evidence audit/3.0)','Accept-Language':'ja,en;q=0.7'})
+          result = {}
+          positive = re.compile(r'(中期|長期|経営|成長|事業計画|決算説明|統合報告|financial|presentation|strategy|plan|vision|2030|2029|2028|2027|2026)', re.I)
+          negative = re.compile(r'(招集通知|株主総会|定款|コーポレートガバナンス|大量保有)', re.I)
+          metrics = re.compile(r'(売上高|売上収益|営業収益|ARR|営業利益|事業利益|経常利益|EBITDA|EBITA|ROE|ROIC|資本コスト|設備投資|成長投資|研究開発|M&A|配当性向|DOE|株主還元|自己株式取得|202[6-9]|2030)', re.I)
+          for code, company in links_report.items():
+            company_dir = root / code
+            company_dir.mkdir(exist_ok=True)
+            candidates = {}
+            for page in company['pages']:
+              for link in page.get('links', []):
+                url = link.get('href','')
+                text = f"{link.get('text','')} {url}"
+                if '.pdf' in url.lower() or 'pdf' in text.lower():
+                  score = 8 * len(positive.findall(text)) - 12 * len(negative.findall(text)) + 4
+                  candidates[url] = max(score, candidates.get(url, -999))
+              for response in page.get('responses', []):
+                url = response.get('url','')
+                if 'pdf' in response.get('contentType','').lower() or '.pdf' in url.lower():
+                  candidates[url] = max(4, candidates.get(url, -999))
+            ordered = sorted(candidates.items(), key=lambda row: (-row[1], row[0]))[:18]
+            extracted = []
+            for index, (url, link_score) in enumerate(ordered):
+              try:
+                response = session.get(url, timeout=45, allow_redirects=True)
+                response.raise_for_status()
+                data = response.content
+                if not data.startswith(b'%PDF') or len(data) > 50_000_000:
+                  continue
+                pdf_path = company_dir / f'{index:02d}.pdf'
+                pdf_path.write_bytes(data)
+                reader = PdfReader(pdf_path)
+                rows = []
+                hit_pages = []
+                hit_count = 0
+                for page_no, page in enumerate(reader.pages, 1):
+                  text = re.sub(r'\s+', ' ', (page.extract_text() or '').strip())
+                  if text:
+                    rows.append({'page':page_no,'text':text[:22000]})
+                    hits = metrics.findall(text)
+                    hit_count += len(hits)
+                    if hits: hit_pages.append(page_no)
+                pages_file = company_dir / f'{index:02d}.pages.json'
+                pages_file.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding='utf-8')
+                extracted.append({
+                  'url':url,
+                  'linkScore':link_score,
+                  'file':pdf_path.name,
+                  'pagesFile':pages_file.name,
+                  'pageCount':len(reader.pages),
+                  'textPages':len(rows),
+                  'metricHits':hit_count,
+                  'evidencePages':hit_pages[:160],
+                  'metadata':{str(k):str(v) for k,v in (reader.metadata or {}).items()},
+                  'bytes':len(data),
+                  'sha256':hashlib.sha256(data).hexdigest(),
+                })
+              except Exception as error:
+                extracted.append({'url':url,'linkScore':link_score,'error':str(error)})
+            extracted.sort(key=lambda row:(-row.get('metricHits',-1),-row.get('linkScore',0),row['url']))
+            result[code] = {'name':company['name'],'startUrl':company['startUrl'],'candidates':ordered,'extracted':extracted}
+          (root / 'summary.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(json.dumps(result, ensure_ascii=False, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-13-${{ matrix.shard }}
+          path: artifacts/batch-13/shard-${{ matrix.shard }}/
+          retention-days: 14

@@ -1,0 +1,89 @@
+name: Probe Structured Expansion Batch 08 Alternates
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/probe-structured-expansion-batch-08-alternates.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-08
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install requests beautifulsoup4 pypdf
+      - name: Probe plan pages and PDFs
+        run: |
+          python - <<'PY'
+          import hashlib, html, json, re, urllib.parse
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          out=Path('artifacts/batch-08-alternates'); out.mkdir(parents=True,exist_ok=True)
+          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 (compatible; Chu-kei evidence audit/1.0)','Accept-Language':'ja,en;q=0.7'})
+          targets={
+            '2780':['https://komehyohds.com/ir/management/strategy.html','https://komehyohds.com/ir/'],
+            '2998':['https://corp.creal.jp/ir/','https://corp.creal.jp/ir/library/'],
+            '3994':['https://corp.moneyforward.com/ir/','https://corp.moneyforward.com/ir/library/'],
+            '4970':['https://www.toyogosei.co.jp/ir/','https://www.toyogosei.co.jp/company/plan/'],
+            '5253':['https://cover-corp.com/ir','https://cover-corp.com/ir/news'],
+            '6890':['https://www.ferrotec.co.jp/ir/ir_ml_plans.php','https://www.ferrotec.co.jp/ir/'],
+            '7685':['https://buysell-technologies.com/ir/','https://buysell-technologies.com/ir/library/'],
+            '8473':['https://www.sbigroup.co.jp/investors/','https://www.sbigroup.co.jp/investors/management/'],
+          }
+          keys=['中期','長期','経営計画','成長戦略','事業計画','management','strategy','plan','説明会','資本','vision','事業方針']
+          def get(u,b=False):
+            r=s.get(u,timeout=40,allow_redirects=True); r.raise_for_status(); return r.content if b else (r.text,r.url)
+          result={}
+          for code,starts in targets.items():
+            cdir=out/code; cdir.mkdir(exist_ok=True)
+            queue=list(starts); seen=set(); pages=[]; pdfs={}
+            while queue and len(seen)<18:
+              u=queue.pop(0)
+              if u in seen: continue
+              seen.add(u)
+              try: text,final=get(u)
+              except Exception as e: pages.append({'url':u,'error':str(e)}); continue
+              pages.append({'url':final})
+              soup=BeautifulSoup(text,'html.parser')
+              for a in soup.find_all('a',href=True):
+                x=urllib.parse.urljoin(final,html.unescape(a['href'])); label=' '.join(a.get_text(' ',strip=True).split()); combined=(label+' '+x).lower()
+                if '.pdf' in x.lower(): pdfs[x]={'label':label,'from':final}
+                elif any(k.lower() in combined for k in keys) and urllib.parse.urlparse(x).hostname==urllib.parse.urlparse(final).hostname and x not in seen and len(queue)<20: queue.append(x)
+              for m in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?',text,re.I):
+                x=urllib.parse.urljoin(final,html.unescape(m)); pdfs.setdefault(x,{'label':'','from':final})
+            ranked=sorted(pdfs.items(),key=lambda x:(0 if any(k.lower() in (x[1]['label']+' '+x[0]).lower() for k in keys) else 1,x[0]))[:15]
+            extracted=[]
+            for i,(u,m) in enumerate(ranked):
+              try:
+                data=get(u,True)
+                if not data.startswith(b'%PDF') or len(data)>45_000_000: continue
+                p=cdir/f'{i:02d}.pdf'; p.write_bytes(data); reader=PdfReader(p); rows=[]
+                for n,page in enumerate(reader.pages,1):
+                  t=re.sub(r'\s+',' ',(page.extract_text() or '').strip())
+                  if t: rows.append({'page':n,'text':t[:15000]})
+                pf=cdir/f'{i:02d}.pages.json'; pf.write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf-8')
+                extracted.append({'url':u,**m,'file':p.name,'pagesFile':pf.name,'pageCount':len(reader.pages),'textPages':len(rows),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+              except Exception as e: m['error']=str(e)
+            result[code]={'pages':pages,'candidates':[{'url':u,**m} for u,m in ranked],'extracted':extracted}
+          (out/'report.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps({c:{'pages':len(v['pages']),'candidates':len(v['candidates']),'extracted':len(v['extracted']),'best':v['extracted'][0] if v['extracted'] else None} for c,v in result.items()},ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-08-alternates
+          path: artifacts/batch-08-alternates/
+          retention-days: 14

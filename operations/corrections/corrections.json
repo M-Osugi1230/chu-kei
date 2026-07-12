@@ -1196,5 +1196,125 @@
     "reviewDecisionId": "review-7287-20260713-structured-expansion",
     "detectedAt": "2026-07-12T18:50:00Z",
     "correctedAt": "2026-07-12T19:20:00Z"
+  },
+  {
+    "id": "correction-2587-20260713-structured-expansion",
+    "companyCode": "2587",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-02-14",
+      "revenue": "2024〜2026年度の売上収益を平均年率1桁台半ばで成長"
+    },
+    "reason": "飲料の構造改革、海外成長、M&A、FCF、株主還元を比較可能にする。",
+    "sourceUrl": "https://www.suntory.co.jp/softdrink/ir/library_ebook/upload/SBF%20Overview2026_j.pdf",
+    "sourcePage": "p.12-p.14",
+    "status": "corrected",
+    "reviewDecisionId": "review-2587-20260713-structured-expansion",
+    "detectedAt": "2026-07-12T20:00:00Z",
+    "correctedAt": "2026-07-12T20:30:00Z"
+  },
+  {
+    "id": "correction-2914-20260713-structured-expansion",
+    "companyCode": "2914",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-02-12",
+      "profit": "2026〜2028年度の為替一定ベース調整後営業利益CAGRは1桁台後半"
+    },
+    "reason": "RRP投資、利益成長、M&A、配当・自己株取得を比較可能にする。",
+    "sourceUrl": "https://www.jti.co.jp/investors/library/presentation/pdf/20260212_02.pdf",
+    "sourcePage": "p.8-p.12",
+    "status": "corrected",
+    "reviewDecisionId": "review-2914-20260713-structured-expansion",
+    "detectedAt": "2026-07-12T20:05:00Z",
+    "correctedAt": "2026-07-12T20:35:00Z"
+  },
+  {
+    "id": "correction-3092-20260713-structured-expansion",
+    "companyCode": "3092",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-30",
+      "profit": "2030年3月期 調整後EBITA900億円"
+    },
+    "reason": "EC中核とNear Fashion・Global、新規事業、M&A、AIを比較可能にする。",
+    "sourceUrl": "https://corp.zozo.com/ir-info/files/pdf/642d7169afe8555886530b6d95c5bf55abbc6bee.pdf",
+    "sourcePage": "p.24-p.26, p.38, p.46-p.48",
+    "status": "corrected",
+    "reviewDecisionId": "review-3092-20260713-structured-expansion",
+    "detectedAt": "2026-07-12T20:10:00Z",
+    "correctedAt": "2026-07-12T20:40:00Z"
+  },
+  {
+    "id": "correction-6963-20260713-structured-expansion",
+    "companyCode": "6963",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-11-07",
+      "revenue": "2028年度 売上高5,000億円以上"
+    },
+    "reason": "パワー・アナログ、SiC黒字化、構造改革、資本政策を比較可能にする。",
+    "sourceUrl": "https://fscdn.rohm.com/jp/financial/account/2509_10200916_presentation_jp.pdf",
+    "sourcePage": "p.14-p.21",
+    "status": "corrected",
+    "reviewDecisionId": "review-6963-20260713-structured-expansion",
+    "detectedAt": "2026-07-12T20:15:00Z",
+    "correctedAt": "2026-07-12T20:45:00Z"
+  },
+  {
+    "id": "correction-7685-20260713-structured-expansion",
+    "companyCode": "7685",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "2027年12月期 連結売上高1,650億円"
+    },
+    "reason": "リユース、AI、海外販路、連続M&A、財務規律・還元を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/7685/tdnet/2811284/00.pdf",
+    "sourcePage": "p.5, p.34-p.36, p.64-p.71",
+    "status": "corrected",
+    "reviewDecisionId": "review-7685-20260713-structured-expansion",
+    "detectedAt": "2026-07-12T20:20:00Z",
+    "correctedAt": "2026-07-12T20:50:00Z"
   }
 ]

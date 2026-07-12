@@ -1,0 +1,103 @@
+name: Export Structured Expansion Batch 07 Records
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-07-complete
+    paths:
+      - '.github/workflows/export-structured-expansion-batch-07-records.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-07-complete
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Export current records and contracts
+        run: |
+          node <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import zlib from 'node:zlib';
+
+          const root = process.cwd();
+          const dataDir = path.join(root, 'site', 'data');
+          const manifest = JSON.parse(fs.readFileSync(path.join(dataDir, 'bundle.manifest.json'), 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map((part) => fs.readFileSync(path.join(dataDir, part.file))));
+          const jsonText = zlib.gunzipSync(compressed).toString('utf8');
+          const bundle = JSON.parse(jsonText);
+          const targetCodes = new Set(['1803', '2871', '6504', '6762', '9042']);
+
+          const locateCompanyArrays = (value, trail = []) => {
+            const found = [];
+            if (Array.isArray(value)) {
+              if (value.some((row) => row && typeof row === 'object' && targetCodes.has(String(row.code ?? row.companyCode ?? '')))) {
+                found.push({ trail, value });
+              }
+              return found;
+            }
+            if (!value || typeof value !== 'object') return found;
+            for (const [key, child] of Object.entries(value)) {
+              found.push(...locateCompanyArrays(child, [...trail, key]));
+            }
+            return found;
+          };
+
+          const companyArrays = locateCompanyArrays(bundle);
+          const selected = [];
+          for (const entry of companyArrays) {
+            for (const row of entry.value) {
+              const code = String(row?.code ?? row?.companyCode ?? '');
+              if (targetCodes.has(code)) selected.push({ path: entry.trail.join('.'), record: row });
+            }
+          }
+
+          const outDir = path.join(root, 'artifacts', 'structured-expansion-batch-07-records');
+          fs.mkdirSync(outDir, { recursive: true });
+          fs.writeFileSync(path.join(outDir, 'bundle-shape.json'), JSON.stringify({
+            manifest,
+            topLevelKeys: Object.keys(bundle),
+            companyArrayPaths: companyArrays.map((entry) => ({ path: entry.trail.join('.'), length: entry.value.length })),
+            selectedCount: selected.length,
+            uncompressedBytes: Buffer.byteLength(jsonText),
+          }, null, 2));
+          fs.writeFileSync(path.join(outDir, 'selected-records.json'), JSON.stringify(selected, null, 2));
+
+          const knownFiles = [
+            'operations/reviews/decisions.json',
+            'operations/corrections/corrections.json',
+            'operations/quality-debt-budget-v1.json',
+            'reports/v43/QUALITY_SCORE_V2_REPORT.json',
+            'tests/e2e/portal.spec.mjs',
+            'scripts/validate_quality_v43.mjs',
+            'scripts/apply_company_data_patch.mjs',
+            'scripts/apply_company_data_patches.mjs',
+            'scripts/build_bundle.mjs',
+            'scripts/generate_bundle.mjs'
+          ];
+          const copied = [];
+          for (const relative of knownFiles) {
+            const source = path.join(root, relative);
+            if (!fs.existsSync(source)) continue;
+            const destination = path.join(outDir, relative);
+            fs.mkdirSync(path.dirname(destination), { recursive: true });
+            fs.copyFileSync(source, destination);
+            copied.push(relative);
+          }
+          fs.writeFileSync(path.join(outDir, 'copied-files.json'), JSON.stringify(copied, null, 2));
+          console.log(JSON.stringify({ selectedCount: selected.length, companyArrayPaths: companyArrays.map((entry) => entry.trail.join('.')), copied }, null, 2));
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-07-records
+          path: artifacts/structured-expansion-batch-07-records/
+          retention-days: 14

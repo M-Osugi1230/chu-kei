@@ -1,0 +1,95 @@
+name: Probe Structured Expansion Batch 09 Finalists
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-09
+    paths:
+      - '.github/workflows/probe-structured-expansion-batch-09-finalists.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-09
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install requests beautifulsoup4 pypdf
+      - name: Probe finalist official PDFs
+        run: |
+          python - <<'PY'
+          import hashlib, html, json, re, urllib.parse
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          out=Path('artifacts/batch-09-finalists'); out.mkdir(parents=True,exist_ok=True)
+          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 (compatible; Chu-kei evidence audit/1.0)','Accept-Language':'ja,en;q=0.7'})
+          targets={
+            '6963': {'name':'ローム','urls':['https://www.rohm.co.jp/ir/management-plan','https://www.rohm.co.jp/ir','https://www.rohm.co.jp/ir/library'], 'domains':['rohm.co.jp']},
+            '7685': {'name':'BuySell Technologies','urls':['https://buysell-technologies.com/ir/plan/','https://buysell-technologies.com/ir/settlement/','https://buysell-technologies.com/ir/'], 'domains':['buysell-technologies.com']},
+            '3994': {'name':'マネーフォワード','urls':['https://corp.moneyforward.com/ir/','https://corp.moneyforward.com/ir/library/'], 'domains':['corp.moneyforward.com']},
+            '2998': {'name':'クリアル','urls':['https://corp.creal.jp/ir/','https://corp.creal.jp/ir/library/'], 'domains':['corp.creal.jp']},
+            '4970': {'name':'東洋合成工業','urls':['https://www.toyogosei.co.jp/ir/','https://www.toyogosei.co.jp/ir/library/','https://www.toyogosei.co.jp/company/plan/'], 'domains':['toyogosei.co.jp']},
+          }
+          keys=['中期','長期','経営計画','経営戦略','成長戦略','事業計画','management','strategy','plan','説明会','決算','資本','vision','2028','2027','2026']
+          metric=re.compile(r'(中期経営計画|長期経営計画|売上高|売上収益|営業利益|EBITDA|ROE|ROIC|成長投資|設備投資|M&A|配当性向|株主還元|自己株式取得|202[6-9]|2030)',re.I)
+          def allowed(u,domains):
+            h=(urllib.parse.urlparse(u).hostname or '').lower(); return any(h==d or h.endswith('.'+d) for d in domains)
+          def get(u,b=False):
+            r=s.get(u,timeout=35,allow_redirects=True); r.raise_for_status(); return r.content if b else (r.text,r.url)
+          result={}
+          for code,t in targets.items():
+            cdir=out/code; cdir.mkdir(exist_ok=True); queue=[(u,0) for u in t['urls']]; seen=set(); pdfs={}; visited=[]
+            while queue and len(seen)<20:
+              u,depth=queue.pop(0)
+              if u in seen or not allowed(u,t['domains']): continue
+              seen.add(u)
+              try: text,final=get(u)
+              except Exception as e: visited.append({'url':u,'error':str(e)}); continue
+              visited.append({'url':final})
+              soup=BeautifulSoup(text,'html.parser')
+              for n in soup.find_all(['a','iframe','embed','object']):
+                raw=n.get('href') or n.get('src') or n.get('data')
+                if not raw: continue
+                x=urllib.parse.urljoin(final,html.unescape(raw)); label=' '.join(n.get_text(' ',strip=True).split()); combined=(label+' '+x).lower()
+                if '.pdf' in x.lower() or 'pdf' in (n.get('type') or '').lower():
+                  pdfs[x]={'label':label,'from':final,'linkScore':sum(4 for k in keys if k.lower() in combined)}
+                elif depth<2 and allowed(x,t['domains']) and any(k.lower() in combined for k in keys): queue.append((x,depth+1))
+              for m in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?',text,re.I):
+                x=urllib.parse.urljoin(final,html.unescape(m)); pdfs.setdefault(x,{'label':'','from':final,'linkScore':0})
+            candidates=sorted(({'url':u,**m} for u,m in pdfs.items()),key=lambda r:(-r['linkScore'],r['url']))[:25]; extracted=[]
+            for i,item in enumerate(candidates):
+              try:
+                data=get(item['url'],True)
+                if not data.startswith(b'%PDF') or len(data)>40_000_000: continue
+                p=cdir/f'{i:02d}.pdf'; p.write_bytes(data); reader=PdfReader(p); rows=[]; hitpages=[]; score=0
+                for n,page in enumerate(reader.pages,1):
+                  txt=re.sub(r'\s+',' ',(page.extract_text() or '').strip())
+                  if txt:
+                    rows.append({'page':n,'text':txt[:16000]})
+                    hits=metric.findall(txt); score+=len(hits)
+                    if hits: hitpages.append(n)
+                pf=cdir/f'{i:02d}.pages.json'; pf.write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf-8')
+                extracted.append({**item,'file':p.name,'pagesFile':pf.name,'pageCount':len(reader.pages),'textPages':len(rows),'score':score,'hitPages':hitpages[:100],'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'metadata':{str(k):str(v) for k,v in (reader.metadata or {}).items()}})
+              except Exception as e: item['error']=str(e)
+            extracted.sort(key=lambda r:(-r['score'],-r['linkScore'],r['url']))
+            result[code]={'name':t['name'],'visited':visited,'candidates':candidates,'extracted':extracted}
+          (out/'report.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+          (out/'summary.json').write_text(json.dumps({c:{'name':v['name'],'visited':len(v['visited']),'candidates':len(v['candidates']),'extracted':len(v['extracted']),'best':v['extracted'][0] if v['extracted'] else None} for c,v in result.items()},ensure_ascii=False,indent=2),encoding='utf-8')
+          print((out/'summary.json').read_text())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-09-finalists
+          path: artifacts/batch-09-finalists/
+          retention-days: 14

@@ -23,7 +23,7 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('#stat-total')).toHaveText('570社');
     await expect(page.locator('#stat-confirmed')).toHaveText('200社');
     const structuredCount = Number((await page.locator('#stat-structured').textContent()).replace(/[^0-9]/g, ''));
-    expect(structuredCount).toBeGreaterThanOrEqual(100);
+    expect(structuredCount).toBeGreaterThanOrEqual(110);
     await expect(page.locator('#stat-progress')).toHaveText('149件（実績54件）');
     await expect(page.locator('.company-card')).toHaveCount(50);
 
@@ -43,8 +43,8 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('.company-card')).toHaveCount(50);
 
     const maCard = page.locator('[data-strategy="ma"]');
-    const maCountMatch = (await maCard.textContent()).match(/(\d+)社/);
-    const maCount = Number(maCountMatch?.[1]);
+    const maCountText = await maCard.locator('span').textContent();
+    const maCount = Number(maCountText.replace(/[^0-9]/g, ''));
     expect(maCount).toBeGreaterThanOrEqual(55);
     await maCard.click();
     await expect(maCard).toHaveAttribute('aria-pressed', 'true');

@@ -38,7 +38,7 @@ jobs:
           const digest = crypto.createHash('sha256').update(compressed).digest('hex');
           if (digest !== manifest.sha256) throw new Error('bundle digest mismatch');
           const data = JSON.parse(zlib.gunzipSync(compressed));
-          const codes = new Set(['1801', '5711', '6762', '8233', '9005']);
+          const codes = new Set(['1801', '2002', '5711', '7532', '9005']);
           const companies = data.companies.filter(company => codes.has(String(company.code))).sort((a, b) => String(a.code).localeCompare(String(b.code)));
           if (companies.length !== codes.size) throw new Error(`target count mismatch: ${companies.length}`);
           if (companies.some(company => company.stage !== 'source_indexed')) throw new Error('target is no longer source_indexed');

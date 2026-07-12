@@ -1,6 +1,11 @@
 name: Export Structured Expansion Batch 07 Records
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/export-structured-expansion-batch-07-records.yml'
   push:
     branches:
       - data/structured-expansion-batch-07-complete
@@ -17,8 +22,6 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: data/structured-expansion-batch-07-complete
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

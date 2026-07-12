@@ -23,7 +23,7 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('#stat-total')).toHaveText('570社');
     await expect(page.locator('#stat-confirmed')).toHaveText('200社');
     const structuredCount = Number((await page.locator('#stat-structured').textContent()).replace(/[^0-9]/g, ''));
-    expect(structuredCount).toBeGreaterThanOrEqual(110);
+    expect(structuredCount).toBeGreaterThanOrEqual(125);
     await expect(page.locator('#stat-progress')).toHaveText('149件（実績54件）');
     await expect(page.locator('.company-card')).toHaveCount(50);
 

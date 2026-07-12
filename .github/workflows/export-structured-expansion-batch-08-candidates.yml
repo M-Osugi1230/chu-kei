@@ -1,6 +1,11 @@
 name: Export Structured Expansion Batch 08 Candidates
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/export-structured-expansion-batch-08-candidates.yml'
   push:
     branches:
       - data/structured-expansion-batch-08

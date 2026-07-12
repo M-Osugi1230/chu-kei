@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "actions-blocker-v1",
+  "recordedAt": "2026-07-12",
+  "issue": 45,
+  "repository": {
+    "fullName": "M-Osugi1230/chu-kei",
+    "visibility": "private",
+    "connectorPermissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "pull": true,
+      "triage": true
+    }
+  },
+  "symptom": {
+    "scope": "all pull-request workflows",
+    "jobStatus": "completed",
+    "jobConclusion": "failure",
+    "steps": null,
+    "logsUrl": null,
+    "artifacts": 0,
+    "rerunResult": "same failure before any step starts"
+  },
+  "sampleRuns": [
+    {"runId": 29185499136, "workflow": "Chu-kei v43 Quality Gate"},
+    {"runId": 29185499147, "workflow": "Apply Structured Expansion Batch 04"},
+    {"runId": 29185978678, "workflow": "Chu-kei Research Platform v2"},
+    {"runId": 29187012160, "workflow": "Chu-kei Research Platform v2"}
+  ],
+  "assessment": {
+    "mostLikely": [
+      "GitHub Actions included quota exhausted for the private repository owner",
+      "No valid payment method available after quota exhaustion",
+      "GitHub Actions budget or spending limit blocks additional usage"
+    ],
+    "alsoCheck": [
+      "Repository Settings > Actions > General permits workflow execution",
+      "Account billing is not locked or past due",
+      "GitHub Status has no active Actions incident"
+    ],
+    "lessLikely": [
+      "Individual workflow syntax or application code failure",
+      "Repository collaborator permission failure"
+    ]
+  },
+  "recoveryExitCriteria": [
+    "A minimal ubuntu-latest job starts and exposes at least one step",
+    "Job logs can be downloaded",
+    "Research Platform v2 validator completes",
+    "PR #42 apply workflow commits generated bundle changes",
+    "All required checks are rerun on the latest head SHA"
+  ]
+}

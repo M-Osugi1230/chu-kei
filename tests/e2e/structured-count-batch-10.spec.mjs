@@ -10,6 +10,7 @@ const expandedCompanies = [
 
 test('keeps at least 145 companies available for structured comparison', async ({ page }) => {
   expect(expandedCompanies).toHaveLength(5);
+  expect(new Set(expandedCompanies.map(company => company.code)).size).toBe(5);
   await page.goto('/');
   await expect(page.locator('#stat-total')).toHaveText('570社');
   await expect(page.locator('#stat-confirmed')).toHaveText('200社');

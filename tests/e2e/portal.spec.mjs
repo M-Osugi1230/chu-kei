@@ -43,7 +43,7 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('.company-card')).toHaveCount(50);
 
     const maCard = page.locator('[data-strategy="ma"]');
-    const maCountText = await maCard.locator('.strategy-count').textContent();
+    const maCountText = await maCard.locator('span').textContent();
     const maCount = Number(maCountText.replace(/[^0-9]/g, ''));
     expect(maCount).toBeGreaterThanOrEqual(55);
     await maCard.click();

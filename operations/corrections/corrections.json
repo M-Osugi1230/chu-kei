@@ -302,5 +302,125 @@
     "reviewDecisionId": "review-5201-20260712-structured-expansion",
     "detectedAt": "2026-07-12T05:10:00Z",
     "correctedAt": "2026-07-12T05:45:00Z"
+  },
+  {
+    "id": "correction-1928-20260712-structured-expansion",
+    "companyCode": "1928",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-03-05",
+      "revenue": "2028年度 売上高5兆260億円、2026〜2028年度累計13兆9,050億円"
+    },
+    "reason": "第7次中計の財務目標とキャッシュアロケーションを公式ページ・説明会資料で突合し、比較可能なデータへ拡張する。",
+    "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/plan/",
+    "sourcePage": "公式中期経営計画ページ、説明会資料 p.11, p.53, p.55",
+    "status": "corrected",
+    "reviewDecisionId": "review-1928-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T12:00:00Z",
+    "correctedAt": "2026-07-12T12:35:00Z"
+  },
+  {
+    "id": "correction-4183-20260712-structured-expansion",
+    "companyCode": "4183",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2021-06-02",
+      "revenue": "連結売上高の定量目標は本公表資料で設定せず、2030年度にBlue Value・Rose Value売上比率を各40%以上とする非財務KPIを設定"
+    },
+    "reason": "素材提供からソリューション・循環型事業への転換と長期財務目標を、未提示項目を推測せず比較可能なデータへ拡張する。",
+    "sourceUrl": "https://jp.mitsuichemicals.com/content/dam/mitsuichemicals/sites/mci/documents/sites/default/files/media/document/2021/210602.pdf",
+    "sourcePage": "VISION2030策定公表資料 p.1, p.4-p.6",
+    "status": "corrected",
+    "reviewDecisionId": "review-4183-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T12:05:00Z",
+    "correctedAt": "2026-07-12T12:40:00Z"
+  },
+  {
+    "id": "correction-5332-20260712-structured-expansion",
+    "companyCode": "5332",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-04-26",
+      "revenue": "2026年度 売上規模8,500億円、2030年度1兆円以上。2026年度海外売上高比率35%"
+    },
+    "reason": "WILL2030の2026年度・2030年度KPIと資本配分を対象期間別に分離し、比較画面で誤解なく利用できるデータへ拡張する。",
+    "sourceUrl": "https://jp.toto.com/assets/files/TOTO_WILL2030_2_v2.pdf",
+    "sourcePage": "WILL2030 STAGE2 表紙、資料内 p.12, p.14, p.16",
+    "status": "corrected",
+    "reviewDecisionId": "review-5332-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T12:10:00Z",
+    "correctedAt": "2026-07-12T12:45:00Z"
+  },
+  {
+    "id": "correction-7735-20260712-structured-expansion",
+    "companyCode": "7735",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-05-09",
+      "revenue": "2025年3月期〜2027年3月期の3年間累計売上高1.8兆円以上。SPE累計1兆5,000億円以上"
+    },
+    "reason": "半導体製造装置を中心とする高収益戦略と累計KPIを、期間・事業別範囲を明示した比較データへ拡張する。",
+    "sourceUrl": "https://www.screen.co.jp/ir/mplan",
+    "sourcePage": "2024年3月期決算説明会 p.35, p.37-p.41",
+    "status": "corrected",
+    "reviewDecisionId": "review-7735-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T12:15:00Z",
+    "correctedAt": "2026-07-12T12:50:00Z"
+  },
+  {
+    "id": "correction-9021-20260712-structured-expansion",
+    "companyCode": "9021",
+    "fieldPath": "stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-30",
+      "revenue": "2030年度の参考KPIとして運輸収入1兆700億円。連結売上高の目標は財務KPI表で設定していない"
+    },
+    "reason": "モビリティ・生活サービス・インフラのポートフォリオ変革を、財務規律と安全・成長投資を含む比較データへ拡張する。",
+    "sourceUrl": "https://www.westjr.co.jp/company/info/plan/pdf/plan_2030.pdf",
+    "sourcePage": "中期経営計画2030 p.1-p.2, p.17, p.38-p.41",
+    "status": "corrected",
+    "reviewDecisionId": "review-9021-20260712-structured-expansion",
+    "detectedAt": "2026-07-12T12:20:00Z",
+    "correctedAt": "2026-07-12T12:55:00Z"
   }
 ]

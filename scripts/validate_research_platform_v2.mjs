@@ -10,6 +10,7 @@ const releaseSource=read('operations/site-sync/current.json');
 const promotion=read('operations/promotion/policy-v1.json');
 const offers=read('site/data/offers.json');
 const offersSource=read('operations/commercial/offers-v1.json');
+const intakeExample=read('operations/commercial/intake.example.json');
 
 assert.equal(history.schemaVersion,'plan-history-v1');
 assert.equal(events.schemaVersion,'progress-events-v1');
@@ -77,6 +78,15 @@ assert.equal(release.repository.progressEvents,events.events.length);
 assert.equal(release.sync.status,'blocked');
 assert.equal(release.publicSite.verificationIssue,49);
 
+assert.equal(intakeExample.schemaVersion,'commercial-intake-v1');
+assert.match(intakeExample.requestId,/^REQ-[0-9]{8}-[A-Z0-9]{6}$/);
+assert.equal(intakeExample.requestType,'spot-report');
+assert.equal(intakeExample.status,'received');
+assert.equal(intakeExample.consent,true);
+assert(intakeExample.contact.email.endsWith('.invalid'),'intake example must use a non-routable email address');
+assert(offerIds.has(intakeExample.scope.offerId),'intake example must reference a canonical offer');
+assert(String(intakeExample.scope.purpose).includes('架空'),'intake example must clearly be fictional');
+
 const reportsHtml=text('site/reports.html');
 const pricingHtml=text('site/pricing.html');
 const thanksHtml=text('site/thanks.html');
@@ -96,7 +106,7 @@ for(const pattern of ['operations/commercial/private/','operations/commercial/le
 }
 for(const file of [
   'site/history.html','site/release.html','site/metrics.html','site/reports.html','site/pricing.html','site/privacy.html','site/thanks.html',
-  'site/assets/local-metrics.js','site/data/offers.json','operations/commercial/offers-v1.json',
+  'site/assets/local-metrics.js','site/data/offers.json','operations/commercial/offers-v1.json','operations/commercial/intake.example.json','operations/commercial/README.md',
   'schemas/commercial-offers.schema.json','schemas/commercial-intake.schema.json',
   'docs/SPOT_RESEARCH_REPORT_TEMPLATE_V1.md','docs/SPOT_RESEARCH_OPERATIONS_V1.md','docs/COMMERCIAL_DATA_HANDLING_V1.md'
 ]){
@@ -113,4 +123,5 @@ console.log(JSON.stringify({
   releaseStatus:release.sync.status,
   automaticPromotionAllowed:promotion.automaticPromotionAllowed,
   pilotReviewStatus:mhiReview.reviewStatus,
+  intakeExample:intakeExample.requestId,
 },null,2));

@@ -1,0 +1,82 @@
+name: Export Structured Expansion Batch 12 Candidates
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-12
+    paths:
+      - '.github/workflows/export-structured-expansion-batch-12-candidates.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/export-structured-expansion-batch-12-candidates.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-12
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Export remaining source indexed companies
+        run: |
+          mkdir -p artifacts/batch-12
+          node --input-type=module <<'NODE'
+          import crypto from 'node:crypto';
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const digest = crypto.createHash('sha256').update(compressed).digest('hex');
+          if (digest !== manifest.sha256) throw new Error(`digest mismatch: ${digest}`);
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const candidates = data.companies
+            .filter(company => company.stage === 'source_indexed')
+            .sort((a, b) => String(a.code).localeCompare(String(b.code), 'ja'));
+          const structured = data.companies.filter(company => ['core', 'detailed_extracted'].includes(company.stage)).length;
+          if (candidates.length !== 50) throw new Error(`source indexed count: ${candidates.length}`);
+          if (structured !== 150) throw new Error(`structured count: ${structured}`);
+
+          const compact = candidates.map(company => ({
+            code: company.code,
+            name: company.name,
+            category: company.category,
+            sourceUrl: company.sourceUrl,
+            document: company.document,
+            period: company.period,
+            lastVerifiedDate: company.lastVerifiedDate,
+            themes: company.themes,
+            warnings: company.warnings,
+          }));
+          const byCategory = Object.entries(compact.reduce((acc, company) => {
+            const key = String(company.category || '').split('/')[0];
+            acc[key] = (acc[key] || 0) + 1;
+            return acc;
+          }, {})).sort((a, b) => b[1] - a[1]);
+
+          fs.writeFileSync('artifacts/batch-12/candidates.json', JSON.stringify({
+            bundleSha256: manifest.sha256,
+            companyCount: data.companies.length,
+            structuredCount: structured,
+            sourceIndexedCount: candidates.length,
+            byCategory,
+            companies: candidates,
+          }, null, 2));
+          fs.writeFileSync('artifacts/batch-12/candidates-compact.json', JSON.stringify(compact, null, 2));
+          console.log(JSON.stringify({ structured, sourceIndexed: candidates.length, byCategory, compact }, null, 2));
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-12-candidates
+          path: artifacts/batch-12/
+          retention-days: 14

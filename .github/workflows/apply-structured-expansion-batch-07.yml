@@ -1,0 +1,130 @@
+name: Apply Structured Expansion Batch 07
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-07
+    paths:
+      - '.github/workflows/apply-structured-expansion-batch-07.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-structured-expansion-batch-07
+  cancel-in-progress: true
+
+jobs:
+  apply-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout expansion branch
+        uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-07
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Materialize reviewed patches
+        run: |
+          mkdir -p operations/patches
+          echo 'H4sIAHTBU2oC/+2dW1MbSZaA+3l/hYII75NkdEWYN7ftnvBuzLTDPbPRuxsdDhkVRt1CYiXRbk+HI1SSsblD+4Iv2A00YGSwAV+RAdsP+75/oqiS9NR/Yc/JrMrKukgqgcG3yphpo6pSVl7OOXnyq1NH6X4hE8sl0qlse38s190rZNuzvYm+xD8HfH2JeE7I9PmC/mAY/9NB/uOPBkJHf8ymU185Ln4oHeEw+ReK6d9AoCPCjtHjgWi4I/iVx//VIZSBbC6Wgdt/9WWWX9uyMOl9sf8QMlmQgrautu50X38sdckXj+ViPiITvp8Dbd428ufpOFzRXEDgcrWaE+m4AF8JdPq5g3+L9eFBpTyobLyQt7eqpSdwMpseyHQL/8gk4VRvLtef7Wpvv3jx4lG83T+PdqeP/tjfrlbQHjufHsi1Z3Mgu8KFS+398Z72/nQy0X0J23IUPkJ9GeHnhHDxpNCdwJ6RltNDPmwNa6sPahnozg1khLhP+AVqJ+PgbYsN5NJ9oBrd38S6cyfgvkkhR0aoJ5bMCt42uFbozgnxr4WedAa682tbNzYmnbkEN6KdUpaetMuDj+WdydNnqy83K4XXlT+2qivj2Nlc7AKOAe30uUQqLvwixOFELiFk4PhuOa88nqeX/9+zFkcnkWmHb8TT3QN9QipHanui3J+tvByTp19VS0OVm9tScRsO1m5twnFl+nXt2oM/d4bs2vrnzjBOvpBJpHEElft5ZXqjNj1aWdyCr9amb0jievXR88qLDWXkjXxtSyo+loo3pOKSVNyRxGWoRF67hzUkY6kzA+eTiWyvED8JI9XWlRpIJr1tyVg2B9KX6Elox9uILPmjvoAfBwTEU8i2df23PqhwtM6w8i2Rh8fbfoCBG+jri5FJ4eVNEtd2d+5VFt8aK5IK12ldknhbEmeNsyDlCzBmMH7K/cfK9DWsorxdfShWV6fxq3lRubUh5xcrM2tK6S58rD6/hlfefFd5Mo1n51bg+lrhijxYhI+1/DNlHG6yrtxfUYcuX6BiK6QGiH5oJ3D4MumeRM50EPp1IZEyHeyO9SdysaTpaEYACU+dITpiOtWbuNCbhP/ncJBhwC7GMqlE6gIZ8mYDYJh50hV5bWx36yrtSu3aOAyPJK5oY7ouFVek4nOpsC4PDsHXqTTRKcDRmr4LIlOdH5PEBUl8KImTkjgnibck8QpWCG0D/Y0LqW7hrNBDRcJWYod0AQLx/XPnnmnmtW9JxXsopYUyTLs8OVEbwx7SLkGjaVfVZhW32cWVWyvy5Cbp7WP4W7lzTZnbsRV7Ogr/duZ7KT+hPHhaLe3slkfkuRe1kTvK7BUY2+rDZbW18usXHcp9GNhVaLGUn8RxKO3IQ9C051hlEQ6KcrkA35bHtuQhGGExFAJdqJTWUGgHl+WpIXWQepIxnL1fQT6YtVKl4lRPT6I7ASN4iZ3J9sYyQm86GRcyZ4mQsDMgcxcyQjbLDqR/hlVCiOkH4r+wP3sH+mKpE5rsqQdTwsWvB7KJFF8J1KgaXBAy9ejly962gX5YcYRsXUNqtWFs3eHsaVzIxRJJIX5O+AUWB7TPuk3lhVUpg/y9a9myOll3OLtrkLvChlRcJXN522NjkPNDrD9S3mBz8TjIh7z1UMrfV4UFPtgbVXK1zx/xkVW4kXEN2RjX3a1RGGvQhcrMiDwygzr84Hf+FBwhHXlCOjIFPZKf3oLlAI7/9V+PowUmRk8eeV2ZuAYfT34P/9nd2qrcu0LPwEfeEBotNH8n1FOtHfLM7/LbR5JYMrUG1dLYGvZdZWgKVjdQDbCzUkEEddFHThJXK5uT8sIzUMfa6p2APHi103vM75evXJGvombBrOAwDD2C2we8fu7M2W9PdR7Z3V6Cb6LagakfAzsI1r4QgrrJcrgc8nawb2gNUUZuQf/hK8S6XcF7DC0pv4N1W4ZxqzwZxivJNcqjWViZoIlSoSCvv5Xf3cf6C6Pm1UHvjqdBZ3BV5wYMz3YYOoRL+d0tehaaEeS/OswvPNz96g8PSnS5TM8ci+jHqw9X6HJL514ub8hPf5ff3EAleHGTXh/V6uFXNu6u/NBDjddW5M2n6hK7fhOkLRTRz55sP4UWuQACsBI46pfz43BKvjpIVzDq9oBIwihDrQF/o2rDfvtq/UejUG2lNEpVUV92UQENimoSAl48oDlbW9Vn82F+DG/OVm4uKHmw6L/hbYvblbmblUev6Ex1cqO6Wx6XR2/BxfRU0DAVRDFWiGLAgluSiuNofgprcCTEXQbrb/XhJJt/vfaCJpfrVFKtTkQtv1B5OVUbHMeJJM2FsaIDAhUHYKrhBHhRUmGE6kbQjzUXru+WR2t3p+AW1DfaffdAuT+Ml+9MotYvPJPHX+xuL9Su/YYL88Qsao64SqeGXiZPTstvb6MGvrpbeXXP7MW0vQddp9qNjhzqnVHvVfNNz4sldBZxNgyCpUuV0U5AZfamAqolsoBy9r1p1vnJbjy3ZMrKqrmhXlidCeLmRJsQ0TohdDa4eShRc0QHnnR1xWZmqCfCu5LgdFXnS8rtJZQo4oCdOfkN+tBv7oN2kOMwVLAqP1evvFuAsdR9G3TIH1bublMvDUeRN7PrdlqnjnPlxTqssTDa0EFmbKlQM7MsT61K4lvoi+pretvYdPIWgioEuMRwXHOFySaI1lDIazKxbFhwmKSA41ab+YP2BfoImyjeuNs5KKglZFvBu6DgGlY356El1OOl1xJfeQwnkfdLSU/pZdX8oNFNNfrrNu51UzfFA3Po6T8a6PLQ0/LUeGUZZHMbVq7q03l1cPIFNuHcbK+rfk0E/N5ACA+RQZCnxtRag51dHsN8Mi3GGxCFZXstmCQ4aLXecJA32vCRVwfLHY91eZhy1jfaoH/gcSxIxSLWCoNZ+AN9kMJTMjtwZBn1EtZWcivWLl5B6J7bfP+Qv8tjVcFKeU0pz7BOnvn6rHLztTx9Ra/D7PSDg23v89MTNi4/PdHA46cXoMNP/zL6+/SYwd2nh0zePh5EZ5+CmFOquIGo/drWTx14ECYYkh5w3dFjbyBU8NEiVG2XvVxFwU6upmfz8uhdpoe8l0oPmr56TP+qwYFDh9PB3Be3DU6uoe6Qn6u73mSLJTbNbZd/uPwvB8X/0lb+m0p09yYyQsJHNj3ZrO9CJn0x14sqH90TAm7Gf4P+kJH/Bv0Rf4fLfz9W/utIQCwIONgZDVgQsFQclYoiMc+LDbbi2h3V3Xg2kQM5jQs9sYFkrr0H9vvZ9kQqCYbHl+gDNcsiAYXN+Dk81d4PNqg9GPFHAqGfhFwuG0s1BcTY1oMFxLWFWWX6rnxDPHBAbBq7ROZzRMNsOPeIhnk5dNHwl4SGTTPvouFPBg3rJvQEXYf+9/ZfyEKEm4bowTDhg1mIOHNsEEeOGFvNtKdOr3lsHOGxcZR+oFLVCR9CRKpmVTNuj5Ije0DJMDHUEu++mVDKjyrDj5SX+FF5uSkvTlN3mvHis9+ePmFFxJXrG/IfRepz48cX62AT6XbKRIxH5uTNJXpHcJr5O1JOI78rSuKqPPMG6R+YlacFOCKPoIdN28MgM7Ji2FpqrJgbIaxA23p2GiAbD48iHfbHYYsRPUJ2b6dPcADTAB6NiKhaeiIX7moMR6TthOFCOMiNBH7r5RUQWdTvAtiFGXtMzPXEU6cf6lBoJ1Wg6j9iAsCGmup03QnqDXXq15/6+vTfTx7vDEX0I2e+C0QCR6NWFFzv/jjER/1NBtmwAOq7fFrPiW8C3iiH4uTZrcriBFJHbi4C3mBUb7jO7ekGcehh5daSSgv8ftC5CD/A3Aof6lD7qjZTLON8ot0uGAFzRM6PU9GQ14atK/XJb0+FsdcMqDI2xwuJWJYXh5WZFxRSQkW4+hAXRv7jNlyDnV0DS/oGBY/ukkdeKc9Bfa5IxVsUM574Bp9clCcJIhtCdmXHYpVHs0goCf2kVdpx2fesV0ZMW0+OW1I/ntDWEY+GUmGdfdWz4yYaH405m74SN6wr9uM+8UwSr6u6b/LSQJcoacOlIIykjbC3NaTz8NUg/qPdV6126Ko8/AyNoTgvT47Ik+PKnTlVYPKLtOmOGAi9rWHtsTBZUhvs/7F1bLDZ9AbYxNG/bGc3DKfEdZW8M/oqFqTCiMWQWzjsR8xe7Zb36spj5c4EmFfqelLyqk4uw6gUn+toES6KkKsMmmcDU3WqSrgpig78l5hn+AOngfxzilc4eoNgiOemmsrgYmBcyUA59FXNuOcxUFq+6nCXR9UUTU3WDAqiPbOzp6uHSkZt/V0bNNrE3XUIR7kHKiUelBppYyBihqDIwB/8zgNRE/sM6d9wouimb4f1b5sMmXWeDhRtumVv/Ldn4MeET0gK3blMovt9RAE347/+aIeF/wYDLv/9WPmvUwGxIOCOiD9sQcDy+pi8sFqb2QY/p8HOG2+q3VMPyupLp3xgRsl3cK+NjW7HloAEhc4FmoJebNEBg17o2MZt9OHulg6c9doM0mcaC8wP6x6ZLy94LvP9kpivaeZd5vvpMF/emuqxIVabdjD4dz+LEGeCmzR8n4G/wdZo7V++18J0peJvUhF0ckceH5E3Jnbf3LBCW9BPFghsj27rR/eaItVIHM0iiZbIS2Awi0NqTBsct7QEMQdpQ23ujjw7y4Lu/oKRciRczjYsGfHJ9EZ14Y18Q4Sdpzy4hLo9MlfLz7LNvyFW0BAoGPRG6gYKhv11qVQgcDR4REVMQZ44EY5RDznZRvbWa46jwFy+iU6o7LEmAbh1usm+Tyhs857bBdlGuLhEIiNFEAcjDA3uLdo27I3qdM5A1mE4w1zULRdtWX22HfCGDLiP+ElE4pDDF7eV4qA895RWRCgwhmtTumcTKMuFnIX8RxjSZVJ8nNIivPX8GEg7fNzdvrP/kcIlmezzEWfPLKI2GKPRd8vzldXRxuGz708lLCG1jdRDnhtUxkQe0bUy1YXrumVgRoTGxtZmroLZtcbG2s4Mz8udDKUNgq0nc2KpgczZB7RSaqpFYhLgXaf/II/gi/P0zRRQXNyuI8hjaihsYUxno8TpIY8q1qgTR1cshlPR8Si/ZfSVxikSYAgCOF+qTL6FenffvKyW7qD/RqvGwHCRBDYj1jMEU4sPlVsvKlNX6bh/pIC20SrOyKwW4BqsQ2Y7ff1Hg/4uD0gV8aIptxSbwll9iOkzKDsm66P01E6QGkgGL11qTdEuT12TaomFxWdGdBnebhwXy7ROVbnPOI7VIaqlwlA3aJV/zmhGtj4jeW0wv6ZvRluDvfgOlhrT6qLbz5P/phK5XNqXSWQFJGOde8364Jz/RsJBU/6HDn844vLfjzf+115ArLz3WGenNevD7SXlwVPYyMubSw0jreAmsMfua4dN9o+x9jTsWDNZ+gLuuYEs7LvB4Pbnsu19ibgPAfQ5sONg1XCLfQ63x1nydu7fsJpzZ09/d+octrU5EIYmH3BqiLFp+cnDQwj7NY7f55oTgozmXhNCcKLoEuAvKiGEceZdAvzpJISg5pPYdQ/adRLZclDRvge4BvFpIqY3bLaQ1i7yYLiDB8OdzcBwBwHDx1oCwyQUuUiikYfIH7fRzGosRXkwBWpAqPF1VcqLvxOY+4hQ3VtapgjtNeXiVbKzWCfEmCZveEBODeGWsfAIryysUC7EooMbwGRL6+jGCLHK4lsw5btv5ykYgEGFuVY/ookmnKZwvbpdRkwCWjQ4VFld11EzgrVrxAi8I7CaMGr8e4e0dJlo/Wvza9ha/8jX7YcE4dO1cbBL6saMI9CdOm7jyFnQG6zP1IJ+DbWGjzTCyfQ1fUoUaLAz8oKXr+R1RmzIkjM5ha8jm1qDbL44DcMAdhQMGF+LHn6HPTbPhvXKCLnyG7RF9ic1PGgTdGzGz4aBgRaH/FqL14M6h2Rxv+YYYhuabRhNU5XWSw1hpBG7AGP6gvR9fjBNsDJibKaJTocwHhYqCBvza5iJIUdj9Qwka5adPIpw1HJH7ZmKJo4lU5yqfcix1nlxjYWhU3rFoGllc5LWRBFPhz5eLKnEmqZWRH0Kj1UBKqwbW7RKZHMYhl5+MlV9NicXXuI4vtiu3CxJhYKyeL9amqgXZbx/fWJE7UNZCFMwchMBElsTIKP0qBHJumjXncXGEcfOzM1j7ZHKMsmBQJgwOnhX+BQMvBIaYoNtYGjTEGDKafG29YOAHeoNuO6NJoImibAzADbBzx8d1ja5HXqGB9XpIDT7GEezRf61fGuvedqNmDIQZsHIeLq43dIsl0yhqwZOHWHB0FCZvDZbKb+VRFjqh/X7aZNfRk+gvhsiLw7XHjziKw8FoO2hUJfHYe4Hgx2zBEKbcrucJDTfpHCHBMQ5z/2DEnEqPyYiTgWm5QhmLua56SSbkjPQad5v9odPhpHb8N/eWOqnSwM++Cfbm0j5kunUBZ8W4QmbCH/Y3yISbsJ/g4GoOf9DINDhd/nvx8p/WxAQCxI+5g8HLUi4dmdFyS/BfytL4A3NEE1dJR7WAnGsNsCZarBNN7ZHjcuKpy+mkulYHMGnvivn/sSdclMcjM094Pjgu+WaOHoYmYJth+lzDQ/WRnWPZNiJRLrE+Esixg4lwiXJn04sMbO86s6R2DxleVQpPj8YnrzvhYqz047kkU85bO2klB9TNp9iEFZhVHn2rrJ5z6OMzqsbe/STF7RaQULGG6SW0PZvRODC+maO3lIuTmJ4HIn+apZrIuQjASnOITVtN4W7LFqZpcrEIyS+TSq8JH25QT0JCpflxeXqw0mlNK8GxliSFzuObFZbwXIPbz5VJu4gfdCSTOjJO7WIO75FNC4RoZhx1GE2oI3GHMb6XlnNdaxFX7L8hLRPLLNC0OZM/SzG/HaHAx80ZR60X00HCjvz/CyNpm6egkIlQnRnrxEhw0JnBtAcEGjWSV3guPS3XKJWXF1pp/79zGn2qrsRMWu38+x5RAu83K/z1VhbpVUTMp8xgmrWKGPeY2Nm45Ae6suFA5uIaTu9H146ca0D/pEnN4xNLhS4m5gxdsSg42xKaAJYKikRLjmCEX1EDYyRHxhTApLyDCrxlVmQruqz7YghzJgXPQ7vayDZhtkh3dMElNJiqwPDGTECiWwSFgf8asZiSrq5PA02mDtiiB+2T1cs77yVR2b4FBnoFnBX0lSQGPuJN1qnEeGwtKjJITcnQW+g0xFE1dVXgzVxAhds0J9XQzA4NiT8gOyFRt5s5GN1r/LB4uy5VB581uPqyIPKzY3AblmEFmiXilZzqj5j0J5u4PKl8vUp4kKVeORLJ5rOL51ulgzZOr9apKrIzWPrOTn4eUBrQTcRa/cqmOJe3RAQY6Uz7N3tabjGzEdByMfvVF7cVNZvVneK5Ppxe37OmHed9VlcpxBXOzVWQTFbYWHaDlB5kxQgnP1Q8TdOyLzqJJN8yVQiavPo5VdmcRuKJI3uO+eHdrdfsSzLHyk6t7pYBnoeUfNvBKP2seBRelVzc4tOhAkv84uzOZmGaAOWGTNH3hkM4p3ZLRHJh+1XYGYl1GzEcGf6UoQIHSpB9eBI2OQGaUnJbDN6YJeJifvIU3u8bzZuFSnbyPHWo7h5smCi51Qk9Brri4azJCK830ynzw0e/4j5vx3l9J0nIBj2X7ATviBkWooFb8z/g5FQIGDm/+GgG//9gfj/BTR/qRgYKHWu1bknDwHO6z8C2EhKeCh+vB8M7M+x5PFkMn1RiHOwBo1hlljBRKs/zmf764I9mXTfd3VpOeyshNx3jaAOSEJuABrUlkido43BO/UK3T8lE9kcLjNpsqrEkt+R2tkCgiijm2gRhRXqYbiVbuvVtWKg7zyM9D9SiVz2P4VYhq0Y2k9KnUjGstlEj1odW9Swu5kE6NzJRLY/GWOLWl/6PHTDcPAyGfvedIaNAr6cDveCmYEWpXLsgQdBWP8zEEsmcpd8mi/DrnnfP4tF6zuDWVHRV4JFy9Nyen8vyervYU+BbdL4k0uOefb12NZLsvR7HCXnBy8klSaEyvSjMPrPwWgwX43+YNFW9CdI8DVM8Gu5HwaBdb6Wn5PHphkyNvm4hBVpDqu+SVAd2eF3BJQvIyvnNgNx9fHWWfBsiKKrP0tGnqXrP41H+Izp+QMdYL0H5l+1YoFjsO8hWxF5cr1afEPCt/QdQ3dGAPGIH8/xNC/490BHl98P//svXS7trgnRa9DJSLSaqd02Eb1rLQ7DWhxMwmQbW6I7zWAW+FcsvSQJnqdu5AgxGCFHYT302rDHkNfO7tddOKtQJwGlmvPSZCFMr23SN7SZbn0AG6EmVi5uGxIrs1/X01Jyqr+1Q1/iZ/1gPTAlLd6bjYg4sBERWxvhKMmXbaYy10Ycho3YT1adli0Bfcfa+L49XGe1COSNak+jF6nJdVFPa76FbhkMSRM4neHvoQMePvcESyhcuM4Ylzx+Z/cNqvQhWQab9BrMLrA+UdLHOqGmkFVf/6djv0dzEHDgMoTtXQZHr3javsjqmoPDcRkO8K0rR/ZCDUX16hGoTdyHiKfxK00srtS8L7EYhbrB6jqEM/kMJhJsH0r8QZyHuq9o5UX11Z/8svMO7M1MOPAawvZeg6PQP9vgRtdMHIaZ2HcwTRNTYKDtxBREW9gkUIZOnqoYoLlx02GOKNFIgumJoPEBjOWpHh8EoT/SM62+B24BPHYmgAbG4GhawmDo75mwGBym/3zn2XPO/fGFoANnIaI6Cz+glGcy4I0iFNfppH5wP4QS/Nz4mViulwBUkDwvBpJ5mYh7tQAvLw218loipbzm0CgvjYXyqsFIXjXsxkvDW7w0oMSrPhXz8iEQXj1UwKs9nvbyjzS99PGat+08C1yuG4xsNDJalF+9QF67AFW0Fz05tAW/No69s7NnjfJhkoixQ/7ddPKw7wNxtoMDt/RZY8vY1utpRm3JFfuDtl6Pc2bLLbGqWhPBqv8agCONB2ElNTUCnOx2loui2kXMD+Eszj4op2txDtXiROwtzn5+gou3JYfN4z4U1lUtTT2U4/U0ZLrEnDhDuuRSJ0S3ZZvhSGcb2YyIE5sRqWsz9kE9XZtx+F5KMNRyDmjeMBwKjjtYgOtE55vTW6/HEbwll7XKblu2AY50sIENCDjxGwL1/YZ9oE7XBhyqDdATNH3KiXt4i3Ro9O8Dc+S6ZovuiLye5hCZGKOGDNnraYaQW7dNTmxDI9vkxD8J1PdP9sFXXdt02Hsa9b28j/udLt76HCZ4PARCbWNkeD5NjEzU+YanMZ1Wt08GON2yeXGk3g3MS9CJ6xPUoK0bTe4Wt7jFLW5xi1vc4ha3uMUtbnGLW9ziFre4xS1ucYtb3OIWt7jFLW5zili+i/D8vpJP9AMgAAA==' | base64 -d > /tmp/batch07.tar.gz
+          tar -xzf /tmp/batch07.tar.gz
+
+      - name: Detect existing application
+        id: state
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const codes = ['1803', '2871', '6504', '6988', '9042'];
+          const applied = codes.every(code => data.companies.find(company => String(company.code) === code)?.stage === 'detailed_extracted');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `already_applied=${applied}\n`);
+          NODE
+
+      - name: Apply governance ledger batch
+        if: steps.state.outputs.already_applied != 'true'
+        env:
+          GOVERNANCE_LEDGER_BATCH: operations/patches/structured-expansion-batch-07-ledger.json
+        run: node scripts/apply_governance_ledger_batch_v1.mjs
+
+      - name: Apply deterministic company patches
+        if: steps.state.outputs.already_applied != 'true'
+        run: |
+          COMPANY_PATCH=operations/patches/shimizu-midterm-2024-2026-20260713.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/nichirei-compass-growth-2027-20260713.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/fuji-electric-midterm-2024-2026-20260713.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/nitto-rise-2028-20260713.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/hankyu-hanshin-long-term-2025-2040-20260713.json node scripts/apply_company_data_patch_v1.mjs
+
+      - name: Rebuild and validate
+        run: |
+          node scripts/rebuild_quality_scores_v2.mjs
+          node scripts/normalize_bundle_contract_v1.mjs
+          node scripts/validate_quality_v43.mjs
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_quality_dashboard_v1.mjs
+          node scripts/validate_quality_debt_budget_v1.mjs
+          node scripts/validate_review_governance_v1.mjs
+          node scripts/validate_source_registry_v1.mjs
+          node scripts/validate_progress_experience_v1.mjs
+
+      - name: Verify structured population growth
+        run: |
+          node --input-type=module <<'NODE'
+          import crypto from 'node:crypto';
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const digest = crypto.createHash('sha256').update(compressed).digest('hex');
+          if (digest !== manifest.sha256) throw new Error(`bundle digest mismatch: ${digest}`);
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const counts = data.companies.reduce((result, company) => {
+            result[company.stage] = (result[company.stage] || 0) + 1;
+            return result;
+          }, {});
+          const expected = { core: 30, detailed_extracted: 100, source_indexed: 70, jpx_indexed: 370 };
+          if (data.companies.length !== 570) throw new Error(`company count changed: ${data.companies.length}`);
+          for (const [stage, count] of Object.entries(expected)) {
+            if (counts[stage] !== count) throw new Error(`unexpected ${stage}: ${counts[stage]} (expected ${count})`);
+          }
+          if (counts.core + counts.detailed_extracted !== 130) throw new Error('structured company count is not 130');
+          if (counts.core + counts.detailed_extracted + counts.source_indexed !== 200) throw new Error('source-confirmed company count changed');
+          for (const code of ['1803', '2871', '6504', '6988', '9042']) {
+            const company = data.companies.find(row => String(row.code) === code);
+            if (!company || company.stage !== 'detailed_extracted' || !company.quality?.checks?.pageEvidence) throw new Error(`structured expansion failed: ${code}`);
+          }
+          console.log(JSON.stringify({ counts, structuredCount: 130, sourceConfirmed: 200, sha256: digest }, null, 2));
+          NODE
+
+      - name: Commit authoritative data, patches and ledgers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add operations/patches site/data reports/v43/QUALITY_SCORE_V2_REPORT.json operations/reviews/decisions.json operations/corrections/corrections.json
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "data: add Shimizu Nichirei Fuji Electric Nitto and Hankyu plans"
+            git push origin HEAD:data/structured-expansion-batch-07
+          fi
+
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-structured-expansion-batch-07
+          path: artifacts/
+          if-no-files-found: warn
+          retention-days: 90

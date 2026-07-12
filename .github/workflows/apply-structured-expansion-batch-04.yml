@@ -1,0 +1,147 @@
+name: Apply Structured Expansion Batch 04
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-04
+    paths:
+      - 'operations/patches/meiji-2026-plan-20260712.json'
+      - 'operations/patches/jfront-2024-2026-plan-20260712.json'
+      - 'operations/patches/mitsubishielectric-strategy-2030-20260712.json'
+      - 'operations/patches/secom-roadmap-2027-20260712.json'
+      - 'operations/patches/olympus-strategy-fy27-fy29-20260712.json'
+      - 'operations/patches/structured-expansion-batch-04-ledger.json'
+      - '.github/workflows/apply-structured-expansion-batch-04.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-structured-expansion-batch-04
+  cancel-in-progress: true
+
+jobs:
+  apply-and-commit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout expansion branch
+        uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-04
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Detect existing application
+        id: state
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const codes = ['2269', '3086', '6503', '9735', '7733'];
+          const applied = codes.every(code => data.companies.find(company => company.code === code)?.stage === 'detailed_extracted');
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `already_applied=${applied}\n`);
+          console.log(`already_applied=${applied}`);
+          NODE
+
+      - name: Apply governance ledger batch
+        if: steps.state.outputs.already_applied != 'true'
+        env:
+          GOVERNANCE_LEDGER_BATCH: operations/patches/structured-expansion-batch-04-ledger.json
+        run: node scripts/apply_governance_ledger_batch_v1.mjs
+
+      - name: Apply deterministic company patches
+        if: steps.state.outputs.already_applied != 'true'
+        run: |
+          COMPANY_PATCH=operations/patches/meiji-2026-plan-20260712.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/jfront-2024-2026-plan-20260712.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/mitsubishielectric-strategy-2030-20260712.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/secom-roadmap-2027-20260712.json node scripts/apply_company_data_patch_v1.mjs
+          COMPANY_PATCH=operations/patches/olympus-strategy-fy27-fy29-20260712.json node scripts/apply_company_data_patch_v1.mjs
+
+      - name: Rebuild quality profiles and normalize bundle
+        run: |
+          node scripts/rebuild_quality_scores_v2.mjs
+          node scripts/normalize_bundle_contract_v1.mjs
+
+      - name: Validate strict quality and governance
+        run: |
+          node scripts/validate_quality_v43.mjs
+          node scripts/validate_quality_score_v2.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_quality_dashboard_v1.mjs
+          node scripts/validate_quality_debt_budget_v1.mjs
+          node scripts/validate_review_governance_v1.mjs
+          node scripts/validate_source_registry_v1.mjs
+          node scripts/validate_progress_experience_v1.mjs
+
+      - name: Verify structured population growth
+        run: |
+          node --input-type=module <<'NODE'
+          import crypto from 'node:crypto';
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
+          const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
+          const digest = crypto.createHash('sha256').update(compressed).digest('hex');
+          if (digest !== manifest.sha256) throw new Error('bundle digest mismatch');
+          const data = JSON.parse(zlib.gunzipSync(compressed));
+          const counts = data.companies.reduce((result, company) => {
+            result[company.stage] = (result[company.stage] || 0) + 1;
+            return result;
+          }, {});
+          const expected = { core: 30, detailed_extracted: 85, source_indexed: 85, jpx_indexed: 370 };
+          if (data.companies.length !== 570) throw new Error(`company count changed: ${data.companies.length}`);
+          for (const [stage, count] of Object.entries(expected)) {
+            if (counts[stage] !== count) throw new Error(`unexpected ${stage}: ${counts[stage]} (expected ${count})`);
+          }
+          if (counts.core + counts.detailed_extracted !== 115) throw new Error('structured company count is not 115');
+          if (counts.core + counts.detailed_extracted + counts.source_indexed !== 200) throw new Error('source-confirmed company count changed');
+          for (const code of ['2269', '3086', '6503', '9735', '7733']) {
+            const company = data.companies.find(row => row.code === code);
+            if (!company || company.stage !== 'detailed_extracted' || !company.quality?.checks?.pageEvidence) {
+              throw new Error(`structured expansion failed: ${code}`);
+            }
+          }
+          console.log(JSON.stringify({ companyCount: data.companies.length, counts, structuredCount: 115, sourceConfirmed: 200, sha256: digest }, null, 2));
+          NODE
+
+      - name: Commit authoritative data and ledgers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data reports/v43/QUALITY_SCORE_V2_REPORT.json operations/reviews/decisions.json operations/corrections/corrections.json
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "data: add five structured plans in batch 04"
+            git push origin HEAD:data/structured-expansion-batch-04
+          fi
+
+      - name: Upload expansion diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-structured-expansion-batch-04
+          path: |
+            artifacts/structured-expansion-batch-04-governance-report.json
+            artifacts/meiji-2026-plan-20260712-report.json
+            artifacts/jfront-2024-2026-plan-20260712-report.json
+            artifacts/mitsubishielectric-strategy-2030-20260712-report.json
+            artifacts/secom-roadmap-2027-20260712-report.json
+            artifacts/olympus-strategy-fy27-fy29-20260712-report.json
+            artifacts/quality-debt-report-v1.json
+            artifacts/quality-debt-items-v1.csv
+            artifacts/review-governance-report-v1.json
+            artifacts/source-registry-report-v1.json
+            artifacts/progress-experience-v1.json
+          if-no-files-found: warn
+          retention-days: 90

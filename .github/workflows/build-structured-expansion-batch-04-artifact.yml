@@ -101,6 +101,7 @@ jobs:
           import crypto from 'node:crypto';
           import fs from 'node:fs';
           import zlib from 'node:zlib';
+          import { execFileSync } from 'node:child_process';
           const manifest = JSON.parse(fs.readFileSync('site/data/bundle.manifest.json', 'utf8'));
           const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(`site/data/${part.file}`)));
           const digest = crypto.createHash('sha256').update(compressed).digest('hex');
@@ -118,7 +119,15 @@ jobs:
             const refs = data.companies.find(row => row.code === code)?.evidenceRefs ?? [];
             for (const term of required) if (!refs.some(ref => String(ref).includes(term))) throw new Error(`${code} missing ${term}`);
           }
-          const result = { companyCount: data.companies.length, structuredCount: 115, sourceConfirmed: 200, counts, sha256: digest };
+          const result = {
+            companyCount: data.companies.length,
+            structuredCount: 115,
+            sourceConfirmed: 200,
+            counts,
+            sha256: digest,
+            parentCommitSha: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(),
+            baseTreeSha: execFileSync('git', ['rev-parse', 'HEAD^{tree}'], { encoding: 'utf8' }).trim()
+          };
           fs.mkdirSync('artifacts', { recursive: true });
           fs.writeFileSync('artifacts/batch-04-final-result.json', `${JSON.stringify(result, null, 2)}\n`);
           console.log(JSON.stringify(result, null, 2));

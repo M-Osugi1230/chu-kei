@@ -1,0 +1,136 @@
+name: Discover Structured Expansion Batch 11
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-11
+    paths:
+      - '.github/workflows/discover-structured-expansion-batch-11.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/discover-structured-expansion-batch-11.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-11
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install requests beautifulsoup4 pypdf
+      - name: Export candidates and discover official plan evidence
+        run: |
+          mkdir -p artifacts/batch-11
+          node --input-type=module <<'NODE'
+          import crypto from 'node:crypto';
+          import fs from 'node:fs';
+          import zlib from 'node:zlib';
+          const manifest=JSON.parse(fs.readFileSync('site/data/bundle.manifest.json','utf8'));
+          const compressed=Buffer.concat(manifest.parts.map(p=>fs.readFileSync(`site/data/${p.file}`)));
+          const digest=crypto.createHash('sha256').update(compressed).digest('hex');
+          if(digest!==manifest.sha256) throw new Error(`digest mismatch ${digest}`);
+          const data=JSON.parse(zlib.gunzipSync(compressed));
+          const sourceIndexed=data.companies.filter(c=>c.stage==='source_indexed').sort((a,b)=>String(a.code).localeCompare(String(b.code),'ja'));
+          const structured=data.companies.filter(c=>['core','detailed_extracted'].includes(c.stage)).length;
+          if(sourceIndexed.length!==55||structured!==145) throw new Error(`unexpected counts source=${sourceIndexed.length} structured=${structured}`);
+          const targets=new Set(['147A','2702','3491','3994','4443','4475','5253','6637','6777','7826','9022','9348']);
+          fs.writeFileSync('artifacts/batch-11/candidates.json',JSON.stringify({manifest:{sha256:manifest.sha256},sourceIndexedCount:sourceIndexed.length,structuredCount:structured,companies:sourceIndexed},null,2));
+          fs.writeFileSync('artifacts/batch-11/target-records.json',JSON.stringify(sourceIndexed.filter(c=>targets.has(String(c.code))),null,2));
+          NODE
+          python - <<'PY'
+          import hashlib, html, json, re, urllib.parse
+          from pathlib import Path
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          out=Path('artifacts/batch-11/evidence'); out.mkdir(parents=True,exist_ok=True)
+          session=requests.Session(); session.headers.update({'User-Agent':'Mozilla/5.0 (compatible; Chu-kei official evidence audit/1.0)','Accept-Language':'ja,en-US;q=0.8,en;q=0.6'})
+          targets={
+            '147A': {'name':'ソラコム','starts':['https://soracom.com/ja-jp/company/ir/','https://soracom.com/ja-jp/company/ir/library/'], 'domains':['soracom.com']},
+            '2702': {'name':'日本マクドナルドホールディングス','starts':['https://www.mcd-holdings.co.jp/ir/','https://www.mcd-holdings.co.jp/ir/library/'], 'domains':['mcd-holdings.co.jp']},
+            '3491': {'name':'GA technologies','starts':['https://www.ga-tech.co.jp/ir/','https://www.ga-tech.co.jp/ir/library/'], 'domains':['ga-tech.co.jp']},
+            '3994': {'name':'マネーフォワード','starts':['https://corp.moneyforward.com/ir/','https://corp.moneyforward.com/ir/library/'], 'domains':['corp.moneyforward.com']},
+            '4443': {'name':'Sansan','starts':['https://ir.corp-sansan.com/ja/','https://ir.corp-sansan.com/ja/library.html'], 'domains':['ir.corp-sansan.com']},
+            '4475': {'name':'HENNGE','starts':['https://hennge.com/jp/ir/','https://hennge.com/jp/ir/library/'], 'domains':['hennge.com']},
+            '5253': {'name':'カバー','starts':['https://cover-corp.com/ir','https://cover-corp.com/ir/news'], 'domains':['cover-corp.com']},
+            '6637': {'name':'寺崎電気産業','starts':['https://www.terasaki.co.jp/investor/','https://www.terasaki.co.jp/investor/library/'], 'domains':['terasaki.co.jp']},
+            '6777': {'name':'santec Holdings','starts':['https://www.santec.com/jp/ir/index.html','https://www.santec.com/jp/ir/library.html'], 'domains':['santec.com']},
+            '7826': {'name':'フルヤ金属','starts':['https://www.furuyametals.co.jp/ir/','https://www.furuyametals.co.jp/ir/library/'], 'domains':['furuyametals.co.jp']},
+            '9022': {'name':'東海旅客鉄道','starts':['https://company.jr-central.co.jp/ir/','https://company.jr-central.co.jp/ir/management-plan/'], 'domains':['jr-central.co.jp']},
+            '9348': {'name':'ispace','starts':['https://ispace-inc.com/jpn/ir/','https://ispace-inc.com/jpn/ir/library/'], 'domains':['ispace-inc.com']},
+          }
+          link_keys=['中期','長期','経営計画','経営戦略','成長戦略','事業計画','management','strategy','plan','説明会','決算','資本','vision','2030','2029','2028','2027','2026']
+          patterns={'plan':r'(中期経営計画|中長期経営計画|長期経営計画|経営戦略|成長戦略|事業計画|medium.?term|mid.?term|long.?term)','revenue':r'(売上高|売上収益|ARR|revenue)','profit':r'(営業利益|事業利益|経常利益|EBITDA|EBITA|operating profit)','capital':r'(ROE|ROIC|ROCE|PBR|資本効率)','investment':r'(設備投資|成長投資|戦略投資|研究開発|M&A|投資総額)','return':r'(配当性向|DOE|総還元性向|株主還元|自己株式取得|累進配当)','future':r'(202[6-9]|203[0-5])年?度?'}
+          def allowed(u,domains):
+            h=(urllib.parse.urlparse(u).hostname or '').lower(); return any(h==d or h.endswith('.'+d) for d in domains)
+          def get(u,b=False):
+            r=session.get(u,timeout=45,allow_redirects=True); r.raise_for_status(); return r.content if b else (r.text,r.url,r.headers.get('content-type',''))
+          def lscore(label,u):
+            x=html.unescape(label+' '+u).lower().replace(' ',''); score=sum(5 for k in link_keys if k.lower().replace(' ','') in x)
+            if any(w in x for w in ['招集通知','有価証券報告書','決算短信','コーポレートガバナンス']): score-=8
+            if '統合報告' in x or 'integrated' in x: score-=2
+            return score
+          result={}
+          for code,t in targets.items():
+            cdir=out/code; cdir.mkdir(exist_ok=True); queue=[(u,0) for u in t['starts']]; seen=set(); visited=[]; pdfs={}
+            while queue and len(seen)<70:
+              u,depth=queue.pop(0)
+              if u in seen or not allowed(u,t['domains']): continue
+              seen.add(u)
+              try: text,final,ctype=get(u)
+              except Exception as error: visited.append({'url':u,'error':str(error)}); continue
+              if 'pdf' in ctype.lower() or final.lower().split('?')[0].endswith('.pdf'):
+                pdfs.setdefault(final,{'label':'','from':u,'linkScore':lscore('',final)}); continue
+              visited.append({'url':final,'contentType':ctype})
+              soup=BeautifulSoup(text,'html.parser')
+              for node in soup.find_all(['a','iframe','embed','object']):
+                raw=node.get('href') or node.get('src') or node.get('data')
+                if not raw: continue
+                absolute=urllib.parse.urljoin(final,html.unescape(raw)); label=' '.join(node.get_text(' ',strip=True).split()); combined=(label+' '+absolute).lower()
+                if '.pdf' in absolute.lower() or 'pdf' in (node.get('type') or '').lower():
+                  candidate={'label':label,'from':final,'linkScore':lscore(label,absolute)}; previous=pdfs.get(absolute)
+                  if previous is None or candidate['linkScore']>previous['linkScore']: pdfs[absolute]=candidate
+                elif depth<3 and allowed(absolute,t['domains']) and any(k.lower() in combined for k in link_keys): queue.append((absolute,depth+1))
+              for match in re.findall(r'(?:https?:)?//[^\s"\'<>]+\.pdf(?:\?[^\s"\'<>]*)?|[/A-Za-z0-9_.-]+\.pdf(?:\?[^\s"\'<>]*)?',text,re.I):
+                absolute=urllib.parse.urljoin(final,html.unescape(match)); pdfs.setdefault(absolute,{'label':'','from':final,'linkScore':lscore('',absolute)})
+            candidates=sorted(({'url':u,**meta} for u,meta in pdfs.items()),key=lambda row:(-row['linkScore'],row['url']))[:22]; extracted=[]
+            for index,item in enumerate(candidates):
+              try:
+                data=get(item['url'],True)
+                if not data.startswith(b'%PDF') or len(data)>45_000_000: continue
+                pdf_file=cdir/f'{index:02d}.pdf'; pdf_file.write_bytes(data); reader=PdfReader(pdf_file); rows=[]; evidence=[]
+                for page_no,page in enumerate(reader.pages,1):
+                  text=re.sub(r'\s+',' ',(page.extract_text() or '').strip())
+                  if text:
+                    rows.append({'page':page_no,'text':text[:18000]})
+                    if re.search(r'(中期経営計画|長期経営計画|売上高|ARR|営業利益|ROE|ROIC|設備投資|成長投資|配当性向|株主還元|自己株式取得)',text,re.I): evidence.append(page_no)
+                joined='\n'.join(row['text'] for row in rows[:120]); hits={k:bool(re.search(v,joined,re.I)) for k,v in patterns.items()}; weights={'plan':30,'revenue':12,'profit':12,'capital':12,'investment':12,'return':12,'future':10}; score=sum(weights[k] for k,v in hits.items() if v)
+                pages_file=cdir/f'{index:02d}.pages.json'; pages_file.write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf-8')
+                extracted.append({**item,'file':pdf_file.name,'pagesFile':pages_file.name,'pageCount':len(reader.pages),'textPages':len(rows),'contentScore':score,'contentHits':hits,'evidencePages':evidence[:120],'metadata':{str(k):str(v) for k,v in (reader.metadata or {}).items()},'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
+              except Exception as error: item['error']=str(error)
+            extracted.sort(key=lambda row:(-row['contentScore'],-row['linkScore'],row['url']))
+            result[code]={'name':t['name'],'visited':visited,'pdfCandidates':candidates,'extractedPdfs':extracted}
+          (out/'report.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+          summary={code:{'name':value['name'],'visited':len(value['visited']),'candidates':len(value['pdfCandidates']),'extracted':len(value['extractedPdfs']),'best':value['extractedPdfs'][0] if value['extractedPdfs'] else None} for code,value in result.items()}
+          (out/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: structured-expansion-batch-11-discovery
+          path: artifacts/batch-11/
+          retention-days: 14

@@ -1,6 +1,11 @@
 name: Probe Structured Expansion Batch 09 Finalists
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/probe-structured-expansion-batch-09-finalists.yml'
   push:
     branches:
       - data/structured-expansion-batch-09

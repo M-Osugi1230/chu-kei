@@ -542,5 +542,59 @@
     "reviewDecisionId": "review-7733-20260712-structured-expansion",
     "detectedAt": "2026-07-12T13:20:00Z",
     "correctedAt": "2026-07-12T13:55:00Z"
+  },
+  {
+    "id": "correction-6503-20260712-page-evidence-correction",
+    "companyCode": "6503",
+    "fieldPath": "evidenceRefs",
+    "before": {
+      "sourcePage": "p.5-p.6, p.19, p.21"
+    },
+    "after": {
+      "sourcePage": "p.6, p.21, p.23"
+    },
+    "reason": "公式PDFの表示ページを再確認し、章扉ではなく数値掲載ページへ証跡を補正する。",
+    "sourceUrl": "https://www.mitsubishielectric.co.jp/ja/pr/2026/pdf/0529_co1.pdf",
+    "sourcePage": "p.6, p.21, p.23",
+    "status": "corrected",
+    "reviewDecisionId": "review-6503-20260712-page-evidence-correction",
+    "detectedAt": "2026-07-12T14:00:00Z",
+    "correctedAt": "2026-07-12T14:35:00Z"
+  },
+  {
+    "id": "correction-9735-20260712-page-evidence-correction",
+    "companyCode": "9735",
+    "fieldPath": "evidenceRefs",
+    "before": {
+      "sourcePage": "p.15"
+    },
+    "after": {
+      "sourcePage": "p.16"
+    },
+    "reason": "2027年度数値目標と株主還元方針の表示ページを公式PDFで再確認した。",
+    "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+    "sourcePage": "p.16",
+    "status": "corrected",
+    "reviewDecisionId": "review-9735-20260712-page-evidence-correction",
+    "detectedAt": "2026-07-12T14:05:00Z",
+    "correctedAt": "2026-07-12T14:40:00Z"
+  },
+  {
+    "id": "correction-7733-20260712-page-evidence-correction",
+    "companyCode": "7733",
+    "fieldPath": "evidenceRefs",
+    "before": {
+      "sourcePage": "p.8, p.9-p.10"
+    },
+    "after": {
+      "sourcePage": "p.9, p.10-p.11, p.14"
+    },
+    "reason": "公式PDFの表示ページ番号とファイル内ページ順の差を確認し、証跡を実際の表示番号へ補正する。",
+    "sourceUrl": "https://www.olympus.co.jp/ir/data/pdf/01_Corporate_Strategy_Q2FY2026_jp.pdf",
+    "sourcePage": "p.9, p.10-p.11, p.14",
+    "status": "corrected",
+    "reviewDecisionId": "review-7733-20260712-page-evidence-correction",
+    "detectedAt": "2026-07-12T14:10:00Z",
+    "correctedAt": "2026-07-12T14:45:00Z"
   }
 ]

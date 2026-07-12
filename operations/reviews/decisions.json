@@ -659,5 +659,92 @@
     "decisionReason": "オリンパスの公式計画をページまたは会社公式図版単位で確認し、推測を用いず比較可能なデータへ拡張する。",
     "createdAt": "2026-07-12T13:20:00Z",
     "reviewedAt": "2026-07-12T13:40:00Z"
+  },
+  {
+    "id": "review-6503-20260712-page-evidence-correction",
+    "companyCode": "6503",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "quality-evidence-agent",
+    "reviewer": "source-research-agent",
+    "sourceUrl": "https://www.mitsubishielectric.co.jp/ja/pr/2026/pdf/0529_co1.pdf",
+    "sourcePages": [
+      "表紙 公表日",
+      "p.6 2030年度財務目標",
+      "p.21 キャピタルアロケーション",
+      "p.23 人的資本目標"
+    ],
+    "note": "公式PDFの表示ページ番号を再確認し、章扉によるページずれを補正する。数値・分類・ステージは変更しない。",
+    "decisionReason": "キャピタルアロケーションと人財戦略の証跡が章扉ページを指していたため、実際に数値が記載された表示ページへ修正する。",
+    "createdAt": "2026-07-12T14:00:00Z",
+    "reviewedAt": "2026-07-12T14:20:00Z"
+  },
+  {
+    "id": "review-9735-20260712-page-evidence-correction",
+    "companyCode": "9735",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "quality-evidence-agent",
+    "reviewer": "source-research-agent",
+    "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+    "sourcePages": [
+      "p.1-p.3 計画の位置づけ",
+      "p.5 重点戦略",
+      "p.10 海外成長",
+      "p.16 数値目標・株主還元"
+    ],
+    "note": "公式PDFの表示ページ番号を再確認し、数値目標ページをp.15からp.16へ補正する。数値・分類・ステージは変更しない。",
+    "decisionReason": "2027年度の売上高・営業利益・ROE・配当性向・自己株式取得方針は表示ページp.16に記載されているため。",
+    "createdAt": "2026-07-12T14:05:00Z",
+    "reviewedAt": "2026-07-12T14:25:00Z"
+  },
+  {
+    "id": "review-7733-20260712-page-evidence-correction",
+    "companyCode": "7733",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "quality-evidence-agent",
+    "reviewer": "source-research-agent",
+    "sourceUrl": "https://www.olympus.co.jp/ir/data/pdf/01_Corporate_Strategy_Q2FY2026_jp.pdf",
+    "sourcePages": [
+      "表紙 公表日",
+      "p.9 組織改革",
+      "p.10-p.11 財務ガイダンス",
+      "p.14 資本配分"
+    ],
+    "note": "公式PDFの表示ページ番号を再確認し、組織改革・財務ガイダンス・資本配分の証跡を補正する。数値・分類・ステージは変更しない。",
+    "decisionReason": "PDFファイル内のページ順とスライド表示番号に差があり、初回抽出の参照番号が1ページずれていたため。",
+    "createdAt": "2026-07-12T14:10:00Z",
+    "reviewedAt": "2026-07-12T14:30:00Z"
   }
 ]

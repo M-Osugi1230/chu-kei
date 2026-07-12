@@ -1,6 +1,17 @@
 name: Apply Structured Expansion Batch 04
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'operations/patches/meiji-2026-plan-20260712.json'
+      - 'operations/patches/jfront-2024-2026-plan-20260712.json'
+      - 'operations/patches/mitsubishielectric-strategy-2030-20260712.json'
+      - 'operations/patches/secom-roadmap-2027-20260712.json'
+      - 'operations/patches/olympus-strategy-fy27-fy29-20260712.json'
+      - 'operations/patches/structured-expansion-batch-04-ledger.json'
+      - '.github/workflows/apply-structured-expansion-batch-04.yml'
   push:
     branches:
       - data/structured-expansion-batch-04

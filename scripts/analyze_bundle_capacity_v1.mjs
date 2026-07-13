@@ -83,4 +83,12 @@ for (const relativePath of ['artifacts/bundle-capacity-analysis-v1.json', 'artif
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, serialized);
 }
+
+const qualityReportPath = path.join(ROOT, 'artifacts', 'quality-report-v43.json');
+if (fs.existsSync(qualityReportPath)) {
+  const qualityReport = JSON.parse(fs.readFileSync(qualityReportPath, 'utf8'));
+  qualityReport.bundleCapacityAnalysis = report;
+  fs.writeFileSync(qualityReportPath, `${JSON.stringify(qualityReport, null, 2)}\n`);
+}
+
 console.log(JSON.stringify(report, null, 2));

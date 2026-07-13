@@ -1916,5 +1916,485 @@
     "reviewDecisionId": "review-9972-20260713-structured-expansion",
     "detectedAt": "2026-07-13T00:19:00Z",
     "correctedAt": "2026-07-13T01:19:00Z"
+  },
+  {
+    "id": "correction-147A-20260713-structured-expansion",
+    "companyCode": "147A",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-15",
+      "revenue": "2031年3月期 売上高500億円、ARR110億円。2026年3月期実績は売上高124.23億円、リカーリング収益92.96億円"
+    },
+    "reason": "ソラコムの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS05199/e545f158/84a9/4914/96da/26d8153c77e0/140120260514536008.pdf",
+    "sourcePage": "決算説明資料 PDF p.2: 2026年実績と2031年の売上高500億円・ARR110億円。 / 同 PDF p.26: 売上高、リカーリング収益、EBITDA、営業利益と各利益率。 / 同 PDF p.31-p.32: IoT中核事業、海外展開、AI、M&Aの成長ドライバー。",
+    "status": "corrected",
+    "reviewDecisionId": "review-147A-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:00:00.000Z",
+    "correctedAt": "2026-07-13T03:00:00.000Z"
+  },
+  {
+    "id": "correction-290A-20260713-structured-expansion",
+    "companyCode": "290A",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-15",
+      "revenue": "2026年12月期 売上高63.53億円、総収入160.52億円を予想。2026年3月末受注残高は1,243.9億円"
+    },
+    "reason": "Synspectiveの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS04951/7f42055c/c4ea/4f2e/9353/7e508f5ada70/140120260515537797.pdf",
+    "sourcePage": "第1四半期決算説明資料 PDF p.5: 受注残高1,243.9億円、防衛省契約960.7億円、打上げ計画。 / 同 PDF p.8・p.15: 10機前後での黒字化想定と2028年以降30機以上の衛星体制。 / 同 PDF p.23: 2026年の売上高・利益・EBITDA・運用機数予想。 / 同 PDF p.25: 次世代衛星、工場、海外展開の重点投資額。",
+    "status": "corrected",
+    "reviewDecisionId": "review-290A-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:01:00.000Z",
+    "correctedAt": "2026-07-13T03:01:00.000Z"
+  },
+  {
+    "id": "correction-2998-20260713-structured-expansion",
+    "companyCode": "2998",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-15",
+      "revenue": "2026年3月期 売上総利益78.0億円、CREAL GMV313.9億円。2027年3月期の連結売上高は事業構造上非開示"
+    },
+    "reason": "クリアルの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS08738/b9206d3b/32a8/4461/928b/c5df06bead88/140120260515538550.pdf",
+    "sourcePage": "通期決算説明資料 PDF p.4: 売上総利益、営業利益、GMV、配当の実績。 / 同 PDF p.6・p.50-p.51: 不動産ST、AI・DX、ホテル、M&Aの成長戦略。 / 同 PDF p.9・p.52-p.53: 自己株式取得、配当性向、ROE・自己資本比率目標。 / 同 PDF p.57: 2027年3月期の売上高を非開示とする理由。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2998-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:02:00.000Z",
+    "correctedAt": "2026-07-13T03:02:00.000Z"
+  },
+  {
+    "id": "correction-3994-20260713-structured-expansion",
+    "companyCode": "3994",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-14",
+      "revenue": "2028年11月期 売上高900億円以上。2026年11月期SaaS ARRガイダンス497.4〜525.0億円、2030年AI関連ARR150億円以上"
+    },
+    "reason": "マネーフォワードの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS71106/cc6a01f6/3e8b/47f0/81ec/bfa7828554c3/140120260414503941.pdf",
+    "sourcePage": "第1四半期決算説明資料 PDF p.4: 売上高、SaaS・Fintech ARR、調整後EBITDA、事業CF。 / 同 PDF p.43-p.44: AI投資20億円、2030年AI関連ARR150億円以上。 / 同 PDF p.60-p.62: 2028年売上高・EBITDA・事業CFと利益率目標。 / 同 PDF p.51: 株主優待制度。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3994-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:03:00.000Z",
+    "correctedAt": "2026-07-13T03:03:00.000Z"
+  },
+  {
+    "id": "correction-5038-20260713-structured-expansion",
+    "companyCode": "5038",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-02-13",
+      "revenue": "2028年12月期 売上高61.49億円。2025年12月期実績33.92億円からCAGR21.9%を計画"
+    },
+    "reason": "eWeLLの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/5038/ir_material_for_fiscal_ym/198583/00.pdf",
+    "sourcePage": "中期経営計画説明資料 PDF p.27: 2026〜2028年の売上高・営業利益・利益率計画。 / 同 PDF p.28: 契約数、顧客単価、レベニューチャーン目標。 / 同 PDF p.3: 配当性向20%目安と2026年配当予想。 / 同 PDF p.47: ROE、資本コスト、資本政策。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5038-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:04:00.000Z",
+    "correctedAt": "2026-07-13T03:04:00.000Z"
+  },
+  {
+    "id": "correction-6227-20260713-structured-expansion",
+    "companyCode": "6227",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-08-08",
+      "revenue": "2028年6月期 売上高300億円。2031〜2034年に売上高500億円を目指す"
+    },
+    "reason": "AIメカテックの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS04657/973f5930/9bd1/40e1/880c/b1f1866ed7a4/20250808154307895s.pdf",
+    "sourcePage": "中期経営計画 PDF p.5: 長期売上高500億円・営業利益率15%以上。 / 同 PDF p.6: 2028年の売上高300億円、営業利益38億円、ROE17%以上。 / 同 PDF p.10: 成長投資配分、DOE2.5%、配当予想。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6227-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:05:00.000Z",
+    "correctedAt": "2026-07-13T03:05:00.000Z"
+  },
+  {
+    "id": "correction-6521-20260713-structured-expansion",
+    "companyCode": "6521",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-29",
+      "revenue": "2029年2月期 売上高130億円。2026年2月期実績は100.40億円"
+    },
+    "reason": "オキサイドの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/6521/ir_material_for_fiscal_ym1/205118/00.pdf",
+    "sourcePage": "事業計画 PDF p.4: 2026年実績、研究開発費、設備投資、海外売上比率。 / 同 PDF p.21・p.23: 事業ポートフォリオと2029年の売上高・利益率目標。 / 同 PDF p.77: 2026年売上高、営業利益、EBITDA実績。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6521-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:06:00.000Z",
+    "correctedAt": "2026-07-13T03:06:00.000Z"
+  },
+  {
+    "id": "correction-6627-20260713-structured-expansion",
+    "companyCode": "6627",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-02-20",
+      "revenue": "2025年12月期 売上高417.46億円。2026年12月期上期は売上高250億円を予想"
+    },
+    "reason": "テラプローブの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.teraprobe.com/cwp/wp-content/uploads/20254Q_presentation.pdf",
+    "sourcePage": "決算説明資料 PDF p.3-p.4: 2025年実績と四半期別売上高・営業利益率。 / 同 PDF p.12・p.14: 先端テスタ投資、固定資産・有利子負債・キャッシュフロー。 / 同 PDF p.16: 2026年上期の売上高・営業利益・利益率予想。 / 同 PDF p.23: 連結配当性向30%程度と年間配当110円。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6627-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:07:00.000Z",
+    "correctedAt": "2026-07-13T03:07:00.000Z"
+  },
+  {
+    "id": "correction-6777-20260713-structured-expansion",
+    "companyCode": "6777",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-16",
+      "revenue": "2027年3月期 売上高370億円。2026年3月期実績315.07億円"
+    },
+    "reason": "santec Holdingsの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/6777/ir_material_for_fiscal_ym/206300/00.pdf",
+    "sourcePage": "決算説明資料 PDF p.4: データセンター需要、売上推移、MOG Labs買収。 / 同 PDF p.21: 2027年の売上高・各利益・配当・為替前提。 / 同 PDF p.23: 営業利益率、ROE、配当性向の推移。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6777-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:08:00.000Z",
+    "correctedAt": "2026-07-13T03:08:00.000Z"
+  },
+  {
+    "id": "correction-9414-20260713-structured-expansion",
+    "companyCode": "9414",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-23",
+      "revenue": "2030年 売上高130億円超。2026年8月期通期は売上高125.76億円を計画"
+    },
+    "reason": "日本BS放送の公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://corp.bs11.jp/ja/ir/library/results/main/00/teaserItems1/0112/linkList/00/link/kessannsetsumeikai%202026-2Q%20.pdf",
+    "sourcePage": "第2四半期決算説明会資料 PDF p.12: 2026年通期の売上高・利益計画。 / 同 PDF p.18-p.19: IP・配信施策と2030年売上高130億円超・営業利益率20%超。 / 同 PDF p.22: 配当性向40%程度と年間配当30円。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9414-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T02:09:00.000Z",
+    "correctedAt": "2026-07-13T03:09:00.000Z"
+  },
+  {
+    "id": "correction-2160-20260713-structured-expansion",
+    "companyCode": "2160",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-15",
+      "revenue": "2026年12月期 売上収益271.58億円を予想。2025年12月期実績は268.40億円"
+    },
+    "reason": "ジーエヌアイグループの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/2160/tdnet/2816727/00.pdf",
+    "sourcePage": "第1四半期決算説明資料 PDF p.7-p.10: 日本事業の収益化、統合後の成長戦略。 / 同 PDF p.30-p.32: キャッシュフロー、研究開発費、2026年売上収益予想と利益非開示理由。 / 同 PDF p.34-p.39: F351の対象市場、患者数試算、承認後の成長構想。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2160-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:00:00.000Z",
+    "correctedAt": "2026-07-13T05:00:00.000Z"
+  },
+  {
+    "id": "correction-4165-20260713-structured-expansion",
+    "companyCode": "4165",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "2026年12月期15カ月決算の売上高205.77億円を予想。2026年2Q累計は77.66億円"
+    },
+    "reason": "プレイドの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://pdf.irpocket.com/C4165/WUpy/zipe/jq9A.pdf",
+    "sourcePage": "第2四半期決算説明資料 PDF p.4・p.31: 売上高、調整後営業利益、ARR、NRRの進捗。 / 同 PDF p.19-p.20: エンタープライズ顧客基盤と市場拡張余地。 / 同 PDF p.36・p.44-p.46: M&A・株主還元方針、通期予想、2028年以降の利益率改善と成長投資。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4165-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:01:00.000Z",
+    "correctedAt": "2026-07-13T05:01:00.000Z"
+  },
+  {
+    "id": "correction-4894-20260713-structured-expansion",
+    "companyCode": "4894",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-10",
+      "revenue": "2027年3月期はリハートの薬価未決定のため売上高予想を非開示。2026年3月期実績は2.12億円"
+    },
+    "reason": "クオリプスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/4894/tdnet/2833835/00.pdf",
+    "sourcePage": "決算説明資料 PDF p.4・p.6・p.9: 実績、財務基盤、2027年損益予想と売上高非開示理由。 / 同 PDF p.10・p.14: 重点施策と大量製造プロセス開発計画。 / 同 PDF p.15-p.19: 2027〜2028年のパイプライン、海外展開、承認・保険収載予定。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4894-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:02:00.000Z",
+    "correctedAt": "2026-07-13T05:02:00.000Z"
+  },
+  {
+    "id": "correction-8473-20260713-structured-expansion",
+    "companyCode": "8473",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-24",
+      "revenue": "2026年3月期 収益1兆8,966億円。中期ビジョンの固定売上目標は当該資料で未提示"
+    },
+    "reason": "SBIホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.sbigroup.co.jp/investors/library/filings/pdf/2026.pdf",
+    "sourcePage": "有価証券報告書 PDF p.41-p.42: 収益、税引前利益、ROE、中期目標達成、事業別実績。 / 同 PDF p.46・p.48: NTT資本業務提携と設備投資989.30億円。 / 同 PDF p.66: 総還元方針、年間配当95円、自己株取得500億円、総還元額。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8473-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:03:00.000Z",
+    "correctedAt": "2026-07-13T05:03:00.000Z"
+  },
+  {
+    "id": "correction-8772-20260713-structured-expansion",
+    "companyCode": "8772",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-20",
+      "revenue": "2027年3月期 営業収益98.04億円。2026年3月期実績は87.79億円"
+    },
+    "reason": "アサックスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/8772/ir_material_for_fiscal_ym/204286/00.pdf",
+    "sourcePage": "期末決算説明資料 PDF p.3-p.5: 営業収益、各利益、貸付金、自己資本、収益構成。 / 同 PDF p.7-p.11: 貸付残高、金利、不良債権、資金調達構成。 / 同 PDF p.13: 信用保証残高と国内・米国不動産事業。 / 2026年3月期決算短信 PDF p.1-p.2: 2027年業績予想と配当。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8772-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:04:00.000Z",
+    "correctedAt": "2026-07-13T05:04:00.000Z"
+  },
+  {
+    "id": "correction-8871-20260713-structured-expansion",
+    "companyCode": "8871",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "2027年3月期 売上高420億円。2026年3月期実績は304.45億円"
+    },
+    "reason": "ゴールドクレストの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.goldcrest.co.jp/ir/pdf/260514_02.pdf",
+    "sourcePage": "2026年3月期決算短信 PDF p.1: 実績、2027年予想、配当、ROE・利益率。 / 同 PDF p.4-p.5: 事業別実績、資産・負債増加、有形固定資産取得と借入、今後の見通し。 / 同 PDF p.6: 販売用・仕掛販売用不動産、賃貸用土地建物の残高。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8871-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:05:00.000Z",
+    "correctedAt": "2026-07-13T05:05:00.000Z"
+  },
+  {
+    "id": "correction-9022-20260713-structured-expansion",
+    "companyCode": "9022",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-28",
+      "revenue": "2027年3月期 売上高1兆9,930億円を予想。2026年3月期実績は2兆62億円"
+    },
+    "reason": "東海旅客鉄道の公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/9022/tdnet/2796247/00.pdf",
+    "sourcePage": "2026年3月期決算短信 PDF p.1-p.2: 実績、2027年業績予想、配当。 / 同 PDF p.8-p.11: 安定配当、三世代の鉄道、中央新幹線、AI・ICT、収益拡大戦略。 / 同 PDF p.19・p.24: 設備・無形資産投資、自己株式取得上限200億円。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9022-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:06:00.000Z",
+    "correctedAt": "2026-07-13T05:06:00.000Z"
+  },
+  {
+    "id": "correction-9475-20260713-structured-expansion",
+    "companyCode": "9475",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-12",
+      "revenue": "2035年3月期 売上高100億円。2027年3月期は売上高73.30億円を予想"
+    },
+    "reason": "昭文社ホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.mapple.co.jp/wp/wp-content/uploads/2026/06/setu-20260612.pdf",
+    "sourcePage": "決算説明資料 PDF p.5-p.6・p.13: 2026年実績と2027年業績予想。 / 同 PDF p.14-p.16: 2035年売上高100億円、アクションプラン進捗、ROE・WACC・新規事業投資KPI。 / 同 PDF p.17-p.18・p.21-p.23: M&A・資産譲受、デジタルメディア、観光DX。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9475-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:07:00.000Z",
+    "correctedAt": "2026-07-13T05:07:00.000Z"
+  },
+  {
+    "id": "correction-3491-20260713-structured-expansion",
+    "companyCode": "3491",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-11",
+      "revenue": "2026年10月期 ネット売上収益559億円を予想。2026年2Q単四半期は151.73億円"
+    },
+    "reason": "GA technologiesの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/3491/tdnet/2834420/00.pdf",
+    "sourcePage": "第2四半期決算説明資料 PDF p.5-p.10: 事業進捗、SPC証券取得、統合投資プラットフォーム構想。 / 同 PDF p.22-p.25: ネット売上収益、事業利益、コア事業利益率の実績。 / 同 PDF p.49・p.55: 中期KPI進捗と2026年通期予想。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3491-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:08:00.000Z",
+    "correctedAt": "2026-07-13T05:08:00.000Z"
+  },
+  {
+    "id": "correction-9051-20260713-structured-expansion",
+    "companyCode": "9051",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-15",
+      "revenue": "2027年3月期 営業収益203億円。2026年3月期実績は199.19億円"
+    },
+    "reason": "センコン物流の公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.senkon.co.jp/wp_senkon/wp-content/uploads/2026/05/2026%E5%B9%B43%E6%9C%88%E6%9C%9F%E6%B1%BA%E7%AE%97%E7%9F%AD%E4%BF%A1%EF%BC%88%E9%80%A3%E7%B5%90%EF%BC%89-.pdf",
+    "sourcePage": "2026年3月期決算短信 PDF p.1-p.2: 実績、2027年予想、配当。 / 同 PDF p.4-p.6: セグメント実績、キャッシュフロー、物流・自動車販売戦略と資産効率方針。 / 同 PDF p.7: 固定資産、投資有価証券、財務基盤の状況。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9051-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T04:09:00.000Z",
+    "correctedAt": "2026-07-13T05:09:00.000Z"
   }
 ]

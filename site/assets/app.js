@@ -1,5 +1,6 @@
 import { prepareCompaniesForSearch, filterAndRankCompanies } from './search-core.js';
 import { parseWorkspaceUrl, buildWorkspaceUrl } from './workspace-state.js';
+import { loadFrontendData, loadCompanyDetail } from './frontend-data-loader.js';
 import {
   buildProgressIndex,
   progressForCode,
@@ -25,6 +26,7 @@ const state = {
   sort: 'relevance',
   savedOnly: false,
   currentCompany: '',
+  currentDetail: null,
 };
 const stageLabels = { core: '本番', detailed_extracted: '詳細抽出済みβ', source_indexed: '一次確認β', jpx_indexed: 'カバレッジβ' };
 const sortLabels = { relevance: '検索との関連順', quality: '品質の高い順', verified: '最終確認日の新しい順', code: '証券コード順' };
@@ -46,20 +48,7 @@ const stars = n => n ? `${'★'.repeat(n)}${'☆'.repeat(5 - n)} ${n}/5` : '算�
 const nonempty = value => value && value !== '未抽出' && !String(value).startsWith('未抽出');
 let toastTimer;
 
-async function loadData() {
-  if (!('DecompressionStream' in window)) throw new Error('このブラウザは圧縮データの展開に対応していません。最新版のブラウザでお試しください。');
-  const manifest = await fetch('./data/bundle.manifest.json', { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error('データマニフェストを取得できません。'); return r.json(); });
-  const buffers = await Promise.all(manifest.parts.map(part => fetch(`./data/${part.file}`).then(r => { if (!r.ok) throw new Error(`${part.file}を取得できません。`); return r.arrayBuffer(); })));
-  const total = buffers.reduce((sum, b) => sum + b.byteLength, 0);
-  const bytes = new Uint8Array(total); let offset = 0;
-  for (const buffer of buffers) { bytes.set(new Uint8Array(buffer), offset); offset += buffer.byteLength; }
-  const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(b => b.toString(16).padStart(2, '0')).join('');
-  if (digest !== manifest.sha256) throw new Error('データ整合性の確認に失敗しました。');
-  const text = await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
-  const data = JSON.parse(text);
-  if (data.companies.length !== manifest.companyCount || data.progress.length !== manifest.progressCount) throw new Error('データ件数がマニフェストと一致しません。');
-  return data;
-}
+const loadData = loadFrontendData;
 
 function loadSaved() {
   try {
@@ -173,7 +162,7 @@ function applyFilters({ sync = true } = {}) {
 }
 
 function qualityText(company) { return `${stars(company.quality?.stars)} ${company.quality?.label || stageLabels[company.stage]}`; }
-function metricCount(company) { return ['revenue', 'profit', 'margin', 'capital', 'returnPolicy'].filter(key => nonempty(company[key])).length; }
+function metricCount(company) { return company.metricCount ?? ['revenue', 'profit', 'margin', 'capital', 'returnPolicy'].filter(key => nonempty(company[key])).length; }
 function companyProgress(company) { return progressForCode(state.progressIndex, company.code); }
 function companyProgressShort(company) {
   const rows = companyProgress(company);
@@ -242,6 +231,10 @@ function clearFilter(key) {
 }
 
 function companyByCode(code) { return state.data.companies.find(c => c.code === code); }
+async function companyDetailByCode(code) {
+  const company = companyByCode(code);
+  return company ? loadCompanyDetail(company) : null;
+}
 
 function progressEvidence(row) {
   const target = row.source || [row.sourceUrl, row.sourcePage].filter(Boolean).join(' ');
@@ -283,16 +276,33 @@ function renderCompanyDetail(company) {
   $('[data-share-company]', $('#company-dialog'))?.addEventListener('click', () => shareWorkspace(company.code, '企業リンクをコピーしました。'));
 }
 
-function openCompany(code, { sync = true } = {}) {
-  const company = companyByCode(code); if (!company) return;
+async function openCompany(code, { sync = true } = {}) {
+  const indexCompany = companyByCode(code); if (!indexCompany) return;
+  const dialog = $('#company-dialog');
   state.currentCompany = code;
-  renderCompanyDetail(company);
-  bindClose($('#company-dialog'), () => {
+  state.currentDetail = null;
+  $('#company-detail').innerHTML = `<article class="dialog-card"><div class="dialog-head"><div><p class="eyebrow">Company Detail</p><h2>${escapeHtml(indexCompany.name)}</h2><p>詳細データを読み込んでいます…</p></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div></article>`;
+  const onClose = () => {
     state.currentCompany = '';
+    state.currentDetail = null;
     syncWorkspaceUrl('');
-  });
-  if (!$('#company-dialog').open) $('#company-dialog').showModal();
+  };
+  bindClose(dialog, onClose);
+  if (!dialog.open) dialog.showModal();
   if (sync) syncWorkspaceUrl(code);
+  try {
+    const company = await loadCompanyDetail(indexCompany);
+    if (state.currentCompany !== code) return;
+    state.currentDetail = company;
+    renderCompanyDetail(company);
+    bindClose(dialog, onClose);
+  } catch (error) {
+    if (state.currentCompany !== code) return;
+    $('#company-detail').innerHTML = `<article class="dialog-card"><div class="dialog-head"><div><p class="eyebrow">Load Error</p><h2>${escapeHtml(indexCompany.name)}</h2></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div><p>詳細データを読み込めませんでした: ${escapeHtml(error.message)}</p><button class="secondary-button" type="button" data-retry-detail>再試行</button></article>`;
+    bindClose(dialog, onClose);
+    $('[data-retry-detail]', dialog)?.addEventListener('click', () => openCompany(code, { sync: false }));
+    console.error(error);
+  }
 }
 
 function section(title, items) { return items?.length ? `<section class="detail-section"><h3>${title}</h3><ul>${items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>` : ''; }
@@ -301,7 +311,7 @@ function toggleSaved(code) {
   if (state.saved.has(code)) state.saved.delete(code); else state.saved.add(code);
   persistSaved();
   applyFilters();
-  if ($('#company-dialog').open && state.currentCompany === code) renderCompanyDetail(companyByCode(code));
+  if ($('#company-dialog').open && state.currentCompany === code && state.currentDetail) { renderCompanyDetail(state.currentDetail); bindClose($('#company-dialog'), () => { state.currentCompany = ''; state.currentDetail = null; syncWorkspaceUrl(''); }); }
   showToast(state.saved.has(code) ? '調査候補に保存しました。' : '保存から外しました。');
 }
 
@@ -327,8 +337,8 @@ function latestActualText(company) {
   return `${progressMetricLabel(row.metric)} ${formatProgressValue(row.actualValue, row.unit)}（${row.actualFiscalYear || '実績年度未確認'}）`;
 }
 
-function openCompare() {
-  const companies = [...state.compare].map(companyByCode).filter(Boolean);
+async function openCompare() {
+  const companies = (await Promise.all([...state.compare].map(code => companyDetailByCode(code).catch(error => { console.error(error); return null; })))).filter(Boolean);
   if (companies.length < 2) { showToast('比較する企業を2社以上選択してください。'); return; }
   const rows = [
     ['データ品質', c => qualityText(c)],
@@ -397,7 +407,7 @@ async function init() {
     renderCompareTray();
     renderSavedSummary();
     $('#loading').hidden = true;
-    if (state.currentCompany) openCompany(state.currentCompany, { sync: false });
+    if (state.currentCompany) await openCompany(state.currentCompany, { sync: false });
     syncWorkspaceUrl();
   } catch (error) {
     $('#loading').hidden = true;

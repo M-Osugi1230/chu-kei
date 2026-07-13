@@ -9,6 +9,7 @@ const APPLIED_PATH = path.join(ROOT, 'operations', 'source-coverage', 'source-co
 const REVIEW_PATH = path.join(ROOT, 'operations', 'reviews', 'decisions.json');
 const CORRECTION_PATH = path.join(ROOT, 'operations', 'corrections', 'corrections.json');
 const REPORT_PATH = path.join(ROOT, 'operations', 'source-coverage', 'source-coverage-50-normalization.json');
+const OVERRIDES_PATH = path.join(ROOT, 'operations', 'research', 'source-coverage-50-official-ir-overrides.json');
 const TARGET_PARTS = 43;
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -24,6 +25,7 @@ const payload = JSON.parse(zlib.gunzipSync(compressed).toString('utf8'));
 const applied = readJson(APPLIED_PATH);
 const reviews = readJson(REVIEW_PATH);
 const corrections = readJson(CORRECTION_PATH);
+const officialIrOverrides = fs.existsSync(OVERRIDES_PATH) ? readJson(OVERRIDES_PATH) : {};
 const companyByCode = new Map(payload.companies.map(company => [String(company.code), company]));
 const normalized = [];
 
@@ -32,15 +34,17 @@ for (const row of applied.applied || []) {
   const company = companyByCode.get(code);
   if (!company) throw new Error(`Company missing: ${code}`);
   if (company.stage !== 'source_indexed') throw new Error(`Unexpected stage for ${code}: ${company.stage}`);
-  const officialIrUrl = row.officialIrUrl;
+  const previousOfficialIrUrl = row.officialIrUrl;
+  const officialIrUrl = officialIrOverrides[code] || previousOfficialIrUrl;
   if (!String(officialIrUrl || '').startsWith('https://')) throw new Error(`Official IR URL missing: ${code}`);
-  const discoveredDocumentUrl = row.sourceUrl;
-  const discoveredDocument = row.document;
+  const discoveredDocumentUrl = row.discoveredDocumentUrl || row.sourceUrl;
+  const discoveredDocument = row.discoveredDocument || row.document;
   company.sourceUrl = officialIrUrl;
   company.document = '公式IRページ（一次確認）';
   company.period = null;
   company.planPublishedDate = null;
-  company.summary = '公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマの詳細抽出と原文突合は未実施です。';
+  company.themes = [];
+  company.summary = '一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。';
   company.highlights = [];
   company.warnings = ['一次確認β。公式IRページの所在確認のみで、比較用の数値・戦略は未抽出です。'];
   company.evidenceRefs = [
@@ -49,7 +53,10 @@ for (const row of applied.applied || []) {
       ? [`探索時に確認した公式資料候補（詳細未抽出）: ${discoveredDocumentUrl}`]
       : []),
   ];
+  company.flags = Object.fromEntries(Object.keys(company.flags || {}).map(key => [key, false]));
 
+  row.previousOfficialIrUrl = previousOfficialIrUrl !== officialIrUrl ? previousOfficialIrUrl : undefined;
+  row.officialIrUrl = officialIrUrl;
   row.discoveredDocumentUrl = discoveredDocumentUrl;
   row.discoveredDocument = discoveredDocument;
   row.sourceUrl = officialIrUrl;
@@ -59,7 +66,7 @@ for (const row of applied.applied || []) {
   for (const review of reviews.filter(item => String(item.companyCode) === code && item.targetStage === 'source_indexed')) {
     review.sourceUrl = officialIrUrl;
     review.sourcePages = company.evidenceRefs;
-    review.note = '公式IRページのHTTPS応答を確認。資料候補は探索済みだが、数値・戦略・対象期間の詳細抽出と原文突合は未実施。';
+    review.note = '一次確認β。公式IRページのHTTPS応答を確認。資料候補は探索済みだが、数値・戦略・対象期間は未抽出で、原文突合は未実施。';
   }
   for (const correction of corrections.filter(item => String(item.companyCode) === code && String(item.id).includes('source-coverage'))) {
     correction.sourceUrl = officialIrUrl;

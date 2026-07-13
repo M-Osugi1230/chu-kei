@@ -112,4 +112,29 @@ await browser.close();
 
 const output = { version: 'final10-browser-links-v1', generatedAt: new Date().toISOString(), executablePath, companies: report };
 fs.writeFileSync(outputPath, `${JSON.stringify(output, null, 2)}\n`);
-console.log(JSON.stringify({ companies: Object.keys(report).length, executablePath, pages: Object.values(report).reduce((sum, row) => sum + row.pages.length, 0) }, null, 2));
+
+const diagnostics = {};
+for (const [code, company] of Object.entries(report)) {
+  const pdfLinks = [];
+  for (const page of company.pages || []) {
+    for (const link of page.links || []) {
+      if (/\.pdf(?:$|[?#])/i.test(link.url)) pdfLinks.push({ url: link.url, text: link.text || '', host: normalizeHost(link.url), sourcePage: page.url });
+    }
+    for (const response of page.responses || []) {
+      if (/\.pdf(?:$|[?#])/i.test(response.url) || /pdf/i.test(response.contentType || '')) pdfLinks.push({ url: response.url, text: 'network response', host: normalizeHost(response.url), sourcePage: page.url });
+    }
+  }
+  diagnostics[code] = {
+    name: company.name,
+    startUrl: company.startUrl,
+    pages: (company.pages || []).map(page => ({ url: page.url, title: page.title || '', error: page.error || null, linkCount: (page.links || []).length, responsePdfCount: (page.responses || []).length })),
+    pdfLinks: [...new Map(pdfLinks.map(item => [item.url, item])).values()].slice(0, 120),
+  };
+}
+const qualityPath = path.join(ROOT, 'artifacts', 'quality-report-v43.json');
+if (fs.existsSync(qualityPath)) {
+  const quality = JSON.parse(fs.readFileSync(qualityPath, 'utf8'));
+  quality.final10BrowserLinkDiagnostics = { version: 'final10-browser-link-diagnostics-v1', executablePath, companies: diagnostics };
+  fs.writeFileSync(qualityPath, `${JSON.stringify(quality, null, 2)}\n`);
+}
+console.log(JSON.stringify({ companies: Object.keys(report).length, executablePath, pages: Object.values(report).reduce((sum, row) => sum + row.pages.length, 0), pdfLinks: Object.values(diagnostics).reduce((sum, row) => sum + row.pdfLinks.length, 0) }, null, 2));

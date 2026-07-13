@@ -44,6 +44,7 @@ if (shouldRunSourceCoverage) {
   runNode('scripts/discover_source_coverage_v3.mjs', {
     SOURCE_DISCOVERY_CONCURRENCY: '6',
   }, { allowFailure: true });
+  runNode('scripts/export_source_coverage_candidates_v1.mjs');
 
   const discovery = fs.existsSync(SOURCE_DISCOVERY_REPORT)
     ? readJson(SOURCE_DISCOVERY_REPORT)

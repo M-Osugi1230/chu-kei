@@ -14,6 +14,7 @@
     "source:coverage:diagnose": "npm run source:coverage:queue && npm run source:coverage:discover && npm run source:coverage:export",
     "source:coverage:apply": "node scripts/apply_source_coverage_50_v1.mjs",
     "source:coverage:normalize": "node scripts/normalize_source_indexed_coverage_v1.mjs",
+    "source:coverage:audit": "node scripts/validate_source_registry_v1.mjs && node scripts/validate_review_governance_v1.mjs",
     "quality": "npm run quality:v43"
   },
   "engines": {

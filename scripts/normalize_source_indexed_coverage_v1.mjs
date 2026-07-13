@@ -35,10 +35,14 @@ for (const row of applied.applied || []) {
   if (!company) throw new Error(`Company missing: ${code}`);
   if (company.stage !== 'source_indexed') throw new Error(`Unexpected stage for ${code}: ${company.stage}`);
   const previousOfficialIrUrl = row.officialIrUrl;
+  const overrideApplied = Boolean(officialIrOverrides[code]);
   const officialIrUrl = officialIrOverrides[code] || previousOfficialIrUrl;
   if (!String(officialIrUrl || '').startsWith('https://')) throw new Error(`Official IR URL missing: ${code}`);
-  const discoveredDocumentUrl = row.discoveredDocumentUrl || row.sourceUrl;
-  const discoveredDocument = row.discoveredDocument || row.document;
+  const previousDiscoveredDocumentUrl = row.discoveredDocumentUrl || row.sourceUrl;
+  const previousDiscoveredDocument = row.discoveredDocument || row.document;
+  const discoveredDocumentUrl = overrideApplied ? null : previousDiscoveredDocumentUrl;
+  const discoveredDocument = overrideApplied ? null : previousDiscoveredDocument;
+
   company.sourceUrl = officialIrUrl;
   company.document = '公式IRページ（一次確認）';
   company.period = null;
@@ -55,6 +59,13 @@ for (const row of applied.applied || []) {
   ];
   company.flags = Object.fromEntries(Object.keys(company.flags || {}).map(key => [key, false]));
 
+  if (overrideApplied && previousDiscoveredDocumentUrl) {
+    row.discardedDiscovery = {
+      url: previousDiscoveredDocumentUrl,
+      document: previousDiscoveredDocument,
+      reason: 'company-domain mismatch corrected before publication',
+    };
+  }
   row.previousOfficialIrUrl = previousOfficialIrUrl !== officialIrUrl ? previousOfficialIrUrl : undefined;
   row.officialIrUrl = officialIrUrl;
   row.discoveredDocumentUrl = discoveredDocumentUrl;
@@ -79,7 +90,14 @@ for (const row of applied.applied || []) {
       summary: company.summary,
     };
   }
-  normalized.push({ code, name: company.name, officialIrUrl, discoveredDocumentUrl, discoveredDocument });
+  normalized.push({
+    code,
+    name: company.name,
+    officialIrUrl,
+    discoveredDocumentUrl,
+    discoveredDocument,
+    discardedDiscovery: row.discardedDiscovery || null,
+  });
 }
 
 const json = Buffer.from(JSON.stringify(payload), 'utf8');

@@ -17,7 +17,9 @@ const metricCount = company => ['revenue', 'profit', 'margin', 'capital', 'retur
   .filter(key => company[key] && company[key] !== '未抽出' && !String(company[key]).startsWith('未抽出')).length;
 
 const sourceManifest = JSON.parse(fs.readFileSync(path.join(SOURCE_DIR, 'bundle.manifest.json'), 'utf8'));
-const sourceCompressed = Buffer.concat(sourceManifest.parts.map(part => fs.readFileSync(path.join(SOURCE_DIR, part.file))));
+const sourceCompressed = Buffer.concat(
+  sourceManifest.parts.map(part => fs.readFileSync(path.join(SOURCE_DIR, part.file))),
+);
 if (sha256(sourceCompressed) !== sourceManifest.sha256) throw new Error('Source bundle SHA-256 mismatch');
 const source = JSON.parse(zlib.gunzipSync(sourceCompressed).toString('utf8'));
 
@@ -47,7 +49,6 @@ for (let offset = 0, shardIndex = 0; offset < sorted.length; offset += SHARD_SIZ
       highlights: company.highlights ?? [],
       warnings: company.warnings ?? [],
       evidenceRefs: company.evidenceRefs ?? [],
-      quality: company.quality ?? null,
     })),
   };
   const compressed = gzipJson(payload);
@@ -132,5 +133,8 @@ const report = {
   totalDetailBytes: shards.reduce((sum, shard) => sum + shard.bytes, 0),
 };
 fs.mkdirSync(REPORT_DIR, { recursive: true });
-fs.writeFileSync(path.join(REPORT_DIR, 'FRONTEND_DATA_SHARDS_V1_REPORT.json'), `${JSON.stringify(report, null, 2)}\n`);
+fs.writeFileSync(
+  path.join(REPORT_DIR, 'FRONTEND_DATA_SHARDS_V1_REPORT.json'),
+  `${JSON.stringify(report, null, 2)}\n`,
+);
 console.log(JSON.stringify(report, null, 2));

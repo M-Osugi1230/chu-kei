@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
+import { QUALITY_CHECK_KEYS, QUALITY_PROFILE_VERSION } from './lib/quality_profile_v2.mjs';
 
 const root = path.resolve('.');
 const dataDir = path.join(root, 'site', 'data');
@@ -80,13 +81,21 @@ for (const company of payload.companies ?? []) {
 }
 
 const qualityV2Ready = (payload.companies ?? []).every((company) => (
-  company.quality?.version === '2.0'
-  && Object.keys(company.quality?.checks ?? {}).length === 8
+  company.quality?.version === QUALITY_PROFILE_VERSION
+  && Number.isInteger(company.quality?.stars)
+  && company.quality.stars >= 1
+  && company.quality.stars <= 5
+  && Number.isInteger(company.quality?.checkMask)
+  && company.quality.checkMask >= 0
+  && company.quality.checkMask < (1 << QUALITY_CHECK_KEYS.length)
+  && !Object.hasOwn(company.quality, 'checks')
+  && !Object.hasOwn(company.quality, 'reasons')
+  && !Object.hasOwn(company.quality, 'missing')
 ));
 if (!qualityV2Ready) {
   blocking.push({
     field: 'quality',
-    reason: '全570社のquality.version=2.0と8項目checksを確認できないため、v2マニフェストへ昇格できません',
+    reason: `全570社のquality.version=${QUALITY_PROFILE_VERSION}と${QUALITY_CHECK_KEYS.length}ビットのcheckMaskを確認できないため、正本を再圧縮できません`,
   });
 }
 
@@ -147,6 +156,7 @@ const report = {
   automaticFactCompletion: false,
   companyCount: payload.companies?.length ?? 0,
   progressCount: payload.progress?.length ?? 0,
+  qualityProfileVersion: QUALITY_PROFILE_VERSION,
   qualityManifestVersion: nextManifest.version,
   changes,
   blocking,

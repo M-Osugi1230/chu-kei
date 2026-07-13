@@ -1,0 +1,97 @@
+name: Reach 50 Percent Source Coverage
+
+on:
+  push:
+    branches:
+      - data/source-coverage-50
+    paths:
+      - 'scripts/generate_source_coverage_queue_v1.mjs'
+      - 'scripts/discover_source_coverage_v2.mjs'
+      - 'scripts/apply_source_coverage_50_v1.mjs'
+      - '.github/workflows/source-coverage-50.yml'
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to research and update'
+        required: false
+        default: 'data/source-coverage-50'
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: source-coverage-50-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  discover-and-apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Resolve target branch
+        id: target
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "branch=${{ inputs.branch }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "branch=${{ github.ref_name }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.target.outputs.branch }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build diversified discovery queue
+        env:
+          TARGET_SOURCE_CONFIRMED: '285'
+          SOURCE_DISCOVERY_POOL_MULTIPLIER: '1.75'
+        run: node scripts/generate_source_coverage_queue_v1.mjs
+
+      - name: Discover and verify official IR sources
+        env:
+          SOURCE_DISCOVERY_CONCURRENCY: '6'
+        run: node scripts/discover_source_coverage_v2.mjs
+
+      - name: Apply verified sources until 50 percent
+        env:
+          TARGET_SOURCE_CONFIRMED: '285'
+          SOURCE_COVERAGE_BUNDLE_BUDGET: '196608'
+          SOURCE_VERIFIED_DATE: '2026-07-14'
+        run: node scripts/apply_source_coverage_50_v1.mjs
+
+      - name: Rebuild frontend and run strict quality gates
+        run: |
+          npm run quality:v43
+          node scripts/validate_review_governance_v1.mjs
+          node scripts/validate_data_contract_v1.mjs
+          node scripts/validate_source_registry_v1.mjs
+
+      - name: Remove transient files
+        run: |
+          rm -rf artifacts node_modules
+          rm -f package-lock.json
+
+      - name: Commit verified source coverage
+        env:
+          TARGET_BRANCH: ${{ steps.target.outputs.branch }}
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+            exit 0
+          fi
+          git commit -m "data: 公式ソース確認率50%へ拡張"
+          git push origin "HEAD:${TARGET_BRANCH}"

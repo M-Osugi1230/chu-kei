@@ -26,6 +26,10 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(config.lastVerifiedDate || '')) throw new Error(
 if (!Number.isInteger(config.targetStructuredCount) || config.targetStructuredCount <= 0) {
   throw new Error('targetStructuredCount must be a positive integer');
 }
+const fromStage = config.fromStage || 'source_indexed';
+if (!['source_indexed', 'jpx_indexed'].includes(fromStage)) throw new Error(`Unsupported fromStage: ${fromStage}`);
+const targetStage = config.targetStage || 'detailed_extracted';
+if (targetStage !== 'detailed_extracted') throw new Error(`Unsupported targetStage: ${targetStage}`);
 
 const manifestPath = path.join(DATA_DIR, 'bundle.manifest.json');
 const manifest = readJson(manifestPath);
@@ -69,14 +73,14 @@ for (const [index, record] of config.records.entries()) {
   const company = payload.companies.find(row => String(row.code) === code);
   if (!company) throw new Error(`Company not found: ${code}`);
   if (company.name !== record.name) throw new Error(`${code}: name mismatch ${company.name} !== ${record.name}`);
-  if (company.stage !== 'source_indexed') throw new Error(`${code}: expected source_indexed, got ${company.stage}`);
+  if (company.stage !== fromStage) throw new Error(`${code}: expected ${fromStage}, got ${company.stage}`);
 
   const expectedBefore = Object.fromEntries(expectedFields.map(field => [field, company[field] ?? null]));
   const reviewDecisionId = `review-${code}-${config.dateTag}-structured-expansion`;
   const patchId = `${config.patchPrefix || config.batchId}-${code}-${config.dateTag}`;
   const updates = {
     category: record.category,
-    stage: 'detailed_extracted',
+    stage: targetStage,
     tier: '詳細抽出済みβ',
     sourceUrl: record.sourceUrl,
     document: record.document,
@@ -115,8 +119,8 @@ for (const [index, record] of config.records.entries()) {
   reviews.push({
     id: reviewDecisionId,
     companyCode: code,
-    fromStage: 'source_indexed',
-    targetStage: 'detailed_extracted',
+    fromStage,
+    targetStage,
     status: 'in_review',
     checklist: {
       officialSource: true,
@@ -147,7 +151,7 @@ for (const [index, record] of config.records.entries()) {
       revenue: company.revenue ?? null,
     },
     after: {
-      stage: 'detailed_extracted',
+      stage: targetStage,
       pageEvidence: true,
       planPublishedDate: record.planPublishedDate,
       revenue: record.revenue,
@@ -185,6 +189,8 @@ const report = {
   batchId: config.batchId,
   configPath: path.relative(ROOT, CONFIG_PATH),
   records: config.records.length,
+  fromStage,
+  targetStage,
   targetStructuredCount: config.targetStructuredCount,
   patchPaths,
   ledgerPath: path.relative(ROOT, ledgerPath),

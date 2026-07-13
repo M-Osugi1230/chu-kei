@@ -8,9 +8,18 @@ const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const ARTIFACT_DIR = path.join(ROOT, 'artifacts');
 const REPORT_PATH = path.join(ARTIFACT_DIR, 'source-registry-report-v1.json');
+const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
 const checks = [];
 const issues = [];
 const warnings = [];
+
+const milestone = fs.existsSync(MILESTONE_PATH)
+  ? JSON.parse(fs.readFileSync(MILESTONE_PATH, 'utf8'))
+  : { schemaVersion: 'coverage-milestone-v1', minimumSourceConfirmed: 200 };
+
+if (milestone.schemaVersion !== 'coverage-milestone-v1') {
+  throw new Error(`Unsupported coverage milestone schema: ${milestone.schemaVersion}`);
+}
 
 function check(name, ok, detail = '') {
   checks.push({ name, ok, detail });
@@ -60,7 +69,11 @@ const parsed = sourceConfirmed.map(parseSource);
 const valid = parsed.filter(record => record.url);
 const invalid = parsed.filter(record => !record.url);
 
-check('source-confirmed company count 200', sourceConfirmed.length === 200, `actual=${sourceConfirmed.length}`);
+check(
+  `source-confirmed company minimum ${milestone.minimumSourceConfirmed}`,
+  sourceConfirmed.length >= milestone.minimumSourceConfirmed,
+  `actual=${sourceConfirmed.length}`,
+);
 check('source URL present', sourceConfirmed.every(company => typeof company.sourceUrl === 'string' && company.sourceUrl.trim()), `missing=${sourceConfirmed.filter(company => !company.sourceUrl).length}`);
 check('source URL parseable', invalid.length === 0, invalid.map(record => `${record.company.code}:${record.error}`).join(', '));
 check('source URL HTTPS', valid.every(record => record.url.protocol === 'https:'), valid.filter(record => record.url.protocol !== 'https:').map(record => `${record.company.code}:${record.url.href}`).join(', '));
@@ -104,6 +117,7 @@ fs.mkdirSync(ARTIFACT_DIR, { recursive: true });
 const report = {
   version: 'source-audit-v1',
   checkedAt: new Date().toISOString(),
+  milestone,
   summary: {
     sourceConfirmedCompanies: sourceConfirmed.length,
     uniqueUrls: urlGroups.size,

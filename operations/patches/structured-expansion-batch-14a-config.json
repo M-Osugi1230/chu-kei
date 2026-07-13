@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "structured-expansion-batch-config-v2",
+  "batchId": "structured-expansion-batch-14a",
+  "patchPrefix": "batch14a",
+  "dateTag": "20260714",
+  "lastVerifiedDate": "2026-07-14",
+  "createdAtBase": "2026-07-14T13:00:00Z",
+  "reviewedAtBase": "2026-07-14T14:00:00Z",
+  "fromStage": "jpx_indexed",
+  "targetStage": "detailed_extracted",
+  "targetStructuredCount": 203,
+  "expectedCompanyCount": 570,
+  "expectedSourceConfirmed": 203,
+  "records": [
+    {
+      "code": "3289",
+      "name": "東急不動産ホールディングス",
+      "category": "不動産業/中期経営計画2030",
+      "sourceUrl": "https://pdf.irpocket.com/C3289/fcDL/QJL3/M0Ap.pdf",
+      "document": "2026年3月期 決算説明資料",
+      "period": "2026年3月期実績〜2031年3月期目標",
+      "planPublishedDate": "2026-05-15",
+      "themes": ["中期経営計画2030", "ROE", "EPS成長", "広域渋谷圏", "DX", "累進配当"],
+      "summary": "広域渋谷圏、GX、フィー収益、DXを伸ばし、成長性・資本効率と市況耐久性の両立を目指す。",
+      "revenue": "営業収益の2031年3月期定量目標は当該資料で未提示",
+      "profit": "営業利益は2026年3月期1,669億円、2027年3月期予想1,900億円、2031年3月期目標2,200億円以上。当期純利益は各967億円、1,000億円、1,200億円以上",
+      "margin": "ROEは2026年3月期11.2%、2027年3月期予想11%程度、2031年3月期目標10%以上。EPS平均成長率は年8%目標",
+      "capital": "2025〜2030年度累計でDX・新規事業へ1,000億円以上を投資",
+      "returnPolicy": "累進配当。2026年3月期48円・配当性向35.4%、2027年3月期予想50円・35.7%",
+      "highlights": [
+        "2026年3月期の当期純利益とROEは2028年3月期目標を前倒しで超過。",
+        "2027年3月期は営業利益1,900億円、当期純利益1,000億円を予想。"
+      ],
+      "warnings": [
+        "建築費・金利上昇が採算と資産価値に影響する。",
+        "キャピタル利益比率の上昇により市況感応度が高まる。",
+        "計画は2027年に更新予定。詳細抽出済みβ。"
+      ],
+      "evidenceRefs": [
+        "2026年3月期 決算説明資料 PDF p.3-p.5: 実績、予想、配当、投資、財務目標。",
+        "同 PDF p.6-p.9: 中計進捗、2031年目標、計画見直し、資本効率方針。"
+      ],
+      "flags": {"ma": false, "capitalEfficiency": true, "shareholderReturn": true, "progress": true, "overseas": true, "dx": true, "humanCapital": true, "newBusiness": true, "restructuring": false}
+    },
+    {
+      "code": "1721",
+      "name": "コムシスホールディングス",
+      "category": "建設業/通信・IT・社会インフラ",
+      "sourceUrl": "https://svss.tv/admin/sv/chapter/file_999_1778824083898.pdf",
+      "document": "2026年3月期 決算説明会資料・2030ビジョン",
+      "period": "2026年3月期実績〜2031年3月期目標",
+      "planPublishedDate": "2026-05-14",
+      "themes": ["通信インフラ", "ITソリューション", "データセンター", "M&A", "ROE", "株主還元"],
+      "summary": "通信を基盤にAI関連IT、データセンター、社会システム、M&Aを拡大し、2031年目標を目指す。",
+      "revenue": "売上高は2026年3月期6,306億円、2027年3月期計画6,700億円、2031年3月期目標8,000億円以上",
+      "profit": "営業利益は2026年3月期509億円、2027年3月期計画540億円、2031年3月期目標600億円以上",
+      "margin": "営業利益率は2026年3月期・2027年3月期計画とも8.1%。ROEは2026年3月期9.4%、2031年3月期目標10%",
+      "capital": "2025〜2030年度に成長投資2,000億円以上、PL計上投資1,000億円を計画",
+      "returnPolicy": "総還元性向70%目安、毎期5円以上増配。2026年3月期配当130円・自己株取得100億円、2027年3月期計画135円・110億円",
+      "highlights": [
+        "2026年3月期は売上高・営業利益・ROE等が過去最高。",
+        "AI関連ITとデータセンターを含む社会システムを成長軸とする。"
+      ],
+      "warnings": [
+        "通信設備投資や大型工事の進捗で計上時期が変動する。",
+        "資材・人件費上昇と施工人員不足が利益率に影響する。",
+        "成長投資はM&Aを含む。詳細抽出済みβ。"
+      ],
+      "evidenceRefs": [
+        "2026年3月期 決算説明会資料 PDF p.5-p.13: 実績、2027年計画、2031年目標。",
+        "同 PDF p.25-p.26及び2030ビジョン PDF p.29-p.31: 還元、ROE、投資配分。"
+      ],
+      "flags": {"ma": true, "capitalEfficiency": true, "shareholderReturn": true, "progress": true, "overseas": false, "dx": true, "humanCapital": true, "newBusiness": true, "restructuring": false}
+    },
+    {
+      "code": "2127",
+      "name": "日本Ｍ＆Ａセンターホールディングス",
+      "category": "サービス業/M&A総合企業・再成長",
+      "sourceUrl": "https://www.nihon-ma.co.jp/ir/pdf/260430_presentation2.pdf",
+      "document": "2026年3月期 決算説明資料・ビジョン300",
+      "period": "2026年3月期実績〜2033年3月期目標",
+      "planPublishedDate": "2026-04-30",
+      "themes": ["M&A仲介", "PMI", "ファンド", "海外展開", "DX・AI", "株主還元"],
+      "summary": "仲介の案件品質と生産性を高め、PMI、ファンド、海外等へ領域を広げ、再成長を目指す。",
+      "revenue": "売上高は2026年3月期502.57億円、2027年3月期予想528億円、2028年3月期目標540億円",
+      "profit": "2026年3月期は営業利益187.61億円・経常利益191.54億円。経常利益は2027年3月期予想193億円、2028年3月期目標200億円、2033年3月期目標300億円",
+      "margin": "2026年3月期は売上総利益率60.2%、営業利益率37.3%、経常利益率38.1%。ROEは20%台",
+      "capital": "DX・AI、人材、本社拡張、PMI・ファンド・海外へ投資。総投資額は未提示",
+      "returnPolicy": "配当性向60%以上を基本方針。2026年3月期29円・73.7%、2027年3月期予想29円・71.3%",
+      "highlights": [
+        "2026年3月期は中期目標を一期前倒しで達成。",
+        "2033年3月期の経常利益300億円を長期目標とする。"
+      ],
+      "warnings": [
+        "成約件数とコンサルタント数は前年比減で、品質重視への転換を継続確認する。",
+        "売上高の96.5%をM&A売上高が占める。",
+        "2033年目標は長期ビジョン。詳細抽出済みβ。"
+      ],
+      "evidenceRefs": [
+        "2026年3月期 決算説明資料 PDF p.3・p.9-p.10: 実績、利益率、2027年予想。",
+        "同 PDF p.19-p.28: 中期・長期目標、注力事業、配当、ROE。"
+      ],
+      "flags": {"ma": true, "capitalEfficiency": true, "shareholderReturn": true, "progress": true, "overseas": true, "dx": true, "humanCapital": true, "newBusiness": true, "restructuring": true}
+    }
+  ]
+}

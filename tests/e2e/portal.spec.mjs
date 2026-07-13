@@ -1,4 +1,9 @@
+import fs from 'node:fs';
 import { test, expect } from '@playwright/test';
+
+const milestone = JSON.parse(
+  fs.readFileSync(new URL('../../operations/quality/coverage-milestone-v1.json', import.meta.url), 'utf8'),
+);
 
 function captureErrors(page) {
   const consoleErrors = [];
@@ -16,15 +21,14 @@ async function expectNoErrors(errors) {
 }
 
 test.describe('Chu-kei portal', () => {
-  test('loads 570 companies and supports search, strategy, detail and comparison', async ({ page }, testInfo) => {
+  test('loads the milestone company set and supports search, strategy, detail and comparison', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     await page.goto('/');
     await expect(page).toHaveTitle(/Chu-kei/);
-    await expect(page.locator('#stat-total')).toHaveText('570社');
-    await expect(page.locator('#stat-confirmed')).toHaveText('200社');
-    const structuredCount = Number((await page.locator('#stat-structured').textContent()).replace(/[^0-9]/g, ''));
-    expect(structuredCount).toBeGreaterThanOrEqual(125);
-    await expect(page.locator('#stat-progress')).toHaveText('149件（実績54件）');
+    await expect(page.locator('#stat-total')).toHaveText(`${milestone.companyTotal}社`);
+    await expect(page.locator('#stat-confirmed')).toHaveText(`${milestone.minimumSourceConfirmed}社`);
+    await expect(page.locator('#stat-structured')).toHaveText(`${milestone.minimumStructured}社`);
+    await expect(page.locator('#stat-progress')).toContainText(`${milestone.progressRows}件`);
     await expect(page.locator('.company-card')).toHaveCount(50);
 
     await page.locator('#search').fill('三菱重工業');

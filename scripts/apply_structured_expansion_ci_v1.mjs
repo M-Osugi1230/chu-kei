@@ -5,7 +5,7 @@ import zlib from 'node:zlib';
 import { execFileSync } from 'node:child_process';
 
 const ROOT = path.resolve('.');
-const CONFIG_PATH = path.join(ROOT, 'operations', 'patches', 'structured-expansion-batch-14a-config.json');
+const PATCH_DIR = path.join(ROOT, 'operations', 'patches');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 
 const runNode = (script, env = {}) => {
@@ -19,6 +19,19 @@ const runNode = (script, env = {}) => {
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 
+const resolveConfigPath = () => {
+  if (process.env.STRUCTURED_EXPANSION_CONFIG) {
+    return path.resolve(process.env.STRUCTURED_EXPANSION_CONFIG);
+  }
+  if (!fs.existsSync(PATCH_DIR)) return null;
+
+  const candidates = fs.readdirSync(PATCH_DIR)
+    .filter(file => /^structured-expansion-batch-.*-config\.json$/.test(file))
+    .sort((left, right) => left.localeCompare(right, 'en', { numeric: true }));
+
+  return candidates.length ? path.join(PATCH_DIR, candidates.at(-1)) : null;
+};
+
 const readBundle = () => {
   const manifest = readJson(path.join(DATA_DIR, 'bundle.manifest.json'));
   const compressed = Buffer.concat(
@@ -31,13 +44,16 @@ const readBundle = () => {
   return JSON.parse(zlib.gunzipSync(compressed).toString('utf8'));
 };
 
-if (!fs.existsSync(CONFIG_PATH)) {
-  console.log('No active structured expansion config. Running the normal v43 validator only.');
+const configPath = resolveConfigPath();
+if (!configPath) {
+  console.log('No structured expansion config found. Running the normal v43 validator only.');
   runNode('scripts/validate_quality_v43.mjs');
   process.exit(0);
 }
 
-const config = readJson(CONFIG_PATH);
+const config = readJson(configPath);
+console.log(`Active structured expansion config: ${path.relative(ROOT, configPath)}`);
+
 const fromStage = config.fromStage || 'jpx_indexed';
 const targetStage = config.targetStage || 'detailed_extracted';
 const targetCodes = new Set(config.records.map(record => String(record.code)));
@@ -56,15 +72,10 @@ const allAtTarget = stages.size === 1 && stages.has(targetStage);
 
 if (allAtSource) {
   runNode('scripts/generate_structured_expansion_batch_v2.mjs', {
-    STRUCTURED_EXPANSION_CONFIG: path.relative(ROOT, CONFIG_PATH),
+    STRUCTURED_EXPANSION_CONFIG: path.relative(ROOT, configPath),
   });
 
-  const patchListPath = path.join(
-    ROOT,
-    'operations',
-    'patches',
-    `${config.batchId}-patch-list.txt`,
-  );
+  const patchListPath = path.join(PATCH_DIR, `${config.batchId}-patch-list.txt`);
   const patchPaths = fs.readFileSync(patchListPath, 'utf8')
     .split(/\r?\n/)
     .map(line => line.trim())
@@ -80,12 +91,7 @@ if (allAtSource) {
   throw new Error(`Mixed or unexpected expansion stages detected: ${detail}`);
 }
 
-const ledgerPath = path.join(
-  ROOT,
-  'operations',
-  'patches',
-  `${config.batchId}-ledger.json`,
-);
+const ledgerPath = path.join(PATCH_DIR, `${config.batchId}-ledger.json`);
 if (fs.existsSync(ledgerPath)) {
   runNode('scripts/apply_governance_ledger_batch_v1.mjs', {
     GOVERNANCE_LEDGER_BATCH: path.relative(ROOT, ledgerPath),

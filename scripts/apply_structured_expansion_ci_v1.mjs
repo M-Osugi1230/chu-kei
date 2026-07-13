@@ -41,7 +41,7 @@ if (shouldRunSourceCoverage) {
     TARGET_SOURCE_CONFIRMED: String(sourceRun.targetSourceConfirmed),
     SOURCE_DISCOVERY_POOL_MULTIPLIER: String(sourceRun.candidatePoolMultiplier || 1.75),
   });
-  runNode('scripts/discover_source_coverage_v2.mjs', {
+  runNode('scripts/discover_source_coverage_v3.mjs', {
     SOURCE_DISCOVERY_CONCURRENCY: '6',
   }, { allowFailure: true });
 

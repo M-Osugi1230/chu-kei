@@ -5,7 +5,7 @@
   "description": "日本上場企業の中期経営計画を比較・理解・調査するための品質重視ポータル",
   "type": "module",
   "scripts": {
-    "quality:v43": "node scripts/validate_quality_v43.mjs && node scripts/analyze_bundle_capacity_v1.mjs && node scripts/collect_final10_browser_links_v1.mjs && node scripts/collect_final10_root_fallback_v1.mjs && node scripts/diagnose_final10_browser_links_v1.mjs && node scripts/inspect_final3_dynamic_sources_v1.mjs && node scripts/research_final10_static_v2.mjs && node scripts/research_final10_browser_pdfs_v1.mjs",
+    "quality:v43": "node scripts/validate_quality_v43.mjs && node scripts/analyze_bundle_capacity_v1.mjs && node scripts/collect_final10_browser_links_v1.mjs && node scripts/collect_final10_root_fallback_v1.mjs && node scripts/diagnose_final10_browser_links_v1.mjs && node scripts/inspect_final3_dynamic_sources_v1.mjs && node scripts/research_final10_static_v2.mjs && node scripts/research_final10_browser_pdfs_v1.mjs && node scripts/research_final3_selected_pdfs_v1.mjs",
     "quality:local": "node scripts/run_local_quality_gate.mjs",
     "quality:local:quick": "node scripts/run_local_quality_gate.mjs --quick",
     "quality": "npm run quality:v43"

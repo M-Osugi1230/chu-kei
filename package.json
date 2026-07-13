@@ -10,7 +10,8 @@
     "quality:local:quick": "node scripts/run_local_quality_gate.mjs --quick",
     "source:coverage:queue": "node scripts/generate_source_coverage_queue_v1.mjs",
     "source:coverage:discover": "node scripts/discover_source_coverage_v3.mjs",
-    "source:coverage:diagnose": "npm run source:coverage:queue && npm run source:coverage:discover",
+    "source:coverage:export": "node scripts/export_source_coverage_candidates_v1.mjs",
+    "source:coverage:diagnose": "npm run source:coverage:queue && npm run source:coverage:discover && npm run source:coverage:export",
     "source:coverage:apply": "node scripts/apply_source_coverage_50_v1.mjs",
     "quality": "npm run quality:v43"
   },

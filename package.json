@@ -8,6 +8,9 @@
     "quality:v43": "node scripts/apply_structured_expansion_ci_v1.mjs",
     "quality:local": "node scripts/run_local_quality_gate.mjs",
     "quality:local:quick": "node scripts/run_local_quality_gate.mjs --quick",
+    "source:coverage:queue": "node scripts/generate_source_coverage_queue_v1.mjs",
+    "source:coverage:discover": "node scripts/discover_source_coverage_v2.mjs",
+    "source:coverage:apply": "node scripts/apply_source_coverage_50_v1.mjs",
     "quality": "npm run quality:v43"
   },
   "engines": {

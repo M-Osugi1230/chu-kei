@@ -2396,5 +2396,245 @@
     "reviewDecisionId": "review-9051-20260713-structured-expansion",
     "detectedAt": "2026-07-13T04:09:00.000Z",
     "correctedAt": "2026-07-13T05:09:00.000Z"
+  },
+  {
+    "id": "correction-5574-20260713-structured-expansion",
+    "companyCode": "5574",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-14",
+      "revenue": "2026年8月期 売上高45.00億円を予想。上期実績は23.51億円、前年同期比30.0%増"
+    },
+    "reason": "ABEJAの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/5574/ir_material_for_fiscal_ym/201892/00.pdf",
+    "sourcePage": "第2四半期決算説明資料 PDF p.7-p.10: 上期実績、通期上方修正、売上高45億円・営業利益6億円予想、主要KPI。 / 同 PDF p.21-p.28: ABEJA Platform、LLM、公共領域、Physical AIの成長戦略と投資領域。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5574-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:00:00.000Z",
+    "correctedAt": "2026-07-13T13:00:00.000Z"
+  },
+  {
+    "id": "correction-6146-20260713-structured-expansion",
+    "companyCode": "6146",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-22",
+      "revenue": "2026年3月期 売上高4,368.89億円。2027年3月期は四半期ごとの出荷・検収見通しを開示し、通期固定予想は未提示"
+    },
+    "reason": "ディスコの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.disco.co.jp/jp/ir/library/doc/film/20260422.pdf",
+    "sourcePage": "通期決算説明会資料 PDF p.3-p.5: 売上高、営業利益、経常利益、利益率、ROE、年間配当の実績。 / 同 PDF p.17・p.20・p.22-p.23: AI・先端パッケージ需要、設備投資330億円、研究開発費360億円、工場・R&D投資。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6146-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:01:00.000Z",
+    "correctedAt": "2026-07-13T13:01:00.000Z"
+  },
+  {
+    "id": "correction-6264-20260713-structured-expansion",
+    "companyCode": "6264",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-03",
+      "revenue": "2026年8月期 売上高177.0億円を予想。上期実績は87.10億円"
+    },
+    "reason": "マルマエの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/6264/tdnet/2786769/00.pdf",
+    "sourcePage": "第2四半期決算説明資料 PDF p.2-p.5: 上期実績、通期売上高177億円・営業利益32億円等の会社予想、配当。 / 同 PDF p.12・p.14-p.15: Fusion2028、KMアルミニウム取得、需要環境と成長施策。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6264-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:02:00.000Z",
+    "correctedAt": "2026-07-13T13:02:00.000Z"
+  },
+  {
+    "id": "correction-6273-20260713-structured-expansion",
+    "companyCode": "6273",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "2027年3月期 売上高1兆円を予想。2026年3月期実績は8,425億円"
+    },
+    "reason": "SMCの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS00674b/1d9477fb/62e0/4174/b019/a954cfcbb5a8/20260520104136703s.pdf",
+    "sourcePage": "決算説明会資料 PDF p.5-p.6: 2026年実績、2027年売上高1兆円・営業利益2,190億円予想。 / 同 PDF p.27・p.40-p.42: チラー730億円、設備投資約1,000億円、営業人員増強、M&A・資本配分方針。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6273-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:03:00.000Z",
+    "correctedAt": "2026-07-13T13:03:00.000Z"
+  },
+  {
+    "id": "correction-6338-20260713-structured-expansion",
+    "companyCode": "6338",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "2026年9月期 上期売上高27.33億円。通期会社予想は当該資料の開示値を継続するが、ここでは上期実績を比較基準とする"
+    },
+    "reason": "タカトリの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.takatori-g.co.jp/ir/pdf/investor2026.5.14.pdf",
+    "sourcePage": "第2四半期決算説明資料 PDF p.2-p.5: 上期売上高27.33億円、営業損失、セグメント実績と需要環境。 / 同 PDF p.17-p.18: 研究開発費2.12億円、年間配当40円予想、自己株式取得実績。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6338-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:04:00.000Z",
+    "correctedAt": "2026-07-13T13:04:00.000Z"
+  },
+  {
+    "id": "correction-6613-20260713-structured-expansion",
+    "companyCode": "6613",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "2027年3月期 売上高18.50億円を予想。2026年3月期実績は13.72億円"
+    },
+    "reason": "QDレーザの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS81911/db5586b4/cab5/4e33/a52a/80e4e89039ef/140120260514533843.pdf",
+    "sourcePage": "通期決算説明資料 PDF p.3・p.6・p.8: 2026年実績、2027年売上高18.50億円・営業黒字・EBITDA予想。 / 同 PDF p.13-p.14・p.21-p.24: 量子ドットレーザ、シリコンフォトニクス、顧客案件、中期計画との差異。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6613-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:05:00.000Z",
+    "correctedAt": "2026-07-13T13:05:00.000Z"
+  },
+  {
+    "id": "correction-6723-20260713-structured-expansion",
+    "companyCode": "6723",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-25",
+      "revenue": "2026年12月期 第1四半期 Non-GAAP売上収益3,723億円。第2四半期予想は3,880億円±75億円、上期予想は7,603億円±75億円"
+    },
+    "reason": "ルネサスエレクトロニクスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.renesas.com/document/ppt/finance-2026-capital-market-day",
+    "sourcePage": "2026年1Q決算説明資料 PDF p.4・p.9・p.11・p.19: 売上収益、営業利益、EBITDA、利益率、第2四半期・上期予想。 / Capital Market Day Finance PDF p.6: 中期売上総利益率55%、営業利益率約30%目標と資本配分方針。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6723-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:06:00.000Z",
+    "correctedAt": "2026-07-13T13:06:00.000Z"
+  },
+  {
+    "id": "correction-7741-20260713-structured-expansion",
+    "companyCode": "7741",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-30",
+      "revenue": "2026年3月期 売上収益9,477億円。第4四半期は2,481億円"
+    },
+    "reason": "HOYAの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/7741/tdnet/2797231/00.pdf",
+    "sourcePage": "通期決算説明会資料 PDF p.4-p.6・p.12-p.13: 売上収益、利益、ROIC、フリーキャッシュフロー、株主還元。 / 同 PDF p.19-p.21・p.26: EUV・HDD投資、ベトナム工場約500億円、投資意思決定額1,200〜1,300億円、M&A方針。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7741-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:07:00.000Z",
+    "correctedAt": "2026-07-13T13:07:00.000Z"
+  },
+  {
+    "id": "correction-8198-20260713-structured-expansion",
+    "companyCode": "8198",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-07-10",
+      "revenue": "2027年2月期 営業収益4,000億円を予想。第1四半期実績は952.74億円"
+    },
+    "reason": "マックスバリュ東海の公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/8198/tdnet/2849879/00.pdf",
+    "sourcePage": "第1四半期決算短信 PDF p.2・p.6・p.9・p.11・p.13: 第1四半期実績、通期営業収益4,000億円・営業利益147億円予想、配当85円。 / 第64期株主通信 PDF p.3・p.9-p.10・p.15: 店舗改革、移動スーパー43台、Uber Eats97店舗、Max Mart200拠点、地域戦略。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8198-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:08:00.000Z",
+    "correctedAt": "2026-07-13T13:08:00.000Z"
+  },
+  {
+    "id": "correction-9761-20260713-structured-expansion",
+    "companyCode": "9761",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": "未抽出"
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "2027年3月期 売上高206.90億円を予想。2026年3月期実績は188.56億円"
+    },
+    "reason": "東海リースの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://tokai-lease.co.jp/archives/files/r0741.pdf",
+    "sourcePage": "2026年3月期決算短信 PDF p.1: 2026年実績、2027年売上高206.90億円・営業利益15.70億円予想、年間配当120円。 / 同 PDF p.3-p.4: 事業環境、在庫・採算管理、品質安全、キャッシュフロー、法令対応と今後の戦略。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9761-20260713-structured-expansion",
+    "detectedAt": "2026-07-13T12:09:00.000Z",
+    "correctedAt": "2026-07-13T13:09:00.000Z"
   }
 ]

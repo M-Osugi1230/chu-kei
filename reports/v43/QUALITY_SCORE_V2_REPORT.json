@@ -1,6 +1,22 @@
 {
   "version": "quality-score-v2",
-  "generatedAt": "2026-07-13T15:51:10.895Z",
+  "generatedAt": "2026-07-13T22:35:42.464Z",
+  "profileVersion": "2.1",
+  "storage": {
+    "format": "compact-bitmask",
+    "checkKeys": [
+      "officialSource",
+      "publicationDate",
+      "pageEvidence",
+      "structuredAnalysis",
+      "metricExtraction",
+      "progressConnected",
+      "humanReviewed",
+      "doubleChecked"
+    ],
+    "checkMaskBits": 8,
+    "verboseChecksStoredInBundle": false
+  },
   "rule": {
     "weights": {
       "officialSource": 15,
@@ -30,10 +46,10 @@
     "5": 10
   },
   "after": {
-    "1": 367,
+    "1": 364,
     "2": 0,
     "3": 0,
-    "4": 193,
+    "4": 196,
     "5": 10
   },
   "byStage": {
@@ -49,15 +65,15 @@
       "averageScore": 89.7
     },
     "detailed_extracted": {
-      "companies": 173,
+      "companies": 176,
       "distribution": {
         "1": 0,
         "2": 0,
         "3": 0,
-        "4": 173,
+        "4": 176,
         "5": 0
       },
-      "averageScore": 73.8
+      "averageScore": 73.9
     },
     "source_indexed": {
       "companies": 0,
@@ -71,9 +87,9 @@
       "averageScore": null
     },
     "jpx_indexed": {
-      "companies": 367,
+      "companies": 364,
       "distribution": {
-        "1": 367,
+        "1": 364,
         "2": 0,
         "3": 0,
         "4": 0,
@@ -83,8 +99,8 @@
     }
   },
   "bundle": {
-    "sha256": "aa91ddef5b26122bac405496a9b2ad5cae6973627e5f05817ce0a41403e70f82",
-    "compressedBytes": 130651,
+    "sha256": "de798993a5d5ba06005aa456706614fa3838337b77131d9d60739e902aaaa3a9",
+    "compressedBytes": 126983,
     "parts": 43
   }
 }

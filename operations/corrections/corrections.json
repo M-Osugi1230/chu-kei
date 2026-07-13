@@ -2708,5 +2708,77 @@
     "reviewDecisionId": "review-2127-20260714-structured-expansion",
     "detectedAt": "2026-07-14T13:02:00.000Z",
     "correctedAt": "2026-07-14T14:02:00.000Z"
+  },
+  {
+    "id": "correction-3288-20260714-structured-expansion",
+    "companyCode": "3288",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-02-10",
+      "revenue": "2026年9月期予想は売上高1兆4,850億円。第1四半期実績は3,298億円"
+    },
+    "reason": "オープンハウスグループの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://openhouse-group.co.jp/ir/upload_file/m005-m005_07/fy2026_1q_financialhighlight_j.pdf",
+    "sourcePage": "2026年9月期 第1四半期決算説明資料 PDF p.3-p.8: 実績、通期予想、配当、自己株式取得。 / 同 PDF p.26: 3カ年の利益前提、財務方針、成長投資、株主還元方針。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3288-20260714-structured-expansion",
+    "detectedAt": "2026-07-14T15:00:00.000Z",
+    "correctedAt": "2026-07-14T16:00:00.000Z"
+  },
+  {
+    "id": "correction-3635-20260714-structured-expansion",
+    "companyCode": "3635",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-27",
+      "revenue": "2025年度実績は売上高883.93億円。2026年度予想は900億円"
+    },
+    "reason": "コーエーテクモホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.koeitecmo.co.jp/ir/docs/ir3_20260427.pdf",
+    "sourcePage": "2026年3月期 決算説明会資料 PDF p.3・p.11: 2025年度実績、2026年度予想、配当。 / 同 PDF p.16・p.20-p.24: 還元方針、第4次中計の目標、グローバル販売・IP戦略。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3635-20260714-structured-expansion",
+    "detectedAt": "2026-07-14T15:01:00.000Z",
+    "correctedAt": "2026-07-14T16:01:00.000Z"
+  },
+  {
+    "id": "correction-2153-20260714-structured-expansion",
+    "companyCode": "2153",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-13",
+      "revenue": "2026年5月期予想は売上高470億円。2028年5月期目標は500億円"
+    },
+    "reason": "Ｅ・Ｊホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.ej-hds.co.jp/ir/library/pdf/tanshin/tansin_2026_3.pdf",
+    "sourcePage": "2026年5月期 第3四半期決算短信 PDF p.1・p.3-p.4: 通期予想、中計目標、基本方針、季節性。 / 統合報告書2025 PDF p.20-p.23: ROE、成長投資65億円＋α、株主還元38億円以上、DOE・累進配当。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2153-20260714-structured-expansion",
+    "detectedAt": "2026-07-14T15:02:00.000Z",
+    "correctedAt": "2026-07-14T16:02:00.000Z"
   }
 ]

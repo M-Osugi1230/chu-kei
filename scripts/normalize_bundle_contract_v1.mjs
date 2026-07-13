@@ -33,6 +33,11 @@ for (const company of payload.companies ?? []) {
     }
   }
 
+  if (Object.hasOwn(company, 'reviewEvidence')) {
+    delete company.reviewEvidence;
+    changes.push({ code, field: 'reviewEvidence', action: 'remove_derived_duplicate' });
+  }
+
   const beforeThemes = company.themes;
   let themes = [];
   if (Array.isArray(beforeThemes)) {

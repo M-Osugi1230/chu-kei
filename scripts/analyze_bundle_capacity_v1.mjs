@@ -77,6 +77,18 @@ const report = {
   fieldStats: Object.fromEntries(Object.entries(fieldStats).sort((a, b) => b[1].jsonBytes - a[1].jsonBytes)),
 };
 
-fs.mkdirSync(path.join(ROOT, 'artifacts'), { recursive: true });
-fs.writeFileSync(path.join(ROOT, 'artifacts', 'bundle-capacity-analysis-v1.json'), `${JSON.stringify(report, null, 2)}\n`);
+const serialized = `${JSON.stringify(report, null, 2)}\n`;
+for (const relativePath of ['artifacts/bundle-capacity-analysis-v1.json', 'artifacts/v43/BUNDLE_CAPACITY_ANALYSIS_V1.json']) {
+  const outputPath = path.join(ROOT, relativePath);
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, serialized);
+}
+
+const qualityReportPath = path.join(ROOT, 'artifacts', 'quality-report-v43.json');
+if (fs.existsSync(qualityReportPath)) {
+  const qualityReport = JSON.parse(fs.readFileSync(qualityReportPath, 'utf8'));
+  qualityReport.bundleCapacityAnalysis = report;
+  fs.writeFileSync(qualityReportPath, `${JSON.stringify(qualityReport, null, 2)}\n`);
+}
+
 console.log(JSON.stringify(report, null, 2));

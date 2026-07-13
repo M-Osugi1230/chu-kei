@@ -15,6 +15,7 @@ Expand Chu-kei's structured company coverage without weakening official-source e
 7. Apply patches only when the current source-of-truth record exactly matches `expectedBefore`.
 8. Rebuild quality scores and normalize the bundle.
 9. Run data, evidence, accessibility, mobile, performance, and deployment gates.
+10. Commit the validated source of truth through the base-branch `Apply Structured Source of Truth` workflow.
 
 ## Commands
 
@@ -52,7 +53,25 @@ npm run quality:local
 - Abort on any source-of-truth precondition mismatch.
 - Do not increase quality debt or missing page evidence.
 - Keep the compressed bundle under the dynamic budget and the 128 KiB absolute limit.
+- Do not store derived `reviewEvidence`; render page evidence from `evidenceRefs` and governance ledgers.
 
 ## Efficiency change
 
-The previous discovery workflow could download up to 18 PDFs per company and retain hundreds of megabytes of artifacts. The normal flow now evaluates at most three ranked official PDFs per company in memory and retains only compact evidence summaries. Full browser discovery remains a manual fallback for dynamic IR sites that cannot be resolved through the lightweight flow.
+The previous discovery workflow could download up to 18 PDFs per company and retain hundreds of megabytes of artifacts. The normal flow evaluates at most three ranked official PDFs per company in memory and retains only compact evidence summaries. Full browser discovery remains a fallback for dynamic IR sites that cannot be resolved through the lightweight flow.
+
+The source-of-truth application is reusable: adding a reviewed batch config can generate patches, ledgers, E2E coverage, quality scores, normalized bundle parts, and the final commit without manually editing each output file.
+
+## Current milestone
+
+- Listed companies: 570
+- Official source confirmed: 200
+- Structured comparison ready: 200
+- Production: 30
+- Detailed extracted beta: 170
+- Source indexed beta: 0
+- Coverage beta: 370
+- Four-star companies: 190
+- Five-star companies: 10
+- Detailed beta average quality score: 73.6
+- Compressed bundle: 127,915 bytes / 131,072-byte absolute limit
+- Bundle parts: 43

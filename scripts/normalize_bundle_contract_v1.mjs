@@ -6,6 +6,7 @@ import zlib from 'node:zlib';
 const root = path.resolve('.');
 const dataDir = path.join(root, 'site', 'data');
 const manifestPath = path.join(dataDir, 'bundle.manifest.json');
+const qualityReportPath = path.join(root, 'reports', 'v43', 'QUALITY_SCORE_V2_REPORT.json');
 const artifactDir = path.join(root, 'artifacts');
 const TARGET_PARTS = 43;
 
@@ -31,6 +32,11 @@ for (const company of payload.companies ?? []) {
     if (company[field] == null || company[field] === '') {
       blocking.push({ code, field, reason: '安全に補完できない必須項目' });
     }
+  }
+
+  if (Object.hasOwn(company, 'reviewEvidence')) {
+    delete company.reviewEvidence;
+    changes.push({ code, field: 'reviewEvidence', action: 'remove_derived_duplicate' });
   }
 
   const beforeThemes = company.themes;
@@ -123,6 +129,16 @@ const nextManifest = {
   parts: nextParts,
 };
 fs.writeFileSync(manifestPath, `${JSON.stringify(nextManifest)}\n`);
+
+if (fs.existsSync(qualityReportPath)) {
+  const qualityReport = JSON.parse(fs.readFileSync(qualityReportPath, 'utf8'));
+  qualityReport.bundle = {
+    sha256: nextManifest.sha256,
+    compressedBytes: nextManifest.compressedBytes,
+    parts: nextManifest.parts.length,
+  };
+  fs.writeFileSync(qualityReportPath, `${JSON.stringify(qualityReport, null, 2)}\n`);
+}
 
 fs.mkdirSync(artifactDir, { recursive: true });
 const report = {

@@ -74,11 +74,6 @@ for (const [index, record] of config.records.entries()) {
   const expectedBefore = Object.fromEntries(expectedFields.map(field => [field, company[field] ?? null]));
   const reviewDecisionId = `review-${code}-${config.dateTag}-structured-expansion`;
   const patchId = `${config.patchPrefix || config.batchId}-${code}-${config.dateTag}`;
-  const reviewEvidence = record.evidenceRefs.map(ref => {
-    const match = ref.match(/(?:p\.?\s*\d+(?:\s*[-–〜~]\s*p?\.?\s*\d+)?|ページ\s*\d+(?:\s*[-–〜~]\s*\d+)?)/i);
-    const [label, ...factParts] = ref.split(':');
-    return { page: match?.[0] || label.trim(), fact: factParts.join(':').trim() || ref };
-  });
   const updates = {
     category: record.category,
     stage: 'detailed_extracted',
@@ -99,7 +94,6 @@ for (const [index, record] of config.records.entries()) {
     warnings: record.warnings,
     evidenceRefs: record.evidenceRefs,
     flags: record.flags,
-    reviewEvidence,
   };
   const patch = {
     schemaVersion: 'company-data-patch-v1',
@@ -145,7 +139,7 @@ for (const [index, record] of config.records.entries()) {
   corrections.push({
     id: `correction-${code}-${config.dateTag}-structured-expansion`,
     companyCode: code,
-    fieldPath: Object.keys(updates).filter(field => field !== 'reviewEvidence').join(','),
+    fieldPath: Object.keys(updates).join(','),
     before: {
       stage: company.stage,
       pageEvidence: (company.evidenceRefs || []).some(ref => pagePattern.test(String(ref))),

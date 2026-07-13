@@ -1,0 +1,73 @@
+name: Apply Structured Source of Truth
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'operations/patches/structured-expansion-batch-*-config.json'
+      - 'scripts/apply_final200_ci_v1.mjs'
+      - 'package.json'
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to apply and commit'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-structured-source-${{ github.event.pull_request.head.ref || inputs.branch || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Resolve target branch
+        id: target
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "branch=${{ github.event.pull_request.head.ref }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "branch=${{ inputs.branch }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.target.outputs.branch }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Generate and validate source of truth
+        run: npm run quality:v43
+
+      - name: Remove transient files
+        run: |
+          rm -rf artifacts node_modules
+          rm -f package-lock.json
+
+      - name: Commit generated source of truth
+        env:
+          TARGET_BRANCH: ${{ steps.target.outputs.branch }}
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+            exit 0
+          fi
+          git commit -m "data: ソース確認済み200社を全件構造化"
+          git push origin "HEAD:${TARGET_BRANCH}"

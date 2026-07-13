@@ -7,17 +7,61 @@ import { execFileSync } from 'node:child_process';
 const ROOT = path.resolve('.');
 const PATCH_DIR = path.join(ROOT, 'operations', 'patches');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
+const SOURCE_COVERAGE_MARKER = path.join(ROOT, 'operations', 'source-coverage', 'run-50-percent.json');
+const SOURCE_DISCOVERY_REPORT = path.join(ROOT, 'operations', 'research', 'source-coverage-50-discovery.json');
 
-const runNode = (script, env = {}) => {
+const runNode = (script, env = {}, { allowFailure = false } = {}) => {
   console.log(`\n> node ${script}`);
-  execFileSync(process.execPath, [script], {
-    cwd: ROOT,
-    env: { ...process.env, ...env },
-    stdio: 'inherit',
-  });
+  try {
+    execFileSync(process.execPath, [script], {
+      cwd: ROOT,
+      env: { ...process.env, ...env },
+      stdio: 'inherit',
+    });
+    return true;
+  } catch (error) {
+    if (!allowFailure) throw error;
+    console.warn(`${script} exited non-zero; preserving diagnostics for review.`);
+    return false;
+  }
 };
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+
+const shouldRunSourceCoverage = process.env.GITHUB_WORKFLOW === 'Apply Structured Source of Truth'
+  && fs.existsSync(SOURCE_COVERAGE_MARKER);
+
+if (shouldRunSourceCoverage) {
+  const sourceRun = readJson(SOURCE_COVERAGE_MARKER);
+  if (sourceRun.schemaVersion !== 'source-coverage-run-v1') {
+    throw new Error(`Unsupported source coverage run schema: ${sourceRun.schemaVersion}`);
+  }
+  console.log(`Running source coverage expansion to ${sourceRun.targetSourceConfirmed} companies.`);
+  runNode('scripts/generate_source_coverage_queue_v1.mjs', {
+    TARGET_SOURCE_CONFIRMED: String(sourceRun.targetSourceConfirmed),
+    SOURCE_DISCOVERY_POOL_MULTIPLIER: String(sourceRun.candidatePoolMultiplier || 1.75),
+  });
+  runNode('scripts/discover_source_coverage_v4.mjs', {
+    SOURCE_DISCOVERY_CONCURRENCY: '6',
+  }, { allowFailure: true });
+  runNode('scripts/export_source_coverage_candidates_v1.mjs');
+
+  const discovery = fs.existsSync(SOURCE_DISCOVERY_REPORT)
+    ? readJson(SOURCE_DISCOVERY_REPORT)
+    : null;
+  if (discovery?.enoughForTarget) {
+    runNode('scripts/apply_source_coverage_50_v1.mjs', {
+      TARGET_SOURCE_CONFIRMED: String(sourceRun.targetSourceConfirmed),
+      SOURCE_COVERAGE_BUNDLE_BUDGET: String(sourceRun.bundleBudgetBytes || 196608),
+      SOURCE_VERIFIED_DATE: String(sourceRun.verifiedDate),
+    });
+    fs.rmSync(SOURCE_COVERAGE_MARKER);
+    console.log('Source coverage marker consumed after successful application.');
+  } else {
+    console.warn(`Source coverage remains pending: verified=${discovery?.verifiedCount ?? 0}, needed=${discovery?.needed ?? sourceRun.targetSourceConfirmed}.`);
+    console.warn('The canonical bundle is unchanged; discovery diagnostics will be committed for the next refinement.');
+  }
+}
 
 const resolveConfigPath = () => {
   if (process.env.STRUCTURED_EXPANSION_CONFIG) {

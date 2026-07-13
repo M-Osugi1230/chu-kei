@@ -1,0 +1,29 @@
+name: Analyze Bundle Capacity Temporary
+
+on:
+  push:
+    branches:
+      - data/structured-expansion-batch-13c
+    paths:
+      - '.github/workflows/analyze-bundle-capacity-temporary.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: data/structured-expansion-batch-13c
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/analyze_bundle_capacity_v1.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bundle-capacity-analysis-v1
+          path: artifacts/bundle-capacity-analysis-v1.json
+          retention-days: 14

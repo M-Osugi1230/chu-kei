@@ -1,14 +1,30 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://chu-kei.example/schemas/quality-profile-v1.schema.json",
-  "title": "Chu-kei Quality Profile v1",
+  "title": "Chu-kei Compact Quality Profile v2.1",
   "type": "object",
-  "required": ["stars", "score", "label", "reasons"],
+  "required": [
+    "version",
+    "stars",
+    "score",
+    "label",
+    "eligibleForScoring",
+    "checkMask"
+  ],
   "properties": {
+    "version": {"const": "2.1"},
     "stars": {"type": "integer", "minimum": 1, "maximum": 5},
     "score": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
     "label": {"type": "string", "minLength": 1},
-    "reasons": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+    "eligibleForScoring": {"type": "boolean"},
+    "checkMask": {"type": "integer", "minimum": 0, "maximum": 255}
   },
-  "additionalProperties": true
+  "not": {
+    "anyOf": [
+      {"required": ["checks"]},
+      {"required": ["reasons"]},
+      {"required": ["missing"]}
+    ]
+  },
+  "additionalProperties": false
 }

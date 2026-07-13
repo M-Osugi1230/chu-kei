@@ -1,4 +1,4 @@
-name: Discover Structured Expansion Batch 13 (disabled)
+name: Discover Structured Expansion Batch 13
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ permissions:
   contents: read
 
 jobs:
-  disabled:
+  manual-fallback:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Superseded by scripts/rank_official_ir_candidates_v2.py"
+      - run: echo "Use scripts/rank_official_ir_candidates_v2.py for the normal lightweight evidence-ranking flow."

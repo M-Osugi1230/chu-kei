@@ -59,7 +59,7 @@ npm run quality:local
 
 The previous discovery workflow could download up to 18 PDFs per company and retain hundreds of megabytes of artifacts. The normal flow evaluates at most three ranked official PDFs per company in memory and retains only compact evidence summaries. Full browser discovery remains a fallback for dynamic IR sites that cannot be resolved through the lightweight flow.
 
-The source-of-truth application is now reusable: adding a reviewed batch config can generate patches, ledgers, E2E coverage, quality scores, normalized bundle parts, and the final commit without manually editing each output file.
+The source-of-truth application is reusable: adding a reviewed batch config can generate patches, ledgers, E2E coverage, quality scores, normalized bundle parts, and the final commit without manually editing each output file.
 
 ## Current milestone
 
@@ -70,3 +70,8 @@ The source-of-truth application is now reusable: adding a reviewed batch config 
 - Detailed extracted beta: 170
 - Source indexed beta: 0
 - Coverage beta: 370
+- Four-star companies: 190
+- Five-star companies: 10
+- Detailed beta average quality score: 73.6
+- Compressed bundle: 127,915 bytes / 131,072-byte absolute limit
+- Bundle parts: 43

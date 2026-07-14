@@ -5548,5 +5548,53 @@
     "reviewDecisionId": "review-4544-20260714-structured-expansion",
     "detectedAt": "2026-07-14T21:02:00.000Z",
     "correctedAt": "2026-07-14T22:02:00.000Z"
+  },
+  {
+    "id": "correction-9409-20260714-structured-expansion",
+    "companyCode": "9409",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-02-12",
+      "revenue": "2029年度目標は連結売上高4,000億円。内訳はメディア・コンテンツ3,475億円、TDP・イベント460億円、その他65億円"
+    },
+    "reason": "テレビ朝日ホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.tv-asahihd.co.jp/ir_setex/data/2026/20260212_mgt_plan_material.pdf",
+    "sourcePage": "経営計画2026-2029説明会資料 PDF p.5: 2029年度の売上高、営業利益、経常利益、純利益、ROE目標。 / 同 PDF p.7-p.8: 東京ドリームパーク、IP、ABEMA、CVC、AI、人財、財務の重点戦略。 / 同 PDF p.9: 営業CF、政策保有株式売却、成長投資、設備投資、株主還元のキャピタルアロケーション。 / 同 PDF p.9: 配当性向40%、機動的な自己株式取得、政策保有株式縮減の方針。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9409-20260714-structured-expansion",
+    "detectedAt": "2026-07-14T23:00:00.000Z",
+    "correctedAt": "2026-07-15T00:00:00.000Z"
+  },
+  {
+    "id": "correction-7003-20260714-structured-expansion",
+    "companyCode": "7003",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-25",
+      "revenue": "2028年度目標は売上高4,400億円。2026年度3,700億円、2027年度4,100億円から段階的な成長を計画する"
+    },
+    "reason": "三井Ｅ＆Ｓの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.mes.co.jp/assets/uploads/rolling-vision-2026.pdf",
+    "sourcePage": "Rolling Vision 2026 PDF p.5-p.6: 2025年度の前計画超過、2028年度の売上・営業利益推移、事業戦略の方向性。 / 同 PDF p.8: 2026〜2028年度の売上高、営業利益率、自己資本比率、ROIC、ROE、配当性向目標。 / 同 PDF p.9: 営業CF約1,000億円、事業成長投資450億円、事業開発投資250億円、株主還元・財務基盤強化300億円の配分。 / 同 PDF p.11-p.13: 保守・メンテナンス、二元燃料エンジン、物流システム、デジタル・グリーン技術の成長戦略。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7003-20260714-structured-expansion",
+    "detectedAt": "2026-07-14T23:01:00.000Z",
+    "correctedAt": "2026-07-15T00:01:00.000Z"
   }
 ]

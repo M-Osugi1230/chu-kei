@@ -171,12 +171,13 @@ writeJson(ledgerPath, {
   schemaVersion: 'governance-ledger-batch-v1',
   batchId: config.batchId,
   automaticApprovalAllowed: false,
+  explicitProductionApproval: true,
   reviews,
   corrections,
 });
 writeBundle(bundle, manifest);
-runNode('scripts/apply_governance_ledger_batch_v1.mjs', {
-  GOVERNANCE_LEDGER_BATCH: path.relative(ROOT, ledgerPath),
+runNode('scripts/apply_production_approval_ledger_v1.mjs', {
+  PRODUCTION_APPROVAL_LEDGER: path.relative(ROOT, ledgerPath),
 });
 runNode('scripts/rebuild_quality_scores_v2.mjs');
 runNode('scripts/normalize_bundle_contract_v1.mjs');

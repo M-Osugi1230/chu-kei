@@ -7,6 +7,8 @@ import { execFileSync } from 'node:child_process';
 const ROOT = path.resolve('.');
 const PATCH_DIR = path.join(ROOT, 'operations', 'patches');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
+const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
+const STRUCTURED_EXPANSION_MARKER = path.join(PATCH_DIR, 'run-structured-expansion.json');
 const SOURCE_COVERAGE_MARKERS = [
   path.join(ROOT, 'operations', 'source-coverage', 'run-source-coverage.json'),
   path.join(ROOT, 'operations', 'source-coverage', 'run-50-percent.json'),
@@ -30,6 +32,7 @@ const runNode = (script, env = {}, { allowFailure = false } = {}) => {
 };
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+const writeJson = (file, value) => fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
 const firstExisting = paths => paths.find(file => fs.existsSync(file)) || null;
 const sourceCoverageMarker = firstExisting(SOURCE_COVERAGE_MARKERS);
 
@@ -69,17 +72,32 @@ if (shouldRunSourceCoverage) {
   }
 }
 
-const resolveConfigPath = () => {
+const resolveConfig = () => {
   if (process.env.STRUCTURED_EXPANSION_CONFIG) {
-    return path.resolve(process.env.STRUCTURED_EXPANSION_CONFIG);
+    return { configPath: path.resolve(process.env.STRUCTURED_EXPANSION_CONFIG), markerPath: null };
   }
-  if (!fs.existsSync(PATCH_DIR)) return null;
 
+  if (fs.existsSync(STRUCTURED_EXPANSION_MARKER)) {
+    const marker = readJson(STRUCTURED_EXPANSION_MARKER);
+    if (marker.schemaVersion !== 'structured-expansion-run-v1') {
+      throw new Error(`Unsupported structured expansion marker: ${marker.schemaVersion}`);
+    }
+    const configPath = path.resolve(ROOT, String(marker.configPath || ''));
+    const relativeConfigPath = path.relative(PATCH_DIR, configPath);
+    if (!relativeConfigPath || relativeConfigPath.startsWith('..') || path.isAbsolute(relativeConfigPath)) {
+      throw new Error(`Structured expansion config must be inside operations/patches: ${marker.configPath}`);
+    }
+    if (!fs.existsSync(configPath)) throw new Error(`Structured expansion config is missing: ${marker.configPath}`);
+    return { configPath, markerPath: STRUCTURED_EXPANSION_MARKER };
+  }
+
+  if (!fs.existsSync(PATCH_DIR)) return null;
   const candidates = fs.readdirSync(PATCH_DIR)
     .filter(file => /^structured-expansion-batch-.*-config\.json$/.test(file))
     .sort((left, right) => left.localeCompare(right, 'en', { numeric: true }));
-
-  return candidates.length ? path.join(PATCH_DIR, candidates.at(-1)) : null;
+  return candidates.length
+    ? { configPath: path.join(PATCH_DIR, candidates.at(-1)), markerPath: null }
+    : null;
 };
 
 const readBundle = () => {
@@ -94,7 +112,8 @@ const readBundle = () => {
   return JSON.parse(zlib.gunzipSync(compressed).toString('utf8'));
 };
 
-const configPath = resolveConfigPath();
+const resolvedConfig = resolveConfig();
+const configPath = resolvedConfig?.configPath || null;
 if (!configPath) {
   console.log('No structured expansion config found. Running the normal v43 validator only.');
   runNode('scripts/validate_quality_v43.mjs');
@@ -157,4 +176,33 @@ if (fs.existsSync(capacityScript)) {
   runNode('scripts/analyze_bundle_capacity_v1.mjs');
 }
 
+const finalBundle = readBundle();
+const finalCompanyCount = finalBundle.companies.length;
+const finalSourceConfirmed = finalBundle.companies.filter(company => company.stage !== 'jpx_indexed').length;
+const finalStructured = finalBundle.companies.filter(company => ['core', 'detailed_extracted'].includes(company.stage)).length;
+const finalCoverageBeta = finalBundle.companies.filter(company => company.stage === 'jpx_indexed').length;
+
+if (config.expectedCompanyCount && finalCompanyCount !== config.expectedCompanyCount) {
+  throw new Error(`Company count mismatch: ${finalCompanyCount} !== ${config.expectedCompanyCount}`);
+}
+if (config.expectedSourceConfirmed && finalSourceConfirmed !== config.expectedSourceConfirmed) {
+  throw new Error(`Source-confirmed count mismatch: ${finalSourceConfirmed} !== ${config.expectedSourceConfirmed}`);
+}
+if (finalStructured < config.targetStructuredCount) {
+  throw new Error(`Structured count target not reached: ${finalStructured} < ${config.targetStructuredCount}`);
+}
+
+const milestone = readJson(MILESTONE_PATH);
+milestone.companyTotal = finalCompanyCount;
+milestone.minimumSourceConfirmed = Math.max(milestone.minimumSourceConfirmed || 0, finalSourceConfirmed);
+milestone.minimumStructured = Math.max(milestone.minimumStructured || 0, finalStructured);
+milestone.maximumCoverageBeta = finalCoverageBeta;
+milestone.currentSourceCoverageRate = finalSourceConfirmed / finalCompanyCount;
+writeJson(MILESTONE_PATH, milestone);
+
 runNode('scripts/validate_quality_v43.mjs');
+
+if (resolvedConfig?.markerPath && fs.existsSync(resolvedConfig.markerPath)) {
+  fs.rmSync(resolvedConfig.markerPath);
+  console.log(`Structured expansion marker consumed: ${path.relative(ROOT, resolvedConfig.markerPath)}`);
+}

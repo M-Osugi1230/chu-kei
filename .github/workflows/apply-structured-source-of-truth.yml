@@ -9,6 +9,7 @@ on:
       - 'operations/production-quality/**'
       - 'scripts/audit_production_readiness_v1.mjs'
       - 'scripts/apply_core_approval_batch_v1.mjs'
+      - 'scripts/apply_core_evidence_repair_v1.mjs'
       - 'scripts/apply_production_approval_ledger_v1.mjs'
       - 'scripts/apply_production_promotion_v1.mjs'
       - 'scripts/sync_production_approval_metadata_v1.mjs'
@@ -17,6 +18,7 @@ on:
       - 'scripts/validate_quality_score_v2.mjs'
       - 'scripts/apply_final200_ci_v1.mjs'
       - 'scripts/run_quality_pipeline_v43.mjs'
+      - '.github/workflows/apply-structured-source-of-truth.yml'
       - 'package.json'
   workflow_dispatch:
     inputs:
@@ -60,7 +62,20 @@ jobs:
           node-version: '22'
 
       - name: Generate and validate source of truth
-        run: npm run quality:v43
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p artifacts
+          npm run quality:v43 2>&1 | tee artifacts/apply-structured-source.log
+
+      - name: Upload apply diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-apply-structured-source-diagnostics
+          path: artifacts/apply-structured-source.log
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Remove transient files
         run: |

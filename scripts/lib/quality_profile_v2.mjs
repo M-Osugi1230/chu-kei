@@ -29,8 +29,8 @@ export const QUALITY_CHECK_LABELS = {
   structuredAnalysis: '主要論点構造化済み',
   metricExtraction: '数値・方針抽出済み',
   progressConnected: '進捗実績接続あり',
-  humanReviewed: '人手レビュー済み',
-  doubleChecked: 'ダブルチェック済み',
+  humanReviewed: '個別レビュー済み',
+  doubleChecked: '独立再検証済み',
 };
 
 const EXTRACTION_STAGES = new Set(['core', 'detailed_extracted']);

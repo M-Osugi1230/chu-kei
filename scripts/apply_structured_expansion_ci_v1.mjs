@@ -7,6 +7,7 @@ import { execFileSync } from 'node:child_process';
 const ROOT = path.resolve('.');
 const PATCH_DIR = path.join(ROOT, 'operations', 'patches');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
+const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
 const STRUCTURED_EXPANSION_MARKER = path.join(PATCH_DIR, 'run-structured-expansion.json');
 const SOURCE_COVERAGE_MARKERS = [
   path.join(ROOT, 'operations', 'source-coverage', 'run-source-coverage.json'),
@@ -31,6 +32,7 @@ const runNode = (script, env = {}, { allowFailure = false } = {}) => {
 };
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+const writeJson = (file, value) => fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
 const firstExisting = paths => paths.find(file => fs.existsSync(file)) || null;
 const sourceCoverageMarker = firstExisting(SOURCE_COVERAGE_MARKERS);
 
@@ -173,6 +175,30 @@ const capacityScript = path.join(ROOT, 'scripts', 'analyze_bundle_capacity_v1.mj
 if (fs.existsSync(capacityScript)) {
   runNode('scripts/analyze_bundle_capacity_v1.mjs');
 }
+
+const finalBundle = readBundle();
+const finalCompanyCount = finalBundle.companies.length;
+const finalSourceConfirmed = finalBundle.companies.filter(company => company.stage !== 'jpx_indexed').length;
+const finalStructured = finalBundle.companies.filter(company => ['core', 'detailed_extracted'].includes(company.stage)).length;
+const finalCoverageBeta = finalBundle.companies.filter(company => company.stage === 'jpx_indexed').length;
+
+if (config.expectedCompanyCount && finalCompanyCount !== config.expectedCompanyCount) {
+  throw new Error(`Company count mismatch: ${finalCompanyCount} !== ${config.expectedCompanyCount}`);
+}
+if (config.expectedSourceConfirmed && finalSourceConfirmed !== config.expectedSourceConfirmed) {
+  throw new Error(`Source-confirmed count mismatch: ${finalSourceConfirmed} !== ${config.expectedSourceConfirmed}`);
+}
+if (finalStructured < config.targetStructuredCount) {
+  throw new Error(`Structured count target not reached: ${finalStructured} < ${config.targetStructuredCount}`);
+}
+
+const milestone = readJson(MILESTONE_PATH);
+milestone.companyTotal = finalCompanyCount;
+milestone.minimumSourceConfirmed = Math.max(milestone.minimumSourceConfirmed || 0, finalSourceConfirmed);
+milestone.minimumStructured = Math.max(milestone.minimumStructured || 0, finalStructured);
+milestone.maximumCoverageBeta = finalCoverageBeta;
+milestone.currentSourceCoverageRate = finalSourceConfirmed / finalCompanyCount;
+writeJson(MILESTONE_PATH, milestone);
 
 runNode('scripts/validate_quality_v43.mjs');
 

@@ -13,6 +13,7 @@ import {
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const REPORT_PATH = path.join(ROOT, 'artifacts', 'search-filter-contract-report-v1.json');
+const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
 const checks = [];
 const issues = [];
 const check = (name, ok, detail = '') => { checks.push({ name, ok, detail }); if (!ok) issues.push({ name, detail }); };
@@ -28,6 +29,9 @@ function toFullWidth(value) {
   return String(value).replace(/[!-~]/g, character => String.fromCharCode(character.charCodeAt(0) + 0xfee0));
 }
 
+const milestone = fs.existsSync(MILESTONE_PATH)
+  ? JSON.parse(fs.readFileSync(MILESTONE_PATH, 'utf8'))
+  : { companyTotal: 570 };
 let data = { companies: [] };
 try {
   data = readBundle();
@@ -39,7 +43,7 @@ const companies = prepareCompaniesForSearch(data.companies || []);
 const first = companies[0];
 const themed = companies.find(company => (company.themes || []).length > 0) || first;
 
-check('prepared company count 570', companies.length === 570, `actual=${companies.length}`);
+check(`prepared company count ${milestone.companyTotal}`, companies.length === milestone.companyTotal, `actual=${companies.length}`);
 check('NFKC normalizes full-width code', normalizeSearchText(toFullWidth(first.code)) === normalizeSearchText(first.code));
 check('ideographic spaces normalize', normalizeSearchText('  海外　展開  ') === '海外 展開');
 check('query tokenization uses AND tokens', JSON.stringify(tokenizeSearchQuery('海外　ROIC')) === JSON.stringify(['海外', 'roic']));
@@ -53,7 +57,7 @@ check('exact company name ranks first', exactName.length >= 1 && exactName[0].co
 const multiToken = filterAndRankCompanies(companies, { query: `${first.code} ${first.market}` });
 check('multi-token AND search', multiToken.length === 1 && multiToken[0].code === first.code, `actual=${multiToken.length}`);
 check('missing token produces zero results', filterAndRankCompanies(companies, { query: `${first.code} __no_such_token__` }).length === 0);
-check('empty search returns all companies', filterAndRankCompanies(companies, {}).length === 570);
+check('empty search returns all companies', filterAndRankCompanies(companies, {}).length === milestone.companyTotal);
 
 for (const market of ['Prime', 'Standard', 'Growth']) {
   const expected = companies.filter(company => company.market === market).length;
@@ -81,6 +85,7 @@ fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
 const report = {
   version: 'search-filter-contract-v1',
   checkedAt: new Date().toISOString(),
+  milestone,
   companyCount: companies.length,
   passed: checks.filter(item => item.ok).length,
   total: checks.length,

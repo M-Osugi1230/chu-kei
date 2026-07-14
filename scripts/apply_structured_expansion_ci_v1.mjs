@@ -60,8 +60,9 @@ if (shouldRunSourceCoverage) {
       SOURCE_COVERAGE_BUNDLE_BUDGET: String(sourceRun.bundleBudgetBytes || 196608),
       SOURCE_VERIFIED_DATE: String(sourceRun.verifiedDate),
     });
+    runNode('scripts/normalize_source_indexed_coverage_v1.mjs');
     fs.rmSync(sourceCoverageMarker);
-    console.log(`Source coverage marker consumed: ${path.relative(ROOT, sourceCoverageMarker)}`);
+    console.log(`Source coverage marker consumed after application and normalization: ${path.relative(ROOT, sourceCoverageMarker)}`);
   } else {
     console.warn(`Source coverage remains pending: verified=${discovery?.verifiedCount ?? 0}, needed=${discovery?.needed ?? sourceRun.targetSourceConfirmed}.`);
     console.warn('The canonical bundle is unchanged; discovery diagnostics will be committed for the next refinement.');

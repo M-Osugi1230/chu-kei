@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "core-evidence-repair-batch-02",
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "expectedCoreCount": 126,
+  "expectedFiveStarAfterApproval": 112,
+  "records": [
+    {
+      "code": "6857",
+      "name": "アドバンテスト",
+      "sourceUrl": "https://www.advantest.com/document/ja/investors/ir-library/briefing/J_MLTP3_240625_slide.pdf",
+      "document": "中長期経営方針 MTP3",
+      "planPublishedDate": "2024-06-25",
+      "verifiedDate": "2026-07-15",
+      "evidenceRefs": [
+        "中長期経営方針MTP3説明資料 PDF p.30: FY2024〜FY2026平均の売上高5,600〜7,000億円、営業利益率22〜28%、当期利益930〜1,470億円、ROIC18〜28%、EPS127〜202円。",
+        "同 PDF p.33: 研究開発費約2,100億円、設備投資約600億円、戦略投資約1,000億円、年間配当30円を下限とし、MTP3期間累計の総還元性向50%以上。",
+        "同 PDF p.34: 研究開発費控除前営業CF6,000億円以上、成長投資約1,600億円、株主還元1,400億円以上、期末現金1,000〜1,200億円のキャピタルアロケーション。"
+      ],
+      "reason": "公式中長期経営方針PDFで財務レンジ、成長投資、株主還元、キャピタルアロケーションをページ単位で確認し、既存coreのページ証跡不足を補修する。"
+    },
+    {
+      "code": "7013",
+      "name": "IHI",
+      "sourceUrl": "https://www.ihi.co.jp/ir/library/management_plan/_cms_conf01/__icsFiles/afieldfile/2026/05/08/FY2026-management_1.pdf",
+      "document": "中長期の方向性",
+      "planPublishedDate": "2026-05-08",
+      "verifiedDate": "2026-07-15",
+      "evidenceRefs": [
+        "中長期の方向性説明資料 PDF p.11: FY2026〜FY2028の営業利益率10〜13%、累計営業CF3,500億円、累計投資6,500億円、FY2029〜FY2031の営業利益率13%以上・累計営業CF7,000億円以上、FY2032〜FY2034の営業利益率15%以上・累計営業CF1兆円以上。",
+        "同 PDF p.12: 生産能力・サプライチェーン強化、イノベーション、DX、アライアンス、事業ポートフォリオ改革を含む戦略的投資方針。"
+      ],
+      "reason": "公式IR資料で長期の収益性・営業CF・投資ロードマップと戦略的投資方針をページ単位で確認し、既存coreのページ証跡不足を補修する。"
+    },
+    {
+      "code": "6981",
+      "name": "村田製作所",
+      "sourceUrl": "https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2024/1125/2411-j-speach.ashx?cvid=20241122063816000000&la=ja-jp",
+      "document": "中期方針2027説明会資料",
+      "planPublishedDate": "2024-11-25",
+      "verifiedDate": "2026-07-15",
+      "evidenceRefs": [
+        "中期方針2027説明会資料 PDF p.14: 2027年度の売上収益2兆円以上、営業利益率18%以上、税引後ROIC12%以上。",
+        "同 PDF p.53: 営業CF1.3兆円、設備投資6,800億円、戦略投資2,200億円、株主還元4,000億円、DOE中期目標5%のキャピタルアロケーション。"
+      ],
+      "reason": "公式中期方針説明資料で2027年度財務目標とキャピタルアロケーションをページ単位で確認し、既存coreのページ証跡不足を補修する。"
+    }
+  ]
+}

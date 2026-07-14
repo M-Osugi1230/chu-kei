@@ -4,7 +4,10 @@ import { execFileSync } from 'node:child_process';
 
 const ROOT = path.resolve('.');
 const sourceNormalizationMarker = path.join(ROOT, 'operations', 'source-coverage', 'normalize-source-indexed.json');
-const companyCoverageMarker = path.join(ROOT, 'operations', 'coverage-growth', 'run-1000.json');
+const companyCoverageMarkers = [
+  path.join(ROOT, 'operations', 'coverage-growth', 'run-company-coverage.json'),
+  path.join(ROOT, 'operations', 'coverage-growth', 'run-1000.json'),
+];
 const jpxOutput = path.join(ROOT, 'operations', 'research', 'jpx-listed-companies-latest.json');
 
 const runNode = (script, env = {}) => execFileSync(process.execPath, [script], {
@@ -18,9 +21,11 @@ const runCommand = (command, args) => execFileSync(command, args, {
   stdio: 'inherit',
 });
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+const firstExisting = paths => paths.find(file => fs.existsSync(file)) || null;
 const isApplyWorkflow = process.env.GITHUB_WORKFLOW === 'Apply Structured Source of Truth';
 
-if (isApplyWorkflow && fs.existsSync(companyCoverageMarker)) {
+const companyCoverageMarker = firstExisting(companyCoverageMarkers);
+if (isApplyWorkflow && companyCoverageMarker) {
   const config = readJson(companyCoverageMarker);
   if (config.schemaVersion !== 'company-coverage-run-v1') {
     throw new Error(`Unsupported company coverage marker: ${config.schemaVersion}`);
@@ -38,7 +43,7 @@ if (isApplyWorkflow && fs.existsSync(companyCoverageMarker)) {
     COMPANY_COVERAGE_BUNDLE_BUDGET: String(config.bundleBudgetBytes || 262144),
   });
   fs.rmSync(companyCoverageMarker);
-  console.log('Company coverage marker consumed after successful application.');
+  console.log(`Company coverage marker consumed: ${path.relative(ROOT, companyCoverageMarker)}`);
 }
 
 if (isApplyWorkflow && fs.existsSync(sourceNormalizationMarker)) {

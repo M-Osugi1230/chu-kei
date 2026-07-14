@@ -4992,5 +4992,369 @@
     "reviewDecisionId": "review-6302-20260714-source-coverage",
     "detectedAt": "2026-07-14T18:18:00.000Z",
     "correctedAt": "2026-07-14T19:18:00.000Z"
+  },
+  {
+    "id": "correction-3105-20260714-source-coverage",
+    "companyCode": "3105",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "Coverageβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3105",
+      "document": "JPX上場会社情報",
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済み。中期経営計画の公式資料、目標数値、戦略テーマは未確認です。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://www.nisshinbo.co.jp/nish/ir/management/mid_managementplan.html",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "日清紡ホールディングスの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://www.nisshinbo.co.jp/nish/ir/management/mid_managementplan.html",
+    "sourcePage": "公式IRページ応答確認: https://www.nisshinbo.co.jp/nish/ir/management/mid_managementplan.html / 探索時に確認した公式資料候補（詳細未抽出）: https://www.nisshinbo.co.jp/nish/ir/management/pdf/mid_managementplan2026.pdf",
+    "status": "corrected",
+    "reviewDecisionId": "review-3105-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:00:00.000Z",
+    "correctedAt": "2026-07-14T18:00:00.000Z"
+  },
+  {
+    "id": "correction-6523-20260714-source-coverage",
+    "companyCode": "6523",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "Coverageβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6523",
+      "document": "JPX上場会社情報",
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済み。中期経営計画の公式資料、目標数値、戦略テーマは未確認です。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://www.phchd.com/jp/about/vcp",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "ＰＨＣホールディングスの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://www.phchd.com/jp/about/vcp",
+    "sourcePage": "公式IRページ応答確認: https://www.phchd.com/jp/about/vcp / 探索時に確認した公式資料候補（詳細未抽出）: https://www.phchd.com/~/Media/phchd/sustainability/integratedreport2025/pdf/integratedreport2025_3.pdf",
+    "status": "corrected",
+    "reviewDecisionId": "review-6523-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:01:00.000Z",
+    "correctedAt": "2026-07-14T18:01:00.000Z"
+  },
+  {
+    "id": "correction-3657-20260714-source-coverage",
+    "companyCode": "3657",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "Coverageβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3657",
+      "document": "JPX上場会社情報",
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済み。中期経営計画の公式資料、目標数値、戦略テーマは未確認です。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://www.phd.inc/ir/",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "ポールトゥウィンホールディングスの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://www.phd.inc/ir/",
+    "sourcePage": "公式IRページ応答確認: https://www.phd.inc/ir/ / 探索時に確認した公式資料候補（詳細未抽出）: https://pdf.irpocket.com/C3657/BbNL/qMlQ/nNSz.pdf",
+    "status": "corrected",
+    "reviewDecisionId": "review-3657-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:02:00.000Z",
+    "correctedAt": "2026-07-14T18:02:00.000Z"
+  },
+  {
+    "id": "correction-3371-20260714-source-coverage",
+    "companyCode": "3371",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "Coverageβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3371",
+      "document": "JPX上場会社情報",
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済み。中期経営計画の公式資料、目標数値、戦略テーマは未確認です。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://www.softcreate-holdings.co.jp/ir",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "ソフトクリエイトホールディングスの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://www.softcreate-holdings.co.jp/ir",
+    "sourcePage": "公式IRページ応答確認: https://www.softcreate-holdings.co.jp/ir / 探索時に確認した公式資料候補（詳細未抽出）: https://www.softcreate-holdings.co.jp/cms/html/pdf/press/sof250801-1.pdf",
+    "status": "corrected",
+    "reviewDecisionId": "review-3371-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:03:00.000Z",
+    "correctedAt": "2026-07-14T18:03:00.000Z"
+  },
+  {
+    "id": "correction-285A-20260714-source-coverage",
+    "companyCode": "285A",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "Coverageβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=285A",
+      "document": "JPX上場会社情報",
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済み。中期経営計画の公式資料、目標数値、戦略テーマは未確認です。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://www.kioxia-holdings.com/ja-jp/ir/library/data.html",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "キオクシアホールディングスの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://www.kioxia-holdings.com/ja-jp/ir/library/data.html",
+    "sourcePage": "公式IRページ応答確認: https://www.kioxia-holdings.com/ja-jp/ir/library/data.html / 探索時に確認した公式資料候補（詳細未抽出）: https://ssl4.eir-parts.net/doc/285A/tdnet/2671692/00.pdf",
+    "status": "corrected",
+    "reviewDecisionId": "review-285A-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:04:00.000Z",
+    "correctedAt": "2026-07-14T18:04:00.000Z"
+  },
+  {
+    "id": "correction-5714-20260714-source-coverage",
+    "companyCode": "5714",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "Coverageβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5714",
+      "document": "JPX上場会社情報",
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済み。中期経営計画の公式資料、目標数値、戦略テーマは未確認です。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://hd.dowa.co.jp/ja/ir/strategy.html",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "ＤＯＷＡホールディングスの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://hd.dowa.co.jp/ja/ir/strategy.html",
+    "sourcePage": "公式IRページ応答確認: https://hd.dowa.co.jp/ja/ir/strategy.html / 探索時に確認した公式資料候補（詳細未抽出）: https://data.swcms.net/file/hd-dowa/dam/jcr:2a6865a5-d10a-47e4-8b34-786f46eabe76/140120260512527418.pdf",
+    "status": "corrected",
+    "reviewDecisionId": "review-5714-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:05:00.000Z",
+    "correctedAt": "2026-07-14T18:05:00.000Z"
+  },
+  {
+    "id": "correction-3632-20260714-source-coverage",
+    "companyCode": "3632",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "Coverageβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3632",
+      "document": "JPX上場会社情報",
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済み。中期経営計画の公式資料、目標数値、戦略テーマは未確認です。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://hd.gree.net/jp/ja/ir/library/library.html",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "グリーホールディングスの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://hd.gree.net/jp/ja/ir/library/library.html",
+    "sourcePage": "公式IRページ応答確認: https://hd.gree.net/jp/ja/ir/library/library.html",
+    "status": "corrected",
+    "reviewDecisionId": "review-3632-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:06:00.000Z",
+    "correctedAt": "2026-07-14T18:06:00.000Z"
+  },
+  {
+    "id": "correction-3626-20260714-source-coverage",
+    "companyCode": "3626",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "カバレッジβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3626",
+      "document": null,
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済みだが、中計または中計相当資料は未特定。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://www.tisi.jp/ir/finance/annual_report/",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "ＴＩＳの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://www.tisi.jp/ir/finance/annual_report/",
+    "sourcePage": "公式IRページ応答確認: https://www.tisi.jp/ir/finance/annual_report/",
+    "status": "corrected",
+    "reviewDecisionId": "review-3626-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:07:00.000Z",
+    "correctedAt": "2026-07-14T18:07:00.000Z"
+  },
+  {
+    "id": "correction-6082-20260714-source-coverage",
+    "companyCode": "6082",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "カバレッジβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6082",
+      "document": null,
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済みだが、中計または中計相当資料は未特定。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://ir.rideonexpresshd.co.jp/ja/library/results.html",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "ライドオンエクスプレスホールディングスの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://ir.rideonexpresshd.co.jp/ja/library/results.html",
+    "sourcePage": "公式IRページ応答確認: https://ir.rideonexpresshd.co.jp/ja/library/results.html",
+    "status": "corrected",
+    "reviewDecisionId": "review-6082-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:08:00.000Z",
+    "correctedAt": "2026-07-14T18:08:00.000Z"
+  },
+  {
+    "id": "correction-4011-20260714-source-coverage",
+    "companyCode": "4011",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "カバレッジβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4011",
+      "document": null,
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済みだが、中計または中計相当資料は未特定。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://www.headwaters.co.jp/ir/",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "ヘッドウォータースの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://www.headwaters.co.jp/ir/",
+    "sourcePage": "公式IRページ応答確認: https://www.headwaters.co.jp/ir/",
+    "status": "corrected",
+    "reviewDecisionId": "review-4011-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:09:00.000Z",
+    "correctedAt": "2026-07-14T18:09:00.000Z"
+  },
+  {
+    "id": "correction-4013-20260714-source-coverage",
+    "companyCode": "4013",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "カバレッジβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4013",
+      "document": null,
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済みだが、中計または中計相当資料は未特定。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://www.kinjiro-e.com/ir/results/",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "勤次郎の公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://www.kinjiro-e.com/ir/results/",
+    "sourcePage": "公式IRページ応答確認: https://www.kinjiro-e.com/ir/results/",
+    "status": "corrected",
+    "reviewDecisionId": "review-4013-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:10:00.000Z",
+    "correctedAt": "2026-07-14T18:10:00.000Z"
+  },
+  {
+    "id": "correction-4014-20260714-source-coverage",
+    "companyCode": "4014",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "カバレッジβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4014",
+      "document": null,
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済みだが、中計または中計相当資料は未特定。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://corp.karadanote.jp/ir/results/",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "カラダノートの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://corp.karadanote.jp/ir/results/",
+    "sourcePage": "公式IRページ応答確認: https://corp.karadanote.jp/ir/results/",
+    "status": "corrected",
+    "reviewDecisionId": "review-4014-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:11:00.000Z",
+    "correctedAt": "2026-07-14T18:11:00.000Z"
+  },
+  {
+    "id": "correction-4994-20260714-source-coverage",
+    "companyCode": "4994",
+    "fieldPath": "stage,tier,sourceUrl,document,planPublishedDate,lastVerifiedDate,summary,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "jpx_indexed",
+      "tier": "カバレッジβ",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4994",
+      "document": null,
+      "planPublishedDate": null,
+      "summary": "企業探索用。JPXで上場・市場・業種を確認済みだが、中計または中計相当資料は未特定。"
+    },
+    "after": {
+      "stage": "source_indexed",
+      "tier": "一次確認β",
+      "sourceUrl": "https://www.lamick.co.jp/ir/",
+      "document": "公式IRページ（一次確認）",
+      "planPublishedDate": null,
+      "summary": "一次確認β。公式IRページへの到達を確認済み。中期目標、主要数値、戦略テーマは未抽出で、原文突合は未実施です。"
+    },
+    "reason": "大成ラミックグループの公式IR導線と応答を確認し、一次確認βとして明示する。",
+    "sourceUrl": "https://www.lamick.co.jp/ir/",
+    "sourcePage": "公式IRページ応答確認: https://www.lamick.co.jp/ir/",
+    "status": "corrected",
+    "reviewDecisionId": "review-4994-20260714-source-coverage",
+    "detectedAt": "2026-07-14T17:12:00.000Z",
+    "correctedAt": "2026-07-14T18:12:00.000Z"
   }
 ]

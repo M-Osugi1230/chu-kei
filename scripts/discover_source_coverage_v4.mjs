@@ -5,10 +5,19 @@ import { execFileSync } from 'node:child_process';
 const ROOT = path.resolve('.');
 const BASE_SCRIPT = path.join(ROOT, 'scripts', 'discover_source_coverage_v3.mjs');
 const CURATED_PATH = path.join(ROOT, 'operations', 'research', 'source-coverage-50-curated-start-urls.json');
+const SUPPLEMENTAL_PATH = path.join(ROOT, 'operations', 'research', 'source-coverage-supplemental-start-urls.json');
 const TEMP_DIR = path.join(ROOT, 'artifacts');
 const TEMP_SCRIPT = path.join(TEMP_DIR, 'discover_source_coverage_v4.generated.mjs');
 
-const curated = JSON.parse(fs.readFileSync(CURATED_PATH, 'utf8'));
+const baseCurated = JSON.parse(fs.readFileSync(CURATED_PATH, 'utf8'));
+const supplemental = fs.existsSync(SUPPLEMENTAL_PATH)
+  ? JSON.parse(fs.readFileSync(SUPPLEMENTAL_PATH, 'utf8'))
+  : {};
+const curated = { ...baseCurated };
+for (const [code, urls] of Object.entries(supplemental)) {
+  curated[code] = [...new Set([...(curated[code] || []), ...(Array.isArray(urls) ? urls : [])])];
+}
+
 let source = fs.readFileSync(BASE_SCRIPT, 'utf8');
 source = source.replace(
   'const KNOWN_START_URLS = {',

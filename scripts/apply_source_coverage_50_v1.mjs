@@ -224,11 +224,13 @@ writeJson(REVIEW_PATH, reviews);
 writeJson(CORRECTION_PATH, corrections);
 
 const milestone = readJson(MILESTONE_PATH);
+const sourceCoverageRate = sourceConfirmedAfter / payload.companies.length;
 milestone.minimumSourceConfirmed = TARGET_SOURCE_CONFIRMED;
 milestone.minimumStructured = Math.max(milestone.minimumStructured || 0, structuredAfter);
-milestone.maximumCoverageBeta = payload.companies.length - TARGET_SOURCE_CONFIRMED;
+milestone.maximumCoverageBeta = coverageBetaAfter;
 milestone.absoluteBundleBudgetBytes = Math.max(milestone.absoluteBundleBudgetBytes || 0, BUNDLE_BUDGET_BYTES);
 milestone.targetSourceCoverageRate = TARGET_SOURCE_CONFIRMED / payload.companies.length;
+milestone.currentSourceCoverageRate = sourceCoverageRate;
 milestone.sourceCoverageTargetReachedAt = VERIFIED_DATE;
 writeJson(MILESTONE_PATH, milestone);
 
@@ -242,6 +244,7 @@ const report = {
   structuredBefore,
   structuredAfter,
   coverageBetaAfter,
+  currentSourceCoverageRate: sourceCoverageRate,
   appliedCount: applied.length,
   applied,
   bundleBeforeSha256: beforeManifest.sha256,
@@ -255,6 +258,7 @@ console.log(JSON.stringify({
   sourceConfirmedAfter,
   structuredAfter,
   coverageBetaAfter,
+  currentSourceCoverageRate: sourceCoverageRate,
   appliedCount: applied.length,
   bundleAfterCompressedBytes: outputManifest.compressedBytes,
   bundleBudgetBytes: milestone.absoluteBundleBudgetBytes,

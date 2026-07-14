@@ -91,13 +91,7 @@ const resolveConfig = () => {
     return { configPath, markerPath: STRUCTURED_EXPANSION_MARKER };
   }
 
-  if (!fs.existsSync(PATCH_DIR)) return null;
-  const candidates = fs.readdirSync(PATCH_DIR)
-    .filter(file => /^structured-expansion-batch-.*-config\.json$/.test(file))
-    .sort((left, right) => left.localeCompare(right, 'en', { numeric: true }));
-  return candidates.length
-    ? { configPath: path.join(PATCH_DIR, candidates.at(-1)), markerPath: null }
-    : null;
+  return null;
 };
 
 const readBundle = () => {
@@ -115,7 +109,7 @@ const readBundle = () => {
 const resolvedConfig = resolveConfig();
 const configPath = resolvedConfig?.configPath || null;
 if (!configPath) {
-  console.log('No structured expansion config found. Running the normal v43 validator only.');
+  console.log('No explicit structured expansion marker found. Running the normal v43 validator only.');
   runNode('scripts/validate_quality_v43.mjs');
   process.exit(0);
 }

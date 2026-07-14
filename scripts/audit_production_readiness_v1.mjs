@@ -71,7 +71,9 @@ const target = readJson(TARGET_PATH);
 if (target.schemaVersion !== 'production-quality-target-v1') throw new Error(`Unsupported target schema: ${target.schemaVersion}`);
 const { manifest, bundle } = readBundle();
 const approvalsByCode = productionApprovals();
-const referenceDate = new Date('2026-07-14T00:00:00Z');
+const referenceDateValue = process.env.QUALITY_AS_OF_DATE || new Date().toISOString().slice(0, 10);
+if (!/^\d{4}-\d{2}-\d{2}$/.test(referenceDateValue)) throw new Error(`Invalid QUALITY_AS_OF_DATE: ${referenceDateValue}`);
+const referenceDate = new Date(`${referenceDateValue}T00:00:00Z`);
 
 const rows = bundle.companies.map(company => {
   const code = String(company.code);

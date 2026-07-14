@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "core-evidence-repair-batch-01",
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "expectedCoreCount": 126,
+  "expectedFiveStarAfterApproval": 109,
+  "records": [
+    {
+      "code": "5803",
+      "name": "フジクラ",
+      "sourceUrl": "https://www.fujikura.co.jp/newsrelease/management/__icsFiles/afieldfile/2026/05/19/260519.pdf",
+      "document": "2028中期経営計画",
+      "planPublishedDate": "2026-05-19",
+      "verifiedDate": "2026-07-14",
+      "evidenceRefs": [
+        "2028中期経営計画 PDF p.23: 2028年度の売上高1兆6,000億円、営業利益3,150億円、ROE28.5%、ROIC21.6%。",
+        "同 PDF p.24: 2026〜2028年度累計の営業CF6,200億円、有利子負債等1,300億円、戦略・成長・その他投資5,300億円＋α、株主還元2,200億円＋α、配当性向40%、自己資本比率50%維持。"
+      ],
+      "reason": "公式中期経営計画PDFで財務目標とキャピタルアロケーションのページを独立に確認し、既存coreのページ証跡不足を補修する。"
+    },
+    {
+      "code": "6645",
+      "name": "オムロン",
+      "sourceUrl": "https://www.omron.com/jp/ja/ir/irlib/pdfs/20251107_SF-2nd-Stage_presentation_j.pdf",
+      "document": "長期ビジョン Shaping the Future 2030 2nd Stage",
+      "planPublishedDate": "2025-11-07",
+      "verifiedDate": "2026-07-14",
+      "evidenceRefs": [
+        "Shaping the Future 2030 2nd Stage説明資料 PDF p.23: 成長投資を最優先し、DOE3%程度をベースとする配当と余剰資金による機動的な自己株式取得を基本方針とする。",
+        "同 PDF p.25: 5年間累計10,500億円のキャピタルアロケーション、事業再投資8,000億円、注力事業への70%配分、制御機器事業への優先投資、M&A方針。",
+        "同 PDF p.26: FY2030目標は売上CAGR7%、営業利益率12%・営業利益1,400億円水準、ROE10〜12%、ROIC8〜10%、EPS成長率約20%、データ・サービス売上比率15%。"
+      ],
+      "reason": "公式長期ビジョン説明資料で資本配分、還元方針、2030年度財務目標のページを確認し、既存coreのページ証跡不足を補修する。"
+    },
+    {
+      "code": "6752",
+      "name": "パナソニック ホールディングス",
+      "sourceUrl": "https://holdings.panasonic/content/dam/holdings/jp/ja/corporate/investors/pdf/20260512_group_strategy_j.pdf",
+      "document": "グループ戦略説明会資料",
+      "planPublishedDate": "2026-05-12",
+      "verifiedDate": "2026-07-14",
+      "evidenceRefs": [
+        "グループ戦略説明会資料 PDF p.3: 2026年度末までに課題事業ゼロを確実に実行し、産業デバイス・メカトロニクス、キッチン、テレビ等の方向づけと再建事業の収益改善を進める。",
+        "同 PDF p.6: 調整後営業利益を2026年度6,000億円から2028年度7,500億円以上へ拡大し、AIインフラを支える事業で1,300億円の増益を目指す。",
+        "同 PDF p.11: AIインフラを支える事業の2028年度目標は売上高約1.4兆円、調整後営業利益2,900億円、2026〜2028年度累計投資額約5,000億円。"
+      ],
+      "reason": "公式グループ戦略説明資料で事業ポートフォリオ改革、利益ロードマップ、AIインフラ事業の目標・投資額をページ単位で確認し、既存coreのページ証跡不足を補修する。"
+    }
+  ]
+}

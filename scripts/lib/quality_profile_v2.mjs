@@ -1,4 +1,4 @@
-export const QUALITY_PROFILE_VERSION = '2.1';
+export const QUALITY_PROFILE_VERSION = '2.2';
 
 export const QUALITY_CHECK_KEYS = [
   'officialSource',
@@ -29,8 +29,8 @@ export const QUALITY_CHECK_LABELS = {
   structuredAnalysis: '主要論点構造化済み',
   metricExtraction: '数値・方針抽出済み',
   progressConnected: '進捗実績接続あり',
-  humanReviewed: '人手レビュー済み',
-  doubleChecked: 'ダブルチェック済み',
+  humanReviewed: '個別レビュー済み',
+  doubleChecked: '独立再検証済み',
 };
 
 const EXTRACTION_STAGES = new Set(['core', 'detailed_extracted']);
@@ -60,8 +60,8 @@ export function buildQualityChecks(company) {
     structuredAnalysis: hasStructuredAnalysis(company),
     metricExtraction: hasMetricExtraction(company),
     progressConnected: Boolean(company.flags?.progress),
-    humanReviewed: company.stage === 'core',
-    doubleChecked: company.stage === 'core',
+    humanReviewed: company.productionApproval?.reviewApproved === true,
+    doubleChecked: company.productionApproval?.independentDoubleCheck === true,
   };
 }
 
@@ -95,8 +95,8 @@ export function qualityStars(company, checks, score) {
 }
 
 export function qualityLabel(company, stars) {
-  if (stars === 5) return '最高品質（進捗・証跡接続済み）';
-  if (company.stage === 'core') return '本番品質（証跡補修対象）';
+  if (stars === 5) return '最高品質（進捗・証跡・独立再検証済み）';
+  if (company.stage === 'core') return '本番品質（証跡・承認補修対象）';
   if (company.stage === 'detailed_extracted' && stars === 4) return '詳細抽出済みβ（証跡充足）';
   if (company.stage === 'detailed_extracted') return '詳細抽出済みβ';
   if (company.stage === 'source_indexed') return '一次確認β';

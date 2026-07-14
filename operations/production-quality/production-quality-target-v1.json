@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "production-quality-target-v1",
+  "targetProductionCompanies": 1000,
+  "companyUniverse": 1200,
+  "qualityPrinciple": "公式一次資料・比較可能な構造化・ページ証跡・進捗接続・個別レビュー・独立再検証を満たした企業だけを本番品質として扱う",
+  "automaticPromotionAllowed": false,
+  "requiredMachineChecks": [
+    "officialSource",
+    "publicationDate",
+    "pageEvidence",
+    "structuredAnalysis",
+    "metricExtraction",
+    "progressConnected",
+    "freshness"
+  ],
+  "requiredApprovalChecks": [
+    "productionReviewApproved",
+    "independentDoubleCheckApproved"
+  ],
+  "freshnessDays": 180,
+  "minimumPageEvidenceRefs": 2,
+  "minimumProductionApprovals": 2,
+  "reviewerIndependenceRequired": true,
+  "targetSetAt": "2026-07-14",
+  "notes": [
+    "stage名や品質ラベルの一括置換による数合わせは禁止する",
+    "未開示項目は未開示として記録し、推計値で要件を満たしてはならない",
+    "既存coreも同じ監査対象とし、要件不足は補修キューへ残す",
+    "機械要件を満たしても個別承認と独立再検証なしでは昇格しない"
+  ]
+}

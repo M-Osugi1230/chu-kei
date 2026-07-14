@@ -8,6 +8,7 @@
     "quality:v43": "node scripts/run_quality_pipeline_v43.mjs",
     "quality:local": "node scripts/run_local_quality_gate.mjs",
     "quality:local:quick": "node scripts/run_local_quality_gate.mjs --quick",
+    "quality:production:audit": "node scripts/audit_production_readiness_v1.mjs",
     "source:coverage:queue": "node scripts/generate_source_coverage_queue_v1.mjs",
     "source:coverage:discover": "node scripts/discover_source_coverage_v4.mjs",
     "source:coverage:export": "node scripts/export_source_coverage_candidates_v1.mjs",

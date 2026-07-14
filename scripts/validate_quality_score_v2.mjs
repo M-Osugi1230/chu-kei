@@ -92,10 +92,19 @@ check(
     .filter(company => company.quality.stars === 5)
     .every(company => company.quality.checkMask === (1 << QUALITY_CHECK_KEYS.length) - 1),
 );
+const fiveStarCore = companies.filter(company => company.stage === 'core' && company.quality.stars === 5);
 check(
-  'core is not automatically five stars',
-  companies.filter(company => company.stage === 'core' && company.quality.stars === 5).length < 30,
-  `five-star-core=${companies.filter(company => company.stage === 'core' && company.quality.stars === 5).length}`,
+  'five-star core requires explicit production approval metadata',
+  fiveStarCore.every(company => company.productionApproval?.reviewApproved === true
+    && company.productionApproval?.independentDoubleCheck === true
+    && company.productionApproval?.approvals >= 2
+    && Array.isArray(company.productionApproval?.reviewers)
+    && new Set(company.productionApproval.reviewers).size >= 2),
+  `five-star-core=${fiveStarCore.length}`,
+);
+check(
+  'non-core companies cannot carry production approval metadata',
+  companies.filter(company => company.stage !== 'core').every(company => !Object.hasOwn(company, 'productionApproval')),
 );
 check(
   'source-indexed remains two stars',

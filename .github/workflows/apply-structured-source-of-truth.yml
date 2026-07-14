@@ -6,7 +6,17 @@ on:
       - main
     paths:
       - 'operations/patches/structured-expansion-batch-*-config.json'
+      - 'operations/production-quality/**'
+      - 'scripts/audit_production_readiness_v1.mjs'
+      - 'scripts/apply_core_approval_batch_v1.mjs'
+      - 'scripts/apply_production_approval_ledger_v1.mjs'
+      - 'scripts/apply_production_promotion_v1.mjs'
+      - 'scripts/sync_production_approval_metadata_v1.mjs'
+      - 'scripts/apply_structured_expansion_ci_v1.mjs'
+      - 'scripts/lib/quality_profile_v2.mjs'
+      - 'scripts/validate_quality_score_v2.mjs'
       - 'scripts/apply_final200_ci_v1.mjs'
+      - 'scripts/run_quality_pipeline_v43.mjs'
       - 'package.json'
   workflow_dispatch:
     inputs:
@@ -69,5 +79,5 @@ jobs:
             echo "No generated changes to commit"
             exit 0
           fi
-          git commit -m "data: ソース確認済み200社を全件構造化"
+          git commit -m "quality: 本番品質1000社の昇格監査を更新"
           git push origin "HEAD:${TARGET_BRANCH}"

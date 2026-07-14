@@ -6,6 +6,7 @@ import zlib from 'node:zlib';
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const ARTIFACT_DIR = path.join(ROOT, 'artifacts');
+const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
 const REPORT_PATH = path.join(ARTIFACT_DIR, 'production-repair-queue-validation-v1.json');
 const checks = [];
 const issues = [];
@@ -56,12 +57,13 @@ try {
 } catch (error) {
   check('production repair queue JSON readable', false, error.message);
 }
+const milestone = JSON.parse(fs.readFileSync(MILESTONE_PATH, 'utf8'));
 check('production repair queue CSV exists', fs.existsSync(path.join(ARTIFACT_DIR, 'production-repair-queue-v1.csv')));
 
 const core = data.companies.filter(company => company.stage === 'core');
 const expected = core.map(company => ({ code: company.code, gaps: gaps(company), priority: priority(gaps(company)), stars: company.quality?.stars })).filter(item => item.gaps.length > 0);
 const actual = queueReport.items || [];
-check('core company total remains 30', core.length === 30, `actual=${core.length}`);
+check(`core company total matches milestone ${milestone.expectedCore}`, core.length === milestone.expectedCore, `actual=${core.length}`);
 check('repair queue contains every incomplete core company', actual.length === expected.length, `actual=${actual.length}, expected=${expected.length}`);
 check('repair queue codes unique', new Set(actual.map(item => item.code)).size === actual.length);
 check('repair queue contains only core companies', actual.every(item => core.some(company => company.code === item.code)));
@@ -75,12 +77,13 @@ check('repair queue priorities match policy', actual.every(item => {
 }));
 check('five-star core excluded from repair queue', actual.every(item => item.qualityStars !== 5));
 check('all non-five-star core records are queued', core.filter(company => company.quality?.stars !== 5).every(company => actual.some(item => item.code === company.code)));
+check('summary core count matches milestone', queueReport.summary?.coreCompanies === milestone.expectedCore, `summary=${queueReport.summary?.coreCompanies}`);
 check('summary queue count matches items', queueReport.summary?.repairQueue === actual.length);
 check('summary gap counts are dynamic', Number.isInteger(queueReport.summary?.publicationDateMissing) && Number.isInteger(queueReport.summary?.pageEvidenceMissing) && Number.isInteger(queueReport.summary?.progressMissing));
 check('no company or plan recommendation language', !['おすすめ銘柄', '買い推奨', '勝率'].some(term => JSON.stringify(queueReport).includes(term)));
 
 fs.mkdirSync(ARTIFACT_DIR, { recursive: true });
-const report = { version: 'production-repair-queue-validation-v1', checkedAt: new Date().toISOString(), summary: queueReport.summary, passed: checks.filter(item => item.ok).length, total: checks.length, allPassed: issues.length === 0, checks, issues };
+const report = { version: 'production-repair-queue-validation-v1', checkedAt: new Date().toISOString(), milestoneCore: milestone.expectedCore, summary: queueReport.summary, passed: checks.filter(item => item.ok).length, total: checks.length, allPassed: issues.length === 0, checks, issues };
 fs.writeFileSync(REPORT_PATH, `${JSON.stringify(report, null, 2)}\n`);
 for (const item of checks) console.log(`${item.ok ? 'PASS' : 'FAIL'} ${item.name}${item.detail ? `: ${item.detail}` : ''}`);
 console.log(`\n${report.passed}/${report.total} checks passed`);

@@ -7,7 +7,10 @@ import { execFileSync } from 'node:child_process';
 const ROOT = path.resolve('.');
 const PATCH_DIR = path.join(ROOT, 'operations', 'patches');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
-const SOURCE_COVERAGE_MARKER = path.join(ROOT, 'operations', 'source-coverage', 'run-50-percent.json');
+const SOURCE_COVERAGE_MARKERS = [
+  path.join(ROOT, 'operations', 'source-coverage', 'run-source-coverage.json'),
+  path.join(ROOT, 'operations', 'source-coverage', 'run-50-percent.json'),
+];
 const SOURCE_DISCOVERY_REPORT = path.join(ROOT, 'operations', 'research', 'source-coverage-50-discovery.json');
 
 const runNode = (script, env = {}, { allowFailure = false } = {}) => {
@@ -27,12 +30,14 @@ const runNode = (script, env = {}, { allowFailure = false } = {}) => {
 };
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+const firstExisting = paths => paths.find(file => fs.existsSync(file)) || null;
+const sourceCoverageMarker = firstExisting(SOURCE_COVERAGE_MARKERS);
 
 const shouldRunSourceCoverage = process.env.GITHUB_WORKFLOW === 'Apply Structured Source of Truth'
-  && fs.existsSync(SOURCE_COVERAGE_MARKER);
+  && Boolean(sourceCoverageMarker);
 
 if (shouldRunSourceCoverage) {
-  const sourceRun = readJson(SOURCE_COVERAGE_MARKER);
+  const sourceRun = readJson(sourceCoverageMarker);
   if (sourceRun.schemaVersion !== 'source-coverage-run-v1') {
     throw new Error(`Unsupported source coverage run schema: ${sourceRun.schemaVersion}`);
   }
@@ -55,8 +60,8 @@ if (shouldRunSourceCoverage) {
       SOURCE_COVERAGE_BUNDLE_BUDGET: String(sourceRun.bundleBudgetBytes || 196608),
       SOURCE_VERIFIED_DATE: String(sourceRun.verifiedDate),
     });
-    fs.rmSync(SOURCE_COVERAGE_MARKER);
-    console.log('Source coverage marker consumed after successful application.');
+    fs.rmSync(sourceCoverageMarker);
+    console.log(`Source coverage marker consumed: ${path.relative(ROOT, sourceCoverageMarker)}`);
   } else {
     console.warn(`Source coverage remains pending: verified=${discovery?.verifiedCount ?? 0}, needed=${discovery?.needed ?? sourceRun.targetSourceConfirmed}.`);
     console.warn('The canonical bundle is unchanged; discovery diagnostics will be committed for the next refinement.');

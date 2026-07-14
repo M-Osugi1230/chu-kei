@@ -55,6 +55,9 @@ if (isApplyWorkflow && fs.existsSync(sourceNormalizationMarker)) {
 runNode('scripts/apply_structured_expansion_ci_v1.mjs');
 runNode('scripts/sync_production_approval_metadata_v1.mjs');
 runNode('scripts/audit_production_readiness_v1.mjs');
-if (isApplyWorkflow) runNode('scripts/apply_production_promotion_v1.mjs');
+if (isApplyWorkflow) {
+  runNode('scripts/apply_production_promotion_v1.mjs');
+  runNode('scripts/apply_core_approval_batch_v1.mjs');
+}
 runNode('scripts/sync_production_approval_metadata_v1.mjs');
 runNode('scripts/audit_production_readiness_v1.mjs');

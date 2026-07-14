@@ -14,6 +14,7 @@ const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const REPORT_PATH = path.join(ROOT, 'artifacts', 'search-filter-contract-report-v1.json');
 const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
+// The expected search corpus size follows the reviewed coverage milestone, never a hard-coded company count.
 const checks = [];
 const issues = [];
 const check = (name, ok, detail = '') => { checks.push({ name, ok, detail }); if (!ok) issues.push({ name, detail }); };

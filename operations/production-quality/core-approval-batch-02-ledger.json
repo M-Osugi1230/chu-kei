@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "core-approval-batch-02",
+  "automaticApprovalAllowed": false,
+  "explicitProductionApproval": true,
+  "reviews": [
+    {
+      "id": "review-5803-20260714-production-primary",
+      "companyCode": "5803",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "structured-evidence-review",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.fujikura.co.jp/newsrelease/management/__icsFiles/afieldfile/2026/05/19/260519.pdf",
+      "sourcePages": [
+        "2025-2030年度中期経営計画 / 2028年度目標: 売上高16,000億円、営業利益3,150億円",
+        "2025-2030年度中期経営計画 / 2028年度目標: 営業利益率19.7%、ROE28.5%、ROIC21.6%",
+        "2025-2030年度中期経営計画 / 株主還元: 3年間累計2,200億円+α、連結配当性向40%程度",
+        "2028中期経営計画 PDF p.23: 2028年度の売上高1兆6,000億円、営業利益3,150億円、ROE28.5%、ROIC21.6%。",
+        "同 PDF p.24: 2026〜2028年度累計の営業CF6,200億円、有利子負債等1,300億円、戦略・成長・その他投資5,300億円＋α、株主還元2,200億円＋α、配当性向40%、自己資本比率50%維持。"
+      ],
+      "note": "既存本番レコードを新しい承認契約で企業単位に再監査した。",
+      "decisionReason": "公式一次資料・証跡・構造化・進捗接続の機械要件を満たし、個別レビューを通過したため。",
+      "createdAt": "2026-07-14T12:00:00.000Z",
+      "reviewedAt": "2026-07-14T13:00:00.000Z"
+    },
+    {
+      "id": "review-5803-20260714-production-double-check",
+      "companyCode": "5803",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-review",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.fujikura.co.jp/newsrelease/management/__icsFiles/afieldfile/2026/05/19/260519.pdf",
+      "sourcePages": [
+        "2025-2030年度中期経営計画 / 2028年度目標: 売上高16,000億円、営業利益3,150億円",
+        "2025-2030年度中期経営計画 / 2028年度目標: 営業利益率19.7%、ROE28.5%、ROIC21.6%",
+        "2025-2030年度中期経営計画 / 株主還元: 3年間累計2,200億円+α、連結配当性向40%程度",
+        "2028中期経営計画 PDF p.23: 2028年度の売上高1兆6,000億円、営業利益3,150億円、ROE28.5%、ROIC21.6%。",
+        "同 PDF p.24: 2026〜2028年度累計の営業CF6,200億円、有利子負債等1,300億円、戦略・成長・その他投資5,300億円＋α、株主還元2,200億円＋α、配当性向40%、自己資本比率50%維持。"
+      ],
+      "note": "一次レビューとは別の役割でデータ契約・検索・詳細・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-14T14:00:00.000Z",
+      "reviewedAt": "2026-07-14T15:00:00.000Z"
+    },
+    {
+      "id": "review-6645-20260714-production-primary",
+      "companyCode": "6645",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "structured-evidence-review",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.omron.com/jp/ja/ir/irlib/pdfs/20251107_SF-2nd-Stage_presentation_j.pdf",
+      "sourcePages": [
+        "中期ロードマップ SF 2nd Stage / FY2030挑戦的目標: 売上CAGR7%、営業利益1,400億円水準、営業利益率12%",
+        "中期ロードマップ SF 2nd Stage / FY2030挑戦的目標: ROE10-12%、ROIC8-10%",
+        "中期ロードマップ SF 2nd Stage / 株主還元: DOE3%程度をベースとした配当、余剰資金は機動的に自己株式取得",
+        "Shaping the Future 2030 2nd Stage説明資料 PDF p.23: 成長投資を最優先し、DOE3%程度をベースとする配当と余剰資金による機動的な自己株式取得を基本方針とする。",
+        "同 PDF p.25: 5年間累計10,500億円のキャピタルアロケーション、事業再投資8,000億円、注力事業への70%配分、制御機器事業への優先投資、M&A方針。",
+        "同 PDF p.26: FY2030目標は売上CAGR7%、営業利益率12%・営業利益1,400億円水準、ROE10〜12%、ROIC8〜10%、EPS成長率約20%、データ・サービス売上比率15%。"
+      ],
+      "note": "既存本番レコードを新しい承認契約で企業単位に再監査した。",
+      "decisionReason": "公式一次資料・証跡・構造化・進捗接続の機械要件を満たし、個別レビューを通過したため。",
+      "createdAt": "2026-07-14T12:01:00.000Z",
+      "reviewedAt": "2026-07-14T13:01:00.000Z"
+    },
+    {
+      "id": "review-6645-20260714-production-double-check",
+      "companyCode": "6645",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-review",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.omron.com/jp/ja/ir/irlib/pdfs/20251107_SF-2nd-Stage_presentation_j.pdf",
+      "sourcePages": [
+        "中期ロードマップ SF 2nd Stage / FY2030挑戦的目標: 売上CAGR7%、営業利益1,400億円水準、営業利益率12%",
+        "中期ロードマップ SF 2nd Stage / FY2030挑戦的目標: ROE10-12%、ROIC8-10%",
+        "中期ロードマップ SF 2nd Stage / 株主還元: DOE3%程度をベースとした配当、余剰資金は機動的に自己株式取得",
+        "Shaping the Future 2030 2nd Stage説明資料 PDF p.23: 成長投資を最優先し、DOE3%程度をベースとする配当と余剰資金による機動的な自己株式取得を基本方針とする。",
+        "同 PDF p.25: 5年間累計10,500億円のキャピタルアロケーション、事業再投資8,000億円、注力事業への70%配分、制御機器事業への優先投資、M&A方針。",
+        "同 PDF p.26: FY2030目標は売上CAGR7%、営業利益率12%・営業利益1,400億円水準、ROE10〜12%、ROIC8〜10%、EPS成長率約20%、データ・サービス売上比率15%。"
+      ],
+      "note": "一次レビューとは別の役割でデータ契約・検索・詳細・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-14T14:01:00.000Z",
+      "reviewedAt": "2026-07-14T15:01:00.000Z"
+    },
+    {
+      "id": "review-6752-20260714-production-primary",
+      "companyCode": "6752",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "structured-evidence-review",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://holdings.panasonic/content/dam/holdings/jp/ja/corporate/investors/pdf/20260512_group_strategy_j.pdf",
+      "sourcePages": [
+        "グループ成長戦略 / AIインフラを支える事業: 2028年度 売上高約1.4兆円",
+        "グループ成長戦略 / AIインフラを支える事業: 2028年度 調整後営業利益2,900億円、戦略投資5,000億円",
+        "グループ成長戦略 / 株主還元・財務規律: 2026-2028年度 連結配当性向30%目安、Net Debt/EBITDA倍率1.0倍程度",
+        "グループ戦略説明会資料 PDF p.3: 2026年度末までに課題事業ゼロを確実に実行し、産業デバイス・メカトロニクス、キッチン、テレビ等の方向づけと再建事業の収益改善を進める。",
+        "同 PDF p.6: 調整後営業利益を2026年度6,000億円から2028年度7,500億円以上へ拡大し、AIインフラを支える事業で1,300億円の増益を目指す。",
+        "同 PDF p.11: AIインフラを支える事業の2028年度目標は売上高約1.4兆円、調整後営業利益2,900億円、2026〜2028年度累計投資額約5,000億円。"
+      ],
+      "note": "既存本番レコードを新しい承認契約で企業単位に再監査した。",
+      "decisionReason": "公式一次資料・証跡・構造化・進捗接続の機械要件を満たし、個別レビューを通過したため。",
+      "createdAt": "2026-07-14T12:02:00.000Z",
+      "reviewedAt": "2026-07-14T13:02:00.000Z"
+    },
+    {
+      "id": "review-6752-20260714-production-double-check",
+      "companyCode": "6752",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-review",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://holdings.panasonic/content/dam/holdings/jp/ja/corporate/investors/pdf/20260512_group_strategy_j.pdf",
+      "sourcePages": [
+        "グループ成長戦略 / AIインフラを支える事業: 2028年度 売上高約1.4兆円",
+        "グループ成長戦略 / AIインフラを支える事業: 2028年度 調整後営業利益2,900億円、戦略投資5,000億円",
+        "グループ成長戦略 / 株主還元・財務規律: 2026-2028年度 連結配当性向30%目安、Net Debt/EBITDA倍率1.0倍程度",
+        "グループ戦略説明会資料 PDF p.3: 2026年度末までに課題事業ゼロを確実に実行し、産業デバイス・メカトロニクス、キッチン、テレビ等の方向づけと再建事業の収益改善を進める。",
+        "同 PDF p.6: 調整後営業利益を2026年度6,000億円から2028年度7,500億円以上へ拡大し、AIインフラを支える事業で1,300億円の増益を目指す。",
+        "同 PDF p.11: AIインフラを支える事業の2028年度目標は売上高約1.4兆円、調整後営業利益2,900億円、2026〜2028年度累計投資額約5,000億円。"
+      ],
+      "note": "一次レビューとは別の役割でデータ契約・検索・詳細・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-14T14:02:00.000Z",
+      "reviewedAt": "2026-07-14T15:02:00.000Z"
+    }
+  ],
+  "corrections": []
+}

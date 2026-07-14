@@ -66,12 +66,24 @@ const ageDays = (date, reference) => {
   if (!date || Number.isNaN(Date.parse(date))) return null;
   return Math.floor((reference.getTime() - new Date(`${date}T00:00:00Z`).getTime()) / 86400000);
 };
+const japanDate = instant => {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(instant);
+  const values = Object.fromEntries(parts.filter(part => part.type !== 'literal').map(part => [part.type, part.value]));
+  return `${values.year}-${values.month}-${values.day}`;
+};
 
 const target = readJson(TARGET_PATH);
 if (target.schemaVersion !== 'production-quality-target-v1') throw new Error(`Unsupported target schema: ${target.schemaVersion}`);
 const { manifest, bundle } = readBundle();
 const approvalsByCode = productionApprovals();
-const referenceDate = new Date('2026-07-14T00:00:00Z');
+const referenceDateValue = process.env.QUALITY_AS_OF_DATE || japanDate(new Date());
+if (!/^\d{4}-\d{2}-\d{2}$/.test(referenceDateValue)) throw new Error(`Invalid QUALITY_AS_OF_DATE: ${referenceDateValue}`);
+const referenceDate = new Date(`${referenceDateValue}T00:00:00Z`);
 
 const rows = bundle.companies.map(company => {
   const code = String(company.code);

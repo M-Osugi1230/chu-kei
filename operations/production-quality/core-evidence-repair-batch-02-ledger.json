@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "core-evidence-repair-batch-02",
+  "automaticApprovalAllowed": false,
+  "reviews": [
+    {
+      "id": "review-6857-20260714-core-evidence",
+      "companyCode": "6857",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "source-research-agent",
+      "reviewer": "quality-evidence-agent",
+      "sourceUrl": "https://www.advantest.com/document/ja/investors/ir-library/briefing/J_MLTP3_240625_slide.pdf",
+      "sourcePages": [
+        "中長期経営方針MTP3説明資料 PDF p.30: FY2024〜FY2026平均の売上高5,600〜7,000億円、営業利益率22〜28%、当期利益930〜1,470億円、ROIC18〜28%、EPS127〜202円。",
+        "同 PDF p.33: 研究開発費約2,100億円、設備投資約600億円、戦略投資約1,000億円、年間配当30円を下限とし、MTP3期間累計の総還元性向50%以上。",
+        "同 PDF p.34: 研究開発費控除前営業CF6,000億円以上、成長投資約1,600億円、株主還元1,400億円以上、期末現金1,000〜1,200億円のキャピタルアロケーション。"
+      ],
+      "note": "既存の本番区分は変更せず、公式一次資料に基づくページ証跡・資料公表日・出典導線を補修し、別確認者レビューを継続する。",
+      "decisionReason": "公式中長期経営方針PDFで財務レンジ、成長投資、株主還元、キャピタルアロケーションをページ単位で確認し、既存coreのページ証跡不足を補修する。",
+      "createdAt": "2026-07-14T16:00:00.000Z",
+      "reviewedAt": "2026-07-14T16:10:00.000Z"
+    },
+    {
+      "id": "review-7013-20260714-core-evidence",
+      "companyCode": "7013",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "source-research-agent",
+      "reviewer": "quality-evidence-agent",
+      "sourceUrl": "https://www.ihi.co.jp/ir/library/management_plan/_cms_conf01/__icsFiles/afieldfile/2026/05/08/FY2026-management_1.pdf",
+      "sourcePages": [
+        "中長期の方向性説明資料 PDF p.11: FY2026〜FY2028の営業利益率10〜13%、累計営業CF3,500億円、累計投資6,500億円、FY2029〜FY2031の営業利益率13%以上・累計営業CF7,000億円以上、FY2032〜FY2034の営業利益率15%以上・累計営業CF1兆円以上。",
+        "同 PDF p.12: 生産能力・サプライチェーン強化、イノベーション、DX、アライアンス、事業ポートフォリオ改革を含む戦略的投資方針。"
+      ],
+      "note": "既存の本番区分は変更せず、公式一次資料に基づくページ証跡・資料公表日・出典導線を補修し、別確認者レビューを継続する。",
+      "decisionReason": "公式IR資料で長期の収益性・営業CF・投資ロードマップと戦略的投資方針をページ単位で確認し、既存coreのページ証跡不足を補修する。",
+      "createdAt": "2026-07-14T16:01:00.000Z",
+      "reviewedAt": "2026-07-14T16:11:00.000Z"
+    },
+    {
+      "id": "review-6981-20260714-core-evidence",
+      "companyCode": "6981",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "source-research-agent",
+      "reviewer": "quality-evidence-agent",
+      "sourceUrl": "https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2024/1125/2411-j-speach.ashx?cvid=20241122063816000000&la=ja-jp",
+      "sourcePages": [
+        "中期方針2027説明会資料 PDF p.14: 2027年度の売上収益2兆円以上、営業利益率18%以上、税引後ROIC12%以上。",
+        "同 PDF p.53: 営業CF1.3兆円、設備投資6,800億円、戦略投資2,200億円、株主還元4,000億円、DOE中期目標5%のキャピタルアロケーション。"
+      ],
+      "note": "既存の本番区分は変更せず、公式一次資料に基づくページ証跡・資料公表日・出典導線を補修し、別確認者レビューを継続する。",
+      "decisionReason": "公式中期方針説明資料で2027年度財務目標とキャピタルアロケーションをページ単位で確認し、既存coreのページ証跡不足を補修する。",
+      "createdAt": "2026-07-14T16:02:00.000Z",
+      "reviewedAt": "2026-07-14T16:12:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-6857-20260714-core-evidence",
+      "companyCode": "6857",
+      "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+      "before": {
+        "sourceUrl": "https://www.advantest.com/document/ja/investors/ir-library/briefing/J_MLTP3_240625_slide.pdf",
+        "document": "第3期中期経営計画",
+        "planPublishedDate": "2024-06-25",
+        "lastVerifiedDate": "2026-07-10",
+        "evidenceRefs": [
+          "第3期中期経営計画 / 財務目標: FY2024-FY2026 平均売上高5,600-7,000億円",
+          "第3期中期経営計画 / 財務目標: 平均営業利益率22-28%、平均当期利益930-1,470億円、平均ROIC18-28%",
+          "第3期中期経営計画 / 株主還元: 3年間累計総還元性向50%以上、年間配当金30円を最低額とする方針"
+        ]
+      },
+      "after": {
+        "sourceUrl": "https://www.advantest.com/document/ja/investors/ir-library/briefing/J_MLTP3_240625_slide.pdf",
+        "document": "中長期経営方針 MTP3",
+        "planPublishedDate": "2024-06-25",
+        "lastVerifiedDate": "2026-07-15",
+        "evidenceRefs": [
+          "第3期中期経営計画 / 財務目標: FY2024-FY2026 平均売上高5,600-7,000億円",
+          "第3期中期経営計画 / 財務目標: 平均営業利益率22-28%、平均当期利益930-1,470億円、平均ROIC18-28%",
+          "第3期中期経営計画 / 株主還元: 3年間累計総還元性向50%以上、年間配当金30円を最低額とする方針",
+          "中長期経営方針MTP3説明資料 PDF p.30: FY2024〜FY2026平均の売上高5,600〜7,000億円、営業利益率22〜28%、当期利益930〜1,470億円、ROIC18〜28%、EPS127〜202円。",
+          "同 PDF p.33: 研究開発費約2,100億円、設備投資約600億円、戦略投資約1,000億円、年間配当30円を下限とし、MTP3期間累計の総還元性向50%以上。",
+          "同 PDF p.34: 研究開発費控除前営業CF6,000億円以上、成長投資約1,600億円、株主還元1,400億円以上、期末現金1,000〜1,200億円のキャピタルアロケーション。"
+        ]
+      },
+      "reason": "公式中長期経営方針PDFで財務レンジ、成長投資、株主還元、キャピタルアロケーションをページ単位で確認し、既存coreのページ証跡不足を補修する。",
+      "sourceUrl": "https://www.advantest.com/document/ja/investors/ir-library/briefing/J_MLTP3_240625_slide.pdf",
+      "sourcePage": "中長期経営方針MTP3説明資料 PDF p.30: FY2024〜FY2026平均の売上高5,600〜7,000億円、営業利益率22〜28%、当期利益930〜1,470億円、ROIC18〜28%、EPS127〜202円。 / 同 PDF p.33: 研究開発費約2,100億円、設備投資約600億円、戦略投資約1,000億円、年間配当30円を下限とし、MTP3期間累計の総還元性向50%以上。 / 同 PDF p.34: 研究開発費控除前営業CF6,000億円以上、成長投資約1,600億円、株主還元1,400億円以上、期末現金1,000〜1,200億円のキャピタルアロケーション。",
+      "status": "corrected",
+      "reviewDecisionId": "review-6857-20260714-core-evidence",
+      "detectedAt": "2026-07-14T16:00:00.000Z",
+      "correctedAt": "2026-07-14T16:15:00.000Z"
+    },
+    {
+      "id": "correction-7013-20260714-core-evidence",
+      "companyCode": "7013",
+      "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+      "before": {
+        "sourceUrl": "https://www.ihi.co.jp/ir/pdf/management_plan2026_Presentation_J.pdf",
+        "document": "経営概況（中長期に向けたロードマップ）",
+        "planPublishedDate": "2026-05-08",
+        "lastVerifiedDate": "2026-07-10",
+        "evidenceRefs": [
+          "経営概況（中長期に向けたロードマップ） / Phase2: 営業利益率10-13%、ROIC10%以上",
+          "経営概況（中長期に向けたロードマップ） / Phase3: 年平均売上成長率5%以上、営業利益率15%以上、ROIC13%以上",
+          "経営概況（中長期に向けたロードマップ） / 株主還元: Phase2中の累計総還元性向50%以上を目指す"
+        ]
+      },
+      "after": {
+        "sourceUrl": "https://www.ihi.co.jp/ir/library/management_plan/_cms_conf01/__icsFiles/afieldfile/2026/05/08/FY2026-management_1.pdf",
+        "document": "中長期の方向性",
+        "planPublishedDate": "2026-05-08",
+        "lastVerifiedDate": "2026-07-15",
+        "evidenceRefs": [
+          "経営概況（中長期に向けたロードマップ） / Phase2: 営業利益率10-13%、ROIC10%以上",
+          "経営概況（中長期に向けたロードマップ） / Phase3: 年平均売上成長率5%以上、営業利益率15%以上、ROIC13%以上",
+          "経営概況（中長期に向けたロードマップ） / 株主還元: Phase2中の累計総還元性向50%以上を目指す",
+          "中長期の方向性説明資料 PDF p.11: FY2026〜FY2028の営業利益率10〜13%、累計営業CF3,500億円、累計投資6,500億円、FY2029〜FY2031の営業利益率13%以上・累計営業CF7,000億円以上、FY2032〜FY2034の営業利益率15%以上・累計営業CF1兆円以上。",
+          "同 PDF p.12: 生産能力・サプライチェーン強化、イノベーション、DX、アライアンス、事業ポートフォリオ改革を含む戦略的投資方針。"
+        ]
+      },
+      "reason": "公式IR資料で長期の収益性・営業CF・投資ロードマップと戦略的投資方針をページ単位で確認し、既存coreのページ証跡不足を補修する。",
+      "sourceUrl": "https://www.ihi.co.jp/ir/library/management_plan/_cms_conf01/__icsFiles/afieldfile/2026/05/08/FY2026-management_1.pdf",
+      "sourcePage": "中長期の方向性説明資料 PDF p.11: FY2026〜FY2028の営業利益率10〜13%、累計営業CF3,500億円、累計投資6,500億円、FY2029〜FY2031の営業利益率13%以上・累計営業CF7,000億円以上、FY2032〜FY2034の営業利益率15%以上・累計営業CF1兆円以上。 / 同 PDF p.12: 生産能力・サプライチェーン強化、イノベーション、DX、アライアンス、事業ポートフォリオ改革を含む戦略的投資方針。",
+      "status": "corrected",
+      "reviewDecisionId": "review-7013-20260714-core-evidence",
+      "detectedAt": "2026-07-14T16:01:00.000Z",
+      "correctedAt": "2026-07-14T16:16:00.000Z"
+    },
+    {
+      "id": "correction-6981-20260714-core-evidence",
+      "companyCode": "6981",
+      "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+      "before": {
+        "sourceUrl": "https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2025/1201/2512-j-speach.ashx?cvid=20251204015848000000&la=ja-jp",
+        "document": "IR Day 2025 / 中期方針2027",
+        "planPublishedDate": "2025-12-01",
+        "lastVerifiedDate": "2026-07-10",
+        "evidenceRefs": [
+          "IR Day 2025 / 中期方針2027: 2027年度 売上高2兆円以上、営業利益率18%以上",
+          "IR Day 2025 / 中期方針2027: 2027年度 ROIC12%以上",
+          "IR Day 2025 / 株主還元: 株主還元4,000億円、DOEを中期的に5%へ引き上げる方針"
+        ]
+      },
+      "after": {
+        "sourceUrl": "https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2024/1125/2411-j-speach.ashx?cvid=20241122063816000000&la=ja-jp",
+        "document": "中期方針2027説明会資料",
+        "planPublishedDate": "2024-11-25",
+        "lastVerifiedDate": "2026-07-15",
+        "evidenceRefs": [
+          "IR Day 2025 / 中期方針2027: 2027年度 売上高2兆円以上、営業利益率18%以上",
+          "IR Day 2025 / 中期方針2027: 2027年度 ROIC12%以上",
+          "IR Day 2025 / 株主還元: 株主還元4,000億円、DOEを中期的に5%へ引き上げる方針",
+          "中期方針2027説明会資料 PDF p.14: 2027年度の売上収益2兆円以上、営業利益率18%以上、税引後ROIC12%以上。",
+          "同 PDF p.53: 営業CF1.3兆円、設備投資6,800億円、戦略投資2,200億円、株主還元4,000億円、DOE中期目標5%のキャピタルアロケーション。"
+        ]
+      },
+      "reason": "公式中期方針説明資料で2027年度財務目標とキャピタルアロケーションをページ単位で確認し、既存coreのページ証跡不足を補修する。",
+      "sourceUrl": "https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2024/1125/2411-j-speach.ashx?cvid=20241122063816000000&la=ja-jp",
+      "sourcePage": "中期方針2027説明会資料 PDF p.14: 2027年度の売上収益2兆円以上、営業利益率18%以上、税引後ROIC12%以上。 / 同 PDF p.53: 営業CF1.3兆円、設備投資6,800億円、戦略投資2,200億円、株主還元4,000億円、DOE中期目標5%のキャピタルアロケーション。",
+      "status": "corrected",
+      "reviewDecisionId": "review-6981-20260714-core-evidence",
+      "detectedAt": "2026-07-14T16:02:00.000Z",
+      "correctedAt": "2026-07-14T16:17:00.000Z"
+    }
+  ]
+}

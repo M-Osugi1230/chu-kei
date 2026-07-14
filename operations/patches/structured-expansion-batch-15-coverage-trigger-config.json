@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "structured-expansion-config-v2",
+  "batchId": "structured-expansion-batch-15-coverage-trigger",
+  "fromStage": "jpx_indexed",
+  "targetStage": "detailed_extracted",
+  "purpose": "Trigger the deterministic coverage and source-confirmation pipeline without changing an already structured company.",
+  "records": [
+    {
+      "code": "3288"
+    }
+  ]
+}

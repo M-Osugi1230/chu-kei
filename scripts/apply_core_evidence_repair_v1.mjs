@@ -119,7 +119,7 @@ for (const [index, record] of config.records.entries()) {
     companyCode: code,
     fromStage: 'core',
     targetStage: 'core',
-    status: 'approved',
+    status: 'in_review',
     checklist: {
       officialSource: true,
       publicationDate: true,
@@ -133,7 +133,7 @@ for (const [index, record] of config.records.entries()) {
     reviewer: 'quality-evidence-agent',
     sourceUrl: record.sourceUrl,
     sourcePages: record.evidenceRefs,
-    note: '既存の本番区分は変更せず、公式一次資料に基づくページ証跡・資料公表日・出典導線を補修する。',
+    note: '既存の本番区分は変更せず、公式一次資料に基づくページ証跡・資料公表日・出典導線を補修し、別確認者レビューを継続する。',
     decisionReason: record.reason,
     createdAt: `2026-07-14T16:${minute}:00.000Z`,
     reviewedAt: `2026-07-14T16:${String(index + 10).padStart(2, '0')}:00.000Z`,

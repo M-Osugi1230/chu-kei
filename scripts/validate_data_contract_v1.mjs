@@ -5,12 +5,17 @@ import { QUALITY_CHECK_KEYS, QUALITY_PROFILE_VERSION } from './lib/quality_profi
 
 const root = path.resolve('.');
 const dataDir = path.join(root, 'site', 'data');
+const milestonePath = path.join(root, 'operations', 'quality', 'coverage-milestone-v1.json');
 const checks = [];
 const issues = [];
 const check = (name, ok, detail = '') => {
   checks.push({ name, ok, detail });
   if (!ok) issues.push({ name, detail });
 };
+
+const milestone = fs.existsSync(milestonePath)
+  ? JSON.parse(fs.readFileSync(milestonePath, 'utf8'))
+  : { companyTotal: 570, progressRows: 149 };
 
 const schemaFiles = [
   'schemas/bundle-v1.schema.json',
@@ -45,7 +50,7 @@ const stages = new Set(['core', 'detailed_extracted', 'source_indexed', 'jpx_ind
 const isoPartial = value => value == null || value === '' || /^\d{4}(-\d{2})?(-\d{2})?$/.test(value);
 const isoDay = value => /^\d{4}-\d{2}-\d{2}$/.test(value || '');
 
-check('company count contract', companies.length === 570, `actual=${companies.length}`);
+check('company count contract', companies.length === milestone.companyTotal, `actual=${companies.length}, expected=${milestone.companyTotal}`);
 check(
   'company required fields',
   companies.every(company => company.code
@@ -146,7 +151,7 @@ for (const row of progress) {
   keys.add(key);
   if (!companyCodes.has(String(row.code))) orphan += 1;
 }
-check('progress count contract', progress.length === 149, `actual=${progress.length}`);
+check('progress count contract', progress.length === milestone.progressRows, `actual=${progress.length}, expected=${milestone.progressRows}`);
 check('progress required fields', badProgress === 0, `invalid=${badProgress}`);
 check('progress key unique', duplicate === 0, `duplicates=${duplicate}`);
 check('progress company reference', orphan === 0, `orphans=${orphan}`);
@@ -158,6 +163,7 @@ fs.mkdirSync('artifacts', { recursive: true });
 const report = {
   version: 'data-contract-v1',
   checkedAt: new Date().toISOString(),
+  milestone,
   passed: checks.filter(item => item.ok).length,
   total: checks.length,
   allPassed: issues.length === 0,

@@ -127,7 +127,7 @@ const currentProduction = byStage.core;
 const targetProduction = target.targetProductionCompanies;
 const report = {
   schemaVersion: 'production-readiness-report-v1',
-  generatedAt: new Date().toISOString(),
+  generatedAt: referenceDate.toISOString(),
   referenceDate: referenceDate.toISOString().slice(0, 10),
   bundleSha256: manifest.sha256,
   companyCount: rows.length,

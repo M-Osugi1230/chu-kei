@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-11",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "8129",
+      "sourceUrl": "https://ir.tohohd.co.jp/ja/plan/plan_pdf/main/0/link/260428mtp.pdf",
+      "document": "中期経営計画2026-2028『次代を翔ける』",
+      "sourcePublishedDate": "2026-04-28",
+      "verifiedDate": "2026-07-16",
+      "reason": "公式中期経営計画の成長・効率化戦略図に2025年度営業利益と2028年度目標が並記され、同一定義・同一単位で接続できるため。ROEと営業利益率は対応する基準実績が同じ図にないため接続しない。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 300,
+          "actualValue": 165,
+          "unit": "億円",
+          "sourcePage": "PDF p.9",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2026-2028 PDF p.9: 2025年度営業利益165億円",
+          "targetSource": "同 PDF p.9: 2028年度営業利益300億円以上",
+          "note": "目標下限300億円へ接続。M&A等によるアップサイドを含む可能性があり、数値比は達成確度を示さない。"
+        }
+      ]
+    },
+    {
+      "code": "9021",
+      "sourceUrl": "https://www.westjr.co.jp/company/info/plan/pdf/plan_2030.pdf",
+      "document": "JR西日本グループ 中期経営計画2030",
+      "sourcePublishedDate": "2026-04-30",
+      "verifiedDate": "2026-07-16",
+      "reason": "公式中期経営計画の財務KPI表に2025年度実績と2030年度目標が並記され、営業利益とEBITDAを同一定義・同一単位で接続できるため。ROIC・ROE・Net有利子負債/EBITDAは投資拡大に伴い目標方向が単純な改善比率と一致しないため接続しない。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2030",
+          "metric": "operatingProfit",
+          "targetValue": 2300,
+          "actualValue": 1980,
+          "unit": "億円",
+          "sourcePage": "PDF p.41",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2030 PDF p.41: 2025年度営業利益1,980億円",
+          "targetSource": "同 PDF p.41: 2030年度営業利益2,300億円",
+          "note": "同一公式財務KPI表の実績と目標を接続。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "EBITDA",
+          "targetValue": 4700,
+          "actualValue": 3759,
+          "unit": "億円",
+          "sourcePage": "PDF p.41",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2030 PDF p.41: 2025年度EBITDA3,759億円",
+          "targetSource": "同 PDF p.41: 2030年度EBITDA4,700億円",
+          "note": "会社資料のEBITDA定義を同一表内で接続。"
+        }
+      ]
+    },
+    {
+      "code": "9409",
+      "sourceUrl": "https://www.tv-asahihd.co.jp/ir_setex/data/2026/20260212_mgt_plan_material.pdf",
+      "document": "経営計画2026-2029",
+      "sourcePublishedDate": "2026-02-12",
+      "verifiedDate": "2026-07-16",
+      "reason": "公式経営計画の定量目標表に2025年度参考値と2029年度目標が並記され、連結売上高、営業利益、経常利益、親会社株主帰属当期純利益、ROEを同一定義・同一単位で接続できるため。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2029",
+          "metric": "revenue",
+          "targetValue": 4000,
+          "actualValue": 3360,
+          "unit": "億円",
+          "sourcePage": "PDF p.5",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "経営計画2026-2029 PDF p.5: 2025年度連結売上高参考値3,360億円",
+          "targetSource": "同 PDF p.5: 2029年度連結売上高4,000億円",
+          "note": "2025年度は資料上の参考値であり、確定実績ではないことを明示する。"
+        },
+        {
+          "fiscalYear": "FY2029",
+          "metric": "operatingProfit",
+          "targetValue": 330,
+          "actualValue": 240,
+          "unit": "億円",
+          "sourcePage": "PDF p.5",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "経営計画2026-2029 PDF p.5: 2025年度営業利益参考値240億円",
+          "targetSource": "同 PDF p.5: 2029年度営業利益330億円",
+          "note": "2025年度参考値と2029年度目標を同一公式表で接続。"
+        },
+        {
+          "fiscalYear": "FY2029",
+          "metric": "ordinaryProfit",
+          "targetValue": 430,
+          "actualValue": 320,
+          "unit": "億円",
+          "sourcePage": "PDF p.5",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "経営計画2026-2029 PDF p.5: 2025年度経常利益参考値320億円",
+          "targetSource": "同 PDF p.5: 2029年度経常利益430億円",
+          "note": "2025年度参考値と2029年度目標を同一公式表で接続。"
+        },
+        {
+          "fiscalYear": "FY2029",
+          "metric": "netIncome",
+          "targetValue": 380,
+          "actualValue": 280,
+          "unit": "億円",
+          "sourcePage": "PDF p.5",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "経営計画2026-2029 PDF p.5: 2025年度親会社株主帰属当期純利益参考値280億円",
+          "targetSource": "同 PDF p.5: 2029年度親会社株主帰属当期純利益380億円",
+          "note": "2025年度参考値と2029年度目標を同一公式表で接続。"
+        },
+        {
+          "fiscalYear": "FY2029",
+          "metric": "ROE",
+          "targetValue": 7,
+          "actualValue": 6.2,
+          "unit": "%",
+          "sourcePage": "PDF p.5",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "経営計画2026-2029 PDF p.5: 2025年度ROE参考値6.2%",
+          "targetSource": "同 PDF p.5: 2029年度ROE7%台",
+          "note": "『7%台』の下限7%へ接続。2030年代早期のROE8%目標とは分離する。"
+        }
+      ]
+    }
+  ]
+}

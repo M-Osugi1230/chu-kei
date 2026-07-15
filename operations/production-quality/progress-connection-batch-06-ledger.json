@@ -1,0 +1,351 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "progress-connection-batch-06",
+  "automaticApprovalAllowed": false,
+  "reviews": [
+    {
+      "id": "review-1801-20260715-progress-connect",
+      "companyCode": "1801",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "progress-quality-agent",
+      "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+      "sourcePages": [
+        "PDF p.5 / p.32",
+        "PDF p.5 / p.32",
+        "PDF p.5 / p.32",
+        "PDF p.5 / p.32"
+      ],
+      "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+      "decisionReason": "公式中期経営計画資料で2023年度実績と2026年度数値目標を確認し、グループ売上高・グループ営業利益・グループ純利益・ROEを同一定義と単位で接続できるため。",
+      "createdAt": "2026-07-15T01:00:00.000Z",
+      "reviewedAt": "2026-07-15T01:10:00.000Z"
+    },
+    {
+      "id": "review-1802-20260715-progress-connect",
+      "companyCode": "1802",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "progress-quality-agent",
+      "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+      "sourcePages": [
+        "PDF p.9（資料内p.8）",
+        "PDF p.9（資料内p.8）",
+        "PDF p.9（資料内p.8）",
+        "PDF p.9（資料内p.8）",
+        "PDF p.9（資料内p.8）"
+      ],
+      "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+      "decisionReason": "公式中期経営計画追補の同一経営指標表に2023年度実績と変更後目標が掲載され、営業利益・当期純利益・EPS・ROIC・ROEを同一定義と単位で接続できるため。",
+      "createdAt": "2026-07-15T01:01:00.000Z",
+      "reviewedAt": "2026-07-15T01:11:00.000Z"
+    },
+    {
+      "id": "review-1803-20260715-progress-connect",
+      "companyCode": "1803",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "progress-quality-agent",
+      "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
+      "sourcePages": [
+        "PDF p.28",
+        "PDF p.7 / p.28"
+      ],
+      "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+      "decisionReason": "公式中期経営計画の業績目標表と前中計振返り表により、2023年度実績と2026年度目標を確認し、当期純利益とROEを同一定義と単位で接続できるため。営業利益は基準実績が負値で単純進捗率が誤解を招くため採用しない。",
+      "createdAt": "2026-07-15T01:02:00.000Z",
+      "reviewedAt": "2026-07-15T01:12:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-1801-20260715-progress-connect",
+      "companyCode": "1801",
+      "fieldPath": "flags.progress,lastVerifiedDate,progress",
+      "before": {
+        "progressFlag": false,
+        "lastVerifiedDate": "2026-07-12",
+        "progressRows": []
+      },
+      "after": {
+        "progressFlag": true,
+        "lastVerifiedDate": "2026-07-15",
+        "progressRows": [
+          {
+            "code": "1801",
+            "fiscalYear": "FY2026",
+            "metric": "revenue",
+            "targetValue": 19500,
+            "actualValue": 17650,
+            "unit": "億円",
+            "progressRate": 90.5,
+            "source": "同 PDF p.32（資料内p.31）: 2026年度売上高19,500億円程度",
+            "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+            "sourcePage": "PDF p.5 / p.32",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "同じ公式計画資料の基準実績と目標を接続。『程度』を伴う目標であり、進捗率は参考値。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画 PDF p.5（資料内p.4）: 2023年度グループ売上高17,650億円"
+          },
+          {
+            "code": "1801",
+            "fiscalYear": "FY2026",
+            "metric": "operatingProfit",
+            "targetValue": 1200,
+            "actualValue": 265,
+            "unit": "億円",
+            "progressRate": 22.1,
+            "source": "同 PDF p.32（資料内p.31）: 2026年度グループ営業利益1,200億円",
+            "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+            "sourcePage": "PDF p.5 / p.32",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "同じ公式計画資料の基準実績と目標を接続。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画 PDF p.5（資料内p.4）: 2023年度グループ営業利益265億円"
+          },
+          {
+            "code": "1801",
+            "fiscalYear": "FY2026",
+            "metric": "netIncome",
+            "targetValue": 800,
+            "actualValue": 403,
+            "unit": "億円",
+            "progressRate": 50.4,
+            "source": "同 PDF p.32（資料内p.31）: 2026年度グループ純利益800億円",
+            "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+            "sourcePage": "PDF p.5 / p.32",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "同じ公式計画資料の基準実績と目標を接続。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画 PDF p.5（資料内p.4）: 2023年度グループ純利益403億円"
+          },
+          {
+            "code": "1801",
+            "fiscalYear": "FY2026",
+            "metric": "ROE",
+            "targetValue": 8.5,
+            "actualValue": 4.6,
+            "unit": "%",
+            "progressRate": 54.1,
+            "source": "同 PDF p.32（資料内p.31）: 2026年度ROE8.5%程度",
+            "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+            "sourcePage": "PDF p.5 / p.32",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "政策保有株式縮減が進んだ場合のROE10%想定とは分離し、中計の8.5%程度へ接続。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画 PDF p.5（資料内p.4）: 2023年度ROE4.6%"
+          }
+        ]
+      },
+      "reason": "公式中期経営計画資料で2023年度実績と2026年度数値目標を確認し、グループ売上高・グループ営業利益・グループ純利益・ROEを同一定義と単位で接続できるため。",
+      "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+      "sourcePage": "PDF p.5 / p.32 / PDF p.5 / p.32 / PDF p.5 / p.32 / PDF p.5 / p.32",
+      "status": "corrected",
+      "reviewDecisionId": "review-1801-20260715-progress-connect",
+      "detectedAt": "2026-07-15T01:00:00.000Z",
+      "correctedAt": "2026-07-15T01:20:00.000Z"
+    },
+    {
+      "id": "correction-1802-20260715-progress-connect",
+      "companyCode": "1802",
+      "fieldPath": "flags.progress,lastVerifiedDate,progress",
+      "before": {
+        "progressFlag": false,
+        "lastVerifiedDate": "2026-07-13",
+        "progressRows": []
+      },
+      "after": {
+        "progressFlag": true,
+        "lastVerifiedDate": "2026-07-15",
+        "progressRows": [
+          {
+            "code": "1802",
+            "fiscalYear": "FY2026",
+            "metric": "operatingProfit",
+            "targetValue": 1000,
+            "actualValue": 793,
+            "unit": "億円",
+            "progressRate": 79.3,
+            "source": "同 PDF p.9: 変更後の連結営業利益目標1,000億円以上",
+            "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+            "sourcePage": "PDF p.9（資料内p.8）",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "同一公式表の実績と変更後目標を接続。目標は下限値。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度連結営業利益793億円"
+          },
+          {
+            "code": "1802",
+            "fiscalYear": "FY2026",
+            "metric": "netIncome",
+            "targetValue": 1000,
+            "actualValue": 750,
+            "unit": "億円",
+            "progressRate": 75,
+            "source": "同 PDF p.9: 変更後目標1,000億円程度",
+            "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+            "sourcePage": "PDF p.9（資料内p.8）",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "同一公式表の実績と変更後目標を接続。『程度』を伴う目標。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度親会社株主帰属当期純利益750億円"
+          },
+          {
+            "code": "1802",
+            "fiscalYear": "FY2026",
+            "metric": "EPS",
+            "targetValue": 140,
+            "actualValue": 104.69,
+            "unit": "円",
+            "progressRate": 74.8,
+            "source": "同 PDF p.9: 変更後目標EPS140円程度",
+            "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+            "sourcePage": "PDF p.9（資料内p.8）",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "同一公式表の実績と変更後目標を接続。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度EPS104.69円"
+          },
+          {
+            "code": "1802",
+            "fiscalYear": "FY2026",
+            "metric": "ROIC",
+            "targetValue": 5,
+            "actualValue": 3.8,
+            "unit": "%",
+            "progressRate": 76,
+            "source": "同 PDF p.9: 中期的なROIC目標5%以上",
+            "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+            "sourcePage": "PDF p.9（資料内p.8）",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "目標時点が『中期的』であるため、FY2026欄への表示時に時点注記を維持する。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度ROIC3.8%"
+          },
+          {
+            "code": "1802",
+            "fiscalYear": "FY2026",
+            "metric": "ROE",
+            "targetValue": 10,
+            "actualValue": 7,
+            "unit": "%",
+            "progressRate": 70,
+            "source": "同 PDF p.9: 2026年度ROE10%以上",
+            "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+            "sourcePage": "PDF p.9（資料内p.8）",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "同一公式表の実績と下限目標を接続。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度ROE7.0%"
+          }
+        ]
+      },
+      "reason": "公式中期経営計画追補の同一経営指標表に2023年度実績と変更後目標が掲載され、営業利益・当期純利益・EPS・ROIC・ROEを同一定義と単位で接続できるため。",
+      "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+      "sourcePage": "PDF p.9（資料内p.8） / PDF p.9（資料内p.8） / PDF p.9（資料内p.8） / PDF p.9（資料内p.8） / PDF p.9（資料内p.8）",
+      "status": "corrected",
+      "reviewDecisionId": "review-1802-20260715-progress-connect",
+      "detectedAt": "2026-07-15T01:01:00.000Z",
+      "correctedAt": "2026-07-15T01:21:00.000Z"
+    },
+    {
+      "id": "correction-1803-20260715-progress-connect",
+      "companyCode": "1803",
+      "fieldPath": "flags.progress,lastVerifiedDate,progress",
+      "before": {
+        "progressFlag": false,
+        "lastVerifiedDate": "2026-07-13",
+        "progressRows": []
+      },
+      "after": {
+        "progressFlag": true,
+        "lastVerifiedDate": "2026-07-15",
+        "progressRows": [
+          {
+            "code": "1803",
+            "fiscalYear": "FY2026",
+            "metric": "netIncome",
+            "targetValue": 700,
+            "actualValue": 171,
+            "unit": "億円",
+            "progressRate": 24.4,
+            "source": "同 PDF p.28: 2026年度当期純利益700億円",
+            "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
+            "sourcePage": "PDF p.28",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "同一公式業績目標表の基準実績と目標を接続。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画 PDF p.28: 2023年度当期純利益171億円"
+          },
+          {
+            "code": "1803",
+            "fiscalYear": "FY2026",
+            "metric": "ROE",
+            "targetValue": 8,
+            "actualValue": 2,
+            "unit": "%",
+            "progressRate": 25,
+            "source": "同 PDF p.28: 2026年度ROE8%以上",
+            "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
+            "sourcePage": "PDF p.7 / p.28",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "公式資料の前中計実績と現中計下限目標を接続。中長期ROE10%以上とは分離する。",
+            "actualFiscalYear": "FY2023",
+            "actualSource": "中期経営計画 PDF p.7: 2023年度ROE2.0%"
+          }
+        ]
+      },
+      "reason": "公式中期経営計画の業績目標表と前中計振返り表により、2023年度実績と2026年度目標を確認し、当期純利益とROEを同一定義と単位で接続できるため。営業利益は基準実績が負値で単純進捗率が誤解を招くため採用しない。",
+      "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
+      "sourcePage": "PDF p.28 / PDF p.7 / p.28",
+      "status": "corrected",
+      "reviewDecisionId": "review-1803-20260715-progress-connect",
+      "detectedAt": "2026-07-15T01:02:00.000Z",
+      "correctedAt": "2026-07-15T01:22:00.000Z"
+    }
+  ]
+}

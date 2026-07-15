@@ -8272,5 +8272,99 @@
     "reviewDecisionId": "review-8233-20260714-production-double-check",
     "detectedAt": "2026-07-14T10:00:00.000Z",
     "correctedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "correction-3086-20260715-progress-connect",
+    "companyCode": "3086",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-12",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-15",
+      "progressRows": [
+        {
+          "code": "3086",
+          "fiscalYear": "FY2026",
+          "metric": "businessProfit",
+          "targetValue": 520,
+          "actualValue": 443.3,
+          "unit": "億円",
+          "progressRate": 85.3,
+          "source": "同 PDF p.36: 2026年度事業利益520億円",
+          "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+          "sourcePage": "PDF p.4 / p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "会社定義の事業利益を同一定義で接続。IFRS営業利益とは異なる。進捗率は金額比であり達成確度を示さない。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "説明会資料 PDF p.4: 2023年度事業利益44,330百万円（443.3億円）"
+        },
+        {
+          "code": "3086",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 8,
+          "actualValue": 8.1,
+          "unit": "%",
+          "progressRate": 101.3,
+          "source": "同 PDF p.36: 2026年度ROE8.0%以上",
+          "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+          "sourcePage": "PDF p.4 / p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "2023年度実績が2026年度の下限目標を基準時点で上回る。継続達成を保証するものではない。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "説明会資料 PDF p.4: 2023年度ROE8.1%"
+        },
+        {
+          "code": "3086",
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 5,
+          "actualValue": 5.1,
+          "unit": "%",
+          "progressRate": 102,
+          "source": "同 PDF p.36: 2026年度ROIC5.0%以上",
+          "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+          "sourcePage": "PDF p.4 / p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "2023年度実績が2026年度の下限目標を基準時点で上回る。継続達成を保証するものではない。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "説明会資料 PDF p.4: 2023年度ROIC5.1%"
+        }
+      ]
+    },
+    "reason": "公式決算・中期経営計画説明資料に2023年度実績と2026年度目標が掲載され、事業利益・ROE・ROICを同一の会社定義および単位で接続できるため。ROEとROICは基準時点で下限目標を上回っていることを明示する。",
+    "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+    "sourcePage": "PDF p.4 / p.36 / PDF p.4 / p.36 / PDF p.4 / p.36",
+    "status": "corrected",
+    "reviewDecisionId": "review-3086-20260715-progress-connect",
+    "detectedAt": "2026-07-15T01:00:00.000Z",
+    "correctedAt": "2026-07-15T01:20:00.000Z"
+  },
+  {
+    "id": "correction-3086-20260714-production-promotion",
+    "companyCode": "3086",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+    "sourcePage": "中期経営計画説明会資料 p.1: 2024年4月15日公表、2024〜2026年度計画。 / 同 p.36: 2026年度の事業利益520億円、ROE8%以上、ROIC5%以上。 / 同 p.38・p.41: 外商・准外商売上高3,000億円、パルコ事業利益100億円。 / 同 p.53: 連結・セグメント別ROIC目標と資本コスト。 / 同 p.54-p.55: 営業CF2,200億円、投資・還元配分、配当性向40%、自己株式取得。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3086-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:00:00.000Z",
+    "correctedAt": "2026-07-14T11:00:00.000Z"
   }
 ]

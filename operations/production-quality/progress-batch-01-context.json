@@ -1,7 +1,7 @@
 {
   "schemaVersion": "progress-batch-context-v1",
-  "generatedAt": "2026-07-15T01:51:56.371Z",
-  "sourceBundleSha256": "14a4e87a98880614d2f14f837ad17ed3b0a9eec7653215e49753958ddcf63720",
+  "generatedAt": "2026-07-15T02:01:29.330Z",
+  "sourceBundleSha256": "7c55dbb5affcd1ee56072e8a39a6dbca11422ebbbb13cacf08022b30eb981611",
   "automaticFactCompletion": false,
   "codes": [
     "1925",
@@ -232,11 +232,11 @@
       "name": "J.フロント リテイリング",
       "market": "Prime",
       "industry": "小売業",
-      "stage": "detailed_extracted",
+      "stage": "core",
       "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
       "document": "2024〜2026年度 中期経営計画",
       "planPublishedDate": "2024-04-15",
-      "lastVerifiedDate": "2026-07-12",
+      "lastVerifiedDate": "2026-07-15",
       "summary": "百貨店・パルコを中心とするリテールの深化と、顧客基盤・エリア・コンテンツのグループシナジーを進める。2026年度に事業利益520億円、ROE8%以上、ROIC5%以上を目指し、3年間の営業CF2,200億円を事業維持・進化、成長投資、株主還元へ配分する。",
       "metrics": {
         "revenue": "連結売上収益の目標は主要KPI表で設定せず、百貨店の2026年度外商・准外商売上高3,000億円を事業KPIとして設定",
@@ -256,7 +256,7 @@
         "ma": true,
         "capitalEfficiency": true,
         "shareholderReturn": true,
-        "progress": false,
+        "progress": true,
         "overseas": true,
         "dx": true,
         "humanCapital": true,
@@ -267,7 +267,8 @@
         "事業利益はIFRS営業利益とは異なる会社管理指標であり、他社の営業利益と単純比較しない。",
         "売上の定量値は連結売上収益ではなく、百貨店外商・准外商売上高の事業KPI。",
         "キャッシュアロケーションは2024〜2026年度の3年間累計。",
-        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。"
+        "公式一次資料の実績値を中計目標へ接続済み。",
+        "本番品質。公式一次資料・ページ証跡・進捗接続・個別レビュー・独立再検証を確認済み。"
       ],
       "companyKeys": [
         "capital",
@@ -284,6 +285,7 @@
         "name",
         "period",
         "planPublishedDate",
+        "productionApproval",
         "profit",
         "quality",
         "returnPolicy",
@@ -297,9 +299,71 @@
       ],
       "additionalFields": {
         "category": "小売業/2024〜2026年度中期経営計画",
-        "period": "2024年度〜2026年度"
+        "period": "2024年度〜2026年度",
+        "productionApproval": {
+          "reviewApproved": true,
+          "independentDoubleCheck": true,
+          "approvals": 2,
+          "reviewers": [
+            "independent-release-review",
+            "production-quality-review"
+          ],
+          "latestReviewedAt": "2026-07-14T11:00:00.000Z"
+        }
       },
-      "existingProgressRows": []
+      "existingProgressRows": [
+        {
+          "code": "3086",
+          "fiscalYear": "FY2026",
+          "metric": "businessProfit",
+          "targetValue": 520,
+          "actualValue": 443.3,
+          "unit": "億円",
+          "progressRate": 85.3,
+          "source": "同 PDF p.36: 2026年度事業利益520億円",
+          "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+          "sourcePage": "PDF p.4 / p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "会社定義の事業利益を同一定義で接続。IFRS営業利益とは異なる。進捗率は金額比であり達成確度を示さない。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "説明会資料 PDF p.4: 2023年度事業利益44,330百万円（443.3億円）"
+        },
+        {
+          "code": "3086",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 8,
+          "actualValue": 8.1,
+          "unit": "%",
+          "progressRate": 101.3,
+          "source": "同 PDF p.36: 2026年度ROE8.0%以上",
+          "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+          "sourcePage": "PDF p.4 / p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "2023年度実績が2026年度の下限目標を基準時点で上回る。継続達成を保証するものではない。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "説明会資料 PDF p.4: 2023年度ROE8.1%"
+        },
+        {
+          "code": "3086",
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 5,
+          "actualValue": 5.1,
+          "unit": "%",
+          "progressRate": 102,
+          "source": "同 PDF p.36: 2026年度ROIC5.0%以上",
+          "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+          "sourcePage": "PDF p.4 / p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "2023年度実績が2026年度の下限目標を基準時点で上回る。継続達成を保証するものではない。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "説明会資料 PDF p.4: 2023年度ROIC5.1%"
+        }
+      ]
     },
     {
       "code": "4478",

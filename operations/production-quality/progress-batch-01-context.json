@@ -1,7 +1,7 @@
 {
   "schemaVersion": "progress-batch-context-v1",
-  "generatedAt": "2026-07-15T01:19:23.566Z",
-  "sourceBundleSha256": "d393d6131b4607b82b91c6a1e9e05f77e03bb19bf1422dd6aee80dc6c1cdbe73",
+  "generatedAt": "2026-07-15T01:30:39.391Z",
+  "sourceBundleSha256": "5c6d953ca00d44bbbc8c52db54003ea734ed7209ed1fa040aa3bd5ef21669560",
   "automaticFactCompletion": false,
   "codes": [
     "1925",
@@ -420,11 +420,11 @@
       "name": "NGK",
       "market": "Prime",
       "industry": "ガラス・土石製品",
-      "stage": "detailed_extracted",
+      "stage": "core",
       "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
       "document": "長期経営計画 2026-2035",
       "planPublishedDate": "2026-05-28",
-      "lastVerifiedDate": "2026-07-13",
+      "lastVerifiedDate": "2026-07-15",
       "summary": "既存事業の収益力を高めながら、デジタル社会関連を成長ドライバーとし、カーボンニュートラル領域の事業化へ布石を打つ。2030年度に売上高9,000億円、営業利益1,500億円、ROE12%、CN・DS売上比率50%を目指す。",
       "metrics": {
         "revenue": "2030年度 売上高9,000億円、CN・DS売上比率50%。2035年度の長期目標は売上高1.3兆円、CN・DS比率60%以上",
@@ -444,7 +444,7 @@
         "ma": true,
         "capitalEfficiency": true,
         "shareholderReturn": true,
-        "progress": false,
+        "progress": true,
         "overseas": false,
         "dx": true,
         "humanCapital": true,
@@ -455,7 +455,8 @@
         "2030年度の中間財務目標と2035年度の長期目標は対象年度が異なるため分離して表示する。",
         "CN・DSは会社定義のカーボンニュートラル関連・デジタル社会関連の売上区分。",
         "キャッシュアロケーションは2026〜2030年度の5年間累計計画。",
-        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。"
+        "公式一次資料の実績値を中計目標へ接続済み。",
+        "本番品質。公式一次資料・ページ証跡・進捗接続・個別レビュー・独立再検証を確認済み。"
       ],
       "companyKeys": [
         "capital",
@@ -472,6 +473,7 @@
         "name",
         "period",
         "planPublishedDate",
+        "productionApproval",
         "profit",
         "quality",
         "returnPolicy",
@@ -485,9 +487,105 @@
       ],
       "additionalFields": {
         "category": "ガラス・土石製品/長期経営計画2026-2035",
-        "period": "2026年度〜2035年度（2030年度の中間財務目標を設定）"
+        "period": "2026年度〜2035年度（2030年度の中間財務目標を設定）",
+        "productionApproval": {
+          "reviewApproved": true,
+          "independentDoubleCheck": true,
+          "approvals": 2,
+          "reviewers": [
+            "independent-release-review",
+            "production-quality-review"
+          ],
+          "latestReviewedAt": "2026-07-14T11:00:00.000Z"
+        }
       },
-      "existingProgressRows": []
+      "existingProgressRows": [
+        {
+          "code": "5333",
+          "fiscalYear": "FY2030",
+          "metric": "revenue",
+          "targetValue": 9000,
+          "actualValue": 6701,
+          "unit": "億円",
+          "progressRate": 74.5,
+          "source": "同 PDF p.27: 2030年度売上高9,000億円",
+          "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
+          "sourcePage": "PDF p.27",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一表に記載された実績と目標を接続。進捗率は金額比であり達成確度を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度売上高6,701億円"
+        },
+        {
+          "code": "5333",
+          "fiscalYear": "FY2030",
+          "metric": "operatingProfit",
+          "targetValue": 1500,
+          "actualValue": 950,
+          "unit": "億円",
+          "progressRate": 63.3,
+          "source": "同 PDF p.27: 2030年度営業利益1,500億円",
+          "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
+          "sourcePage": "PDF p.27",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一表に記載された実績と目標を接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度営業利益950億円"
+        },
+        {
+          "code": "5333",
+          "fiscalYear": "FY2030",
+          "metric": "netIncome",
+          "targetValue": 1000,
+          "actualValue": 599,
+          "unit": "億円",
+          "progressRate": 59.9,
+          "source": "同 PDF p.27: 2030年度当期純利益1,000億円",
+          "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
+          "sourcePage": "PDF p.27",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一表に記載された実績と目標を接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度当期純利益599億円"
+        },
+        {
+          "code": "5333",
+          "fiscalYear": "FY2030",
+          "metric": "ROE",
+          "targetValue": 12,
+          "actualValue": 7.8,
+          "unit": "%",
+          "progressRate": 65,
+          "source": "同 PDF p.27: 2030年度ROE12%",
+          "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
+          "sourcePage": "PDF p.27",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一表に記載された実績と目標を接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度ROE7.8%"
+        },
+        {
+          "code": "5333",
+          "fiscalYear": "FY2030",
+          "metric": "EPS",
+          "targetValue": 370,
+          "actualValue": 206,
+          "unit": "円",
+          "progressRate": 55.7,
+          "source": "同 PDF p.27: 2030年度EPS370円",
+          "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
+          "sourcePage": "PDF p.27",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一表に記載された実績と目標を接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度EPS206円"
+        }
+      ]
     },
     {
       "code": "8233",

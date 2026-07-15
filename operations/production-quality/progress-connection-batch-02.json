@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-02",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "5333",
+      "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
+      "document": "長期経営計画 2026-2035 プレゼンテーション資料",
+      "sourcePublishedDate": "2026-05-28",
+      "verifiedDate": "2026-07-15",
+      "reason": "公式長期経営計画資料の同一財務目標表で2025年度実績と2030年度目標を確認でき、指標定義・単位・対象年度を変更せず進捗接続できるため。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2030",
+          "metric": "revenue",
+          "targetValue": 9000,
+          "actualValue": 6701,
+          "unit": "億円",
+          "sourcePage": "PDF p.27",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度売上高6,701億円",
+          "targetSource": "同 PDF p.27: 2030年度売上高9,000億円",
+          "note": "同一表に記載された実績と目標を接続。進捗率は金額比であり達成確度を示さない。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "operatingProfit",
+          "targetValue": 1500,
+          "actualValue": 950,
+          "unit": "億円",
+          "sourcePage": "PDF p.27",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度営業利益950億円",
+          "targetSource": "同 PDF p.27: 2030年度営業利益1,500億円",
+          "note": "同一表に記載された実績と目標を接続。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "netIncome",
+          "targetValue": 1000,
+          "actualValue": 599,
+          "unit": "億円",
+          "sourcePage": "PDF p.27",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度当期純利益599億円",
+          "targetSource": "同 PDF p.27: 2030年度当期純利益1,000億円",
+          "note": "同一表に記載された実績と目標を接続。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "ROE",
+          "targetValue": 12,
+          "actualValue": 7.8,
+          "unit": "%",
+          "sourcePage": "PDF p.27",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度ROE7.8%",
+          "targetSource": "同 PDF p.27: 2030年度ROE12%",
+          "note": "同一表に記載された実績と目標を接続。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "EPS",
+          "targetValue": 370,
+          "actualValue": 206,
+          "unit": "円",
+          "sourcePage": "PDF p.27",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "長期経営計画 2026-2035 PDF p.27: 2025年度EPS206円",
+          "targetSource": "同 PDF p.27: 2030年度EPS370円",
+          "note": "同一表に記載された実績と目標を接続。"
+        }
+      ]
+    }
+  ]
+}

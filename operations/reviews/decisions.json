@@ -14522,5 +14522,264 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:02:00.000Z",
     "reviewedAt": "2026-07-14T11:02:00.000Z"
+  },
+  {
+    "id": "review-7532-20260716-progress-connect",
+    "companyCode": "7532",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://ppih.co.jp/ir/library/earnings/pdf/PPIH_DoubleImpact2035.pdf",
+    "sourcePages": [
+      "PDF p.2",
+      "PDF p.2",
+      "PDF p.2"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式長期経営計画の定量目標表に2025年6月期実績と2035年6月期目標が並記され、連結売上高、営業利益、営業利益率を同一定義・同一単位で接続できるため。国内・海外の事業別値は連結指標との重複を避けて今回は接続しない。",
+    "createdAt": "2026-07-16T01:00:00.000Z",
+    "reviewedAt": "2026-07-16T01:10:00.000Z"
+  },
+  {
+    "id": "review-9042-20260716-progress-connect",
+    "companyCode": "9042",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.hankyu-hanshin.co.jp/download/ir/management/managementplan.pdf",
+    "sourcePages": [
+      "PDF p.21",
+      "PDF p.21",
+      "PDF p.21"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式長期経営構想の成長イメージと財務指標表に2024年度予想と2030年度目標が並記され、事業利益、ROE、EBITDAを同一定義・同一単位で接続できるため。D/Eレシオとネット有利子負債/EBITDA倍率は低いほど良い性質を含み単純比率が誤解を招くため接続しない。",
+    "createdAt": "2026-07-16T01:01:00.000Z",
+    "reviewedAt": "2026-07-16T01:11:00.000Z"
+  },
+  {
+    "id": "review-9602-20260716-progress-connect",
+    "companyCode": "9602",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.toho.co.jp/files/211b934609853864f75bb445bd3dfd3aaa9d2bb78273e5c1fed22b4cb4d9290f",
+    "sourcePages": [
+      "PDF p.5 / p.10",
+      "PDF p.5 / p.10"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画の前中計振り返りと新計画の数値目標から、2025年度実績と2028年度目標を営業利益・ROEで同一定義・同一単位に接続できるため。長期ビジョン2032の営業利益・ROE目標とは分離する。",
+    "createdAt": "2026-07-16T01:02:00.000Z",
+    "reviewedAt": "2026-07-16T01:12:00.000Z"
+  },
+  {
+    "id": "review-7532-20260714-production-primary",
+    "companyCode": "7532",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://ppih.co.jp/ir/library/earnings/pdf/PPIH_DoubleImpact2035.pdf",
+    "sourcePages": [
+      "Double Impact 2035 表紙: 2025年8月18日公表。",
+      "同 p.2: 2035年6月期の連結・国内・海外の売上高、営業利益、営業利益率目標。",
+      "同 p.3-p.5: 国内市場機会、国内売上高3兆7,000億円、新規出店・M&A・PB/OEM・生成AI等の成長方針。",
+      "同 p.20-p.21: 食品強化型ドンキの売上高6,000億円・営業利益360億円目標、200〜300店舗計画。",
+      "同 p.23: 自律的な挑戦を促す人的資本戦略。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-7532-20260714-production-double-check",
+    "companyCode": "7532",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://ppih.co.jp/ir/library/earnings/pdf/PPIH_DoubleImpact2035.pdf",
+    "sourcePages": [
+      "Double Impact 2035 表紙: 2025年8月18日公表。",
+      "同 p.2: 2035年6月期の連結・国内・海外の売上高、営業利益、営業利益率目標。",
+      "同 p.3-p.5: 国内市場機会、国内売上高3兆7,000億円、新規出店・M&A・PB/OEM・生成AI等の成長方針。",
+      "同 p.20-p.21: 食品強化型ドンキの売上高6,000億円・営業利益360億円目標、200〜300店舗計画。",
+      "同 p.23: 自律的な挑戦を促す人的資本戦略。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-9042-20260714-production-primary",
+    "companyCode": "9042",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.hankyu-hanshin.co.jp/download/ir/management/managementplan.pdf",
+    "sourcePages": [
+      "長期経営構想 PDF p.1: 2025年3月27日公表。",
+      "同 p.17: 2025〜2030年度の事業継続投資・成長投資、資産売却、D/Eレシオ、総還元性向。",
+      "同 p.21-p.22: 2030年度・2040年度の事業利益、EBITDA、ROE、財務健全性指標。",
+      "同 p.23: 年間配当100円下限、総還元性向50%、自己株式取得・消却方針。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:01:00.000Z",
+    "reviewedAt": "2026-07-14T09:01:00.000Z"
+  },
+  {
+    "id": "review-9042-20260714-production-double-check",
+    "companyCode": "9042",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.hankyu-hanshin.co.jp/download/ir/management/managementplan.pdf",
+    "sourcePages": [
+      "長期経営構想 PDF p.1: 2025年3月27日公表。",
+      "同 p.17: 2025〜2030年度の事業継続投資・成長投資、資産売却、D/Eレシオ、総還元性向。",
+      "同 p.21-p.22: 2030年度・2040年度の事業利益、EBITDA、ROE、財務健全性指標。",
+      "同 p.23: 年間配当100円下限、総還元性向50%、自己株式取得・消却方針。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:01:00.000Z",
+    "reviewedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "review-9602-20260714-production-primary",
+    "companyCode": "9602",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.toho.co.jp/files/211b934609853864f75bb445bd3dfd3aaa9d2bb78273e5c1fed22b4cb4d9290f",
+    "sourcePages": [
+      "中期経営計画2028 PDF p.1: 2025年4月14日公表。",
+      "同 PDF p.10（資料内p.9）: 人材・デジタル・IP・海外戦略と投資額。",
+      "同 PDF p.11（資料内p.10）: 営業利益700億円以上、ROE9%以上、配当・自己株式取得方針。",
+      "同 PDF p.12（資料内p.11）: 3年間のキャピタルアロケーションとコンテンツ創出費。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:02:00.000Z",
+    "reviewedAt": "2026-07-14T09:02:00.000Z"
+  },
+  {
+    "id": "review-9602-20260714-production-double-check",
+    "companyCode": "9602",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.toho.co.jp/files/211b934609853864f75bb445bd3dfd3aaa9d2bb78273e5c1fed22b4cb4d9290f",
+    "sourcePages": [
+      "中期経営計画2028 PDF p.1: 2025年4月14日公表。",
+      "同 PDF p.10（資料内p.9）: 人材・デジタル・IP・海外戦略と投資額。",
+      "同 PDF p.11（資料内p.10）: 営業利益700億円以上、ROE9%以上、配当・自己株式取得方針。",
+      "同 PDF p.12（資料内p.11）: 3年間のキャピタルアロケーションとコンテンツ創出費。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:02:00.000Z",
+    "reviewedAt": "2026-07-14T11:02:00.000Z"
   }
 ]

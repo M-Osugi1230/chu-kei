@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-07",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "1925",
+      "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+      "document": "大和ハウスグループ 第7次中期経営計画",
+      "sourcePublishedDate": "2022-05-13",
+      "verifiedDate": "2026-07-15",
+      "reason": "公式第7次中期経営計画に2021年度実績と2026年度目標が掲載され、売上高・営業利益・当期純利益・ROEを同一定義と単位で接続できるため。計画がFY2025で前倒し終了した事実は既存警告表示で維持する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2026",
+          "metric": "revenue",
+          "targetValue": 55000,
+          "actualValue": 44395,
+          "unit": "億円",
+          "sourcePage": "PDF p.10 / p.15",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度売上高44,395億円",
+          "targetSource": "同 PDF p.15: 2026年度売上高5兆5,000億円",
+          "note": "計画開始前年度実績を当初目標へ接続。第7次中計はFY2025で前倒し終了したため、現行目標としては扱わない。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "operatingProfit",
+          "targetValue": 5000,
+          "actualValue": 3322,
+          "unit": "億円",
+          "sourcePage": "PDF p.10 / p.15",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度営業利益3,322億円（退職給付数理差異を分離表示）",
+          "targetSource": "同 PDF p.15: 2026年度営業利益5,000億円（退職給付数理差異除く）",
+          "note": "会社資料の定義に合わせ、退職給付数理差異を除く営業利益で接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "netIncome",
+          "targetValue": 3400,
+          "actualValue": 2252,
+          "unit": "億円",
+          "sourcePage": "PDF p.10 / p.15",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度親会社株主帰属当期純利益2,252億円",
+          "targetSource": "同 PDF p.15: 2026年度親会社株主帰属当期純利益3,400億円",
+          "note": "同じ公式計画資料の開始前年度実績と当初目標を接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 13,
+          "actualValue": 11.7,
+          "unit": "%",
+          "sourcePage": "PDF p.10 / p.15",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度ROE11.7%",
+          "targetSource": "同 PDF p.15: 2026年度ROE13%以上",
+          "note": "下限目標13%へ接続。計画の前倒し終了を踏まえ、現行目標とは区別する。"
+        }
+      ]
+    },
+    {
+      "code": "8630",
+      "sourceUrl": "https://www.sompo-hd.com/-/media/hd/files/doc/pdf/ir/2026/20260522_1.pdf?la=ja-JP",
+      "document": "2026年5月IRミーティング資料『課題の最前線を進化の最前線へ』",
+      "sourcePublishedDate": "2026-05-22",
+      "verifiedDate": "2026-07-15",
+      "reason": "公式IRミーティング資料に現中計の2023年度基準値、2025年度実績、2026年度目標が掲載され、修正連結利益・修正連結ROE・修正EPS成長率を会社定義のまま接続できるため。独自調整指標であることを明示する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2026",
+          "metric": "adjustedConsolidatedProfit",
+          "targetValue": 5000,
+          "actualValue": 3359,
+          "unit": "億円",
+          "sourcePage": "PDF p.10",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "2026年5月IRミーティング資料 PDF p.10: 2023年度修正連結利益3,359億円",
+          "targetSource": "同 PDF p.10: 2026年度修正連結利益5,000億円",
+          "note": "SOMPO独自の修正連結利益であり、会計上の純利益と単純比較しない。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "adjustedROE",
+          "targetValue": 13,
+          "actualValue": 10.9,
+          "unit": "%",
+          "sourcePage": "PDF p.10",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "2026年5月IRミーティング資料 PDF p.10: 2023年度修正連結ROE10.9%",
+          "targetSource": "同 PDF p.10: 2026年度修正連結ROE13〜15%",
+          "note": "目標レンジ13〜15%の下限13%へ接続。SOMPO独自の修正指標。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "adjustedEPSGrowthCAGR",
+          "targetValue": 12,
+          "actualValue": 19,
+          "unit": "% CAGR",
+          "sourcePage": "PDF p.6 / p.10",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年5月IRミーティング資料 PDF p.6・p.10: 中計期間の修正EPS成長率は年率19%ペース",
+          "targetSource": "同 PDF p.10: 中計目標 年率12%超",
+          "note": "2025年度時点で下限目標を上回るペース。将来の継続達成を保証せず、会社定義の修正EPS成長率として表示する。"
+        }
+      ]
+    }
+  ]
+}

@@ -64,3 +64,4 @@ runNode('scripts/sync_production_approval_metadata_v1.mjs');
 runNode('scripts/audit_production_readiness_v1.mjs');
 runNode('scripts/analyze_production_scale_candidates_v1.mjs');
 runNode('scripts/generate_progress_connection_queue_v1.mjs');
+runNode('scripts/extract_progress_batch_context_v1.mjs');

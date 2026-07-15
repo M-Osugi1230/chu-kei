@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-15T01:11:56.884Z",
-  "sourceBundleSha256": "d18b439b7acc536488f4a084615c46a716273af2161dcf3f2be5eeb6515d87d1",
+  "generatedAt": "2026-07-15T01:18:31.951Z",
+  "sourceBundleSha256": "d393d6131b4607b82b91c6a1e9e05f77e03bb19bf1422dd6aee80dc6c1cdbe73",
   "companyCount": 1200,
   "progressCount": 150,
-  "detailedExtractedCount": 96,
+  "detailedExtractedCount": 95,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -17,9 +17,9 @@
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 55,
+    "detailedWithProgressFlag": 54,
     "detailedWithoutProgressFlag": 41,
-    "detailedWithMatchedProgressRows": 6,
+    "detailedWithMatchedProgressRows": 5,
     "progressExistsButFlagMissing": 0,
     "pageEvidenceAndPublicationReadyButProgressMissing": 41
   },
@@ -956,47 +956,6 @@
       "progressFlagValue": false,
       "matchedProgressRows": 0,
       "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "4661",
-      "name": "オリエンタルランド",
-      "lastVerifiedDate": "2026-07-15",
-      "planPublishedDate": "2025-04-28",
-      "evidenceRefCount": 5,
-      "pageEvidenceRefCount": 5,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 1,
-      "matchedProgressSample": [
-        {
-          "code": "4661",
-          "fiscalYear": "FY2035",
-          "metric": "revenue",
-          "targetValue": 10000,
-          "actualValue": 7045,
-          "unit": "億円",
-          "progressRate": 70.5,
-          "source": "2035長期経営戦略 PDF p.6／2026年3月期 決算説明会資料 PDF p.23: 2035年度売上高1兆円以上",
-          "sourceUrl": "https://www.olc.co.jp/ja/ir/latest/main/00/teaserItems2/0/linkList/03/link/sp2026-04.pdf",
-          "sourcePage": "PDF p.4",
-          "updatedAt": "2026-07-15",
-          "lastVerifiedDate": "2026-07-15",
-          "note": "2026年3月期実績を2035年度目標へ接続。進捗率は金額比であり、経過年数を考慮した達成確度や売買判断を示さない。",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2026年3月期 決算説明会資料 PDF p.4: 連結売上高7,045億円"
-        }
-      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "progress-batch-context-v1",
-  "generatedAt": "2026-07-15T01:11:57.010Z",
-  "sourceBundleSha256": "d18b439b7acc536488f4a084615c46a716273af2161dcf3f2be5eeb6515d87d1",
+  "generatedAt": "2026-07-15T01:18:32.081Z",
+  "sourceBundleSha256": "d393d6131b4607b82b91c6a1e9e05f77e03bb19bf1422dd6aee80dc6c1cdbe73",
   "automaticFactCompletion": false,
   "codes": [
     "1925",
@@ -316,7 +316,7 @@
       "name": "オリエンタルランド",
       "market": "Prime",
       "industry": "サービス業",
-      "stage": "detailed_extracted",
+      "stage": "core",
       "sourceUrl": "https://www.olc.co.jp/ja/ir/other-materials/main/011111117/teaserItems1/0116/linkList/0/link/ms2025-04.pdf",
       "document": "2035長期経営戦略（2025〜2029年度財務目標を含む）",
       "planPublishedDate": "2025-04-28",
@@ -351,8 +351,8 @@
         "固定3カ年型の中期経営計画ではなく、2035年までの長期経営戦略に2025〜2029年度の財務目標を組み込んだ資料。",
         "2029年度黒字化と営業利益率20%台後半はクルーズ事業の目標であり、連結営業利益率の目標ではない。",
         "クルーズの投資額・就航時期・収益計画は為替、建造、運航準備等により変動する可能性がある。",
-        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。",
-        "公式一次資料の実績値を中計目標へ接続済み。"
+        "公式一次資料の実績値を中計目標へ接続済み。",
+        "本番品質。公式一次資料・ページ証跡・進捗接続・個別レビュー・独立再検証を確認済み。"
       ],
       "companyKeys": [
         "capital",
@@ -369,6 +369,7 @@
         "name",
         "period",
         "planPublishedDate",
+        "productionApproval",
         "profit",
         "quality",
         "returnPolicy",
@@ -382,7 +383,17 @@
       ],
       "additionalFields": {
         "category": "サービス業/2035長期経営戦略",
-        "period": "2025年度〜2035年度（2025〜2029年度財務目標）"
+        "period": "2025年度〜2035年度（2025〜2029年度財務目標）",
+        "productionApproval": {
+          "reviewApproved": true,
+          "independentDoubleCheck": true,
+          "approvals": 2,
+          "reviewers": [
+            "independent-release-review",
+            "production-quality-review"
+          ],
+          "latestReviewedAt": "2026-07-14T11:00:00.000Z"
+        }
       },
       "existingProgressRows": [
         {

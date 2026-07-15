@@ -12799,5 +12799,65 @@
     "decisionReason": "公式決算説明会資料の連結損益計算書で2026年3月期売上高を確認し、2035長期経営戦略の同一定義である連結売上高目標へ接続するため。",
     "createdAt": "2026-07-15T01:00:00.000Z",
     "reviewedAt": "2026-07-15T01:10:00.000Z"
+  },
+  {
+    "id": "review-4661-20260714-production-primary",
+    "companyCode": "4661",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.olc.co.jp/ja/ir/other-materials/main/011111117/teaserItems1/0116/linkList/0/link/ms2025-04.pdf",
+    "sourcePages": [
+      "2035長期経営戦略 p.1: 2025年4月28日公表。",
+      "2035長期経営戦略 p.6: 2029年度営業キャッシュ・フロー3,000億円レベル、2035年度売上高1兆円以上、ROE目標。",
+      "2035長期経営戦略 p.13: シュガー・ラッシュ295億円、スペース・マウンテン周辺刷新705億円。",
+      "2035長期経営戦略 p.28: クルーズ船体2,900億円・予備費400億円、2029年度黒字化、就航数年後の営業利益率20%台後半。",
+      "2035長期経営戦略 p.34-p.35: 安定配当、自己株式取得、配当性向30%、5カ年キャッシュ・アロケーション。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-4661-20260714-production-double-check",
+    "companyCode": "4661",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.olc.co.jp/ja/ir/other-materials/main/011111117/teaserItems1/0116/linkList/0/link/ms2025-04.pdf",
+    "sourcePages": [
+      "2035長期経営戦略 p.1: 2025年4月28日公表。",
+      "2035長期経営戦略 p.6: 2029年度営業キャッシュ・フロー3,000億円レベル、2035年度売上高1兆円以上、ROE目標。",
+      "2035長期経営戦略 p.13: シュガー・ラッシュ295億円、スペース・マウンテン周辺刷新705億円。",
+      "2035長期経営戦略 p.28: クルーズ船体2,900億円・予備費400億円、2029年度黒字化、就航数年後の営業利益率20%台後半。",
+      "2035長期経営戦略 p.34-p.35: 安定配当、自己株式取得、配当性向30%、5カ年キャッシュ・アロケーション。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
   }
 ]

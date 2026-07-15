@@ -14265,5 +14265,262 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:02:00.000Z",
     "reviewedAt": "2026-07-14T11:02:00.000Z"
+  },
+  {
+    "id": "review-8129-20260716-progress-connect",
+    "companyCode": "8129",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://ir.tohohd.co.jp/ja/plan/plan_pdf/main/0/link/260428mtp.pdf",
+    "sourcePages": [
+      "PDF p.9"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画の成長・効率化戦略図に2025年度営業利益と2028年度目標が並記され、同一定義・同一単位で接続できるため。ROEと営業利益率は対応する基準実績が同じ図にないため接続しない。",
+    "createdAt": "2026-07-16T01:00:00.000Z",
+    "reviewedAt": "2026-07-16T01:10:00.000Z"
+  },
+  {
+    "id": "review-9021-20260716-progress-connect",
+    "companyCode": "9021",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.westjr.co.jp/company/info/plan/pdf/plan_2030.pdf",
+    "sourcePages": [
+      "PDF p.41",
+      "PDF p.41"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画の財務KPI表に2025年度実績と2030年度目標が並記され、営業利益とEBITDAを同一定義・同一単位で接続できるため。ROIC・ROE・Net有利子負債/EBITDAは投資拡大に伴い目標方向が単純な改善比率と一致しないため接続しない。",
+    "createdAt": "2026-07-16T01:01:00.000Z",
+    "reviewedAt": "2026-07-16T01:11:00.000Z"
+  },
+  {
+    "id": "review-9409-20260716-progress-connect",
+    "companyCode": "9409",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.tv-asahihd.co.jp/ir_setex/data/2026/20260212_mgt_plan_material.pdf",
+    "sourcePages": [
+      "PDF p.5",
+      "PDF p.5",
+      "PDF p.5",
+      "PDF p.5",
+      "PDF p.5"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式経営計画の定量目標表に2025年度参考値と2029年度目標が並記され、連結売上高、営業利益、経常利益、親会社株主帰属当期純利益、ROEを同一定義・同一単位で接続できるため。",
+    "createdAt": "2026-07-16T01:02:00.000Z",
+    "reviewedAt": "2026-07-16T01:12:00.000Z"
+  },
+  {
+    "id": "review-8129-20260714-production-primary",
+    "companyCode": "8129",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://ir.tohohd.co.jp/ja/plan/plan_pdf/main/0/link/260428mtp.pdf",
+    "sourcePages": [
+      "中期経営計画2026-2028 PDF p.5-p.6: ROE8%以上、営業利益率1.5%以上、営業利益300億円以上、成長投資500億円以上、事業ポートフォリオ方針。",
+      "同 PDF p.9-p.10: 営業利益300億円へのブリッジ、コスト構造改革60億円、卸売売上総利益50億円、調剤利益改善20億円。",
+      "同 PDF p.16: 総還元性向100%以上、DOE4%以上、株主還元500億円以上、安定増配と自己株式取得。",
+      "同 PDF p.17-p.18: キャッシュイン約1,430億円、成長投資・物流・人財・システム・還元への配分、投資ハードルレート8〜10%。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-8129-20260714-production-double-check",
+    "companyCode": "8129",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://ir.tohohd.co.jp/ja/plan/plan_pdf/main/0/link/260428mtp.pdf",
+    "sourcePages": [
+      "中期経営計画2026-2028 PDF p.5-p.6: ROE8%以上、営業利益率1.5%以上、営業利益300億円以上、成長投資500億円以上、事業ポートフォリオ方針。",
+      "同 PDF p.9-p.10: 営業利益300億円へのブリッジ、コスト構造改革60億円、卸売売上総利益50億円、調剤利益改善20億円。",
+      "同 PDF p.16: 総還元性向100%以上、DOE4%以上、株主還元500億円以上、安定増配と自己株式取得。",
+      "同 PDF p.17-p.18: キャッシュイン約1,430億円、成長投資・物流・人財・システム・還元への配分、投資ハードルレート8〜10%。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-9021-20260714-production-primary",
+    "companyCode": "9021",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.westjr.co.jp/company/info/plan/pdf/plan_2030.pdf",
+    "sourcePages": [
+      "中期経営計画2030 p.1-p.2: 2026年4月30日公表、2026〜2030年度の5年間計画。",
+      "同 p.17・p.41: 2030年度の営業利益・EBITDA・運輸収入・ROIC・ROE・財務規律。",
+      "同 p.38-p.39: 営業CF1兆7,000億円、設備投資・出資2兆6,200億円、成長・安全・維持更新投資の内訳。",
+      "同 p.40: DOE3.5%程度と機動的な自己株式取得。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:01:00.000Z",
+    "reviewedAt": "2026-07-14T09:01:00.000Z"
+  },
+  {
+    "id": "review-9021-20260714-production-double-check",
+    "companyCode": "9021",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.westjr.co.jp/company/info/plan/pdf/plan_2030.pdf",
+    "sourcePages": [
+      "中期経営計画2030 p.1-p.2: 2026年4月30日公表、2026〜2030年度の5年間計画。",
+      "同 p.17・p.41: 2030年度の営業利益・EBITDA・運輸収入・ROIC・ROE・財務規律。",
+      "同 p.38-p.39: 営業CF1兆7,000億円、設備投資・出資2兆6,200億円、成長・安全・維持更新投資の内訳。",
+      "同 p.40: DOE3.5%程度と機動的な自己株式取得。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:01:00.000Z",
+    "reviewedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "review-9409-20260714-production-primary",
+    "companyCode": "9409",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.tv-asahihd.co.jp/ir_setex/data/2026/20260212_mgt_plan_material.pdf",
+    "sourcePages": [
+      "経営計画2026-2029説明会資料 PDF p.5: 2029年度の売上高、営業利益、経常利益、純利益、ROE目標。",
+      "同 PDF p.7-p.8: 東京ドリームパーク、IP、ABEMA、CVC、AI、人財、財務の重点戦略。",
+      "同 PDF p.9: 営業CF、政策保有株式売却、成長投資、設備投資、株主還元のキャピタルアロケーション。",
+      "同 PDF p.9: 配当性向40%、機動的な自己株式取得、政策保有株式縮減の方針。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:02:00.000Z",
+    "reviewedAt": "2026-07-14T09:02:00.000Z"
+  },
+  {
+    "id": "review-9409-20260714-production-double-check",
+    "companyCode": "9409",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.tv-asahihd.co.jp/ir_setex/data/2026/20260212_mgt_plan_material.pdf",
+    "sourcePages": [
+      "経営計画2026-2029説明会資料 PDF p.5: 2029年度の売上高、営業利益、経常利益、純利益、ROE目標。",
+      "同 PDF p.7-p.8: 東京ドリームパーク、IP、ABEMA、CVC、AI、人財、財務の重点戦略。",
+      "同 PDF p.9: 営業CF、政策保有株式売却、成長投資、設備投資、株主還元のキャピタルアロケーション。",
+      "同 PDF p.9: 配当性向40%、機動的な自己株式取得、政策保有株式縮減の方針。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:02:00.000Z",
+    "reviewedAt": "2026-07-14T11:02:00.000Z"
   }
 ]

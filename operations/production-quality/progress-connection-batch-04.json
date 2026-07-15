@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-04",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "8233",
+      "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+      "document": "高島屋グループ 中期経営計画（2024〜2026年度）",
+      "sourcePublishedDate": "2024-04-12",
+      "verifiedDate": "2026-07-15",
+      "reason": "公式中期経営計画資料の同一財務KPI表に2023年度実績と2026年度計画が並記されており、営業利益・ROIC・ROE・EPSを同一定義と単位で進捗接続できるため。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2026",
+          "metric": "operatingProfit",
+          "targetValue": 575,
+          "actualValue": 459,
+          "unit": "億円",
+          "sourcePage": "PDF p.36",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.36: 2023年度営業利益459億円",
+          "targetSource": "同 PDF p.36: 2026年度営業利益575億円",
+          "note": "同一公式KPI表の実績と計画を接続。進捗率は数値比であり達成確度を示さない。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 6.2,
+          "actualValue": 5.5,
+          "unit": "%",
+          "sourcePage": "PDF p.36",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.36: 2023年度ROIC5.5%",
+          "targetSource": "同 PDF p.36: 2026年度ROIC6.2%",
+          "note": "同一公式KPI表の実績と計画を接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 8,
+          "actualValue": 7.3,
+          "unit": "%",
+          "sourcePage": "PDF p.36",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.36: 2023年度ROE7.3%",
+          "targetSource": "同 PDF p.36: 2026年度ROE8.0%",
+          "note": "同一公式KPI表の実績と計画を接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "EPS",
+          "targetValue": 268,
+          "actualValue": 200,
+          "unit": "円",
+          "sourcePage": "PDF p.36",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.36: 2023年度EPS200円",
+          "targetSource": "同 PDF p.36: 2026年度EPS268円",
+          "note": "株式分割前提の注記を含む同一公式KPI表の数値を接続。"
+        }
+      ]
+    }
+  ]
+}

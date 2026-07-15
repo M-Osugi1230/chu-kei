@@ -14002,5 +14002,268 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:01:00.000Z",
     "reviewedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "review-6762-20260716-progress-connect",
+    "companyCode": "6762",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.tdk.com/system/files/tdk_investor_day_20240522_ja.pdf",
+    "sourcePages": [
+      "PDF p.16",
+      "PDF p.16",
+      "PDF p.16",
+      "PDF p.16"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式Investor Day資料の財務・未財務KPI表に2024年3月期実績と2027年3月期目標が並記され、売上高、ROE、事業ROA（ROIC）、営業利益率を同一定義・同一単位で接続できるため。",
+    "createdAt": "2026-07-16T01:00:00.000Z",
+    "reviewedAt": "2026-07-16T01:10:00.000Z"
+  },
+  {
+    "id": "review-6988-20260716-progress-connect",
+    "companyCode": "6988",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.nitto.com/jp/ja/others/about_us/concepts/mid-term_management_plans/pdf/Nitto_RISE_2028.pdf",
+    "sourcePages": [
+      "PDF p.13",
+      "PDF p.13",
+      "PDF p.13"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式新中期経営計画の財務目標図に2025年度実績と2028年度目標が並記され、営業利益、営業利益率、ROEを同一定義・同一単位で接続できるため。",
+    "createdAt": "2026-07-16T01:01:00.000Z",
+    "reviewedAt": "2026-07-16T01:11:00.000Z"
+  },
+  {
+    "id": "review-6504-20260716-progress-connect",
+    "companyCode": "6504",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.fujielectric.co.jp/common-resource/ir/data/20240523_1.pdf",
+    "sourcePages": [
+      "PDF p.19",
+      "PDF p.19",
+      "PDF p.19",
+      "PDF p.19",
+      "PDF p.19",
+      "PDF p.19",
+      "PDF p.19"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画の業績目標表に2023年度実績と2026年度計画が並記され、売上高、営業利益、営業利益率、当期純利益、純利益率、ROE、ROICを同一定義・同一単位で接続できるため。",
+    "createdAt": "2026-07-16T01:02:00.000Z",
+    "reviewedAt": "2026-07-16T01:12:00.000Z"
+  },
+  {
+    "id": "review-6762-20260714-production-primary",
+    "companyCode": "6762",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.tdk.com/system/files/tdk_investor_day_20240522_ja.pdf",
+    "sourcePages": [
+      "TDK Investor Day 2024 PDF p.1: 公表日、資料名称。",
+      "同 PDF p.16: 2027年3月期の売上高、ROE、ROIC、営業利益率、株主資本比率、D/Eレシオ。",
+      "同 PDF p.23: 3年間の営業キャッシュ・フロー、設備投資、戦略投資、株主還元と事業別設備投資内訳。",
+      "同 PDF p.24: 配当性向35%への変更、機動的な自己株式取得方針。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-6762-20260714-production-double-check",
+    "companyCode": "6762",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.tdk.com/system/files/tdk_investor_day_20240522_ja.pdf",
+    "sourcePages": [
+      "TDK Investor Day 2024 PDF p.1: 公表日、資料名称。",
+      "同 PDF p.16: 2027年3月期の売上高、ROE、ROIC、営業利益率、株主資本比率、D/Eレシオ。",
+      "同 PDF p.23: 3年間の営業キャッシュ・フロー、設備投資、戦略投資、株主還元と事業別設備投資内訳。",
+      "同 PDF p.24: 配当性向35%への変更、機動的な自己株式取得方針。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-6988-20260714-production-primary",
+    "companyCode": "6988",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.nitto.com/jp/ja/others/about_us/concepts/mid-term_management_plans/pdf/Nitto_RISE_2028.pdf",
+    "sourcePages": [
+      "Nitto RISE 2028 PDF p.1: 2026年5月29日公表、対象期間2026〜2028年度。",
+      "同 p.13-p.14: 2028年度・2030年度の営業利益・利益率・ROEと非財務目標。",
+      "同 p.25: 2025年度実績から2028年度目標への事業ポートフォリオ変革。",
+      "同 p.31-p.33: キャッシュアロケーション、成長投資、設備投資、研究開発、DOE・総還元性向。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:01:00.000Z",
+    "reviewedAt": "2026-07-14T09:01:00.000Z"
+  },
+  {
+    "id": "review-6988-20260714-production-double-check",
+    "companyCode": "6988",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.nitto.com/jp/ja/others/about_us/concepts/mid-term_management_plans/pdf/Nitto_RISE_2028.pdf",
+    "sourcePages": [
+      "Nitto RISE 2028 PDF p.1: 2026年5月29日公表、対象期間2026〜2028年度。",
+      "同 p.13-p.14: 2028年度・2030年度の営業利益・利益率・ROEと非財務目標。",
+      "同 p.25: 2025年度実績から2028年度目標への事業ポートフォリオ変革。",
+      "同 p.31-p.33: キャッシュアロケーション、成長投資、設備投資、研究開発、DOE・総還元性向。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:01:00.000Z",
+    "reviewedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "review-6504-20260714-production-primary",
+    "companyCode": "6504",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.fujielectric.co.jp/common-resource/ir/data/20240523_1.pdf",
+    "sourcePages": [
+      "2026年度中期経営計画 p.1: 2024年5月23日公表。",
+      "同 p.18-p.20: 基本方針、売上高・利益・利益率・ROE・ROIC等の目標。",
+      "同 p.23-p.24: 2024〜2026年度の設備投資・研究開発計画。",
+      "同 p.27: 成長投資4,770億円、キャッシュフロー・アロケーション、配当性向30%目安。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:02:00.000Z",
+    "reviewedAt": "2026-07-14T09:02:00.000Z"
+  },
+  {
+    "id": "review-6504-20260714-production-double-check",
+    "companyCode": "6504",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.fujielectric.co.jp/common-resource/ir/data/20240523_1.pdf",
+    "sourcePages": [
+      "2026年度中期経営計画 p.1: 2024年5月23日公表。",
+      "同 p.18-p.20: 基本方針、売上高・利益・利益率・ROE・ROIC等の目標。",
+      "同 p.23-p.24: 2024〜2026年度の設備投資・研究開発計画。",
+      "同 p.27: 成長投資4,770億円、キャッシュフロー・アロケーション、配当性向30%目安。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:02:00.000Z",
+    "reviewedAt": "2026-07-14T11:02:00.000Z"
   }
 ]

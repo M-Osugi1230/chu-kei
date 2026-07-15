@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "progress-connection-batch-01",
+  "automaticApprovalAllowed": false,
+  "reviews": [
+    {
+      "id": "review-4661-20260715-progress-connect",
+      "companyCode": "4661",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "progress-quality-agent",
+      "sourceUrl": "https://www.olc.co.jp/ja/ir/latest/main/00/teaserItems2/0/linkList/03/link/sp2026-04.pdf",
+      "sourcePages": [
+        "PDF p.4"
+      ],
+      "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+      "decisionReason": "公式決算説明会資料の連結損益計算書で2026年3月期売上高を確認し、2035長期経営戦略の同一定義である連結売上高目標へ接続するため。",
+      "createdAt": "2026-07-15T01:00:00.000Z",
+      "reviewedAt": "2026-07-15T01:10:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-4661-20260715-progress-connect",
+      "companyCode": "4661",
+      "fieldPath": "flags.progress,lastVerifiedDate,progress",
+      "before": {
+        "progressFlag": false,
+        "lastVerifiedDate": "2026-07-11",
+        "progressRows": []
+      },
+      "after": {
+        "progressFlag": true,
+        "lastVerifiedDate": "2026-07-15",
+        "progressRows": [
+          {
+            "code": "4661",
+            "fiscalYear": "FY2035",
+            "metric": "revenue",
+            "targetValue": 10000,
+            "actualValue": 7045,
+            "unit": "億円",
+            "progressRate": 70.5,
+            "source": "2035長期経営戦略 PDF p.6／2026年3月期 決算説明会資料 PDF p.23: 2035年度売上高1兆円以上",
+            "sourceUrl": "https://www.olc.co.jp/ja/ir/latest/main/00/teaserItems2/0/linkList/03/link/sp2026-04.pdf",
+            "sourcePage": "PDF p.4",
+            "updatedAt": "2026-07-15",
+            "lastVerifiedDate": "2026-07-15",
+            "note": "2026年3月期実績を2035年度目標へ接続。進捗率は金額比であり、経過年数を考慮した達成確度や売買判断を示さない。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "2026年3月期 決算説明会資料 PDF p.4: 連結売上高7,045億円"
+          }
+        ]
+      },
+      "reason": "公式決算説明会資料の連結損益計算書で2026年3月期売上高を確認し、2035長期経営戦略の同一定義である連結売上高目標へ接続するため。",
+      "sourceUrl": "https://www.olc.co.jp/ja/ir/latest/main/00/teaserItems2/0/linkList/03/link/sp2026-04.pdf",
+      "sourcePage": "PDF p.4",
+      "status": "corrected",
+      "reviewDecisionId": "review-4661-20260715-progress-connect",
+      "detectedAt": "2026-07-15T01:00:00.000Z",
+      "correctedAt": "2026-07-15T01:20:00.000Z"
+    }
+  ]
+}

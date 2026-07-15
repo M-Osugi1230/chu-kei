@@ -1,9 +1,9 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-15T01:11:40.251Z",
-  "sourceBundleSha256": "bea5addeab1952e5436ab3fa6fb2dfa2ac76b2c6a79e4fd5fa8e38010d5096a2",
+  "generatedAt": "2026-07-15T01:11:56.884Z",
+  "sourceBundleSha256": "d18b439b7acc536488f4a084615c46a716273af2161dcf3f2be5eeb6515d87d1",
   "companyCount": 1200,
-  "progressCount": 149,
+  "progressCount": 150,
   "detailedExtractedCount": 96,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
@@ -11,17 +11,17 @@
   ],
   "progressIdentifierCoverage": {
     "companyCode": 0,
-    "code": 149,
+    "code": 150,
     "ticker": 0,
     "securityCode": 0,
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 54,
-    "detailedWithoutProgressFlag": 42,
-    "detailedWithMatchedProgressRows": 5,
+    "detailedWithProgressFlag": 55,
+    "detailedWithoutProgressFlag": 41,
+    "detailedWithMatchedProgressRows": 6,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 42
+    "pageEvidenceAndPublicationReadyButProgressMissing": 41
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
@@ -42,7 +42,6 @@
       "4183",
       "4478",
       "4612",
-      "4661",
       "4676",
       "4901",
       "5201",
@@ -972,14 +971,32 @@
     {
       "code": "4661",
       "name": "オリエンタルランド",
-      "lastVerifiedDate": "2026-07-11",
+      "lastVerifiedDate": "2026-07-15",
       "planPublishedDate": "2025-04-28",
       "evidenceRefCount": 5,
       "pageEvidenceRefCount": 5,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
+      "hasProgressFlag": true,
+      "progressFlagValue": true,
+      "matchedProgressRows": 1,
+      "matchedProgressSample": [
+        {
+          "code": "4661",
+          "fiscalYear": "FY2035",
+          "metric": "revenue",
+          "targetValue": 10000,
+          "actualValue": 7045,
+          "unit": "億円",
+          "progressRate": 70.5,
+          "source": "2035長期経営戦略 PDF p.6／2026年3月期 決算説明会資料 PDF p.23: 2035年度売上高1兆円以上",
+          "sourceUrl": "https://www.olc.co.jp/ja/ir/latest/main/00/teaserItems2/0/linkList/03/link/sp2026-04.pdf",
+          "sourcePage": "PDF p.4",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "2026年3月期実績を2035年度目標へ接続。進捗率は金額比であり、経過年数を考慮した達成確度や売買判断を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期 決算説明会資料 PDF p.4: 連結売上高7,045億円"
+        }
+      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "progress-batch-context-v1",
-  "generatedAt": "2026-07-15T01:11:40.388Z",
-  "sourceBundleSha256": "bea5addeab1952e5436ab3fa6fb2dfa2ac76b2c6a79e4fd5fa8e38010d5096a2",
+  "generatedAt": "2026-07-15T01:11:57.010Z",
+  "sourceBundleSha256": "d18b439b7acc536488f4a084615c46a716273af2161dcf3f2be5eeb6515d87d1",
   "automaticFactCompletion": false,
   "codes": [
     "1925",
@@ -320,7 +320,7 @@
       "sourceUrl": "https://www.olc.co.jp/ja/ir/other-materials/main/011111117/teaserItems1/0116/linkList/0/link/ms2025-04.pdf",
       "document": "2035長期経営戦略（2025〜2029年度財務目標を含む）",
       "planPublishedDate": "2025-04-28",
-      "lastVerifiedDate": "2026-07-11",
+      "lastVerifiedDate": "2026-07-15",
       "summary": "東京ディズニーリゾートの集客基盤を強化しながら、クルーズ事業を新たな収益柱として加え、事業構造を進化させる。2029年度に営業キャッシュ・フロー3,000億円レベル、2035年度に売上高1兆円以上を目指し、成長投資と株主還元を両立する。",
       "metrics": {
         "revenue": "2035年度 売上高1兆円以上",
@@ -340,7 +340,7 @@
         "ma": false,
         "capitalEfficiency": true,
         "shareholderReturn": true,
-        "progress": false,
+        "progress": true,
         "overseas": false,
         "dx": false,
         "humanCapital": false,
@@ -351,7 +351,8 @@
         "固定3カ年型の中期経営計画ではなく、2035年までの長期経営戦略に2025〜2029年度の財務目標を組み込んだ資料。",
         "2029年度黒字化と営業利益率20%台後半はクルーズ事業の目標であり、連結営業利益率の目標ではない。",
         "クルーズの投資額・就航時期・収益計画は為替、建造、運航準備等により変動する可能性がある。",
-        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。"
+        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。",
+        "公式一次資料の実績値を中計目標へ接続済み。"
       ],
       "companyKeys": [
         "capital",
@@ -383,7 +384,25 @@
         "category": "サービス業/2035長期経営戦略",
         "period": "2025年度〜2035年度（2025〜2029年度財務目標）"
       },
-      "existingProgressRows": []
+      "existingProgressRows": [
+        {
+          "code": "4661",
+          "fiscalYear": "FY2035",
+          "metric": "revenue",
+          "targetValue": 10000,
+          "actualValue": 7045,
+          "unit": "億円",
+          "progressRate": 70.5,
+          "source": "2035長期経営戦略 PDF p.6／2026年3月期 決算説明会資料 PDF p.23: 2035年度売上高1兆円以上",
+          "sourceUrl": "https://www.olc.co.jp/ja/ir/latest/main/00/teaserItems2/0/linkList/03/link/sp2026-04.pdf",
+          "sourcePage": "PDF p.4",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "2026年3月期実績を2035年度目標へ接続。進捗率は金額比であり、経過年数を考慮した達成確度や売買判断を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期 決算説明会資料 PDF p.4: 連結売上高7,045億円"
+        }
+      ]
     },
     {
       "code": "5333",

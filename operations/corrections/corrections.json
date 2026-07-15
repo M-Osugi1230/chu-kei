@@ -9211,5 +9211,142 @@
     "reviewDecisionId": "review-6479-20260714-production-double-check",
     "detectedAt": "2026-07-14T10:01:00.000Z",
     "correctedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "correction-6503-20260716-progress-connect",
+    "companyCode": "6503",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-12",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-16",
+      "progressRows": [
+        {
+          "code": "6503",
+          "fiscalYear": "FY2030",
+          "metric": "adjustedOperatingMargin",
+          "targetValue": 12,
+          "actualValue": 8.5,
+          "unit": "%",
+          "progressRate": 70.8,
+          "source": "同 PDF p.6: 2030年度調整後営業利益率12%以上",
+          "sourceUrl": "https://www.mitsubishielectric.co.jp/ja/pr/2026/pdf/0529_co1.pdf",
+          "sourcePage": "PDF p.6",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "目標下限12%へ接続。営業利益から事業・資産売却損益、減損損失等を控除した会社定義の調整後営業利益率であり、通常の営業利益率と単純比較しない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "新中期経営戦略 PDF p.6: 2025年度調整後営業利益率8.5%"
+        },
+        {
+          "code": "6503",
+          "fiscalYear": "FY2030",
+          "metric": "ROE",
+          "targetValue": 12,
+          "actualValue": 9.7,
+          "unit": "%",
+          "progressRate": 80.8,
+          "source": "同 PDF p.6: 2030年度ROE12%",
+          "sourceUrl": "https://www.mitsubishielectric.co.jp/ja/pr/2026/pdf/0529_co1.pdf",
+          "sourcePage": "PDF p.6",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "同一公式財務目標表の実績と目標を接続。進捗率は数値比であり達成確度を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "新中期経営戦略 PDF p.6: 2025年度ROE9.7%"
+        }
+      ]
+    },
+    "reason": "公式新中期経営戦略の30年度財務目標表に2025年度実績と2030年度目標が並記され、調整後営業利益率とROEを同一定義・同一単位で接続できるため。売上高CAGRは基準実績値がないため接続しない。",
+    "sourceUrl": "https://www.mitsubishielectric.co.jp/ja/pr/2026/pdf/0529_co1.pdf",
+    "sourcePage": "PDF p.6 / PDF p.6",
+    "status": "corrected",
+    "reviewDecisionId": "review-6503-20260716-progress-connect",
+    "detectedAt": "2026-07-16T01:00:00.000Z",
+    "correctedAt": "2026-07-16T01:20:00.000Z"
+  },
+  {
+    "id": "correction-4676-20260716-progress-connect",
+    "companyCode": "4676",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-14",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-16",
+      "progressRows": [
+        {
+          "code": "4676",
+          "fiscalYear": "FY2030",
+          "metric": "ROE",
+          "targetValue": 6,
+          "actualValue": 1,
+          "unit": "%",
+          "progressRate": 16.7,
+          "source": "同 PDF p.8: 2030年度ROE6%",
+          "sourceUrl": "https://www.fujimediahd.co.jp/ir/pdf/groupvision2026-2030_Ver1.pdf",
+          "sourcePage": "PDF p.8",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "同一公式図の実績と目標を接続。2033年度目標8%とは分離し、都市開発・観光事業の外部資本導入後に全体目標が再公表される可能性を明示する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "Group Vision 2026-2030 PDF p.8: 2025年度ROE1.0%"
+        }
+      ]
+    },
+    "reason": "公式Group VisionのROE目標図に2025年度実績1.0%と2030年度目標6%が並記され、同一定義・同一単位で接続できるため。営業損益は2025年度実績が負値で単純な進捗率が誤解を招き、都市開発・観光事業の外部資本導入後に目標再設定予定のため接続しない。",
+    "sourceUrl": "https://www.fujimediahd.co.jp/ir/pdf/groupvision2026-2030_Ver1.pdf",
+    "sourcePage": "PDF p.8",
+    "status": "corrected",
+    "reviewDecisionId": "review-4676-20260716-progress-connect",
+    "detectedAt": "2026-07-16T01:01:00.000Z",
+    "correctedAt": "2026-07-16T01:21:00.000Z"
+  },
+  {
+    "id": "correction-6503-20260714-production-promotion",
+    "companyCode": "6503",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.mitsubishielectric.co.jp/ja/pr/2026/pdf/0529_co1.pdf",
+    "sourcePage": "新中期経営戦略 表紙: 2026年5月29日公表。 / 同 p.6: 2030年度の調整後営業利益率12%以上、ROE12%、売上高CAGR3〜5%。 / 同 p.9-p.19: スマートエナジー、オートメーション、ディフェンス＆スペースの事業戦略。 / 同 p.21: キャッシュ創出力4.6兆円、成長投資3.4兆円、株主還元2.2兆円、調整後DOE3%、総還元性向60%以上。 / 同 p.23: DX・AX人財2万人、人的資本投資1.5倍。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6503-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:00:00.000Z",
+    "correctedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "correction-4676-20260714-production-promotion",
+    "companyCode": "4676",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.fujimediahd.co.jp/ir/pdf/groupvision2026-2030_Ver1.pdf",
+    "sourcePage": "Group Vision 2026-2030 Ver.1.0 PDF p.2: Ver.2.0公表予定、資本政策・数値目標の更新範囲。 / 同 PDF p.7: 成長投資1,500億円以上、領域別配分、M&A、営業利益伸長660億円以上。 / 同 PDF p.8-p.9: 2030年度・2033年度の営業利益・ROE目標、事業構造改革、重点領域のM&A・資本提携。 / 同 PDF p.14: オリジナルIPの初期創出100件／年、オンライン等トライアル展開25件／年のパイプライン目標。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4676-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:01:00.000Z",
+    "correctedAt": "2026-07-14T11:01:00.000Z"
   }
 ]

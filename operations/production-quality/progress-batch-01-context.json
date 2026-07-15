@@ -1,7 +1,7 @@
 {
   "schemaVersion": "progress-batch-context-v1",
-  "generatedAt": "2026-07-15T02:13:12.951Z",
-  "sourceBundleSha256": "8c8b9612c6c9790e365aeba59cc1223fbaa2da0119d7e41e70bccc2d901e931d",
+  "generatedAt": "2026-07-15T02:28:39.042Z",
+  "sourceBundleSha256": "6b252952315576ef780c68216cc2b2b61becefb1c8b889eaf7c9001b400aa543",
   "automaticFactCompletion": false,
   "codes": [
     "1925",
@@ -21,11 +21,11 @@
       "name": "大和ハウス工業",
       "market": "Prime",
       "industry": "建設業",
-      "stage": "detailed_extracted",
+      "stage": "core",
       "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
       "document": "大和ハウスグループ 第7次中期経営計画",
       "planPublishedDate": "2022-05-13",
-      "lastVerifiedDate": "2026-07-12",
+      "lastVerifiedDate": "2026-07-15",
       "summary": "海外事業、ストック型事業、開発型事業を組み合わせた持続的成長モデルへ収益構造を進化させる計画。売上高5兆5,000億円、営業利益5,000億円、ROE13%以上を当初目標とし、不動産開発投資、DX、人的資本、株主還元を一体で推進した。計画は2025年度で1年前倒し終了した。",
       "metrics": {
         "revenue": "第7次中計当初目標 売上高5兆5,000億円（FY2026目標、計画はFY2025で前倒し終了）",
@@ -45,7 +45,7 @@
         "ma": true,
         "capitalEfficiency": true,
         "shareholderReturn": true,
-        "progress": false,
+        "progress": true,
         "overseas": true,
         "dx": true,
         "humanCapital": true,
@@ -55,7 +55,8 @@
       "warnings": [
         "当初の定量目標はFY2026を最終年度として設定されたが、第7次中計はFY2025で1年前倒し終了した。",
         "投資額・キャッシュアロケーションは計画策定時の5年間累計であり、単年度実績ではない。",
-        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。"
+        "公式一次資料の実績値を中計目標へ接続済み。",
+        "本番品質。公式一次資料・ページ証跡・進捗接続・個別レビュー・独立再検証を確認済み。"
       ],
       "companyKeys": [
         "capital",
@@ -72,6 +73,7 @@
         "name",
         "period",
         "planPublishedDate",
+        "productionApproval",
         "profit",
         "quality",
         "returnPolicy",
@@ -85,9 +87,88 @@
       ],
       "additionalFields": {
         "category": "建設業/第7次中期経営計画",
-        "period": "2022年度〜2025年度（当初2026年度、1年前倒しで終了）"
+        "period": "2022年度〜2025年度（当初2026年度、1年前倒しで終了）",
+        "productionApproval": {
+          "reviewApproved": true,
+          "independentDoubleCheck": true,
+          "approvals": 2,
+          "reviewers": [
+            "independent-release-review",
+            "production-quality-review"
+          ],
+          "latestReviewedAt": "2026-07-14T11:00:00.000Z"
+        }
       },
-      "existingProgressRows": []
+      "existingProgressRows": [
+        {
+          "code": "1925",
+          "fiscalYear": "FY2026",
+          "metric": "revenue",
+          "targetValue": 55000,
+          "actualValue": 44395,
+          "unit": "億円",
+          "progressRate": 80.7,
+          "source": "同 PDF p.15: 2026年度売上高5兆5,000億円",
+          "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+          "sourcePage": "PDF p.10 / p.15",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "計画開始前年度実績を当初目標へ接続。第7次中計はFY2025で前倒し終了したため、現行目標としては扱わない。",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度売上高44,395億円"
+        },
+        {
+          "code": "1925",
+          "fiscalYear": "FY2026",
+          "metric": "operatingProfit",
+          "targetValue": 5000,
+          "actualValue": 3322,
+          "unit": "億円",
+          "progressRate": 66.4,
+          "source": "同 PDF p.15: 2026年度営業利益5,000億円（退職給付数理差異除く）",
+          "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+          "sourcePage": "PDF p.10 / p.15",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "会社資料の定義に合わせ、退職給付数理差異を除く営業利益で接続。",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度営業利益3,322億円（退職給付数理差異を分離表示）"
+        },
+        {
+          "code": "1925",
+          "fiscalYear": "FY2026",
+          "metric": "netIncome",
+          "targetValue": 3400,
+          "actualValue": 2252,
+          "unit": "億円",
+          "progressRate": 66.2,
+          "source": "同 PDF p.15: 2026年度親会社株主帰属当期純利益3,400億円",
+          "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+          "sourcePage": "PDF p.10 / p.15",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同じ公式計画資料の開始前年度実績と当初目標を接続。",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度親会社株主帰属当期純利益2,252億円"
+        },
+        {
+          "code": "1925",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 13,
+          "actualValue": 11.7,
+          "unit": "%",
+          "progressRate": 90,
+          "source": "同 PDF p.15: 2026年度ROE13%以上",
+          "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+          "sourcePage": "PDF p.10 / p.15",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "下限目標13%へ接続。計画の前倒し終了を踏まえ、現行目標とは区別する。",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度ROE11.7%"
+        }
+      ]
     },
     {
       "code": "2267",

@@ -13214,5 +13214,265 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:00:00.000Z",
     "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-1801-20260715-progress-connect",
+    "companyCode": "1801",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+    "sourcePages": [
+      "PDF p.5 / p.32",
+      "PDF p.5 / p.32",
+      "PDF p.5 / p.32",
+      "PDF p.5 / p.32"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画資料で2023年度実績と2026年度数値目標を確認し、グループ売上高・グループ営業利益・グループ純利益・ROEを同一定義と単位で接続できるため。",
+    "createdAt": "2026-07-15T01:00:00.000Z",
+    "reviewedAt": "2026-07-15T01:10:00.000Z"
+  },
+  {
+    "id": "review-1802-20260715-progress-connect",
+    "companyCode": "1802",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+    "sourcePages": [
+      "PDF p.9（資料内p.8）",
+      "PDF p.9（資料内p.8）",
+      "PDF p.9（資料内p.8）",
+      "PDF p.9（資料内p.8）",
+      "PDF p.9（資料内p.8）"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画追補の同一経営指標表に2023年度実績と変更後目標が掲載され、営業利益・当期純利益・EPS・ROIC・ROEを同一定義と単位で接続できるため。",
+    "createdAt": "2026-07-15T01:01:00.000Z",
+    "reviewedAt": "2026-07-15T01:11:00.000Z"
+  },
+  {
+    "id": "review-1803-20260715-progress-connect",
+    "companyCode": "1803",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
+    "sourcePages": [
+      "PDF p.28",
+      "PDF p.7 / p.28"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画の業績目標表と前中計振返り表により、2023年度実績と2026年度目標を確認し、当期純利益とROEを同一定義と単位で接続できるため。営業利益は基準実績が負値で単純進捗率が誤解を招くため採用しない。",
+    "createdAt": "2026-07-15T01:02:00.000Z",
+    "reviewedAt": "2026-07-15T01:12:00.000Z"
+  },
+  {
+    "id": "review-1801-20260714-production-primary",
+    "companyCode": "1801",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+    "sourcePages": [
+      "中期経営計画 p.1: 2024年5月13日公表。",
+      "同 p.31: 2026年度の売上高、営業利益、純利益、ROE目標。",
+      "同 p.32: 3年間の投資総額3,500億円と内訳、M&A別枠。",
+      "同 p.12・p.41: 財務規律、配当性向30％程度、総還元性向100％上限の自己株式取得。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-1801-20260714-production-double-check",
+    "companyCode": "1801",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+    "sourcePages": [
+      "中期経営計画 p.1: 2024年5月13日公表。",
+      "同 p.31: 2026年度の売上高、営業利益、純利益、ROE目標。",
+      "同 p.32: 3年間の投資総額3,500億円と内訳、M&A別枠。",
+      "同 p.12・p.41: 財務規律、配当性向30％程度、総還元性向100％上限の自己株式取得。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-1802-20260714-production-primary",
+    "companyCode": "1802",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+    "sourcePages": [
+      "中期経営計画2022追補 PDF p.1: 2024年5月13日公表、対象期間2022〜2026年度。",
+      "同 PDF p.9（資料内p.8）: 変更後の売上高・利益・EPS・ROIC・ROE・DOE目標。",
+      "同 PDF p.10-p.13（資料内p.9-p.12）: 投資総額7,500億円とキャッシュアロケーション。",
+      "同 PDF p.14（資料内p.13）: 必要自己資本1兆円、ROE10%以上、DOE5%程度、機動的還元。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:01:00.000Z",
+    "reviewedAt": "2026-07-14T09:01:00.000Z"
+  },
+  {
+    "id": "review-1802-20260714-production-double-check",
+    "companyCode": "1802",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+    "sourcePages": [
+      "中期経営計画2022追補 PDF p.1: 2024年5月13日公表、対象期間2022〜2026年度。",
+      "同 PDF p.9（資料内p.8）: 変更後の売上高・利益・EPS・ROIC・ROE・DOE目標。",
+      "同 PDF p.10-p.13（資料内p.9-p.12）: 投資総額7,500億円とキャッシュアロケーション。",
+      "同 PDF p.14（資料内p.13）: 必要自己資本1兆円、ROE10%以上、DOE5%程度、機動的還元。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:01:00.000Z",
+    "reviewedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "review-1803-20260714-production-primary",
+    "companyCode": "1803",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
+    "sourcePages": [
+      "中期経営計画〈2024-2026〉 PDF p.1: 計画名称・対象期間。公式PDF作成日は2024年5月13日。",
+      "同 PDF p.28: 2026年度の売上高・利益目標、ROE・自己資本比率・D/Eレシオ・配当性向。",
+      "同 PDF p.29: 3年間の成長投資3,600億円、キャッシュアロケーション、配当・自己株式取得方針。",
+      "同 PDF p.30: 政策保有株式縮減、ROE・PBR改善方針。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:02:00.000Z",
+    "reviewedAt": "2026-07-14T09:02:00.000Z"
+  },
+  {
+    "id": "review-1803-20260714-production-double-check",
+    "companyCode": "1803",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
+    "sourcePages": [
+      "中期経営計画〈2024-2026〉 PDF p.1: 計画名称・対象期間。公式PDF作成日は2024年5月13日。",
+      "同 PDF p.28: 2026年度の売上高・利益目標、ROE・自己資本比率・D/Eレシオ・配当性向。",
+      "同 PDF p.29: 3年間の成長投資3,600億円、キャッシュアロケーション、配当・自己株式取得方針。",
+      "同 PDF p.30: 政策保有株式縮減、ROE・PBR改善方針。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:02:00.000Z",
+    "reviewedAt": "2026-07-14T11:02:00.000Z"
   }
 ]

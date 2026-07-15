@@ -1,7 +1,7 @@
 {
   "schemaVersion": "progress-batch-context-v1",
-  "generatedAt": "2026-07-15T02:01:29.330Z",
-  "sourceBundleSha256": "7c55dbb5affcd1ee56072e8a39a6dbca11422ebbbb13cacf08022b30eb981611",
+  "generatedAt": "2026-07-15T02:10:48.745Z",
+  "sourceBundleSha256": "8c8b9612c6c9790e365aeba59cc1223fbaa2da0119d7e41e70bccc2d901e931d",
   "automaticFactCompletion": false,
   "codes": [
     "1925",
@@ -875,11 +875,11 @@
       "name": "大成建設",
       "market": "Prime",
       "industry": "建設業",
-      "stage": "detailed_extracted",
+      "stage": "core",
       "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
       "document": "TAISEI VISION 2030達成計画・中期経営計画（2024-2026）",
       "planPublishedDate": "2024-05-13",
-      "lastVerifiedDate": "2026-07-12",
+      "lastVerifiedDate": "2026-07-15",
       "summary": "国内建築事業の収益体制立て直しを最優先とし、DX、M&A、新規事業、海外展開を通じてTAISEI VISION 2030への成長軌道を再構築する。2026年度に売上高1兆9,500億円程度、営業利益1,200億円、純利益800億円、ROE8.5％程度を目指す。",
       "metrics": {
         "revenue": "2026年度 グループ売上高1兆9,500億円程度",
@@ -898,7 +898,7 @@
         "ma": true,
         "capitalEfficiency": true,
         "shareholderReturn": true,
-        "progress": false,
+        "progress": true,
         "overseas": true,
         "dx": true,
         "humanCapital": true,
@@ -908,7 +908,8 @@
       "warnings": [
         "2026年度のROE8.5％程度は中計数値目標であり、ROE10％程度は政策保有株式縮減が目標通り進捗した場合の想定。",
         "投資額3,500億円は2024〜2026年度の3年間累計で、M&A投資は含まれず別枠。",
-        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。"
+        "公式一次資料の実績値を中計目標へ接続済み。",
+        "本番品質。公式一次資料・ページ証跡・進捗接続・個別レビュー・独立再検証を確認済み。"
       ],
       "companyKeys": [
         "capital",
@@ -925,6 +926,7 @@
         "name",
         "period",
         "planPublishedDate",
+        "productionApproval",
         "profit",
         "quality",
         "returnPolicy",
@@ -938,20 +940,99 @@
       ],
       "additionalFields": {
         "category": "建設業/中期経営計画2024-2026",
-        "period": "2024年度〜2026年度"
+        "period": "2024年度〜2026年度",
+        "productionApproval": {
+          "reviewApproved": true,
+          "independentDoubleCheck": true,
+          "approvals": 2,
+          "reviewers": [
+            "independent-release-review",
+            "production-quality-review"
+          ],
+          "latestReviewedAt": "2026-07-14T11:00:00.000Z"
+        }
       },
-      "existingProgressRows": []
+      "existingProgressRows": [
+        {
+          "code": "1801",
+          "fiscalYear": "FY2026",
+          "metric": "revenue",
+          "targetValue": 19500,
+          "actualValue": 17650,
+          "unit": "億円",
+          "progressRate": 90.5,
+          "source": "同 PDF p.32（資料内p.31）: 2026年度売上高19,500億円程度",
+          "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+          "sourcePage": "PDF p.5 / p.32",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同じ公式計画資料の基準実績と目標を接続。『程度』を伴う目標であり、進捗率は参考値。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.5（資料内p.4）: 2023年度グループ売上高17,650億円"
+        },
+        {
+          "code": "1801",
+          "fiscalYear": "FY2026",
+          "metric": "operatingProfit",
+          "targetValue": 1200,
+          "actualValue": 265,
+          "unit": "億円",
+          "progressRate": 22.1,
+          "source": "同 PDF p.32（資料内p.31）: 2026年度グループ営業利益1,200億円",
+          "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+          "sourcePage": "PDF p.5 / p.32",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同じ公式計画資料の基準実績と目標を接続。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.5（資料内p.4）: 2023年度グループ営業利益265億円"
+        },
+        {
+          "code": "1801",
+          "fiscalYear": "FY2026",
+          "metric": "netIncome",
+          "targetValue": 800,
+          "actualValue": 403,
+          "unit": "億円",
+          "progressRate": 50.4,
+          "source": "同 PDF p.32（資料内p.31）: 2026年度グループ純利益800億円",
+          "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+          "sourcePage": "PDF p.5 / p.32",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同じ公式計画資料の基準実績と目標を接続。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.5（資料内p.4）: 2023年度グループ純利益403億円"
+        },
+        {
+          "code": "1801",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 8.5,
+          "actualValue": 4.6,
+          "unit": "%",
+          "progressRate": 54.1,
+          "source": "同 PDF p.32（資料内p.31）: 2026年度ROE8.5%程度",
+          "sourceUrl": "https://www.taisei.co.jp/ir/management-policy/plan/pdf/2024051301.pdf",
+          "sourcePage": "PDF p.5 / p.32",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "政策保有株式縮減が進んだ場合のROE10%想定とは分離し、中計の8.5%程度へ接続。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.5（資料内p.4）: 2023年度ROE4.6%"
+        }
+      ]
     },
     {
       "code": "1802",
       "name": "大林組",
       "market": "Prime",
       "industry": "建設業",
-      "stage": "detailed_extracted",
+      "stage": "core",
       "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
       "document": "大林グループ中期経営計画2022 追補",
       "planPublishedDate": "2024-05-13",
-      "lastVerifiedDate": "2026-07-13",
+      "lastVerifiedDate": "2026-07-15",
       "summary": "安全・品質を最優先に国内建設事業の収益基盤を強化し、開発、グリーンエネルギー、M&A、DX、人材・技術へ投資する。2026年度に売上高2兆円台半ば、営業利益1,000億円以上、当期純利益1,000億円程度、ROE10%以上を目指す。",
       "metrics": {
         "revenue": "2026年度 連結売上高2兆円台半ば",
@@ -970,7 +1051,7 @@
         "ma": true,
         "capitalEfficiency": true,
         "shareholderReturn": true,
-        "progress": false,
+        "progress": true,
         "overseas": true,
         "dx": true,
         "humanCapital": true,
@@ -981,7 +1062,8 @@
         "本資料は2022年公表の中期経営計画を2024年5月に見直した追補であり、当初計画値ではなく変更後目標を表示している。",
         "投資総額7,500億円のうち投資キャッシュ・フロー対象は約4,200億円。大型M&A等は計画外となる場合がある。",
         "売上高目標の『2兆円台半ば』はレンジ表現であり、単一の確定額ではない。",
-        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。"
+        "公式一次資料の実績値を中計目標へ接続済み。",
+        "本番品質。公式一次資料・ページ証跡・進捗接続・個別レビュー・独立再検証を確認済み。"
       ],
       "companyKeys": [
         "capital",
@@ -998,6 +1080,7 @@
         "name",
         "period",
         "planPublishedDate",
+        "productionApproval",
         "profit",
         "quality",
         "returnPolicy",
@@ -1011,20 +1094,116 @@
       ],
       "additionalFields": {
         "category": "建設業/中期経営計画2022追補",
-        "period": "2022年度〜2026年度"
+        "period": "2022年度〜2026年度",
+        "productionApproval": {
+          "reviewApproved": true,
+          "independentDoubleCheck": true,
+          "approvals": 2,
+          "reviewers": [
+            "independent-release-review",
+            "production-quality-review"
+          ],
+          "latestReviewedAt": "2026-07-14T11:01:00.000Z"
+        }
       },
-      "existingProgressRows": []
+      "existingProgressRows": [
+        {
+          "code": "1802",
+          "fiscalYear": "FY2026",
+          "metric": "operatingProfit",
+          "targetValue": 1000,
+          "actualValue": 793,
+          "unit": "億円",
+          "progressRate": 79.3,
+          "source": "同 PDF p.9: 変更後の連結営業利益目標1,000億円以上",
+          "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+          "sourcePage": "PDF p.9（資料内p.8）",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式表の実績と変更後目標を接続。目標は下限値。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度連結営業利益793億円"
+        },
+        {
+          "code": "1802",
+          "fiscalYear": "FY2026",
+          "metric": "netIncome",
+          "targetValue": 1000,
+          "actualValue": 750,
+          "unit": "億円",
+          "progressRate": 75,
+          "source": "同 PDF p.9: 変更後目標1,000億円程度",
+          "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+          "sourcePage": "PDF p.9（資料内p.8）",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式表の実績と変更後目標を接続。『程度』を伴う目標。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度親会社株主帰属当期純利益750億円"
+        },
+        {
+          "code": "1802",
+          "fiscalYear": "FY2026",
+          "metric": "EPS",
+          "targetValue": 140,
+          "actualValue": 104.69,
+          "unit": "円",
+          "progressRate": 74.8,
+          "source": "同 PDF p.9: 変更後目標EPS140円程度",
+          "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+          "sourcePage": "PDF p.9（資料内p.8）",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式表の実績と変更後目標を接続。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度EPS104.69円"
+        },
+        {
+          "code": "1802",
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 5,
+          "actualValue": 3.8,
+          "unit": "%",
+          "progressRate": 76,
+          "source": "同 PDF p.9: 中期的なROIC目標5%以上",
+          "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+          "sourcePage": "PDF p.9（資料内p.8）",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "目標時点が『中期的』であるため、FY2026欄への表示時に時点注記を維持する。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度ROIC3.8%"
+        },
+        {
+          "code": "1802",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 10,
+          "actualValue": 7,
+          "unit": "%",
+          "progressRate": 70,
+          "source": "同 PDF p.9: 2026年度ROE10%以上",
+          "sourceUrl": "https://www.obayashi.co.jp/ir/upload/file/news20240513_2_01.pdf",
+          "sourcePage": "PDF p.9（資料内p.8）",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式表の実績と下限目標を接続。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画2022追補 PDF p.9: 2023年度ROE7.0%"
+        }
+      ]
     },
     {
       "code": "1803",
       "name": "清水建設",
       "market": "Prime",
       "industry": "建設業",
-      "stage": "detailed_extracted",
+      "stage": "core",
       "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
       "document": "清水建設グループ 中期経営計画〈2024-2026〉",
       "planPublishedDate": "2024-05-13",
-      "lastVerifiedDate": "2026-07-13",
+      "lastVerifiedDate": "2026-07-15",
       "summary": "建設事業の収益力回復と非建設事業・グローバル事業の成長を進め、2026年度に総売上高1兆8,900億円、営業利益1,000億円、ROE8%以上を目指す。3年間で3,600億円の成長投資を行い、別枠でM&A等の投資機会にも対応する。",
       "metrics": {
         "revenue": "2026年度 総売上高1兆8,900億円（建設事業1兆6,000億円、開発事業等2,900億円）",
@@ -1043,7 +1222,7 @@
         "ma": true,
         "capitalEfficiency": true,
         "shareholderReturn": true,
-        "progress": false,
+        "progress": true,
         "overseas": true,
         "dx": true,
         "humanCapital": true,
@@ -1054,7 +1233,8 @@
         "公表日は公式PDFの作成日および公表時期を照合して登録。",
         "3,600億円は2024〜2026年度の3年間累計で、M&A等の別枠投資を含まない。",
         "中長期ROE10%以上等は次期中計期間を含む目標で、2026年度目標と分離して表示する。",
-        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。"
+        "公式一次資料の実績値を中計目標へ接続済み。",
+        "本番品質。公式一次資料・ページ証跡・進捗接続・個別レビュー・独立再検証を確認済み。"
       ],
       "companyKeys": [
         "capital",
@@ -1071,6 +1251,7 @@
         "name",
         "period",
         "planPublishedDate",
+        "productionApproval",
         "profit",
         "quality",
         "returnPolicy",
@@ -1084,9 +1265,54 @@
       ],
       "additionalFields": {
         "category": "建設業/中期経営計画2024-2026",
-        "period": "2024年度〜2026年度"
+        "period": "2024年度〜2026年度",
+        "productionApproval": {
+          "reviewApproved": true,
+          "independentDoubleCheck": true,
+          "approvals": 2,
+          "reviewers": [
+            "independent-release-review",
+            "production-quality-review"
+          ],
+          "latestReviewedAt": "2026-07-14T11:02:00.000Z"
+        }
       },
-      "existingProgressRows": []
+      "existingProgressRows": [
+        {
+          "code": "1803",
+          "fiscalYear": "FY2026",
+          "metric": "netIncome",
+          "targetValue": 700,
+          "actualValue": 171,
+          "unit": "億円",
+          "progressRate": 24.4,
+          "source": "同 PDF p.28: 2026年度当期純利益700億円",
+          "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
+          "sourcePage": "PDF p.28",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式業績目標表の基準実績と目標を接続。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.28: 2023年度当期純利益171億円"
+        },
+        {
+          "code": "1803",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 8,
+          "actualValue": 2,
+          "unit": "%",
+          "progressRate": 25,
+          "source": "同 PDF p.28: 2026年度ROE8%以上",
+          "sourceUrl": "https://www.shimz.co.jp/company/about/strategy/pdf/policy2024.pdf",
+          "sourcePage": "PDF p.7 / p.28",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "公式資料の前中計実績と現中計下限目標を接続。中長期ROE10%以上とは分離する。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.7: 2023年度ROE2.0%"
+        }
+      ]
     }
   ]
 }

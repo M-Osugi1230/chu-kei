@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "production-promotion-batch-07",
+  "automaticApprovalAllowed": false,
+  "explicitProductionApproval": true,
+  "reviews": [
+    {
+      "id": "review-3086-20260714-production-primary",
+      "companyCode": "3086",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+      "sourcePages": [
+        "中期経営計画説明会資料 p.1: 2024年4月15日公表、2024〜2026年度計画。",
+        "同 p.36: 2026年度の事業利益520億円、ROE8%以上、ROIC5%以上。",
+        "同 p.38・p.41: 外商・准外商売上高3,000億円、パルコ事業利益100億円。",
+        "同 p.53: 連結・セグメント別ROIC目標と資本コスト。",
+        "同 p.54-p.55: 営業CF2,200億円、投資・還元配分、配当性向40%、自己株式取得。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-14T08:00:00.000Z",
+      "reviewedAt": "2026-07-14T09:00:00.000Z"
+    },
+    {
+      "id": "review-3086-20260714-production-double-check",
+      "companyCode": "3086",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-review",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+      "sourcePages": [
+        "中期経営計画説明会資料 p.1: 2024年4月15日公表、2024〜2026年度計画。",
+        "同 p.36: 2026年度の事業利益520億円、ROE8%以上、ROIC5%以上。",
+        "同 p.38・p.41: 外商・准外商売上高3,000億円、パルコ事業利益100億円。",
+        "同 p.53: 連結・セグメント別ROIC目標と資本コスト。",
+        "同 p.54-p.55: 営業CF2,200億円、投資・還元配分、配当性向40%、自己株式取得。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-14T10:00:00.000Z",
+      "reviewedAt": "2026-07-14T11:00:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-3086-20260714-production-promotion",
+      "companyCode": "3086",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+      "sourcePage": "中期経営計画説明会資料 p.1: 2024年4月15日公表、2024〜2026年度計画。 / 同 p.36: 2026年度の事業利益520億円、ROE8%以上、ROIC5%以上。 / 同 p.38・p.41: 外商・准外商売上高3,000億円、パルコ事業利益100億円。 / 同 p.53: 連結・セグメント別ROIC目標と資本コスト。 / 同 p.54-p.55: 営業CF2,200億円、投資・還元配分、配当性向40%、自己株式取得。",
+      "status": "corrected",
+      "reviewDecisionId": "review-3086-20260714-production-double-check",
+      "detectedAt": "2026-07-14T10:00:00.000Z",
+      "correctedAt": "2026-07-14T11:00:00.000Z"
+    }
+  ]
+}

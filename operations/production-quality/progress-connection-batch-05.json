@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-05",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "3086",
+      "sourceUrl": "https://www.j-front-retailing.com/ir/library/presentation/240415_presentation_J_r.pdf",
+      "document": "2024年2月期 決算および2024〜2026年度 中期経営計画 説明会資料",
+      "sourcePublishedDate": "2024-04-15",
+      "verifiedDate": "2026-07-15",
+      "reason": "公式決算・中期経営計画説明資料に2023年度実績と2026年度目標が掲載され、事業利益・ROE・ROICを同一の会社定義および単位で接続できるため。ROEとROICは基準時点で下限目標を上回っていることを明示する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2026",
+          "metric": "businessProfit",
+          "targetValue": 520,
+          "actualValue": 443.3,
+          "unit": "億円",
+          "sourcePage": "PDF p.4 / p.36",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "説明会資料 PDF p.4: 2023年度事業利益44,330百万円（443.3億円）",
+          "targetSource": "同 PDF p.36: 2026年度事業利益520億円",
+          "note": "会社定義の事業利益を同一定義で接続。IFRS営業利益とは異なる。進捗率は金額比であり達成確度を示さない。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 8,
+          "actualValue": 8.1,
+          "unit": "%",
+          "sourcePage": "PDF p.4 / p.36",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "説明会資料 PDF p.4: 2023年度ROE8.1%",
+          "targetSource": "同 PDF p.36: 2026年度ROE8.0%以上",
+          "note": "2023年度実績が2026年度の下限目標を基準時点で上回る。継続達成を保証するものではない。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 5,
+          "actualValue": 5.1,
+          "unit": "%",
+          "sourcePage": "PDF p.4 / p.36",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "説明会資料 PDF p.4: 2023年度ROIC5.1%",
+          "targetSource": "同 PDF p.36: 2026年度ROIC5.0%以上",
+          "note": "2023年度実績が2026年度の下限目標を基準時点で上回る。継続達成を保証するものではない。"
+        }
+      ]
+    }
+  ]
+}

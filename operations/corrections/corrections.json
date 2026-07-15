@@ -8682,5 +8682,210 @@
     "reviewDecisionId": "review-1803-20260714-production-double-check",
     "detectedAt": "2026-07-14T10:02:00.000Z",
     "correctedAt": "2026-07-14T11:02:00.000Z"
+  },
+  {
+    "id": "correction-1925-20260715-progress-connect",
+    "companyCode": "1925",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-12",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-15",
+      "progressRows": [
+        {
+          "code": "1925",
+          "fiscalYear": "FY2026",
+          "metric": "revenue",
+          "targetValue": 55000,
+          "actualValue": 44395,
+          "unit": "億円",
+          "progressRate": 80.7,
+          "source": "同 PDF p.15: 2026年度売上高5兆5,000億円",
+          "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+          "sourcePage": "PDF p.10 / p.15",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "計画開始前年度実績を当初目標へ接続。第7次中計はFY2025で前倒し終了したため、現行目標としては扱わない。",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度売上高44,395億円"
+        },
+        {
+          "code": "1925",
+          "fiscalYear": "FY2026",
+          "metric": "operatingProfit",
+          "targetValue": 5000,
+          "actualValue": 3322,
+          "unit": "億円",
+          "progressRate": 66.4,
+          "source": "同 PDF p.15: 2026年度営業利益5,000億円（退職給付数理差異除く）",
+          "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+          "sourcePage": "PDF p.10 / p.15",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "会社資料の定義に合わせ、退職給付数理差異を除く営業利益で接続。",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度営業利益3,322億円（退職給付数理差異を分離表示）"
+        },
+        {
+          "code": "1925",
+          "fiscalYear": "FY2026",
+          "metric": "netIncome",
+          "targetValue": 3400,
+          "actualValue": 2252,
+          "unit": "億円",
+          "progressRate": 66.2,
+          "source": "同 PDF p.15: 2026年度親会社株主帰属当期純利益3,400億円",
+          "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+          "sourcePage": "PDF p.10 / p.15",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同じ公式計画資料の開始前年度実績と当初目標を接続。",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度親会社株主帰属当期純利益2,252億円"
+        },
+        {
+          "code": "1925",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 13,
+          "actualValue": 11.7,
+          "unit": "%",
+          "progressRate": 90,
+          "source": "同 PDF p.15: 2026年度ROE13%以上",
+          "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+          "sourcePage": "PDF p.10 / p.15",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "下限目標13%へ接続。計画の前倒し終了を踏まえ、現行目標とは区別する。",
+          "actualFiscalYear": "FY2021",
+          "actualSource": "第7次中期経営計画 PDF p.10: 2021年度ROE11.7%"
+        }
+      ]
+    },
+    "reason": "公式第7次中期経営計画に2021年度実績と2026年度目標が掲載され、売上高・営業利益・当期純利益・ROEを同一定義と単位で接続できるため。計画がFY2025で前倒し終了した事実は既存警告表示で維持する。",
+    "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+    "sourcePage": "PDF p.10 / p.15 / PDF p.10 / p.15 / PDF p.10 / p.15 / PDF p.10 / p.15",
+    "status": "corrected",
+    "reviewDecisionId": "review-1925-20260715-progress-connect",
+    "detectedAt": "2026-07-15T01:00:00.000Z",
+    "correctedAt": "2026-07-15T01:20:00.000Z"
+  },
+  {
+    "id": "correction-8630-20260715-progress-connect",
+    "companyCode": "8630",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-12",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-15",
+      "progressRows": [
+        {
+          "code": "8630",
+          "fiscalYear": "FY2026",
+          "metric": "adjustedConsolidatedProfit",
+          "targetValue": 5000,
+          "actualValue": 3359,
+          "unit": "億円",
+          "progressRate": 67.2,
+          "source": "同 PDF p.10: 2026年度修正連結利益5,000億円",
+          "sourceUrl": "https://www.sompo-hd.com/-/media/hd/files/doc/pdf/ir/2026/20260522_1.pdf?la=ja-JP",
+          "sourcePage": "PDF p.10",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "SOMPO独自の修正連結利益であり、会計上の純利益と単純比較しない。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "2026年5月IRミーティング資料 PDF p.10: 2023年度修正連結利益3,359億円"
+        },
+        {
+          "code": "8630",
+          "fiscalYear": "FY2026",
+          "metric": "adjustedROE",
+          "targetValue": 13,
+          "actualValue": 10.9,
+          "unit": "%",
+          "progressRate": 83.8,
+          "source": "同 PDF p.10: 2026年度修正連結ROE13〜15%",
+          "sourceUrl": "https://www.sompo-hd.com/-/media/hd/files/doc/pdf/ir/2026/20260522_1.pdf?la=ja-JP",
+          "sourcePage": "PDF p.10",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "目標レンジ13〜15%の下限13%へ接続。SOMPO独自の修正指標。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "2026年5月IRミーティング資料 PDF p.10: 2023年度修正連結ROE10.9%"
+        },
+        {
+          "code": "8630",
+          "fiscalYear": "FY2026",
+          "metric": "adjustedEPSGrowthCAGR",
+          "targetValue": 12,
+          "actualValue": 19,
+          "unit": "% CAGR",
+          "progressRate": 158.3,
+          "source": "同 PDF p.10: 中計目標 年率12%超",
+          "sourceUrl": "https://www.sompo-hd.com/-/media/hd/files/doc/pdf/ir/2026/20260522_1.pdf?la=ja-JP",
+          "sourcePage": "PDF p.6 / p.10",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "2025年度時点で下限目標を上回るペース。将来の継続達成を保証せず、会社定義の修正EPS成長率として表示する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年5月IRミーティング資料 PDF p.6・p.10: 中計期間の修正EPS成長率は年率19%ペース"
+        }
+      ]
+    },
+    "reason": "公式IRミーティング資料に現中計の2023年度基準値、2025年度実績、2026年度目標が掲載され、修正連結利益・修正連結ROE・修正EPS成長率を会社定義のまま接続できるため。独自調整指標であることを明示する。",
+    "sourceUrl": "https://www.sompo-hd.com/-/media/hd/files/doc/pdf/ir/2026/20260522_1.pdf?la=ja-JP",
+    "sourcePage": "PDF p.10 / PDF p.10 / PDF p.6 / p.10",
+    "status": "corrected",
+    "reviewDecisionId": "review-8630-20260715-progress-connect",
+    "detectedAt": "2026-07-15T01:01:00.000Z",
+    "correctedAt": "2026-07-15T01:21:00.000Z"
+  },
+  {
+    "id": "correction-1925-20260714-production-promotion",
+    "companyCode": "1925",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.daiwahouse.com/about/release/house/pdf/challenge_dh7th.pdf",
+    "sourcePage": "第7次中期経営計画 p.1: 2022年5月13日公表、当初期間は2022年度〜2026年度。 / 第7次中期経営計画 p.15: 売上高5兆5,000億円、営業利益5,000億円、営業利益率9.1%、当期純利益3,400億円、ROE13%以上、配当性向35%以上、D/Eレシオ0.6倍程度。 / 第7次中期経営計画 p.21-p.23: 不動産開発の総投資約2.2兆円超、開発売上約4,500億円、ストック売上約1.6兆円。 / 第7次中期経営計画 p.30: 5年間の営業CF1.8兆円、投資配分、配当性向35%以上、配当下限130円、自己株式取得方針。 / 2026年3月期経営説明会 p.4-p.6: 第7次中計をFY2025で1年前倒し終了し、売上高・営業利益・当期純利益の当初目標を前倒し達成。",
+    "status": "corrected",
+    "reviewDecisionId": "review-1925-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:00:00.000Z",
+    "correctedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "correction-8630-20260714-production-promotion",
+    "companyCode": "8630",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.sompo-hd.com/-/media/hd/files/doc/pdf/ir/2026/20260522_1.pdf?la=ja-JP",
+    "sourcePage": "公式IRイベント一覧: 2024年5月28日のIRミーティングで『新中期経営計画（2024〜2026年度）』を公表。 / 経営戦略ページ: 2026年度の修正連結ROE13〜15%、修正EPS成長率12%超、資本循環・人材・データデジタル戦略。 / 2026年5月IRミーティング p.10-p.12: 2026年度修正連結利益5,000億円、修正連結ROE13〜15%、修正EPS成長率12%超、Aspen統合・国内損保変革。 / 2026年5月IRミーティング p.21: 成長投資で1,000億円超の利益積み上げ、海外・国内M&Aのクライテリア。 / 2026年5月IRミーティング p.23: 中期的な配当性向50%、2026年度予想DPS200円、機動的な自己株式取得。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8630-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:01:00.000Z",
+    "correctedAt": "2026-07-14T11:01:00.000Z"
   }
 ]

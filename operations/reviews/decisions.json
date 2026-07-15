@@ -14781,5 +14781,91 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:02:00.000Z",
     "reviewedAt": "2026-07-14T11:02:00.000Z"
+  },
+  {
+    "id": "review-9735-20260716-progress-connect",
+    "companyCode": "9735",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+    "sourcePages": [
+      "PDF p.2 / p.16",
+      "PDF p.2 / p.16",
+      "PDF p.2 / p.16"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式Road Map資料に2022年度実績と2027年度目標が掲載され、連結売上高、連結営業利益、ROEを同一定義・同一単位で接続できるため。営業利益はレンジの下限を使用し、配当性向は基準値がないため接続しない。",
+    "createdAt": "2026-07-16T01:00:00.000Z",
+    "reviewedAt": "2026-07-16T01:10:00.000Z"
+  },
+  {
+    "id": "review-9735-20260714-production-primary",
+    "companyCode": "9735",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+    "sourcePages": [
+      "Road Map 2027 p.1-p.3: 前計画の振り返り、2023〜2027年の位置づけ。",
+      "同 p.5: みまもりクラウド、ビジネスインフラ、既存事業、海外市場を含む全体戦略。",
+      "同 p.10: 海外のオーガニック成長・M&Aと将来の海外売上高比率10%。",
+      "同 p.16: 2027年度の売上高・営業利益・配当性向・ROE目標、自己株式取得方針。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-9735-20260714-production-double-check",
+    "companyCode": "9735",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+    "sourcePages": [
+      "Road Map 2027 p.1-p.3: 前計画の振り返り、2023〜2027年の位置づけ。",
+      "同 p.5: みまもりクラウド、ビジネスインフラ、既存事業、海外市場を含む全体戦略。",
+      "同 p.10: 海外のオーガニック成長・M&Aと将来の海外売上高比率10%。",
+      "同 p.16: 2027年度の売上高・営業利益・配当性向・ROE目標、自己株式取得方針。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
   }
 ]

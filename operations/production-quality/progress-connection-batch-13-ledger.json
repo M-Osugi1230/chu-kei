@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "progress-connection-batch-13",
+  "automaticApprovalAllowed": false,
+  "reviews": [
+    {
+      "id": "review-9735-20260716-progress-connect",
+      "companyCode": "9735",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "progress-quality-agent",
+      "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+      "sourcePages": [
+        "PDF p.2 / p.16",
+        "PDF p.2 / p.16",
+        "PDF p.2 / p.16"
+      ],
+      "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+      "decisionReason": "公式Road Map資料に2022年度実績と2027年度目標が掲載され、連結売上高、連結営業利益、ROEを同一定義・同一単位で接続できるため。営業利益はレンジの下限を使用し、配当性向は基準値がないため接続しない。",
+      "createdAt": "2026-07-16T01:00:00.000Z",
+      "reviewedAt": "2026-07-16T01:10:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-9735-20260716-progress-connect",
+      "companyCode": "9735",
+      "fieldPath": "flags.progress,lastVerifiedDate,progress",
+      "before": {
+        "progressFlag": false,
+        "lastVerifiedDate": "2026-07-12",
+        "progressRows": []
+      },
+      "after": {
+        "progressFlag": true,
+        "lastVerifiedDate": "2026-07-16",
+        "progressRows": [
+          {
+            "code": "9735",
+            "fiscalYear": "FY2027",
+            "metric": "revenue",
+            "targetValue": 12500,
+            "actualValue": 11013,
+            "unit": "億円",
+            "progressRate": 88.1,
+            "source": "同 PDF p.16: 2027年度連結売上高12,500億円以上",
+            "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+            "sourcePage": "PDF p.2 / p.16",
+            "updatedAt": "2026-07-16",
+            "lastVerifiedDate": "2026-07-16",
+            "note": "下限目標12,500億円へ接続。進捗率は数値比であり達成確度を示さない。",
+            "actualFiscalYear": "FY2022",
+            "actualSource": "Road Map 2027 PDF p.2: 2022年度連結売上高11,013億円"
+          },
+          {
+            "code": "9735",
+            "fiscalYear": "FY2027",
+            "metric": "operatingProfit",
+            "targetValue": 1600,
+            "actualValue": 1367,
+            "unit": "億円",
+            "progressRate": 85.4,
+            "source": "同 PDF p.16: 2027年度連結営業利益1,600億円〜1,800億円",
+            "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+            "sourcePage": "PDF p.2 / p.16",
+            "updatedAt": "2026-07-16",
+            "lastVerifiedDate": "2026-07-16",
+            "note": "目標レンジの下限1,600億円へ接続し、上限1,800億円を注記として保持する。",
+            "actualFiscalYear": "FY2022",
+            "actualSource": "Road Map 2027 PDF p.2: 2022年度連結営業利益1,367億円"
+          },
+          {
+            "code": "9735",
+            "fiscalYear": "FY2027",
+            "metric": "ROE",
+            "targetValue": 10,
+            "actualValue": 8.4,
+            "unit": "%",
+            "progressRate": 84,
+            "source": "同 PDF p.16: 2027年度ROE10%",
+            "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+            "sourcePage": "PDF p.2 / p.16",
+            "updatedAt": "2026-07-16",
+            "lastVerifiedDate": "2026-07-16",
+            "note": "同一公式計画内の基準実績と目標を接続。",
+            "actualFiscalYear": "FY2022",
+            "actualSource": "Road Map 2027 PDF p.2: 2022年度ROE8.4%"
+          }
+        ]
+      },
+      "reason": "公式Road Map資料に2022年度実績と2027年度目標が掲載され、連結売上高、連結営業利益、ROEを同一定義・同一単位で接続できるため。営業利益はレンジの下限を使用し、配当性向は基準値がないため接続しない。",
+      "sourceUrl": "https://www.secom.co.jp/corporate/ir/lib/roadmap_2027.pdf",
+      "sourcePage": "PDF p.2 / p.16 / PDF p.2 / p.16 / PDF p.2 / p.16",
+      "status": "corrected",
+      "reviewDecisionId": "review-9735-20260716-progress-connect",
+      "detectedAt": "2026-07-16T01:00:00.000Z",
+      "correctedAt": "2026-07-16T01:20:00.000Z"
+    }
+  ]
+}

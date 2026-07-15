@@ -1,7 +1,7 @@
 {
   "schemaVersion": "progress-batch-context-v1",
-  "generatedAt": "2026-07-15T01:30:39.391Z",
-  "sourceBundleSha256": "5c6d953ca00d44bbbc8c52db54003ea734ed7209ed1fa040aa3bd5ef21669560",
+  "generatedAt": "2026-07-15T01:40:33.192Z",
+  "sourceBundleSha256": "3038e9db6f7db5301f4af78144864318149f64733c5221664b750efe0c7cab22",
   "automaticFactCompletion": false,
   "codes": [
     "1925",
@@ -94,11 +94,11 @@
       "name": "ヤクルト本社",
       "market": "Prime",
       "industry": "食料品",
-      "stage": "detailed_extracted",
+      "stage": "core",
       "sourceUrl": "https://www.yakult.co.jp/company/ir/library/pdf/Medium-term_Management_Plan_2025_2030.pdf",
       "document": "中期経営計画（2025-2030）",
       "planPublishedDate": "2025-05-13",
-      "lastVerifiedDate": "2026-07-13",
+      "lastVerifiedDate": "2026-07-15",
       "summary": "国内外の飲料食品事業を基盤に成長投資と事業領域拡大を進め、2030年度に連結売上高7,000億円、連結営業利益900億円、ROE10%を目指す。営業キャッシュ・フローを成長投資へ優先配分しつつ、累進配当と機動的な自己株式取得で総還元性向70%を目安とする。",
       "metrics": {
         "revenue": "2030年度 連結売上高7,000億円（飲料食品・日本3,300億円、飲料食品・海外3,430億円、その他・調整など270億円）",
@@ -118,7 +118,7 @@
         "ma": true,
         "capitalEfficiency": true,
         "shareholderReturn": true,
-        "progress": false,
+        "progress": true,
         "overseas": true,
         "dx": true,
         "humanCapital": true,
@@ -129,7 +129,8 @@
         "2025〜2030年度の6年間累計と2030年度単年度目標を分離して表示する。",
         "設備投資約4,300億円は成長・基盤・サステナビリティ関連投資の合計で、領域拡大投資1,000億円程度は別枠。",
         "自己株式取得1,000億円以上は2024〜2030年度累計の表示で、中計開始前の2024年度を含む。",
-        "詳細抽出済みβ。数値・ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。"
+        "公式一次資料の実績値を中計目標へ接続済み。",
+        "本番品質。公式一次資料・ページ証跡・進捗接続・個別レビュー・独立再検証を確認済み。"
       ],
       "companyKeys": [
         "capital",
@@ -146,6 +147,7 @@
         "name",
         "period",
         "planPublishedDate",
+        "productionApproval",
         "profit",
         "quality",
         "returnPolicy",
@@ -159,9 +161,71 @@
       ],
       "additionalFields": {
         "category": "食料品/中期経営計画2025-2030",
-        "period": "2025年度〜2030年度"
+        "period": "2025年度〜2030年度",
+        "productionApproval": {
+          "reviewApproved": true,
+          "independentDoubleCheck": true,
+          "approvals": 2,
+          "reviewers": [
+            "independent-release-review",
+            "production-quality-review"
+          ],
+          "latestReviewedAt": "2026-07-14T11:00:00.000Z"
+        }
       },
-      "existingProgressRows": []
+      "existingProgressRows": [
+        {
+          "code": "2267",
+          "fiscalYear": "FY2030",
+          "metric": "revenue",
+          "targetValue": 7000,
+          "actualValue": 4996,
+          "unit": "億円",
+          "progressRate": 71.4,
+          "source": "同 PDF p.11: 2030年度連結売上高7,000億円",
+          "sourceUrl": "https://www.yakult.co.jp/company/ir/library/pdf/Medium-term_Management_Plan_2025_2030.pdf",
+          "sourcePage": "PDF p.11",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式表に記載された実績と目標を接続。進捗率は金額比であり達成確度を示さない。",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期経営計画（2025-2030） PDF p.11: 2024年度連結売上高4,996億円"
+        },
+        {
+          "code": "2267",
+          "fiscalYear": "FY2030",
+          "metric": "operatingProfit",
+          "targetValue": 900,
+          "actualValue": 553,
+          "unit": "億円",
+          "progressRate": 61.4,
+          "source": "同 PDF p.11: 2030年度連結営業利益900億円",
+          "sourceUrl": "https://www.yakult.co.jp/company/ir/library/pdf/Medium-term_Management_Plan_2025_2030.pdf",
+          "sourcePage": "PDF p.11",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式表に記載された実績と目標を接続。",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期経営計画（2025-2030） PDF p.11: 2024年度連結営業利益553億円"
+        },
+        {
+          "code": "2267",
+          "fiscalYear": "FY2030",
+          "metric": "ROE",
+          "targetValue": 10,
+          "actualValue": 8.1,
+          "unit": "%",
+          "progressRate": 81,
+          "source": "同 PDF p.11: 2030年度ROE10%",
+          "sourceUrl": "https://www.yakult.co.jp/company/ir/library/pdf/Medium-term_Management_Plan_2025_2030.pdf",
+          "sourcePage": "PDF p.4 / p.11",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同じ公式資料に掲載された2024年度実績と2030年度目標を接続。",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期経営計画（2025-2030） PDF p.4: 2024年度ROE8.1%"
+        }
+      ]
     },
     {
       "code": "3086",

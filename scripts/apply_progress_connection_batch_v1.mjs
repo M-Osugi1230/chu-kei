@@ -7,6 +7,7 @@ import { execFileSync } from 'node:child_process';
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const QUALITY_DIR = path.join(ROOT, 'operations', 'production-quality');
+const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
 const MARKER_PATH = path.join(QUALITY_DIR, 'run-progress-connection-batch.json');
 const CHUNK_SIZE = 1536;
 
@@ -189,6 +190,9 @@ writeJson(ledgerPath, {
   corrections,
 });
 writeBundle(bundle, manifest);
+const milestone = readJson(MILESTONE_PATH);
+milestone.progressRows = bundle.progress.length;
+writeJson(MILESTONE_PATH, milestone);
 runNode('scripts/apply_governance_ledger_batch_v1.mjs', {
   GOVERNANCE_LEDGER_BATCH: path.relative(ROOT, ledgerPath),
 });
@@ -203,6 +207,7 @@ writeJson(path.join(QUALITY_DIR, `${config.batchId}-report.json`), {
   connectedCompanies: config.records.length,
   connectedCodes: config.records.map(record => String(record.code)),
   progressRowsAdded: addedRows.length,
+  resultingProgressRows: bundle.progress.length,
   automaticFactCompletion: false,
   automaticApproval: false,
 });

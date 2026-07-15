@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "production-promotion-batch-04",
+  "automaticApprovalAllowed": false,
+  "explicitProductionApproval": true,
+  "reviews": [
+    {
+      "id": "review-5333-20260714-production-primary",
+      "companyCode": "5333",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
+      "sourcePages": [
+        "長期経営計画 p.1: 2026年5月28日公表。",
+        "同 p.10: 2035年度の売上高1.3兆円、CN・DS比率60%以上。",
+        "同 p.27: 2030年度の売上高・営業利益・利益率・純利益・ROE・EPS。",
+        "同 p.28-p.29: 2026〜2030年度のキャッシュアロケーション、研究開発・設備投資。",
+        "同 p.30: 2030年度の財務・非財務KPIまとめ。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-14T08:00:00.000Z",
+      "reviewedAt": "2026-07-14T09:00:00.000Z"
+    },
+    {
+      "id": "review-5333-20260714-production-double-check",
+      "companyCode": "5333",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-review",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
+      "sourcePages": [
+        "長期経営計画 p.1: 2026年5月28日公表。",
+        "同 p.10: 2035年度の売上高1.3兆円、CN・DS比率60%以上。",
+        "同 p.27: 2030年度の売上高・営業利益・利益率・純利益・ROE・EPS。",
+        "同 p.28-p.29: 2026〜2030年度のキャッシュアロケーション、研究開発・設備投資。",
+        "同 p.30: 2030年度の財務・非財務KPIまとめ。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-14T10:00:00.000Z",
+      "reviewedAt": "2026-07-14T11:00:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-5333-20260714-production-promotion",
+      "companyCode": "5333",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://www.ngk.co.jp/ir/library/assets/pdf/20260528_management_plan.pdf",
+      "sourcePage": "長期経営計画 p.1: 2026年5月28日公表。 / 同 p.10: 2035年度の売上高1.3兆円、CN・DS比率60%以上。 / 同 p.27: 2030年度の売上高・営業利益・利益率・純利益・ROE・EPS。 / 同 p.28-p.29: 2026〜2030年度のキャッシュアロケーション、研究開発・設備投資。 / 同 p.30: 2030年度の財務・非財務KPIまとめ。",
+      "status": "corrected",
+      "reviewDecisionId": "review-5333-20260714-production-double-check",
+      "detectedAt": "2026-07-14T10:00:00.000Z",
+      "correctedAt": "2026-07-14T11:00:00.000Z"
+    }
+  ]
+}

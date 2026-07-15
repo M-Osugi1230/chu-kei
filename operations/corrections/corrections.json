@@ -8161,5 +8161,116 @@
     "reviewDecisionId": "review-2267-20260714-production-double-check",
     "detectedAt": "2026-07-14T10:00:00.000Z",
     "correctedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "correction-8233-20260715-progress-connect",
+    "companyCode": "8233",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-13",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-15",
+      "progressRows": [
+        {
+          "code": "8233",
+          "fiscalYear": "FY2026",
+          "metric": "operatingProfit",
+          "targetValue": 575,
+          "actualValue": 459,
+          "unit": "億円",
+          "progressRate": 79.8,
+          "source": "同 PDF p.36: 2026年度営業利益575億円",
+          "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+          "sourcePage": "PDF p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式KPI表の実績と計画を接続。進捗率は数値比であり達成確度を示さない。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.36: 2023年度営業利益459億円"
+        },
+        {
+          "code": "8233",
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 6.2,
+          "actualValue": 5.5,
+          "unit": "%",
+          "progressRate": 88.7,
+          "source": "同 PDF p.36: 2026年度ROIC6.2%",
+          "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+          "sourcePage": "PDF p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式KPI表の実績と計画を接続。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.36: 2023年度ROIC5.5%"
+        },
+        {
+          "code": "8233",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 8,
+          "actualValue": 7.3,
+          "unit": "%",
+          "progressRate": 91.3,
+          "source": "同 PDF p.36: 2026年度ROE8.0%",
+          "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+          "sourcePage": "PDF p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "同一公式KPI表の実績と計画を接続。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.36: 2023年度ROE7.3%"
+        },
+        {
+          "code": "8233",
+          "fiscalYear": "FY2026",
+          "metric": "EPS",
+          "targetValue": 268,
+          "actualValue": 200,
+          "unit": "円",
+          "progressRate": 74.6,
+          "source": "同 PDF p.36: 2026年度EPS268円",
+          "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+          "sourcePage": "PDF p.36",
+          "updatedAt": "2026-07-15",
+          "lastVerifiedDate": "2026-07-15",
+          "note": "株式分割前提の注記を含む同一公式KPI表の数値を接続。",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "中期経営計画 PDF p.36: 2023年度EPS200円"
+        }
+      ]
+    },
+    "reason": "公式中期経営計画資料の同一財務KPI表に2023年度実績と2026年度計画が並記されており、営業利益・ROIC・ROE・EPSを同一定義と単位で進捗接続できるため。",
+    "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+    "sourcePage": "PDF p.36 / PDF p.36 / PDF p.36 / PDF p.36",
+    "status": "corrected",
+    "reviewDecisionId": "review-8233-20260715-progress-connect",
+    "detectedAt": "2026-07-15T01:00:00.000Z",
+    "correctedAt": "2026-07-15T01:20:00.000Z"
+  },
+  {
+    "id": "correction-8233-20260714-production-promotion",
+    "companyCode": "8233",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+    "sourcePage": "高島屋グループ 中期経営計画 PDF p.1: 公表日、計画名称、対象期間。 / 同 PDF p.9: 2031年度の長期目標、営業利益750〜800億円、ROIC7%。 / 同 PDF p.11: 2026年度の連結営業利益575億円、ROIC6.2%。 / 同 PDF p.32: 3年間の営業キャッシュ・フロー2,500億円、投資2,200億円と投資内訳。 / 同 PDF p.35-p.36: キャッシュアロケーション、配当200億円、2026年度のROE・自己資本比率・EPS・DOE・PBR・TSR。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8233-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:00:00.000Z",
+    "correctedAt": "2026-07-14T11:00:00.000Z"
   }
 ]

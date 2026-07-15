@@ -13037,5 +13037,94 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:00:00.000Z",
     "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-8233-20260715-progress-connect",
+    "companyCode": "8233",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+    "sourcePages": [
+      "PDF p.36",
+      "PDF p.36",
+      "PDF p.36",
+      "PDF p.36"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画資料の同一財務KPI表に2023年度実績と2026年度計画が並記されており、営業利益・ROIC・ROE・EPSを同一定義と単位で進捗接続できるため。",
+    "createdAt": "2026-07-15T01:00:00.000Z",
+    "reviewedAt": "2026-07-15T01:10:00.000Z"
+  },
+  {
+    "id": "review-8233-20260714-production-primary",
+    "companyCode": "8233",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+    "sourcePages": [
+      "高島屋グループ 中期経営計画 PDF p.1: 公表日、計画名称、対象期間。",
+      "同 PDF p.9: 2031年度の長期目標、営業利益750〜800億円、ROIC7%。",
+      "同 PDF p.11: 2026年度の連結営業利益575億円、ROIC6.2%。",
+      "同 PDF p.32: 3年間の営業キャッシュ・フロー2,500億円、投資2,200億円と投資内訳。",
+      "同 PDF p.35-p.36: キャッシュアロケーション、配当200億円、2026年度のROE・自己資本比率・EPS・DOE・PBR・TSR。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-8233-20260714-production-double-check",
+    "companyCode": "8233",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.takashimaya.co.jp/base/corp/shareholder/tyuukei_ja.pdf",
+    "sourcePages": [
+      "高島屋グループ 中期経営計画 PDF p.1: 公表日、計画名称、対象期間。",
+      "同 PDF p.9: 2031年度の長期目標、営業利益750〜800億円、ROIC7%。",
+      "同 PDF p.11: 2026年度の連結営業利益575億円、ROIC6.2%。",
+      "同 PDF p.32: 3年間の営業キャッシュ・フロー2,500億円、投資2,200億円と投資内訳。",
+      "同 PDF p.35-p.36: キャッシュアロケーション、配当200億円、2026年度のROE・自己資本比率・EPS・DOE・PBR・TSR。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
   }
 ]

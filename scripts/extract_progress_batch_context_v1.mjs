@@ -8,6 +8,11 @@ const DATA_DIR = path.join(ROOT, 'site', 'data');
 const OUTPUT = path.join(ROOT, 'operations', 'production-quality', 'progress-batch-01-context.json');
 const CODES = ['1925', '2267', '3086', '4478', '4661', '5333', '8233', '1801', '1802', '1803'];
 const METRIC_KEYS = ['revenue', 'profit', 'margin', 'capital', 'returnPolicy'];
+const STANDARD_KEYS = new Set([
+  'code', 'name', 'market', 'industry', 'stage', 'tier', 'sourceUrl', 'document',
+  'planPublishedDate', 'lastVerifiedDate', 'summary', 'themes', 'highlights',
+  'evidenceRefs', 'flags', 'warnings', 'quality', ...METRIC_KEYS,
+]);
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 const manifest = readJson(path.join(DATA_DIR, 'bundle.manifest.json'));
@@ -28,6 +33,9 @@ for (const row of bundle.progress || []) {
 const rows = CODES.map(code => {
   const company = companiesByCode.get(code);
   if (!company) throw new Error(`Missing company: ${code}`);
+  const additionalFields = Object.fromEntries(
+    Object.entries(company).filter(([key]) => !STANDARD_KEYS.has(key)),
+  );
   return {
     code,
     name: company.name,
@@ -42,6 +50,9 @@ const rows = CODES.map(code => {
     metrics: Object.fromEntries(METRIC_KEYS.filter(key => company[key] != null).map(key => [key, company[key]])),
     evidenceRefs: company.evidenceRefs || [],
     flags: company.flags || {},
+    warnings: company.warnings || [],
+    companyKeys: Object.keys(company).sort(),
+    additionalFields,
     existingProgressRows: progressByCode.get(code) || [],
   };
 });

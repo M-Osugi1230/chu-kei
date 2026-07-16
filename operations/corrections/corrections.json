@@ -10396,5 +10396,25 @@
     "reviewDecisionId": "review-2269-20260716-progress-connect",
     "detectedAt": "2026-07-16T01:00:00.000Z",
     "correctedAt": "2026-07-16T01:20:00.000Z"
+  },
+  {
+    "id": "correction-2269-20260714-production-promotion",
+    "companyCode": "2269",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.meiji.com/investor/vision/mid-term-plan/",
+    "sourcePage": "公式IRカレンダー: 2024年5月10日の通期決算・アナリスト説明会で2026中期経営計画を公表。 / 公式中計ページ 15（図版15）: 2026年度の明治ROESG9.8ポイント、3年間平均ROE9.5%以上。 / 公式中計ページ 17（図版17）: 連結ROIC8.5%以上、食品ROIC9%以上、医薬品ROIC11%以上。 / 公式中計ページ 18（図版18）: 3年間の営業CF約3,500億円、投資約3,500億円、株主還元1,200億円以上。 / 公式中計ページ 19（図版19）: 営業利益・当期純利益・海外売上高・ROIC・ROE・総還元性向の2026年度目標。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2269-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:00:00.000Z",
+    "correctedAt": "2026-07-14T11:00:00.000Z"
   }
 ]

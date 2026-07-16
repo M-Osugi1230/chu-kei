@@ -14894,5 +14894,65 @@
     "decisionReason": "公式の最新決算説明会資料に2025年度実績と2026中計目標が掲載され、連結ROICとROEを同一定義・同一単位で接続できるため。2026年度の単年度計画値は中計目標と分離し、下限目標へ接続する。",
     "createdAt": "2026-07-16T01:00:00.000Z",
     "reviewedAt": "2026-07-16T01:10:00.000Z"
+  },
+  {
+    "id": "review-2269-20260714-production-primary",
+    "companyCode": "2269",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.meiji.com/investor/vision/mid-term-plan/",
+    "sourcePages": [
+      "公式IRカレンダー: 2024年5月10日の通期決算・アナリスト説明会で2026中期経営計画を公表。",
+      "公式中計ページ 15（図版15）: 2026年度の明治ROESG9.8ポイント、3年間平均ROE9.5%以上。",
+      "公式中計ページ 17（図版17）: 連結ROIC8.5%以上、食品ROIC9%以上、医薬品ROIC11%以上。",
+      "公式中計ページ 18（図版18）: 3年間の営業CF約3,500億円、投資約3,500億円、株主還元1,200億円以上。",
+      "公式中計ページ 19（図版19）: 営業利益・当期純利益・海外売上高・ROIC・ROE・総還元性向の2026年度目標。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-2269-20260714-production-double-check",
+    "companyCode": "2269",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.meiji.com/investor/vision/mid-term-plan/",
+    "sourcePages": [
+      "公式IRカレンダー: 2024年5月10日の通期決算・アナリスト説明会で2026中期経営計画を公表。",
+      "公式中計ページ 15（図版15）: 2026年度の明治ROESG9.8ポイント、3年間平均ROE9.5%以上。",
+      "公式中計ページ 17（図版17）: 連結ROIC8.5%以上、食品ROIC9%以上、医薬品ROIC11%以上。",
+      "公式中計ページ 18（図版18）: 3年間の営業CF約3,500億円、投資約3,500億円、株主還元1,200億円以上。",
+      "公式中計ページ 19（図版19）: 営業利益・当期純利益・海外売上高・ROIC・ROE・総還元性向の2026年度目標。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
   }
 ]

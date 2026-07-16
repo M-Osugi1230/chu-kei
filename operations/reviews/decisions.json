@@ -15899,5 +15899,270 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:00:00.000Z",
     "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-9005-20260717-progress-connect",
+    "companyCode": "9005",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://data.swcms.net/file/tokyu-ir/dam/jcr%3A9f5ed0fe-d179-4b42-8ce3-5f4f725527b8/140120260507517559.pdf",
+    "sourcePages": [
+      "PDF p.17",
+      "PDF p.16 / p.17",
+      "PDF p.17",
+      "PDF p.17",
+      "PDF p.16 / p.17",
+      "PDF p.16 / p.17",
+      "PDF p.17",
+      "PDF p.16",
+      "PDF p.16 / p.17",
+      "PDF p.16 / p.17"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式の最新年度決算説明資料に2025年度確定実績と2027年度経営目標が同一表で並記され、営業収益、営業利益、事業利益、経常利益、親会社株主に帰属する当期純利益、東急EBITDA、EBITDA、EPS、ROE、ROAを同一定義・同一単位で接続できるため。新リース会計適用後の参考値や有利子負債指標は単純進捗率に適さないため除外する。",
+    "createdAt": "2026-07-17T01:00:00.000Z",
+    "reviewedAt": "2026-07-17T01:10:00.000Z"
+  },
+  {
+    "id": "review-4183-20260717-progress-connect",
+    "companyCode": "4183",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://jp.mitsuichemicals.com/content/dam/mitsuichemicals/sites/mci/documents/release/2026/event_260527.pdf",
+    "sourcePages": [
+      "PDF p.30",
+      "PDF p.30",
+      "PDF p.30",
+      "PDF p.30"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式の2025年度決算及び経営概況説明会資料の目標まとめにFY25確定実績、FY28目標、FY30目標が同一表で並記されているため、FY28のコア営業利益、親会社所有者帰属当期利益、ROE、会社定義ROICを同一定義・同一単位で接続する。NET D/Eは低いほど良い上限制約で単純進捗率に適さないため除外する。",
+    "createdAt": "2026-07-17T01:01:00.000Z",
+    "reviewedAt": "2026-07-17T01:11:00.000Z"
+  },
+  {
+    "id": "review-2002-20260717-progress-connect",
+    "companyCode": "2002",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.nisshin.com/company/management_plan/",
+    "sourcePages": [
+      "公式Webページ『中期経営計画2026 数値目標』／『業績ハイライト』",
+      "公式Webページ『中期経営計画2026 数値目標』／『業績ハイライト』"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画ページに上方修正後の最終年度売上高9,500億円・営業利益570億円が明記され、公式業績ハイライトに2026年3月期の確定実績売上高8,650億円・営業利益467億円が掲載されているため、同一定義・同一単位で接続する。2027年3月期会社予想は中計目標とは分離する。",
+    "createdAt": "2026-07-17T01:02:00.000Z",
+    "reviewedAt": "2026-07-17T01:12:00.000Z"
+  },
+  {
+    "id": "review-9005-20260714-production-primary",
+    "companyCode": "9005",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://ir.tokyu.co.jp/ja/ir/management/midplan/main/04/teaserItems1/00/linkList/0/link/Medium-term%20Management%20Plan_j2.pdf",
+    "sourcePages": [
+      "中期3か年経営計画 表紙: 2024年3月25日公表、計画期間は2024〜2026年度。",
+      "同 p.17-p.20: 事業ポートフォリオ、海外事業、GX、組織・人材・DX、資本効率向上。",
+      "同 p.21-p.22: 2026年度の営業収益、営業利益、事業利益、当期純利益、ROE、ROA、東急EBITDA、財務規律。",
+      "同 p.23: 3年間の投資計画5,100億円、キャッシュ・フロー、DPS21円下限、配当性向30％、自己株式取得方針。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-9005-20260714-production-double-check",
+    "companyCode": "9005",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://ir.tokyu.co.jp/ja/ir/management/midplan/main/04/teaserItems1/00/linkList/0/link/Medium-term%20Management%20Plan_j2.pdf",
+    "sourcePages": [
+      "中期3か年経営計画 表紙: 2024年3月25日公表、計画期間は2024〜2026年度。",
+      "同 p.17-p.20: 事業ポートフォリオ、海外事業、GX、組織・人材・DX、資本効率向上。",
+      "同 p.21-p.22: 2026年度の営業収益、営業利益、事業利益、当期純利益、ROE、ROA、東急EBITDA、財務規律。",
+      "同 p.23: 3年間の投資計画5,100億円、キャッシュ・フロー、DPS21円下限、配当性向30％、自己株式取得方針。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-4183-20260714-production-primary",
+    "companyCode": "4183",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://jp.mitsuichemicals.com/content/dam/mitsuichemicals/sites/mci/documents/sites/default/files/media/document/2021/210602.pdf",
+    "sourcePages": [
+      "VISION2030策定公表資料 p.1: 2021年6月2日公表、2021年を起点とする2030年までの長期経営計画。",
+      "同 p.4-p.5: 事業ポートフォリオ変革、ソリューション型事業、サーキュラーエコノミー、DX等の基本戦略。",
+      "同 p.6: 2030年度の利益・ROIC・ROE・Net D/E・環境価値製品売上比率目標。",
+      "同 p.6: 2021〜2030年度の成長投資1.8兆円と戦略投資・自力成長投資の配分。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:01:00.000Z",
+    "reviewedAt": "2026-07-14T09:01:00.000Z"
+  },
+  {
+    "id": "review-4183-20260714-production-double-check",
+    "companyCode": "4183",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://jp.mitsuichemicals.com/content/dam/mitsuichemicals/sites/mci/documents/sites/default/files/media/document/2021/210602.pdf",
+    "sourcePages": [
+      "VISION2030策定公表資料 p.1: 2021年6月2日公表、2021年を起点とする2030年までの長期経営計画。",
+      "同 p.4-p.5: 事業ポートフォリオ変革、ソリューション型事業、サーキュラーエコノミー、DX等の基本戦略。",
+      "同 p.6: 2030年度の利益・ROIC・ROE・Net D/E・環境価値製品売上比率目標。",
+      "同 p.6: 2021〜2030年度の成長投資1.8兆円と戦略投資・自力成長投資の配分。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:01:00.000Z",
+    "reviewedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "review-2002-20260714-production-primary",
+    "companyCode": "2002",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://pdf.irpocket.com/C2002/BSCD/Y44O/cJqu.pdf",
+    "sourcePages": [
+      "会社公式中計ページ: 2022年10月28日に中期経営計画2026を公表し、2024年11月1日に最終年度数値目標を上方修正。",
+      "数値目標上方修正資料 p.4: 2026年度の売上高9,500億円、営業利益570億円、EPS140円、ROE8％。",
+      "同 p.17-p.18: 配当性向を2026年度までに50％目安へ引き上げ、増配方針。",
+      "同 p.20-p.21: 5年間のキャッシュ・フロー計画、投資・株主還元、政策保有株式縮減、ROE目標。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:02:00.000Z",
+    "reviewedAt": "2026-07-14T09:02:00.000Z"
+  },
+  {
+    "id": "review-2002-20260714-production-double-check",
+    "companyCode": "2002",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://pdf.irpocket.com/C2002/BSCD/Y44O/cJqu.pdf",
+    "sourcePages": [
+      "会社公式中計ページ: 2022年10月28日に中期経営計画2026を公表し、2024年11月1日に最終年度数値目標を上方修正。",
+      "数値目標上方修正資料 p.4: 2026年度の売上高9,500億円、営業利益570億円、EPS140円、ROE8％。",
+      "同 p.17-p.18: 配当性向を2026年度までに50％目安へ引き上げ、増配方針。",
+      "同 p.20-p.21: 5年間のキャッシュ・フロー計画、投資・株主還元、政策保有株式縮減、ROE目標。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:02:00.000Z",
+    "reviewedAt": "2026-07-14T11:02:00.000Z"
   }
 ]

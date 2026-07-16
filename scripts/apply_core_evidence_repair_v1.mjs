@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
 import { execFileSync } from 'node:child_process';
+import { isPrimaryEvidenceReference } from './lib/evidence_reference_v1.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
@@ -121,9 +122,9 @@ for (const [index, record] of config.records.entries()) {
   if (!record.sourceUrl?.startsWith('https://')) throw new Error(`Official HTTPS source is required: ${code}`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(record.planPublishedDate || '')) throw new Error(`Valid planPublishedDate is required: ${code}`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(record.verifiedDate || '')) throw new Error(`Valid verifiedDate is required: ${code}`);
-  if (!Array.isArray(record.evidenceRefs) || record.evidenceRefs.length < 2) throw new Error(`At least two page evidence refs are required: ${code}`);
-  if (!record.evidenceRefs.every(ref => /(?:PDF\s+p\.?\s*\d|ページ\s*\d)/i.test(String(ref)))) {
-    throw new Error(`Every evidence ref must contain a page number: ${code}`);
+  if (!Array.isArray(record.evidenceRefs) || record.evidenceRefs.length < 2) throw new Error(`At least two primary evidence refs are required: ${code}`);
+  if (!record.evidenceRefs.every(isPrimaryEvidenceReference)) {
+    throw new Error(`Every evidence ref must contain a PDF page number or a named official Web heading with concrete content: ${code}`);
   }
   if (!record.reason || String(record.reason).length < 20) throw new Error(`Detailed repair reason is required: ${code}`);
 
@@ -140,8 +141,8 @@ for (const [index, record] of config.records.entries()) {
   company.planPublishedDate = record.planPublishedDate;
   company.lastVerifiedDate = record.verifiedDate;
   company.evidenceRefs = [...new Set([...(company.evidenceRefs || []), ...record.evidenceRefs])];
-  const warnings = (company.warnings || []).filter(warning => !/ページ証跡.*不足|証跡補修対象/.test(String(warning)));
-  warnings.push('公式一次資料のページ証跡を再確認済み。');
+  const warnings = (company.warnings || []).filter(warning => !/ページ証跡.*不足|一次証跡.*不足|証跡補修対象/.test(String(warning)));
+  warnings.push('公式一次資料のページ番号またはWeb見出し証跡を再確認済み。');
   company.warnings = [...new Set(warnings)];
 
   const compactDate = record.verifiedDate.replaceAll('-', '');
@@ -166,7 +167,7 @@ for (const [index, record] of config.records.entries()) {
     reviewer: 'quality-evidence-agent',
     sourceUrl: record.sourceUrl,
     sourcePages: record.evidenceRefs,
-    note: '企業区分を変更せず、公式一次資料に基づくページ証跡・資料公表日・出典導線を補修し、本番昇格は別の二段階承認で行う。',
+    note: '企業区分を変更せず、公式一次資料に基づくページ番号またはWeb見出し証跡・資料公表日・出典導線を補修し、本番昇格は別の二段階承認で行う。',
     decisionReason: record.reason,
     createdAt: `${record.verifiedDate}T06:${minute}:00.000Z`,
     reviewedAt: `${record.verifiedDate}T07:${minute}:00.000Z`,
@@ -238,4 +239,4 @@ if (markerPath) {
   delete config.runRequested;
   writeJson(configPath, config);
 }
-console.log(`Repaired page evidence for ${codes.length} companies.`);
+console.log(`Repaired primary evidence for ${codes.length} companies.`);

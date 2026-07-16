@@ -1,9 +1,9 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-16T06:54:32.142Z",
-  "sourceBundleSha256": "8b6f8293273fb4e6f36c72e02868b1bd37ffa27874ef58183267daf5af5911c5",
+  "generatedAt": "2026-07-16T07:03:33.040Z",
+  "sourceBundleSha256": "e9e3b905f2b787cc65e6ba647938003bdc4a6ecdd1a7cff876de9a01c194d2c2",
   "companyCount": 1200,
-  "progressCount": 233,
+  "progressCount": 235,
   "detailedExtractedCount": 72,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
@@ -11,24 +11,23 @@
   ],
   "progressIdentifierCoverage": {
     "companyCode": 0,
-    "code": 233,
+    "code": 235,
     "ticker": 0,
     "securityCode": 0,
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 54,
-    "detailedWithoutProgressFlag": 18,
-    "detailedWithMatchedProgressRows": 5,
+    "detailedWithProgressFlag": 55,
+    "detailedWithoutProgressFlag": 17,
+    "detailedWithMatchedProgressRows": 6,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 18
+    "pageEvidenceAndPublicationReadyButProgressMissing": 17
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
     "pageEvidenceAndPublicationReadyButProgressMissingCodes": [
       "1928",
       "2002",
-      "2269",
       "2587",
       "3105",
       "3626",
@@ -187,14 +186,49 @@
     {
       "code": "2269",
       "name": "明治ホールディングス",
-      "lastVerifiedDate": "2026-07-12",
+      "lastVerifiedDate": "2026-07-16",
       "planPublishedDate": "2024-05-10",
       "evidenceRefCount": 5,
       "pageEvidenceRefCount": 4,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
+      "hasProgressFlag": true,
+      "progressFlagValue": true,
+      "matchedProgressRows": 2,
+      "matchedProgressSample": [
+        {
+          "code": "2269",
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 8.5,
+          "actualValue": 7.8,
+          "unit": "%",
+          "progressRate": 91.8,
+          "source": "同 PDF p.27: 2026中計目標の連結ROIC 8.5%以上",
+          "sourceUrl": "https://www.meiji.com/pdf/investor/library/presentation_2026_r04_hd.pdf",
+          "sourcePage": "PDF p.27",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "中計目標の下限8.5%へ接続。2026年度単年度計画8.0%とは分離し、数値比は将来の達成確度を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期 決算説明会資料 PDF p.27: 2025年度連結ROIC 7.8%"
+        },
+        {
+          "code": "2269",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 9.5,
+          "actualValue": 4.6,
+          "unit": "%",
+          "progressRate": 48.4,
+          "source": "同 PDF p.49: 2026中計目標のROE 9.5%以上",
+          "sourceUrl": "https://www.meiji.com/pdf/investor/library/presentation_2026_r04_hd.pdf",
+          "sourcePage": "PDF p.49 / p.50",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "中計目標の下限9.5%へ接続。2026年度単年度計画8.0%および明治ROESGとは分離し、数値比は将来の達成確度を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期 決算説明会資料 PDF p.50: 2025年度ROE 4.6%"
+        }
+      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",

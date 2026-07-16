@@ -10339,5 +10339,62 @@
     "reviewDecisionId": "review-9735-20260714-production-double-check",
     "detectedAt": "2026-07-14T10:00:00.000Z",
     "correctedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "correction-2269-20260716-progress-connect",
+    "companyCode": "2269",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-12",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-16",
+      "progressRows": [
+        {
+          "code": "2269",
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 8.5,
+          "actualValue": 7.8,
+          "unit": "%",
+          "progressRate": 91.8,
+          "source": "同 PDF p.27: 2026中計目標の連結ROIC 8.5%以上",
+          "sourceUrl": "https://www.meiji.com/pdf/investor/library/presentation_2026_r04_hd.pdf",
+          "sourcePage": "PDF p.27",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "中計目標の下限8.5%へ接続。2026年度単年度計画8.0%とは分離し、数値比は将来の達成確度を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期 決算説明会資料 PDF p.27: 2025年度連結ROIC 7.8%"
+        },
+        {
+          "code": "2269",
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 9.5,
+          "actualValue": 4.6,
+          "unit": "%",
+          "progressRate": 48.4,
+          "source": "同 PDF p.49: 2026中計目標のROE 9.5%以上",
+          "sourceUrl": "https://www.meiji.com/pdf/investor/library/presentation_2026_r04_hd.pdf",
+          "sourcePage": "PDF p.49 / p.50",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "中計目標の下限9.5%へ接続。2026年度単年度計画8.0%および明治ROESGとは分離し、数値比は将来の達成確度を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期 決算説明会資料 PDF p.50: 2025年度ROE 4.6%"
+        }
+      ]
+    },
+    "reason": "公式の最新決算説明会資料に2025年度実績と2026中計目標が掲載され、連結ROICとROEを同一定義・同一単位で接続できるため。2026年度の単年度計画値は中計目標と分離し、下限目標へ接続する。",
+    "sourceUrl": "https://www.meiji.com/pdf/investor/library/presentation_2026_r04_hd.pdf",
+    "sourcePage": "PDF p.27 / PDF p.49 / p.50",
+    "status": "corrected",
+    "reviewDecisionId": "review-2269-20260716-progress-connect",
+    "detectedAt": "2026-07-16T01:00:00.000Z",
+    "correctedAt": "2026-07-16T01:20:00.000Z"
   }
 ]

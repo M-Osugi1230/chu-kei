@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-16",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "5714",
+      "sourceUrl": "https://hd.dowa.co.jp/ja/ir/strategy/plan/main/04/teaserItems1/0/linkList/0/link/midtermplan_2027.pdf",
+      "document": "中期計画2027",
+      "sourcePublishedDate": "2025-05-20",
+      "verifiedDate": "2026-07-16",
+      "reason": "公式中期計画資料に2024年度実績と2027年度目標が掲載され、営業利益、経常利益、ROA、ROEを同一定義・同一単位で接続できるため。株主還元は対応する基準実績がないため接続しない。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2027",
+          "metric": "operatingProfit",
+          "targetValue": 470,
+          "actualValue": 322,
+          "unit": "億円",
+          "sourcePage": "PDF p.6 / p.9",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期計画2027 PDF p.9: 2024年度営業利益322億円",
+          "targetSource": "同 PDF p.6: 2027年度営業利益470億円",
+          "note": "同一公式資料に掲載された実績と目標を接続。進捗率は数値比であり達成確度を示さない。"
+        },
+        {
+          "fiscalYear": "FY2027",
+          "metric": "ordinaryProfit",
+          "targetValue": 600,
+          "actualValue": 435,
+          "unit": "億円",
+          "sourcePage": "PDF p.6 / p.9",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期計画2027 PDF p.9: 2024年度経常利益435億円",
+          "targetSource": "同 PDF p.6: 2027年度経常利益600億円",
+          "note": "同一公式資料に掲載された実績と目標を接続。"
+        },
+        {
+          "fiscalYear": "FY2027",
+          "metric": "ROA",
+          "targetValue": 9,
+          "actualValue": 6.7,
+          "unit": "%",
+          "sourcePage": "PDF p.6 / p.9",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期計画2027 PDF p.9: 2024年度末ROA6.7%",
+          "targetSource": "同 PDF p.6: 2027年度末ROA9%以上",
+          "note": "下限目標9%へ接続。"
+        },
+        {
+          "fiscalYear": "FY2027",
+          "metric": "ROE",
+          "targetValue": 10,
+          "actualValue": 7,
+          "unit": "%",
+          "sourcePage": "PDF p.6 / p.9",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期計画2027 PDF p.9: 2024年度末ROE7.0%",
+          "targetSource": "同 PDF p.6: 2027年度末ROE10%以上",
+          "note": "下限目標10%へ接続。"
+        }
+      ]
+    },
+    {
+      "code": "5332",
+      "sourceUrl": "https://jp.toto.com/assets/files/TOTO_WILL2030_2_v2.pdf",
+      "document": "共通価値創造戦略 TOTO WILL2030 STAGE2",
+      "sourcePublishedDate": "2024-04-26",
+      "verifiedDate": "2026-07-16",
+      "reason": "公式STAGE2資料の同一KPI表に2023年度実績と2026年度計画が並記され、売上規模、営業利益率、ROA、ROE、TOTO版ROIC、海外売上高比率を同一定義・同一単位で接続できるため。TOTO版ROICは会社定義指標として明示する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2026",
+          "metric": "revenue",
+          "targetValue": 8500,
+          "actualValue": 7023,
+          "unit": "億円",
+          "sourcePage": "資料内 p.14（PDF p.17）",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "TOTO WILL2030 STAGE2 資料内 p.14: 2023年度売上規模7,023億円",
+          "targetSource": "同 p.14: 2026年度売上規模8,500億円",
+          "note": "新収益基準調整後の会社比較値を同一表のまま接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "operatingMargin",
+          "targetValue": 10,
+          "actualValue": 6.1,
+          "unit": "%",
+          "sourcePage": "資料内 p.14（PDF p.17）",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "TOTO WILL2030 STAGE2 資料内 p.14: 2023年度営業利益率6.1%",
+          "targetSource": "同 p.14: 2026年度営業利益率10%以上",
+          "note": "下限目標10%へ接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROA",
+          "targetValue": 10,
+          "actualValue": 5.6,
+          "unit": "%",
+          "sourcePage": "資料内 p.14（PDF p.17）",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "TOTO WILL2030 STAGE2 資料内 p.14: 2023年度ROA5.6%",
+          "targetSource": "同 p.14: 2026年度ROA10%以上",
+          "note": "会社資料の定義（営業利益÷総資産）で接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 10,
+          "actualValue": 7.8,
+          "unit": "%",
+          "sourcePage": "資料内 p.14（PDF p.17）",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "TOTO WILL2030 STAGE2 資料内 p.14: 2023年度ROE7.8%",
+          "targetSource": "同 p.14: 2026年度ROE10%以上",
+          "note": "下限目標10%へ接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 10,
+          "actualValue": 5.9,
+          "unit": "%",
+          "sourcePage": "資料内 p.14（PDF p.17）",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "TOTO WILL2030 STAGE2 資料内 p.14: 2023年度TOTO版ROIC5.9%",
+          "targetSource": "同 p.14: 2026年度TOTO版ROIC10%以上",
+          "note": "税引後営業利益÷（運転資本＋固定資産）によるTOTO版ROIC。一般的なROICとの単純比較を避ける。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "overseasRevenueRatio",
+          "targetValue": 35,
+          "actualValue": 29,
+          "unit": "%",
+          "sourcePage": "資料内 p.14（PDF p.17）",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "TOTO WILL2030 STAGE2 資料内 p.14: 2023年度海外売上高比率29%",
+          "targetSource": "同 p.14: 2026年度海外売上高比率35%",
+          "note": "住設事業の海外売上高比率を接続。連結全体の海外比率とは区別する。"
+        }
+      ]
+    },
+    {
+      "code": "3626",
+      "sourceUrl": "https://www.tisi.jp/documents/jp/ir/finance/meeting/240508_2.pdf",
+      "document": "TISインテックグループ中期経営計画（2024-2026）",
+      "sourcePublishedDate": "2024-05-08",
+      "verifiedDate": "2026-07-16",
+      "reason": "公式中期経営計画資料の業績目標表に2024年3月期実績と2027年3月期目標が並記され、売上高、営業利益、営業利益率を同一定義・同一単位で接続できるため。ROIC等は当該表で対応する基準値を明確に確定できないため接続しない。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2027",
+          "metric": "revenue",
+          "targetValue": 6200,
+          "actualValue": 5490,
+          "unit": "億円",
+          "sourcePage": "PDF p.30",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期経営計画説明資料 PDF p.30: 2024年3月期売上高5,490億円",
+          "targetSource": "同 PDF p.30: 2027年3月期売上高6,200億円",
+          "note": "同一公式業績目標表の実績と目標を接続。"
+        },
+        {
+          "fiscalYear": "FY2027",
+          "metric": "operatingProfit",
+          "targetValue": 810,
+          "actualValue": 645,
+          "unit": "億円",
+          "sourcePage": "PDF p.30",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期経営計画説明資料 PDF p.30: 2024年3月期営業利益645億円",
+          "targetSource": "同 PDF p.30: 2027年3月期営業利益810億円",
+          "note": "同一公式業績目標表の実績と目標を接続。"
+        },
+        {
+          "fiscalYear": "FY2027",
+          "metric": "operatingMargin",
+          "targetValue": 13.1,
+          "actualValue": 11.8,
+          "unit": "%",
+          "sourcePage": "PDF p.30",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期経営計画説明資料 PDF p.30: 2024年3月期営業利益率11.8%",
+          "targetSource": "同 PDF p.30: 2027年3月期営業利益率13.1%",
+          "note": "同一公式業績目標表の実績と目標を接続。"
+        }
+      ]
+    }
+  ]
+}

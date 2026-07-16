@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
+import { countPrimaryEvidenceReferences } from './lib/evidence_reference_v1.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
@@ -56,8 +57,7 @@ function productionApprovals() {
   return byCode;
 }
 
-const hasPageEvidence = (company, minimum) => (company.evidenceRefs || [])
-  .filter(ref => /(?:p\.?\s*\d|ページ\s*\d|図版\s*\d)/i.test(String(ref))).length >= minimum;
+const hasPageEvidence = (company, minimum) => countPrimaryEvidenceReferences(company.evidenceRefs) >= minimum;
 const hasStructuredAnalysis = company => Boolean(company.summary && company.summary.length >= 20)
   && Boolean((company.highlights || []).length || (company.themes || []).length);
 const hasMetricExtraction = company => ['revenue', 'profit', 'margin', 'capital', 'returnPolicy']

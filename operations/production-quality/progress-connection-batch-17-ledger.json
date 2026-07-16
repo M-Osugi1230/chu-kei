@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "progress-connection-batch-17",
+  "automaticApprovalAllowed": false,
+  "reviews": [
+    {
+      "id": "review-5711-20260717-progress-connect",
+      "companyCode": "5711",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "progress-quality-agent",
+      "sourceUrl": "https://ir.mmc.co.jp/ja/ir/news/news2624926994039742087/main/0/link/J_cyukei20251126.pdf",
+      "sourcePages": [
+        "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
+        "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
+        "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6"
+      ],
+      "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+      "decisionReason": "公式中期経営戦略で2028年度のROE・ROIC・経常利益目標を確認し、2026年5月13日公表の公式決算補足説明資料で2025年度確定実績を同一定義・同一単位で確認できるため。中計公表時の2025年度見通しではなく、最新の確定実績へ差し替えて接続する。",
+      "createdAt": "2026-07-17T01:00:00.000Z",
+      "reviewedAt": "2026-07-17T01:10:00.000Z"
+    },
+    {
+      "id": "review-7735-20260717-progress-connect",
+      "companyCode": "7735",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "progress-quality-agent",
+      "sourceUrl": "https://www.screen.co.jp/download_file/8b8f6c71-f200-423e-beaa-749bc5fc569a/409",
+      "sourcePages": [
+        "PDF p.30",
+        "PDF p.30"
+      ],
+      "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+      "decisionReason": "公式決算説明会資料の同一財務目標進捗表に、Value Up Further 2026の目標と1年目の確定実績が並記され、ROICと連結配当性向を同一定義・同一単位で接続できるため。累計売上高と通算営業利益率は期間が異なるため接続しない。",
+      "createdAt": "2026-07-17T01:01:00.000Z",
+      "reviewedAt": "2026-07-17T01:11:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-5711-20260717-progress-connect",
+      "companyCode": "5711",
+      "fieldPath": "flags.progress,lastVerifiedDate,progress",
+      "before": {
+        "progressFlag": false,
+        "lastVerifiedDate": "2026-07-12",
+        "progressRows": []
+      },
+      "after": {
+        "progressFlag": true,
+        "lastVerifiedDate": "2026-07-17",
+        "progressRows": [
+          {
+            "code": "5711",
+            "fiscalYear": "FY2028",
+            "metric": "ROE",
+            "targetValue": 8,
+            "actualValue": 5.7,
+            "unit": "%",
+            "progressRate": 71.3,
+            "source": "中期経営戦略（2026～2028年度）PDF p.8: 2028年度ROE目標8.0%以上",
+            "sourceUrl": "https://ir.mmc.co.jp/ja/ir/news/news2624926994039742087/main/0/link/J_cyukei20251126.pdf",
+            "sourcePage": "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
+            "updatedAt": "2026-07-17",
+            "lastVerifiedDate": "2026-07-17",
+            "note": "最新の確定実績を中計目標の下限8.0%へ接続。数値比は将来の達成確度を示さない。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "https://ir.mmc.co.jp/ja/ir/library/presentation/main/01/teaserItems1/01110/linkList/05/link/J_20260513%204Q_Script.pdf PDF p.6: 2026年3月期（2025年度）ROE実績5.7%"
+          },
+          {
+            "code": "5711",
+            "fiscalYear": "FY2028",
+            "metric": "ROIC",
+            "targetValue": 7,
+            "actualValue": 6.1,
+            "unit": "%",
+            "progressRate": 87.1,
+            "source": "中期経営戦略（2026～2028年度）PDF p.8: 2028年度ROIC目標7.0%以上",
+            "sourceUrl": "https://ir.mmc.co.jp/ja/ir/news/news2624926994039742087/main/0/link/J_cyukei20251126.pdf",
+            "sourcePage": "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
+            "updatedAt": "2026-07-17",
+            "lastVerifiedDate": "2026-07-17",
+            "note": "会社定義ROICを同一定義で下限目標7.0%へ接続。一般的なROICとの単純比較を避ける。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "https://ir.mmc.co.jp/ja/ir/library/presentation/main/01/teaserItems1/01110/linkList/05/link/J_20260513%204Q_Script.pdf PDF p.6: 2026年3月期（2025年度）会社定義ROIC実績6.1%"
+          },
+          {
+            "code": "5711",
+            "fiscalYear": "FY2028",
+            "metric": "ordinaryProfit",
+            "targetValue": 850,
+            "actualValue": 975,
+            "unit": "億円",
+            "progressRate": 114.7,
+            "source": "中期経営戦略（2026～2028年度）PDF p.8: 2028年度の参考利益水準・経常利益850億円以上",
+            "sourceUrl": "https://ir.mmc.co.jp/ja/ir/news/news2624926994039742087/main/0/link/J_cyukei20251126.pdf",
+            "sourcePage": "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
+            "updatedAt": "2026-07-17",
+            "lastVerifiedDate": "2026-07-17",
+            "note": "足元実績が目標下限を上回る状態も原文どおり接続する。単純進捗率は持続性や将来達成確度を示さない。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "https://ir.mmc.co.jp/ja/ir/library/presentation/main/01/teaserItems1/01110/linkList/05/link/J_20260513%204Q_Script.pdf PDF p.6: 2026年3月期（2025年度）経常利益実績975億円"
+          }
+        ]
+      },
+      "reason": "公式中期経営戦略で2028年度のROE・ROIC・経常利益目標を確認し、2026年5月13日公表の公式決算補足説明資料で2025年度確定実績を同一定義・同一単位で確認できるため。中計公表時の2025年度見通しではなく、最新の確定実績へ差し替えて接続する。",
+      "sourceUrl": "https://ir.mmc.co.jp/ja/ir/news/news2624926994039742087/main/0/link/J_cyukei20251126.pdf",
+      "sourcePage": "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6 / 中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6 / 中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
+      "status": "corrected",
+      "reviewDecisionId": "review-5711-20260717-progress-connect",
+      "detectedAt": "2026-07-17T01:00:00.000Z",
+      "correctedAt": "2026-07-17T01:20:00.000Z"
+    },
+    {
+      "id": "correction-7735-20260717-progress-connect",
+      "companyCode": "7735",
+      "fieldPath": "flags.progress,lastVerifiedDate,progress",
+      "before": {
+        "progressFlag": false,
+        "lastVerifiedDate": "2026-07-12",
+        "progressRows": []
+      },
+      "after": {
+        "progressFlag": true,
+        "lastVerifiedDate": "2026-07-17",
+        "progressRows": [
+          {
+            "code": "7735",
+            "fiscalYear": "FY2027",
+            "metric": "ROIC",
+            "targetValue": 15,
+            "actualValue": 24.7,
+            "unit": "%",
+            "progressRate": 164.7,
+            "source": "同 PDF p.30: Value Up Further 2026のROIC目標15%以上",
+            "sourceUrl": "https://www.screen.co.jp/download_file/8b8f6c71-f200-423e-beaa-749bc5fc569a/409",
+            "sourcePage": "PDF p.30",
+            "updatedAt": "2026-07-17",
+            "lastVerifiedDate": "2026-07-17",
+            "note": "計画1年目実績が目標下限を上回る状態を原文どおり接続。数値比は将来の継続性や達成確度を示さない。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "2025年3月期決算説明会 PDF p.30: Value Up Further 2026の1年目ROIC実績24.7%"
+          },
+          {
+            "code": "7735",
+            "fiscalYear": "FY2027",
+            "metric": "dividendPayoutRatio",
+            "targetValue": 30,
+            "actualValue": 30.1,
+            "unit": "%",
+            "progressRate": 100.3,
+            "source": "同 PDF p.30: 連結配当性向30%以上",
+            "sourceUrl": "https://www.screen.co.jp/download_file/8b8f6c71-f200-423e-beaa-749bc5fc569a/409",
+            "sourcePage": "PDF p.30",
+            "updatedAt": "2026-07-17",
+            "lastVerifiedDate": "2026-07-17",
+            "note": "成長投資の進捗度合いに応じた機動的な自己株式取得は数値目標と分離し、配当性向のみ接続する。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "2025年3月期決算説明会 PDF p.30: 1年目の連結配当性向実績30.1%"
+          }
+        ]
+      },
+      "reason": "公式決算説明会資料の同一財務目標進捗表に、Value Up Further 2026の目標と1年目の確定実績が並記され、ROICと連結配当性向を同一定義・同一単位で接続できるため。累計売上高と通算営業利益率は期間が異なるため接続しない。",
+      "sourceUrl": "https://www.screen.co.jp/download_file/8b8f6c71-f200-423e-beaa-749bc5fc569a/409",
+      "sourcePage": "PDF p.30 / PDF p.30",
+      "status": "corrected",
+      "reviewDecisionId": "review-7735-20260717-progress-connect",
+      "detectedAt": "2026-07-17T01:01:00.000Z",
+      "correctedAt": "2026-07-17T01:21:00.000Z"
+    }
+  ]
+}

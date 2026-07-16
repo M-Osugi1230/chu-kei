@@ -8,7 +8,10 @@ const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const OPS_DIR = path.join(ROOT, 'operations');
 const QUALITY_DIR = path.join(OPS_DIR, 'production-quality');
-const MARKER_PATH = path.join(QUALITY_DIR, 'run-production-promotion.json');
+const MARKER_PATHS = [
+  path.join(QUALITY_DIR, 'production-promotion-selection.json'),
+  path.join(QUALITY_DIR, 'run-production-promotion.json'),
+];
 const READINESS_PATH = path.join(QUALITY_DIR, 'production-readiness-v1.json');
 const MILESTONE_PATH = path.join(OPS_DIR, 'quality', 'coverage-milestone-v1.json');
 const CHUNK_SIZE = 1536;
@@ -59,12 +62,13 @@ function writeBundle(bundle, originalManifest) {
   return manifest;
 }
 
-if (!fs.existsSync(MARKER_PATH)) {
+const markerPath = MARKER_PATHS.find(file => fs.existsSync(file));
+if (!markerPath) {
   console.log('No production promotion marker found.');
   process.exit(0);
 }
 
-const marker = readJson(MARKER_PATH);
+const marker = readJson(markerPath);
 if (marker.schemaVersion !== 'production-promotion-run-v1') throw new Error(`Unsupported promotion marker: ${marker.schemaVersion}`);
 const configPath = path.resolve(ROOT, String(marker.configPath || ''));
 const relativeConfigPath = path.relative(QUALITY_DIR, configPath);
@@ -206,6 +210,6 @@ writeJson(path.join(QUALITY_DIR, `${config.batchId}-report.json`), {
   approvalsPerCompany: 2,
   reviewerRoles: [config.primaryReviewer, config.independentReviewer],
 });
-fs.rmSync(MARKER_PATH);
+fs.rmSync(markerPath);
 runNode('scripts/validate_quality_v43.mjs');
 console.log(`Promoted ${codes.length} companies to core. Current core=${finalCore}.`);

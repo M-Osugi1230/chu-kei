@@ -8,7 +8,10 @@ const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const QUALITY_DIR = path.join(ROOT, 'operations', 'production-quality');
 const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
-const MARKER_PATH = path.join(QUALITY_DIR, 'run-progress-connection-batch.json');
+const MARKER_PATHS = [
+  path.join(QUALITY_DIR, 'progress-connection-selection.json'),
+  path.join(QUALITY_DIR, 'run-progress-connection-batch.json'),
+];
 const CHUNK_SIZE = 1536;
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -55,12 +58,13 @@ function writeBundle(bundle, originalManifest) {
   });
 }
 
-if (!fs.existsSync(MARKER_PATH)) {
+const markerPath = MARKER_PATHS.find(file => fs.existsSync(file));
+if (!markerPath) {
   console.log('No progress connection marker found.');
   process.exit(0);
 }
 
-const marker = readJson(MARKER_PATH);
+const marker = readJson(markerPath);
 if (marker.schemaVersion !== 'progress-connection-run-v1') throw new Error(`Unsupported marker: ${marker.schemaVersion}`);
 const configPath = path.resolve(ROOT, String(marker.configPath || ''));
 const relativeConfigPath = path.relative(QUALITY_DIR, configPath);
@@ -211,5 +215,5 @@ writeJson(path.join(QUALITY_DIR, `${config.batchId}-report.json`), {
   automaticFactCompletion: false,
   automaticApproval: false,
 });
-fs.rmSync(MARKER_PATH);
+fs.rmSync(markerPath);
 console.log(`Connected official progress data for ${config.records.length} companies (${addedRows.length} rows).`);

@@ -9,6 +9,7 @@ const DATA_DIR = path.join(ROOT, 'site', 'data');
 const QUALITY_DIR = path.join(ROOT, 'operations', 'production-quality');
 const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
 const MARKER_PATHS = [
+  path.join(QUALITY_DIR, 'batch-18-selection.json'),
   path.join(QUALITY_DIR, 'progress-connection-selection.json'),
   path.join(QUALITY_DIR, 'run-progress-connection-batch.json'),
 ];

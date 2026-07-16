@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-draft-v1",
+  "batchId": "evidence-repair-batch-30",
+  "status": "researched_not_executable",
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "contingentOn": {"requiredPreviousBatch":"evidence-repair-batch-29","requiredCoreCount":200,"requiredFiveStarCount":186,"requiredDetailedExtractedCount":22},
+  "proposedResult": {"coreCount":205,"fiveStarCount":191,"detailedExtractedCount":17,"remainingGapTo1000":795},
+  "records": [
+    {
+      "code":"4502","expectedStage":"detailed_extracted","sourceUrl":"https://www.takeda.com/jp/investors/annual-integrated-report/","document":"武田薬品 2026年統合報告書","planPublishedDate":"2026-06-24","verifiedDate":"2026-07-17",
+      "reason":"武田薬品公式の2026年統合報告書で、2025年度の財務・パイプライン進捗、長期成長に向けた後期開発・新製品準備、DD&T・AI投資、財務規律とガバナンスを確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: 2026年統合報告書）: 2025年度の進捗と成長の勢い・レジリエンス向上を総括する。","公式Webページ（見出し: 代表取締役社長からのメッセージ）: 後期開発パイプライン進展、新製品上市準備、将来成長加速の基盤を説明する。","公式Webページ（見出し: 価値創造の実践）: データ・デジタル＆テクノロジーおよびAIへの投資拡大を掲げる。"]
+    },
+    {
+      "code":"6098","expectedStage":"detailed_extracted","sourceUrl":"https://recruit-holdings.com/ja/","document":"リクルートホールディングス 2026年3月期有価証券報告書・経営戦略","planPublishedDate":"2026-06-19","verifiedDate":"2026-07-17",
+      "reason":"リクルート公式サイトと2026年3月期報告書で、Simplify Hiring、Help Businesses Work Smarter、Prosper Togetherの3戦略、AI・データを活用した採用プロセス効率化、グループ運営方針を確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: 3つの経営戦略）: Simplify Hiring、Help Businesses Work Smarter、Prosper Togetherを掲げる。","公式Webページ（見出し: Simplify Hiring）: AI・機械学習とデータを活用し求職者と企業のマッチングを効率化・高速化する。","公式Webページ（見出し: Annual Reports）: 2026年6月19日掲載の2026年3月期有価証券報告書で戦略・リスク・ガバナンスを開示する。"]
+    },
+    {
+      "code":"6594","expectedStage":"detailed_extracted","sourceUrl":"https://www.nidec.com/jp/ir/management/strategy/","document":"ニデック 中期経営計画 Conversion 2027","planPublishedDate":"2025-04-24","verifiedDate":"2026-07-17",
+      "reason":"ニデック公式の中期経営計画ページと2025年3月期決算資料で、高収益構造への転換、ROICポートフォリオ管理、拠点統廃合、コスト改革、事業5本柱を確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: 高収益構造への転換）: ROIC基準で不採算・ノンコア事業を特定しポートフォリオを最適化する。","公式Webページ（見出し: 拠点の統廃合・最適化）: 小規模拠点の半減を進め、変動費1,000億円・固定費500億円規模の改革を計画する。","公式Webページ（見出し: 成長を支える事業5本柱への転換）: AI、インフラ・エネルギー、産業効率化、Better Life、モビリティを重点領域とする。"]
+    },
+    {
+      "code":"7201","expectedStage":"detailed_extracted","sourceUrl":"https://www2.nissan-global.com/JP/COMPANY/PLAN/RENISSAN/","document":"日産自動車 経営再建計画 Re:Nissan","planPublishedDate":"2025-05-13","verifiedDate":"2026-07-17",
+      "reason":"日産公式のRe:Nissanページで、2026年度までの自動車事業営業利益・FCF黒字化、コスト構造改善、市場・商品戦略、パートナーシップ、生産・開発体制の効率化を確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: 経営再建計画 Re:Nissanについて）: 2026年度までに自動車事業営業利益とフリーキャッシュフローの黒字化を目指す。","公式Webページ（見出し: 計画を推進する3つの柱）: コスト構造改善、市場・商品戦略再定義、パートナーシップ強化を掲げる。","公式Webページ（見出し: よりスリムで強靭な事業構造へ）: 生産体制再編、開発資源再配分、調達・サプライチェーン効率化を進める。"]
+    },
+    {
+      "code":"6861","expectedStage":"detailed_extracted","sourceUrl":"https://www.keyence.co.jp/investor/library/annualreport.jsp","document":"キーエンス アニュアルレポート2026","planPublishedDate":"2026-04-28","verifiedDate":"2026-07-17",
+      "reason":"キーエンス公式のアニュアルレポート2026で、直販・課題解決型営業、商品企画・開発、グローバル展開、資本効率・利益創出力を含む価値創造モデルを確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: アニュアルレポート2026）: 2026年版の公式年次報告書を掲載する。","公式年次報告書（見出し: ビジネスモデル）: 顧客課題の直接把握と商品企画・開発を結ぶ直販モデルを説明する。","公式年次報告書（見出し: 成長戦略・財務情報）: 海外展開、収益性、資本効率を含む中長期価値創造の方針を開示する。"]
+    }
+  ],
+  "proposedProductionPromotion":{"schemaVersion":"production-promotion-batch-v1","batchId":"production-promotion-batch-314","explicitApproval":true,"automaticSelectionAllowed":false,"codes":["4502","6098","6594","7201","6861"],"targetCoreCount":205,"primaryAuthor":"production-quality-agent","primaryReviewer":"production-quality-review","independentAuthor":"independent-release-agent","independentReviewer":"independent-release-review","approvalDate":"2026-07-17"}
+}

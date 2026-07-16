@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-16T22:03:01.679Z",
-  "sourceBundleSha256": "8d4f3a4a756abf56b45306143cb385b45c608a3938d62672b8ddbaf71611afdb",
+  "generatedAt": "2026-07-16T22:18:04.553Z",
+  "sourceBundleSha256": "a1eebc1e0e12c90b485a64b406496b0e9ee43eb57b6556420b0f06bbb635b07d",
   "companyCount": 1200,
   "progressCount": 291,
-  "detailedExtractedCount": 57,
+  "detailedExtractedCount": 54,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -17,9 +17,9 @@
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 54,
+    "detailedWithProgressFlag": 51,
     "detailedWithoutProgressFlag": 3,
-    "detailedWithMatchedProgressRows": 5,
+    "detailedWithMatchedProgressRows": 4,
     "progressExistsButFlagMissing": 0,
     "pageEvidenceAndPublicationReadyButProgressMissing": 3
   },
@@ -100,29 +100,6 @@
     }
   ],
   "candidates": [
-    {
-      "code": "1812",
-      "name": "鹿島建設",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2024-05-14",
-      "evidenceRefCount": 3,
-      "pageEvidenceRefCount": 1,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
     {
       "code": "2413",
       "name": "エムスリー",
@@ -1119,29 +1096,6 @@
       ]
     },
     {
-      "code": "8267",
-      "name": "イオン",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2026-05-11",
-      "evidenceRefCount": 2,
-      "pageEvidenceRefCount": 1,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
       "code": "8308",
       "name": "りそなホールディングス",
       "lastVerifiedDate": "2026-07-10",
@@ -1338,54 +1292,6 @@
       "progressFlagValue": true,
       "matchedProgressRows": 0,
       "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "9101",
-      "name": "日本郵船",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2023-03-10",
-      "evidenceRefCount": 3,
-      "pageEvidenceRefCount": 1,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 4,
-      "matchedProgressSample": [
-        {
-          "code": "9101",
-          "fiscalYear": "FY2026",
-          "metric": "maInvestment",
-          "targetValue": 1400,
-          "actualValue": null,
-          "unit": "億円",
-          "progressRate": null,
-          "source": "中期経営計画 p.29-32: M&A等1,400億円",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 期間投資枠。"
-        },
-        {
-          "code": "9101",
-          "fiscalYear": "FY2026",
-          "metric": "netProfit",
-          "targetValue": 3000,
-          "actualValue": null,
-          "unit": "億円",
-          "progressRate": null,
-          "source": "中期経営計画 p.29-32: 当期純利益2,000～3,000億円",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 レンジ上限値を登録。下限2,000億円。"
-        }
-      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",

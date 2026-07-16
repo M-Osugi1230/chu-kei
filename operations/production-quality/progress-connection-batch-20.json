@@ -1,6 +1,7 @@
 {
   "schemaVersion": "progress-connection-batch-v1",
   "batchId": "progress-connection-batch-20",
+  "runRequested": true,
   "explicitSelection": true,
   "automaticFactCompletion": false,
   "automaticApproval": false,
@@ -13,126 +14,16 @@
       "verifiedDate": "2026-07-17",
       "reason": "公式の最新年度決算説明資料に2025年度確定実績と2027年度経営目標が同一表で並記され、営業収益、営業利益、事業利益、経常利益、親会社株主に帰属する当期純利益、東急EBITDA、EBITDA、EPS、ROE、ROAを同一定義・同一単位で接続できるため。新リース会計適用後の参考値や有利子負債指標は単純進捗率に適さないため除外する。",
       "progressRows": [
-        {
-          "fiscalYear": "FY2027",
-          "metric": "revenue",
-          "targetValue": 11800,
-          "actualValue": 10861,
-          "unit": "億円",
-          "sourcePage": "PDF p.17",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.17: 2025年度営業収益実績10,861億円",
-          "targetSource": "同 PDF p.17: 2027年度営業収益目標11,800億円",
-          "note": "鉄道・不動産等を含む連結営業収益を売上高相当指標として接続する。"
-        },
-        {
-          "fiscalYear": "FY2027",
-          "metric": "operatingProfit",
-          "targetValue": 1120,
-          "actualValue": 1031,
-          "unit": "億円",
-          "sourcePage": "PDF p.16 / p.17",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.16・17: 営業利益実績1,031億円",
-          "targetSource": "同 PDF p.16・17: 2027年度営業利益目標1,120億円",
-          "note": "同一資料の確定実績と現時点の2027年度目標を接続する。"
-        },
-        {
-          "fiscalYear": "FY2027",
-          "metric": "businessProfit",
-          "targetValue": 1140,
-          "actualValue": 1047,
-          "unit": "億円",
-          "sourcePage": "PDF p.17",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.17: 事業利益実績1,047億円",
-          "targetSource": "同 PDF p.17: 2027年度事業利益目標1,140億円",
-          "note": "会社定義の事業利益を営業利益と区別して接続する。"
-        },
-        {
-          "fiscalYear": "FY2027",
-          "metric": "ordinaryProfit",
-          "targetValue": 1170,
-          "actualValue": 1161,
-          "unit": "億円",
-          "sourcePage": "PDF p.17",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.17: 経常利益実績1,161億円",
-          "targetSource": "同 PDF p.17: 2027年度経常利益目標1,170億円",
-          "note": "最新の確定実績を同一定義の2027年度目標へ接続する。"
-        },
-        {
-          "fiscalYear": "FY2027",
-          "metric": "netProfit",
-          "targetValue": 920,
-          "actualValue": 870,
-          "unit": "億円",
-          "sourcePage": "PDF p.16 / p.17",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.16・17: 親会社株主に帰属する当期純利益実績870億円",
-          "targetSource": "同 PDF p.16・17: 2027年度親会社株主に帰属する当期純利益目標920億円",
-          "note": "親会社株主帰属純利益を同一定義で接続する。"
-        },
-        {
-          "fiscalYear": "FY2027",
-          "metric": "tokyuEbitda",
-          "targetValue": 2400,
-          "actualValue": 2279,
-          "unit": "億円",
-          "sourcePage": "PDF p.16 / p.17",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.16・17: 東急EBITDA実績2,279億円",
-          "targetSource": "同 PDF p.16・17: 2027年度東急EBITDA目標2,400億円",
-          "note": "東急独自定義のEBITDAを一般的なEBITDAと分離して表示する。"
-        },
-        {
-          "fiscalYear": "FY2027",
-          "metric": "ebitda",
-          "targetValue": 2100,
-          "actualValue": 1917,
-          "unit": "億円",
-          "sourcePage": "PDF p.17",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.17: EBITDA実績1,917億円",
-          "targetSource": "同 PDF p.17: 2027年度EBITDA目標2,100億円",
-          "note": "会社開示の通常EBITDAを東急EBITDAとは別指標として接続する。"
-        },
-        {
-          "fiscalYear": "FY2027",
-          "metric": "eps",
-          "targetValue": 164.88,
-          "actualValue": 152.25,
-          "unit": "円",
-          "sourcePage": "PDF p.16",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.16: EPS実績152.25円",
-          "targetSource": "同 PDF p.16: 2027年度EPS目標164.88円",
-          "note": "1株当たり利益を円単位で接続する。"
-        },
-        {
-          "fiscalYear": "FY2027",
-          "metric": "ROE",
-          "targetValue": 9.3,
-          "actualValue": 10.0,
-          "unit": "%",
-          "sourcePage": "PDF p.16 / p.17",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.16・17: ROE実績10.0%",
-          "targetSource": "同 PDF p.16・17: 2027年度ROE目標9.3%",
-          "note": "足元実績が現時点目標を上回る状態を原文どおり表示し、将来の維持確度とは区別する。"
-        },
-        {
-          "fiscalYear": "FY2027",
-          "metric": "ROA",
-          "targetValue": 3.7,
-          "actualValue": 3.7,
-          "unit": "%",
-          "sourcePage": "PDF p.16 / p.17",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年度決算説明資料 PDF p.16・17: ROA実績3.7%",
-          "targetSource": "同 PDF p.16・17: 2027年度ROA目標3.7%",
-          "note": "新リース会計適用後の参考値3.5%ではなく、表の主指標として示された同一定義値を接続する。"
-        }
+        {"fiscalYear":"FY2027","metric":"revenue","targetValue":11800,"actualValue":10861,"unit":"億円","sourcePage":"PDF p.17","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.17: 2025年度営業収益実績10,861億円","targetSource":"同 PDF p.17: 2027年度営業収益目標11,800億円","note":"鉄道・不動産等を含む連結営業収益を売上高相当指標として接続する。"},
+        {"fiscalYear":"FY2027","metric":"operatingProfit","targetValue":1120,"actualValue":1031,"unit":"億円","sourcePage":"PDF p.16 / p.17","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.16・17: 営業利益実績1,031億円","targetSource":"同 PDF p.16・17: 2027年度営業利益目標1,120億円","note":"同一資料の確定実績と現時点の2027年度目標を接続する。"},
+        {"fiscalYear":"FY2027","metric":"businessProfit","targetValue":1140,"actualValue":1047,"unit":"億円","sourcePage":"PDF p.17","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.17: 事業利益実績1,047億円","targetSource":"同 PDF p.17: 2027年度事業利益目標1,140億円","note":"会社定義の事業利益を営業利益と区別して接続する。"},
+        {"fiscalYear":"FY2027","metric":"ordinaryProfit","targetValue":1170,"actualValue":1161,"unit":"億円","sourcePage":"PDF p.17","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.17: 経常利益実績1,161億円","targetSource":"同 PDF p.17: 2027年度経常利益目標1,170億円","note":"最新の確定実績を同一定義の2027年度目標へ接続する。"},
+        {"fiscalYear":"FY2027","metric":"netProfit","targetValue":920,"actualValue":870,"unit":"億円","sourcePage":"PDF p.16 / p.17","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.16・17: 親会社株主に帰属する当期純利益実績870億円","targetSource":"同 PDF p.16・17: 2027年度親会社株主に帰属する当期純利益目標920億円","note":"親会社株主帰属純利益を同一定義で接続する。"},
+        {"fiscalYear":"FY2027","metric":"tokyuEbitda","targetValue":2400,"actualValue":2279,"unit":"億円","sourcePage":"PDF p.16 / p.17","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.16・17: 東急EBITDA実績2,279億円","targetSource":"同 PDF p.16・17: 2027年度東急EBITDA目標2,400億円","note":"東急独自定義のEBITDAを一般的なEBITDAと分離して表示する。"},
+        {"fiscalYear":"FY2027","metric":"ebitda","targetValue":2100,"actualValue":1917,"unit":"億円","sourcePage":"PDF p.17","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.17: EBITDA実績1,917億円","targetSource":"同 PDF p.17: 2027年度EBITDA目標2,100億円","note":"会社開示の通常EBITDAを東急EBITDAとは別指標として接続する。"},
+        {"fiscalYear":"FY2027","metric":"eps","targetValue":164.88,"actualValue":152.25,"unit":"円","sourcePage":"PDF p.16","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.16: EPS実績152.25円","targetSource":"同 PDF p.16: 2027年度EPS目標164.88円","note":"1株当たり利益を円単位で接続する。"},
+        {"fiscalYear":"FY2027","metric":"ROE","targetValue":9.3,"actualValue":10.0,"unit":"%","sourcePage":"PDF p.16 / p.17","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.16・17: ROE実績10.0%","targetSource":"同 PDF p.16・17: 2027年度ROE目標9.3%","note":"足元実績が現時点目標を上回る状態を原文どおり表示し、将来の維持確度とは区別する。"},
+        {"fiscalYear":"FY2027","metric":"ROA","targetValue":3.7,"actualValue":3.7,"unit":"%","sourcePage":"PDF p.16 / p.17","actualFiscalYear":"FY2025","actualSource":"2025年度決算説明資料 PDF p.16・17: ROA実績3.7%","targetSource":"同 PDF p.16・17: 2027年度ROA目標3.7%","note":"新リース会計適用後の参考値3.5%ではなく、表の主指標として示された同一定義値を接続する。"}
       ]
     },
     {
@@ -143,54 +34,10 @@
       "verifiedDate": "2026-07-17",
       "reason": "公式の2025年度決算及び経営概況説明会資料の目標まとめにFY25確定実績、FY28目標、FY30目標が同一表で並記されているため、FY28のコア営業利益、親会社所有者帰属当期利益、ROE、会社定義ROICを同一定義・同一単位で接続する。NET D/Eは低いほど良い上限制約で単純進捗率に適さないため除外する。",
       "progressRows": [
-        {
-          "fiscalYear": "FY2028",
-          "metric": "coreOperatingProfit",
-          "targetValue": 2000,
-          "actualValue": 1000,
-          "unit": "億円",
-          "sourcePage": "PDF p.30",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "経営概況説明会 PDF p.30: FY25コア営業利益実績1,000億円",
-          "targetSource": "同 PDF p.30: FY28コア営業利益目標2,000億円",
-          "note": "IFRSのコア営業利益を通常の営業利益と区別して接続する。"
-        },
-        {
-          "fiscalYear": "FY2028",
-          "metric": "netProfit",
-          "targetValue": 1100,
-          "actualValue": 344,
-          "unit": "億円",
-          "sourcePage": "PDF p.30",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "経営概況説明会 PDF p.30: FY25親会社所有者帰属当期利益実績344億円",
-          "targetSource": "同 PDF p.30: FY28親会社所有者帰属当期利益目標1,100億円",
-          "note": "親会社所有者帰属当期利益を同一定義で接続する。"
-        },
-        {
-          "fiscalYear": "FY2028",
-          "metric": "ROE",
-          "targetValue": 10,
-          "actualValue": 4.0,
-          "unit": "%",
-          "sourcePage": "PDF p.30",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "経営概況説明会 PDF p.30: FY25 ROE実績4.0%",
-          "targetSource": "同 PDF p.30: FY28 ROE目標10%以上",
-          "note": "目標下限10%へ接続する。"
-        },
-        {
-          "fiscalYear": "FY2028",
-          "metric": "ROIC",
-          "targetValue": 7,
-          "actualValue": 4.5,
-          "unit": "%",
-          "sourcePage": "PDF p.30",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "経営概況説明会 PDF p.30: FY25会社定義ROIC実績4.5%",
-          "targetSource": "同 PDF p.30: FY28会社定義ROIC目標7%以上",
-          "note": "税引後コア営業利益を用いる会社定義ROICを同一定義で接続する。"
-        }
+        {"fiscalYear":"FY2028","metric":"coreOperatingProfit","targetValue":2000,"actualValue":1000,"unit":"億円","sourcePage":"PDF p.30","actualFiscalYear":"FY2025","actualSource":"経営概況説明会 PDF p.30: FY25コア営業利益実績1,000億円","targetSource":"同 PDF p.30: FY28コア営業利益目標2,000億円","note":"IFRSのコア営業利益を通常の営業利益と区別して接続する。"},
+        {"fiscalYear":"FY2028","metric":"netProfit","targetValue":1100,"actualValue":344,"unit":"億円","sourcePage":"PDF p.30","actualFiscalYear":"FY2025","actualSource":"経営概況説明会 PDF p.30: FY25親会社所有者帰属当期利益実績344億円","targetSource":"同 PDF p.30: FY28親会社所有者帰属当期利益目標1,100億円","note":"親会社所有者帰属当期利益を同一定義で接続する。"},
+        {"fiscalYear":"FY2028","metric":"ROE","targetValue":10,"actualValue":4.0,"unit":"%","sourcePage":"PDF p.30","actualFiscalYear":"FY2025","actualSource":"経営概況説明会 PDF p.30: FY25 ROE実績4.0%","targetSource":"同 PDF p.30: FY28 ROE目標10%以上","note":"目標下限10%へ接続する。"},
+        {"fiscalYear":"FY2028","metric":"ROIC","targetValue":7,"actualValue":4.5,"unit":"%","sourcePage":"PDF p.30","actualFiscalYear":"FY2025","actualSource":"経営概況説明会 PDF p.30: FY25会社定義ROIC実績4.5%","targetSource":"同 PDF p.30: FY28会社定義ROIC目標7%以上","note":"税引後コア営業利益を用いる会社定義ROICを同一定義で接続する。"}
       ]
     },
     {
@@ -201,30 +48,8 @@
       "verifiedDate": "2026-07-17",
       "reason": "公式中期経営計画ページに上方修正後の最終年度売上高9,500億円・営業利益570億円が明記され、公式業績ハイライトに2026年3月期の確定実績売上高8,650億円・営業利益467億円が掲載されているため、同一定義・同一単位で接続する。2027年3月期会社予想は中計目標とは分離する。",
       "progressRows": [
-        {
-          "fiscalYear": "FY2026",
-          "metric": "revenue",
-          "targetValue": 9500,
-          "actualValue": 8650,
-          "unit": "億円",
-          "sourcePage": "公式Webページ『中期経営計画2026 数値目標』／『業績ハイライト』",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "日清製粉グループ公式『業績ハイライト』: 2026年3月期売上高実績8,650億円（https://www.nisshin.com/ir/finance/highlight/）",
-          "targetSource": "公式『中期経営計画2026』: 最終年度売上高目標9,500億円",
-          "note": "最新確定実績を上方修正後の中計最終年度目標へ接続し、2027年3月期予想8,700億円とは分離する。"
-        },
-        {
-          "fiscalYear": "FY2026",
-          "metric": "operatingProfit",
-          "targetValue": 570,
-          "actualValue": 467,
-          "unit": "億円",
-          "sourcePage": "公式Webページ『中期経営計画2026 数値目標』／『業績ハイライト』",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "日清製粉グループ公式『業績ハイライト』: 2026年3月期営業利益実績467億円（https://www.nisshin.com/ir/finance/highlight/）",
-          "targetSource": "公式『中期経営計画2026』: 最終年度営業利益目標570億円",
-          "note": "最新確定実績を上方修正後の中計最終年度目標へ接続し、2027年3月期予想460億円とは分離する。"
-        }
+        {"fiscalYear":"FY2026","metric":"revenue","targetValue":9500,"actualValue":8650,"unit":"億円","sourcePage":"公式Webページ『中期経営計画2026 数値目標』／『業績ハイライト』","actualFiscalYear":"FY2025","actualSource":"日清製粉グループ公式『業績ハイライト』: 2026年3月期売上高実績8,650億円（https://www.nisshin.com/ir/finance/highlight/）","targetSource":"公式『中期経営計画2026』: 最終年度売上高目標9,500億円","note":"最新確定実績を上方修正後の中計最終年度目標へ接続し、2027年3月期予想8,700億円とは分離する。"},
+        {"fiscalYear":"FY2026","metric":"operatingProfit","targetValue":570,"actualValue":467,"unit":"億円","sourcePage":"公式Webページ『中期経営計画2026 数値目標』／『業績ハイライト』","actualFiscalYear":"FY2025","actualSource":"日清製粉グループ公式『業績ハイライト』: 2026年3月期営業利益実績467億円（https://www.nisshin.com/ir/finance/highlight/）","targetSource":"公式『中期経営計画2026』: 最終年度営業利益目標570億円","note":"最新確定実績を上方修正後の中計最終年度目標へ接続し、2027年3月期予想460億円とは分離する。"}
       ]
     }
   ],
@@ -233,11 +58,7 @@
     "batchId": "production-promotion-batch-304",
     "explicitApproval": true,
     "automaticSelectionAllowed": false,
-    "codes": [
-      "9005",
-      "4183",
-      "2002"
-    ],
+    "codes": ["9005", "4183", "2002"],
     "targetCoreCount": 165,
     "primaryAuthor": "progress-research-agent",
     "primaryReviewer": "production-quality-review",

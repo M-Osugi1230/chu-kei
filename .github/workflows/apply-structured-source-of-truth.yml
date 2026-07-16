@@ -1,12 +1,6 @@
 name: Apply Structured Source of Truth
 
 on:
-  issues:
-    types:
-      - opened
-  push:
-    branches:
-      - quality/apply-batch-25
   pull_request:
     branches:
       - main
@@ -37,12 +31,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: apply-structured-source-${{ github.event.pull_request.head.ref || inputs.branch || github.ref_name || github.event_name }}
+  group: apply-structured-source-${{ github.event.pull_request.head.ref || inputs.branch || github.ref_name }}
   cancel-in-progress: false
 
 jobs:
   apply:
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -52,12 +46,8 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             echo "branch=${{ github.event.pull_request.head.ref }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "branch=${{ inputs.branch }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "issues" ]; then
-            echo "branch=quality/apply-batch-25" >> "$GITHUB_OUTPUT"
           else
-            echo "branch=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+            echo "branch=${{ inputs.branch }}" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Checkout target branch

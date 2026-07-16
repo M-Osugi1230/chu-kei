@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-16T15:53:04.323Z",
-  "sourceBundleSha256": "83ce6dd7c575b705d61b1d2ce09f6c85afb7cb4e17e50a04275c9c9ac06c1522",
+  "generatedAt": "2026-07-16T15:53:43.208Z",
+  "sourceBundleSha256": "1566c9e1e97f29e75da9beabf408c376ea813b1a3d42914dae0f6ee38fde6e35",
   "companyCount": 1200,
   "progressCount": 262,
-  "detailedExtractedCount": 65,
+  "detailedExtractedCount": 63,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -17,9 +17,9 @@
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 56,
+    "detailedWithProgressFlag": 54,
     "detailedWithoutProgressFlag": 9,
-    "detailedWithMatchedProgressRows": 7,
+    "detailedWithMatchedProgressRows": 5,
     "progressExistsButFlagMissing": 0,
     "pageEvidenceAndPublicationReadyButProgressMissing": 9
   },
@@ -822,64 +822,6 @@
       ]
     },
     {
-      "code": "5711",
-      "name": "三菱マテリアル",
-      "lastVerifiedDate": "2026-07-17",
-      "planPublishedDate": "2025-11-26",
-      "evidenceRefCount": 4,
-      "pageEvidenceRefCount": 3,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 3,
-      "matchedProgressSample": [
-        {
-          "code": "5711",
-          "fiscalYear": "FY2028",
-          "metric": "ROE",
-          "targetValue": 8,
-          "actualValue": 5.7,
-          "unit": "%",
-          "progressRate": 71.3,
-          "source": "中期経営戦略（2026～2028年度）PDF p.8: 2028年度ROE目標8.0%以上",
-          "sourceUrl": "https://ir.mmc.co.jp/ja/ir/news/news2624926994039742087/main/0/link/J_cyukei20251126.pdf",
-          "sourcePage": "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
-          "updatedAt": "2026-07-17",
-          "lastVerifiedDate": "2026-07-17",
-          "note": "最新の確定実績を中計目標の下限8.0%へ接続。数値比は将来の達成確度を示さない。",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "https://ir.mmc.co.jp/ja/ir/library/presentation/main/01/teaserItems1/01110/linkList/05/link/J_20260513%204Q_Script.pdf PDF p.6: 2026年3月期（2025年度）ROE実績5.7%"
-        },
-        {
-          "code": "5711",
-          "fiscalYear": "FY2028",
-          "metric": "ROIC",
-          "targetValue": 7,
-          "actualValue": 6.1,
-          "unit": "%",
-          "progressRate": 87.1,
-          "source": "中期経営戦略（2026～2028年度）PDF p.8: 2028年度ROIC目標7.0%以上",
-          "sourceUrl": "https://ir.mmc.co.jp/ja/ir/news/news2624926994039742087/main/0/link/J_cyukei20251126.pdf",
-          "sourcePage": "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
-          "updatedAt": "2026-07-17",
-          "lastVerifiedDate": "2026-07-17",
-          "note": "会社定義ROICを同一定義で下限目標7.0%へ接続。一般的なROICとの単純比較を避ける。",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "https://ir.mmc.co.jp/ja/ir/library/presentation/main/01/teaserItems1/01110/linkList/05/link/J_20260513%204Q_Script.pdf PDF p.6: 2026年3月期（2025年度）会社定義ROIC実績6.1%"
-        }
-      ],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
       "code": "5713",
       "name": "住友金属鉱山",
       "lastVerifiedDate": "2026-07-10",
@@ -1216,64 +1158,6 @@
       "progressFlagValue": false,
       "matchedProgressRows": 0,
       "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "7735",
-      "name": "SCREENホールディングス",
-      "lastVerifiedDate": "2026-07-17",
-      "planPublishedDate": "2024-05-09",
-      "evidenceRefCount": 4,
-      "pageEvidenceRefCount": 3,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 2,
-      "matchedProgressSample": [
-        {
-          "code": "7735",
-          "fiscalYear": "FY2027",
-          "metric": "ROIC",
-          "targetValue": 15,
-          "actualValue": 24.7,
-          "unit": "%",
-          "progressRate": 164.7,
-          "source": "同 PDF p.30: Value Up Further 2026のROIC目標15%以上",
-          "sourceUrl": "https://www.screen.co.jp/download_file/8b8f6c71-f200-423e-beaa-749bc5fc569a/409",
-          "sourcePage": "PDF p.30",
-          "updatedAt": "2026-07-17",
-          "lastVerifiedDate": "2026-07-17",
-          "note": "計画1年目実績が目標下限を上回る状態を原文どおり接続。数値比は将来の継続性や達成確度を示さない。",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年3月期決算説明会 PDF p.30: Value Up Further 2026の1年目ROIC実績24.7%"
-        },
-        {
-          "code": "7735",
-          "fiscalYear": "FY2027",
-          "metric": "dividendPayoutRatio",
-          "targetValue": 30,
-          "actualValue": 30.1,
-          "unit": "%",
-          "progressRate": 100.3,
-          "source": "同 PDF p.30: 連結配当性向30%以上",
-          "sourceUrl": "https://www.screen.co.jp/download_file/8b8f6c71-f200-423e-beaa-749bc5fc569a/409",
-          "sourcePage": "PDF p.30",
-          "updatedAt": "2026-07-17",
-          "lastVerifiedDate": "2026-07-17",
-          "note": "成長投資の進捗度合いに応じた機動的な自己株式取得は数値目標と分離し、配当性向のみ接続する。",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "2025年3月期決算説明会 PDF p.30: 1年目の連結配当性向実績30.1%"
-        }
-      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",

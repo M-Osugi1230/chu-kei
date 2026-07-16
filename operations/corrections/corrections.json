@@ -11179,5 +11179,45 @@
     "reviewDecisionId": "review-7735-20260717-progress-connect",
     "detectedAt": "2026-07-17T01:01:00.000Z",
     "correctedAt": "2026-07-17T01:21:00.000Z"
+  },
+  {
+    "id": "correction-5711-20260714-production-promotion",
+    "companyCode": "5711",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://ir.mmc.co.jp/ja/ir/news/news2624926994039742087/main/0/link/J_cyukei20251126.pdf",
+    "sourcePage": "中期経営戦略 表紙: 2025年11月26日公表。 / 同 p.7-p.8: 抜本的構造改革によるROE・ROIC改善と2028年度財務目標。 / 同 p.9: 2026〜2028年度のキャピタルアロケーション、成長投資比率、DOE・自己株式取得方針。 / 同 p.10-p.16: 二次原料製錬、E-Scrap、タングステン、グローバル展開、DX・人的資本戦略。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5711-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:00:00.000Z",
+    "correctedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "correction-7735-20260714-production-promotion",
+    "companyCode": "7735",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.screen.co.jp/ir/mplan",
+    "sourcePage": "2024年3月期決算説明会資料: 2024年5月9日にValue Up Further 2026を公表。 / 同 p.35: 3年間累計売上高1.8兆円以上、通算営業利益率19%以上、ROIC15%以上、配当性向30%以上。 / 同 p.37-p.38: 人的資本・GHG目標と、投資原資約3,600億円のキャッシュアロケーション。 / 同 p.39-p.41: 事業別財務目標、DX、新規事業の最終年度黒字化、100億円規模の新規事業創出。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7735-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:01:00.000Z",
+    "correctedAt": "2026-07-14T11:01:00.000Z"
   }
 ]

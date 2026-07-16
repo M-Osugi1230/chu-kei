@@ -14,6 +14,7 @@ const check = (name, ok, detail = '') => {
 
 const manifest = JSON.parse(fs.readFileSync(path.join(dataDir, 'bundle.manifest.json'), 'utf8'));
 const budget = JSON.parse(fs.readFileSync(path.join(repoRoot, 'operations', 'quality-debt-budget-v1.json'), 'utf8'));
+const milestone = JSON.parse(fs.readFileSync(path.join(repoRoot, 'operations', 'quality', 'coverage-milestone-v1.json'), 'utf8'));
 let payload = { companies: [], progress: [] };
 try {
   payload = JSON.parse(zlib.gunzipSync(Buffer.concat(manifest.parts.map(part => fs.readFileSync(path.join(dataDir, part.file))))));
@@ -32,6 +33,9 @@ const corePageGaps = companies.filter(company => company.stage === 'core' && !pa
 const expectedPublicationMaximum = budget.maximumCounts?.['core.missingPublicationDate'];
 const expectedPageMaximum = budget.maximumCounts?.['core.missingPageEvidence'];
 const expectedDetailedPageMaximum = budget.maximumCounts?.['detailed.missingPageEvidence'];
+const expectedDetailed = Number.isInteger(milestone.minimumStructured) && Number.isInteger(milestone.expectedCore)
+  ? milestone.minimumStructured - milestone.expectedCore
+  : null;
 
 check('quality dashboard HTML exists', fs.existsSync(path.join(root, 'quality.html')));
 check('quality dashboard JavaScript exists', fs.existsSync(path.join(root, 'assets/quality.js')));
@@ -40,7 +44,11 @@ check(
   'quality debt budget readable',
   Number.isInteger(expectedPublicationMaximum) && Number.isInteger(expectedPageMaximum) && Number.isInteger(expectedDetailedPageMaximum),
 );
-check('detail beta queue does not regress below 70 companies', detailed.length >= 70, `actual=${detailed.length}`);
+check(
+  'detail beta queue matches structured-minus-core milestone',
+  Number.isInteger(expectedDetailed) && expectedDetailed >= 0 && detailed.length === expectedDetailed,
+  `actual=${detailed.length}, expected=${expectedDetailed}`,
+);
 check('priority A and B partition review queue', priorityA + priorityB === detailed.length, `A=${priorityA}, B=${priorityB}`);
 check('priority B within detailed evidence debt budget', priorityB <= expectedDetailedPageMaximum, `actual=${priorityB}, maximum=${expectedDetailedPageMaximum}`);
 check('priority A reflects evidence improvements', priorityA >= detailed.length - expectedDetailedPageMaximum, `actual=${priorityA}, minimum=${detailed.length - expectedDetailedPageMaximum}`);
@@ -70,6 +78,7 @@ const report = {
   checkedAt: new Date().toISOString(),
   reviewQueue: {
     total: detailed.length,
+    expectedDetailed,
     priorityA,
     priorityB,
     detailedPageEvidenceMaximum: expectedDetailedPageMaximum,

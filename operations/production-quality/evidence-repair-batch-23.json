@@ -1,7 +1,6 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-23",
-  "runRequested": true,
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
   "allowedStages": [
@@ -56,22 +55,5 @@
         "同 PDF p.12: FY2030税引前利益4,200億円、ROA5.5%、事業別利益計画。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-307",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "codes": [
-      "7267",
-      "8750",
-      "9104"
-    ],
-    "targetCoreCount": 174,
-    "primaryAuthor": "production-quality-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "independent-release-agent",
-    "independentReviewer": "independent-release-review",
-    "approvalDate": "2026-07-17"
-  }
+  ]
 }

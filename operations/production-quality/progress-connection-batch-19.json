@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-19",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "4901",
+      "sourceUrl": "https://ir.fujifilm.com/ja/investors/ir-materials/earnings-presentations/main/01113/teaserItems5/0/linkList/0/link/ff_fy2025q4_001j.pdf",
+      "document": "富士フイルムホールディングス 2026年3月期決算説明会／VISION2030進捗状況",
+      "sourcePublishedDate": "2026-05-12",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式の最新年度決算説明会資料の同一表に、2026年3月期の確定実績と2027年3月期のVISION2030目標が並記され、売上高、営業利益、営業利益率、当社株主帰属純利益、ROE、ROICを同一定義・同一単位で接続できるため。中央列の2027年3月期業績予想ではなく、右端の中期経営計画目標へ接続する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2026",
+          "metric": "revenue",
+          "targetValue": 34500,
+          "actualValue": 33570,
+          "unit": "億円",
+          "sourcePage": "PDF p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期決算説明会 PDF p.6: 2026年3月期売上高実績33,570億円",
+          "targetSource": "同 PDF p.6: 2027年3月期VISION2030売上高目標34,500億円",
+          "note": "最新の確定実績をVISION2030の最終年度目標へ接続。中央列の会社予想34,700億円とは分離する。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "operatingProfit",
+          "targetValue": 3600,
+          "actualValue": 3502,
+          "unit": "億円",
+          "sourcePage": "PDF p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期決算説明会 PDF p.6: 2026年3月期営業利益実績3,502億円",
+          "targetSource": "同 PDF p.6: 2027年3月期VISION2030営業利益目標3,600億円",
+          "note": "最新の確定実績をVISION2030の最終年度目標へ接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "operatingMargin",
+          "targetValue": 10.4,
+          "actualValue": 10.4,
+          "unit": "%",
+          "sourcePage": "PDF p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期決算説明会 PDF p.6: 2026年3月期営業利益率実績10.4%",
+          "targetSource": "同 PDF p.6: 2027年3月期VISION2030営業利益率目標10.4%",
+          "note": "実績が目標値と同水準である状態を原文どおり接続。単純進捗率は将来の維持確度を示さない。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "netProfit",
+          "targetValue": 2700,
+          "actualValue": 2767,
+          "unit": "億円",
+          "sourcePage": "PDF p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期決算説明会 PDF p.6: 2026年3月期当社株主帰属純利益実績2,767億円",
+          "targetSource": "同 PDF p.6: 2027年3月期VISION2030当社株主帰属純利益目標2,700億円",
+          "note": "足元実績が中計目標を上回る状態を原文どおり接続し、将来の持続性とは区別する。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROE",
+          "targetValue": 8.1,
+          "actualValue": 7.7,
+          "unit": "%",
+          "sourcePage": "PDF p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期決算説明会 PDF p.6: 2026年3月期ROE実績7.7%",
+          "targetSource": "同 PDF p.6: 2027年3月期VISION2030 ROE目標8.1%",
+          "note": "最新の確定実績を同一定義の中計目標へ接続。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "ROIC",
+          "targetValue": 5.8,
+          "actualValue": 5.5,
+          "unit": "%",
+          "sourcePage": "PDF p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期決算説明会 PDF p.6: 2026年3月期会社定義ROIC実績5.5%",
+          "targetSource": "同 PDF p.6: 2027年3月期VISION2030 ROIC目標5.8%",
+          "note": "会社定義ROICを同一定義で接続し、一般的なROICとの単純比較を避ける。"
+        }
+      ]
+    }
+  ]
+}

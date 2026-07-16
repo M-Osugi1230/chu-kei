@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-draft-v1",
+  "batchId": "evidence-repair-batch-26",
+  "status": "researched_not_executable",
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "contingentOn": {
+    "requiredReport": "operations/production-quality/production-promotion-batch-309-report.json",
+    "requiredCoreCount": 180,
+    "requiredFiveStarCount": 166,
+    "requiredDetailedExtractedCount": 42
+  },
+  "proposedResult": {
+    "coreCount": 185,
+    "fiveStarCount": 171,
+    "detailedExtractedCount": 37,
+    "remainingGapTo1000": 815
+  },
+  "activationInstructions": [
+    "第25バッチの実生成レポートで本番180社・5つ星166社を確認する。",
+    "本ファイル名から-draftを外し、schemaVersionをcore-evidence-repair-batch-v1へ変更する。",
+    "runRequested=trueを追加し、expectedCoreCount=180、expectedDetailedExtractedCount=42、expectedFiveStarAfterApproval=171を設定する。",
+    "proposedProductionPromotionをproductionPromotionへ改名し、全品質ゲートを通過した後だけmainへ統合する。"
+  ],
+  "records": [
+    {
+      "code": "4543",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.terumo.co.jp/system/files/document/2026-05/Presentation_01_26Q4_J.pdf",
+      "document": "テルモ GS26最終年度とその先へ／ニューロ事業成長への道筋",
+      "planPublishedDate": "2026-05-15",
+      "verifiedDate": "2026-07-17",
+      "reason": "テルモ公式の2026年3月期決算説明資料で、GS26の売上成長率・営業利益率・ROICの目標と最終年度実績、次期成長に向けた事業方針、ニューロ事業のパイプライン・臨床エビデンス・隣接市場展開をページ単位で確認でき、既存の構造化分析と進捗データを複数の公式一次証跡で補強できるため。",
+      "evidenceRefs": [
+        "決算説明資料 PDF p.3: GS26の売上成長率目標High single digitに対し5年CAGR12%（為替影響除き7%）、営業利益率20%以上に対し20%、ROIC10%以上に対し10%の最終年度実績。",
+        "同 PDF p.4: GS26期間の成長要因と収益性改善の振り返り。",
+        "同 PDF p.17: 2026～2031年のニューロ事業パイプライン、臨床エビデンス、オペレーション効率化、隣接市場展開の方針。"
+      ]
+    },
+    {
+      "code": "4568",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.daiichisankyo.co.jp/about_us/mission-strength/vision/our_strategy/",
+      "document": "第一三共 第6期中期経営計画（FY2026-FY2030）",
+      "planPublishedDate": "2026-05-11",
+      "verifiedDate": "2026-07-17",
+      "reason": "第一三共公式の経営戦略ページで、第6期中期経営計画の成長戦略、2030年度の売上収益・営業利益・EPS・調整後DOE目標、第5期の2025年度実績、累進配当と自己株式取得方針を具体的な見出し単位で確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 第6期中期経営計画達成に向けた戦略）: DXd ADCsの成長、次の新BGTsの特定、世界トップ5のがん企業を目指す事業戦略。",
+        "公式Webページ（見出し: 2030年度計数目標）: 売上収益3兆円以上、営業利益6,000億円以上、EPS260円以上、調整後DOE各年度10%以上を掲げる。",
+        "公式Webページ（見出し: 第5期中期経営計画の振り返り：計数目標）: 2025年度実績として売上収益2兆1,230億円、がん領域9,540億円、ROE15.8%、DOE8.7%を開示。",
+        "公式Webページ（見出し: 株主還元方針）: 累進配当、調整後DOE10%以上、状況に応じた機動的な自己株式取得を掲げる。"
+      ]
+    },
+    {
+      "code": "5411",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.jfe-holdings.co.jp/sustainability/sus_manage/manage/plan/",
+      "document": "JFEビジョン2035・第8次中期経営計画",
+      "planPublishedDate": "2025-05-08",
+      "verifiedDate": "2026-07-17",
+      "reason": "JFEホールディングス公式の第8次中期経営計画ページで、2027年度の連結事業利益・ROE・財務規律、鉄鋼・エンジニアリング・商社の利益目標、配当性向と配当下限を具体的な表で確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 2027年度の連結事業利益4,000億円、ROE10%以上、Debt/EBITDA約3倍、D/E約60%を掲げる。",
+        "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 鉄鋼2,600億円、エンジニアリング420億円、商社600億円のセグメント利益目標。",
+        "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 配当性向30%程度を維持し、1株80円を配当下限とする方針。"
+      ]
+    },
+    {
+      "code": "5713",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.smm.co.jp/ir/management/plan/",
+      "document": "住友金属鉱山 中期経営計画2027",
+      "planPublishedDate": "2025-05-12",
+      "verifiedDate": "2026-07-17",
+      "reason": "住友金属鉱山公式の中期経営計画ページで、中計27の位置づけと長期ビジョンの生産量・材料事業利益・親会社帰属利益ターゲットを具体的な見出し単位で確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 中期経営計画2027）: 2025～2027年度を対象とする中計27の資料・説明会・質疑応答への公式導線。",
+        "公式Webページ（見出し: 長期ビジョンのターゲット）: ニッケル年間15万トン、銅権益分年間30万トンの生産量目標。",
+        "公式Webページ（見出し: 長期ビジョンのターゲット）: 材料事業の税引前利益250億円/年、親会社所有者帰属当期利益1,500億円/年を掲げる。"
+      ]
+    },
+    {
+      "code": "6301",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.komatsu.jp/ja/newsroom/2025/20250428_2",
+      "document": "コマツ 中期経営計画2025-2027 Driving value with ambition",
+      "planPublishedDate": "2025-04-28",
+      "verifiedDate": "2026-07-17",
+      "reason": "コマツ公式の新中期経営計画発表ページで、ありたい姿、3本柱の成長戦略、ROE・FCF目標、配当性向・自己株式取得方針を具体的に確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 新たな中期経営計画）: 2025～2027年度を対象に、安全で生産性の高いクリーンな現場を実現するソリューションパートナーを目指す。",
+        "公式Webページ（見出し: 成長戦略）: イノベーションによる価値共創、成長性と収益性の追求、経営基盤の革新を3本柱とする。",
+        "公式Webページ（見出し: 経営目標）: ROE10%以上、3年間累計FCF1兆円を目標とし、配当性向40%以上と機動的な自己株式取得を継続する。"
+      ]
+    }
+  ],
+  "proposedProductionPromotion": {
+    "schemaVersion": "production-promotion-batch-v1",
+    "batchId": "production-promotion-batch-310",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "codes": [
+      "4543",
+      "4568",
+      "5411",
+      "5713",
+      "6301"
+    ],
+    "targetCoreCount": 185,
+    "primaryAuthor": "production-quality-agent",
+    "primaryReviewer": "production-quality-review",
+    "independentAuthor": "independent-release-agent",
+    "independentReviewer": "independent-release-review",
+    "approvalDate": "2026-07-17"
+  }
+}

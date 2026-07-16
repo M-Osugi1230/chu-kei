@@ -1,7 +1,6 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-21",
-  "runRequested": true,
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
   "allowedStages": [
@@ -52,22 +51,5 @@
         "同 PDF p.2: 2030年度目標として営業収益15兆円、営業利益5,300億円、ROE8.5%以上、EBITDA1.1兆円。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-305",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "approvalDate": "2026-07-17",
-    "codes": [
-      "1812",
-      "9101",
-      "8267"
-    ],
-    "targetCoreCount": 168,
-    "primaryAuthor": "source-research-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "production-quality-review",
-    "independentReviewer": "independent-release-review"
-  }
+  ]
 }

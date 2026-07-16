@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "production-promotion-batch-17",
+  "automaticApprovalAllowed": false,
+  "explicitProductionApproval": true,
+  "reviews": [
+    {
+      "id": "review-5802-20260714-production-primary",
+      "companyCode": "5802",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+      "sourcePages": [
+        "中期経営計画2028 PDF p.1: 計画名称、公式PDF作成日。",
+        "同 PDF p.7: 2028年度の売上高6兆円、営業利益6,000億円、税引前ROIC15%以上。",
+        "同 PDF p.22: ROE13%以上、EBITDD2兆7,000億円、設備投資1兆円、研究開発5,400億円、キャッシュアロケーション。",
+        "同 PDF p.27: 『五方よし』の定量目標、ROE13%以上、配当性向35〜40%。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-14T08:00:00.000Z",
+      "reviewedAt": "2026-07-14T09:00:00.000Z"
+    },
+    {
+      "id": "review-5802-20260714-production-double-check",
+      "companyCode": "5802",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-review",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+      "sourcePages": [
+        "中期経営計画2028 PDF p.1: 計画名称、公式PDF作成日。",
+        "同 PDF p.7: 2028年度の売上高6兆円、営業利益6,000億円、税引前ROIC15%以上。",
+        "同 PDF p.22: ROE13%以上、EBITDD2兆7,000億円、設備投資1兆円、研究開発5,400億円、キャッシュアロケーション。",
+        "同 PDF p.27: 『五方よし』の定量目標、ROE13%以上、配当性向35〜40%。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-14T10:00:00.000Z",
+      "reviewedAt": "2026-07-14T11:00:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-5802-20260714-production-promotion",
+      "companyCode": "5802",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+      "sourcePage": "中期経営計画2028 PDF p.1: 計画名称、公式PDF作成日。 / 同 PDF p.7: 2028年度の売上高6兆円、営業利益6,000億円、税引前ROIC15%以上。 / 同 PDF p.22: ROE13%以上、EBITDD2兆7,000億円、設備投資1兆円、研究開発5,400億円、キャッシュアロケーション。 / 同 PDF p.27: 『五方よし』の定量目標、ROE13%以上、配当性向35〜40%。",
+      "status": "corrected",
+      "reviewDecisionId": "review-5802-20260714-production-double-check",
+      "detectedAt": "2026-07-14T10:00:00.000Z",
+      "correctedAt": "2026-07-14T11:00:00.000Z"
+    }
+  ]
+}

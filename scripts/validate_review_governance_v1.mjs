@@ -8,6 +8,7 @@ const DATA_DIR = path.join(ROOT, 'site', 'data');
 const REVIEW_PATH = path.join(ROOT, 'operations', 'reviews', 'decisions.json');
 const CORRECTION_PATH = path.join(ROOT, 'operations', 'corrections', 'corrections.json');
 const BUDGET_PATH = path.join(ROOT, 'operations', 'quality-debt-budget-v1.json');
+const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
 const ARTIFACT_DIR = path.join(ROOT, 'artifacts');
 const checks = [];
 const issues = [];
@@ -47,6 +48,7 @@ let data = { companies: [] };
 let decisions = [];
 let corrections = [];
 let budget = { maximumCounts: {} };
+let milestone = {};
 try {
   data = readBundle();
   check('company bundle readable', true);
@@ -70,6 +72,12 @@ try {
   check('quality debt budget readable', true);
 } catch (error) {
   check('quality debt budget readable', false, error.message);
+}
+try {
+  milestone = readJson(MILESTONE_PATH);
+  check('quality milestone readable', true);
+} catch (error) {
+  check('quality milestone readable', false, error.message);
 }
 
 const companyCodes = new Set(data.companies.map(company => String(company.code)));
@@ -128,7 +136,14 @@ const detailed = data.companies.filter(company => company.stage === 'detailed_ex
 const priorityA = detailed.filter(pageEvidence).length;
 const priorityB = detailed.filter(company => !pageEvidence(company)).length;
 const detailedGapMaximum = budget.maximumCounts?.['detailed.missingPageEvidence'];
-check('review queue source does not regress below 70 companies', detailed.length >= 70, `actual=${detailed.length}`);
+const expectedDetailed = Number.isInteger(milestone.minimumStructured) && Number.isInteger(milestone.expectedCore)
+  ? milestone.minimumStructured - milestone.expectedCore
+  : null;
+check(
+  'review queue source matches structured-minus-core milestone',
+  Number.isInteger(expectedDetailed) && expectedDetailed >= 0 && detailed.length === expectedDetailed,
+  `actual=${detailed.length}, expected=${expectedDetailed}`,
+);
 check('review queue priorities partition all detailed companies', priorityA + priorityB === detailed.length, `A=${priorityA}, B=${priorityB}, total=${detailed.length}`);
 check('priority B is within quality debt budget', Number.isInteger(detailedGapMaximum) && priorityB <= detailedGapMaximum, `actual=${priorityB}, maximum=${detailedGapMaximum}`);
 check('priority A matches evidence improvement', priorityA >= detailed.length - detailedGapMaximum, `actual=${priorityA}, minimum=${detailed.length - detailedGapMaximum}`);
@@ -143,6 +158,7 @@ const report = {
     corrections: corrections.length,
     priorityA,
     priorityB,
+    expectedDetailed,
     detailedPageEvidenceDebtMaximum: detailedGapMaximum,
   },
   passed: checks.filter(item => item.ok).length,

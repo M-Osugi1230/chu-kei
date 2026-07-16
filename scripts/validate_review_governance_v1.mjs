@@ -46,7 +46,7 @@ for (const schemaPath of ['schemas/review-decision-v1.schema.json', 'schemas/cor
 let data = { companies: [] };
 let decisions = [];
 let corrections = [];
-let budget = { maximumCounts: {} };
+let budget = { maximumCounts: {}, minimumCounts: {} };
 try {
   data = readBundle();
   check('company bundle readable', true);
@@ -124,11 +124,18 @@ check('correction records valid', invalidCorrection === 0, `invalid=${invalidCor
 check('corrected entries link to review decision', invalidCorrected === 0, `invalid-corrected=${invalidCorrected}`);
 
 const pageEvidence = company => (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
+const core = data.companies.filter(company => company.stage === 'core');
 const detailed = data.companies.filter(company => company.stage === 'detailed_extracted');
+const structuredReviewable = [...core, ...detailed];
 const priorityA = detailed.filter(pageEvidence).length;
 const priorityB = detailed.filter(company => !pageEvidence(company)).length;
 const detailedGapMaximum = budget.maximumCounts?.['detailed.missingPageEvidence'];
-check('review queue source does not regress below 70 companies', detailed.length >= 70, `actual=${detailed.length}`);
+const structuredReviewableMinimum = budget.minimumCounts?.['structured.reviewableCompanies'];
+check(
+  'reviewable structured company pool does not regress',
+  Number.isInteger(structuredReviewableMinimum) && structuredReviewable.length >= structuredReviewableMinimum,
+  `core=${core.length}, detailed=${detailed.length}, total=${structuredReviewable.length}, minimum=${structuredReviewableMinimum}`,
+);
 check('review queue priorities partition all detailed companies', priorityA + priorityB === detailed.length, `A=${priorityA}, B=${priorityB}, total=${detailed.length}`);
 check('priority B is within quality debt budget', Number.isInteger(detailedGapMaximum) && priorityB <= detailedGapMaximum, `actual=${priorityB}, maximum=${detailedGapMaximum}`);
 check('priority A matches evidence improvement', priorityA >= detailed.length - detailedGapMaximum, `actual=${priorityA}, minimum=${detailed.length - detailedGapMaximum}`);
@@ -141,6 +148,10 @@ const report = {
   summary: {
     reviewDecisions: decisions.length,
     corrections: corrections.length,
+    coreCompanies: core.length,
+    detailedCompanies: detailed.length,
+    structuredReviewableCompanies: structuredReviewable.length,
+    structuredReviewableMinimum,
     priorityA,
     priorityB,
     detailedPageEvidenceDebtMaximum: detailedGapMaximum,

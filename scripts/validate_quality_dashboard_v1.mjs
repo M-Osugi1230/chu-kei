@@ -23,24 +23,34 @@ try {
 }
 
 const companies = payload.companies || [];
+const core = companies.filter(company => company.stage === 'core');
 const detailed = companies.filter(company => company.stage === 'detailed_extracted');
+const structuredReviewable = [...core, ...detailed];
 const pageEvidence = company => (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
 const priorityA = detailed.filter(pageEvidence).length;
 const priorityB = detailed.filter(company => !pageEvidence(company)).length;
-const corePublicationGaps = companies.filter(company => company.stage === 'core' && !company.planPublishedDate).length;
-const corePageGaps = companies.filter(company => company.stage === 'core' && !pageEvidence(company)).length;
+const corePublicationGaps = core.filter(company => !company.planPublishedDate).length;
+const corePageGaps = core.filter(company => !pageEvidence(company)).length;
 const expectedPublicationMaximum = budget.maximumCounts?.['core.missingPublicationDate'];
 const expectedPageMaximum = budget.maximumCounts?.['core.missingPageEvidence'];
 const expectedDetailedPageMaximum = budget.maximumCounts?.['detailed.missingPageEvidence'];
+const expectedStructuredReviewableMinimum = budget.minimumCounts?.['structured.reviewableCompanies'];
 
 check('quality dashboard HTML exists', fs.existsSync(path.join(root, 'quality.html')));
 check('quality dashboard JavaScript exists', fs.existsSync(path.join(root, 'assets/quality.js')));
 check('quality dashboard CSS exists', fs.existsSync(path.join(root, 'assets/quality.css')));
 check(
   'quality debt budget readable',
-  Number.isInteger(expectedPublicationMaximum) && Number.isInteger(expectedPageMaximum) && Number.isInteger(expectedDetailedPageMaximum),
+  Number.isInteger(expectedPublicationMaximum)
+    && Number.isInteger(expectedPageMaximum)
+    && Number.isInteger(expectedDetailedPageMaximum)
+    && Number.isInteger(expectedStructuredReviewableMinimum),
 );
-check('detail beta queue does not regress below 70 companies', detailed.length >= 70, `actual=${detailed.length}`);
+check(
+  'structured reviewable company pool does not regress',
+  structuredReviewable.length >= expectedStructuredReviewableMinimum,
+  `core=${core.length}, detailed=${detailed.length}, total=${structuredReviewable.length}, minimum=${expectedStructuredReviewableMinimum}`,
+);
 check('priority A and B partition review queue', priorityA + priorityB === detailed.length, `A=${priorityA}, B=${priorityB}`);
 check('priority B within detailed evidence debt budget', priorityB <= expectedDetailedPageMaximum, `actual=${priorityB}, maximum=${expectedDetailedPageMaximum}`);
 check('priority A reflects evidence improvements', priorityA >= detailed.length - expectedDetailedPageMaximum, `actual=${priorityA}, minimum=${detailed.length - expectedDetailedPageMaximum}`);
@@ -69,7 +79,10 @@ const report = {
   version: 'quality-dashboard-v1',
   checkedAt: new Date().toISOString(),
   reviewQueue: {
-    total: detailed.length,
+    core: core.length,
+    detailed: detailed.length,
+    structuredReviewableTotal: structuredReviewable.length,
+    structuredReviewableMinimum: expectedStructuredReviewableMinimum,
     priorityA,
     priorityB,
     detailedPageEvidenceMaximum: expectedDetailedPageMaximum,

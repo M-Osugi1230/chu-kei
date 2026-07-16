@@ -1,6 +1,9 @@
 name: Apply Structured Source of Truth
 
 on:
+  issues:
+    types:
+      - opened
   push:
     branches:
       - quality/apply-batch-25
@@ -34,7 +37,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: apply-structured-source-${{ github.event.pull_request.head.ref || inputs.branch || github.ref_name }}
+  group: apply-structured-source-${{ github.event.pull_request.head.ref || inputs.branch || github.ref_name || github.event_name }}
   cancel-in-progress: false
 
 jobs:
@@ -51,6 +54,8 @@ jobs:
             echo "branch=${{ github.event.pull_request.head.ref }}" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "branch=${{ inputs.branch }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "issues" ]; then
+            echo "branch=quality/apply-batch-25" >> "$GITHUB_OUTPUT"
           else
             echo "branch=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
           fi

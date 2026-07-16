@@ -15466,5 +15466,60 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:01:00.000Z",
     "reviewedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "review-5711-20260717-progress-connect",
+    "companyCode": "5711",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://ir.mmc.co.jp/ja/ir/news/news2624926994039742087/main/0/link/J_cyukei20251126.pdf",
+    "sourcePages": [
+      "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
+      "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6",
+      "中期経営戦略 PDF p.8 / 決算補足説明資料 PDF p.6"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営戦略で2028年度のROE・ROIC・経常利益目標を確認し、2026年5月13日公表の公式決算補足説明資料で2025年度確定実績を同一定義・同一単位で確認できるため。中計公表時の2025年度見通しではなく、最新の確定実績へ差し替えて接続する。",
+    "createdAt": "2026-07-17T01:00:00.000Z",
+    "reviewedAt": "2026-07-17T01:10:00.000Z"
+  },
+  {
+    "id": "review-7735-20260717-progress-connect",
+    "companyCode": "7735",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.screen.co.jp/download_file/8b8f6c71-f200-423e-beaa-749bc5fc569a/409",
+    "sourcePages": [
+      "PDF p.30",
+      "PDF p.30"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式決算説明会資料の同一財務目標進捗表に、Value Up Further 2026の目標と1年目の確定実績が並記され、ROICと連結配当性向を同一定義・同一単位で接続できるため。累計売上高と通算営業利益率は期間が異なるため接続しない。",
+    "createdAt": "2026-07-17T01:01:00.000Z",
+    "reviewedAt": "2026-07-17T01:11:00.000Z"
   }
 ]

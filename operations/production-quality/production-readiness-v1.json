@@ -2,14 +2,14 @@
   "schemaVersion": "production-readiness-report-v1",
   "generatedAt": "2026-07-17T00:00:00.000Z",
   "referenceDate": "2026-07-17",
-  "bundleSha256": "d8ff0dd8cd23a5899196a2aa50fe06be26ec5776f23ff11e62c9d99fd85eae14",
+  "bundleSha256": "83ce6dd7c575b705d61b1d2ce09f6c85afb7cb4e17e50a04275c9c9ac06c1522",
   "companyCount": 1200,
   "targetProduction": 1000,
   "currentProduction": 157,
   "productionGap": 843,
   "currentFiveStar": 143,
-  "machineReady": 143,
-  "machineReadyNotProduction": 0,
+  "machineReady": 145,
+  "machineReadyNotProduction": 2,
   "fullyApprovedAndReady": 143,
   "coreMeetingAllRequirements": 143,
   "byStage": {
@@ -24,14 +24,17 @@
     "pageEvidence": 1046,
     "structuredAnalysis": 978,
     "metricExtraction": 978,
-    "progressConnected": 989,
+    "progressConnected": 987,
     "freshness": 0,
     "productionReviewApproved": 1057,
     "independentDoubleCheckApproved": 1057
   },
   "queues": {
     "productionReadyCodes": [],
-    "approvalRequiredCodes": [],
+    "approvalRequiredCodes": [
+      "5711",
+      "7735"
+    ],
     "machineRepairCodes": [
       "175A",
       "280A",
@@ -60,9 +63,7 @@
       "4612",
       "4901",
       "5201",
-      "5711",
       "7733",
-      "7735",
       "9005",
       "2413",
       "2502",

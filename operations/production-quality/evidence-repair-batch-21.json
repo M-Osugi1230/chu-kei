@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "evidence-repair-batch-21",
+  "runRequested": true,
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "allowedStages": [
+    "detailed_extracted"
+  ],
+  "expectedCoreCount": 165,
+  "expectedDetailedExtractedCount": 57,
+  "expectedFiveStarAfterApproval": 154,
+  "records": [
+    {
+      "code": "1812",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.kajima.co.jp/ir/newplan/pdf/20240514_3-j.pdf",
+      "document": "鹿島グループ中期経営計画（2024～2026）",
+      "planPublishedDate": "2024-05-14",
+      "verifiedDate": "2026-07-17",
+      "reason": "鹿島建設公式の中期経営計画PDFで、計画骨子、2026年度経営目標、財務戦略をページ単位で確認し、既存の構造化内容と進捗フラグの根拠を二つ以上の独立したページ証跡で補強できるため。",
+      "evidenceRefs": [
+        "鹿島グループ中期経営計画 PDF p.4: 2026年度連結当期純利益1,300億円以上、ROE10%超、成長投資1.2兆円、配当性向40%目安。",
+        "同 PDF p.10: 2026年度連結当期純利益1,300億円以上、2030年度1,500億円以上、ROE10%超の経営目標。",
+        "同 PDF p.11: 2024～2026年度累計の成長投資1.2兆円、政策保有株式縮減、配当性向40%の財務戦略。"
+      ]
+    },
+    {
+      "code": "9101",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.nyk.com/ir/manage/plan/pdf/sail_green_2026.pdf",
+      "document": "Sail Green, Drive Transformations 2026",
+      "planPublishedDate": "2023-03-10",
+      "verifiedDate": "2026-07-17",
+      "reason": "日本郵船公式の中期経営計画PDFで、株主還元、キャッシュアロケーション、2026年度財務目標をページ単位で確認し、既存の構造化内容と進捗フラグを公式一次資料へ直接接続できるため。",
+      "evidenceRefs": [
+        "Sail Green, Drive Transformations 2026 PDF p.29: 配当性向30%、一株当たり配当下限100円、2,000億円規模の自己株式取得方針。",
+        "同 PDF p.30: 2023～2026年度営業CF8,200億円以上、既存・新規・M&A投資1.2兆円、通常配当2,300億円。",
+        "同 PDF p.33: 2026年度経常利益2,700億円、当期純利益2,400億円、ROIC6.5%、ROE10.2%、自己資本比率57%。"
+      ]
+    },
+    {
+      "code": "8267",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.aeon.info/wp-content/uploads/news/pdf/2026/05/260511R_2.pdf",
+      "document": "イオングループ中期経営計画（2026～2030年度）の策定について",
+      "planPublishedDate": "2026-05-11",
+      "verifiedDate": "2026-07-17",
+      "reason": "イオン公式の中期経営計画策定資料で、計画の基本方針・四つの戦略と2030年度の営業収益、営業利益、ROE、EBITDA目標をページ単位で確認でき、既存分析の公式証跡を補強できるため。",
+      "evidenceRefs": [
+        "イオングループ中期経営計画策定資料 PDF p.1: 2026～2030年度計画の基本方針、高収益ポートフォリオ、食品小売収益構造改革、事業構造改革、財務構造刷新。",
+        "同 PDF p.2: 2030年度目標として営業収益15兆円、営業利益5,300億円、ROE8.5%以上、EBITDA1.1兆円。"
+      ]
+    }
+  ],
+  "productionPromotion": {
+    "schemaVersion": "production-promotion-batch-v1",
+    "batchId": "production-promotion-batch-305",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "approvalDate": "2026-07-17",
+    "codes": [
+      "1812",
+      "9101",
+      "8267"
+    ],
+    "targetCoreCount": 168,
+    "primaryAuthor": "source-research-agent",
+    "primaryReviewer": "production-quality-review",
+    "independentAuthor": "production-quality-review",
+    "independentReviewer": "independent-release-review"
+  }
+}

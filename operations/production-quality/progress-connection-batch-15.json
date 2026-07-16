@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-15",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "5802",
+      "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+      "document": "住友電気工業 中期経営計画2028",
+      "sourcePublishedDate": "2026-05-13",
+      "verifiedDate": "2026-07-16",
+      "reason": "公式『中期経営計画2028』に2025年度実績と2028年度目標が掲載され、連結売上高、営業利益、税引前ROICを同一定義・同一単位で接続できるため。売上高目標6兆円は60,000億円へ単位換算し、ROEは同資料内に2025年度実績がないため接続しない。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 60000,
+          "actualValue": 51102,
+          "unit": "億円",
+          "sourcePage": "PDF p.4 / p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.4: 2025年度売上高実績51,102億円",
+          "targetSource": "同 PDF p.6: 2028年度売上高目標6兆円",
+          "note": "目標6兆円を60,000億円へ単位換算して接続。進捗率は数値比であり達成確度を示さない。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 6000,
+          "actualValue": 4182,
+          "unit": "億円",
+          "sourcePage": "PDF p.4 / p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.4: 2025年度営業利益実績4,182億円",
+          "targetSource": "同 PDF p.6: 2028年度営業利益目標6,000億円",
+          "note": "同一公式計画内の確定実績と2028年度目標を接続。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "ROIC",
+          "targetValue": 15,
+          "actualValue": 14.7,
+          "unit": "%",
+          "sourcePage": "PDF p.4 / p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.4: 2025年度税引前ROIC実績14.7%",
+          "targetSource": "同 PDF p.6: 2028年度税引前ROIC目標15%以上",
+          "note": "会社定義の税引前ROICを同一定義で下限目標15%へ接続。一般的な税引後ROICとは区別する。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "evidence-repair-batch-25",
+  "runRequested": true,
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "allowedStages": [
+    "detailed_extracted"
+  ],
+  "expectedCoreCount": 177,
+  "expectedDetailedExtractedCount": 45,
+  "expectedFiveStarAfterApproval": 166,
+  "records": [
+    {
+      "code": "4188",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.mcgc.com/group/strategy/management_plan.html",
+      "document": "三菱ケミカルグループ 中期経営計画2029",
+      "planPublishedDate": "2024-11-13",
+      "verifiedDate": "2026-07-17",
+      "reason": "三菱ケミカルグループ公式の中期経営計画2029ページで、FY2029のコア営業利益・売上収益・利益率・ROIC、事業ポートフォリオ変革、合理化・サステナビリティ・キャピタルアロケーションを具体的な見出し単位で確認でき、既存の構造化分析と進捗データを公式一次証跡で補強できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 経営数値目標）: FY2029のコア営業利益5,700億円、売上収益4兆9,500億円、コア営業利益率12%、ROIC8%を掲げる。",
+        "公式Webページ（見出し: 事業ポートフォリオ）: 事業選別の3基準と規律ある事業運営の3原則を用い、ケミカルズ事業を成長ドライバーとする方針。",
+        "公式Webページ（見出し: 株主価値｜キャピタルアロケーション）: FY2025-29のキャッシュイン3兆400億円を、株主還元・負債返済と設備投資・投融資へ規律的に配分。"
+      ]
+    },
+    {
+      "code": "5019",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.idemitsu.com/jp/company/managementplan/index.html",
+      "document": "出光興産 中期経営計画（2026-2030年度）",
+      "planPublishedDate": "2026-05-12",
+      "verifiedDate": "2026-07-17",
+      "reason": "出光興産公式の中期経営計画ページで、2030年ビジョン、既存事業強化・成長事業創出・低脱炭素への挑戦という重点戦略、セグメント横断の実行方針を具体的な見出し単位で確認できるため。株主還元についても公式投資家ページで総還元性向と累進配当方針が示されており、既存データの証跡品質を高められる。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 中期経営計画（2026-2030年度）策定にあたって）: 既存事業の収益力・資本効率向上、成長領域での事業創出、低脱炭素事業への挑戦を推進。",
+        "公式Webページ（見出し: 中期経営計画（2026－2030年度）ハイライト）: 2030年ビジョンとして責任ある変革者を掲げ、実践的な事業戦略のリバランスを進める。",
+        "公式Webページ（見出し: 3つの重点事業戦略）: GRIT・GROWTH・CNXの3テーマを5事業セグメント横断で推進し、持続的成長と社会課題解決を両立。"
+      ]
+    },
+    {
+      "code": "9020",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.jreast.co.jp/company/vision_report/group_vision/index.html/",
+      "document": "JR東日本グループ経営ビジョン 勇翔2034",
+      "planPublishedDate": "2026-04-30",
+      "verifiedDate": "2026-07-17",
+      "reason": "JR東日本公式のグループ経営ビジョン勇翔2034ページで、2031年度ROE、営業収益の中長期目標、成長の5つのエンジン、LX実現に向けた施策、M&A等の資本戦略を具体的な見出し単位で確認でき、既存の構造化分析・指標・進捗フラグを公式一次証跡で補強できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 数値目標策定にあたって）: 2031年度ROE10%以上、営業収益4.3兆円程度、2034年度に5兆円規模を目指す方針。",
+        "公式Webページ（見出し: 成長のための5つのエンジン）: モビリティと生活ソリューションを軸に、中長期の成長を生み出す重点領域を整理。",
+        "公式Webページ（見出し: 数値目標）: 既存事業と非連続成長、M&A等の資本戦略を通じ、グループ企業価値最大化と資本効率向上を目指す。"
+      ]
+    }
+  ],
+  "productionPromotion": {
+    "schemaVersion": "production-promotion-batch-v1",
+    "batchId": "production-promotion-batch-309",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "codes": [
+      "4188",
+      "5019",
+      "9020"
+    ],
+    "targetCoreCount": 180,
+    "primaryAuthor": "production-quality-agent",
+    "primaryReviewer": "production-quality-review",
+    "independentAuthor": "independent-release-agent",
+    "independentReviewer": "independent-release-review",
+    "approvalDate": "2026-07-17"
+  }
+}

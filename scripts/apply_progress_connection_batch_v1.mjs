@@ -8,8 +8,7 @@ const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const QUALITY_DIR = path.join(ROOT, 'operations', 'production-quality');
 const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
-const MARKER_PATHS = [
-  path.join(QUALITY_DIR, 'batch-18-selection.json'),
+const LEGACY_MARKER_PATHS = [
   path.join(QUALITY_DIR, 'progress-connection-selection.json'),
   path.join(QUALITY_DIR, 'run-progress-connection-batch.json'),
 ];
@@ -25,6 +24,14 @@ const runNode = (script, env = {}) => execFileSync(process.execPath, [script], {
   env: { ...process.env, ...env },
   stdio: 'inherit',
 });
+
+function findMarkerPath() {
+  const numbered = fs.readdirSync(QUALITY_DIR)
+    .filter(file => /^batch-\d+-selection\.json$/.test(file))
+    .sort((a, b) => Number(b.match(/\d+/)?.[0] || 0) - Number(a.match(/\d+/)?.[0] || 0))
+    .map(file => path.join(QUALITY_DIR, file));
+  return [...numbered, ...LEGACY_MARKER_PATHS].find(file => fs.existsSync(file));
+}
 
 function readBundle() {
   const manifest = readJson(path.join(DATA_DIR, 'bundle.manifest.json'));
@@ -59,7 +66,7 @@ function writeBundle(bundle, originalManifest) {
   });
 }
 
-const markerPath = MARKER_PATHS.find(file => fs.existsSync(file));
+const markerPath = findMarkerPath();
 if (!markerPath) {
   console.log('No progress connection marker found.');
   process.exit(0);

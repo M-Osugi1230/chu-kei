@@ -15,6 +15,19 @@ const STANDARD_KEYS = new Set([
 ]);
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+const stableGeneratedAt = sourceBundleSha256 => {
+  if (!fs.existsSync(OUTPUT)) return new Date().toISOString();
+  try {
+    const previous = readJson(OUTPUT);
+    if (previous.sourceBundleSha256 === sourceBundleSha256 && typeof previous.generatedAt === 'string') {
+      return previous.generatedAt;
+    }
+  } catch {
+    // Rebuild malformed or unreadable reports below.
+  }
+  return new Date().toISOString();
+};
+
 const manifest = readJson(path.join(DATA_DIR, 'bundle.manifest.json'));
 const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(path.join(DATA_DIR, part.file))));
 const digest = crypto.createHash('sha256').update(compressed).digest('hex');
@@ -59,7 +72,7 @@ const rows = CODES.map(code => {
 
 const output = {
   schemaVersion: 'progress-batch-context-v1',
-  generatedAt: new Date().toISOString(),
+  generatedAt: stableGeneratedAt(manifest.sha256),
   sourceBundleSha256: manifest.sha256,
   automaticFactCompletion: false,
   codes: CODES,

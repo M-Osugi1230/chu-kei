@@ -15637,5 +15637,178 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:01:00.000Z",
     "reviewedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "review-5201-20260717-progress-connect",
+    "companyCode": "5201",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+    "sourcePages": [
+      "公式Webページ『財務目標とその進捗』画像",
+      "公式Webページ『財務目標とその進捗』画像",
+      "公式Webページ『財務目標とその進捗』画像"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画ページの『財務目標とその進捗』画像に2025年実績と2030年目標が同一表で並記され、営業利益、戦略事業営業利益、ROEを同一定義・同一単位で接続できるため。2026年予想は将来値であるため実績として使用しない。",
+    "createdAt": "2026-07-17T01:00:00.000Z",
+    "reviewedAt": "2026-07-17T01:10:00.000Z"
+  },
+  {
+    "id": "review-1928-20260717-progress-connect",
+    "companyCode": "1928",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/library/info/_268404/",
+    "sourcePages": [
+      "PDF p.3 / p.10",
+      "PDF p.3 / p.10",
+      "PDF p.3 / p.10",
+      "PDF p.3 / p.10"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式第7次中期経営計画資料に2025年度の確定実績と2028年度の収益目標が掲載され、売上高、営業利益、経常利益、親会社株主に帰属する当期純利益を同一定義・同一単位で接続できるため。ROE目標は『12％後半』で単一の厳密値ではないため接続しない。",
+    "createdAt": "2026-07-17T01:01:00.000Z",
+    "reviewedAt": "2026-07-17T01:11:00.000Z"
+  },
+  {
+    "id": "review-5201-20260714-production-primary",
+    "companyCode": "5201",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+    "sourcePages": [
+      "AGC E-IR資料一覧: 2024年2月8日に『新中期経営計画 AGC plus-2026』を公表。原本PDFはE-IR文書ID 176339。",
+      "公式中計ページ 図版 p.01-p.03: 財務目標と進捗、2026年売上高・営業利益見込み、両利きの経営を含む主要戦略。",
+      "公式中計ページ本文・図版 p.04-p.09: 事業別戦略、サステナビリティKPI、ROE向上、価値創造DX。",
+      "公式中計ページ本文・図版 p.10: 2024〜2026年のキャッシュイン9,200億円、投資配分、DOE3%程度の安定配当、戦略枠1,000億円。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:00:00.000Z",
+    "reviewedAt": "2026-07-14T09:00:00.000Z"
+  },
+  {
+    "id": "review-5201-20260714-production-double-check",
+    "companyCode": "5201",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+    "sourcePages": [
+      "AGC E-IR資料一覧: 2024年2月8日に『新中期経営計画 AGC plus-2026』を公表。原本PDFはE-IR文書ID 176339。",
+      "公式中計ページ 図版 p.01-p.03: 財務目標と進捗、2026年売上高・営業利益見込み、両利きの経営を含む主要戦略。",
+      "公式中計ページ本文・図版 p.04-p.09: 事業別戦略、サステナビリティKPI、ROE向上、価値創造DX。",
+      "公式中計ページ本文・図版 p.10: 2024〜2026年のキャッシュイン9,200億円、投資配分、DOE3%程度の安定配当、戦略枠1,000億円。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:00:00.000Z",
+    "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-1928-20260714-production-primary",
+    "companyCode": "1928",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/plan/",
+    "sourcePages": [
+      "公式中期経営計画ページ: 2026年3月5日に第7次中期経営計画を公表。",
+      "第7次中期経営計画説明会資料 p.11: 2026〜2028年度の売上高・営業利益・当期純利益・ROE目標。",
+      "同 p.53: 成長投資約4,400億円、財務健全性回復約1,800億円、株主還元約3,000億円のキャッシュアロケーション。",
+      "同 p.55: 平均配当性向40%以上、DPS145円下限、機動的な自己株式取得。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-14T08:01:00.000Z",
+    "reviewedAt": "2026-07-14T09:01:00.000Z"
+  },
+  {
+    "id": "review-1928-20260714-production-double-check",
+    "companyCode": "1928",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-review",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/plan/",
+    "sourcePages": [
+      "公式中期経営計画ページ: 2026年3月5日に第7次中期経営計画を公表。",
+      "第7次中期経営計画説明会資料 p.11: 2026〜2028年度の売上高・営業利益・当期純利益・ROE目標。",
+      "同 p.53: 成長投資約4,400億円、財務健全性回復約1,800億円、株主還元約3,000億円のキャッシュアロケーション。",
+      "同 p.55: 平均配当性向40%以上、DPS145円下限、機動的な自己株式取得。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-14T10:01:00.000Z",
+    "reviewedAt": "2026-07-14T11:01:00.000Z"
   }
 ]

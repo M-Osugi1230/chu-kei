@@ -12,6 +12,18 @@ const writeJson = (file, value) => {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
 };
+const stableGeneratedAt = sourceBundleSha256 => {
+  if (!fs.existsSync(OUTPUT)) return new Date().toISOString();
+  try {
+    const previous = readJson(OUTPUT);
+    if (previous.sourceBundleSha256 === sourceBundleSha256 && typeof previous.generatedAt === 'string') {
+      return previous.generatedAt;
+    }
+  } catch {
+    // Rebuild malformed or unreadable reports below.
+  }
+  return new Date().toISOString();
+};
 
 const manifest = readJson(path.join(DATA_DIR, 'bundle.manifest.json'));
 const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(path.join(DATA_DIR, part.file))));
@@ -61,7 +73,7 @@ const progressExistsButFlagMissingCodes = candidates
 
 const report = {
   schemaVersion: 'production-scale-candidates-v1',
-  generatedAt: new Date().toISOString(),
+  generatedAt: stableGeneratedAt(manifest.sha256),
   sourceBundleSha256: manifest.sha256,
   companyCount: (bundle.companies || []).length,
   progressCount: progressRows.length,

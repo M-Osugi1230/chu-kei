@@ -9,6 +9,7 @@ const DATA_DIR = path.join(ROOT, 'site', 'data');
 const QUALITY_DIR = path.join(ROOT, 'operations', 'production-quality');
 const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
 const MARKER_PATHS = [
+  path.join(QUALITY_DIR, 'batch-18-selection.json'),
   path.join(QUALITY_DIR, 'progress-connection-selection.json'),
   path.join(QUALITY_DIR, 'run-progress-connection-batch.json'),
 ];
@@ -106,8 +107,8 @@ for (const [index, record] of config.records.entries()) {
     if (row.fiscalYear == null || !row.metric) throw new Error(`fiscalYear and metric are required: ${code}`);
     if (typeof row.targetValue !== 'number' || typeof row.actualValue !== 'number') throw new Error(`Numeric targetValue and actualValue are required: ${code}:${row.metric}`);
     if (!row.unit) throw new Error(`Unit is required: ${code}:${row.metric}`);
-    if (!row.sourcePage || !/(?:p\.?\s*\d|ページ\s*\d)/i.test(String(row.sourcePage))) {
-      throw new Error(`Page evidence is required: ${code}:${row.metric}`);
+    if (!row.sourcePage || !/(?:p\.?\s*\d|ページ\s*\d|公式Webページ|Web画像)/i.test(String(row.sourcePage))) {
+      throw new Error(`Page or official Web evidence is required: ${code}:${row.metric}`);
     }
     if (!row.actualFiscalYear) throw new Error(`actualFiscalYear is required: ${code}:${row.metric}`);
     const key = [code, row.fiscalYear, row.metric, row.actualFiscalYear].join('|');

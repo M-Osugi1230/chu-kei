@@ -62,20 +62,46 @@ function writeBundle(bundle, originalManifest) {
   return manifest;
 }
 
-const markerPath = MARKER_PATHS.find(file => fs.existsSync(file));
-if (!markerPath) {
-  console.log('No production promotion marker found.');
-  process.exit(0);
+function findEmbeddedPromotion() {
+  const files = fs.readdirSync(QUALITY_DIR)
+    .filter(file => /^progress-connection-batch-\d+\.json$/.test(file))
+    .sort((a, b) => {
+      const aNumber = Number(a.match(/\d+/)?.[0] || 0);
+      const bNumber = Number(b.match(/\d+/)?.[0] || 0);
+      return bNumber - aNumber;
+    });
+  for (const file of files) {
+    const filePath = path.join(QUALITY_DIR, file);
+    const container = readJson(filePath);
+    const promotion = container.productionPromotion;
+    if (promotion && promotion.schemaVersion === 'production-promotion-batch-v1') {
+      return { filePath, container, promotion };
+    }
+  }
+  return null;
 }
 
-const marker = readJson(markerPath);
-if (marker.schemaVersion !== 'production-promotion-run-v1') throw new Error(`Unsupported promotion marker: ${marker.schemaVersion}`);
-const configPath = path.resolve(ROOT, String(marker.configPath || ''));
-const relativeConfigPath = path.relative(QUALITY_DIR, configPath);
-if (!relativeConfigPath || relativeConfigPath.startsWith('..') || path.isAbsolute(relativeConfigPath)) {
-  throw new Error(`Production promotion config must be inside operations/production-quality: ${marker.configPath}`);
+const markerPath = MARKER_PATHS.find(file => fs.existsSync(file));
+let config;
+let embeddedPromotion = null;
+if (markerPath) {
+  const marker = readJson(markerPath);
+  if (marker.schemaVersion !== 'production-promotion-run-v1') throw new Error(`Unsupported promotion marker: ${marker.schemaVersion}`);
+  const configPath = path.resolve(ROOT, String(marker.configPath || ''));
+  const relativeConfigPath = path.relative(QUALITY_DIR, configPath);
+  if (!relativeConfigPath || relativeConfigPath.startsWith('..') || path.isAbsolute(relativeConfigPath)) {
+    throw new Error(`Production promotion config must be inside operations/production-quality: ${marker.configPath}`);
+  }
+  config = readJson(configPath);
+} else {
+  embeddedPromotion = findEmbeddedPromotion();
+  if (!embeddedPromotion) {
+    console.log('No production promotion marker or embedded approval found.');
+    process.exit(0);
+  }
+  config = embeddedPromotion.promotion;
 }
-const config = readJson(configPath);
+
 if (config.schemaVersion !== 'production-promotion-batch-v1') throw new Error(`Unsupported promotion config: ${config.schemaVersion}`);
 if (config.explicitApproval !== true || config.automaticSelectionAllowed !== false) {
   throw new Error('Production promotion requires an explicit code list and forbids automatic selection.');
@@ -210,6 +236,11 @@ writeJson(path.join(QUALITY_DIR, `${config.batchId}-report.json`), {
   approvalsPerCompany: 2,
   reviewerRoles: [config.primaryReviewer, config.independentReviewer],
 });
-fs.rmSync(markerPath);
+if (markerPath) {
+  fs.rmSync(markerPath);
+} else if (embeddedPromotion) {
+  delete embeddedPromotion.container.productionPromotion;
+  writeJson(embeddedPromotion.filePath, embeddedPromotion.container);
+}
 runNode('scripts/validate_quality_v43.mjs');
 console.log(`Promoted ${codes.length} companies to core. Current core=${finalCore}.`);

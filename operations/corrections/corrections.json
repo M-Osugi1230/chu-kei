@@ -11219,5 +11219,210 @@
     "reviewDecisionId": "review-7735-20260714-production-double-check",
     "detectedAt": "2026-07-14T10:01:00.000Z",
     "correctedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "correction-5201-20260717-progress-connect",
+    "companyCode": "5201",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-12",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-17",
+      "progressRows": [
+        {
+          "code": "5201",
+          "fiscalYear": "FY2030",
+          "metric": "operatingProfit",
+          "targetValue": 3000,
+          "actualValue": 1275,
+          "unit": "億円",
+          "progressRate": 42.5,
+          "source": "同画像: 2030年営業利益目標3,000億円以上",
+          "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+          "sourcePage": "公式Webページ『財務目標とその進捗』画像",
+          "updatedAt": "2026-07-17",
+          "lastVerifiedDate": "2026-07-17",
+          "note": "公式Web上の同一進捗表で確定実績と長期目標の下限を接続。2026年予想1,500億円とは分離し、単純進捗率は達成確度を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "AGC公式中期経営計画ページ『財務目標とその進捗』画像: 2025年営業利益実績1,275億円"
+        },
+        {
+          "code": "5201",
+          "fiscalYear": "FY2030",
+          "metric": "strategicBusinessOperatingProfit",
+          "targetValue": 1900,
+          "actualValue": 587,
+          "unit": "億円",
+          "progressRate": 30.9,
+          "source": "同画像: 2030年戦略事業営業利益目標1,900億円以上",
+          "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+          "sourcePage": "公式Webページ『財務目標とその進捗』画像",
+          "updatedAt": "2026-07-17",
+          "lastVerifiedDate": "2026-07-17",
+          "note": "戦略事業に限定した会社開示指標を同一定義で接続し、連結営業利益とは区別する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "AGC公式中期経営計画ページ『財務目標とその進捗』画像: 2025年戦略事業営業利益実績587億円"
+        },
+        {
+          "code": "5201",
+          "fiscalYear": "FY2030",
+          "metric": "ROE",
+          "targetValue": 10,
+          "actualValue": 4.7,
+          "unit": "%",
+          "progressRate": 47,
+          "source": "同画像: 2030年ROE目標10%以上",
+          "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+          "sourcePage": "公式Webページ『財務目標とその進捗』画像",
+          "updatedAt": "2026-07-17",
+          "lastVerifiedDate": "2026-07-17",
+          "note": "目標下限10%へ接続。2026年予想5%以上（5.2%見込）とは分離する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "AGC公式中期経営計画ページ『財務目標とその進捗』画像: 2025年ROE実績4.7%"
+        }
+      ]
+    },
+    "reason": "公式中期経営計画ページの『財務目標とその進捗』画像に2025年実績と2030年目標が同一表で並記され、営業利益、戦略事業営業利益、ROEを同一定義・同一単位で接続できるため。2026年予想は将来値であるため実績として使用しない。",
+    "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+    "sourcePage": "公式Webページ『財務目標とその進捗』画像 / 公式Webページ『財務目標とその進捗』画像 / 公式Webページ『財務目標とその進捗』画像",
+    "status": "corrected",
+    "reviewDecisionId": "review-5201-20260717-progress-connect",
+    "detectedAt": "2026-07-17T01:00:00.000Z",
+    "correctedAt": "2026-07-17T01:20:00.000Z"
+  },
+  {
+    "id": "correction-1928-20260717-progress-connect",
+    "companyCode": "1928",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-12",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-17",
+      "progressRows": [
+        {
+          "code": "1928",
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 50260,
+          "actualValue": 41979,
+          "unit": "億円",
+          "progressRate": 83.5,
+          "source": "同 PDF p.10: 2028年度売上高目標50,260億円",
+          "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/library/info/_268404/",
+          "sourcePage": "PDF p.3 / p.10",
+          "updatedAt": "2026-07-17",
+          "lastVerifiedDate": "2026-07-17",
+          "note": "同一公式資料の確定実績と最終年度目標を接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第7次中期経営計画 PDF p.3: 2025年度売上高実績41,979億円"
+        },
+        {
+          "code": "1928",
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 4500,
+          "actualValue": 3414,
+          "unit": "億円",
+          "progressRate": 75.9,
+          "source": "同 PDF p.10: 2028年度営業利益目標4,500億円",
+          "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/library/info/_268404/",
+          "sourcePage": "PDF p.3 / p.10",
+          "updatedAt": "2026-07-17",
+          "lastVerifiedDate": "2026-07-17",
+          "note": "同一公式資料の確定実績と最終年度目標を接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第7次中期経営計画 PDF p.3: 2025年度営業利益実績3,414億円"
+        },
+        {
+          "code": "1928",
+          "fiscalYear": "FY2028",
+          "metric": "ordinaryProfit",
+          "targetValue": 4340,
+          "actualValue": 3278,
+          "unit": "億円",
+          "progressRate": 75.5,
+          "source": "同 PDF p.10: 2028年度経常利益目標4,340億円",
+          "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/library/info/_268404/",
+          "sourcePage": "PDF p.3 / p.10",
+          "updatedAt": "2026-07-17",
+          "lastVerifiedDate": "2026-07-17",
+          "note": "同一公式資料の確定実績と最終年度目標を接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第7次中期経営計画 PDF p.3: 2025年度経常利益実績3,278億円"
+        },
+        {
+          "code": "1928",
+          "fiscalYear": "FY2028",
+          "metric": "netProfit",
+          "targetValue": 3000,
+          "actualValue": 2320,
+          "unit": "億円",
+          "progressRate": 77.3,
+          "source": "同 PDF p.10: 2028年度親会社株主に帰属する当期純利益目標3,000億円",
+          "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/library/info/_268404/",
+          "sourcePage": "PDF p.3 / p.10",
+          "updatedAt": "2026-07-17",
+          "lastVerifiedDate": "2026-07-17",
+          "note": "親会社株主に帰属する当期純利益を同一定義で接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第7次中期経営計画 PDF p.3: 2025年度親会社株主に帰属する当期純利益実績2,320億円"
+        }
+      ]
+    },
+    "reason": "公式第7次中期経営計画資料に2025年度の確定実績と2028年度の収益目標が掲載され、売上高、営業利益、経常利益、親会社株主に帰属する当期純利益を同一定義・同一単位で接続できるため。ROE目標は『12％後半』で単一の厳密値ではないため接続しない。",
+    "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/library/info/_268404/",
+    "sourcePage": "PDF p.3 / p.10 / PDF p.3 / p.10 / PDF p.3 / p.10 / PDF p.3 / p.10",
+    "status": "corrected",
+    "reviewDecisionId": "review-1928-20260717-progress-connect",
+    "detectedAt": "2026-07-17T01:01:00.000Z",
+    "correctedAt": "2026-07-17T01:21:00.000Z"
+  },
+  {
+    "id": "correction-5201-20260714-production-promotion",
+    "companyCode": "5201",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+    "sourcePage": "AGC E-IR資料一覧: 2024年2月8日に『新中期経営計画 AGC plus-2026』を公表。原本PDFはE-IR文書ID 176339。 / 公式中計ページ 図版 p.01-p.03: 財務目標と進捗、2026年売上高・営業利益見込み、両利きの経営を含む主要戦略。 / 公式中計ページ本文・図版 p.04-p.09: 事業別戦略、サステナビリティKPI、ROE向上、価値創造DX。 / 公式中計ページ本文・図版 p.10: 2024〜2026年のキャッシュイン9,200億円、投資配分、DOE3%程度の安定配当、戦略枠1,000億円。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5201-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:00:00.000Z",
+    "correctedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "correction-1928-20260714-production-promotion",
+    "companyCode": "1928",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/plan/",
+    "sourcePage": "公式中期経営計画ページ: 2026年3月5日に第7次中期経営計画を公表。 / 第7次中期経営計画説明会資料 p.11: 2026〜2028年度の売上高・営業利益・当期純利益・ROE目標。 / 同 p.53: 成長投資約4,400億円、財務健全性回復約1,800億円、株主還元約3,000億円のキャッシュアロケーション。 / 同 p.55: 平均配当性向40%以上、DPS145円下限、機動的な自己株式取得。",
+    "status": "corrected",
+    "reviewDecisionId": "review-1928-20260714-production-double-check",
+    "detectedAt": "2026-07-14T10:01:00.000Z",
+    "correctedAt": "2026-07-14T11:01:00.000Z"
   }
 ]

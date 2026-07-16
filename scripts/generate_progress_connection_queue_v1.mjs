@@ -10,6 +10,18 @@ const OUTPUT_CSV = path.join(ROOT, 'operations', 'production-quality', 'progress
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 const csvCell = value => `"${String(value ?? '').replaceAll('"', '""')}"`;
+const stableGeneratedAt = sourceBundleSha256 => {
+  if (!fs.existsSync(OUTPUT_JSON)) return new Date().toISOString();
+  try {
+    const previous = readJson(OUTPUT_JSON);
+    if (previous.sourceBundleSha256 === sourceBundleSha256 && typeof previous.generatedAt === 'string') {
+      return previous.generatedAt;
+    }
+  } catch {
+    // Rebuild malformed or unreadable reports below.
+  }
+  return new Date().toISOString();
+};
 
 const manifest = readJson(path.join(DATA_DIR, 'bundle.manifest.json'));
 const compressed = Buffer.concat(manifest.parts.map(part => fs.readFileSync(path.join(DATA_DIR, part.file))));
@@ -49,7 +61,7 @@ const rows = (bundle.companies || [])
 
 const report = {
   schemaVersion: 'progress-connection-queue-v1',
-  generatedAt: new Date().toISOString(),
+  generatedAt: stableGeneratedAt(manifest.sha256),
   sourceBundleSha256: manifest.sha256,
   queueCount: rows.length,
   automaticFactCompletion: false,

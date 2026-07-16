@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "production-promotion-batch-300",
+  "automaticApprovalAllowed": false,
+  "explicitProductionApproval": true,
+  "reviews": [
+    {
+      "id": "review-3105-20260714-production-primary",
+      "companyCode": "3105",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.nisshinbo.co.jp/nish/ir/management/pdf/mid_managementplan2026.pdf",
+      "sourcePages": [
+        "中期経営計画2026 PDF p.5・p.7: 計画期間、重点施策、目指す事業ポートフォリオ、ROIC・ROE目標。",
+        "同 PDF p.19-p.20: キャッシュフローアロケーション、戦略投資、財務規律、株主還元方針。",
+        "同 PDF p.27: 2026年度の売上高、営業利益、営業利益率、ROE、ROIC、D/Eレシオ、配当性向目標。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-14T08:00:00.000Z",
+      "reviewedAt": "2026-07-14T09:00:00.000Z"
+    },
+    {
+      "id": "review-3105-20260714-production-double-check",
+      "companyCode": "3105",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-review",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.nisshinbo.co.jp/nish/ir/management/pdf/mid_managementplan2026.pdf",
+      "sourcePages": [
+        "中期経営計画2026 PDF p.5・p.7: 計画期間、重点施策、目指す事業ポートフォリオ、ROIC・ROE目標。",
+        "同 PDF p.19-p.20: キャッシュフローアロケーション、戦略投資、財務規律、株主還元方針。",
+        "同 PDF p.27: 2026年度の売上高、営業利益、営業利益率、ROE、ROIC、D/Eレシオ、配当性向目標。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-14T10:00:00.000Z",
+      "reviewedAt": "2026-07-14T11:00:00.000Z"
+    },
+    {
+      "id": "review-2587-20260714-production-primary",
+      "companyCode": "2587",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.suntory.co.jp/softdrink/ir/library_ebook/upload/SBF%20Overview2026_j.pdf",
+      "sourcePages": [
+        "Suntory Beverage & Food Overview 2026 PDF p.13-p.14: 中期経営計画2024-2026、売上・営業利益成長率、営業利益率10%超、FCF1,400億円強。",
+        "同 PDF p.14: 成長投資3,000〜6,000億円、M&A・戦略的設備投資・グローバル展開、目標配当性向40%以上。",
+        "同 PDF p.12-p.13: コアブランド強化、日本の構造改革、海外成長等の重点戦略。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-14T08:01:00.000Z",
+      "reviewedAt": "2026-07-14T09:01:00.000Z"
+    },
+    {
+      "id": "review-2587-20260714-production-double-check",
+      "companyCode": "2587",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-review",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.suntory.co.jp/softdrink/ir/library_ebook/upload/SBF%20Overview2026_j.pdf",
+      "sourcePages": [
+        "Suntory Beverage & Food Overview 2026 PDF p.13-p.14: 中期経営計画2024-2026、売上・営業利益成長率、営業利益率10%超、FCF1,400億円強。",
+        "同 PDF p.14: 成長投資3,000〜6,000億円、M&A・戦略的設備投資・グローバル展開、目標配当性向40%以上。",
+        "同 PDF p.12-p.13: コアブランド強化、日本の構造改革、海外成長等の重点戦略。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-14T10:01:00.000Z",
+      "reviewedAt": "2026-07-14T11:01:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-3105-20260714-production-promotion",
+      "companyCode": "3105",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://www.nisshinbo.co.jp/nish/ir/management/pdf/mid_managementplan2026.pdf",
+      "sourcePage": "中期経営計画2026 PDF p.5・p.7: 計画期間、重点施策、目指す事業ポートフォリオ、ROIC・ROE目標。 / 同 PDF p.19-p.20: キャッシュフローアロケーション、戦略投資、財務規律、株主還元方針。 / 同 PDF p.27: 2026年度の売上高、営業利益、営業利益率、ROE、ROIC、D/Eレシオ、配当性向目標。",
+      "status": "corrected",
+      "reviewDecisionId": "review-3105-20260714-production-double-check",
+      "detectedAt": "2026-07-14T10:00:00.000Z",
+      "correctedAt": "2026-07-14T11:00:00.000Z"
+    },
+    {
+      "id": "correction-2587-20260714-production-promotion",
+      "companyCode": "2587",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://www.suntory.co.jp/softdrink/ir/library_ebook/upload/SBF%20Overview2026_j.pdf",
+      "sourcePage": "Suntory Beverage & Food Overview 2026 PDF p.13-p.14: 中期経営計画2024-2026、売上・営業利益成長率、営業利益率10%超、FCF1,400億円強。 / 同 PDF p.14: 成長投資3,000〜6,000億円、M&A・戦略的設備投資・グローバル展開、目標配当性向40%以上。 / 同 PDF p.12-p.13: コアブランド強化、日本の構造改革、海外成長等の重点戦略。",
+      "status": "corrected",
+      "reviewDecisionId": "review-2587-20260714-production-double-check",
+      "detectedAt": "2026-07-14T10:01:00.000Z",
+      "correctedAt": "2026-07-14T11:01:00.000Z"
+    }
+  ]
+}

@@ -8,6 +8,8 @@ const companyCoverageMarkers = [
   path.join(ROOT, 'operations', 'coverage-growth', 'run-company-coverage.json'),
   path.join(ROOT, 'operations', 'coverage-growth', 'run-1000.json'),
 ];
+const productionQualityDir = path.join(ROOT, 'operations', 'production-quality');
+const progressRunMarker = path.join(productionQualityDir, 'progress-connection-selection.json');
 const jpxOutput = path.join(ROOT, 'operations', 'research', 'jpx-listed-companies-latest.json');
 
 const runNode = (script, env = {}) => execFileSync(process.execPath, [script], {
@@ -21,8 +23,22 @@ const runCommand = (command, args) => execFileSync(command, args, {
   stdio: 'inherit',
 });
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+const writeJson = (file, value) => fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
 const firstExisting = paths => paths.find(file => fs.existsSync(file)) || null;
 const isApplyWorkflow = process.env.GITHUB_WORKFLOW === 'Apply Structured Source of Truth';
+
+function findEmbeddedProgressRequest() {
+  if (!fs.existsSync(productionQualityDir)) return null;
+  const files = fs.readdirSync(productionQualityDir)
+    .filter(file => /^progress-connection-batch-\d+\.json$/.test(file))
+    .sort((a, b) => Number(b.match(/\d+/)?.[0] || 0) - Number(a.match(/\d+/)?.[0] || 0));
+  for (const file of files) {
+    const filePath = path.join(productionQualityDir, file);
+    const config = readJson(filePath);
+    if (config.runRequested === true) return { filePath, config };
+  }
+  return null;
+}
 
 const companyCoverageMarker = firstExisting(companyCoverageMarkers);
 if (isApplyWorkflow && companyCoverageMarker) {
@@ -55,7 +71,21 @@ if (isApplyWorkflow && fs.existsSync(sourceNormalizationMarker)) {
 runNode('scripts/apply_structured_expansion_ci_v1.mjs');
 if (isApplyWorkflow) {
   runNode('scripts/apply_core_evidence_repair_v1.mjs');
+  const embeddedProgress = findEmbeddedProgressRequest();
+  if (embeddedProgress) {
+    if (fs.existsSync(progressRunMarker)) throw new Error('A legacy progress marker already exists; refusing to overwrite it.');
+    writeJson(progressRunMarker, {
+      schemaVersion: 'progress-connection-run-v1',
+      configPath: path.relative(ROOT, embeddedProgress.filePath),
+    });
+  }
   runNode('scripts/apply_progress_connection_batch_v1.mjs');
+  if (embeddedProgress) {
+    const consumedConfig = readJson(embeddedProgress.filePath);
+    delete consumedConfig.runRequested;
+    writeJson(embeddedProgress.filePath, consumedConfig);
+    console.log(`Embedded progress request consumed: ${path.relative(ROOT, embeddedProgress.filePath)}`);
+  }
 }
 runNode('scripts/sync_production_approval_metadata_v1.mjs');
 runNode('scripts/audit_production_readiness_v1.mjs');

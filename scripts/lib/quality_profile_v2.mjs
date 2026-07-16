@@ -1,4 +1,6 @@
-export const QUALITY_PROFILE_VERSION = '2.2';
+import { countPrimaryEvidenceReferences } from './evidence_reference_v1.mjs';
+
+export const QUALITY_PROFILE_VERSION = '2.3';
 
 export const QUALITY_CHECK_KEYS = [
   'officialSource',
@@ -25,7 +27,7 @@ export const QUALITY_WEIGHTS = {
 export const QUALITY_CHECK_LABELS = {
   officialSource: '公式資料確認済み',
   publicationDate: '資料公表日確認済み',
-  pageEvidence: 'ページ証跡あり',
+  pageEvidence: '一次証跡あり',
   structuredAnalysis: '主要論点構造化済み',
   metricExtraction: '数値・方針抽出済み',
   progressConnected: '進捗実績接続あり',
@@ -36,7 +38,7 @@ export const QUALITY_CHECK_LABELS = {
 const EXTRACTION_STAGES = new Set(['core', 'detailed_extracted']);
 
 export function hasPageEvidence(company) {
-  return (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
+  return countPrimaryEvidenceReferences(company.evidenceRefs) >= 1;
 }
 
 export function hasStructuredAnalysis(company) {

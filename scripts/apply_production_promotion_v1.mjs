@@ -64,11 +64,11 @@ function writeBundle(bundle, originalManifest) {
 
 function findEmbeddedPromotion() {
   const files = fs.readdirSync(QUALITY_DIR)
-    .filter(file => /^progress-connection-batch-\d+\.json$/.test(file))
+    .filter(file => /^(?:progress-connection|evidence-repair)-batch-\d+\.json$/.test(file))
     .sort((a, b) => {
       const aNumber = Number(a.match(/\d+/)?.[0] || 0);
       const bNumber = Number(b.match(/\d+/)?.[0] || 0);
-      return bNumber - aNumber;
+      return bNumber - aNumber || b.localeCompare(a);
     });
   for (const file of files) {
     const filePath = path.join(QUALITY_DIR, file);
@@ -112,6 +112,9 @@ if (new Set(codes).size !== codes.length) throw new Error('Production promotion 
 if (!config.primaryReviewer || !config.independentReviewer || config.primaryReviewer === config.independentReviewer) {
   throw new Error('Two distinct production reviewers are required.');
 }
+const approvalDate = config.approvalDate || '2026-07-14';
+if (!/^\d{4}-\d{2}-\d{2}$/.test(approvalDate)) throw new Error(`Invalid approvalDate: ${approvalDate}`);
+const compactApprovalDate = approvalDate.replaceAll('-', '');
 
 const readiness = readJson(READINESS_PATH);
 const allowed = new Set(readiness.queues?.approvalRequiredCodes || []);
@@ -139,8 +142,8 @@ const corrections = [];
 for (const [index, code] of codes.entries()) {
   const company = companyByCode.get(code);
   const minute = String(index % 60).padStart(2, '0');
-  const primaryId = `review-${code}-20260714-production-primary`;
-  const doubleId = `review-${code}-20260714-production-double-check`;
+  const primaryId = `review-${code}-${compactApprovalDate}-production-primary`;
+  const doubleId = `review-${code}-${compactApprovalDate}-production-double-check`;
   const sourcePages = company.evidenceRefs || [];
   reviews.push({
     id: primaryId,
@@ -155,8 +158,8 @@ for (const [index, code] of codes.entries()) {
     sourcePages,
     note: '既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。',
     decisionReason: '本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。',
-    createdAt: `2026-07-14T08:${minute}:00.000Z`,
-    reviewedAt: `2026-07-14T09:${minute}:00.000Z`,
+    createdAt: `${approvalDate}T08:${minute}:00.000Z`,
+    reviewedAt: `${approvalDate}T09:${minute}:00.000Z`,
   });
   reviews.push({
     id: doubleId,
@@ -171,11 +174,11 @@ for (const [index, code] of codes.entries()) {
     sourcePages,
     note: '一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。',
     decisionReason: '独立した再検証で本番品質要件への適合を確認したため。',
-    createdAt: `2026-07-14T10:${minute}:00.000Z`,
-    reviewedAt: `2026-07-14T11:${minute}:00.000Z`,
+    createdAt: `${approvalDate}T10:${minute}:00.000Z`,
+    reviewedAt: `${approvalDate}T11:${minute}:00.000Z`,
   });
   corrections.push({
-    id: `correction-${code}-20260714-production-promotion`,
+    id: `correction-${code}-${compactApprovalDate}-production-promotion`,
     companyCode: code,
     fieldPath: 'stage,tier,warnings',
     before: { stage: company.stage, tier: company.tier },
@@ -185,8 +188,8 @@ for (const [index, code] of codes.entries()) {
     sourcePage: sourcePages.join(' / '),
     status: 'corrected',
     reviewDecisionId: doubleId,
-    detectedAt: `2026-07-14T10:${minute}:00.000Z`,
-    correctedAt: `2026-07-14T11:${minute}:00.000Z`,
+    detectedAt: `${approvalDate}T10:${minute}:00.000Z`,
+    correctedAt: `${approvalDate}T11:${minute}:00.000Z`,
   });
   company.stage = 'core';
   company.tier = '本番品質';

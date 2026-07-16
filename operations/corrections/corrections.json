@@ -10416,5 +10416,79 @@
     "reviewDecisionId": "review-2269-20260714-production-double-check",
     "detectedAt": "2026-07-14T10:00:00.000Z",
     "correctedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "correction-5802-20260716-progress-connect",
+    "companyCode": "5802",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-13",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-16",
+      "progressRows": [
+        {
+          "code": "5802",
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 60000,
+          "actualValue": 51102,
+          "unit": "億円",
+          "progressRate": 85.2,
+          "source": "同 PDF p.6: 2028年度売上高目標6兆円",
+          "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+          "sourcePage": "PDF p.4 / p.6",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "目標6兆円を60,000億円へ単位換算して接続。進捗率は数値比であり達成確度を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.4: 2025年度売上高実績51,102億円"
+        },
+        {
+          "code": "5802",
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 6000,
+          "actualValue": 4182,
+          "unit": "億円",
+          "progressRate": 69.7,
+          "source": "同 PDF p.6: 2028年度営業利益目標6,000億円",
+          "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+          "sourcePage": "PDF p.4 / p.6",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "同一公式計画内の確定実績と2028年度目標を接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.4: 2025年度営業利益実績4,182億円"
+        },
+        {
+          "code": "5802",
+          "fiscalYear": "FY2028",
+          "metric": "ROIC",
+          "targetValue": 15,
+          "actualValue": 14.7,
+          "unit": "%",
+          "progressRate": 98,
+          "source": "同 PDF p.6: 2028年度税引前ROIC目標15%以上",
+          "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+          "sourcePage": "PDF p.4 / p.6",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "会社定義の税引前ROICを同一定義で下限目標15%へ接続。一般的な税引後ROICとは区別する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.4: 2025年度税引前ROIC実績14.7%"
+        }
+      ]
+    },
+    "reason": "公式『中期経営計画2028』に2025年度実績と2028年度目標が掲載され、連結売上高、営業利益、税引前ROICを同一定義・同一単位で接続できるため。売上高目標6兆円は60,000億円へ単位換算し、ROEは同資料内に2025年度実績がないため接続しない。",
+    "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+    "sourcePage": "PDF p.4 / p.6 / PDF p.4 / p.6 / PDF p.4 / p.6",
+    "status": "corrected",
+    "reviewDecisionId": "review-5802-20260716-progress-connect",
+    "detectedAt": "2026-07-16T01:00:00.000Z",
+    "correctedAt": "2026-07-16T01:20:00.000Z"
   }
 ]

@@ -1,9 +1,9 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-16T07:06:36.529Z",
-  "sourceBundleSha256": "dc3d50179b8091a6ce83639556a66568f171095b404ec6841488274fb8c13a68",
+  "generatedAt": "2026-07-16T07:12:22.210Z",
+  "sourceBundleSha256": "877e082cd8a22e9b4aed9e2f6294e8e0fa08b73f94964e67b85a9692ab206cab",
   "companyCount": 1200,
-  "progressCount": 235,
+  "progressCount": 238,
   "detailedExtractedCount": 71,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
@@ -11,17 +11,17 @@
   ],
   "progressIdentifierCoverage": {
     "companyCode": 0,
-    "code": 235,
+    "code": 238,
     "ticker": 0,
     "securityCode": 0,
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 54,
-    "detailedWithoutProgressFlag": 17,
-    "detailedWithMatchedProgressRows": 5,
+    "detailedWithProgressFlag": 55,
+    "detailedWithoutProgressFlag": 16,
+    "detailedWithMatchedProgressRows": 6,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 17
+    "pageEvidenceAndPublicationReadyButProgressMissing": 16
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
@@ -39,7 +39,6 @@
       "5332",
       "5711",
       "5714",
-      "5802",
       "7733",
       "7735",
       "9005"
@@ -993,14 +992,49 @@
     {
       "code": "5802",
       "name": "住友電気工業",
-      "lastVerifiedDate": "2026-07-13",
+      "lastVerifiedDate": "2026-07-16",
       "planPublishedDate": "2026-05-13",
       "evidenceRefCount": 4,
       "pageEvidenceRefCount": 4,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
+      "hasProgressFlag": true,
+      "progressFlagValue": true,
+      "matchedProgressRows": 3,
+      "matchedProgressSample": [
+        {
+          "code": "5802",
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 60000,
+          "actualValue": 51102,
+          "unit": "億円",
+          "progressRate": 85.2,
+          "source": "同 PDF p.6: 2028年度売上高目標6兆円",
+          "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+          "sourcePage": "PDF p.4 / p.6",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "目標6兆円を60,000億円へ単位換算して接続。進捗率は数値比であり達成確度を示さない。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.4: 2025年度売上高実績51,102億円"
+        },
+        {
+          "code": "5802",
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 6000,
+          "actualValue": 4182,
+          "unit": "億円",
+          "progressRate": 69.7,
+          "source": "同 PDF p.6: 2028年度営業利益目標6,000億円",
+          "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+          "sourcePage": "PDF p.4 / p.6",
+          "updatedAt": "2026-07-16",
+          "lastVerifiedDate": "2026-07-16",
+          "note": "同一公式計画内の確定実績と2028年度目標を接続。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.4: 2025年度営業利益実績4,182億円"
+        }
+      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",

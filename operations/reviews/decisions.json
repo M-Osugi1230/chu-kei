@@ -14954,5 +14954,33 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:00:00.000Z",
     "reviewedAt": "2026-07-14T11:00:00.000Z"
+  },
+  {
+    "id": "review-5802-20260716-progress-connect",
+    "companyCode": "5802",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://sumitomoelectric.com/jp/sites/japan/files/2026-05/download_documents/28m.pdf",
+    "sourcePages": [
+      "PDF p.4 / p.6",
+      "PDF p.4 / p.6",
+      "PDF p.4 / p.6"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式『中期経営計画2028』に2025年度実績と2028年度目標が掲載され、連結売上高、営業利益、税引前ROICを同一定義・同一単位で接続できるため。売上高目標6兆円は60,000億円へ単位換算し、ROEは同資料内に2025年度実績がないため接続しない。",
+    "createdAt": "2026-07-16T01:00:00.000Z",
+    "reviewedAt": "2026-07-16T01:10:00.000Z"
   }
 ]

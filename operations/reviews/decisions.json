@@ -15637,5 +15637,62 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-14T10:01:00.000Z",
     "reviewedAt": "2026-07-14T11:01:00.000Z"
+  },
+  {
+    "id": "review-5201-20260717-progress-connect",
+    "companyCode": "5201",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
+    "sourcePages": [
+      "公式Webページ『財務目標とその進捗』画像",
+      "公式Webページ『財務目標とその進捗』画像",
+      "公式Webページ『財務目標とその進捗』画像"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画ページの『財務目標とその進捗』画像に2025年実績と2030年目標が同一表で並記され、営業利益、戦略事業営業利益、ROEを同一定義・同一単位で接続できるため。2026年予想は将来値であるため実績として使用しない。",
+    "createdAt": "2026-07-17T01:00:00.000Z",
+    "reviewedAt": "2026-07-17T01:10:00.000Z"
+  },
+  {
+    "id": "review-1928-20260717-progress-connect",
+    "companyCode": "1928",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/library/info/_268404/",
+    "sourcePages": [
+      "PDF p.3 / p.10",
+      "PDF p.3 / p.10",
+      "PDF p.3 / p.10",
+      "PDF p.3 / p.10"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式第7次中期経営計画資料に2025年度の確定実績と2028年度の収益目標が掲載され、売上高、営業利益、経常利益、親会社株主に帰属する当期純利益を同一定義・同一単位で接続できるため。ROE目標は『12％後半』で単一の厳密値ではないため接続しない。",
+    "createdAt": "2026-07-17T01:01:00.000Z",
+    "reviewedAt": "2026-07-17T01:11:00.000Z"
   }
 ]

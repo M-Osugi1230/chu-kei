@@ -1,6 +1,7 @@
 const METRIC_LABELS = {
   revenue: '売上高',
   operatingProfit: '営業利益',
+  strategicBusinessOperatingProfit: '戦略事業営業利益',
   ordinaryProfit: '経常利益',
   netProfit: '当期利益',
   margin: '営業利益率',

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "progress-research-audit-v1",
+  "batchId": "progress-connection-batch-20",
+  "verifiedDate": "2026-07-17",
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "companies": [
+    {
+      "code": "9005",
+      "name": "東急",
+      "officialSource": "https://data.swcms.net/file/tokyu-ir/dam/jcr%3A9f5ed0fe-d179-4b42-8ce3-5f4f725527b8/140120260507517559.pdf",
+      "evidence": [
+        "PDF p.16: 2025年度実績と2027年度目標のEPS、ROE、ROA、東急EBITDA、営業利益、親会社株主帰属純利益",
+        "PDF p.17: 営業収益、営業利益、事業利益、経常利益、純利益、東急EBITDA、EBITDA、ROE、ROA"
+      ],
+      "connectedMetrics": 10,
+      "excluded": [
+        "新リース会計適用後の参考ROAは主指標と分離",
+        "有利子負債／東急EBITDA等は低いほど良い上限制約のため単純進捗率から除外"
+      ]
+    },
+    {
+      "code": "4183",
+      "name": "三井化学",
+      "officialSource": "https://jp.mitsuichemicals.com/content/dam/mitsuichemicals/sites/mci/documents/release/2026/event_260527.pdf",
+      "evidence": [
+        "PDF p.30: FY25実績、FY28目標、FY30目標のコア営業利益、親会社所有者帰属当期利益、ROE、会社定義ROIC、NET D/E"
+      ],
+      "connectedMetrics": 4,
+      "excluded": [
+        "FY30長期目標は今回の中期進捗表示から除外",
+        "NET D/Eは低いほど良い上限制約のため単純進捗率から除外"
+      ]
+    },
+    {
+      "code": "2002",
+      "name": "日清製粉グループ本社",
+      "officialSources": [
+        "https://www.nisshin.com/company/management_plan/",
+        "https://www.nisshin.com/ir/finance/highlight/"
+      ],
+      "evidence": [
+        "公式中期経営計画ページ: 上方修正後の最終年度売上高9,500億円、営業利益570億円",
+        "公式業績ハイライト: 2026年3月期売上高8,650億円、営業利益467億円"
+      ],
+      "connectedMetrics": 2,
+      "excluded": [
+        "2027年3月期会社予想は中期経営計画の最終目標と分離"
+      ]
+    }
+  ],
+  "result": {
+    "companies": 3,
+    "progressRowsAdded": 16,
+    "resultingProgressRows": 291,
+    "productionCompanies": 165,
+    "fiveStarCompanies": 151,
+    "remainingGapTo1000": 835,
+    "approvalsPerCompany": 2
+  }
+}

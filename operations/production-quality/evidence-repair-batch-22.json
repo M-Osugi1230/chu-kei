@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "evidence-repair-batch-22",
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "allowedStages": [
+    "detailed_extracted"
+  ],
+  "expectedCoreCount": 168,
+  "expectedDetailedExtractedCount": 54,
+  "expectedFiveStarAfterApproval": 157,
+  "records": [
+    {
+      "code": "2802",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.ajinomoto.co.jp/company/jp/sustainability/ir/",
+      "document": "味の素グループ ASVレポート2025／2030ロードマップ進捗",
+      "planPublishedDate": "2025-08-29",
+      "verifiedDate": "2026-07-17",
+      "reason": "味の素公式のASVレポート2025で、2030年ありたい姿へのロードマップ、企業価値向上の財務指標、2024年度の事業実績、財務資本戦略をページ単位で確認でき、既存の構造化分析と進捗フラグを公式一次資料の複数証跡で補強できるため。",
+      "evidenceRefs": [
+        "ASVレポート2025 分割版 PDF p.008: 企業価値向上をキャッシュ・フロー、EBITDAマージン、ROIC、成長領域、資本コストの関係で示す経営フレーム。",
+        "同 PDF p.013: FY2023・FY2025・FY2030のロードマップと、2030年ASV指標の前倒し達成を目指す方針。",
+        "ASVレポート2025 事業現在地 PDF p.028: 2024年度売上高15,305億円、事業利益1,593億円と事業別実績・ROIC。",
+        "ASVレポート2025 財務資本戦略 PDF p.072: グローバル財務戦略、資本コスト低減、営業CF・EBITDAマージン・EPS成長の考え方。"
+      ]
+    },
+    {
+      "code": "6702",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://global.fujitsu/-/media/Project/Fujitsu/Fujitsu-HQ/ir/documents/plan/FY2026/ManagementVision2035-ja.pdf",
+      "document": "富士通 中長期経営ビジョン2035",
+      "planPublishedDate": "2026-05-28",
+      "verifiedDate": "2026-07-17",
+      "reason": "富士通公式の中長期経営ビジョン2035で、サービスソリューションの成長、2025年度の財務実績と2035年度目標、キャピタルアロケーション、EPS・ROEの財務KPIをページ単位で確認できるため。",
+      "evidenceRefs": [
+        "中長期経営ビジョン2035 PDF p.37: サービスソリューションの売上成長CAGR6～8%、Uvance・モダナイゼーションの成長と構成比目標。",
+        "同 PDF p.40: 2025年度売上収益3兆5,029億円、調整後営業利益率11.2%、コアFCF2,899億円と2035年度の成長目標。",
+        "同 PDF p.43: 成長投資と株主還元を両立するキャピタルアロケーションの全体方針。",
+        "同 PDF p.46: 2035年度にEPS CAGR15%超、調整後ROE20%超を目指す財務KPI。"
+      ]
+    },
+    {
+      "code": "6902",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.denso.com/jp/ja/-/media/secure-investors/mid-term-management-plan2030/denso_dialog_day_2026_presentation______ja.pdf",
+      "document": "DENSO DIALOG DAY 2026／2030年中期経営計画 CORE 2030",
+      "planPublishedDate": "2026-03-31",
+      "verifiedDate": "2026-07-17",
+      "reason": "デンソー公式のDENSO DIALOG DAY 2026資料で、2025年中期方針の実績、2030年度の売上・営業利益率・ROE、投資・株主還元、財務・非財務KPIをページ単位で確認できるため。",
+      "evidenceRefs": [
+        "DENSO DIALOG DAY 2026 PDF p.5: 2025年度売上高7.4兆円、営業利益率7.2%、ROE8.1%と従来目標の振り返り。",
+        "同 PDF p.19: 2030年度売上高8兆円以上、営業利益率10%以上、ROE11%以上と事業投入・株主還元方針。",
+        "同 PDF p.52: 2030年度の売上・利益率・ROE、総投資・還元、自己資本比率、DOE、重点事業売上の目標一覧。",
+        "同 PDF p.63: DOE4%以上、安定的な増配、機動的な自己株式取得、EPS成長に関する株主還元方針。"
+      ]
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-16T22:18:04.553Z",
-  "sourceBundleSha256": "a1eebc1e0e12c90b485a64b406496b0e9ee43eb57b6556420b0f06bbb635b07d",
+  "generatedAt": "2026-07-16T22:29:29.047Z",
+  "sourceBundleSha256": "dd1af44fe927b54f7501db12b790ed8f2cf3e204380c778bafd66813f4e9f1c3",
   "companyCount": 1200,
   "progressCount": 291,
-  "detailedExtractedCount": 54,
+  "detailedExtractedCount": 51,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -17,9 +17,9 @@
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 51,
+    "detailedWithProgressFlag": 48,
     "detailedWithoutProgressFlag": 3,
-    "detailedWithMatchedProgressRows": 4,
+    "detailedWithMatchedProgressRows": 1,
     "progressExistsButFlagMissing": 0,
     "pageEvidenceAndPublicationReadyButProgressMissing": 3
   },
@@ -157,54 +157,6 @@
       "progressFlagValue": true,
       "matchedProgressRows": 0,
       "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "2802",
-      "name": "味の素",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2023-02-28",
-      "evidenceRefCount": 3,
-      "pageEvidenceRefCount": 0,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 5,
-      "matchedProgressSample": [
-        {
-          "code": "2802",
-          "fiscalYear": "FY2030",
-          "metric": "ebitdaMargin",
-          "targetValue": 19,
-          "actualValue": null,
-          "unit": "%",
-          "progressRate": null,
-          "source": "中期ASV経営2030ロードマップ: 2030年度EBITDAマージン19%",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 "
-        },
-        {
-          "code": "2802",
-          "fiscalYear": "FY2030",
-          "metric": "organicGrowthCagr",
-          "targetValue": 5,
-          "actualValue": null,
-          "unit": "%以上",
-          "progressRate": null,
-          "source": "中期ASV経営2030ロードマップ: FY2026-FY2030オーガニック成長率5%以上",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 期間CAGRの下限型目標。"
-        }
-      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",
@@ -770,54 +722,6 @@
       ]
     },
     {
-      "code": "6702",
-      "name": "富士通",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2026-05-28",
-      "evidenceRefCount": 3,
-      "pageEvidenceRefCount": 0,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 4,
-      "matchedProgressSample": [
-        {
-          "code": "6702",
-          "fiscalYear": "FY2035",
-          "metric": "adjustedOperatingMargin",
-          "targetValue": 30,
-          "actualValue": null,
-          "unit": "%",
-          "progressRate": null,
-          "source": "中長期経営ビジョン2035: 調整後営業利益率25～30%",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 レンジ上限値を登録。下限25%。"
-        },
-        {
-          "code": "6702",
-          "fiscalYear": "FY2035",
-          "metric": "adjustedRoe",
-          "targetValue": 20,
-          "actualValue": null,
-          "unit": "%超",
-          "progressRate": null,
-          "source": "中長期経営ビジョン2035: 調整後ROE20%超",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 下限型目標。"
-        }
-      ],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
       "code": "6861",
       "name": "キーエンス",
       "lastVerifiedDate": "2026-07-10",
@@ -828,54 +732,6 @@
       "progressFlagValue": true,
       "matchedProgressRows": 0,
       "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "6902",
-      "name": "デンソー",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2026-03-31",
-      "evidenceRefCount": 3,
-      "pageEvidenceRefCount": 0,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 4,
-      "matchedProgressSample": [
-        {
-          "code": "6902",
-          "fiscalYear": "FY2030",
-          "metric": "doe",
-          "targetValue": 4,
-          "actualValue": null,
-          "unit": "%以上",
-          "progressRate": null,
-          "source": "CORE 2030: DOE4%以上を目指す",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 下限型・目標方針。"
-        },
-        {
-          "code": "6902",
-          "fiscalYear": "FY2030",
-          "metric": "operatingMargin",
-          "targetValue": 10,
-          "actualValue": null,
-          "unit": "%以上",
-          "progressRate": null,
-          "source": "CORE 2030: 2030年度営業利益率10%以上",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 下限型目標。"
-        }
-      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",

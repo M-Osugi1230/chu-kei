@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-16T16:16:00.962Z",
-  "sourceBundleSha256": "458c7a62b9c66a9f8a5fdafa4e560d476888328b68d0ed8311a229dcf1967318",
+  "generatedAt": "2026-07-16T16:16:58.703Z",
+  "sourceBundleSha256": "1d0918c835ab449a40fb9245422de377b9cbc556cd943e82d07edf76423a2d43",
   "companyCount": 1200,
   "progressCount": 269,
-  "detailedExtractedCount": 63,
+  "detailedExtractedCount": 61,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -17,9 +17,9 @@
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 56,
+    "detailedWithProgressFlag": 54,
     "detailedWithoutProgressFlag": 7,
-    "detailedWithMatchedProgressRows": 7,
+    "detailedWithMatchedProgressRows": 5,
     "progressExistsButFlagMissing": 0,
     "pageEvidenceAndPublicationReadyButProgressMissing": 7
   },
@@ -115,64 +115,6 @@
       "progressFlagValue": true,
       "matchedProgressRows": 0,
       "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "1928",
-      "name": "積水ハウス",
-      "lastVerifiedDate": "2026-07-17",
-      "planPublishedDate": "2026-03-05",
-      "evidenceRefCount": 4,
-      "pageEvidenceRefCount": 3,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 4,
-      "matchedProgressSample": [
-        {
-          "code": "1928",
-          "fiscalYear": "FY2028",
-          "metric": "revenue",
-          "targetValue": 50260,
-          "actualValue": 41979,
-          "unit": "億円",
-          "progressRate": 83.5,
-          "source": "同 PDF p.10: 2028年度売上高目標50,260億円",
-          "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/library/info/_268404/",
-          "sourcePage": "PDF p.3 / p.10",
-          "updatedAt": "2026-07-17",
-          "lastVerifiedDate": "2026-07-17",
-          "note": "同一公式資料の確定実績と最終年度目標を接続。",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "第7次中期経営計画 PDF p.3: 2025年度売上高実績41,979億円"
-        },
-        {
-          "code": "1928",
-          "fiscalYear": "FY2028",
-          "metric": "operatingProfit",
-          "targetValue": 4500,
-          "actualValue": 3414,
-          "unit": "億円",
-          "progressRate": 75.9,
-          "source": "同 PDF p.10: 2028年度営業利益目標4,500億円",
-          "sourceUrl": "https://www.sekisuihouse.co.jp/company/financial/library/info/_268404/",
-          "sourcePage": "PDF p.3 / p.10",
-          "updatedAt": "2026-07-17",
-          "lastVerifiedDate": "2026-07-17",
-          "note": "同一公式資料の確定実績と最終年度目標を接続。",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "第7次中期経営計画 PDF p.3: 2025年度営業利益実績3,414億円"
-        }
-      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",
@@ -796,64 +738,6 @@
       "progressFlagValue": true,
       "matchedProgressRows": 0,
       "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "5201",
-      "name": "AGC",
-      "lastVerifiedDate": "2026-07-17",
-      "planPublishedDate": "2024-02-08",
-      "evidenceRefCount": 4,
-      "pageEvidenceRefCount": 3,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 3,
-      "matchedProgressSample": [
-        {
-          "code": "5201",
-          "fiscalYear": "FY2030",
-          "metric": "operatingProfit",
-          "targetValue": 3000,
-          "actualValue": 1275,
-          "unit": "億円",
-          "progressRate": 42.5,
-          "source": "同画像: 2030年営業利益目標3,000億円以上",
-          "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
-          "sourcePage": "公式Webページ『財務目標とその進捗』画像",
-          "updatedAt": "2026-07-17",
-          "lastVerifiedDate": "2026-07-17",
-          "note": "公式Web上の同一進捗表で確定実績と長期目標の下限を接続。2026年予想1,500億円とは分離し、単純進捗率は達成確度を示さない。",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "AGC公式中期経営計画ページ『財務目標とその進捗』画像: 2025年営業利益実績1,275億円"
-        },
-        {
-          "code": "5201",
-          "fiscalYear": "FY2030",
-          "metric": "strategicBusinessOperatingProfit",
-          "targetValue": 1900,
-          "actualValue": 587,
-          "unit": "億円",
-          "progressRate": 30.9,
-          "source": "同画像: 2030年戦略事業営業利益目標1,900億円以上",
-          "sourceUrl": "https://www.agc.com/company/strategy/plan/index.html",
-          "sourcePage": "公式Webページ『財務目標とその進捗』画像",
-          "updatedAt": "2026-07-17",
-          "lastVerifiedDate": "2026-07-17",
-          "note": "戦略事業に限定した会社開示指標を同一定義で接続し、連結営業利益とは区別する。",
-          "actualFiscalYear": "FY2025",
-          "actualSource": "AGC公式中期経営計画ページ『財務目標とその進捗』画像: 2025年戦略事業営業利益実績587億円"
-        }
-      ],
       "companyFlagKeys": [
         "ma",
         "capitalEfficiency",

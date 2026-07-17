@@ -1,7 +1,9 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-25",
-  "runRequested": true,
+  "status": "superseded_before_execution",
+  "supersededBy": "evidence-repair-batch-31",
+  "supersededReason": "第25バッチは生成前の設定のみがmainへ先行反映され、再実行時に旧証跡形式で停止したため実行対象から外した。第31バッチ以降の新番号バッチで、現在の証跡契約に適合する企業を優先して本番昇格する。",
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
   "allowedStages": [
@@ -53,22 +55,5 @@
         "公式Webページ（見出し: 数値目標）: 既存事業と非連続成長、M&A等の資本戦略を通じ、グループ企業価値最大化と資本効率向上を目指す。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-309",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "codes": [
-      "4188",
-      "5019",
-      "9020"
-    ],
-    "targetCoreCount": 180,
-    "primaryAuthor": "production-quality-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "independent-release-agent",
-    "independentReviewer": "independent-release-review",
-    "approvalDate": "2026-07-17"
-  }
+  ]
 }

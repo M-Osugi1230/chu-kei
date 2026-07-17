@@ -15188,5 +15188,29 @@
     "reviewDecisionId": "review-9861-20260717-structured-expansion",
     "detectedAt": "2026-07-17T18:02:00.000Z",
     "correctedAt": "2026-07-17T19:02:00.000Z"
+  },
+  {
+    "id": "correction-9247-20260717-plan-mismatch",
+    "companyCode": "9247",
+    "fieldPath": "category,document,period,planPublishedDate,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs",
+    "before": {
+      "stage": "detailed_extracted",
+      "planPublishedDate": "2026-05-22",
+      "revenue": "2031年3月期 売上高1,350億円",
+      "sourceDocumentMismatch": true
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "planPublishedDate": "2024-05-15",
+      "revenue": "2029年3月期 売上高1,200億円。2024年3月期実績928.60億円",
+      "sourceDocumentMismatch": false
+    },
+    "reason": "公式URLが示す第2次中期経営計画は2024年度から2028年度であり、誤接続した2031年目標を2029年3月期の原文数値へ訂正する。",
+    "sourceUrl": "https://tre-hd.co.jp/download/assets/uploads/trehd_mtbp.pdf",
+    "sourcePage": "p.17, p.31-p.35",
+    "status": "corrected",
+    "reviewDecisionId": "review-9247-20260717-structured-correction",
+    "detectedAt": "2026-07-17T19:45:00.000Z",
+    "correctedAt": "2026-07-17T20:30:00.000Z"
   }
 ]

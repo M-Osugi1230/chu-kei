@@ -21031,5 +21031,34 @@
     "decisionReason": "吉野家ホールディングスの主要財務目標、成長戦略、投資、還元を比較可能にする。",
     "createdAt": "2026-07-17T18:02:00.000Z",
     "reviewedAt": "2026-07-17T19:02:00.000Z"
+  },
+  {
+    "id": "review-9247-20260717-structured-correction",
+    "companyCode": "9247",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://tre-hd.co.jp/download/assets/uploads/trehd_mtbp.pdf",
+    "sourcePages": [
+      "公式PDF p.17: 2024年3月期実績と2029年3月期計画の収益・利益・EBITDA。",
+      "公式PDF p.31-p.32: ROE10%以上と自己資本比率40%以上の財務方針。",
+      "公式PDF p.33-p.34: 主要・新規投資計画480億円。",
+      "公式PDF p.35: 総還元性向35〜40%、安定配当、自己株式取得検討。"
+    ],
+    "note": "第47構造化拡張で別計画の2031年数値を誤接続したため、公式の2024-2028年度第2次中期経営計画へ訂正する。本番承認ではない。",
+    "decisionReason": "ＴＲＥホールディングスの計画期間、公開日、定量目標、投資、還元を公式PDFと一致させる。",
+    "createdAt": "2026-07-17T20:00:00.000Z",
+    "reviewedAt": "2026-07-17T20:30:00.000Z"
   }
 ]

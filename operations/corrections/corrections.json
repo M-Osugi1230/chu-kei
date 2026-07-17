@@ -13028,5 +13028,181 @@
     "reviewDecisionId": "review-3402-20260717-production-double-check",
     "detectedAt": "2026-07-17T10:02:00.000Z",
     "correctedAt": "2026-07-17T11:02:00.000Z"
+  },
+  {
+    "id": "correction-4005-20260717-evidence",
+    "companyCode": "4005",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://www.sumitomo-chem.co.jp/ir/policy/plan/",
+      "document": "2025～2027年度 中期経営計画 Leap Beyond",
+      "planPublishedDate": "2025-03-04",
+      "lastVerifiedDate": "2026-07-10",
+      "evidenceRefs": [
+        "公式中計ページ：2025～2027年度計画、成長2領域への資源集中、ROIC志向経営を確認。",
+        "公式説明：戦略投資の約8割を成長領域、R&D2,200億円強を確認。",
+        "公式資料：2027年度コア営業利益2,000億円、ROE8%、ROIC6%、D/E0.8倍を確認。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "after": {
+      "sourceUrl": "https://www.sumitomo-chem.co.jp/news/detail/20250304.html",
+      "document": "住友化学 2025～2027年度中期経営計画 Leap Beyond",
+      "planPublishedDate": "2025-03-04",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "公式中計ページ：2025～2027年度計画、成長2領域への資源集中、ROIC志向経営を確認。",
+        "公式説明：戦略投資の約8割を成長領域、R&D2,200億円強を確認。",
+        "公式資料：2027年度コア営業利益2,000億円、ROE8%、ROIC6%、D/E0.8倍を確認。",
+        "公式Webページ（見出し: 2025～27年度 中期経営計画について）: アグロ＆ライフとICT＆モビリティを成長ドライバーとし、研究開発投資2,200億円強、戦略投資約1,800億円を集中する。",
+        "公式Webページ（見出し: 財務・資本効率の改善）: 2027年度の全社ROIC6%、成長2領域で8%・11%、追加キャッシュ創出2,000億円、D/Eレシオ0.8倍台を目指す。",
+        "公式Webページ（見出し: 経営目標）: 2027年度のコア営業利益2,000億円、ROE8%、ROIC6%を掲げる。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "reason": "住友化学公式の中期経営計画策定ページで、成長ドライバーへの研究開発・戦略投資、事業ポートフォリオ高度化、ROIC志向経営、2027年度の財務目標と財務規律を具体的な見出し単位で確認できるため。",
+    "sourceUrl": "https://www.sumitomo-chem.co.jp/news/detail/20250304.html",
+    "sourcePage": "公式Webページ（見出し: 2025～27年度 中期経営計画について）: アグロ＆ライフとICT＆モビリティを成長ドライバーとし、研究開発投資2,200億円強、戦略投資約1,800億円を集中する。 / 公式Webページ（見出し: 財務・資本効率の改善）: 2027年度の全社ROIC6%、成長2領域で8%・11%、追加キャッシュ創出2,000億円、D/Eレシオ0.8倍台を目指す。 / 公式Webページ（見出し: 経営目標）: 2027年度のコア営業利益2,000億円、ROE8%、ROIC6%を掲げる。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4005-20260717-evidence",
+    "detectedAt": "2026-07-17T06:00:00.000Z",
+    "correctedAt": "2026-07-17T07:00:00.000Z"
+  },
+  {
+    "id": "correction-7752-20260717-evidence",
+    "companyCode": "7752",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://jp.ricoh.com/release/2026/0325_1",
+      "document": "中期経営戦略'26",
+      "planPublishedDate": "2026-03-25",
+      "lastVerifiedDate": "2026-07-10",
+      "evidenceRefs": [
+        "公式ニュース：中期経営戦略'26は2026～2030年度を対象とし、毎年ローリング更新する方式へ転換。",
+        "公式IR説明資料：デジタルサービス会社への進化、AI事業、ROIC経営・アセットライト化を確認。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "after": {
+      "sourceUrl": "https://jp.ricoh.com/-/media/Ricoh/Sites/jp_ricoh/IR/events/2025/pdf/r07_keiei.pdf",
+      "document": "リコー 中期経営戦略'26（2026年度～2030年度）",
+      "planPublishedDate": "2026-03-25",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "公式ニュース：中期経営戦略'26は2026～2030年度を対象とし、毎年ローリング更新する方式へ転換。",
+        "公式IR説明資料：デジタルサービス会社への進化、AI事業、ROIC経営・アセットライト化を確認。",
+        "公式PDF p.3: FY2025着地見通しとして売上高2兆6,000億円、営業利益900億円・率3.5%、ROE5.7%、ROIC4.4%を示す。",
+        "公式PDF p.11: FY2025見込みの全社ROIC4.4%・ROE5.7%から、FY2030に全社ROIC7%以上・ROE10%以上を目指す資本収益性改善ドライバーを示す。",
+        "公式PDF p.12: FY2030目標としてROE10%以上、ROIC7%以上、人的資本ROI25%、成長投資3,500億円、ネットD/E0.40以下、ストック利益15%以上増を掲げる。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "reason": "リコー公式の中期経営戦略資料で、前計画のFY2025着地見通し、2026～2030年度のローリング戦略、FY2030のROE・ROIC目標、成長投資・ネットD/E・ストック利益目標をページ単位で確認できるため。",
+    "sourceUrl": "https://jp.ricoh.com/-/media/Ricoh/Sites/jp_ricoh/IR/events/2025/pdf/r07_keiei.pdf",
+    "sourcePage": "公式PDF p.3: FY2025着地見通しとして売上高2兆6,000億円、営業利益900億円・率3.5%、ROE5.7%、ROIC4.4%を示す。 / 公式PDF p.11: FY2025見込みの全社ROIC4.4%・ROE5.7%から、FY2030に全社ROIC7%以上・ROE10%以上を目指す資本収益性改善ドライバーを示す。 / 公式PDF p.12: FY2030目標としてROE10%以上、ROIC7%以上、人的資本ROI25%、成長投資3,500億円、ネットD/E0.40以下、ストック利益15%以上増を掲げる。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7752-20260717-evidence",
+    "detectedAt": "2026-07-17T06:01:00.000Z",
+    "correctedAt": "2026-07-17T07:01:00.000Z"
+  },
+  {
+    "id": "correction-8113-20260717-evidence",
+    "companyCode": "8113",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://www.unicharm.co.jp/ja/ir/library/chukei.html",
+      "document": "第13次中期経営計画 Project Renaissance",
+      "planPublishedDate": "2026-02-12",
+      "lastVerifiedDate": "2026-07-10",
+      "evidenceRefs": [
+        "公式中計ページ：第13次中期経営計画FY2026～FY2030を確認。",
+        "統合報告書2026：2030年売上高1.3/1.5兆円、利益率17%、ROE17%。",
+        "統合報告書2026：成長投資4,000億円、M&A待機資金1,500億円、総還元性向65%以上。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "after": {
+      "sourceUrl": "https://www.unicharm.co.jp/ja/ir/library/chukei.html",
+      "document": "ユニ・チャーム 第13次中期経営計画 Project Renaissance",
+      "planPublishedDate": "2026-02-12",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "公式中計ページ：第13次中期経営計画FY2026～FY2030を確認。",
+        "統合報告書2026：2030年売上高1.3/1.5兆円、利益率17%、ROE17%。",
+        "統合報告書2026：成長投資4,000億円、M&A待機資金1,500億円、総還元性向65%以上。",
+        "公式Webページ（見出し: 第13次中期経営計画）: 2026年2月12日にFY2026からFY2030を対象とするProject Renaissanceを公式掲載した。",
+        "公式Webページ（見出し: 第13次中期経営計画 Project Renaissanceの始動）: Renaissance・Rebirth・Resonanceの3つのRで、人間中心の価値創造、事業モデル変革、社会との価値共創を進める。",
+        "公式Webページ（見出し: Love Your Possibilitiesを体現する3つのR）: 2030年までに売上高1.5兆円、コア営業利益率17%、ROE17%を目標とする。",
+        "公式Webページ（見出し: 株主還元方針）: 計画期間の総還元性向を65%以上へ引き上げ、DOE4.5%超を5年間継続する。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "reason": "ユニ・チャーム公式の中期経営計画・統合レポート・株主還元ページで、FY2026～FY2030の計画期間、3つのRによる構造変革、2030年の売上高・コア営業利益率・ROE目標、総還元性向とDOE方針を具体的な見出し単位で確認できるため。",
+    "sourceUrl": "https://www.unicharm.co.jp/ja/ir/library/chukei.html",
+    "sourcePage": "公式Webページ（見出し: 第13次中期経営計画）: 2026年2月12日にFY2026からFY2030を対象とするProject Renaissanceを公式掲載した。 / 公式Webページ（見出し: 第13次中期経営計画 Project Renaissanceの始動）: Renaissance・Rebirth・Resonanceの3つのRで、人間中心の価値創造、事業モデル変革、社会との価値共創を進める。 / 公式Webページ（見出し: Love Your Possibilitiesを体現する3つのR）: 2030年までに売上高1.5兆円、コア営業利益率17%、ROE17%を目標とする。 / 公式Webページ（見出し: 株主還元方針）: 計画期間の総還元性向を65%以上へ引き上げ、DOE4.5%超を5年間継続する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8113-20260717-evidence",
+    "detectedAt": "2026-07-17T06:02:00.000Z",
+    "correctedAt": "2026-07-17T07:02:00.000Z"
+  },
+  {
+    "id": "correction-4005-20260717-production-promotion",
+    "companyCode": "4005",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.sumitomo-chem.co.jp/news/detail/20250304.html",
+    "sourcePage": "公式中計ページ：2025～2027年度計画、成長2領域への資源集中、ROIC志向経営を確認。 / 公式説明：戦略投資の約8割を成長領域、R&D2,200億円強を確認。 / 公式資料：2027年度コア営業利益2,000億円、ROE8%、ROIC6%、D/E0.8倍を確認。 / 公式Webページ（見出し: 2025～27年度 中期経営計画について）: アグロ＆ライフとICT＆モビリティを成長ドライバーとし、研究開発投資2,200億円強、戦略投資約1,800億円を集中する。 / 公式Webページ（見出し: 財務・資本効率の改善）: 2027年度の全社ROIC6%、成長2領域で8%・11%、追加キャッシュ創出2,000億円、D/Eレシオ0.8倍台を目指す。 / 公式Webページ（見出し: 経営目標）: 2027年度のコア営業利益2,000億円、ROE8%、ROIC6%を掲げる。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4005-20260717-production-double-check",
+    "detectedAt": "2026-07-17T10:00:00.000Z",
+    "correctedAt": "2026-07-17T11:00:00.000Z"
+  },
+  {
+    "id": "correction-7752-20260717-production-promotion",
+    "companyCode": "7752",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://jp.ricoh.com/-/media/Ricoh/Sites/jp_ricoh/IR/events/2025/pdf/r07_keiei.pdf",
+    "sourcePage": "公式ニュース：中期経営戦略'26は2026～2030年度を対象とし、毎年ローリング更新する方式へ転換。 / 公式IR説明資料：デジタルサービス会社への進化、AI事業、ROIC経営・アセットライト化を確認。 / 公式PDF p.3: FY2025着地見通しとして売上高2兆6,000億円、営業利益900億円・率3.5%、ROE5.7%、ROIC4.4%を示す。 / 公式PDF p.11: FY2025見込みの全社ROIC4.4%・ROE5.7%から、FY2030に全社ROIC7%以上・ROE10%以上を目指す資本収益性改善ドライバーを示す。 / 公式PDF p.12: FY2030目標としてROE10%以上、ROIC7%以上、人的資本ROI25%、成長投資3,500億円、ネットD/E0.40以下、ストック利益15%以上増を掲げる。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7752-20260717-production-double-check",
+    "detectedAt": "2026-07-17T10:01:00.000Z",
+    "correctedAt": "2026-07-17T11:01:00.000Z"
+  },
+  {
+    "id": "correction-8113-20260717-production-promotion",
+    "companyCode": "8113",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.unicharm.co.jp/ja/ir/library/chukei.html",
+    "sourcePage": "公式中計ページ：第13次中期経営計画FY2026～FY2030を確認。 / 統合報告書2026：2030年売上高1.3/1.5兆円、利益率17%、ROE17%。 / 統合報告書2026：成長投資4,000億円、M&A待機資金1,500億円、総還元性向65%以上。 / 公式Webページ（見出し: 第13次中期経営計画）: 2026年2月12日にFY2026からFY2030を対象とするProject Renaissanceを公式掲載した。 / 公式Webページ（見出し: 第13次中期経営計画 Project Renaissanceの始動）: Renaissance・Rebirth・Resonanceの3つのRで、人間中心の価値創造、事業モデル変革、社会との価値共創を進める。 / 公式Webページ（見出し: Love Your Possibilitiesを体現する3つのR）: 2030年までに売上高1.5兆円、コア営業利益率17%、ROE17%を目標とする。 / 公式Webページ（見出し: 株主還元方針）: 計画期間の総還元性向を65%以上へ引き上げ、DOE4.5%超を5年間継続する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8113-20260717-production-double-check",
+    "detectedAt": "2026-07-17T10:02:00.000Z",
+    "correctedAt": "2026-07-17T11:02:00.000Z"
   }
 ]

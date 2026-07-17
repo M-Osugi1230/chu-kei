@@ -1,10 +1,11 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-44",
-  "runRequested": true,
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
-  "allowedStages": ["detailed_extracted"],
+  "allowedStages": [
+    "detailed_extracted"
+  ],
   "expectedCoreCount": 210,
   "expectedDetailedExtractedCount": 12,
   "expectedFiveStarAfterApproval": 199,
@@ -57,18 +58,5 @@
         "公式Webページ（見出し: 配当方針）: 2027年3月期以降は利益成長に応じた配当へ変更し、2027年3月期は1株11円を予定する。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-326",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "codes": ["2413", "6954", "4689"],
-    "targetCoreCount": 213,
-    "primaryAuthor": "production-quality-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "independent-release-agent",
-    "independentReviewer": "independent-release-review",
-    "approvalDate": "2026-07-17"
-  }
+  ]
 }

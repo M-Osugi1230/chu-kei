@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
+import { countPrimaryEvidenceReferences } from './lib/evidence_reference_v1.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
@@ -19,8 +20,8 @@ function readBundle() {
   if (digest !== manifest.sha256) throw new Error(`Bundle SHA-256 mismatch: ${digest}`);
   return JSON.parse(zlib.gunzipSync(compressed));
 }
-function hasPageEvidence(company) {
-  return (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
+function hasPrimaryEvidence(company) {
+  return countPrimaryEvidenceReferences(company.evidenceRefs) > 0;
 }
 function hasMetricExtraction(company) {
   return ['revenue', 'profit', 'margin', 'capital', 'returnPolicy'].some(key => Boolean(company[key]));
@@ -29,7 +30,7 @@ function gaps(company) {
   const values = [];
   if (!(typeof company.sourceUrl === 'string' && company.sourceUrl.startsWith('https://'))) values.push('officialSource');
   if (!company.planPublishedDate) values.push('publicationDate');
-  if (!hasPageEvidence(company)) values.push('pageEvidence');
+  if (!hasPrimaryEvidence(company)) values.push('pageEvidence');
   if (!hasMetricExtraction(company)) values.push('metricExtraction');
   if (!company.flags?.progress) values.push('progressConnected');
   if (!/^\d{4}-\d{2}-\d{2}$/.test(company.lastVerifiedDate || '')) values.push('lastVerifiedDate');

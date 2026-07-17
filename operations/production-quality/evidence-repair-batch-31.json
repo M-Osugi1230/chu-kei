@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "evidence-repair-batch-31",
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "allowedStages": [
+    "detailed_extracted"
+  ],
+  "expectedCoreCount": 177,
+  "expectedDetailedExtractedCount": 45,
+  "expectedFiveStarAfterApproval": 166,
+  "records": [
+    {
+      "code": "4543",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.terumo.com/system/files/document/2026-05/Presentation_01_26Q4_E.pdf",
+      "document": "Terumo GS26 Final Year and Beyond & Terumo Neuro Growth Roadmap",
+      "planPublishedDate": "2026-05-15",
+      "verifiedDate": "2026-07-17",
+      "reason": "テルモ公式の2026年3月期説明資料で、GS26の売上成長率・営業利益率・ROICの目標と最終年度実績、事業別成長要因、ニューロ事業の製品パイプライン・臨床エビデンス・隣接市場展開をページ単位で確認でき、既存の構造化分析と進捗データを公式一次資料で補強できるため。",
+      "evidenceRefs": [
+        "公式PDF p.3: GS26の売上成長率目標High single-digitに対し5年CAGR12%（計画時想定為替換算で7%）、営業利益率目標20%以上に対しFY26実績20%、ROIC目標10%以上に対しFY26実績10%。",
+        "公式PDF p.4: FY26の成長要因としてCDMO新製品、価格施策、血管内治療、プラズマ事業、臓器移植関連の市場拡大を整理。",
+        "公式PDF p.17: 2026～2031年のニューロ事業製品パイプライン、臨床エビデンス拡充、オペレーション効率化、隣接市場参入を示す。"
+      ]
+    },
+    {
+      "code": "4568",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.daiichisankyo.co.jp/about_us/mission-strength/vision/our_strategy/",
+      "document": "第一三共 第6期中期経営計画（FY2026-FY2030）",
+      "planPublishedDate": "2026-05-11",
+      "verifiedDate": "2026-07-17",
+      "reason": "第一三共公式の経営戦略ページで、第6期中期経営計画の成長戦略、2030年度の売上収益・営業利益・EPS・調整後DOE目標、第5期の2025年度実績、累進配当と自己株式取得方針を具体的な見出し単位で確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 第6期中期経営計画達成に向けた戦略）: DXd ADCsの成長、新BGTsの特定、2035年に世界トップ5のがん企業を目指す戦略を示す。",
+        "公式Webページ（見出し: 2030年度計数目標）: 売上収益3兆円以上、営業利益6,000億円以上、EPS260円以上、調整後DOE各年度10%以上を掲げる。",
+        "公式Webページ（見出し: 第5期中期経営計画の振り返り：計数目標）: 2025年度実績として売上収益2兆1,230億円、がん領域9,540億円、ROE15.8%、DOE8.7%を開示。",
+        "公式Webページ（見出し: 株主還元方針）: 累進配当、調整後DOE10%以上、状況に応じた機動的な自己株式取得を掲げる。"
+      ]
+    },
+    {
+      "code": "5411",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.jfe-holdings.co.jp/sustainability/sus_manage/manage/plan/",
+      "document": "JFEビジョン2035・第8次中期経営計画",
+      "planPublishedDate": "2025-05-08",
+      "verifiedDate": "2026-07-17",
+      "reason": "JFEホールディングス公式の第8次中期経営計画ページで、2025～2027年度の計画期間、2027年度の連結事業利益・ROE・財務規律、鉄鋼・エンジニアリング・商社の利益目標、配当性向と配当下限を具体的な見出し・表で確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 2035年の目指す姿「JFEビジョン2035」）: 2035年度グループ事業利益7,000億円と、2025～2027年度を対象とする第8次中期経営計画の位置づけを示す。",
+        "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 2027年度の連結事業利益4,000億円、ROE少なくとも10%、Debt/EBITDA約3倍、D/E約60%を掲げる。",
+        "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 鉄鋼2,600億円、エンジニアリング420億円、商社600億円の利益目標と、配当性向30%程度・1株80円下限を示す。"
+      ]
+    }
+  ]
+}

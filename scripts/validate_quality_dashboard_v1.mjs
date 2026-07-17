@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
+import { countPrimaryEvidenceReferences } from './lib/evidence_reference_v1.mjs';
 
 const root = path.resolve('site');
 const repoRoot = path.resolve('.');
@@ -26,11 +27,11 @@ const companies = payload.companies || [];
 const core = companies.filter(company => company.stage === 'core');
 const detailed = companies.filter(company => company.stage === 'detailed_extracted');
 const structuredReviewable = [...core, ...detailed];
-const pageEvidence = company => (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
-const priorityA = detailed.filter(pageEvidence).length;
-const priorityB = detailed.filter(company => !pageEvidence(company)).length;
+const primaryEvidence = company => countPrimaryEvidenceReferences(company.evidenceRefs) > 0;
+const priorityA = detailed.filter(primaryEvidence).length;
+const priorityB = detailed.filter(company => !primaryEvidence(company)).length;
 const corePublicationGaps = core.filter(company => !company.planPublishedDate).length;
-const corePageGaps = core.filter(company => !pageEvidence(company)).length;
+const corePageGaps = core.filter(company => !primaryEvidence(company)).length;
 const expectedPublicationMaximum = budget.maximumCounts?.['core.missingPublicationDate'];
 const expectedPageMaximum = budget.maximumCounts?.['core.missingPageEvidence'];
 const expectedDetailedPageMaximum = budget.maximumCounts?.['detailed.missingPageEvidence'];
@@ -60,7 +61,7 @@ check(
   `actual=${corePublicationGaps}, maximum=${expectedPublicationMaximum}`,
 );
 check(
-  'production page evidence gaps within quality debt budget',
+  'production primary evidence gaps within quality debt budget',
   corePageGaps <= expectedPageMaximum,
   `actual=${corePageGaps}, maximum=${expectedPageMaximum}`,
 );

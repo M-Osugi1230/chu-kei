@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
+import { countPrimaryEvidenceReferences } from './lib/evidence_reference_v1.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
@@ -14,8 +15,8 @@ function readBundle() {
   if (digest !== manifest.sha256) throw new Error(`Bundle SHA-256 mismatch: ${digest}`);
   return JSON.parse(zlib.gunzipSync(compressed));
 }
-function hasPageEvidence(company) {
-  return (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
+function hasPrimaryEvidence(company) {
+  return countPrimaryEvidenceReferences(company.evidenceRefs) > 0;
 }
 function hasMetricExtraction(company) {
   return ['revenue', 'profit', 'margin', 'capital', 'returnPolicy'].some(key => Boolean(company[key]));
@@ -24,7 +25,7 @@ function classify(company) {
   const gaps = [];
   if (!(typeof company.sourceUrl === 'string' && company.sourceUrl.startsWith('https://'))) gaps.push('officialSource');
   if (!company.planPublishedDate) gaps.push('publicationDate');
-  if (!hasPageEvidence(company)) gaps.push('pageEvidence');
+  if (!hasPrimaryEvidence(company)) gaps.push('pageEvidence');
   if (!hasMetricExtraction(company)) gaps.push('metricExtraction');
   if (!company.flags?.progress) gaps.push('progressConnected');
   if (!/^\d{4}-\d{2}-\d{2}$/.test(company.lastVerifiedDate || '')) gaps.push('lastVerifiedDate');
@@ -57,7 +58,7 @@ const queue = allCore
       qualityScore: company.quality?.score ?? null,
       planPublishedDate: company.planPublishedDate ?? null,
       lastVerifiedDate: company.lastVerifiedDate,
-      pageEvidence: hasPageEvidence(company),
+      pageEvidence: hasPrimaryEvidence(company),
       progressConnected: Boolean(company.flags?.progress),
       gaps: result.gaps,
       sourceUrl: company.sourceUrl,
@@ -72,7 +73,7 @@ const summary = {
   repairQueue: queue.length,
   fiveStarCore: allCore.filter(company => company.quality?.stars === 5).length,
   publicationDateMissing: allCore.filter(company => !company.planPublishedDate).length,
-  pageEvidenceMissing: allCore.filter(company => !hasPageEvidence(company)).length,
+  pageEvidenceMissing: allCore.filter(company => !hasPrimaryEvidence(company)).length,
   progressMissing: allCore.filter(company => !company.flags?.progress).length,
   priorityCounts: Object.fromEntries(['P0', 'P1', 'P2', 'P3', 'P4'].map(priority => [priority, queue.filter(item => item.priority === priority).length])),
 };

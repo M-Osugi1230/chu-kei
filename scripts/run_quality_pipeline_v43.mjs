@@ -69,6 +69,7 @@ if (isApplyWorkflow && fs.existsSync(sourceNormalizationMarker)) {
 }
 
 runNode('scripts/apply_structured_expansion_ci_v1.mjs');
+runNode('scripts/apply_structured_correction_v1.mjs');
 if (isApplyWorkflow) {
   runNode('scripts/apply_core_evidence_repair_v1.mjs');
   const embeddedProgress = findEmbeddedProgressRequest();

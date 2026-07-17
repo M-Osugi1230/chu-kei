@@ -1,37 +1,34 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-17T16:49:43.201Z",
-  "sourceBundleSha256": "73ac43c2aeb62b12a7311a3f8a48a273c7d04f630134866201e711d4758ff3f9",
+  "generatedAt": "2026-07-17T16:58:13.306Z",
+  "sourceBundleSha256": "07f6115cd748b569eb51b15b615a19bdbfcb7f64ed886c655a6acb93c14e0983",
   "companyCount": 1200,
-  "progressCount": 291,
-  "detailedExtractedCount": 9,
+  "progressCount": 303,
+  "detailedExtractedCount": 6,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
   ],
   "progressIdentifierCoverage": {
     "companyCode": 0,
-    "code": 291,
+    "code": 303,
     "ticker": 0,
     "securityCode": 0,
     "company_code": 0
   },
   "counts": {
     "detailedWithProgressFlag": 3,
-    "detailedWithoutProgressFlag": 6,
+    "detailedWithoutProgressFlag": 3,
     "detailedWithMatchedProgressRows": 0,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 6
+    "pageEvidenceAndPublicationReadyButProgressMissing": 3
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
     "pageEvidenceAndPublicationReadyButProgressMissingCodes": [
-      "2168",
       "4478",
       "4612",
-      "7733",
-      "9247",
-      "9861"
+      "7733"
     ]
   },
   "progressSamples": [
@@ -103,29 +100,6 @@
     }
   ],
   "candidates": [
-    {
-      "code": "2168",
-      "name": "パソナグループ",
-      "lastVerifiedDate": "2026-07-17",
-      "planPublishedDate": "2025-07-17",
-      "evidenceRefCount": 6,
-      "pageEvidenceRefCount": 6,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
     {
       "code": "4478",
       "name": "フリー",
@@ -242,29 +216,6 @@
       ]
     },
     {
-      "code": "9247",
-      "name": "ＴＲＥホールディングス",
-      "lastVerifiedDate": "2026-07-17",
-      "planPublishedDate": "2024-05-15",
-      "evidenceRefCount": 4,
-      "pageEvidenceRefCount": 4,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
       "code": "9449",
       "name": "GMOインターネットグループ",
       "lastVerifiedDate": "2026-07-10",
@@ -273,29 +224,6 @@
       "pageEvidenceRefCount": 0,
       "hasProgressFlag": true,
       "progressFlagValue": true,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "9861",
-      "name": "吉野家ホールディングス",
-      "lastVerifiedDate": "2026-07-17",
-      "planPublishedDate": "2025-05-19",
-      "evidenceRefCount": 4,
-      "pageEvidenceRefCount": 4,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
       "matchedProgressRows": 0,
       "matchedProgressSample": [],
       "companyFlagKeys": [

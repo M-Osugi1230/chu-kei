@@ -1,10 +1,11 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-43",
-  "runRequested": true,
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
-  "allowedStages": ["detailed_extracted"],
+  "allowedStages": [
+    "detailed_extracted"
+  ],
   "expectedCoreCount": 207,
   "expectedDetailedExtractedCount": 15,
   "expectedFiveStarAfterApproval": 196,
@@ -57,18 +58,5 @@
         "公式Webページ（見出し: 財務方針の堅持）: OpenAI追加出資等を進めつつ、資産の資金化と負債調達を活用し、LTVを適切に管理する。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-325",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "codes": ["8601", "9843", "9984"],
-    "targetCoreCount": 210,
-    "primaryAuthor": "production-quality-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "independent-release-agent",
-    "independentReviewer": "independent-release-review",
-    "approvalDate": "2026-07-17"
-  }
+  ]
 }

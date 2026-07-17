@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
+import { countPrimaryEvidenceReferences } from './lib/evidence_reference_v1.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
@@ -57,8 +58,8 @@ function daysBetween(older, newer) {
   return Math.floor((newer.getTime() - older.getTime()) / 86_400_000);
 }
 
-function hasPageEvidence(company) {
-  return (company.evidenceRefs ?? []).some((ref) => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
+function hasPrimaryEvidence(company) {
+  return countPrimaryEvidenceReferences(company.evidenceRefs) > 0;
 }
 
 function isMeaningfulValue(value) {
@@ -193,7 +194,7 @@ for (const company of companies) {
 
   if (company.stage === 'core') {
     if (!company.planPublishedDate) addDebt(company, 'core.missingPublicationDate', 'planPublishedDate is null');
-    if (!hasPageEvidence(company)) addDebt(company, 'core.missingPageEvidence', 'no page-number evidence');
+    if (!hasPrimaryEvidence(company)) addDebt(company, 'core.missingPageEvidence', 'no primary evidence reference');
     if (!hasMetricExtraction(company)) addDebt(company, 'core.missingMetricExtraction', 'no metric/policy field');
     if (!company.flags?.progress) addDebt(company, 'core.missingProgressConnection', 'flags.progress is false');
     if (isPlaceholder(company.summary)) addDebt(company, 'core.placeholderSummary', String(company.summary ?? ''));
@@ -203,7 +204,7 @@ for (const company of companies) {
 
   if (company.stage === 'detailed_extracted') {
     if (!company.planPublishedDate) addDebt(company, 'detailed.missingPublicationDate', 'planPublishedDate is null');
-    if (!hasPageEvidence(company)) addDebt(company, 'detailed.missingPageEvidence', 'no page-number evidence');
+    if (!hasPrimaryEvidence(company)) addDebt(company, 'detailed.missingPageEvidence', 'no primary evidence reference');
     if (!hasMetricExtraction(company)) addDebt(company, 'detailed.missingMetricExtraction', 'no metric/policy field');
     if (isPlaceholder(company.summary)) addDebt(company, 'detailed.placeholderSummary', String(company.summary ?? ''));
     if (!evidenceRefs.length) addDebt(company, 'detailed.noEvidenceRefs', 'evidenceRefs is empty');

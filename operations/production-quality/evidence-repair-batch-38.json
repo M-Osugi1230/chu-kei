@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "evidence-repair-batch-38",
+  "runRequested": true,
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "allowedStages": [
+    "detailed_extracted"
+  ],
+  "expectedCoreCount": 198,
+  "expectedDetailedExtractedCount": 24,
+  "expectedFiveStarAfterApproval": 187,
+  "records": [
+    {
+      "code": "4188",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.mcgc.com/group/strategy/management_plan.html",
+      "document": "三菱ケミカルグループ 中期経営計画2029",
+      "planPublishedDate": "2024-11-13",
+      "verifiedDate": "2026-07-17",
+      "reason": "三菱ケミカルグループ公式の中期経営計画ページで、FY2029の財務目標、事業ポートフォリオ変革、合理化、キャピタルアロケーション、株主価値向上方針を具体的な見出し単位で確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 経営数値目標）: FY2029にコア営業利益5,700億円、売上収益4兆9,500億円、コア営業利益率12%、ROIC8%を目標とする。",
+        "公式Webページ（見出し: 事業ポートフォリオ）: Visionとの整合性・競争優位性・成長性の3基準で事業を選別し、ケミカルズ事業を成長ドライバーへ転換する。",
+        "公式Webページ（見出し: 株主価値｜キャピタルアロケーション）: FY2025～FY2029のキャッシュイン3兆400億円を、株主還元・負債返済約20%、設備投資・投融資約80%へ配分する。",
+        "公式Webページ（見出し: 株主価値｜株主価値の向上）: ROICをFY2024の5%からFY2029の8%へ高め、配当を基本とした株主還元の強化を進める。"
+      ]
+    },
+    {
+      "code": "6594",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.nidec.com/jp/ir/management/strategy/",
+      "document": "ニデック 中期経営計画 Conversion 2027",
+      "planPublishedDate": "2025-04",
+      "verifiedDate": "2026-07-17",
+      "reason": "ニデック公式の中期経営計画ページで、ROICを用いた事業ポートフォリオ管理、拠点統廃合とコスト改革、高付加価値領域、5つの成長事業、グローバル経営体制への転換を確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: ROIC経営による事業ポートフォリオマネジメント）: ROICを基準に事業を分類し、不採算・ノンコア事業の特定とグループ全体最適を進める。",
+        "公式Webページ（見出し: 拠点の統廃合・最適化）: 約250の生産事業所のうち小規模拠点を半減させ、変動費1,000億円、固定費500億円規模の改革を実行する。",
+        "公式Webページ（見出し: 高付加価値事業領域の拡大）: 工作機械・ソフトウェアから大型モータのリカーリング・保守まで、バリューチェーン両端の付加価値を高める。",
+        "公式Webページ（見出し: 成長を支える事業5本柱への転換）: AI社会、サステナブルインフラ・エネルギー、産業効率化、Better Life、モビリティを重点領域とする。",
+        "公式Webページ（見出し: 真のグローバル体制への転換）: CDO・CHRO・CLOを含むCxO体制、フェロー・理事制度によりグローバル経営基盤を強化する。"
+      ]
+    },
+    {
+      "code": "8601",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www.daiwa-grp.jp/ir/digest/",
+      "document": "大和証券グループ 中期経営計画 Passion for the Best 2026",
+      "planPublishedDate": "2024-04",
+      "verifiedDate": "2026-07-17",
+      "reason": "大和証券グループ公式の個人投資家向けIRページで、2024～2026年度の中期経営計画、財務目標、戦略骨子、2030Visionと長期利益水準を具体的に確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 中期経営計画 Passion for the Best 2026）: 2024～2026年度を対象とし、グループ経営基本方針にお客様の資産価値最大化を掲げる。",
+        "公式Webページ（見出し: 中期経営計画目標 2026年度）: 経常利益2,400億円以上、ROE10%程度、ベース利益1,500億円を目標とする。",
+        "公式Webページ（見出し: グループ戦略骨子）: 顧客付加価値、アセットマネジメント高度化、M&A・成長投資、経営資源再配分、デジタル革新を推進する。",
+        "公式Webページ（見出し: 経営ビジョン 2030Vision）: 金融・資本市場を通じて豊かな未来を創造することをコアコンセプトとする。",
+        "公式Webページ（見出し: CEOメッセージ）: 中計目標の達成と2030年度の経常利益3,500億円以上を射程圏内とする。"
+      ]
+    }
+  ],
+  "productionPromotion": {
+    "schemaVersion": "production-promotion-batch-v1",
+    "batchId": "production-promotion-batch-322",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "codes": [
+      "4188",
+      "6594",
+      "8601"
+    ],
+    "targetCoreCount": 201,
+    "primaryAuthor": "production-quality-agent",
+    "primaryReviewer": "production-quality-review",
+    "independentAuthor": "independent-release-agent",
+    "independentReviewer": "independent-release-review",
+    "approvalDate": "2026-07-17"
+  }
+}

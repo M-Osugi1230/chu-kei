@@ -1,10 +1,11 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-40",
-  "runRequested": true,
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
-  "allowedStages": ["detailed_extracted"],
+  "allowedStages": [
+    "detailed_extracted"
+  ],
   "expectedCoreCount": 201,
   "expectedDetailedExtractedCount": 21,
   "expectedFiveStarAfterApproval": 190,
@@ -56,18 +57,5 @@
         "公式Webページ（見出し: 2026年8月期の連結業績予想）: 売上収益3兆8,000億円、事業利益6,500億円、年間配当540円を見込む。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-323",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "codes": ["3382", "6861", "9983"],
-    "targetCoreCount": 204,
-    "primaryAuthor": "production-quality-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "independent-release-agent",
-    "independentReviewer": "independent-release-review",
-    "approvalDate": "2026-07-18"
-  }
+  ]
 }

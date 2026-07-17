@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "evidence-repair-batch-46",
+  "runRequested": true,
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "allowedStages": ["detailed_extracted"],
+  "expectedCoreCount": 216,
+  "expectedDetailedExtractedCount": 6,
+  "expectedFiveStarAfterApproval": 203,
+  "records": [
+    {
+      "code": "9449",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://ir.group.gmo/management-policy/strategy/",
+      "document": "GMOインターネットグループ 2026年6月成長戦略",
+      "planPublishedDate": "2026-06",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式の2026年6月経営方針で、AI、セキュリティ、持株会社体制、上場戦略、継続収益基盤を確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: エグゼクティブサマリ）: AI・ロボティクスとセキュリティを重点領域とし、毎期15%の利益成長を目指す。",
+        "公式Webページ（見出し: 100年単位で継続する企業グループへ）: 持株会社体制を通じて意思決定の迅速化とグループシナジーを進める。",
+        "公式Webページ（見出し: 持株会社が果たす4つの役割）: シナジー、成長ドライバー、構造効率化、経営ノウハウ共有を推進する。",
+        "公式Webページ（見出し: グループ上場戦略）: 各社の自律性と共通基盤を両立し、資本市場との対話を成長へつなげる。",
+        "公式Webページ（見出し: GMOインターネットグループの強み）: リスク分散、自社開発・自社運用、継続収益を経営基盤とする。",
+        "公式Webページ（見出し: インターネット革命後半戦はAIが主役）: AIとロボティクスを活用して社会課題の解決を進める。"
+      ]
+    }
+  ],
+  "productionPromotion": {
+    "schemaVersion": "production-promotion-batch-v1",
+    "batchId": "production-promotion-batch-328",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "codes": ["9449"],
+    "targetCoreCount": 217,
+    "primaryAuthor": "production-quality-agent",
+    "primaryReviewer": "production-quality-review",
+    "independentAuthor": "independent-release-agent",
+    "independentReviewer": "independent-release-review",
+    "approvalDate": "2026-07-17"
+  }
+}

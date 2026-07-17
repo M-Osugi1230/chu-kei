@@ -1,7 +1,6 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-31",
-  "runRequested": true,
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
   "allowedStages": [
@@ -54,22 +53,5 @@
         "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 鉄鋼2,600億円、エンジニアリング420億円、商社600億円の利益目標と、配当性向30%程度・1株80円下限を示す。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-315",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "codes": [
-      "4543",
-      "4568",
-      "5411"
-    ],
-    "targetCoreCount": 180,
-    "primaryAuthor": "production-quality-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "independent-release-agent",
-    "independentReviewer": "independent-release-review",
-    "approvalDate": "2026-07-17"
-  }
+  ]
 }

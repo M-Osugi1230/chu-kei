@@ -1,0 +1,258 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "production-promotion-batch-315",
+  "automaticApprovalAllowed": false,
+  "explicitProductionApproval": true,
+  "reviews": [
+    {
+      "id": "review-4543-20260717-production-primary",
+      "companyCode": "4543",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.terumo.com/system/files/document/2026-05/Presentation_01_26Q4_E.pdf",
+      "sourcePages": [
+        "公式GS26資料：2022～2026年度の5カ年成長戦略を確認。",
+        "公式資料：営業CF8,000～9,000億円、設備投資4,300～4,800億円。",
+        "公式資料：配当性向30%以上、自己株式取得・買収の資金配分方針。",
+        "公式PDF p.3: GS26の売上成長率目標High single-digitに対し5年CAGR12%（計画時想定為替換算で7%）、営業利益率目標20%以上に対しFY26実績20%、ROIC目標10%以上に対しFY26実績10%。",
+        "公式PDF p.4: FY26の成長要因としてCDMO新製品、価格施策、血管内治療、プラズマ事業、臓器移植関連の市場拡大を整理。",
+        "公式PDF p.17: 2026～2031年のニューロ事業製品パイプライン、臨床エビデンス拡充、オペレーション効率化、隣接市場参入を示す。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-17T08:00:00.000Z",
+      "reviewedAt": "2026-07-17T09:00:00.000Z"
+    },
+    {
+      "id": "review-4543-20260717-production-double-check",
+      "companyCode": "4543",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "independent-release-agent",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.terumo.com/system/files/document/2026-05/Presentation_01_26Q4_E.pdf",
+      "sourcePages": [
+        "公式GS26資料：2022～2026年度の5カ年成長戦略を確認。",
+        "公式資料：営業CF8,000～9,000億円、設備投資4,300～4,800億円。",
+        "公式資料：配当性向30%以上、自己株式取得・買収の資金配分方針。",
+        "公式PDF p.3: GS26の売上成長率目標High single-digitに対し5年CAGR12%（計画時想定為替換算で7%）、営業利益率目標20%以上に対しFY26実績20%、ROIC目標10%以上に対しFY26実績10%。",
+        "公式PDF p.4: FY26の成長要因としてCDMO新製品、価格施策、血管内治療、プラズマ事業、臓器移植関連の市場拡大を整理。",
+        "公式PDF p.17: 2026～2031年のニューロ事業製品パイプライン、臨床エビデンス拡充、オペレーション効率化、隣接市場参入を示す。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-17T10:00:00.000Z",
+      "reviewedAt": "2026-07-17T11:00:00.000Z"
+    },
+    {
+      "id": "review-4568-20260717-production-primary",
+      "companyCode": "4568",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.daiichisankyo.co.jp/about_us/mission-strength/vision/our_strategy/",
+      "sourcePages": [
+        "第一三共公式：第6期（2026-2030年度）中期経営計画を2026年5月11日に公表。",
+        "2026年3月期有価証券報告書：2030年度売上収益3兆円以上、営業利益6,000億円以上、EPS260円以上、調整後DOE10.0%以上を確認。",
+        "公式プレスリリース：がん事業とイノベーションで世界を牽引する2035年ビジョンを確認。",
+        "公式Webページ（見出し: 第6期中期経営計画達成に向けた戦略）: DXd ADCsの成長、新BGTsの特定、2035年に世界トップ5のがん企業を目指す戦略を示す。",
+        "公式Webページ（見出し: 2030年度計数目標）: 売上収益3兆円以上、営業利益6,000億円以上、EPS260円以上、調整後DOE各年度10%以上を掲げる。",
+        "公式Webページ（見出し: 第5期中期経営計画の振り返り：計数目標）: 2025年度実績として売上収益2兆1,230億円、がん領域9,540億円、ROE15.8%、DOE8.7%を開示。",
+        "公式Webページ（見出し: 株主還元方針）: 累進配当、調整後DOE10%以上、状況に応じた機動的な自己株式取得を掲げる。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-17T08:01:00.000Z",
+      "reviewedAt": "2026-07-17T09:01:00.000Z"
+    },
+    {
+      "id": "review-4568-20260717-production-double-check",
+      "companyCode": "4568",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "independent-release-agent",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.daiichisankyo.co.jp/about_us/mission-strength/vision/our_strategy/",
+      "sourcePages": [
+        "第一三共公式：第6期（2026-2030年度）中期経営計画を2026年5月11日に公表。",
+        "2026年3月期有価証券報告書：2030年度売上収益3兆円以上、営業利益6,000億円以上、EPS260円以上、調整後DOE10.0%以上を確認。",
+        "公式プレスリリース：がん事業とイノベーションで世界を牽引する2035年ビジョンを確認。",
+        "公式Webページ（見出し: 第6期中期経営計画達成に向けた戦略）: DXd ADCsの成長、新BGTsの特定、2035年に世界トップ5のがん企業を目指す戦略を示す。",
+        "公式Webページ（見出し: 2030年度計数目標）: 売上収益3兆円以上、営業利益6,000億円以上、EPS260円以上、調整後DOE各年度10%以上を掲げる。",
+        "公式Webページ（見出し: 第5期中期経営計画の振り返り：計数目標）: 2025年度実績として売上収益2兆1,230億円、がん領域9,540億円、ROE15.8%、DOE8.7%を開示。",
+        "公式Webページ（見出し: 株主還元方針）: 累進配当、調整後DOE10%以上、状況に応じた機動的な自己株式取得を掲げる。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-17T10:01:00.000Z",
+      "reviewedAt": "2026-07-17T11:01:00.000Z"
+    },
+    {
+      "id": "review-5411-20260717-production-primary",
+      "companyCode": "5411",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.jfe-holdings.co.jp/sustainability/sus_manage/manage/plan/",
+      "sourcePages": [
+        "公式IR：JFEビジョン2035と第8次中期経営計画（2025～2027年度）を策定。",
+        "公式資料：国内の量から質への転換、海外パートナーとの協業・M&A、グリーン鋼材・革新電気炉を確認。",
+        "公式サステナビリティ資料：2030年度GHG排出量を2013年度比30%以上削減。",
+        "公式Webページ（見出し: 2035年の目指す姿「JFEビジョン2035」）: 2035年度グループ事業利益7,000億円と、2025～2027年度を対象とする第8次中期経営計画の位置づけを示す。",
+        "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 2027年度の連結事業利益4,000億円、ROE少なくとも10%、Debt/EBITDA約3倍、D/E約60%を掲げる。",
+        "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 鉄鋼2,600億円、エンジニアリング420億円、商社600億円の利益目標と、配当性向30%程度・1株80円下限を示す。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-17T08:02:00.000Z",
+      "reviewedAt": "2026-07-17T09:02:00.000Z"
+    },
+    {
+      "id": "review-5411-20260717-production-double-check",
+      "companyCode": "5411",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "independent-release-agent",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.jfe-holdings.co.jp/sustainability/sus_manage/manage/plan/",
+      "sourcePages": [
+        "公式IR：JFEビジョン2035と第8次中期経営計画（2025～2027年度）を策定。",
+        "公式資料：国内の量から質への転換、海外パートナーとの協業・M&A、グリーン鋼材・革新電気炉を確認。",
+        "公式サステナビリティ資料：2030年度GHG排出量を2013年度比30%以上削減。",
+        "公式Webページ（見出し: 2035年の目指す姿「JFEビジョン2035」）: 2035年度グループ事業利益7,000億円と、2025～2027年度を対象とする第8次中期経営計画の位置づけを示す。",
+        "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 2027年度の連結事業利益4,000億円、ROE少なくとも10%、Debt/EBITDA約3倍、D/E約60%を掲げる。",
+        "公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 鉄鋼2,600億円、エンジニアリング420億円、商社600億円の利益目標と、配当性向30%程度・1株80円下限を示す。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-17T10:02:00.000Z",
+      "reviewedAt": "2026-07-17T11:02:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-4543-20260717-production-promotion",
+      "companyCode": "4543",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://www.terumo.com/system/files/document/2026-05/Presentation_01_26Q4_E.pdf",
+      "sourcePage": "公式GS26資料：2022～2026年度の5カ年成長戦略を確認。 / 公式資料：営業CF8,000～9,000億円、設備投資4,300～4,800億円。 / 公式資料：配当性向30%以上、自己株式取得・買収の資金配分方針。 / 公式PDF p.3: GS26の売上成長率目標High single-digitに対し5年CAGR12%（計画時想定為替換算で7%）、営業利益率目標20%以上に対しFY26実績20%、ROIC目標10%以上に対しFY26実績10%。 / 公式PDF p.4: FY26の成長要因としてCDMO新製品、価格施策、血管内治療、プラズマ事業、臓器移植関連の市場拡大を整理。 / 公式PDF p.17: 2026～2031年のニューロ事業製品パイプライン、臨床エビデンス拡充、オペレーション効率化、隣接市場参入を示す。",
+      "status": "corrected",
+      "reviewDecisionId": "review-4543-20260717-production-double-check",
+      "detectedAt": "2026-07-17T10:00:00.000Z",
+      "correctedAt": "2026-07-17T11:00:00.000Z"
+    },
+    {
+      "id": "correction-4568-20260717-production-promotion",
+      "companyCode": "4568",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://www.daiichisankyo.co.jp/about_us/mission-strength/vision/our_strategy/",
+      "sourcePage": "第一三共公式：第6期（2026-2030年度）中期経営計画を2026年5月11日に公表。 / 2026年3月期有価証券報告書：2030年度売上収益3兆円以上、営業利益6,000億円以上、EPS260円以上、調整後DOE10.0%以上を確認。 / 公式プレスリリース：がん事業とイノベーションで世界を牽引する2035年ビジョンを確認。 / 公式Webページ（見出し: 第6期中期経営計画達成に向けた戦略）: DXd ADCsの成長、新BGTsの特定、2035年に世界トップ5のがん企業を目指す戦略を示す。 / 公式Webページ（見出し: 2030年度計数目標）: 売上収益3兆円以上、営業利益6,000億円以上、EPS260円以上、調整後DOE各年度10%以上を掲げる。 / 公式Webページ（見出し: 第5期中期経営計画の振り返り：計数目標）: 2025年度実績として売上収益2兆1,230億円、がん領域9,540億円、ROE15.8%、DOE8.7%を開示。 / 公式Webページ（見出し: 株主還元方針）: 累進配当、調整後DOE10%以上、状況に応じた機動的な自己株式取得を掲げる。",
+      "status": "corrected",
+      "reviewDecisionId": "review-4568-20260717-production-double-check",
+      "detectedAt": "2026-07-17T10:01:00.000Z",
+      "correctedAt": "2026-07-17T11:01:00.000Z"
+    },
+    {
+      "id": "correction-5411-20260717-production-promotion",
+      "companyCode": "5411",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://www.jfe-holdings.co.jp/sustainability/sus_manage/manage/plan/",
+      "sourcePage": "公式IR：JFEビジョン2035と第8次中期経営計画（2025～2027年度）を策定。 / 公式資料：国内の量から質への転換、海外パートナーとの協業・M&A、グリーン鋼材・革新電気炉を確認。 / 公式サステナビリティ資料：2030年度GHG排出量を2013年度比30%以上削減。 / 公式Webページ（見出し: 2035年の目指す姿「JFEビジョン2035」）: 2035年度グループ事業利益7,000億円と、2025～2027年度を対象とする第8次中期経営計画の位置づけを示す。 / 公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 2027年度の連結事業利益4,000億円、ROE少なくとも10%、Debt/EBITDA約3倍、D/E約60%を掲げる。 / 公式Webページ（見出し: 主要業績・収益性目標、株主還元方針）: 鉄鋼2,600億円、エンジニアリング420億円、商社600億円の利益目標と、配当性向30%程度・1株80円下限を示す。",
+      "status": "corrected",
+      "reviewDecisionId": "review-5411-20260717-production-double-check",
+      "detectedAt": "2026-07-17T10:02:00.000Z",
+      "correctedAt": "2026-07-17T11:02:00.000Z"
+    }
+  ]
+}

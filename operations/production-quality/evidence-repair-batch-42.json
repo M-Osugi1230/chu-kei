@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "evidence-repair-batch-42",
+  "runRequested": true,
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "allowedStages": ["detailed_extracted"],
+  "expectedCoreCount": 204,
+  "expectedDetailedExtractedCount": 18,
+  "expectedFiveStarAfterApproval": 193,
+  "records": [
+    {
+      "code": "7201",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://www2.nissan-global.com/JP/COMPANY/PLAN/RENISSAN/",
+      "document": "日産自動車 経営再建計画 Re:Nissan",
+      "planPublishedDate": "2025-05-13",
+      "verifiedDate": "2026-07-17",
+      "reason": "日産公式の現行経営再建計画で、2026年度までの黒字化目標、コスト構造改革、市場・商品戦略、パートナーシップ、事業構造強化を具体的な見出し単位で確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 経営再建計画 Re:Nissanについて）: 2026年度までに自動車事業の営業利益とフリーキャッシュフローの黒字化を目指す。",
+        "公式Webページ（見出し: 経営再建計画 Re:Nissanについて）: 計画の3本柱をコスト構造の改善、市場戦略と商品戦略の再定義、パートナーシップの強化とする。",
+        "公式Webページ（見出し: 市場戦略と商品戦略の再定義）: 重点市場を明確にし、市場ごとに最適なモデルを適切な価格帯で投入する。",
+        "公式Webページ（見出し: パートナーシップの強化）: ルノー、三菱自動車、ホンダ等との知能化・電動化・商品補完プロジェクトを推進する。",
+        "公式Webページ（見出し: よりスリムで、強靭な事業構造へ）: 業務効率化、開発スピード向上、リソース最適化を通じて長期的な安定性を築く。"
+      ]
+    },
+    {
+      "code": "6098",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://recruit-holdings.com/ja/",
+      "document": "リクルートホールディングス 2026年3月期有価証券報告書・3つの経営戦略",
+      "planPublishedDate": "2026-06-19",
+      "verifiedDate": "2026-07-17",
+      "reason": "リクルート公式サイトで最新有価証券報告書の提出日と、人材マッチング・業務支援・共存共栄の3つの経営戦略を具体的に確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 2026年3月期 有価証券報告書）: 最新の有価証券報告書を2026年6月19日に公表した。",
+        "公式Webページ（見出し: 3つの経営戦略）: 急速に変化する市場で事業機会を捉え、ステークホルダーとの共存共栄を通じて企業価値を高める。",
+        "公式Webページ（見出し: Simplify Hiring）: 求職者の仕事探しを速く簡単にし、企業の採用コストと時間を削減して採用プロセスを効率化する。",
+        "公式Webページ（見出し: Help Businesses Work Smarter）: 業界特化型マッチング、業務支援SaaS、Airビジネスツールズで日本企業の生産性と業績向上を支援する。",
+        "公式Webページ（見出し: Prosper Together）: ステークホルダーとの共存共栄を通じた持続的な成長を推進する。"
+      ]
+    },
+    {
+      "code": "3064",
+      "expectedStage": "detailed_extracted",
+      "sourceUrl": "https://corp.monotaro.com/ir/finance/finance_02.html",
+      "document": "MonotaRO 2025年12月期決算・2026年12月期連結業績予想",
+      "planPublishedDate": "2026-02-03",
+      "verifiedDate": "2026-07-17",
+      "reason": "MonotaRO公式の決算・業績予想ページで、2025年実績、2026年予想、顧客・商品・データ・物流・海外の成長施策を同一定義で確認できるため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 2026年12月期の連結業績予想）: 顧客獲得、大企業向け購買システム連携、取扱商品・当日出荷品拡充を進める。",
+        "公式Webページ（見出し: 2026年12月期の連結業績予想）: データサイエンス、ウェブサイト改善、配送ネットワーク・サプライチェーン高度化で既存顧客への販売を強化する。",
+        "公式Webページ（見出し: 2026年12月期の連結業績予想）: 韓国・インドネシア・インドで顧客基盤、商品・在庫、オペレーションを拡充する。",
+        "公式Webページ（見出し: 2026年12月期の連結業績予想）: 売上高3,813億79百万円、営業利益530億69百万円、経常利益527億89百万円、純利益361億80百万円を予想する。",
+        "公式Webページ（見出し: 2025年12月期実績）: 売上高3,338億80百万円、営業利益461億92百万円、純利益324億34百万円を開示する。"
+      ]
+    }
+  ],
+  "productionPromotion": {
+    "schemaVersion": "production-promotion-batch-v1",
+    "batchId": "production-promotion-batch-324",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "codes": ["7201", "6098", "3064"],
+    "targetCoreCount": 207,
+    "primaryAuthor": "production-quality-agent",
+    "primaryReviewer": "production-quality-review",
+    "independentAuthor": "independent-release-agent",
+    "independentReviewer": "independent-release-review",
+    "approvalDate": "2026-07-17"
+  }
+}

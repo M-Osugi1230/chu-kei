@@ -13381,5 +13381,181 @@
     "reviewDecisionId": "review-8316-20260717-production-double-check",
     "detectedAt": "2026-07-17T10:02:00.000Z",
     "correctedAt": "2026-07-17T11:02:00.000Z"
+  },
+  {
+    "id": "correction-7751-20260717-evidence",
+    "companyCode": "7751",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://global.canon/ja/corporate/strategies/",
+      "document": "グローバル優良企業グループ構想 フェーズVII",
+      "planPublishedDate": "2026",
+      "lastVerifiedDate": "2026-07-10",
+      "evidenceRefs": [
+        "キヤノン公式「中長期経営計画」：フェーズVII（2026-2030）と7つの戦略を確認。",
+        "同ページ：2030年売上高5兆6,000億円以上、営業利益率15%以上、ROE15%以上を確認。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "after": {
+      "sourceUrl": "https://global.canon/ja/ir/library/integrated.html",
+      "document": "キヤノン グローバル優良企業グループ構想 フェーズVII",
+      "planPublishedDate": "2026-01-15",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "キヤノン公式「中長期経営計画」：フェーズVII（2026-2030）と7つの戦略を確認。",
+        "同ページ：2030年売上高5兆6,000億円以上、営業利益率15%以上、ROE15%以上を確認。",
+        "公式Webページ（見出し: 中長期の経営計画の目標は）: 2026年に5カ年計画フェーズVIIを開始し、2030年に売上高5兆6,000億円以上、営業利益率15%以上、純利益率10%以上、ROE15%以上を掲げる。",
+        "公式Webページ（見出し: 目標達成のための戦略は）: 販売・生産・メディカル事業の構造改革、AIソリューション、宇宙事業、M&Aによる事業領域拡大を進める。",
+        "公式Webページ（見出し: キヤノン統合報告書 2026を発行）: フェーズVIIの2030年目標と各事業・財務・人材・研究開発・知財戦略を統合して開示する。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "reason": "キヤノン公式のフェーズVII説明会、個人投資家向け経営計画ページ、統合報告書2026で、2026～2030年の5カ年計画、2030年の売上高・営業利益率・純利益率・ROE、構造改革・AI・宇宙・M&Aを含む成長戦略を具体的な見出し単位で確認できるため。",
+    "sourceUrl": "https://global.canon/ja/ir/library/integrated.html",
+    "sourcePage": "公式Webページ（見出し: 中長期の経営計画の目標は）: 2026年に5カ年計画フェーズVIIを開始し、2030年に売上高5兆6,000億円以上、営業利益率15%以上、純利益率10%以上、ROE15%以上を掲げる。 / 公式Webページ（見出し: 目標達成のための戦略は）: 販売・生産・メディカル事業の構造改革、AIソリューション、宇宙事業、M&Aによる事業領域拡大を進める。 / 公式Webページ（見出し: キヤノン統合報告書 2026を発行）: フェーズVIIの2030年目標と各事業・財務・人材・研究開発・知財戦略を統合して開示する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7751-20260717-evidence",
+    "detectedAt": "2026-07-17T06:00:00.000Z",
+    "correctedAt": "2026-07-17T07:00:00.000Z"
+  },
+  {
+    "id": "correction-7182-20260717-evidence",
+    "companyCode": "7182",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://www.jp-bank.japanpost.jp/ir/financial/ir_fnc_presentation.html",
+      "document": "中期経営計画（2026～2028年度）",
+      "planPublishedDate": "2026-05-15",
+      "lastVerifiedDate": "2026-07-10",
+      "evidenceRefs": [
+        "公式投資家説明会：2026～2028年度の新中計を確認。",
+        "公式資料：2028年度当期純利益1兆円超、ROE10%程度。",
+        "公式資料：日本随一の総合金融プラットフォーマー、世界有数のマーケットプレイヤーを長期像として確認。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "after": {
+      "sourceUrl": "https://www.jp-bank.japanpost.jp/aboutus/company/abt_cmp_strategy.html",
+      "document": "ゆうちょ銀行 中期経営計画2026～2028年度",
+      "planPublishedDate": "2026-05-15",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "公式投資家説明会：2026～2028年度の新中計を確認。",
+        "公式資料：2028年度当期純利益1兆円超、ROE10%程度。",
+        "公式資料：日本随一の総合金融プラットフォーマー、世界有数のマーケットプレイヤーを長期像として確認。",
+        "公式Webページ（見出し: 中期経営計画）: 2026年度から2028年度を計画期間とし、最終年度に当期純利益1兆円超、ROE10%程度を目指す。",
+        "公式Webページ（見出し: 中期経営計画）: デジタルペイメント、コンサルティング、市場運用・アセットマネジメント、地域・企業ソリューションの4事業戦略を推進する。",
+        "公式Webページ（見出し: 資本コストや株価を意識した経営の実現に向けた取組み）: 株主資本コストを概ね6～8%と認識し、ROE10%程度を目標に成長投資・利益成長・株主還元の循環を最大化する。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "reason": "ゆうちょ銀行公式の経営戦略ページと策定リリースで、2026～2028年度の計画期間、2028年度の当期純利益・ROE目標、4つの事業戦略、株主資本コスト認識と成長投資・株主還元の資本循環を具体的な見出し単位で確認できるため。",
+    "sourceUrl": "https://www.jp-bank.japanpost.jp/aboutus/company/abt_cmp_strategy.html",
+    "sourcePage": "公式Webページ（見出し: 中期経営計画）: 2026年度から2028年度を計画期間とし、最終年度に当期純利益1兆円超、ROE10%程度を目指す。 / 公式Webページ（見出し: 中期経営計画）: デジタルペイメント、コンサルティング、市場運用・アセットマネジメント、地域・企業ソリューションの4事業戦略を推進する。 / 公式Webページ（見出し: 資本コストや株価を意識した経営の実現に向けた取組み）: 株主資本コストを概ね6～8%と認識し、ROE10%程度を目標に成長投資・利益成長・株主還元の循環を最大化する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7182-20260717-evidence",
+    "detectedAt": "2026-07-17T06:01:00.000Z",
+    "correctedAt": "2026-07-17T07:01:00.000Z"
+  },
+  {
+    "id": "correction-4911-20260717-evidence",
+    "companyCode": "4911",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://corp.shiseido.com/jp/ir/strategy/",
+      "document": "2030 中期経営戦略",
+      "planPublishedDate": "2025-11-10",
+      "lastVerifiedDate": "2026-07-10",
+      "evidenceRefs": [
+        "公式戦略ページ：2030中期経営戦略、ブランド集中、グローバル構造改革を確認。",
+        "公式資料：2026年コア利益率7%、2030年10%以上、売上成長率市場+2～5%。",
+        "公式資料：AI活用、新カテゴリー、地域拡大、人財投資強化を確認。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "after": {
+      "sourceUrl": "https://corp.shiseido.com/jp/news/detail.html?n=00000000004093",
+      "document": "資生堂 2030中期経営戦略",
+      "planPublishedDate": "2025-11-10",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "公式戦略ページ：2030中期経営戦略、ブランド集中、グローバル構造改革を確認。",
+        "公式資料：2026年コア利益率7%、2030年10%以上、売上成長率市場+2～5%。",
+        "公式資料：AI活用、新カテゴリー、地域拡大、人財投資強化を確認。",
+        "公式Webページ（見出し: 2030中期経営戦略）: 2025～2030年の年平均売上成長率を市場を上回る2～5%とし、2030年のコア営業利益率10%以上を目指す。",
+        "公式Webページ（見出し: 2030中期経営戦略 概要）: ブランドの成長加速、グローバルオペレーションの進化、サステナブルな価値創造を3つの戦略の柱とする。",
+        "公式Webページ（見出し: 財務戦略）: 2030年にコア営業利益率10%以上、ROIC10%以上、ROE12%以上、フリーキャッシュフロー1,000億円以上を掲げる。",
+        "公式Webページ（見出し: 財務戦略）: 2026～2030年累計営業キャッシュフロー5,000～6,000億円を見込み、DOE2.5%以上を目安に安定配当と機動的な自己株式取得を進める。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "reason": "資生堂公式の2030中期経営戦略リリースと中長期経営戦略ページで、ブランド価値最大化、3つの戦略の柱、2025～2030年の売上成長率、2030年の利益率・ROIC・ROE・FCF、キャッシュアロケーションと株主還元方針を確認できるため。",
+    "sourceUrl": "https://corp.shiseido.com/jp/news/detail.html?n=00000000004093",
+    "sourcePage": "公式Webページ（見出し: 2030中期経営戦略）: 2025～2030年の年平均売上成長率を市場を上回る2～5%とし、2030年のコア営業利益率10%以上を目指す。 / 公式Webページ（見出し: 2030中期経営戦略 概要）: ブランドの成長加速、グローバルオペレーションの進化、サステナブルな価値創造を3つの戦略の柱とする。 / 公式Webページ（見出し: 財務戦略）: 2030年にコア営業利益率10%以上、ROIC10%以上、ROE12%以上、フリーキャッシュフロー1,000億円以上を掲げる。 / 公式Webページ（見出し: 財務戦略）: 2026～2030年累計営業キャッシュフロー5,000～6,000億円を見込み、DOE2.5%以上を目安に安定配当と機動的な自己株式取得を進める。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4911-20260717-evidence",
+    "detectedAt": "2026-07-17T06:02:00.000Z",
+    "correctedAt": "2026-07-17T07:02:00.000Z"
+  },
+  {
+    "id": "correction-7751-20260717-production-promotion",
+    "companyCode": "7751",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://global.canon/ja/ir/library/integrated.html",
+    "sourcePage": "キヤノン公式「中長期経営計画」：フェーズVII（2026-2030）と7つの戦略を確認。 / 同ページ：2030年売上高5兆6,000億円以上、営業利益率15%以上、ROE15%以上を確認。 / 公式Webページ（見出し: 中長期の経営計画の目標は）: 2026年に5カ年計画フェーズVIIを開始し、2030年に売上高5兆6,000億円以上、営業利益率15%以上、純利益率10%以上、ROE15%以上を掲げる。 / 公式Webページ（見出し: 目標達成のための戦略は）: 販売・生産・メディカル事業の構造改革、AIソリューション、宇宙事業、M&Aによる事業領域拡大を進める。 / 公式Webページ（見出し: キヤノン統合報告書 2026を発行）: フェーズVIIの2030年目標と各事業・財務・人材・研究開発・知財戦略を統合して開示する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7751-20260717-production-double-check",
+    "detectedAt": "2026-07-17T10:00:00.000Z",
+    "correctedAt": "2026-07-17T11:00:00.000Z"
+  },
+  {
+    "id": "correction-7182-20260717-production-promotion",
+    "companyCode": "7182",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.jp-bank.japanpost.jp/aboutus/company/abt_cmp_strategy.html",
+    "sourcePage": "公式投資家説明会：2026～2028年度の新中計を確認。 / 公式資料：2028年度当期純利益1兆円超、ROE10%程度。 / 公式資料：日本随一の総合金融プラットフォーマー、世界有数のマーケットプレイヤーを長期像として確認。 / 公式Webページ（見出し: 中期経営計画）: 2026年度から2028年度を計画期間とし、最終年度に当期純利益1兆円超、ROE10%程度を目指す。 / 公式Webページ（見出し: 中期経営計画）: デジタルペイメント、コンサルティング、市場運用・アセットマネジメント、地域・企業ソリューションの4事業戦略を推進する。 / 公式Webページ（見出し: 資本コストや株価を意識した経営の実現に向けた取組み）: 株主資本コストを概ね6～8%と認識し、ROE10%程度を目標に成長投資・利益成長・株主還元の循環を最大化する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7182-20260717-production-double-check",
+    "detectedAt": "2026-07-17T10:01:00.000Z",
+    "correctedAt": "2026-07-17T11:01:00.000Z"
+  },
+  {
+    "id": "correction-4911-20260717-production-promotion",
+    "companyCode": "4911",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://corp.shiseido.com/jp/news/detail.html?n=00000000004093",
+    "sourcePage": "公式戦略ページ：2030中期経営戦略、ブランド集中、グローバル構造改革を確認。 / 公式資料：2026年コア利益率7%、2030年10%以上、売上成長率市場+2～5%。 / 公式資料：AI活用、新カテゴリー、地域拡大、人財投資強化を確認。 / 公式Webページ（見出し: 2030中期経営戦略）: 2025～2030年の年平均売上成長率を市場を上回る2～5%とし、2030年のコア営業利益率10%以上を目指す。 / 公式Webページ（見出し: 2030中期経営戦略 概要）: ブランドの成長加速、グローバルオペレーションの進化、サステナブルな価値創造を3つの戦略の柱とする。 / 公式Webページ（見出し: 財務戦略）: 2030年にコア営業利益率10%以上、ROIC10%以上、ROE12%以上、フリーキャッシュフロー1,000億円以上を掲げる。 / 公式Webページ（見出し: 財務戦略）: 2026～2030年累計営業キャッシュフロー5,000～6,000億円を見込み、DOE2.5%以上を目安に安定配当と機動的な自己株式取得を進める。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4911-20260717-production-double-check",
+    "detectedAt": "2026-07-17T10:02:00.000Z",
+    "correctedAt": "2026-07-17T11:02:00.000Z"
   }
 ]

@@ -15116,5 +15116,77 @@
     "reviewDecisionId": "review-4385-20260717-production-double-check",
     "detectedAt": "2026-07-17T10:02:00.000Z",
     "correctedAt": "2026-07-17T11:02:00.000Z"
+  },
+  {
+    "id": "correction-2168-20260717-structured-expansion",
+    "companyCode": "2168",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": true,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-07-17",
+      "revenue": "2030年5月期 売上高4,000億円。BPOソリューション売上高1,700億円"
+    },
+    "reason": "パソナグループの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.pasonagroup.co.jp/Portals/0/resources/ir/pdf/VISION2030_20250717.pdf",
+    "sourcePage": "公式PDF p.10: 2030年5月期の売上高4,000億円、経常利益率5%、ROE8%以上、PBR1倍超。 / 公式PDF p.11: 2026年5月期から5年間をVISION期間とし、収益構造改革と新たな事業成長を進める。 / 公式PDF p.13: PBR・ROE向上策、投資効率、株主還元、自己株式取得を含む企業価値向上施策。 / 公式PDF p.16: BPOソリューション売上高1,700億円、売上総利益率24%。 / 公式PDF p.47: 成長投資650億円＋α、経営基盤強化300億円＋α、株主還元170億円＋αの資金配分。 / 公式PDF p.48: 配当性向40%目途、累進配当75円下限、特別配当と機動的自己株式取得。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2168-20260717-structured-expansion",
+    "detectedAt": "2026-07-17T18:00:00.000Z",
+    "correctedAt": "2026-07-17T19:00:00.000Z"
+  },
+  {
+    "id": "correction-9247-20260717-structured-expansion",
+    "companyCode": "9247",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": true,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-22",
+      "revenue": "2031年3月期 売上高1,350億円"
+    },
+    "reason": "ＴＲＥホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://tre-hd.co.jp/download/assets/uploads/trehd_mtbp.pdf",
+    "sourcePage": "公式PDF p.13: 2031年3月期の売上高1,350億円、事業利益135億円、事業利益率10%、純利益80.6億円、EBITDA244億円。 / 公式PDF p.14: 総還元性向35〜40%下限、年間配当50円下限の株主還元方針。 / 公式PDF p.15: 営業キャッシュフロー800億円、主要設備投資575億円、M&A270億円、更新投資370億円の資金配分。 / 公式PDF p.16: 2031年3月期EBITDA244億円、自己資本比率40%以上の財務目標。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9247-20260717-structured-expansion",
+    "detectedAt": "2026-07-17T18:01:00.000Z",
+    "correctedAt": "2026-07-17T19:01:00.000Z"
+  },
+  {
+    "id": "correction-9861-20260717-structured-expansion",
+    "companyCode": "9861",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": true,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-19",
+      "revenue": "2029年度 売上高3,000億円。ラーメン事業売上高400億円"
+    },
+    "reason": "吉野家ホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.yoshinoya-holdings.com/file/ir/dl/cp2026-21-32.pdf",
+    "sourcePage": "公式PDF p.21: 2025-2029年度グループ中期経営計画の全体像と変身・成長の方向性。 / 公式PDF p.21-p.22: 2025年度実績と2027年度計画、2029年度の売上高3,000億円、営業利益150億円、ROIC7%、D/E0.9倍以内。 / 公式PDF p.22: ラーメン事業売上高400億円、国内外・M&Aによる事業ポートフォリオ拡大。 / 公式PDF p.23-p.24: EBITDA1,000億円＋α、オーガニック投資800億円、インオーガニック投資400億円、IT・人的資本・サステナビリティ施策。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9861-20260717-structured-expansion",
+    "detectedAt": "2026-07-17T18:02:00.000Z",
+    "correctedAt": "2026-07-17T19:02:00.000Z"
   }
 ]

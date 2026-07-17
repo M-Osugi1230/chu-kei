@@ -1,10 +1,11 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-39",
-  "runRequested": true,
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
-  "allowedStages": ["detailed_extracted"],
+  "allowedStages": [
+    "detailed_extracted"
+  ],
   "expectedCoreCount": 198,
   "expectedDetailedExtractedCount": 24,
   "expectedFiveStarAfterApproval": 187,
@@ -54,18 +55,5 @@
         "公式Webページ（見出し: 株主還元）: 2026年から2030年の5カ年累計で総還元性向50%以上を継続し、累進配当を導入する。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-322",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "codes": ["4188", "9020", "5019"],
-    "targetCoreCount": 201,
-    "primaryAuthor": "production-quality-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "independent-release-agent",
-    "independentReviewer": "independent-release-review",
-    "approvalDate": "2026-07-17"
-  }
+  ]
 }

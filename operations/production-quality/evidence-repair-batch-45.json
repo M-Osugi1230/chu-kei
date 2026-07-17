@@ -1,10 +1,11 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-45",
-  "runRequested": true,
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
-  "allowedStages": ["detailed_extracted"],
+  "allowedStages": [
+    "detailed_extracted"
+  ],
   "expectedCoreCount": 213,
   "expectedDetailedExtractedCount": 9,
   "expectedFiveStarAfterApproval": 202,
@@ -57,18 +58,5 @@
         "公式Webページ（見出し: 2026年6月期3Q 決算情報）: 最新の第3四半期決算短信、説明資料、データシート、質疑応答要約を公開する。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-327",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "codes": ["4063", "7203", "4385"],
-    "targetCoreCount": 216,
-    "primaryAuthor": "production-quality-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "independent-release-agent",
-    "independentReviewer": "independent-release-review",
-    "approvalDate": "2026-07-17"
-  }
+  ]
 }

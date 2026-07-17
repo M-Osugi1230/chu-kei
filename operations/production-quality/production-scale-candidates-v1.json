@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-17T00:42:19.618Z",
-  "sourceBundleSha256": "8809820b7c400b70d275590f18a7de0ceb7eda8e0b42714198f89915950de16f",
+  "generatedAt": "2026-07-17T00:47:52.980Z",
+  "sourceBundleSha256": "99dc7d35b40a27bdc01851bc4b146083bd2d8eff50380aff24fa17bfbd40c58f",
   "companyCount": 1200,
   "progressCount": 291,
-  "detailedExtractedCount": 30,
+  "detailedExtractedCount": 27,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -17,9 +17,9 @@
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 27,
+    "detailedWithProgressFlag": 24,
     "detailedWithoutProgressFlag": 3,
-    "detailedWithMatchedProgressRows": 1,
+    "detailedWithMatchedProgressRows": 0,
     "progressExistsButFlagMissing": 0,
     "pageEvidenceAndPublicationReadyButProgressMissing": 3
   },
@@ -607,104 +607,10 @@
       ]
     },
     {
-      "code": "8801",
-      "name": "三井不動産",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2024-04-11",
-      "evidenceRefCount": 3,
-      "pageEvidenceRefCount": 0,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 5,
-      "matchedProgressSample": [
-        {
-          "code": "8801",
-          "fiscalYear": "FY2026",
-          "metric": "businessProfit",
-          "targetValue": 4400,
-          "actualValue": null,
-          "unit": "億円以上",
-          "progressRate": null,
-          "source": "& INNOVATION 2030: 2026年度事業利益4,400億円以上",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 下限型目標。"
-        },
-        {
-          "code": "8801",
-          "fiscalYear": "FY2026",
-          "metric": "netProfit",
-          "targetValue": 2700,
-          "actualValue": null,
-          "unit": "億円以上",
-          "progressRate": null,
-          "source": "& INNOVATION 2030: 2026年度純利益2,700億円以上",
-          "updatedAt": "2026-07-09",
-          "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 下限型目標。"
-        }
-      ],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "8802",
-      "name": "三菱地所",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2024-05",
-      "evidenceRefCount": 3,
-      "pageEvidenceRefCount": 0,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
       "code": "9020",
       "name": "東日本旅客鉄道",
       "lastVerifiedDate": "2026-07-10",
       "planPublishedDate": "2026-04-30",
-      "evidenceRefCount": 3,
-      "pageEvidenceRefCount": 0,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "9107",
-      "name": "川崎汽船",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2022-05-09",
       "evidenceRefCount": 3,
       "pageEvidenceRefCount": 0,
       "hasProgressFlag": true,

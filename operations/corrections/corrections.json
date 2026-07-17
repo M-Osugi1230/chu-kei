@@ -14404,5 +14404,182 @@
     "reviewDecisionId": "review-9983-20260717-evidence",
     "detectedAt": "2026-07-17T06:02:00.000Z",
     "correctedAt": "2026-07-17T07:02:00.000Z"
+  },
+  {
+    "id": "correction-7201-20260717-evidence",
+    "companyCode": "7201",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://www.nissan-global.com/JP/IR/",
+      "document": "経営再建計画 Re:Nissan・2025年度決算資料",
+      "planPublishedDate": "2026-05-13",
+      "lastVerifiedDate": "2026-07-10",
+      "evidenceRefs": [
+        "日産公式IR：Re:Nissanは2026年度までに業績を回復し、長期成長に向け経営を再建する行動計画と説明。",
+        "2025年度第1四半期決算報告：2026年度までに5,000億円削減、自動車事業の営業利益・FCF黒字化を確認。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "after": {
+      "sourceUrl": "https://www2.nissan-global.com/JP/COMPANY/PLAN/RENISSAN/",
+      "document": "日産自動車 経営再建計画 Re:Nissan",
+      "planPublishedDate": "2025-05-13",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "日産公式IR：Re:Nissanは2026年度までに業績を回復し、長期成長に向け経営を再建する行動計画と説明。",
+        "2025年度第1四半期決算報告：2026年度までに5,000億円削減、自動車事業の営業利益・FCF黒字化を確認。",
+        "公式Webページ（見出し: 経営再建計画 Re:Nissanについて）: 2026年度までに自動車事業の営業利益とフリーキャッシュフローの黒字化を目指す。",
+        "公式Webページ（見出し: 経営再建計画 Re:Nissanについて）: 計画の3本柱をコスト構造の改善、市場戦略と商品戦略の再定義、パートナーシップの強化とする。",
+        "公式Webページ（見出し: 市場戦略と商品戦略の再定義）: 重点市場を明確にし、市場ごとに最適なモデルを適切な価格帯で投入する。",
+        "公式Webページ（見出し: パートナーシップの強化）: ルノー、三菱自動車、ホンダ等との知能化・電動化・商品補完プロジェクトを推進する。",
+        "公式Webページ（見出し: よりスリムで、強靭な事業構造へ）: 業務効率化、開発スピード向上、リソース最適化を通じて長期的な安定性を築く。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "reason": "日産公式の現行経営再建計画で、2026年度までの黒字化目標、コスト構造改革、市場・商品戦略、パートナーシップ、事業構造強化を具体的な見出し単位で確認できるため。",
+    "sourceUrl": "https://www2.nissan-global.com/JP/COMPANY/PLAN/RENISSAN/",
+    "sourcePage": "公式Webページ（見出し: 経営再建計画 Re:Nissanについて）: 2026年度までに自動車事業の営業利益とフリーキャッシュフローの黒字化を目指す。 / 公式Webページ（見出し: 経営再建計画 Re:Nissanについて）: 計画の3本柱をコスト構造の改善、市場戦略と商品戦略の再定義、パートナーシップの強化とする。 / 公式Webページ（見出し: 市場戦略と商品戦略の再定義）: 重点市場を明確にし、市場ごとに最適なモデルを適切な価格帯で投入する。 / 公式Webページ（見出し: パートナーシップの強化）: ルノー、三菱自動車、ホンダ等との知能化・電動化・商品補完プロジェクトを推進する。 / 公式Webページ（見出し: よりスリムで、強靭な事業構造へ）: 業務効率化、開発スピード向上、リソース最適化を通じて長期的な安定性を築く。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7201-20260717-evidence",
+    "detectedAt": "2026-07-17T06:00:00.000Z",
+    "correctedAt": "2026-07-17T07:00:00.000Z"
+  },
+  {
+    "id": "correction-6098-20260717-evidence",
+    "companyCode": "6098",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://recruit-holdings.com/ja/ir/executive-presentations/",
+      "document": "経営戦略・経営陣プレゼンテーション",
+      "planPublishedDate": "2026-06-04",
+      "lastVerifiedDate": "2026-07-10",
+      "evidenceRefs": [
+        "リクルート公式IR「経営陣によるプレゼンテーション」：Simplify Hiringを中心とする長期戦略を確認。",
+        "公式企業ページ：Simplify HiringとHelp Businesses Work Smarterを中核戦略として確認。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "after": {
+      "sourceUrl": "https://recruit-holdings.com/ja/",
+      "document": "リクルートホールディングス 2026年3月期有価証券報告書・3つの経営戦略",
+      "planPublishedDate": "2026-06-19",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "リクルート公式IR「経営陣によるプレゼンテーション」：Simplify Hiringを中心とする長期戦略を確認。",
+        "公式企業ページ：Simplify HiringとHelp Businesses Work Smarterを中核戦略として確認。",
+        "公式Webページ（見出し: 2026年3月期 有価証券報告書）: 最新の有価証券報告書を2026年6月19日に公表した。",
+        "公式Webページ（見出し: 3つの経営戦略）: 急速に変化する市場で事業機会を捉え、ステークホルダーとの共存共栄を通じて企業価値を高める。",
+        "公式Webページ（見出し: Simplify Hiring）: 求職者の仕事探しを速く簡単にし、企業の採用コストと時間を削減して採用プロセスを効率化する。",
+        "公式Webページ（見出し: Help Businesses Work Smarter）: 業界特化型マッチング、業務支援SaaS、Airビジネスツールズで日本企業の生産性と業績向上を支援する。",
+        "公式Webページ（見出し: Prosper Together）: ステークホルダーとの共存共栄を通じた持続的な成長を推進する。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "reason": "リクルート公式サイトで最新有価証券報告書の提出日と、人材マッチング・業務支援・共存共栄の3つの経営戦略を具体的に確認できるため。",
+    "sourceUrl": "https://recruit-holdings.com/ja/",
+    "sourcePage": "公式Webページ（見出し: 2026年3月期 有価証券報告書）: 最新の有価証券報告書を2026年6月19日に公表した。 / 公式Webページ（見出し: 3つの経営戦略）: 急速に変化する市場で事業機会を捉え、ステークホルダーとの共存共栄を通じて企業価値を高める。 / 公式Webページ（見出し: Simplify Hiring）: 求職者の仕事探しを速く簡単にし、企業の採用コストと時間を削減して採用プロセスを効率化する。 / 公式Webページ（見出し: Help Businesses Work Smarter）: 業界特化型マッチング、業務支援SaaS、Airビジネスツールズで日本企業の生産性と業績向上を支援する。 / 公式Webページ（見出し: Prosper Together）: ステークホルダーとの共存共栄を通じた持続的な成長を推進する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6098-20260717-evidence",
+    "detectedAt": "2026-07-17T06:01:00.000Z",
+    "correctedAt": "2026-07-17T07:01:00.000Z"
+  },
+  {
+    "id": "correction-3064-20260717-evidence",
+    "companyCode": "3064",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://corp.monotaro.com/ir/upload_file/m005-m005_11/MonotaRO_IntegratedReport_2025.pdf",
+      "document": "統合報告書2025",
+      "planPublishedDate": "2025-08-05",
+      "lastVerifiedDate": "2026-07-10",
+      "evidenceRefs": [
+        "統合報告書2025：顧客・商品データ、物流、事業成長、経営基盤を価値創造要素として開示。",
+        "統合報告書2025：新物流センターの稼働率向上と利益成長再加速に向けた事業改善を確認。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "after": {
+      "sourceUrl": "https://corp.monotaro.com/ir/finance/finance_02.html",
+      "document": "MonotaRO 2025年12月期決算・2026年12月期連結業績予想",
+      "planPublishedDate": "2026-02-03",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "統合報告書2025：顧客・商品データ、物流、事業成長、経営基盤を価値創造要素として開示。",
+        "統合報告書2025：新物流センターの稼働率向上と利益成長再加速に向けた事業改善を確認。",
+        "公式Webページ（見出し: 2026年12月期の連結業績予想）: 顧客獲得、大企業向け購買システム連携、取扱商品・当日出荷品拡充を進める。",
+        "公式Webページ（見出し: 2026年12月期の連結業績予想）: データサイエンス、ウェブサイト改善、配送ネットワーク・サプライチェーン高度化で既存顧客への販売を強化する。",
+        "公式Webページ（見出し: 2026年12月期の連結業績予想）: 韓国・インドネシア・インドで顧客基盤、商品・在庫、オペレーションを拡充する。",
+        "公式Webページ（見出し: 2026年12月期の連結業績予想）: 売上高3,813億79百万円、営業利益530億69百万円、経常利益527億89百万円、純利益361億80百万円を予想する。",
+        "公式Webページ（見出し: 2025年12月期実績）: 売上高3,338億80百万円、営業利益461億92百万円、純利益324億34百万円を開示する。"
+      ],
+      "stage": "detailed_extracted"
+    },
+    "reason": "MonotaRO公式の決算・業績予想ページで、2025年実績、2026年予想、顧客・商品・データ・物流・海外の成長施策を同一定義で確認できるため。",
+    "sourceUrl": "https://corp.monotaro.com/ir/finance/finance_02.html",
+    "sourcePage": "公式Webページ（見出し: 2026年12月期の連結業績予想）: 顧客獲得、大企業向け購買システム連携、取扱商品・当日出荷品拡充を進める。 / 公式Webページ（見出し: 2026年12月期の連結業績予想）: データサイエンス、ウェブサイト改善、配送ネットワーク・サプライチェーン高度化で既存顧客への販売を強化する。 / 公式Webページ（見出し: 2026年12月期の連結業績予想）: 韓国・インドネシア・インドで顧客基盤、商品・在庫、オペレーションを拡充する。 / 公式Webページ（見出し: 2026年12月期の連結業績予想）: 売上高3,813億79百万円、営業利益530億69百万円、経常利益527億89百万円、純利益361億80百万円を予想する。 / 公式Webページ（見出し: 2025年12月期実績）: 売上高3,338億80百万円、営業利益461億92百万円、純利益324億34百万円を開示する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3064-20260717-evidence",
+    "detectedAt": "2026-07-17T06:02:00.000Z",
+    "correctedAt": "2026-07-17T07:02:00.000Z"
+  },
+  {
+    "id": "correction-7201-20260717-production-promotion",
+    "companyCode": "7201",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www2.nissan-global.com/JP/COMPANY/PLAN/RENISSAN/",
+    "sourcePage": "日産公式IR：Re:Nissanは2026年度までに業績を回復し、長期成長に向け経営を再建する行動計画と説明。 / 2025年度第1四半期決算報告：2026年度までに5,000億円削減、自動車事業の営業利益・FCF黒字化を確認。 / 公式Webページ（見出し: 経営再建計画 Re:Nissanについて）: 2026年度までに自動車事業の営業利益とフリーキャッシュフローの黒字化を目指す。 / 公式Webページ（見出し: 経営再建計画 Re:Nissanについて）: 計画の3本柱をコスト構造の改善、市場戦略と商品戦略の再定義、パートナーシップの強化とする。 / 公式Webページ（見出し: 市場戦略と商品戦略の再定義）: 重点市場を明確にし、市場ごとに最適なモデルを適切な価格帯で投入する。 / 公式Webページ（見出し: パートナーシップの強化）: ルノー、三菱自動車、ホンダ等との知能化・電動化・商品補完プロジェクトを推進する。 / 公式Webページ（見出し: よりスリムで、強靭な事業構造へ）: 業務効率化、開発スピード向上、リソース最適化を通じて長期的な安定性を築く。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7201-20260717-production-double-check",
+    "detectedAt": "2026-07-17T10:00:00.000Z",
+    "correctedAt": "2026-07-17T11:00:00.000Z"
+  },
+  {
+    "id": "correction-6098-20260717-production-promotion",
+    "companyCode": "6098",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://recruit-holdings.com/ja/",
+    "sourcePage": "リクルート公式IR「経営陣によるプレゼンテーション」：Simplify Hiringを中心とする長期戦略を確認。 / 公式企業ページ：Simplify HiringとHelp Businesses Work Smarterを中核戦略として確認。 / 公式Webページ（見出し: 2026年3月期 有価証券報告書）: 最新の有価証券報告書を2026年6月19日に公表した。 / 公式Webページ（見出し: 3つの経営戦略）: 急速に変化する市場で事業機会を捉え、ステークホルダーとの共存共栄を通じて企業価値を高める。 / 公式Webページ（見出し: Simplify Hiring）: 求職者の仕事探しを速く簡単にし、企業の採用コストと時間を削減して採用プロセスを効率化する。 / 公式Webページ（見出し: Help Businesses Work Smarter）: 業界特化型マッチング、業務支援SaaS、Airビジネスツールズで日本企業の生産性と業績向上を支援する。 / 公式Webページ（見出し: Prosper Together）: ステークホルダーとの共存共栄を通じた持続的な成長を推進する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6098-20260717-production-double-check",
+    "detectedAt": "2026-07-17T10:01:00.000Z",
+    "correctedAt": "2026-07-17T11:01:00.000Z"
+  },
+  {
+    "id": "correction-3064-20260717-production-promotion",
+    "companyCode": "3064",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://corp.monotaro.com/ir/finance/finance_02.html",
+    "sourcePage": "統合報告書2025：顧客・商品データ、物流、事業成長、経営基盤を価値創造要素として開示。 / 統合報告書2025：新物流センターの稼働率向上と利益成長再加速に向けた事業改善を確認。 / 公式Webページ（見出し: 2026年12月期の連結業績予想）: 顧客獲得、大企業向け購買システム連携、取扱商品・当日出荷品拡充を進める。 / 公式Webページ（見出し: 2026年12月期の連結業績予想）: データサイエンス、ウェブサイト改善、配送ネットワーク・サプライチェーン高度化で既存顧客への販売を強化する。 / 公式Webページ（見出し: 2026年12月期の連結業績予想）: 韓国・インドネシア・インドで顧客基盤、商品・在庫、オペレーションを拡充する。 / 公式Webページ（見出し: 2026年12月期の連結業績予想）: 売上高3,813億79百万円、営業利益530億69百万円、経常利益527億89百万円、純利益361億80百万円を予想する。 / 公式Webページ（見出し: 2025年12月期実績）: 売上高3,338億80百万円、営業利益461億92百万円、純利益324億34百万円を開示する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3064-20260717-production-double-check",
+    "detectedAt": "2026-07-17T10:02:00.000Z",
+    "correctedAt": "2026-07-17T11:02:00.000Z"
   }
 ]

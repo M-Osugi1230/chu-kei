@@ -1,10 +1,11 @@
 {
   "schemaVersion": "core-evidence-repair-batch-v1",
   "batchId": "evidence-repair-batch-42",
-  "runRequested": true,
   "explicitSelection": true,
   "automaticSelectionAllowed": false,
-  "allowedStages": ["detailed_extracted"],
+  "allowedStages": [
+    "detailed_extracted"
+  ],
   "expectedCoreCount": 204,
   "expectedDetailedExtractedCount": 18,
   "expectedFiveStarAfterApproval": 193,
@@ -57,18 +58,5 @@
         "公式Webページ（見出し: 2025年12月期実績）: 売上高3,338億80百万円、営業利益461億92百万円、純利益324億34百万円を開示する。"
       ]
     }
-  ],
-  "productionPromotion": {
-    "schemaVersion": "production-promotion-batch-v1",
-    "batchId": "production-promotion-batch-324",
-    "explicitApproval": true,
-    "automaticSelectionAllowed": false,
-    "codes": ["7201", "6098", "3064"],
-    "targetCoreCount": 207,
-    "primaryAuthor": "production-quality-agent",
-    "primaryReviewer": "production-quality-review",
-    "independentAuthor": "independent-release-agent",
-    "independentReviewer": "independent-release-review",
-    "approvalDate": "2026-07-17"
-  }
+  ]
 }

@@ -1,0 +1,197 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-49",
+  "runRequested": true,
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "2168",
+      "sourceUrl": "https://www.pasonagroup.co.jp/Portals/0/resources/ir/pdf/VISION2030_20250717.pdf",
+      "document": "PASONA GROUP VISION 2030",
+      "sourcePublishedDate": "2025-07-17",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式PDF p.16に2025年5月期実績と2030年5月期戦略目標が同じ表で並記されており、BPOソリューション売上高と売上総利益率を同一定義・同一単位で接続できるため。全社売上高4,000億円は同ページに足元実績がないため進捗率対象から除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2030",
+          "metric": "bpoRevenue",
+          "targetValue": 1700,
+          "actualValue": 1372,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.16",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "PASONA GROUP VISION 2030 PDF p.16: 2025年5月期BPOソリューション売上高1,372億円",
+          "targetSource": "同 PDF p.16: 2030年5月期BPOソリューション売上高目標1,700億円",
+          "note": "全社売上高ではなくBPOソリューション事業の売上高として接続する。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "bpoGrossMargin",
+          "targetValue": 24,
+          "actualValue": 21.3,
+          "unit": "%",
+          "sourcePage": "公式PDF p.16",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "PASONA GROUP VISION 2030 PDF p.16: 2025年5月期BPOソリューション売上総利益率21.3%",
+          "targetSource": "同 PDF p.16: 2030年5月期BPOソリューション売上総利益率目標24%",
+          "note": "BPO事業の売上総利益率であり、全社経常利益率5%とは分離する。"
+        }
+      ]
+    },
+    {
+      "code": "9247",
+      "sourceUrl": "https://tre-hd.co.jp/download/assets/uploads/trehd_mtbp.pdf",
+      "document": "TREホールディングス 第2次中期経営計画（2024年度〜2028年度）",
+      "sourcePublishedDate": "2024-05-15",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式PDF p.18に2024年3月期実績と2029年3月期目標が同一表で並記され、売上高、営業利益、営業利益率、親会社株主帰属純利益、EBITDAを同一定義で接続できる。ROEは公式PDF p.33の2024年3月期実績5.5%と2029年3月期目標10%以上を接続する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 1200,
+          "actualValue": 928.6,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.18",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "第2次中期経営計画 PDF p.18: 2024年3月期売上高実績928.60億円",
+          "targetSource": "同 PDF p.18: 2029年3月期売上高目標1,200億円",
+          "note": "2024年3月期実績を2028年度最終目標へ接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 120,
+          "actualValue": 77.69,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.18",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "第2次中期経営計画 PDF p.18: 2024年3月期営業利益実績77.69億円",
+          "targetSource": "同 PDF p.18: 2029年3月期営業利益目標120億円",
+          "note": "会社定義の事業利益ではなく営業利益を接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingMargin",
+          "targetValue": 10,
+          "actualValue": 8.4,
+          "unit": "%",
+          "sourcePage": "公式PDF p.18",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "第2次中期経営計画 PDF p.18: 2024年3月期営業利益率実績8.4%",
+          "targetSource": "同 PDF p.18: 2029年3月期営業利益率目標10.0%",
+          "note": "営業利益率を同一表・同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "netProfit",
+          "targetValue": 75,
+          "actualValue": 36.23,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.18",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "第2次中期経営計画 PDF p.18: 2024年3月期親会社株主帰属純利益実績36.23億円",
+          "targetSource": "同 PDF p.18: 2029年3月期親会社株主帰属純利益目標75億円",
+          "note": "親会社株主に帰属する当期純利益を接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "ebitda",
+          "targetValue": 220,
+          "actualValue": 142.35,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.18",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "第2次中期経営計画 PDF p.18: 2024年3月期EBITDA実績142.35億円",
+          "targetSource": "同 PDF p.18: 2029年3月期EBITDA目標220億円",
+          "note": "営業利益と分離し、会社開示のEBITDAを接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "ROE",
+          "targetValue": 10,
+          "actualValue": 5.5,
+          "unit": "%",
+          "sourcePage": "公式PDF p.33",
+          "actualFiscalYear": "FY2023",
+          "actualSource": "第2次中期経営計画 PDF p.33: 2024年3月期ROE実績5.5%",
+          "targetSource": "同 PDF p.33: 2029年3月期ROE目標10%以上",
+          "note": "目標下限10%へ接続する。自己資本比率40%以上は下限制約のため単純進捗率から除外する。"
+        }
+      ]
+    },
+    {
+      "code": "9861",
+      "sourceUrl": "https://www.yoshinoya-holdings.com/file/ir/dl/cp2026-21-32.pdf",
+      "document": "吉野家ホールディングス 2025-2029年度グループ中期経営計画・統合報告書2026",
+      "sourcePublishedDate": "2025-05-19",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式の中期経営計画発表日と統合報告書2026 p.21-p.22で、2025年度実績と2029年度目標が同一図表に並記され、売上高、営業利益、ROIC、ラーメン事業売上高を同一定義・同一単位で接続できるため。D/Eレシオ0.9倍以内は低いほど良い上限制約なので単純進捗率から除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2029",
+          "metric": "revenue",
+          "targetValue": 3000,
+          "actualValue": 2256,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.21-p.22",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "統合報告書2026 PDF p.21-p.22: 2025年度売上高実績2,256億円",
+          "targetSource": "同 PDF p.21-p.22: 2029年度売上高目標3,000億円",
+          "note": "グループ連結売上高を接続する。"
+        },
+        {
+          "fiscalYear": "FY2029",
+          "metric": "operatingProfit",
+          "targetValue": 150,
+          "actualValue": 80,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.21-p.22",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "統合報告書2026 PDF p.21-p.22: 2025年度営業利益実績80億円",
+          "targetSource": "同 PDF p.21-p.22: 2029年度営業利益目標150億円",
+          "note": "営業利益を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2029",
+          "metric": "ROIC",
+          "targetValue": 7,
+          "actualValue": 6.7,
+          "unit": "%",
+          "sourcePage": "公式PDF p.21-p.22",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "統合報告書2026 PDF p.21-p.22: 2025年度ROIC実績6.7%",
+          "targetSource": "同 PDF p.21-p.22: 2029年度ROIC目標7.0%",
+          "note": "会社開示ROICを同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2029",
+          "metric": "ramenRevenue",
+          "targetValue": 400,
+          "actualValue": 116,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.21-p.22",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "統合報告書2026 PDF p.21-p.22: 2025年度ラーメン事業売上高実績116億円",
+          "targetSource": "同 PDF p.21-p.22: 2029年度ラーメン事業売上高目標400億円",
+          "note": "グループ売上高とは分離してラーメン事業の事業別KPIとして接続する。"
+        }
+      ]
+    }
+  ],
+  "productionPromotion": {
+    "schemaVersion": "production-promotion-batch-v1",
+    "batchId": "production-promotion-batch-329",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "codes": ["2168", "9247", "9861"],
+    "targetCoreCount": 219,
+    "primaryAuthor": "production-quality-agent",
+    "primaryReviewer": "production-quality-review",
+    "independentAuthor": "independent-release-agent",
+    "independentReviewer": "independent-release-review",
+    "approvalDate": "2026-07-17"
+  }
+}

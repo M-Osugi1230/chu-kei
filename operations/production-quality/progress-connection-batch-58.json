@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-58",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "4061",
+      "sourceUrl": "https://www.denka.co.jp/pdf/ir/presentation/20260227_denka_ir_management.pdf",
+      "document": "Mission 2030 フェーズ2／2025年度決算説明会",
+      "sourcePublishedDate": "2026-02-27",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式Mission 2030フェーズ2 PDF p.45の2028年度固定目標と、2026年5月公表の公式決算説明資料p.6・p.29の2025年度確定実績から、売上高・営業利益・営業利益率・当期純利益・ROE・ROICを会社開示の同一定義・同一単位で接続する。計画資料内の2025年度予想、D/Eレシオ、総還元性向は除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 4700,
+          "actualValue": 3842,
+          "unit": "億円",
+          "sourcePage": "Mission 2030 PDF p.45 / 2025年度決算説明資料 p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2025年度決算説明資料 p.6: 売上高実績3,842億円",
+          "targetSource": "Mission 2030フェーズ2 PDF p.45: 2028年度売上高目標4,700億円",
+          "note": "計画策定時の2025年度予想3,900億円ではなく、最新確定実績を接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 450,
+          "actualValue": 262,
+          "unit": "億円",
+          "sourcePage": "Mission 2030 PDF p.45 / 2025年度決算説明資料 p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2025年度決算説明資料 p.6: 営業利益実績262億円",
+          "targetSource": "Mission 2030フェーズ2 PDF p.45: 2028年度営業利益目標450億円",
+          "note": "会社開示の連結営業利益を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "margin",
+          "targetValue": 9.6,
+          "actualValue": 6.8,
+          "unit": "%",
+          "sourcePage": "Mission 2030 PDF p.45 / 2025年度決算説明資料 p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2025年度決算説明資料 p.6: 営業利益率実績6.8%",
+          "targetSource": "Mission 2030フェーズ2 PDF p.45: 2028年度営業利益率目標9.6%",
+          "note": "会社開示の営業利益率を使用し、独自再計算を行わない。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "netProfit",
+          "targetValue": 260,
+          "actualValue": 157,
+          "unit": "億円",
+          "sourcePage": "Mission 2030 PDF p.45 / 2025年度決算説明資料 p.6",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2025年度決算説明資料 p.6: 当期純利益実績157億円",
+          "targetSource": "Mission 2030フェーズ2 PDF p.45: 2028年度当期純利益目標260億円",
+          "note": "会社開示の当期純利益を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "roe",
+          "targetValue": 8,
+          "actualValue": 5.2,
+          "unit": "%",
+          "sourcePage": "Mission 2030 PDF p.45 / 2025年度決算説明資料 p.4・p.29",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2025年度決算説明資料 p.4・p.29: ROE実績5.2%",
+          "targetSource": "Mission 2030フェーズ2 PDF p.45: 2028年度ROE目標8.0%",
+          "note": "会社開示ROEを使用する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "roic",
+          "targetValue": 6,
+          "actualValue": 4.2,
+          "unit": "%",
+          "sourcePage": "Mission 2030 PDF p.45 / 2025年度決算説明資料 p.29",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2025年度決算説明資料 p.29: ROIC実績4.2%",
+          "targetSource": "Mission 2030フェーズ2 PDF p.45: 2028年度ROIC目標6.0%",
+          "note": "会社定義ROICを使用し、独自再計算を行わない。"
+        }
+      ]
+    },
+    {
+      "code": "4202",
+      "sourceUrl": "https://pdf.irpocket.com/C4202/fcDL/QJL3/Tqfy.pdf",
+      "document": "新中期戦略 Accelerate 2030",
+      "sourcePublishedDate": "2026-05-22",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式新中期戦略PDF p.7・p.21に2025年度確定実績と2028年度固定計画が同一定義・同一単位で並ぶ売上高・営業利益・EBITDA・ROE・ROIC・ROAを接続する。2026年度予想、2030年度の不等号付き挑戦値、DOE、ネットD/Eレシオ、キャッシュ配分は除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 6750,
+          "actualValue": 5796,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.7",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "Accelerate 2030 PDF p.7: 2025年度売上高実績5,796億円",
+          "targetSource": "同 PDF p.7: 2028年度売上高計画6,750億円",
+          "note": "2026年度予想と2030年度挑戦値を使用せず、固定計画へ接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 630,
+          "actualValue": 421,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.7",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "Accelerate 2030 PDF p.7: 2025年度営業利益実績421億円",
+          "targetSource": "同 PDF p.7: 2028年度営業利益計画630億円",
+          "note": "会社開示の連結営業利益を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "ebitda",
+          "targetValue": 1200,
+          "actualValue": 854,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.7・p.21",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "Accelerate 2030 PDF p.7・p.21: 2025年度EBITDA実績854億円",
+          "targetSource": "同 PDF p.7・p.21: 2028年度EBITDA計画1,200億円",
+          "note": "会社開示EBITDAを使用し、独自再計算を行わない。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "roe",
+          "targetValue": 12,
+          "actualValue": 2.8,
+          "unit": "%",
+          "sourcePage": "公式PDF p.7・p.21",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "Accelerate 2030 PDF p.7・p.21: 2025年度ROE実績2.8%",
+          "targetSource": "同 PDF p.7・p.21: 2028年度ROE計画12%",
+          "note": "COC樹脂新規プラントの減損損失を含む会社開示実績をそのまま使用する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "roic",
+          "targetValue": 7,
+          "actualValue": 4.2,
+          "unit": "%",
+          "sourcePage": "公式PDF p.7・p.21",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "Accelerate 2030 PDF p.7・p.21: 2025年度ROIC実績4.2%",
+          "targetSource": "同 PDF p.7・p.21: 2028年度ROIC計画7%",
+          "note": "会社定義ROICを使用し、独自再計算を行わない。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "roa",
+          "targetValue": 5,
+          "actualValue": 1.2,
+          "unit": "%",
+          "sourcePage": "公式PDF p.7・p.21",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "Accelerate 2030 PDF p.7・p.21: 2025年度ROA実績1.2%",
+          "targetSource": "同 PDF p.7・p.21: 2028年度ROA計画5%",
+          "note": "会社開示ROAを同一定義で接続する。"
+        }
+      ]
+    }
+  ]
+}

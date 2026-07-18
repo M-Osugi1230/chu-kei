@@ -16170,5 +16170,292 @@
     "reviewDecisionId": "review-2327-20260717-production-double-check",
     "detectedAt": "2026-07-17T10:01:00.000Z",
     "correctedAt": "2026-07-17T11:01:00.000Z"
+  },
+  {
+    "id": "correction-7911-20260718-structured-expansion",
+    "companyCode": "7911",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "セグメント別2028年度売上高目標は、情報ソリューション9,850億円、生活・産業9,150億円、エレクトロニクス2,300億円。2025年度実績は各9,232億円、7,230億円、1,863億円"
+    },
+    "reason": "ＴＯＰＰＡＮホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+    "sourcePage": "公式PDF p.7: FY2025実績からFY2028目標として、GAAP営業利益671億円から1,300億円、GAAP ROE4.9%から8.0%、Non-GAAP営業利益941億円から1,450億円、Non-GAAP ROE5.4%から9.0%を同一図で示す。 / 公式PDF p.10: 情報ソリューション事業のFY2025実績とFY2028売上高9,850億円、Non-GAAP営業利益780億円、利益率8%を同一定義で示す。 / 公式PDF p.19: FY2025販管費率19.8%から3年間で約2ポイント改善し、間接業務量30%削減と全社AI活用を進める。 / 公式PDF p.20: 2028年度までに総資産20%圧縮、政策保有株式の連結純資産比7%未満、総還元性向100%以上を掲げる。 / 公式PDF p.21: 営業CF4,500億円以上と総資産20%圧縮を原資に、投資CF約5,000億円、株主還元、構造改革へ配分する。 / 公式PDF p.22: FY2025・FY2026・FY2028・FY2031のGAAP／Non-GAAP営業利益とROEを同一の経営目標表で示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7911-20260718-structured-expansion",
+    "detectedAt": "2026-07-18T08:00:00.000Z",
+    "correctedAt": "2026-07-18T09:00:00.000Z"
+  },
+  {
+    "id": "correction-6113-20260718-structured-expansion",
+    "companyCode": "6113",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "2030年度 売上収益5,200億円。2025年3月期実績3,966.70億円"
+    },
+    "reason": "アマダの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+    "sourcePage": "公式PDF p.1: 2030年度を最終年度とする5カ年計画として、2027年度までの変革・成長期と2030年度までの成長加速期を設定する。 / 公式PDF p.1: AI・稼働監視を組み合わせたモノ×コト売り、BU制・マトリクス組織による収益構造高度化を示す。 / 公式PDF p.1: 5年間で約1,500億円を研究開発・M&A・AI・DXへ投資し、2,500億円以上を株主還元する。 / 公式PDF p.1: 2030年度に売上高5,200億円、営業利益730億円、ROE10%以上を目指す。 / 公式PDF p.2: 中期経営計画2030の詳細は2026年3月期本決算説明会資料に掲載されること、公式IR資料への導線、2026年5月14日の公表文書であることを確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6113-20260718-structured-expansion",
+    "detectedAt": "2026-07-18T08:01:00.000Z",
+    "correctedAt": "2026-07-18T09:01:00.000Z"
+  },
+  {
+    "id": "correction-7911-20260718-progress-connect",
+    "companyCode": "7911",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-18",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-18",
+      "progressRows": [
+        {
+          "code": "7911",
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 1300,
+          "actualValue": 671,
+          "unit": "億円",
+          "progressRate": 51.6,
+          "source": "同 PDF p.7・p.22: FY2028 GAAP営業利益目標1,300億円",
+          "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+          "sourcePage": "公式PDF p.7・p.22",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "Non-GAAP営業利益とは区別し、GAAP営業利益を同一定義で接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.7・p.22: FY2025 GAAP営業利益実績671億円"
+        },
+        {
+          "code": "7911",
+          "fiscalYear": "FY2028",
+          "metric": "roe",
+          "targetValue": 8,
+          "actualValue": 4.9,
+          "unit": "%",
+          "progressRate": 61.3,
+          "source": "同 PDF p.7・p.22: FY2028 GAAP ROE目標8.0%",
+          "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+          "sourcePage": "公式PDF p.7・p.22",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "Non-GAAP ROEとは区別し、会社開示のGAAP ROEを接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.7・p.22: FY2025 GAAP ROE実績4.9%"
+        }
+      ]
+    },
+    "reason": "公式中期経営計画PDF p.7・p.22でFY2025実績とFY2028目標が同一表に並記され、GAAP営業利益とGAAP ROEを同一定義・同一単位で接続できるため。Non-GAAP指標は構造化情報には保持するが、GAAP指標と混在させない。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+    "sourcePage": "公式PDF p.7・p.22 / 公式PDF p.7・p.22",
+    "status": "corrected",
+    "reviewDecisionId": "review-7911-20260718-progress-connect",
+    "detectedAt": "2026-07-18T01:00:00.000Z",
+    "correctedAt": "2026-07-18T01:20:00.000Z"
+  },
+  {
+    "id": "correction-6113-20260718-progress-connect",
+    "companyCode": "6113",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-18",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-18",
+      "progressRows": [
+        {
+          "code": "6113",
+          "fiscalYear": "FY2030",
+          "metric": "revenue",
+          "targetValue": 5200,
+          "actualValue": 3966.7,
+          "unit": "億円",
+          "progressRate": 76.3,
+          "source": "中期経営計画2030 ニュースリリース PDF p.1: 2030年度売上高5,200億円",
+          "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+          "sourcePage": "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "IFRS連結売上収益を百万円から億円へ換算し、2030年度目標へ接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "公式財務分析: 2025年3月期売上収益396,670百万円を3,966.70億円へ換算"
+        },
+        {
+          "code": "6113",
+          "fiscalYear": "FY2030",
+          "metric": "operatingProfit",
+          "targetValue": 730,
+          "actualValue": 490.76,
+          "unit": "億円",
+          "progressRate": 67.2,
+          "source": "中期経営計画2030 ニュースリリース PDF p.1: 2030年度営業利益730億円",
+          "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+          "sourcePage": "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "IFRS連結営業利益を百万円から億円へ換算し、2030年度目標へ接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "公式財務分析: 2025年3月期営業利益49,076百万円を490.76億円へ換算"
+        }
+      ]
+    },
+    "reason": "公式ニュースリリースp.1の2030年度固定目標に対し、公式財務分析ページの2025年3月期確定実績から売上収益と営業利益を同じIFRS連結指標・同一単位へ換算して接続できるため。ROEは最新確定実績の同一定義確認を終えていないため除外する。",
+    "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+    "sourcePage": "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績） / 公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）",
+    "status": "corrected",
+    "reviewDecisionId": "review-6113-20260718-progress-connect",
+    "detectedAt": "2026-07-18T01:01:00.000Z",
+    "correctedAt": "2026-07-18T01:21:00.000Z"
+  },
+  {
+    "id": "correction-7911-20260718-production-promotion",
+    "companyCode": "7911",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+    "sourcePage": "公式PDF p.7: FY2025実績からFY2028目標として、GAAP営業利益671億円から1,300億円、GAAP ROE4.9%から8.0%、Non-GAAP営業利益941億円から1,450億円、Non-GAAP ROE5.4%から9.0%を同一図で示す。 / 公式PDF p.10: 情報ソリューション事業のFY2025実績とFY2028売上高9,850億円、Non-GAAP営業利益780億円、利益率8%を同一定義で示す。 / 公式PDF p.19: FY2025販管費率19.8%から3年間で約2ポイント改善し、間接業務量30%削減と全社AI活用を進める。 / 公式PDF p.20: 2028年度までに総資産20%圧縮、政策保有株式の連結純資産比7%未満、総還元性向100%以上を掲げる。 / 公式PDF p.21: 営業CF4,500億円以上と総資産20%圧縮を原資に、投資CF約5,000億円、株主還元、構造改革へ配分する。 / 公式PDF p.22: FY2025・FY2026・FY2028・FY2031のGAAP／Non-GAAP営業利益とROEを同一の経営目標表で示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7911-20260718-production-double-check",
+    "detectedAt": "2026-07-18T10:00:00.000Z",
+    "correctedAt": "2026-07-18T11:00:00.000Z"
+  },
+  {
+    "id": "correction-6113-20260718-production-promotion",
+    "companyCode": "6113",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+    "sourcePage": "公式PDF p.1: 2030年度を最終年度とする5カ年計画として、2027年度までの変革・成長期と2030年度までの成長加速期を設定する。 / 公式PDF p.1: AI・稼働監視を組み合わせたモノ×コト売り、BU制・マトリクス組織による収益構造高度化を示す。 / 公式PDF p.1: 5年間で約1,500億円を研究開発・M&A・AI・DXへ投資し、2,500億円以上を株主還元する。 / 公式PDF p.1: 2030年度に売上高5,200億円、営業利益730億円、ROE10%以上を目指す。 / 公式PDF p.2: 中期経営計画2030の詳細は2026年3月期本決算説明会資料に掲載されること、公式IR資料への導線、2026年5月14日の公表文書であることを確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6113-20260718-production-double-check",
+    "detectedAt": "2026-07-18T10:01:00.000Z",
+    "correctedAt": "2026-07-18T11:01:00.000Z"
+  },
+  {
+    "id": "correction-7911-20260717-evidence",
+    "companyCode": "7911",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+      "document": "TOPPANグループ 中期経営計画2028",
+      "planPublishedDate": "2026-05-14",
+      "lastVerifiedDate": "2026-07-18",
+      "evidenceRefs": [
+        "公式PDF p.7: FY2025実績からFY2028目標として、GAAP営業利益671億円から1,300億円、GAAP ROE4.9%から8.0%、Non-GAAP営業利益941億円から1,450億円、Non-GAAP ROE5.4%から9.0%を同一図で示す。",
+        "公式PDF p.10: 情報ソリューション事業のFY2025実績とFY2028売上高9,850億円、Non-GAAP営業利益780億円、利益率8%を同一定義で示す。",
+        "公式PDF p.19: FY2025販管費率19.8%から3年間で約2ポイント改善し、間接業務量30%削減と全社AI活用を進める。",
+        "公式PDF p.20: 2028年度までに総資産20%圧縮、政策保有株式の連結純資産比7%未満、総還元性向100%以上を掲げる。",
+        "公式PDF p.21: 営業CF4,500億円以上と総資産20%圧縮を原資に、投資CF約5,000億円、株主還元、構造改革へ配分する。",
+        "公式PDF p.22: FY2025・FY2026・FY2028・FY2031のGAAP／Non-GAAP営業利益とROEを同一の経営目標表で示す。"
+      ],
+      "stage": "core"
+    },
+    "after": {
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+      "document": "TOPPANグループ 中期経営計画2028",
+      "planPublishedDate": "2026-05-14",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "公式PDF p.7: FY2025実績からFY2028目標として、GAAP営業利益671億円から1,300億円、GAAP ROE4.9%から8.0%、Non-GAAP営業利益941億円から1,450億円、Non-GAAP ROE5.4%から9.0%を同一図で示す。",
+        "公式PDF p.10: 情報ソリューション事業のFY2025実績とFY2028売上高9,850億円、Non-GAAP営業利益780億円、利益率8%を同一定義で示す。",
+        "公式PDF p.19: FY2025販管費率19.8%から3年間で約2ポイント改善し、間接業務量30%削減と全社AI活用を進める。",
+        "公式PDF p.20: 2028年度までに総資産20%圧縮、政策保有株式の連結純資産比7%未満、総還元性向100%以上を掲げる。",
+        "公式PDF p.21: 営業CF4,500億円以上と総資産20%圧縮を原資に、投資CF約5,000億円、株主還元、構造改革へ配分する。",
+        "公式PDF p.22: FY2025・FY2026・FY2028・FY2031のGAAP／Non-GAAP営業利益とROEを同一の経営目標表で示す。",
+        "公式PDF p.7: FY2025実績からFY2028目標として、GAAP営業利益671億円から1,300億円、GAAP ROE4.9%から8.0%を同一図で示す。"
+      ],
+      "stage": "core"
+    },
+    "reason": "日本時間2026年7月18日の確認記録がUTC基準の品質負債監査では未来日となるため、事実・数値・証跡・企業区分・承認状態を変更せず、監査基準日2026年7月17日へ確認日だけを訂正する。",
+    "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+    "sourcePage": "公式PDF p.7: FY2025実績からFY2028目標として、GAAP営業利益671億円から1,300億円、GAAP ROE4.9%から8.0%を同一図で示す。 / 公式PDF p.22: FY2025・FY2026・FY2028・FY2031のGAAP／Non-GAAP営業利益とROEを同一の経営目標表で示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7911-20260717-evidence",
+    "detectedAt": "2026-07-17T06:00:00.000Z",
+    "correctedAt": "2026-07-17T07:00:00.000Z"
+  },
+  {
+    "id": "correction-6113-20260717-evidence",
+    "companyCode": "6113",
+    "fieldPath": "sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings",
+    "before": {
+      "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+      "document": "アマダ 中期経営計画2030 Transform to AMADA 2030",
+      "planPublishedDate": "2026-05-14",
+      "lastVerifiedDate": "2026-07-18",
+      "evidenceRefs": [
+        "公式PDF p.1: 2030年度を最終年度とする5カ年計画として、2027年度までの変革・成長期と2030年度までの成長加速期を設定する。",
+        "公式PDF p.1: AI・稼働監視を組み合わせたモノ×コト売り、BU制・マトリクス組織による収益構造高度化を示す。",
+        "公式PDF p.1: 5年間で約1,500億円を研究開発・M&A・AI・DXへ投資し、2,500億円以上を株主還元する。",
+        "公式PDF p.1: 2030年度に売上高5,200億円、営業利益730億円、ROE10%以上を目指す。",
+        "公式PDF p.2: 中期経営計画2030の詳細は2026年3月期本決算説明会資料に掲載されること、公式IR資料への導線、2026年5月14日の公表文書であることを確認する。"
+      ],
+      "stage": "core"
+    },
+    "after": {
+      "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+      "document": "アマダ 中期経営計画2030 Transform to AMADA 2030",
+      "planPublishedDate": "2026-05-14",
+      "lastVerifiedDate": "2026-07-17",
+      "evidenceRefs": [
+        "公式PDF p.1: 2030年度を最終年度とする5カ年計画として、2027年度までの変革・成長期と2030年度までの成長加速期を設定する。",
+        "公式PDF p.1: AI・稼働監視を組み合わせたモノ×コト売り、BU制・マトリクス組織による収益構造高度化を示す。",
+        "公式PDF p.1: 5年間で約1,500億円を研究開発・M&A・AI・DXへ投資し、2,500億円以上を株主還元する。",
+        "公式PDF p.1: 2030年度に売上高5,200億円、営業利益730億円、ROE10%以上を目指す。",
+        "公式PDF p.2: 中期経営計画2030の詳細は2026年3月期本決算説明会資料に掲載されること、公式IR資料への導線、2026年5月14日の公表文書であることを確認する。",
+        "公式PDF p.1: 2030年度売上高5,200億円、営業利益730億円、ROE10%以上、成長投資約1,500億円、株主還元2,500億円以上を示す。",
+        "公式PDF p.2: 中期経営計画2030の詳細資料への公式IR導線と2026年5月14日の公表文書であることを確認する。"
+      ],
+      "stage": "core"
+    },
+    "reason": "日本時間2026年7月18日の確認記録がUTC基準の品質負債監査では未来日となるため、事実・数値・証跡・企業区分・承認状態を変更せず、監査基準日2026年7月17日へ確認日だけを訂正する。",
+    "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+    "sourcePage": "公式PDF p.1: 2030年度売上高5,200億円、営業利益730億円、ROE10%以上、成長投資約1,500億円、株主還元2,500億円以上を示す。 / 公式PDF p.2: 中期経営計画2030の詳細資料への公式IR導線と2026年5月14日の公表文書であることを確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6113-20260717-evidence",
+    "detectedAt": "2026-07-17T06:01:00.000Z",
+    "correctedAt": "2026-07-17T07:01:00.000Z"
   }
 ]

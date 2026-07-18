@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "evidence-repair-batch-56",
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "allowedStages": [
+    "core"
+  ],
+  "expectedCoreCount": 225,
+  "expectedDetailedExtractedCount": 6,
+  "expectedFiveStarAfterApproval": 211,
+  "records": [
+    {
+      "code": "7911",
+      "expectedStage": "core",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+      "document": "TOPPANグループ 中期経営計画2028",
+      "planPublishedDate": "2026-05-14",
+      "verifiedDate": "2026-07-17",
+      "reason": "日本時間2026年7月18日の確認記録がUTC基準の品質負債監査では未来日となるため、事実・数値・証跡・企業区分・承認状態を変更せず、監査基準日2026年7月17日へ確認日だけを訂正する。",
+      "evidenceRefs": [
+        "公式PDF p.7: FY2025実績からFY2028目標として、GAAP営業利益671億円から1,300億円、GAAP ROE4.9%から8.0%を同一図で示す。",
+        "公式PDF p.22: FY2025・FY2026・FY2028・FY2031のGAAP／Non-GAAP営業利益とROEを同一の経営目標表で示す。"
+      ]
+    },
+    {
+      "code": "6113",
+      "expectedStage": "core",
+      "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+      "document": "アマダ 中期経営計画2030 Transform to AMADA 2030",
+      "planPublishedDate": "2026-05-14",
+      "verifiedDate": "2026-07-17",
+      "reason": "日本時間2026年7月18日の確認記録がUTC基準の品質負債監査では未来日となるため、事実・数値・証跡・企業区分・承認状態を変更せず、監査基準日2026年7月17日へ確認日だけを訂正する。",
+      "evidenceRefs": [
+        "公式PDF p.1: 2030年度売上高5,200億円、営業利益730億円、ROE10%以上、成長投資約1,500億円、株主還元2,500億円以上を示す。",
+        "公式PDF p.2: 中期経営計画2030の詳細資料への公式IR導線と2026年5月14日の公表文書であることを確認する。"
+      ]
+    }
+  ]
+}

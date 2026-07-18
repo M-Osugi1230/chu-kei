@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-55",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "7911",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+      "document": "TOPPANグループ 中期経営計画2028",
+      "sourcePublishedDate": "2026-05-14",
+      "verifiedDate": "2026-07-18",
+      "reason": "公式中期経営計画PDF p.7・p.22でFY2025実績とFY2028目標が同一表に並記され、GAAP営業利益とGAAP ROEを同一定義・同一単位で接続できるため。Non-GAAP指標は構造化情報には保持するが、GAAP指標と混在させない。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 1300,
+          "actualValue": 671,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.7・p.22",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.7・p.22: FY2025 GAAP営業利益実績671億円",
+          "targetSource": "同 PDF p.7・p.22: FY2028 GAAP営業利益目標1,300億円",
+          "note": "Non-GAAP営業利益とは区別し、GAAP営業利益を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "roe",
+          "targetValue": 8,
+          "actualValue": 4.9,
+          "unit": "%",
+          "sourcePage": "公式PDF p.7・p.22",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2028 PDF p.7・p.22: FY2025 GAAP ROE実績4.9%",
+          "targetSource": "同 PDF p.7・p.22: FY2028 GAAP ROE目標8.0%",
+          "note": "Non-GAAP ROEとは区別し、会社開示のGAAP ROEを接続する。"
+        }
+      ]
+    },
+    {
+      "code": "6113",
+      "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+      "document": "アマダ 中期経営計画2030 Transform to AMADA 2030",
+      "sourcePublishedDate": "2026-05-14",
+      "verifiedDate": "2026-07-18",
+      "reason": "公式ニュースリリースp.1の2030年度固定目標に対し、公式財務分析ページの2025年3月期確定実績から売上収益と営業利益を同じIFRS連結指標・同一単位へ換算して接続できるため。ROEは最新確定実績の同一定義確認を終えていないため除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2030",
+          "metric": "revenue",
+          "targetValue": 5200,
+          "actualValue": 3966.7,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "公式財務分析: 2025年3月期売上収益396,670百万円を3,966.70億円へ換算",
+          "targetSource": "中期経営計画2030 ニュースリリース PDF p.1: 2030年度売上高5,200億円",
+          "note": "IFRS連結売上収益を百万円から億円へ換算し、2030年度目標へ接続する。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "operatingProfit",
+          "targetValue": 730,
+          "actualValue": 490.76,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "公式財務分析: 2025年3月期営業利益49,076百万円を490.76億円へ換算",
+          "targetSource": "中期経営計画2030 ニュースリリース PDF p.1: 2030年度営業利益730億円",
+          "note": "IFRS連結営業利益を百万円から億円へ換算し、2030年度目標へ接続する。"
+        }
+      ]
+    }
+  ]
+}

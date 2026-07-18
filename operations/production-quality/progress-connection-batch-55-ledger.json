@@ -1,0 +1,177 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "progress-connection-batch-55",
+  "automaticApprovalAllowed": false,
+  "reviews": [
+    {
+      "id": "review-7911-20260718-progress-connect",
+      "companyCode": "7911",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "progress-quality-agent",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+      "sourcePages": [
+        "公式PDF p.7・p.22",
+        "公式PDF p.7・p.22"
+      ],
+      "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+      "decisionReason": "公式中期経営計画PDF p.7・p.22でFY2025実績とFY2028目標が同一表に並記され、GAAP営業利益とGAAP ROEを同一定義・同一単位で接続できるため。Non-GAAP指標は構造化情報には保持するが、GAAP指標と混在させない。",
+      "createdAt": "2026-07-18T01:00:00.000Z",
+      "reviewedAt": "2026-07-18T01:10:00.000Z"
+    },
+    {
+      "id": "review-6113-20260718-progress-connect",
+      "companyCode": "6113",
+      "fromStage": "detailed_extracted",
+      "targetStage": "detailed_extracted",
+      "status": "in_review",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "progress-research-agent",
+      "reviewer": "progress-quality-agent",
+      "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+      "sourcePages": [
+        "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）",
+        "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）"
+      ],
+      "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+      "decisionReason": "公式ニュースリリースp.1の2030年度固定目標に対し、公式財務分析ページの2025年3月期確定実績から売上収益と営業利益を同じIFRS連結指標・同一単位へ換算して接続できるため。ROEは最新確定実績の同一定義確認を終えていないため除外する。",
+      "createdAt": "2026-07-18T01:01:00.000Z",
+      "reviewedAt": "2026-07-18T01:11:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-7911-20260718-progress-connect",
+      "companyCode": "7911",
+      "fieldPath": "flags.progress,lastVerifiedDate,progress",
+      "before": {
+        "progressFlag": false,
+        "lastVerifiedDate": "2026-07-18",
+        "progressRows": []
+      },
+      "after": {
+        "progressFlag": true,
+        "lastVerifiedDate": "2026-07-18",
+        "progressRows": [
+          {
+            "code": "7911",
+            "fiscalYear": "FY2028",
+            "metric": "operatingProfit",
+            "targetValue": 1300,
+            "actualValue": 671,
+            "unit": "億円",
+            "progressRate": 51.6,
+            "source": "同 PDF p.7・p.22: FY2028 GAAP営業利益目標1,300億円",
+            "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+            "sourcePage": "公式PDF p.7・p.22",
+            "updatedAt": "2026-07-18",
+            "lastVerifiedDate": "2026-07-18",
+            "note": "Non-GAAP営業利益とは区別し、GAAP営業利益を同一定義で接続する。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "中期経営計画2028 PDF p.7・p.22: FY2025 GAAP営業利益実績671億円"
+          },
+          {
+            "code": "7911",
+            "fiscalYear": "FY2028",
+            "metric": "roe",
+            "targetValue": 8,
+            "actualValue": 4.9,
+            "unit": "%",
+            "progressRate": 61.3,
+            "source": "同 PDF p.7・p.22: FY2028 GAAP ROE目標8.0%",
+            "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+            "sourcePage": "公式PDF p.7・p.22",
+            "updatedAt": "2026-07-18",
+            "lastVerifiedDate": "2026-07-18",
+            "note": "Non-GAAP ROEとは区別し、会社開示のGAAP ROEを接続する。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "中期経営計画2028 PDF p.7・p.22: FY2025 GAAP ROE実績4.9%"
+          }
+        ]
+      },
+      "reason": "公式中期経営計画PDF p.7・p.22でFY2025実績とFY2028目標が同一表に並記され、GAAP営業利益とGAAP ROEを同一定義・同一単位で接続できるため。Non-GAAP指標は構造化情報には保持するが、GAAP指標と混在させない。",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+      "sourcePage": "公式PDF p.7・p.22 / 公式PDF p.7・p.22",
+      "status": "corrected",
+      "reviewDecisionId": "review-7911-20260718-progress-connect",
+      "detectedAt": "2026-07-18T01:00:00.000Z",
+      "correctedAt": "2026-07-18T01:20:00.000Z"
+    },
+    {
+      "id": "correction-6113-20260718-progress-connect",
+      "companyCode": "6113",
+      "fieldPath": "flags.progress,lastVerifiedDate,progress",
+      "before": {
+        "progressFlag": false,
+        "lastVerifiedDate": "2026-07-18",
+        "progressRows": []
+      },
+      "after": {
+        "progressFlag": true,
+        "lastVerifiedDate": "2026-07-18",
+        "progressRows": [
+          {
+            "code": "6113",
+            "fiscalYear": "FY2030",
+            "metric": "revenue",
+            "targetValue": 5200,
+            "actualValue": 3966.7,
+            "unit": "億円",
+            "progressRate": 76.3,
+            "source": "中期経営計画2030 ニュースリリース PDF p.1: 2030年度売上高5,200億円",
+            "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+            "sourcePage": "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）",
+            "updatedAt": "2026-07-18",
+            "lastVerifiedDate": "2026-07-18",
+            "note": "IFRS連結売上収益を百万円から億円へ換算し、2030年度目標へ接続する。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "公式財務分析: 2025年3月期売上収益396,670百万円を3,966.70億円へ換算"
+          },
+          {
+            "code": "6113",
+            "fiscalYear": "FY2030",
+            "metric": "operatingProfit",
+            "targetValue": 730,
+            "actualValue": 490.76,
+            "unit": "億円",
+            "progressRate": 67.2,
+            "source": "中期経営計画2030 ニュースリリース PDF p.1: 2030年度営業利益730億円",
+            "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+            "sourcePage": "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）",
+            "updatedAt": "2026-07-18",
+            "lastVerifiedDate": "2026-07-18",
+            "note": "IFRS連結営業利益を百万円から億円へ換算し、2030年度目標へ接続する。",
+            "actualFiscalYear": "FY2025",
+            "actualSource": "公式財務分析: 2025年3月期営業利益49,076百万円を490.76億円へ換算"
+          }
+        ]
+      },
+      "reason": "公式ニュースリリースp.1の2030年度固定目標に対し、公式財務分析ページの2025年3月期確定実績から売上収益と営業利益を同じIFRS連結指標・同一単位へ換算して接続できるため。ROEは最新確定実績の同一定義確認を終えていないため除外する。",
+      "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+      "sourcePage": "公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績） / 公式PDF p.1 / 公式Webページ（見出し: 財務分析／経営成績）",
+      "status": "corrected",
+      "reviewDecisionId": "review-6113-20260718-progress-connect",
+      "detectedAt": "2026-07-18T01:01:00.000Z",
+      "correctedAt": "2026-07-18T01:21:00.000Z"
+    }
+  ]
+}

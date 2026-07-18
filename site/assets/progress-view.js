@@ -4,6 +4,7 @@ const METRIC_LABELS = {
   coreOperatingProfit: 'コア営業利益',
   strategicBusinessOperatingProfit: '戦略事業営業利益',
   businessProfit: '事業利益',
+  segmentProfit: 'セグメント利益',
   ordinaryProfit: '経常利益',
   netProfit: '当期利益',
   margin: '営業利益率',

@@ -15545,5 +15545,53 @@
     "reviewDecisionId": "review-9861-20260717-production-double-check",
     "detectedAt": "2026-07-17T10:02:00.000Z",
     "correctedAt": "2026-07-17T11:02:00.000Z"
+  },
+  {
+    "id": "correction-3050-20260718-structured-expansion",
+    "companyCode": "3050",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-14",
+      "revenue": "2028年度 売上高6,500億円"
+    },
+    "reason": "ＤＣＭホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "sourcePage": "公式PDF p.1: 2025年度実績から2028年度計画まで、売上高5,331.07億円→6,500億円、営業利益310.14億円→423億円、営業利益率5.8%→6.5%を開示する。 / 公式PDF p.1: 経常利益291.58億円→405億円、当期純利益173.10億円→265億円、ROE6.2%→8.0%を開示する。 / 公式PDF p.9: 『選ばれるＤＣＭへの転換を加速する3年間』と、顧客・商品・店舗・リフォーム・DXの5戦略を示す。 / 公式PDF p.10: PBRを意識した経営、成長投資と株主還元の両立、連続増配、人的資本、サステナビリティを掲げる。 / 公式PDF p.27: 2025年度実績と2028年度目標、および各指標の年平均成長率を同一表で開示する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3050-20260718-structured-expansion",
+    "detectedAt": "2026-07-18T03:00:00.000Z",
+    "correctedAt": "2026-07-18T04:00:00.000Z"
+  },
+  {
+    "id": "correction-2181-20260718-structured-expansion",
+    "companyCode": "2181",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "SBU別にStaffing CAGR4%前後、BPO CAGR7%前後、Technology CAGR10%前後、Career FY2028前年比7～10%の売上成長を目指す"
+    },
+    "reason": "パーソルホールディングスの公式計画・最新進捗を比較可能にする。",
+    "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+    "sourcePage": "公式PDF p.4: 前中計のFY2025実績として売上収益1兆5,558億円、ROIC18.2%、ROE20.9%、調整後EBITDA881億円を開示する。 / 公式PDF p.12: FY2028の数値目標として調整後EBITDA年平均成長率10%、ROIC18%以上、ROE20%以上、配当性向50%以上を掲げる。 / 公式PDF p.16: Staffing、BPO、Technology、Career等のFY2025実績とFY2028の成長率・マージン目標を同一表で示す。 / 公式PDF p.18: ROIC18%以上、ROE20%以上、Net Debt/Equity1倍以下、Net Debt/EBITDA2倍以下、成長投資と株主還元50対50を掲げる。 / 公式PDF p.20: 約1,800億円を成長投資と株主還元へ原則50%ずつ配分する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2181-20260718-structured-expansion",
+    "detectedAt": "2026-07-18T03:01:00.000Z",
+    "correctedAt": "2026-07-18T04:01:00.000Z"
   }
 ]

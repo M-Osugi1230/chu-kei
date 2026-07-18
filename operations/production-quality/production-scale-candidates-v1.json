@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-17T16:58:13.306Z",
-  "sourceBundleSha256": "07f6115cd748b569eb51b15b615a19bdbfcb7f64ed886c655a6acb93c14e0983",
+  "generatedAt": "2026-07-18T05:15:28.327Z",
+  "sourceBundleSha256": "8b9de4fa04907c6683321fd8e35d6d344ede63ab3bb278ba456b75b5eb002ada",
   "companyCount": 1200,
   "progressCount": 303,
-  "detailedExtractedCount": 6,
+  "detailedExtractedCount": 8,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -18,14 +18,16 @@
   },
   "counts": {
     "detailedWithProgressFlag": 3,
-    "detailedWithoutProgressFlag": 3,
+    "detailedWithoutProgressFlag": 5,
     "detailedWithMatchedProgressRows": 0,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 3
+    "pageEvidenceAndPublicationReadyButProgressMissing": 5
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
     "pageEvidenceAndPublicationReadyButProgressMissingCodes": [
+      "2181",
+      "3050",
       "4478",
       "4612",
       "7733"
@@ -100,6 +102,52 @@
     }
   ],
   "candidates": [
+    {
+      "code": "2181",
+      "name": "パーソルホールディングス",
+      "lastVerifiedDate": "2026-07-18",
+      "planPublishedDate": "2026-05-14",
+      "evidenceRefCount": 5,
+      "pageEvidenceRefCount": 5,
+      "hasProgressFlag": false,
+      "progressFlagValue": false,
+      "matchedProgressRows": 0,
+      "matchedProgressSample": [],
+      "companyFlagKeys": [
+        "ma",
+        "capitalEfficiency",
+        "shareholderReturn",
+        "progress",
+        "overseas",
+        "dx",
+        "humanCapital",
+        "newBusiness",
+        "restructuring"
+      ]
+    },
+    {
+      "code": "3050",
+      "name": "ＤＣＭホールディングス",
+      "lastVerifiedDate": "2026-07-18",
+      "planPublishedDate": "2026-04-14",
+      "evidenceRefCount": 5,
+      "pageEvidenceRefCount": 5,
+      "hasProgressFlag": false,
+      "progressFlagValue": false,
+      "matchedProgressRows": 0,
+      "matchedProgressSample": [],
+      "companyFlagKeys": [
+        "ma",
+        "capitalEfficiency",
+        "shareholderReturn",
+        "progress",
+        "overseas",
+        "dx",
+        "humanCapital",
+        "newBusiness",
+        "restructuring"
+      ]
+    },
     {
       "code": "4478",
       "name": "フリー",

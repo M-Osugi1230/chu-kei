@@ -32,6 +32,9 @@ const METRIC_LABELS = {
   investmentTotal: '投資総額',
   underlyingBusinessProfit: '基礎営業利益',
   growthInvestmentCapacity: '成長投資余力',
+  bpoRevenue: 'BPO売上高',
+  bpoGrossMargin: 'BPO売上総利益率',
+  ramenRevenue: 'ラーメン事業売上高',
 };
 
 export function progressMetricLabel(metric) {

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-59",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "4114",
+      "sourceUrl": "https://www.shokubai.co.jp/ja/ir/assets/pdf/management/vision/mid-term_managementplan.pdf",
+      "document": "中期経営計画2027／2025年度決算説明資料",
+      "sourcePublishedDate": "2025-04-15",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式中期経営計画PDF p.13の2027年度固定目標と、2026年5月公表の公式決算説明資料p.5の2025年度確定実績から、会社定義のセグメント利益を同一定義・同一単位で接続する。ROE・ROA・ROICの下限目標、累計投資、株主還元方針は単純進捗率から除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2027",
+          "metric": "segmentProfit",
+          "targetValue": 350,
+          "actualValue": 187,
+          "unit": "億円",
+          "sourcePage": "中期経営計画PDF p.13 / 2025年度決算説明資料 p.5",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2025年度決算説明資料 p.5: セグメント利益実績187億円（営業利益175億円＋持分法による投資損益12億円）",
+          "targetSource": "中期経営計画2027 PDF p.13: 2027年度セグメント利益目標350億円",
+          "note": "セグメント利益は営業利益と持分法投資損益の合計であり、営業利益単独とは区別する。"
+        }
+      ]
+    },
+    {
+      "code": "4203",
+      "sourceUrl": "https://www.sumibe.co.jp/ir/library/presentation/files/2024/p_001-2.pdf",
+      "document": "中期経営計画2024-26／2026年3月期決算説明会資料",
+      "sourcePublishedDate": "2024-05-13",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式中期経営計画PDF p.19の2026年度固定目標と、2026年5月公表の公式決算説明資料p.3の2025年度確定実績から、売上収益・事業利益・ROEを同一定義・同一単位で接続する。事業利益率は最新会社開示実績を直接確認していないため除外し、投資・還元の累計値も単純進捗率から除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2026",
+          "metric": "revenue",
+          "targetValue": 3450,
+          "actualValue": 3199,
+          "unit": "億円",
+          "sourcePage": "中期経営計画PDF p.19 / 2026年3月期決算説明会資料 p.3",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期決算説明会資料 p.3: 2025年度売上収益実績3,199億円",
+          "targetSource": "中期経営計画2024-26 PDF p.19: 2026年度売上収益目標3,450億円",
+          "note": "会社開示の連結売上収益を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "businessProfit",
+          "targetValue": 400,
+          "actualValue": 345,
+          "unit": "億円",
+          "sourcePage": "中期経営計画PDF p.19 / 2026年3月期決算説明会資料 p.3",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期決算説明会資料 p.3: 2025年度事業利益実績345億円",
+          "targetSource": "中期経営計画2024-26 PDF p.19: 2026年度事業利益目標400億円",
+          "note": "事業利益は会社定義指標であり、営業利益355億円とは区別する。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "roe",
+          "targetValue": 9,
+          "actualValue": 8.8,
+          "unit": "%",
+          "sourcePage": "中期経営計画PDF p.19 / 2026年3月期決算説明会資料 p.3",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2026年3月期決算説明会資料 p.3: 2025年度ROE実績8.8%",
+          "targetSource": "中期経営計画2024-26 PDF p.19: 2026年度ROE目標9.0%",
+          "note": "会社開示ROEを同一定義で接続する。"
+        }
+      ]
+    }
+  ]
+}

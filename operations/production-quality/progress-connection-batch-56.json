@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-56",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "5631",
+      "sourceUrl": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260713/20260710591714.pdf",
+      "document": "中期経営計画 JGP2028 Update",
+      "sourcePublishedDate": "2026-07-13",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式開示PDF p.10の2026年3月期確定実績とp.15の2029年3月期固定目標が同一定義・同一単位で示される売上高、営業利益、営業利益率、EBITDAを接続する。2027年3月期予想は使用せず、ROEレンジと配当方針は単純進捗率から除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 4000,
+          "actualValue": 2748,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.10・p.15",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "JGP2028 Update PDF p.10: 2026年3月期売上高実績2,748億円",
+          "targetSource": "同 PDF p.15: 2029年3月期売上高目標4,000億円",
+          "note": "2027年3月期予想を使用せず、最新確定実績から2029年3月期目標へ接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 400,
+          "actualValue": 253,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.10・p.15",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "JGP2028 Update PDF p.10: 2026年3月期営業利益実績253億円",
+          "targetSource": "同 PDF p.15: 2029年3月期営業利益目標400億円",
+          "note": "会社開示の連結営業利益を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "margin",
+          "targetValue": 10,
+          "actualValue": 9.2,
+          "unit": "%",
+          "sourcePage": "公式PDF p.10・p.15",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "JGP2028 Update PDF p.10: 2026年3月期営業利益率実績9.2%",
+          "targetSource": "同 PDF p.15: 2029年3月期営業利益率目標10.0%",
+          "note": "会社開示の営業利益率を使用し、独自再計算を行わない。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "ebitda",
+          "targetValue": 550,
+          "actualValue": 343,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.10・p.15",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "JGP2028 Update PDF p.10: 2026年3月期EBITDA実績343億円",
+          "targetSource": "同 PDF p.15: 2029年3月期EBITDA目標550億円",
+          "note": "会社開示EBITDAを使用し、独自再計算を行わない。"
+        }
+      ]
+    },
+    {
+      "code": "4042",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/4042/tdnet/2623991/00.pdf",
+      "document": "中期経営計画 2025～2027年度",
+      "sourcePublishedDate": "2025-05-23",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式中期経営計画PDF p.23で2024年度確定実績と2027年度固定目標が同一定義・同一単位で並ぶ売上高と営業利益を接続する。ROE10%以上、設備投資、キャッシュフロー、株主還元は下限・レンジ・方針指標のため除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2027",
+          "metric": "revenue",
+          "targetValue": 11830,
+          "actualValue": 10634,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.23",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期経営計画 PDF p.23: 2024年度売上高実績1兆634億円",
+          "targetSource": "同 PDF p.23: 2027年度売上高目標1兆1,830億円",
+          "note": "同一表の全社連結売上高を接続する。"
+        },
+        {
+          "fiscalYear": "FY2027",
+          "metric": "operatingProfit",
+          "targetValue": 1400,
+          "actualValue": 989,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.23",
+          "actualFiscalYear": "FY2024",
+          "actualSource": "中期経営計画 PDF p.23: 2024年度営業利益実績989億円",
+          "targetSource": "同 PDF p.23: 2027年度営業利益目標1,400億円",
+          "note": "同一表の全社連結営業利益を接続する。"
+        }
+      ]
+    }
+  ]
+}

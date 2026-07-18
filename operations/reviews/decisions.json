@@ -22395,5 +22395,246 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-17T10:01:00.000Z",
     "reviewedAt": "2026-07-17T11:01:00.000Z"
+  },
+  {
+    "id": "review-4401-20260717-structured-expansion",
+    "companyCode": "4401",
+    "fromStage": "source_indexed",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.adeka.co.jp/ir/library/pdf/240530_ADX2026.pdf",
+    "sourcePages": [
+      "公式PDF p.10: 2026年度の営業利益530億円、売上高5,000億円、ROE11.0%、ROIC10.5%、設備投資750億円、配当性向40%以上を示す。",
+      "公式PDF p.12: 稼ぐ力の強化、高収益構造への転換、環境貢献製品の拡大、経営基盤の強靭化を3つの基本戦略として示す。",
+      "公式PDF p.13: FY2023実績とFY2026計画を全社・セグメント別の売上高、営業利益、利益率で同一表に示す。",
+      "公式PDF p.14: 半導体材料を最注力領域とし、先端メモリ・ロジック・リソグラフィ・後工程へ対象領域を拡大する方針を示す。",
+      "公式PDF p.40: ADX 2026期間の配当性向40%以上維持と安定配当方針を示す。"
+    ],
+    "note": "公式一次資料の定量指標・期間・ページ証跡を確認。詳細抽出済みβへの昇格であり本番承認ではない。",
+    "decisionReason": "ＡＤＥＫＡの主要財務目標、成長戦略、投資、還元を比較可能にする。",
+    "createdAt": "2026-07-17T10:00:00.000Z",
+    "reviewedAt": "2026-07-17T11:00:00.000Z"
+  },
+  {
+    "id": "review-4043-20260717-structured-expansion",
+    "companyCode": "4043",
+    "fromStage": "source_indexed",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.tokuyama.co.jp/ir/pdf/2026mar_managementplan.pdf",
+    "sourcePages": [
+      "公式PDF p.2: 2025年度実績から2030年度目標として、売上高3,494億円から4,075億円、営業利益370億円から570億円、利益率10.6%から14.0%、EPS309円から551円、ROE8.2%から10.6%、ROIC6.8%から9.1%、DOE3.3%から4.0%を同一表で示す。",
+      "公式PDF p.14: 電子先端材料・ライフサイエンスを成長領域とし、化成品・環境事業は合理化による事業強化を進めるポートフォリオ方針を示す。",
+      "公式PDF p.19: 電子先端材料は設備・R&D、ライフサイエンスはM&Aを中心に、事業投資を配分する方針を示す。",
+      "公式PDF p.20: 2025年度実績と2030年度目標を事業別および連結合計の売上高・営業利益・利益率で示す。",
+      "公式PDF p.23: DOE4.0%を目標に、安定かつ継続的な配当増額を目指す株主還元方針を示す。",
+      "公式PDF p.24: ROE・ROIC・WACCを用いた資本効率向上の方針を示す。"
+    ],
+    "note": "公式一次資料の定量指標・期間・ページ証跡を確認。詳細抽出済みβへの昇格であり本番承認ではない。",
+    "decisionReason": "トクヤマの主要財務目標、成長戦略、投資、還元を比較可能にする。",
+    "createdAt": "2026-07-17T10:01:00.000Z",
+    "reviewedAt": "2026-07-17T11:01:00.000Z"
+  },
+  {
+    "id": "review-4401-20260717-progress-connect",
+    "companyCode": "4401",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.adeka.co.jp/ir/library/pdf/240530_ADX2026.pdf",
+    "sourcePages": [
+      "中期経営計画PDF p.10 / 2025年度決算説明資料 p.5",
+      "中期経営計画PDF p.10 / 2025年度決算説明資料 p.5"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画PDF p.10の2026年度固定目標と、公式2025年度決算説明資料p.5の確定実績から、売上高と営業利益を同一定義・同一単位で接続する。2026年度会社予想、ROE・ROIC、配当性向、設備投資は今回の単純進捗率から除外する。",
+    "createdAt": "2026-07-17T01:00:00.000Z",
+    "reviewedAt": "2026-07-17T01:10:00.000Z"
+  },
+  {
+    "id": "review-4043-20260717-progress-connect",
+    "companyCode": "4043",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.tokuyama.co.jp/ir/pdf/2026mar_managementplan.pdf",
+    "sourcePages": [
+      "公式PDF p.2・p.24",
+      "公式PDF p.2・p.24",
+      "公式PDF p.2・p.24",
+      "公式PDF p.2・p.24",
+      "公式PDF p.2・p.24",
+      "公式PDF p.2・p.24"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中期経営計画PDF p.2・p.24に2025年度確定実績と2030年度固定目標が同一定義・同一単位で並ぶ6指標を接続する。DOE、為替、ナフサ、キャッシュアロケーション比率は通常の事業進捗率から除外する。",
+    "createdAt": "2026-07-17T01:01:00.000Z",
+    "reviewedAt": "2026-07-17T01:11:00.000Z"
+  },
+  {
+    "id": "review-4401-20260717-production-primary",
+    "companyCode": "4401",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.adeka.co.jp/ir/library/pdf/240530_ADX2026.pdf",
+    "sourcePages": [
+      "公式PDF p.10: 2026年度の営業利益530億円、売上高5,000億円、ROE11.0%、ROIC10.5%、設備投資750億円、配当性向40%以上を示す。",
+      "公式PDF p.12: 稼ぐ力の強化、高収益構造への転換、環境貢献製品の拡大、経営基盤の強靭化を3つの基本戦略として示す。",
+      "公式PDF p.13: FY2023実績とFY2026計画を全社・セグメント別の売上高、営業利益、利益率で同一表に示す。",
+      "公式PDF p.14: 半導体材料を最注力領域とし、先端メモリ・ロジック・リソグラフィ・後工程へ対象領域を拡大する方針を示す。",
+      "公式PDF p.40: ADX 2026期間の配当性向40%以上維持と安定配当方針を示す。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-17T08:00:00.000Z",
+    "reviewedAt": "2026-07-17T09:00:00.000Z"
+  },
+  {
+    "id": "review-4401-20260717-production-double-check",
+    "companyCode": "4401",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "independent-release-agent",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.adeka.co.jp/ir/library/pdf/240530_ADX2026.pdf",
+    "sourcePages": [
+      "公式PDF p.10: 2026年度の営業利益530億円、売上高5,000億円、ROE11.0%、ROIC10.5%、設備投資750億円、配当性向40%以上を示す。",
+      "公式PDF p.12: 稼ぐ力の強化、高収益構造への転換、環境貢献製品の拡大、経営基盤の強靭化を3つの基本戦略として示す。",
+      "公式PDF p.13: FY2023実績とFY2026計画を全社・セグメント別の売上高、営業利益、利益率で同一表に示す。",
+      "公式PDF p.14: 半導体材料を最注力領域とし、先端メモリ・ロジック・リソグラフィ・後工程へ対象領域を拡大する方針を示す。",
+      "公式PDF p.40: ADX 2026期間の配当性向40%以上維持と安定配当方針を示す。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-17T10:00:00.000Z",
+    "reviewedAt": "2026-07-17T11:00:00.000Z"
+  },
+  {
+    "id": "review-4043-20260717-production-primary",
+    "companyCode": "4043",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.tokuyama.co.jp/ir/pdf/2026mar_managementplan.pdf",
+    "sourcePages": [
+      "公式PDF p.2: 2025年度実績から2030年度目標として、売上高3,494億円から4,075億円、営業利益370億円から570億円、利益率10.6%から14.0%、EPS309円から551円、ROE8.2%から10.6%、ROIC6.8%から9.1%、DOE3.3%から4.0%を同一表で示す。",
+      "公式PDF p.14: 電子先端材料・ライフサイエンスを成長領域とし、化成品・環境事業は合理化による事業強化を進めるポートフォリオ方針を示す。",
+      "公式PDF p.19: 電子先端材料は設備・R&D、ライフサイエンスはM&Aを中心に、事業投資を配分する方針を示す。",
+      "公式PDF p.20: 2025年度実績と2030年度目標を事業別および連結合計の売上高・営業利益・利益率で示す。",
+      "公式PDF p.23: DOE4.0%を目標に、安定かつ継続的な配当増額を目指す株主還元方針を示す。",
+      "公式PDF p.24: ROE・ROIC・WACCを用いた資本効率向上の方針を示す。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-17T08:01:00.000Z",
+    "reviewedAt": "2026-07-17T09:01:00.000Z"
+  },
+  {
+    "id": "review-4043-20260717-production-double-check",
+    "companyCode": "4043",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "independent-release-agent",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.tokuyama.co.jp/ir/pdf/2026mar_managementplan.pdf",
+    "sourcePages": [
+      "公式PDF p.2: 2025年度実績から2030年度目標として、売上高3,494億円から4,075億円、営業利益370億円から570億円、利益率10.6%から14.0%、EPS309円から551円、ROE8.2%から10.6%、ROIC6.8%から9.1%、DOE3.3%から4.0%を同一表で示す。",
+      "公式PDF p.14: 電子先端材料・ライフサイエンスを成長領域とし、化成品・環境事業は合理化による事業強化を進めるポートフォリオ方針を示す。",
+      "公式PDF p.19: 電子先端材料は設備・R&D、ライフサイエンスはM&Aを中心に、事業投資を配分する方針を示す。",
+      "公式PDF p.20: 2025年度実績と2030年度目標を事業別および連結合計の売上高・営業利益・利益率で示す。",
+      "公式PDF p.23: DOE4.0%を目標に、安定かつ継続的な配当増額を目指す株主還元方針を示す。",
+      "公式PDF p.24: ROE・ROIC・WACCを用いた資本効率向上の方針を示す。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-17T10:01:00.000Z",
+    "reviewedAt": "2026-07-17T11:01:00.000Z"
   }
 ]

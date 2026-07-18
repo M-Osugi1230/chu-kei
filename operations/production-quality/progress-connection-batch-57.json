@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-57",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "4401",
+      "sourceUrl": "https://www.adeka.co.jp/ir/library/pdf/240530_ADX2026.pdf",
+      "document": "ＡＤＥＫＡグループ 中期経営計画 ADX 2026／2025年度決算・中計進捗説明会",
+      "sourcePublishedDate": "2024-05-30",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式中期経営計画PDF p.10の2026年度固定目標と、公式2025年度決算説明資料p.5の確定実績から、売上高と営業利益を同一定義・同一単位で接続する。2026年度会社予想、ROE・ROIC、配当性向、設備投資は今回の単純進捗率から除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2026",
+          "metric": "revenue",
+          "targetValue": 5000,
+          "actualValue": 4165,
+          "unit": "億円",
+          "sourcePage": "中期経営計画PDF p.10 / 2025年度決算説明資料 p.5",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2025年度決算・中計進捗説明会 PDF p.5: 2025年度売上高実績4,165億円",
+          "targetSource": "ADX 2026 PDF p.10: 2026年度売上高目標5,000億円",
+          "note": "中計固定目標へ接続し、2026年度会社予想4,530億円は使用しない。"
+        },
+        {
+          "fiscalYear": "FY2026",
+          "metric": "operatingProfit",
+          "targetValue": 530,
+          "actualValue": 416,
+          "unit": "億円",
+          "sourcePage": "中期経営計画PDF p.10 / 2025年度決算説明資料 p.5",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "2025年度決算・中計進捗説明会 PDF p.5: 2025年度営業利益実績416億円",
+          "targetSource": "ADX 2026 PDF p.10: 2026年度営業利益目標530億円",
+          "note": "中計固定目標へ接続し、2026年度会社予想468億円は使用しない。"
+        }
+      ]
+    },
+    {
+      "code": "4043",
+      "sourceUrl": "https://www.tokuyama.co.jp/ir/pdf/2026mar_managementplan.pdf",
+      "document": "トクヤマ 中期経営計画2030",
+      "sourcePublishedDate": "2026-05-29",
+      "verifiedDate": "2026-07-17",
+      "reason": "公式中期経営計画PDF p.2・p.24に2025年度確定実績と2030年度固定目標が同一定義・同一単位で並ぶ6指標を接続する。DOE、為替、ナフサ、キャッシュアロケーション比率は通常の事業進捗率から除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2030",
+          "metric": "revenue",
+          "targetValue": 4075,
+          "actualValue": 3494,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.2・p.24",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2030 PDF p.2・p.24: 2025年度売上高実績3,494億円",
+          "targetSource": "同 PDF p.2・p.24: 2030年度売上高目標4,075億円",
+          "note": "会社開示の連結売上高を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "operatingProfit",
+          "targetValue": 570,
+          "actualValue": 370,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.2・p.24",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2030 PDF p.2・p.24: 2025年度営業利益実績370億円",
+          "targetSource": "同 PDF p.2・p.24: 2030年度営業利益目標570億円",
+          "note": "会社開示の連結営業利益を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "margin",
+          "targetValue": 14,
+          "actualValue": 10.6,
+          "unit": "%",
+          "sourcePage": "公式PDF p.2・p.24",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2030 PDF p.2・p.24: 2025年度売上高営業利益率実績10.6%",
+          "targetSource": "同 PDF p.2・p.24: 2030年度売上高営業利益率目標14.0%",
+          "note": "会社開示の売上高営業利益率を使用し、独自再計算を行わない。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "eps",
+          "targetValue": 551,
+          "actualValue": 309,
+          "unit": "円",
+          "sourcePage": "公式PDF p.2・p.24",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2030 PDF p.2・p.24: 2025年度EPS実績309円",
+          "targetSource": "同 PDF p.2・p.24: 2030年度EPS目標551円",
+          "note": "会社開示EPSを使用し、発行済株式数の独自調整を行わない。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "roe",
+          "targetValue": 10.6,
+          "actualValue": 8.2,
+          "unit": "%",
+          "sourcePage": "公式PDF p.2・p.24",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2030 PDF p.2・p.24: 2025年度ROE実績8.2%",
+          "targetSource": "同 PDF p.2・p.24: 2030年度ROE目標10.6%",
+          "note": "会社開示ROEを同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2030",
+          "metric": "roic",
+          "targetValue": 9.1,
+          "actualValue": 6.8,
+          "unit": "%",
+          "sourcePage": "公式PDF p.2・p.24",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画2030 PDF p.2・p.24: 2025年度ROIC実績6.8%",
+          "targetSource": "同 PDF p.2・p.24: 2030年度ROIC目標9.1%",
+          "note": "会社定義ROICを同一定義で接続する。"
+        }
+      ]
+    }
+  ]
+}

@@ -11,6 +11,7 @@ const METRIC_LABELS = {
   adjustedOperatingMargin: '調整後営業利益率',
   nonGaapOperatingMargin: 'Non-GAAP営業利益率',
   ebitda: 'EBITDA',
+  ebitdaPlusS: 'EBITDA+S',
   tokyuEbitda: '東急EBITDA',
   ebitdaMargin: 'EBITDAマージン',
   eps: 'EPS',

@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-18T05:22:26.097Z",
-  "sourceBundleSha256": "ce44ac13bc97022dc0de25586ae164d851afa896fd058afdef8c13dfe9560988",
+  "generatedAt": "2026-07-18T05:33:49.228Z",
+  "sourceBundleSha256": "2971720d8b327de93fd91b5f9a62fc82fe000ec9ec034064809d2643a27d3028",
   "companyCount": 1200,
   "progressCount": 311,
-  "detailedExtractedCount": 6,
+  "detailedExtractedCount": 8,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -18,14 +18,16 @@
   },
   "counts": {
     "detailedWithProgressFlag": 3,
-    "detailedWithoutProgressFlag": 3,
+    "detailedWithoutProgressFlag": 5,
     "detailedWithMatchedProgressRows": 0,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 3
+    "pageEvidenceAndPublicationReadyButProgressMissing": 5
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
     "pageEvidenceAndPublicationReadyButProgressMissingCodes": [
+      "2317",
+      "2327",
       "4478",
       "4612",
       "7733"
@@ -100,6 +102,52 @@
     }
   ],
   "candidates": [
+    {
+      "code": "2317",
+      "name": "システナ",
+      "lastVerifiedDate": "2026-07-17",
+      "planPublishedDate": "2026-05-13",
+      "evidenceRefCount": 4,
+      "pageEvidenceRefCount": 4,
+      "hasProgressFlag": false,
+      "progressFlagValue": false,
+      "matchedProgressRows": 0,
+      "matchedProgressSample": [],
+      "companyFlagKeys": [
+        "ma",
+        "capitalEfficiency",
+        "shareholderReturn",
+        "progress",
+        "overseas",
+        "dx",
+        "humanCapital",
+        "newBusiness",
+        "restructuring"
+      ]
+    },
+    {
+      "code": "2327",
+      "name": "日鉄ソリューションズ",
+      "lastVerifiedDate": "2026-07-17",
+      "planPublishedDate": "2025-02-28",
+      "evidenceRefCount": 5,
+      "pageEvidenceRefCount": 5,
+      "hasProgressFlag": false,
+      "progressFlagValue": false,
+      "matchedProgressRows": 0,
+      "matchedProgressSample": [],
+      "companyFlagKeys": [
+        "ma",
+        "capitalEfficiency",
+        "shareholderReturn",
+        "progress",
+        "overseas",
+        "dx",
+        "humanCapital",
+        "newBusiness",
+        "restructuring"
+      ]
+    },
     {
       "code": "4478",
       "name": "フリー",

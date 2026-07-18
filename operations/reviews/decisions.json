@@ -21680,5 +21680,181 @@
     "decisionReason": "日鉄ソリューションズの主要財務目標、成長戦略、投資、還元を比較可能にする。",
     "createdAt": "2026-07-17T08:01:00.000Z",
     "reviewedAt": "2026-07-17T09:01:00.000Z"
+  },
+  {
+    "id": "review-2317-20260717-progress-connect",
+    "companyCode": "2317",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.systena.co.jp/pdf/irnews/20260513_1_j.pdf",
+    "sourcePages": [
+      "公式PDF p.2",
+      "公式PDF p.2",
+      "公式PDF p.2",
+      "公式PDF p.2"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式PDF p.2で2026年3月期実績と2029年3月期計画が同一表に並記され、売上高、EBITDA+S、営業利益、営業利益率を同一定義・同一単位で接続できるため。",
+    "createdAt": "2026-07-17T01:00:00.000Z",
+    "reviewedAt": "2026-07-17T01:10:00.000Z"
+  },
+  {
+    "id": "review-2327-20260717-progress-connect",
+    "companyCode": "2327",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.nssol.nipponsteel.com/ir/management-plan/pdf/nssol_2025-2027_mtbp-j.pdf",
+    "sourcePages": [
+      "公式PDF p.16",
+      "公式PDF p.16",
+      "公式PDF p.16",
+      "公式PDF p.16"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式中計PDF p.16のFY2027目標に対し、2026年4月27日公表の公式決算説明資料p.4・p.10から2025年度確定実績を同一定義で接続できるため。計画策定時のFY2024見込みではなく、より新しい確定実績を採用する。",
+    "createdAt": "2026-07-17T01:01:00.000Z",
+    "reviewedAt": "2026-07-17T01:11:00.000Z"
+  },
+  {
+    "id": "review-2317-20260717-production-primary",
+    "companyCode": "2317",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.systena.co.jp/pdf/irnews/20260513_1_j.pdf",
+    "sourcePages": [
+      "公式PDF p.1: 2029年3月期に売上高1,200億円、営業利益201億円、営業利益率16.8%を目指すとともに、事業競争力、新規事業、人的資本を基本方針に掲げる。",
+      "公式PDF p.1: AI関連事業の本格展開、ストック型ビジネス拡大、SDV・モビリティ、人的資本経営の進化を説明する。",
+      "公式PDF p.2: 2026年3月期実績と2029年3月期計画を同一表で示し、売上高944億円から1,200億円、EBITDA+S158.19億円から215.10億円へ接続できる。",
+      "公式PDF p.2: 営業利益153.67億円から201.60億円、営業利益率16.3%から16.8%へ接続できる。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-17T08:00:00.000Z",
+    "reviewedAt": "2026-07-17T09:00:00.000Z"
+  },
+  {
+    "id": "review-2317-20260717-production-double-check",
+    "companyCode": "2317",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "independent-release-agent",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.systena.co.jp/pdf/irnews/20260513_1_j.pdf",
+    "sourcePages": [
+      "公式PDF p.1: 2029年3月期に売上高1,200億円、営業利益201億円、営業利益率16.8%を目指すとともに、事業競争力、新規事業、人的資本を基本方針に掲げる。",
+      "公式PDF p.1: AI関連事業の本格展開、ストック型ビジネス拡大、SDV・モビリティ、人的資本経営の進化を説明する。",
+      "公式PDF p.2: 2026年3月期実績と2029年3月期計画を同一表で示し、売上高944億円から1,200億円、EBITDA+S158.19億円から215.10億円へ接続できる。",
+      "公式PDF p.2: 営業利益153.67億円から201.60億円、営業利益率16.3%から16.8%へ接続できる。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-17T10:00:00.000Z",
+    "reviewedAt": "2026-07-17T11:00:00.000Z"
+  },
+  {
+    "id": "review-2327-20260717-production-primary",
+    "companyCode": "2327",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.nssol.nipponsteel.com/ir/management-plan/pdf/nssol_2025-2027_mtbp-j.pdf",
+    "sourcePages": [
+      "公式PDF p.13: NSSOL2030ビジョンとして売上高5,000億円、営業利益1,000億円、営業利益率20%、ROE15%の水準と、人的資本・アセット化への1,000億円以上の投資を掲げる。",
+      "公式PDF p.15: TAM型モデルへの転換、積極的な成長投資・M&A、市場以上の成長、ガバナンスと株主共同価値向上を中計の柱とする。",
+      "公式PDF p.16: FY2024見込みからFY2027計画を同一表で示し、売上収益3,300億円から4,500億円、営業利益390億円から600億円へ接続できる。",
+      "公式PDF p.16: 営業利益率11.8%から13%程度、ROE11%程度から13%程度、M&A100億円程度から3年間1,500億円、配当性向50%を開示する。",
+      "公式PDF p.17: FY2024見込み営業利益390億円からFY2027目標600億円への利益増減要因と、2030年代早期の営業利益1,000億円を示す。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-17T08:01:00.000Z",
+    "reviewedAt": "2026-07-17T09:01:00.000Z"
+  },
+  {
+    "id": "review-2327-20260717-production-double-check",
+    "companyCode": "2327",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "independent-release-agent",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.nssol.nipponsteel.com/ir/management-plan/pdf/nssol_2025-2027_mtbp-j.pdf",
+    "sourcePages": [
+      "公式PDF p.13: NSSOL2030ビジョンとして売上高5,000億円、営業利益1,000億円、営業利益率20%、ROE15%の水準と、人的資本・アセット化への1,000億円以上の投資を掲げる。",
+      "公式PDF p.15: TAM型モデルへの転換、積極的な成長投資・M&A、市場以上の成長、ガバナンスと株主共同価値向上を中計の柱とする。",
+      "公式PDF p.16: FY2024見込みからFY2027計画を同一表で示し、売上収益3,300億円から4,500億円、営業利益390億円から600億円へ接続できる。",
+      "公式PDF p.16: 営業利益率11.8%から13%程度、ROE11%程度から13%程度、M&A100億円程度から3年間1,500億円、配当性向50%を開示する。",
+      "公式PDF p.17: FY2024見込み営業利益390億円からFY2027目標600億円への利益増減要因と、2030年代早期の営業利益1,000億円を示す。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-17T10:01:00.000Z",
+    "reviewedAt": "2026-07-17T11:01:00.000Z"
   }
 ]

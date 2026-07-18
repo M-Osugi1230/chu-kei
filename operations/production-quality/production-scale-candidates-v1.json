@@ -1,33 +1,31 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-18T05:33:49.228Z",
-  "sourceBundleSha256": "2971720d8b327de93fd91b5f9a62fc82fe000ec9ec034064809d2643a27d3028",
+  "generatedAt": "2026-07-18T05:36:16.715Z",
+  "sourceBundleSha256": "1dd0d2acf1c5051b000aeb2ae4e948ac1ca6531b77b59fa9344b969600faac2e",
   "companyCount": 1200,
-  "progressCount": 311,
-  "detailedExtractedCount": 8,
+  "progressCount": 319,
+  "detailedExtractedCount": 6,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
   ],
   "progressIdentifierCoverage": {
     "companyCode": 0,
-    "code": 311,
+    "code": 319,
     "ticker": 0,
     "securityCode": 0,
     "company_code": 0
   },
   "counts": {
     "detailedWithProgressFlag": 3,
-    "detailedWithoutProgressFlag": 5,
+    "detailedWithoutProgressFlag": 3,
     "detailedWithMatchedProgressRows": 0,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 5
+    "pageEvidenceAndPublicationReadyButProgressMissing": 3
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
     "pageEvidenceAndPublicationReadyButProgressMissingCodes": [
-      "2317",
-      "2327",
       "4478",
       "4612",
       "7733"
@@ -102,52 +100,6 @@
     }
   ],
   "candidates": [
-    {
-      "code": "2317",
-      "name": "システナ",
-      "lastVerifiedDate": "2026-07-17",
-      "planPublishedDate": "2026-05-13",
-      "evidenceRefCount": 4,
-      "pageEvidenceRefCount": 4,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "2327",
-      "name": "日鉄ソリューションズ",
-      "lastVerifiedDate": "2026-07-17",
-      "planPublishedDate": "2025-02-28",
-      "evidenceRefCount": 5,
-      "pageEvidenceRefCount": 5,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
     {
       "code": "4478",
       "name": "フリー",

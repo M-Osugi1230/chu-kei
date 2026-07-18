@@ -21325,5 +21325,301 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-17T10:02:00.000Z",
     "reviewedAt": "2026-07-17T11:02:00.000Z"
+  },
+  {
+    "id": "review-3050-20260718-structured-expansion",
+    "companyCode": "3050",
+    "fromStage": "source_indexed",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "sourcePages": [
+      "公式PDF p.1: 2025年度実績から2028年度計画まで、売上高5,331.07億円→6,500億円、営業利益310.14億円→423億円、営業利益率5.8%→6.5%を開示する。",
+      "公式PDF p.1: 経常利益291.58億円→405億円、当期純利益173.10億円→265億円、ROE6.2%→8.0%を開示する。",
+      "公式PDF p.9: 『選ばれるＤＣＭへの転換を加速する3年間』と、顧客・商品・店舗・リフォーム・DXの5戦略を示す。",
+      "公式PDF p.10: PBRを意識した経営、成長投資と株主還元の両立、連続増配、人的資本、サステナビリティを掲げる。",
+      "公式PDF p.27: 2025年度実績と2028年度目標、および各指標の年平均成長率を同一表で開示する。"
+    ],
+    "note": "公式一次資料の定量指標・期間・ページ証跡を確認。詳細抽出済みβへの昇格であり本番承認ではない。",
+    "decisionReason": "ＤＣＭホールディングスの主要財務目標、成長戦略、投資、還元を比較可能にする。",
+    "createdAt": "2026-07-18T03:00:00.000Z",
+    "reviewedAt": "2026-07-18T04:00:00.000Z"
+  },
+  {
+    "id": "review-2181-20260718-structured-expansion",
+    "companyCode": "2181",
+    "fromStage": "source_indexed",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+    "sourcePages": [
+      "公式PDF p.4: 前中計のFY2025実績として売上収益1兆5,558億円、ROIC18.2%、ROE20.9%、調整後EBITDA881億円を開示する。",
+      "公式PDF p.12: FY2028の数値目標として調整後EBITDA年平均成長率10%、ROIC18%以上、ROE20%以上、配当性向50%以上を掲げる。",
+      "公式PDF p.16: Staffing、BPO、Technology、Career等のFY2025実績とFY2028の成長率・マージン目標を同一表で示す。",
+      "公式PDF p.18: ROIC18%以上、ROE20%以上、Net Debt/Equity1倍以下、Net Debt/EBITDA2倍以下、成長投資と株主還元50対50を掲げる。",
+      "公式PDF p.20: 約1,800億円を成長投資と株主還元へ原則50%ずつ配分する。"
+    ],
+    "note": "公式一次資料の定量指標・期間・ページ証跡を確認。詳細抽出済みβへの昇格であり本番承認ではない。",
+    "decisionReason": "パーソルホールディングスの主要財務目標、成長戦略、投資、還元を比較可能にする。",
+    "createdAt": "2026-07-18T03:01:00.000Z",
+    "reviewedAt": "2026-07-18T04:01:00.000Z"
+  },
+  {
+    "id": "review-3050-20260718-progress-connect",
+    "companyCode": "3050",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "sourcePages": [
+      "公式PDF p.1",
+      "公式PDF p.1",
+      "公式PDF p.1",
+      "公式PDF p.1",
+      "公式PDF p.1",
+      "公式PDF p.1"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式PDF p.1およびp.27で2025年度実績と2028年度目標が同一表に並記され、売上高、営業利益、営業利益率、経常利益、当期純利益、ROEを同一定義・同一単位で接続できるため。",
+    "createdAt": "2026-07-18T01:00:00.000Z",
+    "reviewedAt": "2026-07-18T01:10:00.000Z"
+  },
+  {
+    "id": "review-2181-20260718-progress-connect",
+    "companyCode": "2181",
+    "fromStage": "detailed_extracted",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "progress-research-agent",
+    "reviewer": "progress-quality-agent",
+    "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+    "sourcePages": [
+      "公式PDF p.18",
+      "公式PDF p.18"
+    ],
+    "note": "公式実績値を中計目標へ接続したが、本番昇格は別の承認工程で行う。",
+    "decisionReason": "公式PDF p.4・p.12・p.18でFY2025実績とFY2028目標が開示され、ROICとROEを同一定義・同一単位で接続できるため。調整後EBITDAは固定額ではなくCAGR目標、負債指標は上限制約のため単純進捗率から除外する。",
+    "createdAt": "2026-07-18T01:01:00.000Z",
+    "reviewedAt": "2026-07-18T01:11:00.000Z"
+  },
+  {
+    "id": "review-3050-20260718-production-primary",
+    "companyCode": "3050",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "sourcePages": [
+      "公式PDF p.1: 2025年度実績から2028年度計画まで、売上高5,331.07億円→6,500億円、営業利益310.14億円→423億円、営業利益率5.8%→6.5%を開示する。",
+      "公式PDF p.1: 経常利益291.58億円→405億円、当期純利益173.10億円→265億円、ROE6.2%→8.0%を開示する。",
+      "公式PDF p.9: 『選ばれるＤＣＭへの転換を加速する3年間』と、顧客・商品・店舗・リフォーム・DXの5戦略を示す。",
+      "公式PDF p.10: PBRを意識した経営、成長投資と株主還元の両立、連続増配、人的資本、サステナビリティを掲げる。",
+      "公式PDF p.27: 2025年度実績と2028年度目標、および各指標の年平均成長率を同一表で開示する。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-18T08:00:00.000Z",
+    "reviewedAt": "2026-07-18T09:00:00.000Z"
+  },
+  {
+    "id": "review-3050-20260718-production-double-check",
+    "companyCode": "3050",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "independent-release-agent",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "sourcePages": [
+      "公式PDF p.1: 2025年度実績から2028年度計画まで、売上高5,331.07億円→6,500億円、営業利益310.14億円→423億円、営業利益率5.8%→6.5%を開示する。",
+      "公式PDF p.1: 経常利益291.58億円→405億円、当期純利益173.10億円→265億円、ROE6.2%→8.0%を開示する。",
+      "公式PDF p.9: 『選ばれるＤＣＭへの転換を加速する3年間』と、顧客・商品・店舗・リフォーム・DXの5戦略を示す。",
+      "公式PDF p.10: PBRを意識した経営、成長投資と株主還元の両立、連続増配、人的資本、サステナビリティを掲げる。",
+      "公式PDF p.27: 2025年度実績と2028年度目標、および各指標の年平均成長率を同一表で開示する。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-18T10:00:00.000Z",
+    "reviewedAt": "2026-07-18T11:00:00.000Z"
+  },
+  {
+    "id": "review-2181-20260718-production-primary",
+    "companyCode": "2181",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "production-quality-agent",
+    "reviewer": "production-quality-review",
+    "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+    "sourcePages": [
+      "公式PDF p.4: 前中計のFY2025実績として売上収益1兆5,558億円、ROIC18.2%、ROE20.9%、調整後EBITDA881億円を開示する。",
+      "公式PDF p.12: FY2028の数値目標として調整後EBITDA年平均成長率10%、ROIC18%以上、ROE20%以上、配当性向50%以上を掲げる。",
+      "公式PDF p.16: Staffing、BPO、Technology、Career等のFY2025実績とFY2028の成長率・マージン目標を同一表で示す。",
+      "公式PDF p.18: ROIC18%以上、ROE20%以上、Net Debt/Equity1倍以下、Net Debt/EBITDA2倍以下、成長投資と株主還元50対50を掲げる。",
+      "公式PDF p.20: 約1,800億円を成長投資と株主還元へ原則50%ずつ配分する。"
+    ],
+    "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+    "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+    "createdAt": "2026-07-18T08:01:00.000Z",
+    "reviewedAt": "2026-07-18T09:01:00.000Z"
+  },
+  {
+    "id": "review-2181-20260718-production-double-check",
+    "companyCode": "2181",
+    "fromStage": "detailed_extracted",
+    "targetStage": "core",
+    "status": "approved",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "independent-release-agent",
+    "reviewer": "independent-release-review",
+    "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+    "sourcePages": [
+      "公式PDF p.4: 前中計のFY2025実績として売上収益1兆5,558億円、ROIC18.2%、ROE20.9%、調整後EBITDA881億円を開示する。",
+      "公式PDF p.12: FY2028の数値目標として調整後EBITDA年平均成長率10%、ROIC18%以上、ROE20%以上、配当性向50%以上を掲げる。",
+      "公式PDF p.16: Staffing、BPO、Technology、Career等のFY2025実績とFY2028の成長率・マージン目標を同一表で示す。",
+      "公式PDF p.18: ROIC18%以上、ROE20%以上、Net Debt/Equity1倍以下、Net Debt/EBITDA2倍以下、成長投資と株主還元50対50を掲げる。",
+      "公式PDF p.20: 約1,800億円を成長投資と株主還元へ原則50%ずつ配分する。"
+    ],
+    "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+    "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+    "createdAt": "2026-07-18T10:01:00.000Z",
+    "reviewedAt": "2026-07-18T11:01:00.000Z"
+  },
+  {
+    "id": "review-3050-20260717-evidence",
+    "companyCode": "3050",
+    "fromStage": "core",
+    "targetStage": "core",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "sourcePages": [
+      "公式PDF p.1: 2025年度実績から2028年度計画まで、売上高5,331.07億円から6,500億円、営業利益310.14億円から423億円、営業利益率5.8%から6.5%を開示する。",
+      "公式PDF p.1: 経常利益291.58億円から405億円、当期純利益173.10億円から265億円、ROE6.2%から8.0%を開示する。",
+      "公式PDF p.9: 顧客・商品・店舗・リフォーム・DXの5戦略と、選ばれるＤＣＭへの転換を加速する方針を示す。",
+      "公式PDF p.10: PBRを意識した経営、成長投資と株主還元の両立、連続増配、人的資本、サステナビリティを掲げる。"
+    ],
+    "note": "企業区分を変更せず、公式一次資料に基づくページ番号またはWeb見出し証跡・資料公表日・出典導線を補修し、本番昇格は別の二段階承認で行う。",
+    "decisionReason": "品質負債監査の基準日と日本時間の確認日の境界を統一するため。公式中期経営計画の業績目標、戦略、資本効率・還元方針を再確認し、企業区分・数値・進捗・承認状態を変更せず確認日のみ訂正する。",
+    "createdAt": "2026-07-17T06:00:00.000Z",
+    "reviewedAt": "2026-07-17T07:00:00.000Z"
+  },
+  {
+    "id": "review-2181-20260717-evidence",
+    "companyCode": "2181",
+    "fromStage": "core",
+    "targetStage": "core",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+    "sourcePages": [
+      "公式PDF p.4: FY2025実績として売上収益1兆5,558億円、ROIC18.2%、ROE20.9%、調整後EBITDA881億円を開示する。",
+      "公式PDF p.12: FY2028の数値目標として調整後EBITDA年平均成長率10%、ROIC18%以上、ROE20%以上、配当性向50%以上を掲げる。",
+      "公式PDF p.18: ROIC18%以上、ROE20%以上、成長投資と株主還元50対50の財務戦略を示す。",
+      "公式PDF p.20: 約1,800億円を成長投資と株主還元へ原則50%ずつ配分する。"
+    ],
+    "note": "企業区分を変更せず、公式一次資料に基づくページ番号またはWeb見出し証跡・資料公表日・出典導線を補修し、本番昇格は別の二段階承認で行う。",
+    "decisionReason": "品質負債監査の基準日と日本時間の確認日の境界を統一するため。公式中期経営計画のFY2025実績、FY2028資本効率目標、キャピタルアロケーションを再確認し、企業区分・数値・進捗・承認状態を変更せず確認日のみ訂正する。",
+    "createdAt": "2026-07-17T06:01:00.000Z",
+    "reviewedAt": "2026-07-17T07:01:00.000Z"
   }
 ]

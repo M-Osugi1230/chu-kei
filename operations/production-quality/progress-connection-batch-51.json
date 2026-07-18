@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "progress-connection-batch-v1",
+  "batchId": "progress-connection-batch-51",
+  "explicitSelection": true,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "records": [
+    {
+      "code": "3050",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+      "document": "ＤＣＭホールディングス 第4次中期経営計画（2026～2028年度）",
+      "sourcePublishedDate": "2026-04-14",
+      "verifiedDate": "2026-07-18",
+      "reason": "公式PDF p.1およびp.27で2025年度実績と2028年度目標が同一表に並記され、売上高、営業利益、営業利益率、経常利益、当期純利益、ROEを同一定義・同一単位で接続できるため。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 6500,
+          "actualValue": 5331.07,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.1",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度売上高実績5,331.07億円",
+          "targetSource": "同 PDF p.1: 2028年度売上高目標6,500億円",
+          "note": "連結売上高を同一定義・同一単位で接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 423,
+          "actualValue": 310.14,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.1",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度営業利益実績310.14億円",
+          "targetSource": "同 PDF p.1: 2028年度営業利益目標423億円",
+          "note": "営業利益を同一定義で接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "operatingMargin",
+          "targetValue": 6.5,
+          "actualValue": 5.8,
+          "unit": "%",
+          "sourcePage": "公式PDF p.1",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度営業利益率実績5.8%",
+          "targetSource": "同 PDF p.1: 2028年度営業利益率目標6.5%",
+          "note": "会社開示の営業利益率を接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "ordinaryProfit",
+          "targetValue": 405,
+          "actualValue": 291.58,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.1",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度経常利益実績291.58億円",
+          "targetSource": "同 PDF p.1: 2028年度経常利益目標405億円",
+          "note": "経常利益を営業利益・当期純利益と分離して接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "netProfit",
+          "targetValue": 265,
+          "actualValue": 173.1,
+          "unit": "億円",
+          "sourcePage": "公式PDF p.1",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度当期純利益実績173.10億円",
+          "targetSource": "同 PDF p.1: 2028年度当期純利益目標265億円",
+          "note": "会社開示の当期純利益を接続する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "roe",
+          "targetValue": 8,
+          "actualValue": 6.2,
+          "unit": "%",
+          "sourcePage": "公式PDF p.1",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度ROE実績6.2%",
+          "targetSource": "同 PDF p.1: 2028年度ROE目標8.0%",
+          "note": "会社開示ROEを同一定義で接続する。"
+        }
+      ]
+    },
+    {
+      "code": "2181",
+      "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+      "document": "パーソルグループ 中期経営計画FY2028",
+      "sourcePublishedDate": "2026-05-14",
+      "verifiedDate": "2026-07-18",
+      "reason": "公式PDF p.4・p.12・p.18でFY2025実績とFY2028目標が開示され、ROICとROEを同一定義・同一単位で接続できるため。調整後EBITDAは固定額ではなくCAGR目標、負債指標は上限制約のため単純進捗率から除外する。",
+      "progressRows": [
+        {
+          "fiscalYear": "FY2028",
+          "metric": "roic",
+          "targetValue": 18,
+          "actualValue": 18.2,
+          "unit": "%",
+          "sourcePage": "公式PDF p.18",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画FY2028 PDF p.4・p.18: FY2025 ROIC実績18.2%",
+          "targetSource": "同 PDF p.12・p.18: FY2028 ROIC目標18%以上",
+          "note": "目標下限18%へ接続する。実績は既に下限を上回っており、今後は水準維持とROICスプレッド拡大を確認する。"
+        },
+        {
+          "fiscalYear": "FY2028",
+          "metric": "roe",
+          "targetValue": 20,
+          "actualValue": 20.9,
+          "unit": "%",
+          "sourcePage": "公式PDF p.18",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画FY2028 PDF p.4・p.18: FY2025 ROE実績20.9%",
+          "targetSource": "同 PDF p.12・p.18: FY2028 ROE目標20%以上",
+          "note": "目標下限20%へ接続する。実績は既に下限を上回っており、持続性を確認する。"
+        }
+      ]
+    }
+  ]
+}

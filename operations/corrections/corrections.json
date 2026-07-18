@@ -15593,5 +15593,227 @@
     "reviewDecisionId": "review-2181-20260718-structured-expansion",
     "detectedAt": "2026-07-18T03:01:00.000Z",
     "correctedAt": "2026-07-18T04:01:00.000Z"
+  },
+  {
+    "id": "correction-3050-20260718-progress-connect",
+    "companyCode": "3050",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-18",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-18",
+      "progressRows": [
+        {
+          "code": "3050",
+          "fiscalYear": "FY2028",
+          "metric": "revenue",
+          "targetValue": 6500,
+          "actualValue": 5331.07,
+          "unit": "億円",
+          "progressRate": 82,
+          "source": "同 PDF p.1: 2028年度売上高目標6,500億円",
+          "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+          "sourcePage": "公式PDF p.1",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "連結売上高を同一定義・同一単位で接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度売上高実績5,331.07億円"
+        },
+        {
+          "code": "3050",
+          "fiscalYear": "FY2028",
+          "metric": "operatingProfit",
+          "targetValue": 423,
+          "actualValue": 310.14,
+          "unit": "億円",
+          "progressRate": 73.3,
+          "source": "同 PDF p.1: 2028年度営業利益目標423億円",
+          "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+          "sourcePage": "公式PDF p.1",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "営業利益を同一定義で接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度営業利益実績310.14億円"
+        },
+        {
+          "code": "3050",
+          "fiscalYear": "FY2028",
+          "metric": "operatingMargin",
+          "targetValue": 6.5,
+          "actualValue": 5.8,
+          "unit": "%",
+          "progressRate": 89.2,
+          "source": "同 PDF p.1: 2028年度営業利益率目標6.5%",
+          "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+          "sourcePage": "公式PDF p.1",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "会社開示の営業利益率を接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度営業利益率実績5.8%"
+        },
+        {
+          "code": "3050",
+          "fiscalYear": "FY2028",
+          "metric": "ordinaryProfit",
+          "targetValue": 405,
+          "actualValue": 291.58,
+          "unit": "億円",
+          "progressRate": 72,
+          "source": "同 PDF p.1: 2028年度経常利益目標405億円",
+          "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+          "sourcePage": "公式PDF p.1",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "経常利益を営業利益・当期純利益と分離して接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度経常利益実績291.58億円"
+        },
+        {
+          "code": "3050",
+          "fiscalYear": "FY2028",
+          "metric": "netProfit",
+          "targetValue": 265,
+          "actualValue": 173.1,
+          "unit": "億円",
+          "progressRate": 65.3,
+          "source": "同 PDF p.1: 2028年度当期純利益目標265億円",
+          "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+          "sourcePage": "公式PDF p.1",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "会社開示の当期純利益を接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度当期純利益実績173.10億円"
+        },
+        {
+          "code": "3050",
+          "fiscalYear": "FY2028",
+          "metric": "roe",
+          "targetValue": 8,
+          "actualValue": 6.2,
+          "unit": "%",
+          "progressRate": 77.5,
+          "source": "同 PDF p.1: 2028年度ROE目標8.0%",
+          "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+          "sourcePage": "公式PDF p.1",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "会社開示ROEを同一定義で接続する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "第4次中期経営計画 PDF p.1: 2025年度ROE実績6.2%"
+        }
+      ]
+    },
+    "reason": "公式PDF p.1およびp.27で2025年度実績と2028年度目標が同一表に並記され、売上高、営業利益、営業利益率、経常利益、当期純利益、ROEを同一定義・同一単位で接続できるため。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "sourcePage": "公式PDF p.1 / 公式PDF p.1 / 公式PDF p.1 / 公式PDF p.1 / 公式PDF p.1 / 公式PDF p.1",
+    "status": "corrected",
+    "reviewDecisionId": "review-3050-20260718-progress-connect",
+    "detectedAt": "2026-07-18T01:00:00.000Z",
+    "correctedAt": "2026-07-18T01:20:00.000Z"
+  },
+  {
+    "id": "correction-2181-20260718-progress-connect",
+    "companyCode": "2181",
+    "fieldPath": "flags.progress,lastVerifiedDate,progress",
+    "before": {
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-18",
+      "progressRows": []
+    },
+    "after": {
+      "progressFlag": true,
+      "lastVerifiedDate": "2026-07-18",
+      "progressRows": [
+        {
+          "code": "2181",
+          "fiscalYear": "FY2028",
+          "metric": "roic",
+          "targetValue": 18,
+          "actualValue": 18.2,
+          "unit": "%",
+          "progressRate": 101.1,
+          "source": "同 PDF p.12・p.18: FY2028 ROIC目標18%以上",
+          "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+          "sourcePage": "公式PDF p.18",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "目標下限18%へ接続する。実績は既に下限を上回っており、今後は水準維持とROICスプレッド拡大を確認する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画FY2028 PDF p.4・p.18: FY2025 ROIC実績18.2%"
+        },
+        {
+          "code": "2181",
+          "fiscalYear": "FY2028",
+          "metric": "roe",
+          "targetValue": 20,
+          "actualValue": 20.9,
+          "unit": "%",
+          "progressRate": 104.5,
+          "source": "同 PDF p.12・p.18: FY2028 ROE目標20%以上",
+          "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+          "sourcePage": "公式PDF p.18",
+          "updatedAt": "2026-07-18",
+          "lastVerifiedDate": "2026-07-18",
+          "note": "目標下限20%へ接続する。実績は既に下限を上回っており、持続性を確認する。",
+          "actualFiscalYear": "FY2025",
+          "actualSource": "中期経営計画FY2028 PDF p.4・p.18: FY2025 ROE実績20.9%"
+        }
+      ]
+    },
+    "reason": "公式PDF p.4・p.12・p.18でFY2025実績とFY2028目標が開示され、ROICとROEを同一定義・同一単位で接続できるため。調整後EBITDAは固定額ではなくCAGR目標、負債指標は上限制約のため単純進捗率から除外する。",
+    "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+    "sourcePage": "公式PDF p.18 / 公式PDF p.18",
+    "status": "corrected",
+    "reviewDecisionId": "review-2181-20260718-progress-connect",
+    "detectedAt": "2026-07-18T01:01:00.000Z",
+    "correctedAt": "2026-07-18T01:21:00.000Z"
+  },
+  {
+    "id": "correction-3050-20260718-production-promotion",
+    "companyCode": "3050",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "sourcePage": "公式PDF p.1: 2025年度実績から2028年度計画まで、売上高5,331.07億円→6,500億円、営業利益310.14億円→423億円、営業利益率5.8%→6.5%を開示する。 / 公式PDF p.1: 経常利益291.58億円→405億円、当期純利益173.10億円→265億円、ROE6.2%→8.0%を開示する。 / 公式PDF p.9: 『選ばれるＤＣＭへの転換を加速する3年間』と、顧客・商品・店舗・リフォーム・DXの5戦略を示す。 / 公式PDF p.10: PBRを意識した経営、成長投資と株主還元の両立、連続増配、人的資本、サステナビリティを掲げる。 / 公式PDF p.27: 2025年度実績と2028年度目標、および各指標の年平均成長率を同一表で開示する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3050-20260718-production-double-check",
+    "detectedAt": "2026-07-18T10:00:00.000Z",
+    "correctedAt": "2026-07-18T11:00:00.000Z"
+  },
+  {
+    "id": "correction-2181-20260718-production-promotion",
+    "companyCode": "2181",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+    "sourcePage": "公式PDF p.4: 前中計のFY2025実績として売上収益1兆5,558億円、ROIC18.2%、ROE20.9%、調整後EBITDA881億円を開示する。 / 公式PDF p.12: FY2028の数値目標として調整後EBITDA年平均成長率10%、ROIC18%以上、ROE20%以上、配当性向50%以上を掲げる。 / 公式PDF p.16: Staffing、BPO、Technology、Career等のFY2025実績とFY2028の成長率・マージン目標を同一表で示す。 / 公式PDF p.18: ROIC18%以上、ROE20%以上、Net Debt/Equity1倍以下、Net Debt/EBITDA2倍以下、成長投資と株主還元50対50を掲げる。 / 公式PDF p.20: 約1,800億円を成長投資と株主還元へ原則50%ずつ配分する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2181-20260718-production-double-check",
+    "detectedAt": "2026-07-18T10:01:00.000Z",
+    "correctedAt": "2026-07-18T11:01:00.000Z"
   }
 ]

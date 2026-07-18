@@ -1,33 +1,31 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-18T05:15:28.327Z",
-  "sourceBundleSha256": "8b9de4fa04907c6683321fd8e35d6d344ede63ab3bb278ba456b75b5eb002ada",
+  "generatedAt": "2026-07-18T05:18:41.097Z",
+  "sourceBundleSha256": "cafcfe866b5d1a6dcf09b9647cc348dbcc18d1a76a6bf3915048f707765531f3",
   "companyCount": 1200,
-  "progressCount": 303,
-  "detailedExtractedCount": 8,
+  "progressCount": 311,
+  "detailedExtractedCount": 6,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
   ],
   "progressIdentifierCoverage": {
     "companyCode": 0,
-    "code": 303,
+    "code": 311,
     "ticker": 0,
     "securityCode": 0,
     "company_code": 0
   },
   "counts": {
     "detailedWithProgressFlag": 3,
-    "detailedWithoutProgressFlag": 5,
+    "detailedWithoutProgressFlag": 3,
     "detailedWithMatchedProgressRows": 0,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 5
+    "pageEvidenceAndPublicationReadyButProgressMissing": 3
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
     "pageEvidenceAndPublicationReadyButProgressMissingCodes": [
-      "2181",
-      "3050",
       "4478",
       "4612",
       "7733"
@@ -102,52 +100,6 @@
     }
   ],
   "candidates": [
-    {
-      "code": "2181",
-      "name": "パーソルホールディングス",
-      "lastVerifiedDate": "2026-07-18",
-      "planPublishedDate": "2026-05-14",
-      "evidenceRefCount": 5,
-      "pageEvidenceRefCount": 5,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "3050",
-      "name": "ＤＣＭホールディングス",
-      "lastVerifiedDate": "2026-07-18",
-      "planPublishedDate": "2026-04-14",
-      "evidenceRefCount": 5,
-      "pageEvidenceRefCount": 5,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
     {
       "code": "4478",
       "name": "フリー",

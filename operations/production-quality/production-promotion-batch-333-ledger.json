@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "production-promotion-batch-333",
+  "automaticApprovalAllowed": false,
+  "explicitProductionApproval": true,
+  "reviews": [
+    {
+      "id": "review-5631-20260717-production-primary",
+      "companyCode": "5631",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://www.jsw.co.jp/ja/ir/library/presentation.html",
+      "sourcePages": [
+        "公式PDF p.6: 2033年度に売上高5,000億円、営業利益500億円、ROE11～12%を目指す長期ビジョンを示す。",
+        "公式PDF p.7: JGP2028の位置づけ、4つの基本方針、更新前の財務目標を示す。",
+        "公式PDF p.10: 2026年3月期実績として売上高2,748億円、営業利益253億円、営業利益率9.2%、ROE9.5%、EBITDA343億円を同一表で示す。",
+        "公式PDF p.11: 連結配当性向35%以上とDOE2.5%下限の配当方針を示す。",
+        "公式PDF p.14: 防衛、成形機、電子デバイス、火力・原子力、データセンター、フォトニクスの事業戦略更新を示す。",
+        "公式PDF p.15: 2029年3月期目標として売上高4,000億円、営業利益400億円、営業利益率10.0%、ROE10～11%、EBITDA550億円を示す。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-17T08:00:00.000Z",
+      "reviewedAt": "2026-07-17T09:00:00.000Z"
+    },
+    {
+      "id": "review-5631-20260717-production-double-check",
+      "companyCode": "5631",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "independent-release-agent",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://www.jsw.co.jp/ja/ir/library/presentation.html",
+      "sourcePages": [
+        "公式PDF p.6: 2033年度に売上高5,000億円、営業利益500億円、ROE11～12%を目指す長期ビジョンを示す。",
+        "公式PDF p.7: JGP2028の位置づけ、4つの基本方針、更新前の財務目標を示す。",
+        "公式PDF p.10: 2026年3月期実績として売上高2,748億円、営業利益253億円、営業利益率9.2%、ROE9.5%、EBITDA343億円を同一表で示す。",
+        "公式PDF p.11: 連結配当性向35%以上とDOE2.5%下限の配当方針を示す。",
+        "公式PDF p.14: 防衛、成形機、電子デバイス、火力・原子力、データセンター、フォトニクスの事業戦略更新を示す。",
+        "公式PDF p.15: 2029年3月期目標として売上高4,000億円、営業利益400億円、営業利益率10.0%、ROE10～11%、EBITDA550億円を示す。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-17T10:00:00.000Z",
+      "reviewedAt": "2026-07-17T11:00:00.000Z"
+    },
+    {
+      "id": "review-4042-20260717-production-primary",
+      "companyCode": "4042",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/4042/tdnet/2623991/00.pdf",
+      "sourcePages": [
+        "公式PDF p.16: Vision2030の位置づけと成長・脱炭素の同時実現方針を示す。",
+        "公式PDF p.18: 2030年度営業利益1,700億円を、チェーン事業・先端事業・新規事業の構成別に示す。",
+        "公式PDF p.21: 2025～2027年度の経営基本方針としてチェーン事業、先端事業、脱炭素、安全を示す。",
+        "公式PDF p.23: 2024年度実績から2027年度目標として、売上高1兆634億円から1兆1,830億円、営業利益989億円から1,400億円、ROE7.2%から10%以上を同一表で示す。",
+        "公式PDF p.24: チェーン事業・先端事業・その他の2024年度実績と2027年度売上高・営業利益目標を同一表で示す。",
+        "公式PDF p.42: 2025～2027年度の設備投資2,200～2,500億円と投資分野を示す。",
+        "公式PDF p.43: 配当性向30%、自己株式取得500億円、年間配当100円下限、総還元性向50%の株主還元方針を示す。",
+        "公式PDF p.44: 営業CF3,500～3,800億円と投資CF2,200～2,500億円を中心とするキャピタルアロケーションを示す。"
+      ],
+      "note": "既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-17T08:01:00.000Z",
+      "reviewedAt": "2026-07-17T09:01:00.000Z"
+    },
+    {
+      "id": "review-4042-20260717-production-double-check",
+      "companyCode": "4042",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "independent-release-agent",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/4042/tdnet/2623991/00.pdf",
+      "sourcePages": [
+        "公式PDF p.16: Vision2030の位置づけと成長・脱炭素の同時実現方針を示す。",
+        "公式PDF p.18: 2030年度営業利益1,700億円を、チェーン事業・先端事業・新規事業の構成別に示す。",
+        "公式PDF p.21: 2025～2027年度の経営基本方針としてチェーン事業、先端事業、脱炭素、安全を示す。",
+        "公式PDF p.23: 2024年度実績から2027年度目標として、売上高1兆634億円から1兆1,830億円、営業利益989億円から1,400億円、ROE7.2%から10%以上を同一表で示す。",
+        "公式PDF p.24: チェーン事業・先端事業・その他の2024年度実績と2027年度売上高・営業利益目標を同一表で示す。",
+        "公式PDF p.42: 2025～2027年度の設備投資2,200～2,500億円と投資分野を示す。",
+        "公式PDF p.43: 配当性向30%、自己株式取得500億円、年間配当100円下限、総還元性向50%の株主還元方針を示す。",
+        "公式PDF p.44: 営業CF3,500～3,800億円と投資CF2,200～2,500億円を中心とするキャピタルアロケーションを示す。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-17T10:01:00.000Z",
+      "reviewedAt": "2026-07-17T11:01:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-5631-20260717-production-promotion",
+      "companyCode": "5631",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://www.jsw.co.jp/ja/ir/library/presentation.html",
+      "sourcePage": "公式PDF p.6: 2033年度に売上高5,000億円、営業利益500億円、ROE11～12%を目指す長期ビジョンを示す。 / 公式PDF p.7: JGP2028の位置づけ、4つの基本方針、更新前の財務目標を示す。 / 公式PDF p.10: 2026年3月期実績として売上高2,748億円、営業利益253億円、営業利益率9.2%、ROE9.5%、EBITDA343億円を同一表で示す。 / 公式PDF p.11: 連結配当性向35%以上とDOE2.5%下限の配当方針を示す。 / 公式PDF p.14: 防衛、成形機、電子デバイス、火力・原子力、データセンター、フォトニクスの事業戦略更新を示す。 / 公式PDF p.15: 2029年3月期目標として売上高4,000億円、営業利益400億円、営業利益率10.0%、ROE10～11%、EBITDA550億円を示す。",
+      "status": "corrected",
+      "reviewDecisionId": "review-5631-20260717-production-double-check",
+      "detectedAt": "2026-07-17T10:00:00.000Z",
+      "correctedAt": "2026-07-17T11:00:00.000Z"
+    },
+    {
+      "id": "correction-4042-20260717-production-promotion",
+      "companyCode": "4042",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/4042/tdnet/2623991/00.pdf",
+      "sourcePage": "公式PDF p.16: Vision2030の位置づけと成長・脱炭素の同時実現方針を示す。 / 公式PDF p.18: 2030年度営業利益1,700億円を、チェーン事業・先端事業・新規事業の構成別に示す。 / 公式PDF p.21: 2025～2027年度の経営基本方針としてチェーン事業、先端事業、脱炭素、安全を示す。 / 公式PDF p.23: 2024年度実績から2027年度目標として、売上高1兆634億円から1兆1,830億円、営業利益989億円から1,400億円、ROE7.2%から10%以上を同一表で示す。 / 公式PDF p.24: チェーン事業・先端事業・その他の2024年度実績と2027年度売上高・営業利益目標を同一表で示す。 / 公式PDF p.42: 2025～2027年度の設備投資2,200～2,500億円と投資分野を示す。 / 公式PDF p.43: 配当性向30%、自己株式取得500億円、年間配当100円下限、総還元性向50%の株主還元方針を示す。 / 公式PDF p.44: 営業CF3,500～3,800億円と投資CF2,200～2,500億円を中心とするキャピタルアロケーションを示す。",
+      "status": "corrected",
+      "reviewDecisionId": "review-4042-20260717-production-double-check",
+      "detectedAt": "2026-07-17T10:01:00.000Z",
+      "correctedAt": "2026-07-17T11:01:00.000Z"
+    }
+  ]
+}

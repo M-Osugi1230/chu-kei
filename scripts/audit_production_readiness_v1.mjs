@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
 import { countPrimaryEvidenceReferences } from './lib/evidence_reference_v1.mjs';
+import { hasCompletedProgressAssessment } from './lib/quality_profile_v2.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
@@ -96,7 +97,7 @@ const rows = bundle.companies.map(company => {
     pageEvidence: hasPageEvidence(company, target.minimumPageEvidenceRefs),
     structuredAnalysis: ['core', 'detailed_extracted'].includes(company.stage) && hasStructuredAnalysis(company),
     metricExtraction: ['core', 'detailed_extracted'].includes(company.stage) && hasMetricExtraction(company),
-    progressConnected: Boolean(company.flags?.progress),
+    progressConnected: hasCompletedProgressAssessment(company),
     freshness: days != null && days >= 0 && days <= target.freshnessDays,
     productionReviewApproved: approvals.length >= 1,
     independentDoubleCheckApproved: approvals.length >= target.minimumProductionApprovals

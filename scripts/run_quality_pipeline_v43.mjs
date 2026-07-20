@@ -165,6 +165,7 @@ if (isApplyWorkflow) {
   if (embeddedProgress) consumeRequestedConfig(embeddedProgress, 'Embedded progress connection');
 }
 runNode('scripts/normalize_progress_assessment_flags_v1.mjs');
+runNode('scripts/normalize_structured_summary_identity_v1.mjs');
 runNode('scripts/rebuild_quality_scores_v2.mjs');
 runNode('scripts/normalize_bundle_contract_v1.mjs');
 runNode('scripts/build_frontend_data_shards_v1.mjs');

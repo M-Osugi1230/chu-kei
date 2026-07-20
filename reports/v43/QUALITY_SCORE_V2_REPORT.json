@@ -1,7 +1,7 @@
 {
   "version": "quality-score-v2",
-  "generatedAt": "2026-07-20T07:47:27.920Z",
-  "profileVersion": "2.3",
+  "generatedAt": "2026-07-20T13:35:49.217Z",
+  "profileVersion": "2.4",
   "storage": {
     "format": "compact-bitmask",
     "checkKeys": [
@@ -39,30 +39,30 @@
     "oneStar": "coverage only or insufficient evidence"
   },
   "before": {
-    "1": 902,
-    "2": 59,
-    "3": 1,
-    "4": 19,
-    "5": 219
-  },
-  "after": {
-    "1": 902,
-    "2": 59,
+    "1": 895,
+    "2": 0,
     "3": 1,
     "4": 18,
-    "5": 220
+    "5": 286
+  },
+  "after": {
+    "1": 895,
+    "2": 0,
+    "3": 1,
+    "4": 18,
+    "5": 286
   },
   "byStage": {
     "core": {
-      "companies": 234,
+      "companies": 300,
       "distribution": {
         "1": 0,
         "2": 0,
         "3": 1,
         "4": 13,
-        "5": 220
+        "5": 286
       },
-      "averageScore": 97.9
+      "averageScore": 98.3
     },
     "detailed_extracted": {
       "companies": 5,
@@ -76,20 +76,20 @@
       "averageScore": 68
     },
     "source_indexed": {
-      "companies": 59,
+      "companies": 0,
       "distribution": {
         "1": 0,
-        "2": 59,
+        "2": 0,
         "3": 0,
         "4": 0,
         "5": 0
       },
-      "averageScore": 15
+      "averageScore": null
     },
     "jpx_indexed": {
-      "companies": 902,
+      "companies": 895,
       "distribution": {
-        "1": 902,
+        "1": 895,
         "2": 0,
         "3": 0,
         "4": 0,
@@ -99,8 +99,8 @@
     }
   },
   "bundle": {
-    "sha256": "7f1d28fe0784af2436ae8c76a83dd9587e1666a4fad797f9adc131e61da35867",
-    "compressedBytes": 243065,
+    "sha256": "504047916818e626bb39f78be2fdcf8f1d275473f3ff35c0aa0c83d7be44142a",
+    "compressedBytes": 273345,
     "parts": 43
   }
 }

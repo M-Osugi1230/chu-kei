@@ -10,11 +10,17 @@ const REPORT_DIR = path.join(ROOT, 'reports', 'v43');
 const SHARD_SIZE = 20;
 const INDEX_INITIAL_BUDGET = 96 * 1024;
 const DETAIL_SHARD_BUDGET = 32 * 1024;
+const CARD_SUMMARY_LENGTH = 80;
+const CARD_THEME_LIMIT = 6;
 
 const sha256 = buffer => crypto.createHash('sha256').update(buffer).digest('hex');
 const gzipJson = value => zlib.gzipSync(Buffer.from(JSON.stringify(value), 'utf8'), { level: 9, mtime: 0 });
 const metricCount = company => ['revenue', 'profit', 'margin', 'capital', 'returnPolicy']
   .filter(key => company[key] && company[key] !== '未抽出' && !String(company[key]).startsWith('未抽出')).length;
+const compactSummary = value => {
+  const text = String(value ?? '');
+  return text.length > CARD_SUMMARY_LENGTH ? `${text.slice(0, CARD_SUMMARY_LENGTH)}…` : text;
+};
 
 const sourceManifest = JSON.parse(fs.readFileSync(path.join(SOURCE_DIR, 'bundle.manifest.json'), 'utf8'));
 const sourceCompressed = Buffer.concat(
@@ -41,6 +47,8 @@ for (let offset = 0, shardIndex = 0; offset < sorted.length; offset += SHARD_SIZ
       sourceUrl: company.sourceUrl ?? null,
       document: company.document ?? null,
       period: company.period ?? null,
+      summary: company.summary ?? '',
+      themes: company.themes ?? [],
       revenue: company.revenue ?? null,
       profit: company.profit ?? null,
       margin: company.margin ?? null,
@@ -49,6 +57,7 @@ for (let offset = 0, shardIndex = 0; offset < sorted.length; offset += SHARD_SIZ
       highlights: company.highlights ?? [],
       warnings: company.warnings ?? [],
       evidenceRefs: company.evidenceRefs ?? [],
+      progressAssessment: company.progressAssessment ?? null,
     })),
   };
   const compressed = gzipJson(payload);
@@ -75,16 +84,13 @@ const indexPayload = {
     market: company.market,
     industry: company.industry,
     stage: company.stage,
-    tier: company.tier,
     lastVerifiedDate: company.lastVerifiedDate ?? null,
     planPublishedDate: company.planPublishedDate ?? null,
-    themes: company.themes ?? [],
-    summary: company.summary ?? '',
+    themes: (company.themes ?? []).slice(0, CARD_THEME_LIMIT),
+    summary: compactSummary(company.summary),
     quality: company.quality ? {
       stars: company.quality.stars,
       score: company.quality.score,
-      label: company.quality.label,
-      eligibleForScoring: company.quality.eligibleForScoring,
     } : null,
     flags: company.flags ?? {},
     metricCount: metricCount(company),
@@ -118,7 +124,7 @@ if (initialBytes > INDEX_INITIAL_BUDGET) {
 }
 
 const report = {
-  version: 'frontend-data-shards-v1',
+  version: 'frontend-data-shards-v1.2',
   generatedAt: manifest.generatedAt,
   sourceBundleSha256: sourceManifest.sha256,
   companyCount: source.companies.length,

@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
+import { countPrimaryEvidenceReferences } from './lib/evidence_reference_v1.mjs';
+import { hasCompletedProgressAssessment } from './lib/quality_profile_v2.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
@@ -18,10 +20,10 @@ const WEIGHTS = {
 const CHECK_LABELS = {
   officialSource: '公式資料URL',
   publicationDate: '資料公表日',
-  pageEvidence: 'ページ証跡',
+  pageEvidence: '一次証跡',
   structuredSummary: '主要論点の構造化',
   metricExtraction: '数値・方針の抽出',
-  progressConnected: '進捗データ接続',
+  progressConnected: '進捗評価',
   evidenceReferences: '原文証跡',
 };
 
@@ -32,17 +34,17 @@ function readBundle() {
   if (digest !== manifest.sha256) throw new Error(`Bundle SHA-256 mismatch: ${digest}`);
   return JSON.parse(zlib.gunzipSync(compressed));
 }
-function hasPageEvidence(company) {
-  return (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
+function hasPrimaryEvidence(company) {
+  return countPrimaryEvidenceReferences(company.evidenceRefs) >= 1;
 }
 function assess(company) {
   const checks = {
     officialSource: typeof company.sourceUrl === 'string' && company.sourceUrl.startsWith('https://'),
     publicationDate: Boolean(company.planPublishedDate),
-    pageEvidence: hasPageEvidence(company),
+    pageEvidence: hasPrimaryEvidence(company),
     structuredSummary: Boolean(company.summary && company.summary.length >= 20),
     metricExtraction: ['revenue', 'profit', 'margin', 'capital', 'returnPolicy'].some(key => Boolean(company[key])),
-    progressConnected: Boolean(company.flags?.progress),
+    progressConnected: hasCompletedProgressAssessment(company),
     evidenceReferences: Boolean(company.evidenceRefs?.length),
   };
   return {
@@ -74,8 +76,10 @@ const queue = data.companies
       lastVerifiedDate: company.lastVerifiedDate,
       missingChecks: assessment.missingChecks,
       missingLabels: assessment.missingChecks.map(key => CHECK_LABELS[key]),
+      progressAssessmentStatus: company.progressAssessment?.status ?? (company.flags?.progress ? 'connected' : null),
       mandatoryHumanReview: [
         '原文との数値・単位・年度突合',
+        '進捗評価または比較不能理由の妥当性確認',
         '戦略分類の妥当性確認',
         '別確認者によるダブルチェック',
         '会社詳細・比較・スマホ表示監査',
@@ -86,17 +90,18 @@ const queue = data.companies
 
 fs.mkdirSync(ARTIFACT_DIR, { recursive: true });
 const jsonReport = {
-  version: 'review-queue-v1',
+  version: 'review-queue-v1.1',
   generatedAt: new Date().toISOString(),
   summary: {
     total: queue.length,
     priorityA: queue.filter(item => item.priority === 'A').length,
     priorityB: queue.filter(item => item.priority === 'B').length,
+    progressAssessed: queue.filter(item => item.progressAssessmentStatus).length,
   },
   items: queue,
 };
 fs.writeFileSync(path.join(ARTIFACT_DIR, 'review-queue-v1.json'), `${JSON.stringify(jsonReport, null, 2)}\n`);
-const headers = ['priority', 'code', 'name', 'market', 'industry', 'documentationReadiness', 'qualityStars', 'planPublishedDate', 'lastVerifiedDate', 'missingLabels', 'sourceUrl'];
+const headers = ['priority', 'code', 'name', 'market', 'industry', 'documentationReadiness', 'qualityStars', 'progressAssessmentStatus', 'planPublishedDate', 'lastVerifiedDate', 'missingLabels', 'sourceUrl'];
 const lines = [headers.map(csvCell).join(',')];
 for (const item of queue) lines.push(headers.map(header => csvCell(item[header])).join(','));
 fs.writeFileSync(path.join(ARTIFACT_DIR, 'review-queue-v1.csv'), `${lines.join('\n')}\n`);

@@ -2,36 +2,38 @@
   "schemaVersion": "production-readiness-report-v1",
   "generatedAt": "2026-07-20T00:00:00.000Z",
   "referenceDate": "2026-07-20",
-  "bundleSha256": "a3cfdec30fc81d10b8560978b177f5aee369421935538e503349cf4ec7d281c8",
+  "bundleSha256": "f7792631b6ba0a6ba9f67944a3c11d60ea933d80a73673501ab6a2c7454e91bb",
   "companyCount": 1200,
   "targetProduction": 1000,
   "currentProduction": 292,
   "productionGap": 708,
   "currentFiveStar": 278,
-  "machineReady": 278,
-  "machineReadyNotProduction": 0,
+  "machineReady": 279,
+  "machineReadyNotProduction": 1,
   "fullyApprovedAndReady": 278,
   "coreMeetingAllRequirements": 278,
   "byStage": {
     "core": 292,
-    "detailed_extracted": 5,
-    "source_indexed": 1,
+    "detailed_extracted": 6,
+    "source_indexed": 0,
     "jpx_indexed": 902
   },
   "missingCounts": {
     "officialSource": 902,
-    "publicationDate": 904,
-    "pageEvidence": 919,
-    "structuredAnalysis": 903,
-    "metricExtraction": 903,
-    "progressConnected": 906,
+    "publicationDate": 903,
+    "pageEvidence": 918,
+    "structuredAnalysis": 902,
+    "metricExtraction": 902,
+    "progressConnected": 905,
     "freshness": 0,
     "productionReviewApproved": 922,
     "independentDoubleCheckApproved": 922
   },
   "queues": {
     "productionReadyCodes": [],
-    "approvalRequiredCodes": [],
+    "approvalRequiredCodes": [
+      "9831"
+    ],
     "machineRepairCodes": [
       "175A",
       "280A",
@@ -54,7 +56,6 @@
       "6594"
     ],
     "sourceExpansionCodes": [
-      "9831",
       "1301",
       "130A",
       "1332",

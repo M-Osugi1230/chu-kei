@@ -20465,5 +20465,35 @@
     "reviewDecisionId": "review-9962-20260720-production-double-check",
     "detectedAt": "2026-07-20T10:10:00.000Z",
     "correctedAt": "2026-07-20T11:10:00.000Z"
+  },
+  {
+    "id": "correction-9831-20260720-structured-expansion",
+    "companyCode": "9831",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-08",
+      "revenue": "中期計画の固定売上高目標は公式計画資料を参照する",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "公式決算で中計の進捗方針は確認できるが、HTML本文から固定目標と最新確定実績を一式同一定義で接続できないため比率計算を行わない。",
+        "sourceRef": "公式Webページ（見出し: 経営成績等の概況／事業戦略）"
+      }
+    },
+    "reason": "ヤマダホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.yamada-holdings.jp/ir/",
+    "sourcePage": "公式Webページ（見出し: 経営成績等の概況）: 中期経営計画の柱としてLIFE SELECT店舗へ集中投資すると説明する。 / 公式Webページ（見出し: IR情報）: 2026年5月8日に2026年3月期決算を公表した。 / 公式Webページ（見出し: 事業戦略）: 暮らしまるごと戦略と資産効率改善を示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9831-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T23:40:00.000Z",
+    "correctedAt": "2026-07-20T23:50:00.000Z"
   }
 ]

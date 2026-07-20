@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-20T09:42:06.793Z",
-  "sourceBundleSha256": "a3cfdec30fc81d10b8560978b177f5aee369421935538e503349cf4ec7d281c8",
+  "generatedAt": "2026-07-20T09:43:06.623Z",
+  "sourceBundleSha256": "f7792631b6ba0a6ba9f67944a3c11d60ea933d80a73673501ab6a2c7454e91bb",
   "companyCount": 1200,
   "progressCount": 353,
-  "detailedExtractedCount": 5,
+  "detailedExtractedCount": 6,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -17,7 +17,7 @@
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 2,
+    "detailedWithProgressFlag": 3,
     "detailedWithoutProgressFlag": 3,
     "detailedWithMatchedProgressRows": 0,
     "progressExistsButFlagMissing": 0,
@@ -201,6 +201,29 @@
       "pageEvidenceRefCount": 4,
       "hasProgressFlag": false,
       "progressFlagValue": false,
+      "matchedProgressRows": 0,
+      "matchedProgressSample": [],
+      "companyFlagKeys": [
+        "ma",
+        "capitalEfficiency",
+        "shareholderReturn",
+        "progress",
+        "overseas",
+        "dx",
+        "humanCapital",
+        "newBusiness",
+        "restructuring"
+      ]
+    },
+    {
+      "code": "9831",
+      "name": "ヤマダホールディングス",
+      "lastVerifiedDate": "2026-07-20",
+      "planPublishedDate": "2026-05-08",
+      "evidenceRefCount": 3,
+      "pageEvidenceRefCount": 0,
+      "hasProgressFlag": true,
+      "progressFlagValue": true,
       "matchedProgressRows": 0,
       "matchedProgressSample": [],
       "companyFlagKeys": [

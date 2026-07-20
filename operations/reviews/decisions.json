@@ -28102,5 +28102,33 @@
     "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
     "createdAt": "2026-07-20T10:10:00.000Z",
     "reviewedAt": "2026-07-20T11:10:00.000Z"
+  },
+  {
+    "id": "review-9831-20260720-structured-expansion",
+    "companyCode": "9831",
+    "fromStage": "source_indexed",
+    "targetStage": "detailed_extracted",
+    "status": "in_review",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "source-research-agent",
+    "reviewer": "quality-evidence-agent",
+    "sourceUrl": "https://www.yamada-holdings.jp/ir/",
+    "sourcePages": [
+      "公式Webページ（見出し: 経営成績等の概況）: 中期経営計画の柱としてLIFE SELECT店舗へ集中投資すると説明する。",
+      "公式Webページ（見出し: IR情報）: 2026年5月8日に2026年3月期決算を公表した。",
+      "公式Webページ（見出し: 事業戦略）: 暮らしまるごと戦略と資産効率改善を示す。"
+    ],
+    "note": "公式一次資料の数値・方針・期間・ページ番号またはWeb見出し証跡を確認。詳細抽出済みβへの昇格であり本番承認ではない。",
+    "decisionReason": "ヤマダホールディングスの主要財務目標、成長戦略、投資、還元、進捗評価を比較可能にする。",
+    "createdAt": "2026-07-20T23:40:00.000Z",
+    "reviewedAt": "2026-07-20T23:50:00.000Z"
   }
 ]

@@ -59,6 +59,7 @@ function sanitizeRecord(candidate) {
         sourceRef: evidenceRefs[0],
       };
   const themeText = themes.length ? themes.join('、') : '事業戦略';
+  const identity = `${candidate.name}（${candidate.code}）`;
   return {
     code: String(candidate.code),
     name: candidate.name,
@@ -68,7 +69,7 @@ function sanitizeRecord(candidate) {
     period: '当該公式開示資料の対象期間',
     planPublishedDate: document.date || source.planPublishedDate,
     themes,
-    summary: `JPXの企業コード別公式開示資料では、${themeText}を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。`,
+    summary: `${identity}は、JPXの企業コード別公式開示資料で${themeText}を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。`,
     revenue: safeMetric(source.revenue, '売上高・売上収益'),
     profit: safeMetric(source.profit, '利益'),
     margin: safeMetric(source.margin, '収益性・資本効率'),

@@ -15,6 +15,13 @@ const sha256 = buffer => crypto.createHash('sha256').update(buffer).digest('hex'
 const gzipJson = value => zlib.gzipSync(Buffer.from(JSON.stringify(value), 'utf8'), { level: 9, mtime: 0 });
 const metricCount = company => ['revenue', 'profit', 'margin', 'capital', 'returnPolicy']
   .filter(key => company[key] && company[key] !== '未抽出' && !String(company[key]).startsWith('未抽出')).length;
+const compactQualityLabel = company => {
+  if (company.quality?.stars === 5) return '最高品質';
+  if (company.stage === 'core') return '本番品質';
+  if (company.stage === 'detailed_extracted') return '詳細抽出済みβ';
+  if (company.stage === 'source_indexed') return '一次確認β';
+  return 'カバレッジβ';
+};
 
 const sourceManifest = JSON.parse(fs.readFileSync(path.join(SOURCE_DIR, 'bundle.manifest.json'), 'utf8'));
 const sourceCompressed = Buffer.concat(
@@ -49,6 +56,7 @@ for (let offset = 0, shardIndex = 0; offset < sorted.length; offset += SHARD_SIZ
       highlights: company.highlights ?? [],
       warnings: company.warnings ?? [],
       evidenceRefs: company.evidenceRefs ?? [],
+      progressAssessment: company.progressAssessment ?? null,
     })),
   };
   const compressed = gzipJson(payload);
@@ -83,7 +91,7 @@ const indexPayload = {
     quality: company.quality ? {
       stars: company.quality.stars,
       score: company.quality.score,
-      label: company.quality.label,
+      label: compactQualityLabel(company),
       eligibleForScoring: company.quality.eligibleForScoring,
     } : null,
     flags: company.flags ?? {},
@@ -118,7 +126,7 @@ if (initialBytes > INDEX_INITIAL_BUDGET) {
 }
 
 const report = {
-  version: 'frontend-data-shards-v1',
+  version: 'frontend-data-shards-v1.1',
   generatedAt: manifest.generatedAt,
   sourceBundleSha256: sourceManifest.sha256,
   companyCount: source.companies.length,

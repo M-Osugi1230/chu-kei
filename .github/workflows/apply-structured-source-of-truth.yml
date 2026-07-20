@@ -10,6 +10,7 @@ on:
       - 'operations/source-research/**'
       - 'scripts/research_jpx_documents_v1.py'
       - 'scripts/normalize_source_research_candidates_v1.mjs'
+      - 'scripts/summarize_source_research_candidates_v1.mjs'
       - 'scripts/prepare_structured_candidate_approval_v1.mjs'
       - 'scripts/audit_production_readiness_v1.mjs'
       - 'scripts/apply_core_approval_batch_v1.mjs'
@@ -79,6 +80,7 @@ jobs:
           set -o pipefail
           mkdir -p artifacts
           npm run quality:v43 2>&1 | tee artifacts/apply-structured-source.log
+          node scripts/summarize_source_research_candidates_v1.mjs
 
       - name: Upload apply diagnostics
         if: failure()

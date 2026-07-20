@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
+import { isPrimaryEvidenceReference } from './lib/evidence_reference_v1.mjs';
 
 const ROOT = path.resolve('.');
 const CONFIG_PATH = path.resolve(process.env.STRUCTURED_EXPANSION_CONFIG || 'operations/patches/structured-expansion-batch-config.json');
@@ -41,14 +42,14 @@ const payload = JSON.parse(zlib.gunzipSync(compressed).toString('utf8'));
 const expectedFields = [
   'category', 'stage', 'tier', 'sourceUrl', 'document', 'period', 'planPublishedDate',
   'lastVerifiedDate', 'themes', 'summary', 'revenue', 'profit', 'margin', 'capital',
-  'returnPolicy', 'highlights', 'warnings', 'evidenceRefs', 'flags',
+  'returnPolicy', 'highlights', 'warnings', 'evidenceRefs', 'flags', 'progressAssessment',
 ];
 const requiredRecordFields = [
   'code', 'name', 'category', 'sourceUrl', 'document', 'period', 'planPublishedDate',
   'themes', 'summary', 'revenue', 'profit', 'margin', 'capital', 'returnPolicy',
   'highlights', 'warnings', 'evidenceRefs', 'flags',
 ];
-const pagePattern = /(?:p\.?\s*\d|ページ\s*\d)/i;
+const allowedProgressAssessmentStatuses = new Set(['connected', 'not_comparable', 'not_disclosed']);
 const codes = new Set();
 const patchPaths = [];
 const reviews = [];
@@ -64,11 +65,22 @@ for (const [index, record] of config.records.entries()) {
   codes.add(code);
   if (!/^https:\/\//.test(record.sourceUrl)) throw new Error(`${code}: sourceUrl must be HTTPS`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(record.planPublishedDate)) throw new Error(`${code}: invalid planPublishedDate`);
-  if (!Array.isArray(record.evidenceRefs) || record.evidenceRefs.length < 2 || !record.evidenceRefs.every(ref => pagePattern.test(ref))) {
-    throw new Error(`${code}: at least two page-specific evidenceRefs are required`);
+  if (!Array.isArray(record.evidenceRefs) || record.evidenceRefs.length < 2 || !record.evidenceRefs.every(isPrimaryEvidenceReference)) {
+    throw new Error(`${code}: at least two PDF-page or official-Web-heading evidenceRefs are required`);
   }
   if (!Array.isArray(record.highlights) || record.highlights.length < 2) throw new Error(`${code}: highlights are insufficient`);
   if (!Array.isArray(record.warnings) || record.warnings.length < 2) throw new Error(`${code}: warnings are insufficient`);
+  if (record.progressAssessment != null) {
+    if (!allowedProgressAssessmentStatuses.has(record.progressAssessment.status)) {
+      throw new Error(`${code}: unsupported progressAssessment status`);
+    }
+    if (!record.progressAssessment.reason || String(record.progressAssessment.reason).trim().length < 20) {
+      throw new Error(`${code}: progressAssessment requires a detailed reason`);
+    }
+    if (!record.progressAssessment.sourceRef || !String(record.progressAssessment.sourceRef).trim()) {
+      throw new Error(`${code}: progressAssessment requires sourceRef`);
+    }
+  }
 
   const company = payload.companies.find(row => String(row.code) === code);
   if (!company) throw new Error(`Company not found: ${code}`);
@@ -99,6 +111,7 @@ for (const [index, record] of config.records.entries()) {
     evidenceRefs: record.evidenceRefs,
     flags: record.flags,
   };
+  if (record.progressAssessment != null) updates.progressAssessment = record.progressAssessment;
   const patch = {
     schemaVersion: 'company-data-patch-v1',
     patchId,
@@ -135,8 +148,8 @@ for (const [index, record] of config.records.entries()) {
     reviewer: 'quality-evidence-agent',
     sourceUrl: record.sourceUrl,
     sourcePages: record.evidenceRefs,
-    note: '公式一次資料の定量指標・期間・ページ証跡を確認。詳細抽出済みβへの昇格であり本番承認ではない。',
-    decisionReason: `${record.name}の主要財務目標、成長戦略、投資、還元を比較可能にする。`,
+    note: '公式一次資料の数値・方針・期間・ページ番号またはWeb見出し証跡を確認。詳細抽出済みβへの昇格であり本番承認ではない。',
+    decisionReason: `${record.name}の主要財務目標、成長戦略、投資、還元、進捗評価を比較可能にする。`,
     createdAt,
     reviewedAt,
   });
@@ -146,17 +159,19 @@ for (const [index, record] of config.records.entries()) {
     fieldPath: Object.keys(updates).join(','),
     before: {
       stage: company.stage,
-      pageEvidence: (company.evidenceRefs || []).some(ref => pagePattern.test(String(ref))),
+      pageEvidence: (company.evidenceRefs || []).some(isPrimaryEvidenceReference),
       planPublishedDate: company.planPublishedDate ?? null,
       revenue: company.revenue ?? null,
+      progressAssessment: company.progressAssessment ?? null,
     },
     after: {
       stage: targetStage,
       pageEvidence: true,
       planPublishedDate: record.planPublishedDate,
       revenue: record.revenue,
+      progressAssessment: record.progressAssessment ?? null,
     },
-    reason: `${record.name}の公式計画・最新進捗を比較可能にする。`,
+    reason: `${record.name}の公式計画と進捗評価を比較可能にする。`,
     sourceUrl: record.sourceUrl,
     sourcePage: record.evidenceRefs.join(' / '),
     status: 'corrected',
@@ -185,7 +200,7 @@ fs.mkdirSync(path.dirname(testPath), { recursive: true });
 fs.writeFileSync(testPath, testSource);
 
 const report = {
-  version: 'structured-expansion-batch-generator-v2',
+  version: 'structured-expansion-batch-generator-v2.1',
   batchId: config.batchId,
   configPath: path.relative(ROOT, CONFIG_PATH),
   records: config.records.length,

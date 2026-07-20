@@ -156,7 +156,7 @@ for (const [index, code] of codes.entries()) {
     reviewer: config.primaryReviewer,
     sourceUrl: company.sourceUrl,
     sourcePages,
-    note: '既存の公式一次資料・ページ証跡・構造化内容・進捗接続を企業単位で本番昇格監査した。',
+    note: '既存の公式一次資料・証跡・構造化内容・進捗評価を企業単位で本番昇格監査した。',
     decisionReason: '本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。',
     createdAt: `${approvalDate}T08:${minute}:00.000Z`,
     reviewedAt: `${approvalDate}T09:${minute}:00.000Z`,
@@ -172,7 +172,7 @@ for (const [index, code] of codes.entries()) {
     reviewer: config.independentReviewer,
     sourceUrl: company.sourceUrl,
     sourcePages,
-    note: '一次レビューとは別の役割で、データ契約・証跡・検索・詳細表示・モバイル表示を独立再検証した。',
+    note: '一次レビューとは別の役割で、データ契約・証跡・進捗評価・検索・詳細表示・モバイル表示を独立再検証した。',
     decisionReason: '独立した再検証で本番品質要件への適合を確認したため。',
     createdAt: `${approvalDate}T10:${minute}:00.000Z`,
     reviewedAt: `${approvalDate}T11:${minute}:00.000Z`,
@@ -195,7 +195,7 @@ for (const [index, code] of codes.entries()) {
   company.tier = '本番品質';
   const warnings = (company.warnings || [])
     .filter(warning => !/本番昇格レビューは未完了|詳細抽出済みβ/.test(String(warning)));
-  warnings.push('本番品質。公式一次資料・ページ証跡・進捗接続・個別レビュー・独立再検証を確認済み。');
+  warnings.push('本番品質。公式一次資料・証跡・進捗評価・個別レビュー・独立再検証を確認済み。');
   company.warnings = [...new Set(warnings)];
 }
 

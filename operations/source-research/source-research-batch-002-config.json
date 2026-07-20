@@ -2,13 +2,13 @@
   "schemaVersion": "source-research-batch-v1",
   "batchId": "source-research-batch-002",
   "runRequested": true,
-  "batchSize": 889,
+  "batchSize": 200,
   "concurrency": 12,
   "excludeCodes": [],
   "outputPath": "operations/source-research/source-research-batch-002-candidates.json",
   "selectionPolicy": {
     "stage": "jpx_indexed",
-    "scope": "all remaining companies",
+    "scope": "next 200 companies",
     "priority": "market, industry and holding-company score"
   },
   "safety": {

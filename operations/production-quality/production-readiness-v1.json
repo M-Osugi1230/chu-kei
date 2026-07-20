@@ -8,8 +8,8 @@
   "currentProduction": 234,
   "productionGap": 766,
   "currentFiveStar": 220,
-  "machineReady": 220,
-  "machineReadyNotProduction": 0,
+  "machineReady": 224,
+  "machineReadyNotProduction": 4,
   "fullyApprovedAndReady": 220,
   "coreMeetingAllRequirements": 220,
   "byStage": {
@@ -24,14 +24,19 @@
     "pageEvidence": 973,
     "structuredAnalysis": 957,
     "metricExtraction": 957,
-    "progressConnected": 964,
+    "progressConnected": 960,
     "freshness": 0,
     "productionReviewApproved": 980,
     "independentDoubleCheckApproved": 980
   },
   "queues": {
     "productionReadyCodes": [],
-    "approvalRequiredCodes": [],
+    "approvalRequiredCodes": [
+      "1414",
+      "2121",
+      "2146",
+      "2154"
+    ],
     "machineRepairCodes": [
       "175A",
       "280A",
@@ -47,10 +52,6 @@
       "9252",
       "9434",
       "6497",
-      "1414",
-      "2121",
-      "2146",
-      "2154",
       "4478",
       "4612",
       "7733",

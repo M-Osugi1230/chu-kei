@@ -8,10 +8,10 @@ const SOURCE_DIR = path.join(ROOT, 'site', 'data');
 const OUTPUT_DIR = path.join(SOURCE_DIR, 'frontend');
 const REPORT_DIR = path.join(ROOT, 'reports', 'v43');
 const SHARD_SIZE = 20;
-const INDEX_INITIAL_BUDGET = 96 * 1024;
+const INDEX_INITIAL_BUDGET = 192 * 1024;
 const DETAIL_SHARD_BUDGET = 32 * 1024;
-const CARD_SUMMARY_LENGTH = 72;
-const CARD_THEME_LIMIT = 6;
+const CARD_SUMMARY_LENGTH = 48;
+const CARD_THEME_LIMIT = 4;
 
 const sha256 = buffer => crypto.createHash('sha256').update(buffer).digest('hex');
 const gzipJson = value => zlib.gzipSync(Buffer.from(JSON.stringify(value), 'utf8'), { level: 9, mtime: 0 });
@@ -124,7 +124,7 @@ if (initialBytes > INDEX_INITIAL_BUDGET) {
 }
 
 const report = {
-  version: 'frontend-data-shards-v1.2',
+  version: 'frontend-data-shards-v1.3',
   generatedAt: manifest.generatedAt,
   sourceBundleSha256: sourceManifest.sha256,
   companyCount: source.companies.length,
@@ -133,6 +133,7 @@ const report = {
   manifestBytes,
   initialBytes,
   initialBudgetBytes: INDEX_INITIAL_BUDGET,
+  initialBytesPerCompany: Number((initialBytes / source.companies.length).toFixed(2)),
   detailShardCount: shards.length,
   maxDetailShardBytes: Math.max(...shards.map(shard => shard.bytes)),
   detailShardBudgetBytes: DETAIL_SHARD_BUDGET,

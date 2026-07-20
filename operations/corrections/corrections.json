@@ -18165,5 +18165,305 @@
     "reviewDecisionId": "review-3291-20260720-production-double-check",
     "detectedAt": "2026-07-20T10:07:00.000Z",
     "correctedAt": "2026-07-20T11:07:00.000Z"
+  },
+  {
+    "id": "correction-2321-20260720-structured-expansion",
+    "companyCode": "2321",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-26",
+      "revenue": "固定の中期売上高目標は公式IRニュース本文で確認できない",
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "2026年6月26日の公式事業計画では成長領域と施策を確認できるが、同一定義の固定中期財務目標を本文から確認できないため進捗率を作成しない。",
+        "sourceRef": "公式Webページ（見出し: IRニュース／経営方針）"
+      }
+    },
+    "reason": "ソフトフロントホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.softfront.co.jp/ir-news/",
+    "sourcePage": "公式Webページ（見出し: IRニュース）: 2026年6月26日に『事業計画及び成長可能性に関する事項』を開示した。 / 公式Webページ（見出し: 経営方針）: 既存事業の再構築、新規事業、資本業務提携・M&Aによる事業拡大を掲げる。 / 公式Webページ（見出し: 製品・サービス）: AIボイスボットcommubo、クラウド、Web・CMS支援を主要領域として示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2321-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:00:00.000Z",
+    "correctedAt": "2026-07-20T15:00:00.000Z"
+  },
+  {
+    "id": "correction-2432-20260720-structured-expansion",
+    "companyCode": "2432",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-12",
+      "revenue": "中期の固定売上高目標は当該公式メッセージ本文で未開示",
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "公式投資家メッセージで戦略・資本効率方針は確認できるが、同一定義の固定中期売上高・利益目標を本文で確認できないため進捗率を作成しない。",
+        "sourceRef": "公式Webページ（見出し: 株主・投資家の皆様へ／中期戦略）"
+      }
+    },
+    "reason": "ディー・エヌ・エーの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://dena.com/jp/ir/investors.html",
+    "sourcePage": "公式Webページ（見出し: 株主・投資家の皆様へ）: エンターテインメント領域と社会課題領域を二本柱として成長する方針を示す。 / 公式Webページ（見出し: 中期戦略）: AIを事業・組織の共通基盤とし、グループ横断の構造改革を進める。 / 公式Webページ（見出し: 新規事業）: オーガニックな事業創出とスタートアップM&Aを成長手段として示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2432-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:01:00.000Z",
+    "correctedAt": "2026-07-20T15:01:00.000Z"
+  },
+  {
+    "id": "correction-285A-20260720-structured-expansion",
+    "companyCode": "285A",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-02",
+      "revenue": "Investor Day資料の数値目標はPDF図表で開示されており、HTML本文から固定値を転記しない",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "Investor Dayの固定目標は公式PDF図表にあり、HTML本文から目標値と最新確定実績を同一定義で安全に転記できないため比率計算を行わない。",
+        "sourceRef": "公式Webページ（見出し: Investor Day 2026）"
+      }
+    },
+    "reason": "キオクシアホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.kioxia-holdings.com/ja-jp/ir/library/event.html",
+    "sourcePage": "公式Webページ（見出し: Investor Day 2026）: 2026年6月2日に投資家向けイベントを開催した。 / 公式Webページ（見出し: AI推論時代の成長戦略）: AI・データセンター向けメモリとSSDを成長領域として示す。 / 公式Webページ（見出し: 経営方針説明会）: 技術革新、製品ミックス、設備投資規律を主要論点として示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-285A-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:02:00.000Z",
+    "correctedAt": "2026-07-20T15:02:00.000Z"
+  },
+  {
+    "id": "correction-3360-20260720-structured-expansion",
+    "companyCode": "3360",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-13",
+      "revenue": "2030年に向け売上高CAGR5%を目標とする",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "売上高目標はCAGR、収益性は率目標であり、公式HTML本文から同一定義の基準実績を確認できないため単純進捗率へ接続しない。",
+        "sourceRef": "公式Webページ（見出し: 財務目標）"
+      }
+    },
+    "reason": "シップヘルスケアホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.shiphd.co.jp/ir/management/mtm_plan/",
+    "sourcePage": "公式Webページ（見出し: SHIP VISION 2030）: 2025年5月13日公表、2026年3月期から2030年3月期の計画であることを示す。 / 公式Webページ（見出し: 財務目標）: 売上高CAGR5%、営業利益率4%、ROE12%を掲げる。 / 公式Webページ（見出し: 重点施策）: 成長領域、新規事業、Well-Being、グループ再編を示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3360-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:03:00.000Z",
+    "correctedAt": "2026-07-20T15:03:00.000Z"
+  },
+  {
+    "id": "correction-3659-20260720-structured-expansion",
+    "companyCode": "3659",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-03-31",
+      "revenue": "中期売上目標はCapital Markets BriefingのPDF図表で開示され、HTML本文から固定値を転記しない",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "中期財務目標はCapital Markets Briefingの公式PDF図表にあり、HTML本文から同一定義の目標・実績値を安全に転記できないため比率計算を行わない。",
+        "sourceRef": "公式Webページ（見出し: Capital Markets Briefing 2026）"
+      }
+    },
+    "reason": "ネクソンの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.nexon.co.jp/ir/events-interviews/detail/?entry_id=652",
+    "sourcePage": "公式Webページ（見出し: Capital Markets Briefing 2026）: 2026年3月31日に中期戦略の進捗を説明した。 / 公式Webページ（見出し: 垂直成長）: Dungeon&Fighter、MapleStory、FCを主要IPとして示す。 / 公式Webページ（見出し: 水平成長）: Mabinogi、ARC Raiders、新規IPを成長機会として示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3659-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:04:00.000Z",
+    "correctedAt": "2026-07-20T15:04:00.000Z"
+  },
+  {
+    "id": "correction-4021-20260720-structured-expansion",
+    "companyCode": "4021",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-15",
+      "revenue": "2027年度売上高2,930億円。2025年度実績2,796億円",
+      "progressAssessment": {
+        "status": "connected",
+        "reason": "公式中期計画ページで2025年度確定実績と2027年度固定目標が同一定義・同一単位で掲載され、売上高・各利益を比較できる。",
+        "sourceRef": "公式Webページ（見出し: Stage II 数値目標／2025年度実績）"
+      }
+    },
+    "reason": "日産化学の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.nissanchem.co.jp/ir_info/nissanchem/plan.html",
+    "sourcePage": "公式Webページ（見出し: Stage II 数値目標）: 2027年度売上高2,930億円、営業利益650億円、経常利益655億円、当期純利益480億円を示す。 / 公式Webページ（見出し: 2025年度実績）: 売上高2,796億円、営業利益636億円、経常利益659億円、当期純利益497億円を示す。 / 公式Webページ（見出し: 資本効率・株主還元）: 営業利益率20%以上、ROE18%以上、配当性向55%以上、総還元性向75%以上を掲げる。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4021-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:05:00.000Z",
+    "correctedAt": "2026-07-20T15:05:00.000Z"
+  },
+  {
+    "id": "correction-4373-20260720-structured-expansion",
+    "companyCode": "4373",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-30",
+      "revenue": "2030年3月期売上高1,000億円を目標とする",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "2030年3月期売上高1,000億円の目標は確認できるが、同一定義の基準確定実績を公式HTML本文から確認できないため単純進捗率へ接続しない。",
+        "sourceRef": "公式Webページ（見出し: 中計2030 Vision1000）"
+      }
+    },
+    "reason": "シンプレクス・ホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.simplex.holdings/ir/management/strategy/",
+    "sourcePage": "公式Webページ（見出し: 中計2030 Vision1000）: 2030年3月期売上高1,000億円を目標とする。 / 公式Webページ（見出し: 成長戦略）: Biz×Tech人材、一気通貫サービス、顧客基盤拡大を示す。 / 公式Webページ（見出し: AI戦略）: AIをサービスと社内生産性の双方に活用する方針を示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4373-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:06:00.000Z",
+    "correctedAt": "2026-07-20T15:06:00.000Z"
+  },
+  {
+    "id": "correction-5901-20260720-structured-expansion",
+    "companyCode": "5901",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "2030年度売上高1兆円を長期目標とする。中期経営計画2030の詳細数値は公式PDFを参照する",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "2026年5月公表の中期経営計画2030と旧2027施策では対象期間・目標体系が異なり、新計画の基準実績をHTML本文から同一定義確認できないため比率計算を行わない。",
+        "sourceRef": "公式Webページ（見出し: 中期経営計画2030／資本収益性向上に向けた取り組み2027）"
+      }
+    },
+    "reason": "東洋製罐グループホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.tskg-hd.com/ir/policy/plan/",
+    "sourcePage": "公式Webページ（見出し: 中期経営計画2030）: 2026年5月14日に『Open Up！2030』を公表した。 / 公式Webページ（見出し: 中長期経営目標2030）: 売上高1兆円、営業利益800億円を掲げる。 / 公式Webページ（見出し: 資本収益性向上に向けた取り組み2027）: ROE8%以上、事業ポートフォリオ、資産効率、株主還元を示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5901-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:07:00.000Z",
+    "correctedAt": "2026-07-20T15:07:00.000Z"
+  },
+  {
+    "id": "correction-5929-20260720-structured-expansion",
+    "companyCode": "5929",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-14",
+      "revenue": "2027年度売上高7,500億円。2026年3月期実績6,607.12億円",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "売上高は比較可能だが、主要利益目標がのれん償却前営業利益で最新実績の会計営業利益と定義が異なるため、企業全体の単純進捗率として登録しない。",
+        "sourceRef": "公式Webページ（見出し: 中期経営計画2027／2026年3月期業績）"
+      }
+    },
+    "reason": "三和ホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.sanwa-hldgs.co.jp/ir/management/midterm_plan.html",
+    "sourcePage": "公式Webページ（見出し: 中期経営計画2027）: 2027年度売上高7,500億円、のれん償却前営業利益1,000億円、利益率13.3%、ROE19%、ROIC18.5%を示す。 / 公式Webページ（見出し: 2026年3月期業績）: 売上高660,712百万円、営業利益79,095百万円を確定実績として示す。 / 公式Webページ（見出し: 株主還元）: DOEを軸とした安定還元と自己株式取得方針を示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5929-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:08:00.000Z",
+    "correctedAt": "2026-07-20T15:08:00.000Z"
+  },
+  {
+    "id": "correction-6305-20260720-structured-expansion",
+    "companyCode": "6305",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "source_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-24",
+      "revenue": "最新の固定中期売上高目標は2026年3月期決算ページ本文で未開示",
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "2026年3月期決算と事業戦略は確認できるが、2026年度以降の同一定義の固定中期財務目標を当該公式ページ本文で確認できないため進捗率を作成しない。",
+        "sourceRef": "公式Webページ（見出し: 決算説明資料／企業ビジョン）"
+      }
+    },
+    "reason": "日立建機の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www.hitachicm.com/global/ja/ir/library/results/",
+    "sourcePage": "公式Webページ（見出し: 決算説明資料）: 2026年4月24日に2026年3月期決算を公表した。 / 公式Webページ（見出し: 企業ビジョン）: バリューチェーン事業、ICT・IoT、海外・鉱山を重点領域として示す。 / 公式Webページ（見出し: 株主還元）: 連結配当性向40%以上を目安とする。",
+    "status": "corrected",
+    "reviewDecisionId": "review-6305-20260720-structured-expansion",
+    "detectedAt": "2026-07-20T14:09:00.000Z",
+    "correctedAt": "2026-07-20T15:09:00.000Z"
   }
 ]

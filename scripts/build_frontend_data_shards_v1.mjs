@@ -10,7 +10,7 @@ const REPORT_DIR = path.join(ROOT, 'reports', 'v43');
 const SHARD_SIZE = 20;
 const INDEX_INITIAL_BUDGET = 96 * 1024;
 const DETAIL_SHARD_BUDGET = 32 * 1024;
-const CARD_SUMMARY_LENGTH = 96;
+const CARD_SUMMARY_LENGTH = 80;
 const CARD_THEME_LIMIT = 6;
 
 const sha256 = buffer => crypto.createHash('sha256').update(buffer).digest('hex');

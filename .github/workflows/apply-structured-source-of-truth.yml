@@ -7,6 +7,10 @@ on:
     paths:
       - 'operations/patches/structured-expansion-batch-*-config.json'
       - 'operations/production-quality/**'
+      - 'operations/source-research/**'
+      - 'scripts/research_jpx_documents_v1.py'
+      - 'scripts/normalize_source_research_candidates_v1.mjs'
+      - 'scripts/prepare_structured_candidate_approval_v1.mjs'
       - 'scripts/audit_production_readiness_v1.mjs'
       - 'scripts/apply_core_approval_batch_v1.mjs'
       - 'scripts/apply_core_evidence_repair_v1.mjs'
@@ -38,7 +42,7 @@ jobs:
   apply:
     if: github.event_name == 'workflow_dispatch' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - name: Resolve target branch
         id: target
@@ -60,6 +64,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+
+      - name: Install pinned source-research dependencies
+        shell: bash
+        run: |
+          python3 -m pip install --disable-pip-version-check --quiet \
+            requests==2.32.3 \
+            beautifulsoup4==4.12.3 \
+            pypdf==5.1.0
 
       - name: Generate and validate source of truth
         shell: bash

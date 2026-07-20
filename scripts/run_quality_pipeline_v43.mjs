@@ -58,6 +58,7 @@ function consumeRequestedConfig(request, label) {
 const findEmbeddedStructuredRequest = () => findRequestedConfig(patchDir, /^structured-expansion-batch-\d+-config\.json$/);
 const findEmbeddedProgressRequest = () => findRequestedConfig(productionQualityDir, /^progress-connection-batch-\d+\.json$/);
 const findBulkProductionPromotionRequest = () => findRequestedConfig(productionQualityDir, /^production-bulk-promotion-approval-\d+\.json$/);
+const findSourceResearchBatchRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-batch-request-\d+\.json$/);
 const findSourceResearchRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-batch-\d+-config\.json$/);
 const findSourceResearchApprovalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-approval-\d+\.json$/);
 const findSourceResearchProposalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-proposal-\d+-config\.json$/);
@@ -92,6 +93,14 @@ if (isApplyWorkflow && fs.existsSync(sourceNormalizationMarker)) {
 }
 
 if (isApplyWorkflow) {
+  const batchRequest = findSourceResearchBatchRequest();
+  if (batchRequest) {
+    runNode('scripts/prepare_source_research_batch_v1.mjs', {
+      SOURCE_RESEARCH_BATCH_REQUEST: path.relative(ROOT, batchRequest.filePath),
+    });
+    consumeRequestedConfig(batchRequest, 'Source research batch preparation');
+  }
+
   const sourceResearch = findSourceResearchRequest();
   if (sourceResearch) {
     runCommand('python3', [

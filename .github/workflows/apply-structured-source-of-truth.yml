@@ -11,6 +11,8 @@ on:
       - 'scripts/research_jpx_documents_v1.py'
       - 'scripts/normalize_source_research_candidates_v1.mjs'
       - 'scripts/summarize_source_research_candidates_v1.mjs'
+      - 'scripts/generate_bulk_source_research_proposal_v1.mjs'
+      - 'scripts/prepare_bulk_source_research_approval_v1.mjs'
       - 'scripts/prepare_structured_candidate_approval_v1.mjs'
       - 'scripts/audit_production_readiness_v1.mjs'
       - 'scripts/apply_core_approval_batch_v1.mjs'
@@ -37,7 +39,7 @@ permissions:
 
 concurrency:
   group: apply-structured-source-${{ github.event.pull_request.head.ref || inputs.branch || github.ref_name }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   apply:
@@ -109,4 +111,6 @@ jobs:
             exit 0
           fi
           git commit -m "quality: 本番品質1000社の昇格監査を更新"
+          git fetch origin "${TARGET_BRANCH}"
+          git rebase "origin/${TARGET_BRANCH}"
           git push origin "HEAD:${TARGET_BRANCH}"

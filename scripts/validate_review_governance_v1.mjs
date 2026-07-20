@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
+import { countPrimaryEvidenceReferences } from './lib/evidence_reference_v1.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
@@ -123,12 +124,12 @@ for (const correction of corrections) {
 check('correction records valid', invalidCorrection === 0, `invalid=${invalidCorrection}`);
 check('corrected entries link to review decision', invalidCorrected === 0, `invalid-corrected=${invalidCorrected}`);
 
-const pageEvidence = company => (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)));
+const primaryEvidence = company => countPrimaryEvidenceReferences(company.evidenceRefs) >= 1;
 const core = data.companies.filter(company => company.stage === 'core');
 const detailed = data.companies.filter(company => company.stage === 'detailed_extracted');
 const structuredReviewable = [...core, ...detailed];
-const priorityA = detailed.filter(pageEvidence).length;
-const priorityB = detailed.filter(company => !pageEvidence(company)).length;
+const priorityA = detailed.filter(primaryEvidence).length;
+const priorityB = detailed.filter(company => !primaryEvidence(company)).length;
 const detailedGapMaximum = budget.maximumCounts?.['detailed.missingPageEvidence'];
 const structuredReviewableMinimum = budget.minimumCounts?.['structured.reviewableCompanies'];
 check(
@@ -143,7 +144,7 @@ check('no automatic promotion records', decisions.every(decision => decision.sta
 
 fs.mkdirSync(ARTIFACT_DIR, { recursive: true });
 const report = {
-  version: 'review-governance-v1',
+  version: 'review-governance-v1.1',
   checkedAt: new Date().toISOString(),
   summary: {
     reviewDecisions: decisions.length,
@@ -154,7 +155,7 @@ const report = {
     structuredReviewableMinimum,
     priorityA,
     priorityB,
-    detailedPageEvidenceDebtMaximum: detailedGapMaximum,
+    detailedPrimaryEvidenceDebtMaximum: detailedGapMaximum,
   },
   passed: checks.filter(item => item.ok).length,
   total: checks.length,

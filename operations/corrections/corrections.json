@@ -20495,5 +20495,25 @@
     "reviewDecisionId": "review-9831-20260720-structured-expansion",
     "detectedAt": "2026-07-20T23:40:00.000Z",
     "correctedAt": "2026-07-20T23:50:00.000Z"
+  },
+  {
+    "id": "correction-9831-20260720-production-promotion",
+    "companyCode": "9831",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://www.yamada-holdings.jp/ir/",
+    "sourcePage": "公式Webページ（見出し: 経営成績等の概況）: 中期経営計画の柱としてLIFE SELECT店舗へ集中投資すると説明する。 / 公式Webページ（見出し: IR情報）: 2026年5月8日に2026年3月期決算を公表した。 / 公式Webページ（見出し: 事業戦略）: 暮らしまるごと戦略と資産効率改善を示す。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9831-20260720-production-double-check",
+    "detectedAt": "2026-07-20T10:00:00.000Z",
+    "correctedAt": "2026-07-20T11:00:00.000Z"
   }
 ]

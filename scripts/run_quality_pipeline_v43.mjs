@@ -57,6 +57,7 @@ function consumeRequestedConfig(request, label) {
 
 const findEmbeddedStructuredRequest = () => findRequestedConfig(patchDir, /^structured-expansion-batch-\d+-config\.json$/);
 const findEmbeddedProgressRequest = () => findRequestedConfig(productionQualityDir, /^progress-connection-batch-\d+\.json$/);
+const findBulkProductionPromotionRequest = () => findRequestedConfig(productionQualityDir, /^production-bulk-promotion-approval-\d+\.json$/);
 const findSourceResearchRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-batch-\d+-config\.json$/);
 const findSourceResearchApprovalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-approval-\d+\.json$/);
 const findSourceResearchProposalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-proposal-\d+-config\.json$/);
@@ -161,6 +162,13 @@ runNode('scripts/build_frontend_data_shards_v1.mjs');
 runNode('scripts/sync_production_approval_metadata_v1.mjs');
 runNode('scripts/audit_production_readiness_v1.mjs');
 if (isApplyWorkflow) {
+  const bulkProductionPromotion = findBulkProductionPromotionRequest();
+  if (bulkProductionPromotion) {
+    runNode('scripts/prepare_bulk_production_promotion_v1.mjs', {
+      BULK_PRODUCTION_PROMOTION_CONFIG: path.relative(ROOT, bulkProductionPromotion.filePath),
+    });
+    consumeRequestedConfig(bulkProductionPromotion, 'Bulk production promotion approval');
+  }
   runNode('scripts/apply_production_promotion_v1.mjs');
   runNode('scripts/apply_core_approval_batch_v1.mjs');
 }

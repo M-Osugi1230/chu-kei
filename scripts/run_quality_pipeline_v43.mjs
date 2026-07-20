@@ -55,21 +55,12 @@ function consumeRequestedConfig(request, label) {
   console.log(`${label} request consumed: ${path.relative(ROOT, request.filePath)}`);
 }
 
-function findEmbeddedStructuredRequest() {
-  return findRequestedConfig(patchDir, /^structured-expansion-batch-\d+-config\.json$/);
-}
-
-function findEmbeddedProgressRequest() {
-  return findRequestedConfig(productionQualityDir, /^progress-connection-batch-\d+\.json$/);
-}
-
-function findSourceResearchRequest() {
-  return findRequestedConfig(sourceResearchDir, /^source-research-batch-\d+-config\.json$/);
-}
-
-function findSourceResearchApprovalRequest() {
-  return findRequestedConfig(sourceResearchDir, /^source-research-approval-\d+\.json$/);
-}
+const findEmbeddedStructuredRequest = () => findRequestedConfig(patchDir, /^structured-expansion-batch-\d+-config\.json$/);
+const findEmbeddedProgressRequest = () => findRequestedConfig(productionQualityDir, /^progress-connection-batch-\d+\.json$/);
+const findSourceResearchRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-batch-\d+-config\.json$/);
+const findSourceResearchApprovalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-approval-\d+\.json$/);
+const findSourceResearchProposalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-proposal-\d+-config\.json$/);
+const findSourceResearchBulkApprovalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-bulk-approval-\d+\.json$/);
 
 const companyCoverageMarker = firstExisting(companyCoverageMarkers);
 if (isApplyWorkflow && companyCoverageMarker) {
@@ -110,6 +101,22 @@ if (isApplyWorkflow) {
       SOURCE_RESEARCH_CONFIG: path.relative(ROOT, sourceResearch.filePath),
     });
     consumeRequestedConfig(sourceResearch, 'Source research');
+  }
+
+  const proposalRequest = findSourceResearchProposalRequest();
+  if (proposalRequest) {
+    runNode('scripts/generate_bulk_source_research_proposal_v1.mjs', {
+      SOURCE_RESEARCH_PROPOSAL_CONFIG: path.relative(ROOT, proposalRequest.filePath),
+    });
+    consumeRequestedConfig(proposalRequest, 'Source research proposal');
+  }
+
+  const bulkApproval = findSourceResearchBulkApprovalRequest();
+  if (bulkApproval) {
+    runNode('scripts/prepare_bulk_source_research_approval_v1.mjs', {
+      SOURCE_RESEARCH_BULK_APPROVAL_CONFIG: path.relative(ROOT, bulkApproval.filePath),
+    });
+    consumeRequestedConfig(bulkApproval, 'Source research bulk approval');
   }
 
   const sourceApproval = findSourceResearchApprovalRequest();

@@ -106,6 +106,9 @@ if (isApplyWorkflow) {
       'scripts/research_jpx_documents_v1.py',
       '--config', path.relative(ROOT, sourceResearch.filePath),
     ]);
+    runNode('scripts/normalize_source_research_candidates_v1.mjs', {
+      SOURCE_RESEARCH_CONFIG: path.relative(ROOT, sourceResearch.filePath),
+    });
     consumeRequestedConfig(sourceResearch, 'Source research');
   }
 

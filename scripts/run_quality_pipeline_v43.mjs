@@ -12,6 +12,7 @@ const patchDir = path.join(ROOT, 'operations', 'patches');
 const structuredRunMarker = path.join(patchDir, 'run-structured-expansion.json');
 const productionQualityDir = path.join(ROOT, 'operations', 'production-quality');
 const progressRunMarker = path.join(productionQualityDir, 'progress-connection-selection.json');
+const sourceResearchDir = path.join(ROOT, 'operations', 'source-research');
 const jpxOutput = path.join(ROOT, 'operations', 'research', 'jpx-listed-companies-latest.json');
 
 const runNode = (script, env = {}) => execFileSync(process.execPath, [script], {
@@ -19,9 +20,9 @@ const runNode = (script, env = {}) => execFileSync(process.execPath, [script], {
   env: { ...process.env, ...env },
   stdio: 'inherit',
 });
-const runCommand = (command, args) => execFileSync(command, args, {
+const runCommand = (command, args, env = {}) => execFileSync(command, args, {
   cwd: ROOT,
-  env: process.env,
+  env: { ...process.env, ...env },
   stdio: 'inherit',
 });
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -29,30 +30,45 @@ const writeJson = (file, value) => fs.writeFileSync(file, `${JSON.stringify(valu
 const firstExisting = paths => paths.find(file => fs.existsSync(file)) || null;
 const isApplyWorkflow = process.env.GITHUB_WORKFLOW === 'Apply Structured Source of Truth';
 
-function findEmbeddedStructuredRequest() {
-  if (!fs.existsSync(patchDir)) return null;
-  const files = fs.readdirSync(patchDir)
-    .filter(file => /^structured-expansion-batch-\d+-config\.json$/.test(file))
-    .sort((a, b) => Number(b.match(/\d+/)?.[0] || 0) - Number(a.match(/\d+/)?.[0] || 0));
+function findRequestedConfig(directory, pattern) {
+  if (!fs.existsSync(directory)) return null;
+  const files = fs.readdirSync(directory)
+    .filter(file => pattern.test(file))
+    .sort((a, b) => {
+      const aNumber = Number(a.match(/\d+/)?.[0] || 0);
+      const bNumber = Number(b.match(/\d+/)?.[0] || 0);
+      return bNumber - aNumber || b.localeCompare(a);
+    });
   for (const file of files) {
-    const filePath = path.join(patchDir, file);
+    const filePath = path.join(directory, file);
     const config = readJson(filePath);
     if (config.runRequested === true) return { filePath, config };
   }
   return null;
 }
 
+function consumeRequestedConfig(request, label) {
+  if (!request) return;
+  const consumed = readJson(request.filePath);
+  delete consumed.runRequested;
+  writeJson(request.filePath, consumed);
+  console.log(`${label} request consumed: ${path.relative(ROOT, request.filePath)}`);
+}
+
+function findEmbeddedStructuredRequest() {
+  return findRequestedConfig(patchDir, /^structured-expansion-batch-\d+-config\.json$/);
+}
+
 function findEmbeddedProgressRequest() {
-  if (!fs.existsSync(productionQualityDir)) return null;
-  const files = fs.readdirSync(productionQualityDir)
-    .filter(file => /^progress-connection-batch-\d+\.json$/.test(file))
-    .sort((a, b) => Number(b.match(/\d+/)?.[0] || 0) - Number(a.match(/\d+/)?.[0] || 0));
-  for (const file of files) {
-    const filePath = path.join(productionQualityDir, file);
-    const config = readJson(filePath);
-    if (config.runRequested === true) return { filePath, config };
-  }
-  return null;
+  return findRequestedConfig(productionQualityDir, /^progress-connection-batch-\d+\.json$/);
+}
+
+function findSourceResearchRequest() {
+  return findRequestedConfig(sourceResearchDir, /^source-research-batch-\d+-config\.json$/);
+}
+
+function findSourceResearchApprovalRequest() {
+  return findRequestedConfig(sourceResearchDir, /^source-research-approval-\d+\.json$/);
 }
 
 const companyCoverageMarker = firstExisting(companyCoverageMarkers);
@@ -83,6 +99,25 @@ if (isApplyWorkflow && fs.existsSync(sourceNormalizationMarker)) {
   console.log('Source-indexed normalization marker consumed.');
 }
 
+if (isApplyWorkflow) {
+  const sourceResearch = findSourceResearchRequest();
+  if (sourceResearch) {
+    runCommand('python3', [
+      'scripts/research_jpx_documents_v1.py',
+      '--config', path.relative(ROOT, sourceResearch.filePath),
+    ]);
+    consumeRequestedConfig(sourceResearch, 'Source research');
+  }
+
+  const sourceApproval = findSourceResearchApprovalRequest();
+  if (sourceApproval) {
+    runNode('scripts/prepare_structured_candidate_approval_v1.mjs', {
+      SOURCE_RESEARCH_APPROVAL_CONFIG: path.relative(ROOT, sourceApproval.filePath),
+    });
+    consumeRequestedConfig(sourceApproval, 'Source research approval');
+  }
+}
+
 let embeddedStructured = null;
 if (isApplyWorkflow && !fs.existsSync(structuredRunMarker)) {
   embeddedStructured = findEmbeddedStructuredRequest();
@@ -94,12 +129,7 @@ if (isApplyWorkflow && !fs.existsSync(structuredRunMarker)) {
   }
 }
 runNode('scripts/apply_structured_expansion_ci_v1.mjs');
-if (embeddedStructured) {
-  const consumedConfig = readJson(embeddedStructured.filePath);
-  delete consumedConfig.runRequested;
-  writeJson(embeddedStructured.filePath, consumedConfig);
-  console.log(`Embedded structured expansion request consumed: ${path.relative(ROOT, embeddedStructured.filePath)}`);
-}
+if (embeddedStructured) consumeRequestedConfig(embeddedStructured, 'Embedded structured expansion');
 runNode('scripts/apply_structured_correction_v1.mjs');
 if (isApplyWorkflow) {
   runNode('scripts/apply_core_evidence_repair_v1.mjs');
@@ -112,12 +142,7 @@ if (isApplyWorkflow) {
     });
   }
   runNode('scripts/apply_progress_connection_batch_v1.mjs');
-  if (embeddedProgress) {
-    const consumedConfig = readJson(embeddedProgress.filePath);
-    delete consumedConfig.runRequested;
-    writeJson(embeddedProgress.filePath, consumedConfig);
-    console.log(`Embedded progress request consumed: ${path.relative(ROOT, embeddedProgress.filePath)}`);
-  }
+  if (embeddedProgress) consumeRequestedConfig(embeddedProgress, 'Embedded progress connection');
 }
 runNode('scripts/normalize_progress_assessment_flags_v1.mjs');
 runNode('scripts/rebuild_quality_scores_v2.mjs');

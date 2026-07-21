@@ -1,1460 +1,2158 @@
 {
   "version": "company-coverage-1000-v1",
-  "appliedAt": "2026-07-14T02:05:21.768Z",
+  "appliedAt": "2026-07-21T09:41:16.776Z",
   "automaticFactCompletion": false,
   "sourcePage": "https://www.jpx.co.jp/markets/statistics-equities/misc/01.html",
   "sourceWorkbook": "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls",
   "jpxRecordCount": 4430,
-  "companyCountBefore": 1000,
-  "companyCountAfter": 1200,
-  "addedCount": 200,
-  "sourceConfirmed": 285,
-  "structured": 206,
+  "companyCountBefore": 1200,
+  "companyCountAfter": 1500,
+  "addedCount": 300,
+  "sourceConfirmed": 1004,
+  "structured": 1004,
   "stages": {
-    "core": 30,
-    "detailed_extracted": 176,
-    "source_indexed": 79,
-    "jpx_indexed": 915
+    "core": 1000,
+    "detailed_extracted": 4,
+    "source_indexed": 0,
+    "jpx_indexed": 496
   },
   "addedByMarket": {
-    "Prime": 107,
-    "Standard": 73,
-    "Growth": 20
+    "Prime": 144,
+    "Standard": 123,
+    "Growth": 33
   },
   "addedByIndustry": {
-    "ガラス・土石製品": 8,
-    "ゴム製品": 3,
-    "サービス業": 12,
-    "その他金融業": 8,
-    "その他製品": 8,
-    "パルプ・紙": 7,
-    "医薬品": 8,
-    "卸売業": 7,
-    "化学": 7,
-    "機械": 7,
-    "金属製品": 7,
-    "銀行業": 4,
-    "建設業": 7,
-    "小売業": 11,
-    "証券、商品先物取引業": 7,
-    "情報・通信業": 11,
-    "食料品": 7,
-    "精密機器": 7,
-    "繊維製品": 7,
+    "ガラス・土石製品": 13,
+    "サービス業": 19,
+    "その他金融業": 7,
+    "その他製品": 12,
+    "パルプ・紙": 2,
+    "医薬品": 13,
+    "卸売業": 12,
+    "化学": 12,
+    "機械": 12,
+    "金属製品": 12,
+    "銀行業": 6,
+    "建設業": 12,
+    "小売業": 19,
+    "証券、商品先物取引業": 10,
+    "情報・通信業": 19,
+    "食料品": 12,
+    "精密機器": 12,
+    "繊維製品": 12,
     "倉庫・運輸関連業": 6,
-    "鉄鋼": 7,
-    "電気・ガス業": 4,
-    "電気機器": 7,
+    "鉄鋼": 12,
+    "電気・ガス業": 6,
+    "電気機器": 12,
     "非鉄金属": 7,
-    "不動産業": 11,
-    "保険業": 1,
-    "輸送用機器": 7,
-    "陸運業": 7
+    "不動産業": 17,
+    "輸送用機器": 12,
+    "陸運業": 12
   },
   "added": [
     {
-      "code": "186A",
-      "name": "アストロスケールホールディングス",
+      "code": "195A",
+      "name": "ＭＵＳＣＡＴ ＧＲＯＵＰ",
       "market": "Growth",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=186A"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=195A"
     },
     {
-      "code": "4571",
-      "name": "ＮＡＮＯホールディングス",
+      "code": "4579",
+      "name": "ラクオリア創薬",
       "market": "Growth",
       "industry": "医薬品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4571"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4579"
     },
     {
-      "code": "3224",
-      "name": "ゼネラル・オイスター",
+      "code": "3556",
+      "name": "リネットジャパングループ",
       "market": "Growth",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3224"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3556"
     },
     {
-      "code": "155A",
-      "name": "情報戦略テクノロジー",
+      "code": "228A",
+      "name": "オプロ",
       "market": "Growth",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=155A"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=228A"
     },
     {
-      "code": "3237",
-      "name": "イントランス",
+      "code": "3479",
+      "name": "ＴＫＰ",
       "market": "Growth",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3237"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3479"
     },
     {
-      "code": "5269",
-      "name": "日本コンクリート工業",
+      "code": "5310",
+      "name": "東洋炭素",
       "market": "Prime",
       "industry": "ガラス・土石製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5269"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5310"
     },
     {
-      "code": "5186",
-      "name": "ニッタ",
-      "market": "Prime",
-      "industry": "ゴム製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5186"
-    },
-    {
-      "code": "2395",
-      "name": "新日本科学",
+      "code": "2462",
+      "name": "ライク",
       "market": "Prime",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2395"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2462"
     },
     {
-      "code": "7383",
-      "name": "ネットプロテクションズホールディングス",
+      "code": "8439",
+      "name": "東京センチュリー",
       "market": "Prime",
       "industry": "その他金融業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7383"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8439"
     },
     {
-      "code": "7840",
-      "name": "フランスベッドホールディングス",
+      "code": "7868",
+      "name": "広済堂ホールディングス",
       "market": "Prime",
       "industry": "その他製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7840"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7868"
     },
     {
-      "code": "3880",
-      "name": "大王製紙",
-      "market": "Prime",
-      "industry": "パルプ・紙",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3880"
-    },
-    {
-      "code": "4528",
-      "name": "小野薬品工業",
+      "code": "4540",
+      "name": "ツムラ",
       "market": "Prime",
       "industry": "医薬品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4528"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4540"
     },
     {
-      "code": "3139",
-      "name": "ラクト・ジャパン",
+      "code": "3156",
+      "name": "レスター",
       "market": "Prime",
       "industry": "卸売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3139"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3156"
     },
     {
-      "code": "4025",
-      "name": "多木化学",
+      "code": "4044",
+      "name": "セントラル硝子",
       "market": "Prime",
       "industry": "化学",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4025"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4044"
     },
     {
-      "code": "6135",
-      "name": "牧野フライス製作所",
+      "code": "6151",
+      "name": "日東工器",
       "market": "Prime",
       "industry": "機械",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6135"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6151"
     },
     {
-      "code": "5930",
-      "name": "文化シヤッター",
+      "code": "5946",
+      "name": "長府製作所",
       "market": "Prime",
       "industry": "金属製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5930"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5946"
     },
     {
-      "code": "7173",
-      "name": "東京きらぼしフィナンシャルグループ",
+      "code": "7189",
+      "name": "西日本フィナンシャルホールディングス",
       "market": "Prime",
       "industry": "銀行業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7173"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7189"
     },
     {
-      "code": "1766",
-      "name": "東建コーポレーション",
+      "code": "1813",
+      "name": "不動テトラ",
       "market": "Prime",
       "industry": "建設業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1766"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1813"
     },
     {
-      "code": "2685",
-      "name": "アンドエスティＨＤ",
+      "code": "2742",
+      "name": "ハローズ",
       "market": "Prime",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2685"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2742"
     },
     {
-      "code": "8614",
-      "name": "東洋証券",
+      "code": "8628",
+      "name": "松井証券",
       "market": "Prime",
       "industry": "証券、商品先物取引業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8614"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8628"
     },
     {
-      "code": "3632",
-      "name": "グリーホールディングス",
+      "code": "3662",
+      "name": "エイチームホールディングス",
       "market": "Prime",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3632"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3662"
     },
     {
-      "code": "2117",
-      "name": "ウェルネオシュガー",
+      "code": "2211",
+      "name": "不二家",
       "market": "Prime",
       "industry": "食料品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2117"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2211"
     },
     {
-      "code": "7717",
-      "name": "ブイ・テクノロジー",
+      "code": "7729",
+      "name": "東京精密",
       "market": "Prime",
       "industry": "精密機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7717"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7729"
     },
     {
-      "code": "3401",
-      "name": "帝人",
+      "code": "3591",
+      "name": "ワコールホールディングス",
       "market": "Prime",
       "industry": "繊維製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3401"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3591"
     },
     {
-      "code": "9324",
-      "name": "安田倉庫",
-      "market": "Prime",
-      "industry": "倉庫・運輸関連業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9324"
-    },
-    {
-      "code": "5445",
-      "name": "東京鐵鋼",
+      "code": "5471",
+      "name": "大同特殊鋼",
       "market": "Prime",
       "industry": "鉄鋼",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5445"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5471"
     },
     {
-      "code": "9506",
-      "name": "東北電力",
+      "code": "9511",
+      "name": "沖縄電力",
       "market": "Prime",
       "industry": "電気・ガス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9506"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9511"
     },
     {
-      "code": "6516",
-      "name": "山洋電気",
+      "code": "6526",
+      "name": "ソシオネクスト",
       "market": "Prime",
       "industry": "電気機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6516"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6526"
     },
     {
-      "code": "5715",
-      "name": "古河機械金属",
+      "code": "5805",
+      "name": "ＳＷＣＣ",
       "market": "Prime",
       "industry": "非鉄金属",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5715"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5805"
     },
     {
-      "code": "2982",
-      "name": "ＡＤワークスグループ",
+      "code": "3276",
+      "name": "ＪＰＭＣ",
       "market": "Prime",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2982"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3276"
     },
     {
-      "code": "8798",
-      "name": "アドバンスクリエイト",
-      "market": "Prime",
-      "industry": "保険業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8798"
-    },
-    {
-      "code": "7012",
-      "name": "川崎重工業",
+      "code": "7220",
+      "name": "武蔵精密工業",
       "market": "Prime",
       "industry": "輸送用機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7012"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7220"
     },
     {
-      "code": "9009",
-      "name": "京成電鉄",
+      "code": "9025",
+      "name": "鴻池運輸",
       "market": "Prime",
       "industry": "陸運業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9009"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9025"
     },
     {
-      "code": "5279",
-      "name": "日本興業",
+      "code": "5287",
+      "name": "イトーヨーギョー",
       "market": "Standard",
       "industry": "ガラス・土石製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5279"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5287"
     },
     {
-      "code": "2152",
-      "name": "幼児活動研究会",
+      "code": "2169",
+      "name": "ＣＤＳ",
       "market": "Standard",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2152"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2169"
     },
     {
-      "code": "7196",
-      "name": "Ｃａｓａ",
+      "code": "8789",
+      "name": "フィンテック グローバル",
       "market": "Standard",
       "industry": "その他金融業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7196"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8789"
     },
     {
-      "code": "7808",
-      "name": "シー・エス・ランバー",
+      "code": "7814",
+      "name": "日本創発グループ",
       "market": "Standard",
       "industry": "その他製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7808"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7814"
     },
     {
-      "code": "3948",
-      "name": "光ビジネスフォーム",
+      "code": "3955",
+      "name": "イムラ",
       "market": "Standard",
       "industry": "パルプ・紙",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3948"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3955"
     },
     {
-      "code": "2721",
-      "name": "ジェイホールディングス",
+      "code": "2763",
+      "name": "エフティグループ",
       "market": "Standard",
       "industry": "卸売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2721"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2763"
     },
     {
-      "code": "4098",
-      "name": "チタン工業",
+      "code": "4119",
+      "name": "日本ピグメントホールディングス",
       "market": "Standard",
       "industry": "化学",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4098"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4119"
     },
     {
-      "code": "6145",
-      "name": "ＮＩＴＴＯＫＵ",
+      "code": "6150",
+      "name": "タケダ機械",
       "market": "Standard",
       "industry": "機械",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6145"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6150"
     },
     {
-      "code": "3437",
-      "name": "特殊電極",
+      "code": "3444",
+      "name": "菊池製作所",
       "market": "Standard",
       "industry": "金属製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3437"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3444"
     },
     {
-      "code": "1711",
-      "name": "ＳＤＳホールディングス",
+      "code": "1724",
+      "name": "シンクレイヤ",
       "market": "Standard",
       "industry": "建設業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1711"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1724"
     },
     {
-      "code": "2673",
-      "name": "夢みつけ隊",
+      "code": "2698",
+      "name": "キャンドゥ",
       "market": "Standard",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2673"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2698"
     },
     {
-      "code": "8699",
-      "name": "ＨＳホールディングス",
+      "code": "8737",
+      "name": "あかつき本社",
       "market": "Standard",
       "industry": "証券、商品先物取引業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8699"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8737"
     },
     {
-      "code": "2329",
-      "name": "東北新社",
+      "code": "2338",
+      "name": "クオンタムソリューションズ",
       "market": "Standard",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2329"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2338"
     },
     {
-      "code": "2226",
-      "name": "湖池屋",
+      "code": "2291",
+      "name": "福留ハム",
       "market": "Standard",
       "industry": "食料品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2226"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2291"
     },
     {
-      "code": "7722",
-      "name": "国際計測器",
+      "code": "7749",
+      "name": "メディキット",
       "market": "Standard",
       "industry": "精密機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7722"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7749"
     },
     {
-      "code": "3524",
-      "name": "日東製網",
+      "code": "3571",
+      "name": "ソトー",
       "market": "Standard",
       "industry": "繊維製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3524"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3571"
     },
     {
-      "code": "9325",
-      "name": "ファイズホールディングス",
+      "code": "9353",
+      "name": "櫻島埠頭",
       "market": "Standard",
       "industry": "倉庫・運輸関連業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9325"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9353"
     },
     {
-      "code": "5609",
-      "name": "日本鋳造",
+      "code": "5658",
+      "name": "日亜鋼業",
       "market": "Standard",
       "industry": "鉄鋼",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5609"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5658"
     },
     {
-      "code": "6524",
-      "name": "湖北工業",
+      "code": "6629",
+      "name": "テクノホライゾン",
       "market": "Standard",
       "industry": "電気機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6524"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6629"
     },
     {
-      "code": "5753",
-      "name": "日本伸銅",
+      "code": "5819",
+      "name": "カナレ電気",
       "market": "Standard",
       "industry": "非鉄金属",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5753"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5819"
     },
     {
-      "code": "2993",
-      "name": "長栄",
+      "code": "3238",
+      "name": "セントラル総合開発",
       "market": "Standard",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2993"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3238"
     },
     {
-      "code": "7208",
-      "name": "カネミツ",
+      "code": "7215",
+      "name": "ファルテック",
       "market": "Standard",
       "industry": "輸送用機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7208"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7215"
     },
     {
-      "code": "9036",
-      "name": "東部ネットワーク",
+      "code": "9057",
+      "name": "遠州トラック",
       "market": "Standard",
       "industry": "陸運業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9036"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9057"
     },
     {
-      "code": "189A",
-      "name": "Ｄ＆Ｍカンパニー",
+      "code": "2158",
+      "name": "ＦＲＯＮＴＥＯ",
       "market": "Growth",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=189A"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2158"
     },
     {
-      "code": "4572",
-      "name": "カルナバイオサイエンス",
+      "code": "4582",
+      "name": "シンバイオ製薬",
       "market": "Growth",
       "industry": "医薬品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4572"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4582"
     },
     {
-      "code": "3418",
-      "name": "バルニバービ",
+      "code": "3557",
+      "name": "ユナイテッド＆コレクティブ",
       "market": "Growth",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3418"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3557"
     },
     {
-      "code": "173A",
-      "name": "ハンモック",
+      "code": "241A",
+      "name": "ＲＯＸＸ",
       "market": "Growth",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=173A"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=241A"
     },
     {
-      "code": "3261",
-      "name": "グランディーズ",
+      "code": "5527",
+      "name": "ｐｒｏｐｅｒｔｙ ｔｅｃｈｎｏｌｏｇｉｅｓ",
       "market": "Growth",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3261"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5527"
     },
     {
-      "code": "5288",
-      "name": "アジアパイルホールディングス",
+      "code": "5331",
+      "name": "ノリタケ",
       "market": "Prime",
       "industry": "ガラス・土石製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5288"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5331"
     },
     {
-      "code": "5192",
-      "name": "三ツ星ベルト",
-      "market": "Prime",
-      "industry": "ゴム製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5192"
-    },
-    {
-      "code": "2410",
-      "name": "キャリアデザインセンター",
+      "code": "2471",
+      "name": "エスプール",
       "market": "Prime",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2410"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2471"
     },
     {
-      "code": "8253",
-      "name": "クレディセゾン",
+      "code": "8511",
+      "name": "日本証券金融",
       "market": "Prime",
       "industry": "その他金融業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8253"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8511"
     },
     {
-      "code": "7856",
-      "name": "萩原工業",
+      "code": "7893",
+      "name": "プロネクサス",
       "market": "Prime",
       "industry": "その他製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7856"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7893"
     },
     {
-      "code": "3941",
-      "name": "レンゴー",
-      "market": "Prime",
-      "industry": "パルプ・紙",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3941"
-    },
-    {
-      "code": "4534",
-      "name": "持田製薬",
+      "code": "4547",
+      "name": "キッセイ薬品工業",
       "market": "Prime",
       "industry": "医薬品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4534"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4547"
     },
     {
-      "code": "3151",
-      "name": "バイタルケーエスケー・ホールディングス",
+      "code": "3167",
+      "name": "ＴＯＫＡＩホールディングス",
       "market": "Prime",
       "industry": "卸売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3151"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3167"
     },
     {
-      "code": "4027",
-      "name": "テイカ",
+      "code": "4045",
+      "name": "東亞合成",
       "market": "Prime",
       "industry": "化学",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4027"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4045"
     },
     {
-      "code": "6136",
-      "name": "オーエスジー",
+      "code": "6167",
+      "name": "冨士ダイス",
       "market": "Prime",
       "industry": "機械",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6136"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6167"
     },
     {
-      "code": "5932",
-      "name": "三協立山",
+      "code": "5947",
+      "name": "リンナイ",
       "market": "Prime",
       "industry": "金属製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5932"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5947"
     },
     {
-      "code": "7180",
-      "name": "九州フィナンシャルグループ",
+      "code": "7322",
+      "name": "三十三フィナンシャルグループ",
       "market": "Prime",
       "industry": "銀行業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7180"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7322"
     },
     {
-      "code": "1780",
-      "name": "ヤマウラ",
+      "code": "1814",
+      "name": "大末建設",
       "market": "Prime",
       "industry": "建設業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1780"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1814"
     },
     {
-      "code": "2695",
-      "name": "くら寿司",
+      "code": "2752",
+      "name": "フジオフードグループ本社",
       "market": "Prime",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2695"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2752"
     },
     {
-      "code": "8616",
-      "name": "東海東京フィナンシャル・ホールディングス",
+      "code": "8698",
+      "name": "マネックスグループ",
       "market": "Prime",
       "industry": "証券、商品先物取引業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8616"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8698"
     },
     {
-      "code": "3649",
-      "name": "ファインデックス",
+      "code": "3663",
+      "name": "セルシス",
       "market": "Prime",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3649"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3663"
     },
     {
-      "code": "2206",
-      "name": "江崎グリコ",
+      "code": "2212",
+      "name": "山崎製パン",
       "market": "Prime",
       "industry": "食料品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2206"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2212"
     },
     {
-      "code": "7721",
-      "name": "東京計器",
+      "code": "7730",
+      "name": "マニー",
       "market": "Prime",
       "industry": "精密機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7721"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7730"
     },
     {
-      "code": "3501",
-      "name": "ＳＵＭＩＮＯＥ",
+      "code": "3608",
+      "name": "ＴＳＩホールディングス",
       "market": "Prime",
       "industry": "繊維製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3501"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3608"
     },
     {
-      "code": "9364",
-      "name": "上組",
-      "market": "Prime",
-      "industry": "倉庫・運輸関連業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9364"
-    },
-    {
-      "code": "5451",
-      "name": "ヨドコウ",
+      "code": "5480",
+      "name": "日本冶金工業",
       "market": "Prime",
       "industry": "鉄鋼",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5451"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5480"
     },
     {
-      "code": "9507",
-      "name": "四国電力",
+      "code": "9513",
+      "name": "電源開発",
       "market": "Prime",
       "industry": "電気・ガス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9507"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9513"
     },
     {
-      "code": "6517",
-      "name": "デンヨー",
+      "code": "6588",
+      "name": "東芝テック",
       "market": "Prime",
       "industry": "電気機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6517"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6588"
     },
     {
-      "code": "5726",
-      "name": "大阪チタニウムテクノロジーズ",
+      "code": "5821",
+      "name": "平河ヒューテック",
       "market": "Prime",
       "industry": "非鉄金属",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5726"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5821"
     },
     {
-      "code": "3232",
-      "name": "三重交通グループホールディングス",
+      "code": "3284",
+      "name": "フージャースホールディングス",
       "market": "Prime",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3232"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3284"
     },
     {
-      "code": "7102",
-      "name": "日本車輌製造",
+      "code": "7224",
+      "name": "新明和工業",
       "market": "Prime",
       "industry": "輸送用機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7102"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7224"
     },
     {
-      "code": "9010",
-      "name": "富士急行",
+      "code": "9031",
+      "name": "西日本鉄道",
       "market": "Prime",
       "industry": "陸運業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9010"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9031"
     },
     {
-      "code": "5282",
-      "name": "ジオスター",
+      "code": "5290",
+      "name": "ベルテクスコーポレーション",
       "market": "Standard",
       "industry": "ガラス・土石製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5282"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5290"
     },
     {
-      "code": "2156",
-      "name": "セーラー広告",
+      "code": "2179",
+      "name": "成学社",
       "market": "Standard",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2156"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2179"
     },
     {
-      "code": "8508",
-      "name": "Ｊトラスト",
-      "market": "Standard",
-      "industry": "その他金融業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8508"
-    },
-    {
-      "code": "7809",
-      "name": "壽屋",
+      "code": "7815",
+      "name": "東京ボード工業",
       "market": "Standard",
       "industry": "その他製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7809"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7815"
     },
     {
-      "code": "3953",
-      "name": "大村紙業",
+      "code": "3958",
+      "name": "笹徳印刷",
       "market": "Standard",
       "industry": "パルプ・紙",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3953"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3958"
     },
     {
-      "code": "2750",
-      "name": "石光商事",
+      "code": "2776",
+      "name": "新都ホールディングス",
       "market": "Standard",
       "industry": "卸売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2750"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2776"
     },
     {
-      "code": "4107",
-      "name": "伊勢化学工業",
+      "code": "4120",
+      "name": "スガイ化学工業",
       "market": "Standard",
       "industry": "化学",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4107"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4120"
     },
     {
-      "code": "6147",
-      "name": "ヤマザキ",
+      "code": "6155",
+      "name": "高松機械工業",
       "market": "Standard",
       "industry": "機械",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6147"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6155"
     },
     {
-      "code": "3439",
-      "name": "三ツ知",
+      "code": "3446",
+      "name": "ジェイテックコーポレーション",
       "market": "Standard",
       "industry": "金属製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3439"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3446"
     },
     {
-      "code": "1718",
-      "name": "美樹工業",
+      "code": "1736",
+      "name": "オーテック",
       "market": "Standard",
       "industry": "建設業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1718"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1736"
     },
     {
-      "code": "2683",
-      "name": "魚喜",
+      "code": "2705",
+      "name": "大戸屋ホールディングス",
       "market": "Standard",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2683"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2705"
     },
     {
-      "code": "8700",
-      "name": "丸八証券",
+      "code": "8742",
+      "name": "小林洋行",
       "market": "Standard",
       "industry": "証券、商品先物取引業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8700"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8742"
     },
     {
-      "code": "2330",
-      "name": "フォーサイド",
+      "code": "2345",
+      "name": "ＨＯＤＬ１",
       "market": "Standard",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2330"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2345"
     },
     {
-      "code": "2268",
-      "name": "Ｂ－Ｒ サーティワン アイスクリーム",
+      "code": "2293",
+      "name": "滝沢ハム",
       "market": "Standard",
       "industry": "食料品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2268"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2293"
     },
     {
-      "code": "7727",
-      "name": "オーバル",
+      "code": "7760",
+      "name": "ＩＭＶ",
       "market": "Standard",
       "industry": "精密機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7727"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7760"
     },
     {
-      "code": "3529",
-      "name": "アツギ",
+      "code": "3577",
+      "name": "東海染工",
       "market": "Standard",
       "industry": "繊維製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3529"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3577"
     },
     {
-      "code": "9327",
-      "name": "イー・ロジット",
+      "code": "9355",
+      "name": "リンコーコーポレーション",
       "market": "Standard",
       "industry": "倉庫・運輸関連業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9327"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9355"
     },
     {
-      "code": "5612",
-      "name": "日本鋳鉄管",
+      "code": "5660",
+      "name": "神鋼鋼線工業",
       "market": "Standard",
       "industry": "鉄鋼",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5612"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5660"
     },
     {
-      "code": "6599",
-      "name": "エブレン",
+      "code": "6633",
+      "name": "ＣＧＳホールディングス",
       "market": "Standard",
       "industry": "電気機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6599"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6633"
     },
     {
-      "code": "5816",
-      "name": "オーナンバ",
+      "code": "5820",
+      "name": "三ッ星",
       "market": "Standard",
       "industry": "非鉄金属",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5816"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5820"
     },
     {
-      "code": "2999",
-      "name": "ホームポジション",
+      "code": "3246",
+      "name": "コーセーアールイー",
       "market": "Standard",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2999"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3246"
     },
     {
-      "code": "7212",
-      "name": "エフテック",
+      "code": "7217",
+      "name": "テイン",
       "market": "Standard",
       "industry": "輸送用機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7212"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7217"
     },
     {
-      "code": "9046",
-      "name": "神戸電鉄",
+      "code": "9059",
+      "name": "カンダホールディングス",
       "market": "Standard",
       "industry": "陸運業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9046"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9059"
     },
     {
-      "code": "192A",
-      "name": "インテグループ",
+      "code": "2173",
+      "name": "博展",
       "market": "Growth",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=192A"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2173"
     },
     {
-      "code": "4575",
-      "name": "キャンバス",
+      "code": "4583",
+      "name": "カイオム・バイオサイエンス",
       "market": "Growth",
       "industry": "医薬品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4575"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4583"
     },
     {
-      "code": "3542",
-      "name": "ベガコーポレーション",
+      "code": "3558",
+      "name": "ジェイドグループ",
       "market": "Growth",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3542"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3558"
     },
     {
-      "code": "184A",
-      "name": "学びエイド",
+      "code": "244A",
+      "name": "グロースエクスパートナーズ",
       "market": "Growth",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=184A"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=244A"
     },
     {
-      "code": "3474",
-      "name": "Ｇ－ＦＡＣＴＯＲＹ",
+      "code": "5532",
+      "name": "リアルゲイト",
       "market": "Growth",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3474"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5532"
     },
     {
-      "code": "5301",
-      "name": "東海カーボン",
+      "code": "5334",
+      "name": "日本特殊陶業",
       "market": "Prime",
       "industry": "ガラス・土石製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5301"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5334"
     },
     {
-      "code": "5195",
-      "name": "バンドー化学",
-      "market": "Prime",
-      "industry": "ゴム製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5195"
-    },
-    {
-      "code": "2429",
-      "name": "ワールドホールディングス",
+      "code": "2475",
+      "name": "ＷＤＢホールディングス",
       "market": "Prime",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2429"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2475"
     },
     {
-      "code": "8424",
-      "name": "芙蓉総合リース",
+      "code": "8566",
+      "name": "リコーリース",
       "market": "Prime",
       "industry": "その他金融業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8424"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8566"
     },
     {
-      "code": "7864",
-      "name": "フジシールインターナショナル",
+      "code": "7914",
+      "name": "共同印刷",
       "market": "Prime",
       "industry": "その他製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7864"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7914"
     },
     {
-      "code": "3946",
-      "name": "トーモク",
-      "market": "Prime",
-      "industry": "パルプ・紙",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3946"
-    },
-    {
-      "code": "4536",
-      "name": "参天製薬",
+      "code": "4548",
+      "name": "生化学工業",
       "market": "Prime",
       "industry": "医薬品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4536"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4548"
     },
     {
-      "code": "3153",
-      "name": "八洲電機",
+      "code": "3176",
+      "name": "三洋貿易",
       "market": "Prime",
       "industry": "卸売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3153"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3176"
     },
     {
-      "code": "4028",
-      "name": "石原産業",
+      "code": "4046",
+      "name": "大阪ソーダ",
       "market": "Prime",
       "industry": "化学",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4028"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4046"
     },
     {
-      "code": "6140",
-      "name": "旭ダイヤモンド工業",
+      "code": "6209",
+      "name": "リケンＮＰＲ",
       "market": "Prime",
       "industry": "機械",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6140"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6209"
     },
     {
-      "code": "5933",
-      "name": "アルインコ",
+      "code": "5957",
+      "name": "日東精工",
       "market": "Prime",
       "industry": "金属製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5933"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5957"
     },
     {
-      "code": "7184",
-      "name": "富山第一銀行",
+      "code": "7327",
+      "name": "第四北越フィナンシャルグループ",
       "market": "Prime",
       "industry": "銀行業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7184"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7327"
     },
     {
-      "code": "1786",
-      "name": "オリエンタル白石",
+      "code": "1815",
+      "name": "鉄建建設",
       "market": "Prime",
       "industry": "建設業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1786"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1815"
     },
     {
-      "code": "2726",
-      "name": "パルグループホールディングス",
+      "code": "2753",
+      "name": "あみやき亭",
       "market": "Prime",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2726"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2753"
     },
     {
-      "code": "8622",
-      "name": "水戸証券",
+      "code": "8706",
+      "name": "極東証券",
       "market": "Prime",
       "industry": "証券、商品先物取引業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8622"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8706"
     },
     {
-      "code": "3656",
-      "name": "ＫＬａｂ",
+      "code": "3665",
+      "name": "エニグモ",
       "market": "Prime",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3656"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3665"
     },
     {
-      "code": "2207",
-      "name": "ｍｅｉｔｏ",
+      "code": "2217",
+      "name": "モロゾフ",
       "market": "Prime",
       "industry": "食料品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2207"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2217"
     },
     {
-      "code": "7723",
-      "name": "愛知時計電機",
+      "code": "7731",
+      "name": "ニコン",
       "market": "Prime",
       "industry": "精密機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7723"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7731"
     },
     {
-      "code": "3569",
-      "name": "セーレン",
+      "code": "3612",
+      "name": "ワールド",
       "market": "Prime",
       "industry": "繊維製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3569"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3612"
     },
     {
-      "code": "9381",
-      "name": "エーアイテイー",
-      "market": "Prime",
-      "industry": "倉庫・運輸関連業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9381"
-    },
-    {
-      "code": "5461",
-      "name": "中部鋼鈑",
+      "code": "5482",
+      "name": "愛知製鋼",
       "market": "Prime",
       "industry": "鉄鋼",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5461"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5482"
     },
     {
-      "code": "9508",
-      "name": "九州電力",
+      "code": "9517",
+      "name": "イーレックス",
       "market": "Prime",
       "industry": "電気・ガス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9508"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9517"
     },
     {
-      "code": "6523",
-      "name": "ＰＨＣホールディングス",
+      "code": "6590",
+      "name": "芝浦メカトロニクス",
       "market": "Prime",
       "industry": "電気機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6523"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6590"
     },
     {
-      "code": "5741",
-      "name": "ＵＡＣＪ",
+      "code": "5851",
+      "name": "リョービ",
       "market": "Prime",
       "industry": "非鉄金属",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5741"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5851"
     },
     {
-      "code": "3245",
-      "name": "ディア・ライフ",
+      "code": "3457",
+      "name": "Ａｎｄ Ｄｏホールディングス",
       "market": "Prime",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3245"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3457"
     },
     {
-      "code": "7202",
-      "name": "いすゞ自動車",
+      "code": "7226",
+      "name": "極東開発工業",
       "market": "Prime",
       "industry": "輸送用機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7202"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7226"
     },
     {
-      "code": "9023",
-      "name": "東京地下鉄",
+      "code": "9037",
+      "name": "ハマキョウレックス",
       "market": "Prime",
       "industry": "陸運業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9023"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9037"
     },
     {
-      "code": "5284",
-      "name": "ヤマウホールディングス",
+      "code": "5304",
+      "name": "ＳＥＣカーボン",
       "market": "Standard",
       "industry": "ガラス・土石製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5284"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5304"
     },
     {
-      "code": "2162",
-      "name": "ｎｍｓ ホールディングス",
+      "code": "2180",
+      "name": "サニーサイドアップグループ",
       "market": "Standard",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2162"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2180"
     },
     {
-      "code": "8596",
-      "name": "九州リースサービス",
-      "market": "Standard",
-      "industry": "その他金融業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8596"
-    },
-    {
-      "code": "7812",
-      "name": "クレステック",
+      "code": "7819",
+      "name": "粧美堂",
       "market": "Standard",
       "industry": "その他製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7812"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7819"
     },
     {
-      "code": "3954",
-      "name": "昭和パックス",
-      "market": "Standard",
-      "industry": "パルプ・紙",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3954"
-    },
-    {
-      "code": "2751",
-      "name": "テンポスホールディングス",
+      "code": "2788",
+      "name": "アップルインターナショナル",
       "market": "Standard",
       "industry": "卸売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2751"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2788"
     },
     {
-      "code": "4113",
-      "name": "田岡化学工業",
+      "code": "4124",
+      "name": "大阪油化工業",
       "market": "Standard",
       "industry": "化学",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4113"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4124"
     },
     {
-      "code": "6149",
-      "name": "小田原エンジニアリング",
+      "code": "6156",
+      "name": "エーワン精密",
       "market": "Standard",
       "industry": "機械",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6149"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6156"
     },
     {
-      "code": "3441",
-      "name": "山王",
+      "code": "3447",
+      "name": "信和",
       "market": "Standard",
       "industry": "金属製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3441"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3447"
     },
     {
-      "code": "1723",
-      "name": "日本電技",
+      "code": "1758",
+      "name": "太洋基礎工業",
       "market": "Standard",
       "industry": "建設業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1723"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1758"
     },
     {
-      "code": "2694",
-      "name": "焼肉坂井ホールディングス",
+      "code": "2722",
+      "name": "ＩＫホールディングス",
       "market": "Standard",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2694"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2722"
     },
     {
-      "code": "8705",
-      "name": "日産証券グループ",
+      "code": "8746",
+      "name": "ｕｎｂａｎｋｅｄ",
       "market": "Standard",
       "industry": "証券、商品先物取引業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8705"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8746"
     },
     {
-      "code": "2332",
-      "name": "クエスト",
+      "code": "2349",
+      "name": "エヌアイデイ",
       "market": "Standard",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2332"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2349"
     },
     {
-      "code": "2286",
-      "name": "林兼産業",
+      "code": "2573",
+      "name": "北海道コカ・コーラボトリング",
       "market": "Standard",
       "industry": "食料品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2286"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2573"
     },
     {
-      "code": "7743",
-      "name": "シード",
+      "code": "7771",
+      "name": "日本精密",
       "market": "Standard",
       "industry": "精密機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7743"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7771"
     },
     {
-      "code": "3551",
-      "name": "ダイニック",
+      "code": "3583",
+      "name": "オーベクス",
       "market": "Standard",
       "industry": "繊維製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3551"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3583"
     },
     {
-      "code": "9351",
-      "name": "東洋埠頭",
+      "code": "9361",
+      "name": "伏木海陸運送",
       "market": "Standard",
       "industry": "倉庫・運輸関連業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9351"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9361"
     },
     {
-      "code": "5644",
-      "name": "メタルアート",
+      "code": "5695",
+      "name": "パウダーテック",
       "market": "Standard",
       "industry": "鉄鋼",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5644"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5695"
     },
     {
-      "code": "6614",
-      "name": "シキノハイテック",
+      "code": "6634",
+      "name": "ＪＮグループ",
       "market": "Standard",
       "industry": "電気機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6614"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6634"
     },
     {
-      "code": "5817",
-      "name": "ＪＭＡＣＳ",
-      "market": "Standard",
-      "industry": "非鉄金属",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5817"
-    },
-    {
-      "code": "3236",
-      "name": "プロパスト",
+      "code": "3248",
+      "name": "アールエイジ",
       "market": "Standard",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3236"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3248"
     },
     {
-      "code": "7213",
-      "name": "レシップホールディングス",
+      "code": "7218",
+      "name": "田中精密工業",
       "market": "Standard",
       "industry": "輸送用機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7213"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7218"
     },
     {
-      "code": "9049",
-      "name": "京福電気鉄道",
+      "code": "9060",
+      "name": "日本ロジテム",
       "market": "Standard",
       "industry": "陸運業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9049"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9060"
     },
     {
-      "code": "194A",
-      "name": "ＷＯＬＶＥＳ ＨＡＮＤ",
+      "code": "2195",
+      "name": "アミタホールディングス",
       "market": "Growth",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=194A"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2195"
     },
     {
-      "code": "4576",
-      "name": "デ・ウエスタン・セラピテクス研究所",
+      "code": "4584",
+      "name": "キッズウェル・バイオ",
       "market": "Growth",
       "industry": "医薬品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4576"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4584"
     },
     {
-      "code": "3550",
-      "name": "スタジオアタオ",
+      "code": "3566",
+      "name": "ユニフォームネクスト",
       "market": "Growth",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3550"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3566"
     },
     {
-      "code": "198A",
-      "name": "ＰｏｓｔＰｒｉｍｅ",
+      "code": "248A",
+      "name": "キッズスター",
       "market": "Growth",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=198A"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=248A"
     },
     {
-      "code": "3477",
-      "name": "フォーライフ",
+      "code": "5537",
+      "name": "ＡｌｂａＬｉｎｋ",
       "market": "Growth",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3477"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5537"
     },
     {
-      "code": "5302",
-      "name": "日本カーボン",
+      "code": "5344",
+      "name": "ＭＡＲＵＷＡ",
       "market": "Prime",
       "industry": "ガラス・土石製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5302"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5344"
     },
     {
-      "code": "2461",
-      "name": "ファンコミュニケーションズ",
+      "code": "2491",
+      "name": "バリューコマース",
       "market": "Prime",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2461"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2491"
     },
     {
-      "code": "8425",
-      "name": "みずほリース",
+      "code": "8570",
+      "name": "イオンフィナンシャルサービス",
       "market": "Prime",
       "industry": "その他金融業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8425"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8570"
     },
     {
-      "code": "7867",
-      "name": "タカラトミー",
+      "code": "7915",
+      "name": "ＮＩＳＳＨＡ",
       "market": "Prime",
       "industry": "その他製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7867"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7915"
     },
     {
-      "code": "3950",
-      "name": "ザ・パック",
-      "market": "Prime",
-      "industry": "パルプ・紙",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3950"
-    },
-    {
-      "code": "4538",
-      "name": "扶桑薬品工業",
+      "code": "4549",
+      "name": "栄研化学",
       "market": "Prime",
       "industry": "医薬品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4538"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4549"
     },
     {
-      "code": "3154",
-      "name": "メディアスホールディングス",
+      "code": "3180",
+      "name": "ビューティガレージ",
       "market": "Prime",
       "industry": "卸売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3154"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3180"
     },
     {
-      "code": "4041",
-      "name": "日本曹達",
+      "code": "4047",
+      "name": "関東電化工業",
       "market": "Prime",
       "industry": "化学",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4041"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4047"
     },
     {
-      "code": "6143",
-      "name": "ソディック",
+      "code": "6222",
+      "name": "島精機製作所",
       "market": "Prime",
       "industry": "機械",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6143"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6222"
     },
     {
-      "code": "5943",
-      "name": "ノーリツ",
+      "code": "5959",
+      "name": "岡部",
       "market": "Prime",
       "industry": "金属製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5943"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5959"
     },
     {
-      "code": "7186",
-      "name": "横浜フィナンシャルグループ",
+      "code": "7337",
+      "name": "ひろぎんホールディングス",
       "market": "Prime",
       "industry": "銀行業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7186"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7337"
     },
     {
-      "code": "1808",
-      "name": "長谷工コーポレーション",
+      "code": "1833",
+      "name": "奥村組",
       "market": "Prime",
       "industry": "建設業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1808"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1833"
     },
     {
-      "code": "2734",
-      "name": "サーラコーポレーション",
+      "code": "2791",
+      "name": "大黒天物産",
       "market": "Prime",
       "industry": "小売業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2734"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2791"
     },
     {
-      "code": "8624",
-      "name": "いちよし証券",
+      "code": "8707",
+      "name": "岩井コスモホールディングス",
       "market": "Prime",
       "industry": "証券、商品先物取引業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8624"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8707"
     },
     {
-      "code": "3657",
-      "name": "ポールトゥウィンホールディングス",
+      "code": "3676",
+      "name": "デジタルハーツホールディングス",
       "market": "Prime",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3657"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3676"
     },
     {
-      "code": "2209",
-      "name": "井村屋グループ",
+      "code": "2220",
+      "name": "亀田製菓",
       "market": "Prime",
       "industry": "食料品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2209"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2220"
     },
     {
-      "code": "7725",
-      "name": "インターアクション",
+      "code": "7734",
+      "name": "理研計器",
       "market": "Prime",
       "industry": "精密機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7725"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7734"
     },
     {
-      "code": "3580",
-      "name": "小松マテーレ",
+      "code": "8011",
+      "name": "三陽商会",
       "market": "Prime",
       "industry": "繊維製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3580"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8011"
     },
     {
-      "code": "5463",
-      "name": "丸一鋼管",
+      "code": "5541",
+      "name": "大平洋金属",
       "market": "Prime",
       "industry": "鉄鋼",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5463"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5541"
     },
     {
-      "code": "9509",
-      "name": "北海道電力",
+      "code": "9519",
+      "name": "レノバ",
       "market": "Prime",
       "industry": "電気・ガス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9509"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9519"
     },
     {
-      "code": "6525",
-      "name": "ＫＯＫＵＳＡＩ ＥＬＥＣＴＲＩＣ",
+      "code": "6592",
+      "name": "マブチモーター",
       "market": "Prime",
       "industry": "電気機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6525"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6592"
     },
     {
-      "code": "5757",
-      "name": "ＣＫサンエツ",
+      "code": "5852",
+      "name": "アーレスティ",
       "market": "Prime",
       "industry": "非鉄金属",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5757"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5852"
     },
     {
-      "code": "3252",
-      "name": "地主",
+      "code": "3465",
+      "name": "ケイアイスター不動産",
       "market": "Prime",
       "industry": "不動産業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3252"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3465"
     },
     {
-      "code": "7211",
-      "name": "三菱自動車工業",
+      "code": "7231",
+      "name": "トピー工業",
       "market": "Prime",
       "industry": "輸送用機器",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7211"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7231"
     },
     {
-      "code": "9024",
-      "name": "西武ホールディングス",
+      "code": "9039",
+      "name": "サカイ引越センター",
       "market": "Prime",
       "industry": "陸運業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9024"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9039"
     },
     {
-      "code": "5285",
-      "name": "ヤマックス",
+      "code": "5337",
+      "name": "ダントーホールディングス",
       "market": "Standard",
       "industry": "ガラス・土石製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5285"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5337"
     },
     {
-      "code": "2164",
-      "name": "地域新聞社",
+      "code": "2183",
+      "name": "リニカル",
       "market": "Standard",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2164"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2183"
     },
     {
-      "code": "8783",
-      "name": "ａｂｃ",
-      "market": "Standard",
-      "industry": "その他金融業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8783"
-    },
-    {
-      "code": "7813",
-      "name": "プラッツ",
+      "code": "7822",
+      "name": "永大産業",
       "market": "Standard",
       "industry": "その他製品",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7813"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7822"
+    },
+    {
+      "code": "2795",
+      "name": "日本プリメックス",
+      "market": "Standard",
+      "industry": "卸売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2795"
+    },
+    {
+      "code": "4125",
+      "name": "三和油化工業",
+      "market": "Standard",
+      "industry": "化学",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4125"
+    },
+    {
+      "code": "6158",
+      "name": "和井田製作所",
+      "market": "Standard",
+      "industry": "機械",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6158"
+    },
+    {
+      "code": "3449",
+      "name": "テクノフレックス",
+      "market": "Standard",
+      "industry": "金属製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3449"
+    },
+    {
+      "code": "1764",
+      "name": "工藤建設",
+      "market": "Standard",
+      "industry": "建設業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1764"
+    },
+    {
+      "code": "2735",
+      "name": "ワッツ",
+      "market": "Standard",
+      "industry": "小売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2735"
+    },
+    {
+      "code": "8747",
+      "name": "豊トラスティ証券",
+      "market": "Standard",
+      "industry": "証券、商品先物取引業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8747"
+    },
+    {
+      "code": "2351",
+      "name": "ＡＳＪ",
+      "market": "Standard",
+      "industry": "情報・通信業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2351"
+    },
+    {
+      "code": "2588",
+      "name": "プレミアムウォーターホールディングス",
+      "market": "Standard",
+      "industry": "食料品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2588"
+    },
+    {
+      "code": "7775",
+      "name": "大研医器",
+      "market": "Standard",
+      "industry": "精密機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7775"
+    },
+    {
+      "code": "3597",
+      "name": "自重堂",
+      "market": "Standard",
+      "industry": "繊維製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3597"
+    },
+    {
+      "code": "9362",
+      "name": "兵機海運",
+      "market": "Standard",
+      "industry": "倉庫・運輸関連業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9362"
+    },
+    {
+      "code": "5697",
+      "name": "サンユウ",
+      "market": "Standard",
+      "industry": "鉄鋼",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5697"
+    },
+    {
+      "code": "6635",
+      "name": "大日光・エンジニアリング",
+      "market": "Standard",
+      "industry": "電気機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6635"
+    },
+    {
+      "code": "3266",
+      "name": "ファンドクリエーショングループ",
+      "market": "Standard",
+      "industry": "不動産業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3266"
+    },
+    {
+      "code": "7219",
+      "name": "エッチ・ケー・エス",
+      "market": "Standard",
+      "industry": "輸送用機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7219"
+    },
+    {
+      "code": "9063",
+      "name": "岡山県貨物運送",
+      "market": "Standard",
+      "industry": "陸運業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9063"
+    },
+    {
+      "code": "2334",
+      "name": "イオレ",
+      "market": "Growth",
+      "industry": "サービス業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2334"
+    },
+    {
+      "code": "4586",
+      "name": "メドレックス",
+      "market": "Growth",
+      "industry": "医薬品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4586"
+    },
+    {
+      "code": "456A",
+      "name": "ＨＵＭＡＮ ＭＡＤＥ",
+      "market": "Growth",
+      "industry": "小売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=456A"
+    },
+    {
+      "code": "265A",
+      "name": "Ｈｍｃｏｍｍ",
+      "market": "Growth",
+      "industry": "情報・通信業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=265A"
+    },
+    {
+      "code": "8938",
+      "name": "グローム・ホールディングス",
+      "market": "Growth",
+      "industry": "不動産業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8938"
+    },
+    {
+      "code": "5351",
+      "name": "品川リフラ",
+      "market": "Prime",
+      "industry": "ガラス・土石製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5351"
+    },
+    {
+      "code": "277A",
+      "name": "グロービング",
+      "market": "Prime",
+      "industry": "サービス業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=277A"
+    },
+    {
+      "code": "8584",
+      "name": "ジャックス",
+      "market": "Prime",
+      "industry": "その他金融業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8584"
+    },
+    {
+      "code": "7921",
+      "name": "ＴＡＫＡＲＡ ＆ ＣＯＭＰＡＮＹ",
+      "market": "Prime",
+      "industry": "その他製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7921"
+    },
+    {
+      "code": "4552",
+      "name": "ＪＣＲファーマ",
+      "market": "Prime",
+      "industry": "医薬品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4552"
+    },
+    {
+      "code": "3183",
+      "name": "ウイン・パートナーズ",
+      "market": "Prime",
+      "industry": "卸売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3183"
+    },
+    {
+      "code": "4064",
+      "name": "日本カーバイド工業",
+      "market": "Prime",
+      "industry": "化学",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4064"
+    },
+    {
+      "code": "6235",
+      "name": "オプトラン",
+      "market": "Prime",
+      "industry": "機械",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6235"
+    },
+    {
+      "code": "5970",
+      "name": "ジーテクト",
+      "market": "Prime",
+      "industry": "金属製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5970"
+    },
+    {
+      "code": "7350",
+      "name": "おきなわフィナンシャルグループ",
+      "market": "Prime",
+      "industry": "銀行業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7350"
+    },
+    {
+      "code": "1835",
+      "name": "東鉄工業",
+      "market": "Prime",
+      "industry": "建設業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1835"
+    },
+    {
+      "code": "2792",
+      "name": "ハニーズホールディングス",
+      "market": "Prime",
+      "industry": "小売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2792"
+    },
+    {
+      "code": "8708",
+      "name": "アイザワ証券グループ",
+      "market": "Prime",
+      "industry": "証券、商品先物取引業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8708"
+    },
+    {
+      "code": "3678",
+      "name": "メディアドゥ",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3678"
+    },
+    {
+      "code": "2222",
+      "name": "寿スピリッツ",
+      "market": "Prime",
+      "industry": "食料品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2222"
+    },
+    {
+      "code": "7740",
+      "name": "タムロン",
+      "market": "Prime",
+      "industry": "精密機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7740"
+    },
+    {
+      "code": "8016",
+      "name": "オンワードホールディングス",
+      "market": "Prime",
+      "industry": "繊維製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8016"
+    },
+    {
+      "code": "5563",
+      "name": "新日本電工",
+      "market": "Prime",
+      "industry": "鉄鋼",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5563"
+    },
+    {
+      "code": "9531",
+      "name": "東京瓦斯",
+      "market": "Prime",
+      "industry": "電気・ガス業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9531"
+    },
+    {
+      "code": "6615",
+      "name": "ユー・エム・シー・エレクトロニクス",
+      "market": "Prime",
+      "industry": "電気機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6615"
+    },
+    {
+      "code": "5857",
+      "name": "ＡＲＥホールディングス",
+      "market": "Prime",
+      "industry": "非鉄金属",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5857"
+    },
+    {
+      "code": "3475",
+      "name": "グッドコムアセット",
+      "market": "Prime",
+      "industry": "不動産業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3475"
+    },
+    {
+      "code": "7236",
+      "name": "ティラド",
+      "market": "Prime",
+      "industry": "輸送用機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7236"
+    },
+    {
+      "code": "9041",
+      "name": "近鉄グループホールディングス",
+      "market": "Prime",
+      "industry": "陸運業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9041"
+    },
+    {
+      "code": "5341",
+      "name": "ＡＳＡＨＩ ＥＩＴＯホールディングス",
+      "market": "Standard",
+      "industry": "ガラス・土石製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5341"
+    },
+    {
+      "code": "2185",
+      "name": "シイエム・シイ",
+      "market": "Standard",
+      "industry": "サービス業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2185"
+    },
+    {
+      "code": "7827",
+      "name": "オービス",
+      "market": "Standard",
+      "industry": "その他製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7827"
+    },
+    {
+      "code": "287A",
+      "name": "黒田グループ",
+      "market": "Standard",
+      "industry": "卸売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=287A"
+    },
+    {
+      "code": "4222",
+      "name": "児玉化学工業",
+      "market": "Standard",
+      "industry": "化学",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4222"
+    },
+    {
+      "code": "6159",
+      "name": "ミクロン精密",
+      "market": "Standard",
+      "industry": "機械",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6159"
+    },
+    {
+      "code": "5900",
+      "name": "ダイケン",
+      "market": "Standard",
+      "industry": "金属製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5900"
+    },
+    {
+      "code": "1768",
+      "name": "ソネック",
+      "market": "Standard",
+      "industry": "建設業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1768"
+    },
+    {
+      "code": "2736",
+      "name": "フェスタリアホールディングス",
+      "market": "Standard",
+      "industry": "小売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2736"
+    },
+    {
+      "code": "2354",
+      "name": "ＹＥ ＤＩＧＩＴＡＬ",
+      "market": "Standard",
+      "industry": "情報・通信業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2354"
+    },
+    {
+      "code": "2597",
+      "name": "ユニカフェ",
+      "market": "Standard",
+      "industry": "食料品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2597"
+    },
+    {
+      "code": "7781",
+      "name": "平山ホールディングス",
+      "market": "Standard",
+      "industry": "精密機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7781"
+    },
+    {
+      "code": "3598",
+      "name": "山喜",
+      "market": "Standard",
+      "industry": "繊維製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3598"
+    },
+    {
+      "code": "9363",
+      "name": "大運",
+      "market": "Standard",
+      "industry": "倉庫・運輸関連業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9363"
+    },
+    {
+      "code": "5699",
+      "name": "イボキン",
+      "market": "Standard",
+      "industry": "鉄鋼",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5699"
+    },
+    {
+      "code": "6643",
+      "name": "戸上電機製作所",
+      "market": "Standard",
+      "industry": "電気機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6643"
+    },
+    {
+      "code": "3271",
+      "name": "ＴＨＥグローバル社",
+      "market": "Standard",
+      "industry": "不動産業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3271"
+    },
+    {
+      "code": "7228",
+      "name": "デイトナ",
+      "market": "Standard",
+      "industry": "輸送用機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7228"
+    },
+    {
+      "code": "9073",
+      "name": "京極運輸商事",
+      "market": "Standard",
+      "industry": "陸運業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9073"
+    },
+    {
+      "code": "2370",
+      "name": "メディネット",
+      "market": "Growth",
+      "industry": "サービス業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2370"
+    },
+    {
+      "code": "4588",
+      "name": "オンコリスバイオファーマ",
+      "market": "Growth",
+      "industry": "医薬品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4588"
+    },
+    {
+      "code": "556A",
+      "name": "犬猫生活",
+      "market": "Growth",
+      "industry": "小売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=556A"
+    },
+    {
+      "code": "269A",
+      "name": "Ｓａｐｅｅｔ",
+      "market": "Growth",
+      "industry": "情報・通信業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=269A"
+    },
+    {
+      "code": "5357",
+      "name": "ヨータイ",
+      "market": "Prime",
+      "industry": "ガラス・土石製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5357"
+    },
+    {
+      "code": "4318",
+      "name": "クイック",
+      "market": "Prime",
+      "industry": "サービス業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4318"
+    },
+    {
+      "code": "8585",
+      "name": "オリエントコーポレーション",
+      "market": "Prime",
+      "industry": "その他金融業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8585"
+    },
+    {
+      "code": "7944",
+      "name": "ローランド",
+      "market": "Prime",
+      "industry": "その他製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7944"
+    },
+    {
+      "code": "4553",
+      "name": "東和薬品",
+      "market": "Prime",
+      "industry": "医薬品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4553"
+    },
+    {
+      "code": "3388",
+      "name": "明治電機工業",
+      "market": "Prime",
+      "industry": "卸売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3388"
+    },
+    {
+      "code": "4078",
+      "name": "堺化学工業",
+      "market": "Prime",
+      "industry": "化学",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4078"
+    },
+    {
+      "code": "6237",
+      "name": "イワキポンプ",
+      "market": "Prime",
+      "industry": "機械",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6237"
+    },
+    {
+      "code": "5975",
+      "name": "東プレ",
+      "market": "Prime",
+      "industry": "金属製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5975"
+    },
+    {
+      "code": "7380",
+      "name": "十六フィナンシャルグループ",
+      "market": "Prime",
+      "industry": "銀行業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7380"
+    },
+    {
+      "code": "1852",
+      "name": "淺沼組",
+      "market": "Prime",
+      "industry": "建設業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1852"
+    },
+    {
+      "code": "3087",
+      "name": "ドトール・日レスホールディングス",
+      "market": "Prime",
+      "industry": "小売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3087"
+    },
+    {
+      "code": "8739",
+      "name": "スパークス・グループ",
+      "market": "Prime",
+      "industry": "証券、商品先物取引業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8739"
+    },
+    {
+      "code": "3679",
+      "name": "じげん",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3679"
+    },
+    {
+      "code": "2229",
+      "name": "カルビー",
+      "market": "Prime",
+      "industry": "食料品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2229"
+    },
+    {
+      "code": "7744",
+      "name": "ノーリツ鋼機",
+      "market": "Prime",
+      "industry": "精密機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7744"
+    },
+    {
+      "code": "8111",
+      "name": "ゴールドウイン",
+      "market": "Prime",
+      "industry": "繊維製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=8111"
+    },
+    {
+      "code": "5602",
+      "name": "栗本鐵工所",
+      "market": "Prime",
+      "industry": "鉄鋼",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5602"
+    },
+    {
+      "code": "9532",
+      "name": "大阪瓦斯",
+      "market": "Prime",
+      "industry": "電気・ガス業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9532"
+    },
+    {
+      "code": "6616",
+      "name": "トレックス・セミコンダクター",
+      "market": "Prime",
+      "industry": "電気機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6616"
+    },
+    {
+      "code": "3480",
+      "name": "ジェイ・エス・ビー",
+      "market": "Prime",
+      "industry": "不動産業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3480"
+    },
+    {
+      "code": "7238",
+      "name": "曙ブレーキ工業",
+      "market": "Prime",
+      "industry": "輸送用機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7238"
+    },
+    {
+      "code": "9044",
+      "name": "ＮＡＮＫＡＩ",
+      "market": "Prime",
+      "industry": "陸運業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9044"
+    },
+    {
+      "code": "5355",
+      "name": "日本坩堝",
+      "market": "Standard",
+      "industry": "ガラス・土石製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5355"
+    },
+    {
+      "code": "2186",
+      "name": "ソーバル",
+      "market": "Standard",
+      "industry": "サービス業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2186"
+    },
+    {
+      "code": "7831",
+      "name": "ウイルコホールディングス",
+      "market": "Standard",
+      "industry": "その他製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7831"
+    },
+    {
+      "code": "3004",
+      "name": "神栄",
+      "market": "Standard",
+      "industry": "卸売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3004"
+    },
+    {
+      "code": "4224",
+      "name": "ロンシール工業",
+      "market": "Standard",
+      "industry": "化学",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4224"
+    },
+    {
+      "code": "6161",
+      "name": "エスティック",
+      "market": "Standard",
+      "industry": "機械",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6161"
+    },
+    {
+      "code": "5903",
+      "name": "シンポ",
+      "market": "Standard",
+      "industry": "金属製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5903"
+    },
+    {
+      "code": "1770",
+      "name": "藤田エンジニアリング",
+      "market": "Standard",
+      "industry": "建設業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1770"
+    },
+    {
+      "code": "2747",
+      "name": "北雄ラッキー",
+      "market": "Standard",
+      "industry": "小売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2747"
+    },
+    {
+      "code": "2411",
+      "name": "ゲンダイエージェンシー",
+      "market": "Standard",
+      "industry": "情報・通信業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2411"
+    },
+    {
+      "code": "2612",
+      "name": "かどや製油",
+      "market": "Standard",
+      "industry": "食料品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2612"
+    },
+    {
+      "code": "7782",
+      "name": "シンシア",
+      "market": "Standard",
+      "industry": "精密機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7782"
+    },
+    {
+      "code": "3600",
+      "name": "フジックス",
+      "market": "Standard",
+      "industry": "繊維製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3600"
+    },
+    {
+      "code": "9365",
+      "name": "トレーディア",
+      "market": "Standard",
+      "industry": "倉庫・運輸関連業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9365"
+    },
+    {
+      "code": "7305",
+      "name": "新家工業",
+      "market": "Standard",
+      "industry": "鉄鋼",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7305"
+    },
+    {
+      "code": "6647",
+      "name": "森尾電機",
+      "market": "Standard",
+      "industry": "電気機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6647"
+    },
+    {
+      "code": "3277",
+      "name": "サンセイランディック",
+      "market": "Standard",
+      "industry": "不動産業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3277"
+    },
+    {
+      "code": "7235",
+      "name": "東京ラヂエーター製造",
+      "market": "Standard",
+      "industry": "輸送用機器",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7235"
+    },
+    {
+      "code": "9074",
+      "name": "日本石油輸送",
+      "market": "Standard",
+      "industry": "陸運業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9074"
+    },
+    {
+      "code": "2385",
+      "name": "総医研ホールディングス",
+      "market": "Growth",
+      "industry": "サービス業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=2385"
+    },
+    {
+      "code": "4591",
+      "name": "リボミック",
+      "market": "Growth",
+      "industry": "医薬品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4591"
+    },
+    {
+      "code": "5884",
+      "name": "クラダシ",
+      "market": "Growth",
+      "industry": "小売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5884"
+    },
+    {
+      "code": "281A",
+      "name": "インフォメティス",
+      "market": "Growth",
+      "industry": "情報・通信業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=281A"
+    },
+    {
+      "code": "5384",
+      "name": "フジミインコーポレーテッド",
+      "market": "Prime",
+      "industry": "ガラス・土石製品",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=5384"
     }
   ],
-  "bundleBeforeSha256": "dbbc9a80d5ea701156715da7be35ec4991f5a53fafb373121d591a6f64081883",
-  "bundleAfterSha256": "d8b3c6e742a3514f2212a4a38f474cfe305eab9564724d2500df220ec073b93a",
-  "bundleAfterCompressedBytes": 184662,
-  "bundleBudgetBytes": 327680
+  "bundleBeforeSha256": "0c59db9ade23e70f5d20757f66398153fa94a0994f57f24d77b006a391f551af",
+  "bundleAfterSha256": "7263e5e87c249685dd36169b778c053a634cda65bb8c04642785276cbf5e9b79",
+  "bundleAfterCompressedBytes": 404139,
+  "bundleBudgetBytes": 1048576
 }

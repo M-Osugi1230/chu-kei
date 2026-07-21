@@ -1,7 +1,7 @@
 {
   "schemaVersion": "progress-batch-context-v1",
-  "generatedAt": "2026-07-20T09:52:07.434Z",
-  "sourceBundleSha256": "504047916818e626bb39f78be2fdcf8f1d275473f3ff35c0aa0c83d7be44142a",
+  "generatedAt": "2026-07-21T01:23:41.219Z",
+  "sourceBundleSha256": "ef9ec51e9e93b084752365b1fc6fcfd0023c23e9051573544fba02e33628e249",
   "automaticFactCompletion": false,
   "codes": [
     "1925",
@@ -451,11 +451,11 @@
       "name": "フリー",
       "market": "Growth",
       "industry": "情報・通信業",
-      "stage": "detailed_extracted",
+      "stage": "core",
       "sourceUrl": "https://corp.freee.co.jp/ir/factbook_ja.pdf",
       "document": "フリー株式会社 ファクトブック（2025年10月時点）",
       "planPublishedDate": "2026-01-06",
-      "lastVerifiedDate": "2026-07-13",
+      "lastVerifiedDate": "2026-07-21",
       "summary": "統合型経営プラットフォームの顧客基盤とクロスセルを拡大し、AI、新規事業、会計事務所との連携、戦略的M&Aを成長ドライバーとして、2028年6月期に売上高500億円以上、売上高成長率20%以上、調整後FCFマージン15%以上、Rule of 40達成を目指す。",
       "metrics": {
         "revenue": "2028年6月期 売上高500億円以上、売上高成長率20%以上",
@@ -475,7 +475,7 @@
         "ma": true,
         "capitalEfficiency": true,
         "shareholderReturn": false,
-        "progress": false,
+        "progress": true,
         "overseas": false,
         "dx": true,
         "humanCapital": true,
@@ -486,7 +486,8 @@
         "公表日は公式PDFのメタデータ作成日（2026年1月6日）を登録し、資料本文の基準時点は2025年10月。",
         "調整後FCFはカード事業の立替金増減とM&A関連収支を調整した会社定義指標。",
         "2028年6月期の営業利益絶対額、投資総額、株主還元の定量目標は資料で未提示のため推計しない。",
-        "詳細抽出済みβ。ページ証跡は確認済みだが、本番昇格の別確認者レビューは未完了。"
+        "進捗評価済み。公式一次資料の目標・実績を同一定義で比較できないため、単純な進捗率を表示しません。",
+        "本番品質。公式一次資料・証跡・進捗評価・個別レビュー・独立再検証を確認済み。"
       ],
       "companyKeys": [
         "capital",
@@ -503,7 +504,9 @@
         "name",
         "period",
         "planPublishedDate",
+        "productionApproval",
         "profit",
+        "progressAssessment",
         "quality",
         "returnPolicy",
         "revenue",
@@ -516,7 +519,22 @@
       ],
       "additionalFields": {
         "category": "情報・通信業/成長戦略2028",
-        "period": "2026年6月期〜2028年6月期"
+        "period": "2026年6月期〜2028年6月期",
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "既存の公式一次資料には計画・実績・会社予想の数値が含まれるが、同一定義・同一単位・同一企業範囲の対応を確定できないため、単純な進捗率を表示しない。",
+          "sourceRef": "ファクトブック PDF p.28: 法人プロダクト浸透率の中期約30%、長期50%以上。"
+        },
+        "productionApproval": {
+          "reviewApproved": true,
+          "independentDoubleCheck": true,
+          "approvals": 2,
+          "reviewers": [
+            "independent-release-review",
+            "production-quality-review"
+          ],
+          "latestReviewedAt": "2026-07-21T11:00:00.000Z"
+        }
       },
       "existingProgressRows": []
     },

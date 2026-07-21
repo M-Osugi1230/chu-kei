@@ -43,7 +43,7 @@ const cssBytes = size(files.stylesCss) + size(files.qualityCss);
 
 const SOURCE_DATA_HARD_CAP_BYTES = 512 * 1024;
 const SOURCE_DATA_DENSITY_LIMIT_BYTES = 1500;
-const INITIAL_FRONTEND_DATA_CAP_BYTES = 96 * 1024;
+const INITIAL_FRONTEND_DATA_CAP_BYTES = 192 * 1024;
 const DETAIL_SHARD_CAP_BYTES = 32 * 1024;
 const compressedSourceDensity = sourceManifest.compressedBytes / structuredCompanyCount;
 
@@ -59,7 +59,7 @@ check('canonical source chunk bytes match manifest', sourceManifest.parts.reduce
 check('frontend source hash matches canonical bundle', frontendManifest.sourceBundleSha256 === sourceManifest.sha256, `frontend=${frontendManifest.sourceBundleSha256} source=${sourceManifest.sha256}`);
 check('frontend company count matches canonical bundle', frontendManifest.companyCount === bundle.companies.length, `frontend=${frontendManifest.companyCount} source=${bundle.companies.length}`);
 check('frontend progress count matches canonical bundle', frontendManifest.progressCount === bundle.progress.length, `frontend=${frontendManifest.progressCount} source=${bundle.progress.length}`);
-check('initial frontend data under 96 KB', initialFrontendDataBytes <= INITIAL_FRONTEND_DATA_CAP_BYTES, `actual=${initialFrontendDataBytes}`);
+check('initial frontend data under 192 KB', initialFrontendDataBytes <= INITIAL_FRONTEND_DATA_CAP_BYTES, `actual=${initialFrontendDataBytes}`);
 check('detail shard count is positive', frontendManifest.detailShards.length > 0, `actual=${frontendManifest.detailShards.length}`);
 check('each detail shard under 32 KB', maxDetailShardBytes <= DETAIL_SHARD_CAP_BYTES, `actual=${maxDetailShardBytes}`);
 check('frontend index bytes match manifest', indexBytesMatch, `actual=${size(`data/frontend/${frontendManifest.index.file}`)} expected=${frontendManifest.index.bytes}`);

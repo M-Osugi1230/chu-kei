@@ -1,0 +1,1030 @@
+{
+  "schemaVersion": "source-research-review-summary-v1",
+  "batchId": "source-research-batch-001",
+  "generatedAt": "2026-07-21T01:23:41.267Z",
+  "automaticApproval": false,
+  "counts": {
+    "selected": 25,
+    "eligible": 19,
+    "manualReviewPriority": 11,
+    "manualReviewRequired": 8,
+    "hold": 6,
+    "earningsOnly": 6
+  },
+  "priorityCodes": [
+    "166A",
+    "268A",
+    "2784",
+    "2975",
+    "2982",
+    "3031",
+    "3151",
+    "3232",
+    "5831",
+    "5844",
+    "6455"
+  ],
+  "rows": [
+    {
+      "code": "166A",
+      "name": "タスキホールディングス",
+      "market": "Prime",
+      "industry": "不動産業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2025-12-26",
+      "documentTitle": "事業計画及び成長可能性に関する事項について",
+      "documentUrl": "https://www2.jpx.co.jp/disc/166A0/140120251226527334.pdf",
+      "documentScore": 168,
+      "pageCount": 56,
+      "documentCount": 183,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "AI",
+        "DX",
+        "人的資本",
+        "サステナビリティ"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.49: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.35: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.38: 財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.49: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.35で売上高に関する数値・方針（2,000 億円、474億円、744億円、870億円）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.49で利益に関する数値・方針（1,004億円、474億円、744億円、870 億円）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.38で収益性・資本効率に関する数値・方針（800億円、2倍、35%、40%）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.32で投資・資本配分に関する数値・方針（40%）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.48で株主還元に関する数値・方針（30%、40%）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "167A",
+      "name": "リョーサン菱洋ホールディングス",
+      "market": "Prime",
+      "industry": "卸売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2024-05-13",
+      "documentTitle": "5ヶ年経営計画の骨子策定に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/167A0/140120240513591650.pdf",
+      "documentScore": 142,
+      "pageCount": 4,
+      "documentCount": 88,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "株主還元",
+        "サステナビリティ",
+        "DX",
+        "AI"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.3: 財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "公式PDFで目標・計画は確認できるが、同一定義の確定実績を安全に接続できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.2で売上高に関する数値・方針（4,150 億円、5,000 億円、850 億円、130 億円）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.2で利益に関する数値・方針（4,150 億円、5,000 億円、850 億円、130 億円）を確認。詳細は原文の定義を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（4,150 億円、5,000 億円、850 億円、130 億円）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "2198",
+      "name": "アイ・ケイ・ケイホールディングス",
+      "market": "Prime",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-06-11",
+      "documentTitle": "2026年10月期 第2四半期決算説明会資料",
+      "documentUrl": "https://www2.jpx.co.jp/disc/21980/140120260610567099.pdf",
+      "documentScore": 134,
+      "pageCount": 57,
+      "documentCount": 228,
+      "isPlanDocument": false,
+      "isEarningsOnly": true,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "海外",
+        "人的資本",
+        "サステナビリティ",
+        "株主還元"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.3: 財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.19: 財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.5: 財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.3: 財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.3で売上高に関する数値・方針（494百万円、150.6%、549.4%、2026年）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.3で利益に関する数値・方針（494百万円、150.6%、549.4%、2026年）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.21で収益性・資本効率に関する数値・方針を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.22で投資・資本配分に関する数値・方針を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.23で株主還元に関する数値・方針（21.1%、52.3%、40.4%、35.3%）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "2429",
+      "name": "ワールドホールディングス",
+      "market": "Prime",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2022-02-24",
+      "documentTitle": "中期経営計画2026",
+      "documentUrl": "https://www2.jpx.co.jp/disc/24290/140120220224595177.pdf",
+      "documentScore": 155,
+      "pageCount": 19,
+      "documentCount": 197,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "人的資本",
+        "サステナビリティ",
+        "M&A",
+        "研究開発"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.7: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.12: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.7: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.7で売上高に関する数値・方針（2026年、2,750億円、77.8%、150億円）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.7で利益に関する数値・方針（2026年、2,750億円、77.8%、150億円）を確認。詳細は原文の定義を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.7で株主還元に関する数値・方針（2026年、2,750億円、77.8%、150億円）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "268A",
+      "name": "リガク・ホールディングス",
+      "market": "Prime",
+      "industry": "精密機器",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2025-02-14",
+      "documentTitle": "中期経営計画(2025年2月開示版)",
+      "documentUrl": "https://www2.jpx.co.jp/disc/268A0/140120250214575854.pdf",
+      "documentScore": 173,
+      "pageCount": 18,
+      "documentCount": 60,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "海外",
+        "研究開発",
+        "設備投資",
+        "AI"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.3: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.15: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.17: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "公式PDFで目標・計画は確認できるが、同一定義の確定実績を安全に接続できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.3: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.3で売上高に関する数値・方針（2025年、70%、2023年、2024年）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.3で利益に関する数値・方針（2025年、70%、2023年、2024年）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.3で収益性・資本効率に関する数値・方針（2025年、70%、2023年、2024年）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.17で投資・資本配分に関する数値・方針（5%、2023年12月期、2027年12月期、2025年）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.4で株主還元に関する数値・方針（2025年）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "2767",
+      "name": "円谷フィールズホールディングス",
+      "market": "Prime",
+      "industry": "卸売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-05-12",
+      "documentTitle": "2026年3月期決算短信〔日本基準〕(連結)",
+      "documentUrl": "https://www2.jpx.co.jp/disc/27670/140120260512526159.pdf",
+      "documentScore": 104,
+      "pageCount": 22,
+      "documentCount": 177,
+      "isPlanDocument": false,
+      "isEarningsOnly": true,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "株主還元",
+        "海外",
+        "DX",
+        "サステナビリティ"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.4: 財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.7で売上高に関する数値・方針（2026年3月期、2027年3月期、2022年、2025年）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.7で利益に関する数値・方針（2026年3月期、2027年3月期、2022年、2025年）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.1で収益性・資本効率に関する数値・方針（2026年3月期、2026年、2025年、2025年3月期）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.4で投資・資本配分に関する数値・方針（2026年3月期、174,142百万円、23.9%、17,455百万円）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.1で株主還元に関する数値・方針（2026年3月期、2026年、2025年、2025年3月期）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "2784",
+      "name": "アルフレッサ　ホールディングス",
+      "market": "Prime",
+      "industry": "卸売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2025-05-15",
+      "documentTitle": "「25ー27 中期経営計画 Vision2032 Stage2 ~総合力で未来を切り拓く~」策定のお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/27840/140120250513548110.pdf",
+      "documentScore": 173,
+      "pageCount": 55,
+      "documentCount": 351,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "サステナビリティ",
+        "人的資本",
+        "株主還元",
+        "新規事業"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.18: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.53: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.18: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.18で売上高に関する数値・方針（2024年度、2032年度、960億円、2.4%）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.18で利益に関する数値・方針（2024年度、2032年度、960億円、2.4%）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.18で収益性・資本効率に関する数値・方針（2024年度、2032年度、960億円、2.4%）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.3で投資・資本配分に関する数値・方針（2026年、2027年度、435億円、1,190 億円）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.18で株主還元に関する数値・方針（2024年度、2032年度、960億円、2.4%）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "2975",
+      "name": "スター・マイカ・ホールディングス",
+      "market": "Prime",
+      "industry": "不動産業",
+      "status": "eligible",
+      "confidence": 93,
+      "identityMatch": true,
+      "documentDate": "2025-01-14",
+      "documentTitle": "中期経営計画の見直しに関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/29750/140120250114550129.pdf",
+      "documentScore": 173,
+      "pageCount": 42,
+      "documentCount": 274,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "資本効率",
+        "株主還元",
+        "設備投資"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.1で売上高に関する数値・方針（2025年、2024年、2024年11月期、2026年）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.1で利益に関する数値・方針（2025年、2024年、2024年11月期、2026年）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.1で収益性・資本効率に関する数値・方針（2025年、2024年、2024年11月期、2026年）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.2で投資・資本配分に関する数値・方針（1倍、40%、5%、14%）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.1で株主還元に関する数値・方針（2025年、2024年、2024年11月期、2026年）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "2980",
+      "name": "ＳＲＥホールディングス",
+      "market": "Prime",
+      "industry": "不動産業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-05-13",
+      "documentTitle": "2026年3月期 決算説明資料",
+      "documentUrl": "https://www2.jpx.co.jp/disc/29800/140120260513529812.pdf",
+      "documentScore": 134,
+      "pageCount": 40,
+      "documentCount": 151,
+      "isPlanDocument": false,
+      "isEarningsOnly": true,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "AI",
+        "株主還元",
+        "DX",
+        "M&A"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.15: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.3: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.15: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.2で売上高に関する数値・方針（2026年3月期、32,858百万円、23.1%、4,180百万円）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.2で利益に関する数値・方針（2026年3月期、32,858百万円、23.1%、4,180百万円）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.2で収益性・資本効率に関する数値・方針（2026年3月期、32,858百万円、23.1%、4,180百万円）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.12で投資・資本配分に関する数値・方針（2026年3月期、2025年3月期、2027年3月期、35%）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.3で株主還元に関する数値・方針（2027年3月期、50億円、60億円、53.8%）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "2982",
+      "name": "ＡＤワークスグループ",
+      "market": "Prime",
+      "industry": "不動産業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2024-02-08",
+      "documentTitle": "第2次中期経営計画(2024年12月期~2026年12月期)",
+      "documentUrl": "https://www2.jpx.co.jp/disc/29820/140120240207528590.pdf",
+      "documentScore": 167,
+      "pageCount": 30,
+      "documentCount": 327,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "サステナビリティ",
+        "海外",
+        "人的資本",
+        "生産性"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.6: 計画・成長戦略に関する記載を確認する。",
+        "公式PDF p.2: 計画・成長戦略・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.5: 財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.6: 計画・成長戦略に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.5で売上高に関する数値・方針（2021年12月期、2022年12月期、2023年12月期、2024年12月期）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.6で利益に関する数値・方針（31百万円、33百万円、34百万円、35百万円）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.5で収益性・資本効率に関する数値・方針（2021年12月期、2022年12月期、2023年12月期、2024年12月期）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.21で投資・資本配分に関する数値・方針（2023年、2017年、2022年）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2024年12月期、2026年12月期）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "3031",
+      "name": "ラクーンホールディングス",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-06-11",
+      "documentTitle": "中期経営計画(2027年4月期~2029年4月期)策定のお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/30310/140120260611568271.pdf",
+      "documentScore": 179,
+      "pageCount": 55,
+      "documentCount": 359,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "株主還元",
+        "設備投資",
+        "海外",
+        "生産性"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.5: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.4: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.9: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.4で売上高に関する数値・方針（100億円、16%、6,574百万円、7,500百万円）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（100億円、16%、6,574百万円、7,500百万円）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.4で収益性・資本効率に関する数値・方針（100億円、16%、6,574百万円、7,500百万円）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.4で投資・資本配分に関する数値・方針（100億円、16%、6,574百万円、7,500百万円）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.21で株主還元に関する数値・方針（100億円、15%、16.1%、14.8%）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "3076",
+      "name": "あい ホールディングス",
+      "market": "Prime",
+      "industry": "卸売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-05-15",
+      "documentTitle": "2026年6月期 第3四半期決算短信〔日本基準〕(連結)",
+      "documentUrl": "https://www2.jpx.co.jp/disc/30760/140120260424510574.pdf",
+      "documentScore": 104,
+      "pageCount": 13,
+      "documentCount": 157,
+      "isPlanDocument": false,
+      "isEarningsOnly": true,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "サステナビリティ",
+        "株主還元",
+        "AI",
+        "資本効率"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.10: 財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.4で売上高に関する数値・方針（3百万円、28.0%、9百万円、17.9%）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（3百万円、28.0%、9百万円、17.9%）を確認。詳細は原文の定義を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.7で株主還元に関する数値・方針（2025年、2026年、2026年6月期）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "3151",
+      "name": "バイタルケーエスケー・ホールディングス",
+      "market": "Prime",
+      "industry": "卸売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2025-04-17",
+      "documentTitle": "中期経営計画2027-Move on to the Next Stage-策定に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/31510/140120250417517495.pdf",
+      "documentScore": 173,
+      "pageCount": 53,
+      "documentCount": 275,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "資本効率",
+        "事業再編",
+        "株主還元",
+        "生産性"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.7: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.12: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.50: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.7: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.7で売上高に関する数値・方針（2015年、2015年度、2025年、2016年）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.12で利益に関する数値・方針（6,000億円、0.92%、6.5%、6,600億円）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.7で収益性・資本効率に関する数値・方針（2015年、2015年度、2025年、2016年）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.12で投資・資本配分に関する数値・方針（6,000億円、0.92%、6.5%、6,600億円）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.7で株主還元に関する数値・方針（2015年、2015年度、2025年、2016年）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "3154",
+      "name": "メディアスホールディングス",
+      "status": "pdf_text_insufficient",
+      "confidence": null,
+      "identityMatch": false,
+      "documentDate": "2026-02-18",
+      "documentTitle": "2026年6月期中間決算説明会 ログミーFinance書き起こし記事に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/31540/140120260218564568.pdf",
+      "documentScore": 134,
+      "pageCount": null,
+      "documentCount": null,
+      "isPlanDocument": false,
+      "isEarningsOnly": true,
+      "recentPlan": false,
+      "recommendation": "hold",
+      "themes": [],
+      "evidenceRefs": [],
+      "progressAssessment": null,
+      "metrics": {
+        "revenue": null,
+        "profit": null,
+        "margin": null,
+        "capital": null,
+        "returnPolicy": null
+      },
+      "failure": null
+    },
+    {
+      "code": "3232",
+      "name": "三重交通グループホールディングス",
+      "market": "Prime",
+      "industry": "不動産業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2025-05-08",
+      "documentTitle": "中期経営計画の一部目標数値の見直しに関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/32320/140120250507533122.pdf",
+      "documentScore": 173,
+      "pageCount": 4,
+      "documentCount": 167,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "サステナビリティ",
+        "生産性",
+        "設備投資",
+        "資本効率"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.4: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.3: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.4で売上高に関する数値・方針（2023年度、2024年度、2025年度、32.5%）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（2023年度、2024年度、2025年度、32.5%）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.4で収益性・資本効率に関する数値・方針（2023年度、2024年度、2025年度、32.5%）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.4で投資・資本配分に関する数値・方針（2023年度、2024年度、2025年度、32.5%）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "471A",
+      "name": "ＮＳグループ",
+      "market": "Prime",
+      "industry": "その他金融業",
+      "status": "eligible",
+      "confidence": 93,
+      "identityMatch": true,
+      "documentDate": "2026-05-15",
+      "documentTitle": "2026年12月期 第1四半期決算短信〔IFRS〕(連結)",
+      "documentUrl": "https://www2.jpx.co.jp/disc/471A0/140120260514534179.pdf",
+      "documentScore": 104,
+      "pageCount": 10,
+      "documentCount": 24,
+      "isPlanDocument": false,
+      "isEarningsOnly": true,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "株主還元",
+        "サステナビリティ"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.4: 財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.2: 財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.2で売上高に関する数値・方針（2026年12月期、2025年12月期、2026年、2025年）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.2で利益に関する数値・方針（2026年12月期、2025年12月期、2026年、2025年）を確認。詳細は原文の定義を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2026年12月期、2025年12月期、2026年、2025年）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "544A",
+      "name": "ＧＭＳグループ",
+      "status": "no_candidate_document",
+      "confidence": null,
+      "identityMatch": false,
+      "documentDate": null,
+      "documentTitle": null,
+      "documentUrl": null,
+      "documentScore": null,
+      "pageCount": null,
+      "documentCount": 12,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "hold",
+      "themes": [],
+      "evidenceRefs": [],
+      "progressAssessment": null,
+      "metrics": {
+        "revenue": null,
+        "profit": null,
+        "margin": null,
+        "capital": null,
+        "returnPolicy": null
+      },
+      "failure": null
+    },
+    {
+      "code": "547A",
+      "name": "ムニノバホールディングス",
+      "status": "no_candidate_document",
+      "confidence": null,
+      "identityMatch": false,
+      "documentDate": null,
+      "documentTitle": null,
+      "documentUrl": null,
+      "documentScore": null,
+      "pageCount": null,
+      "documentCount": 19,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "hold",
+      "themes": [],
+      "evidenceRefs": [],
+      "progressAssessment": null,
+      "metrics": {
+        "revenue": null,
+        "profit": null,
+        "margin": null,
+        "capital": null,
+        "returnPolicy": null
+      },
+      "failure": null
+    },
+    {
+      "code": "575A",
+      "name": "前澤ホールディングス",
+      "status": "no_candidate_document",
+      "confidence": null,
+      "identityMatch": false,
+      "documentDate": null,
+      "documentTitle": null,
+      "documentUrl": null,
+      "documentScore": null,
+      "pageCount": null,
+      "documentCount": 12,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "hold",
+      "themes": [],
+      "evidenceRefs": [],
+      "progressAssessment": null,
+      "metrics": {
+        "revenue": null,
+        "profit": null,
+        "margin": null,
+        "capital": null,
+        "returnPolicy": null
+      },
+      "failure": null
+    },
+    {
+      "code": "5830",
+      "name": "いよぎんホールディングス",
+      "market": "Prime",
+      "industry": "銀行業",
+      "status": "needs_review",
+      "confidence": 65,
+      "identityMatch": true,
+      "documentDate": "2026-05-08",
+      "documentTitle": "「2024年度中期経営計画」における経営指標の一部修正に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/58300/140120260430515293.pdf",
+      "documentScore": 179,
+      "pageCount": 1,
+      "documentCount": 126,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "hold",
+      "themes": [
+        "資本効率"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "固定の中期売上高目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "公式PDF p.1で利益に関する数値・方針（2026年、2025年、2024年度、7.00%）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.1で収益性・資本効率に関する数値・方針（2026年、2025年、2024年度、7.00%）を確認。詳細は原文の定義を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "5831",
+      "name": "しずおかフィナンシャルグループ",
+      "market": "Prime",
+      "industry": "銀行業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-04-20",
+      "documentTitle": "第2次中期経営計画策定のお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/58310/140120260419506325.pdf",
+      "documentScore": 179,
+      "pageCount": 5,
+      "documentCount": 112,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "人的資本",
+        "AI",
+        "サステナビリティ",
+        "DX"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.2: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.5: 財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.4: 計画・成長戦略に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.2: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "固定の中期売上高目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "公式PDF p.2で利益に関する数値・方針（1人、46%、1,700 億円、9.5%）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.2で収益性・資本効率に関する数値・方針（1人、46%、1,700 億円、9.5%）を確認。詳細は原文の定義を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "5832",
+      "name": "ちゅうぎんフィナンシャルグループ",
+      "market": "Prime",
+      "industry": "銀行業",
+      "status": "needs_review",
+      "confidence": 73,
+      "identityMatch": true,
+      "documentDate": "2025-05-14",
+      "documentTitle": "中期経営計画KPIの修正に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/58320/140120250513548044.pdf",
+      "documentScore": 173,
+      "pageCount": 1,
+      "documentCount": 95,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "hold",
+      "themes": [
+        "DX",
+        "資本効率"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "公式PDFで目標・計画は確認できるが、同一定義の確定実績を安全に接続できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "固定の中期売上高目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "公式PDF p.1で利益に関する数値・方針（300 億円、400 億円、5%、7%）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.1で収益性・資本効率に関する数値・方針（300 億円、400 億円、5%、7%）を確認。詳細は原文の定義を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "5844",
+      "name": "京都フィナンシャルグループ",
+      "market": "Prime",
+      "industry": "銀行業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-04-02",
+      "documentTitle": "「中期経営計画(2026~2028年度)」策定のお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/58440/140120260401595771.pdf",
+      "documentScore": 179,
+      "pageCount": 47,
+      "documentCount": 111,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "資本効率",
+        "DX",
+        "事業再編",
+        "人的資本"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.1: 計画・成長戦略に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "固定の中期売上高目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "固定の中期利益目標は当該公式資料の抽出範囲で確認できない。",
+        "margin": "公式PDF p.2で収益性・資本効率に関する数値・方針（8%、16%、900億円、40%）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.2で投資・資本配分に関する数値・方針（8%、16%、900億円、40%）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（8%、16%、900億円、40%）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "6455",
+      "name": "モリタホールディングス",
+      "market": "Prime",
+      "industry": "輸送用機器",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-06-22",
+      "documentTitle": "中期経営計画「Morita Growth 2030」の策定に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/64550/140120260619575161.pdf",
+      "documentScore": 179,
+      "pageCount": 42,
+      "documentCount": 142,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": true,
+      "recommendation": "manual_review_priority",
+      "themes": [
+        "サステナビリティ",
+        "人的資本",
+        "海外",
+        "株主還元"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.14: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "公式PDFで目標・計画は確認できるが、同一定義の確定実績を安全に接続できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.2で売上高に関する数値・方針（1,500億円、200 億円、10%、3.5%）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.2で利益に関する数値・方針（1,500億円、200 億円、10%、3.5%）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.2で収益性・資本効率に関する数値・方針（1,500億円、200 億円、10%、3.5%）を確認。詳細は原文の定義を参照する。",
+        "capital": "公式PDF p.38で投資・資本配分に関する数値・方針（2030年度）を確認。詳細は原文の定義を参照する。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（1,500億円、200 億円、10%、3.5%）を確認。詳細は原文の定義を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "9552",
+      "name": "クオンツ総研ホールディングス",
+      "market": "Prime",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2022-12-23",
+      "documentTitle": "事業計画及び成長可能性に関する事項",
+      "documentUrl": "https://www2.jpx.co.jp/disc/95520/140120221222582586.pdf",
+      "documentScore": 150,
+      "pageCount": 42,
+      "documentCount": 123,
+      "isPlanDocument": true,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "M&A",
+        "人的資本",
+        "DX",
+        "AI"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.32: 財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.31: 財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.30: 財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、明示的な個別レビューが完了するまで単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.32: 財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.10で売上高に関する数値・方針（6,530億円、2022年9月期、15%、3億円）を確認。詳細は原文の定義を参照する。",
+        "profit": "公式PDF p.30で利益に関する数値・方針（2022年9月期、376百万円、296百万円、1,328百万円）を確認。詳細は原文の定義を参照する。",
+        "margin": "公式PDF p.30で収益性・資本効率に関する数値・方針（2022年9月期、376百万円、296百万円、1,328百万円）を確認。詳細は原文の定義を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    }
+  ]
+}

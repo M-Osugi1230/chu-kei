@@ -23,6 +23,7 @@ on:
       - 'scripts/apply_production_promotion_v1.mjs'
       - 'scripts/sync_production_approval_metadata_v1.mjs'
       - 'scripts/apply_structured_expansion_ci_v1.mjs'
+      - 'scripts/prepare_bulk_production_promotion_v1.mjs'
       - 'scripts/lib/quality_profile_v2.mjs'
       - 'scripts/validate_quality_score_v2.mjs'
       - 'scripts/apply_final200_ci_v1.mjs'
@@ -124,12 +125,13 @@ jobs:
             exit 0
           fi
           CURRENT_PRODUCTION="$(node -p "require('./operations/production-quality/production-readiness-v1.json').currentProduction")"
-          if [ "${CURRENT_PRODUCTION}" = "1000" ] && [ "${APPLY_REQUESTED}" = "false" ]; then
+          TARGET_PRODUCTION="$(node -p "require('./operations/production-quality/production-quality-target-v1.json').targetProductionCompanies")"
+          if [ "${CURRENT_PRODUCTION}" = "${TARGET_PRODUCTION}" ] && [ "${APPLY_REQUESTED}" = "false" ]; then
             echo "Production target is complete and no explicit request exists; validation-only run."
             git reset --hard HEAD
             exit 0
           fi
-          git commit -m "quality: 本番品質1000社の昇格監査を更新"
+          git commit -m "quality: 本番品質${CURRENT_PRODUCTION}社の昇格監査を更新"
           git fetch origin "${TARGET_BRANCH}"
           git rebase "origin/${TARGET_BRANCH}"
           git push origin "HEAD:${TARGET_BRANCH}"

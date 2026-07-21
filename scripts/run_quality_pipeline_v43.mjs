@@ -57,6 +57,7 @@ function consumeRequestedConfig(request, label) {
 
 const findEmbeddedStructuredRequest = () => findRequestedConfig(patchDir, /^structured-expansion-batch-\d+-config\.json$/);
 const findEmbeddedProgressRequest = () => findRequestedConfig(productionQualityDir, /^progress-connection-batch-\d+\.json$/);
+const findFinalProductionCompanyRequest = () => findRequestedConfig(productionQualityDir, /^final-production-company-\d+\.json$/);
 const findBulkProductionPromotionRequest = () => findRequestedConfig(productionQualityDir, /^production-bulk-promotion-approval-\d+\.json$/);
 const findSourceResearchBatchRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-batch-request-\d+\.json$/);
 const findSourceResearchRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-batch-\d+-config\.json$/);
@@ -162,6 +163,13 @@ if (embeddedStructured) consumeRequestedConfig(embeddedStructured, 'Embedded str
 runNode('scripts/apply_structured_correction_v1.mjs');
 if (isApplyWorkflow) {
   runNode('scripts/apply_core_evidence_repair_v1.mjs');
+  const finalProductionCompany = findFinalProductionCompanyRequest();
+  if (finalProductionCompany) {
+    runNode('scripts/prepare_final_production_company_v1.mjs', {
+      FINAL_PRODUCTION_COMPANY_CONFIG: path.relative(ROOT, finalProductionCompany.filePath),
+    });
+    consumeRequestedConfig(finalProductionCompany, 'Final production company');
+  }
   const embeddedProgress = findEmbeddedProgressRequest();
   if (embeddedProgress) {
     if (fs.existsSync(progressRunMarker)) throw new Error('A legacy progress marker already exists; refusing to overwrite it.');

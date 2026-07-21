@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-21T13:05:54.756Z",
-  "sourceBundleSha256": "5f6e296ddbf28dbc8cc9c85e7a0d97fac96d9f9a3f696971cbe91591b16e285c",
+  "generatedAt": "2026-07-21T13:14:38.039Z",
+  "sourceBundleSha256": "627e661320f85075b0fd53e1e77f28f4e78f54d7813386c74a8177a86db82f48",
   "companyCount": 1900,
   "progressCount": 353,
-  "detailedExtractedCount": 4,
+  "detailedExtractedCount": 0,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -17,18 +17,15 @@
     "company_code": 0
   },
   "counts": {
-    "detailedWithProgressFlag": 2,
-    "detailedWithoutProgressFlag": 2,
+    "detailedWithProgressFlag": 0,
+    "detailedWithoutProgressFlag": 0,
     "detailedWithMatchedProgressRows": 0,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 2
+    "pageEvidenceAndPublicationReadyButProgressMissing": 0
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
-    "pageEvidenceAndPublicationReadyButProgressMissingCodes": [
-      "4612",
-      "7733"
-    ]
+    "pageEvidenceAndPublicationReadyButProgressMissingCodes": []
   },
   "progressSamples": [
     {
@@ -98,98 +95,5 @@
       "note": "既存の中計抽出データから生成した目標値。実績値は未接続。 レンジ表記は上限値を入力候補として採用。原文確認後に必要なら下限値も別管理する。"
     }
   ],
-  "candidates": [
-    {
-      "code": "4523",
-      "name": "エーザイ",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2021-04",
-      "evidenceRefCount": 3,
-      "pageEvidenceRefCount": 0,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "4612",
-      "name": "日本ペイントホールディングス",
-      "lastVerifiedDate": "2026-07-13",
-      "planPublishedDate": "2026-02-13",
-      "evidenceRefCount": 4,
-      "pageEvidenceRefCount": 4,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "6594",
-      "name": "ニデック",
-      "lastVerifiedDate": "2026-07-10",
-      "planPublishedDate": "2025-05",
-      "evidenceRefCount": 2,
-      "pageEvidenceRefCount": 0,
-      "hasProgressFlag": true,
-      "progressFlagValue": true,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
-    {
-      "code": "7733",
-      "name": "オリンパス",
-      "lastVerifiedDate": "2026-07-12",
-      "planPublishedDate": "2025-11-07",
-      "evidenceRefCount": 5,
-      "pageEvidenceRefCount": 4,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    }
-  ]
+  "candidates": []
 }

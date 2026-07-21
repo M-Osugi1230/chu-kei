@@ -90,6 +90,39 @@ function sanitizeRecord(candidate) {
   };
 }
 
+function validateRecoveryCandidate(candidate, proposal) {
+  if (candidate.recoveryReview?.approvedByHardChecks !== true) {
+    throw new Error(`${candidate.code}: recovery hard-check marker is missing`);
+  }
+  const source = candidate.record || {};
+  const document = candidate.document || {};
+  const evidenceRefs = [...new Set(source.evidenceRefs || [])]
+    .filter(ref => /公式PDF p\.\d+/.test(String(ref)));
+  const themes = [...new Set(source.themes || [])];
+  const allowedOriginalStatuses = new Set(proposal.allowedOriginalStatuses || []);
+  const allowedDocumentPattern = new RegExp(
+    proposal.allowedDocumentPattern
+      || '中期|中長期|長期経営|事業計画|経営計画|経営戦略|成長戦略|経営方針|決算説明|決算補足|決算短信|統合報告',
+  );
+  const minimumConfidence = Number(proposal.minimumConfidence || 85);
+  const minimumDate = String(proposal.minimumPublicationDate || '2022-01-01');
+  const checks = {
+    allowedOriginalStatus: allowedOriginalStatuses.has(candidate.status),
+    officialJpxPdf: /^https:\/\/www2\.jpx\.co\.jp\/disc\//.test(document.url || source.sourceUrl || ''),
+    identityMatch: candidate.identityMatch === true,
+    confidence: Number(candidate.confidence || 0) >= minimumConfidence,
+    publicationDate: Boolean(document.date && document.date >= minimumDate),
+    documentType: allowedDocumentPattern.test(String(document.title || '')),
+    pageEvidence: evidenceRefs.length >= 2,
+    pageCount: Number(candidate.pageCount || 0) >= 2,
+    themes: themes.length >= 2,
+    structuredSummary: typeof source.summary === 'string' && source.summary.length >= 20,
+    progressGuard: source.progressAssessment?.status !== 'connected',
+  };
+  const missing = Object.entries(checks).filter(([, passed]) => !passed).map(([key]) => key);
+  if (missing.length) throw new Error(`${candidate.code}: recovery checks failed: ${missing.join(', ')}`);
+}
+
 const config = readJson(CONFIG_PATH);
 if (config.schemaVersion !== 'source-research-bulk-approval-v1') {
   throw new Error(`Unsupported bulk approval schema: ${config.schemaVersion}`);
@@ -120,6 +153,9 @@ if (proposal.proposalSha256 !== config.approvedProposalSha256) {
 if (proposal.automaticApproval !== false || proposal.automaticProductionPromotion !== false) {
   throw new Error('Proposal must explicitly prohibit automatic approval and production promotion');
 }
+if (proposal.recoveryMode && proposal.recoveryMode !== 'explicit-near-miss-review-v1') {
+  throw new Error(`Unsupported recovery mode: ${proposal.recoveryMode}`);
+}
 
 const candidatePath = path.resolve(proposal.candidatePath);
 const candidates = readJson(candidatePath);
@@ -136,10 +172,12 @@ if (Number.isInteger(config.expectedStructuredBefore) && structuredBefore !== co
   throw new Error(`Structured count mismatch: ${structuredBefore} !== ${config.expectedStructuredBefore}`);
 }
 const currentStages = new Map(bundle.companies.map(company => [String(company.code), company.stage]));
+const recoveryMode = proposal.recoveryMode === 'explicit-near-miss-review-v1';
 const records = codes.map(code => {
   const candidate = candidateByCode.get(code);
   if (!candidate) throw new Error(`${code}: candidate missing`);
-  if (candidate.status !== 'eligible') throw new Error(`${code}: candidate is not eligible`);
+  if (recoveryMode) validateRecoveryCandidate(candidate, proposal);
+  else if (candidate.status !== 'eligible') throw new Error(`${code}: candidate is not eligible`);
   if (candidate.identityMatch !== true) throw new Error(`${code}: identity mismatch`);
   if (currentStages.get(code) !== 'jpx_indexed') throw new Error(`${code}: expected jpx_indexed, got ${currentStages.get(code)}`);
   return sanitizeRecord(candidate);
@@ -166,6 +204,7 @@ const structuredConfig = {
     candidatePath: path.relative(ROOT, candidatePath),
     explicitApproval: true,
     automaticSelectionAllowed: false,
+    recoveryMode: recoveryMode ? proposal.recoveryMode : null,
     approvedCount: records.length,
   },
   records,
@@ -179,6 +218,7 @@ writeJson(
     proposalSha256: proposal.proposalSha256,
     explicitApproval: true,
     automaticSelectionAllowed: false,
+    recoveryMode: recoveryMode ? proposal.recoveryMode : null,
     structuredBefore,
     approvedCount: records.length,
     targetStructuredCount,
@@ -188,6 +228,7 @@ writeJson(
 );
 console.log(JSON.stringify({
   approvalId: config.approvalId,
+  recoveryMode: recoveryMode ? proposal.recoveryMode : null,
   approvedCount: records.length,
   structuredBefore,
   targetStructuredCount,

@@ -1,10 +1,10 @@
 {
   "schemaVersion": "production-scale-candidates-v1",
-  "generatedAt": "2026-07-21T01:22:23.327Z",
-  "sourceBundleSha256": "60adc3a103c8d7426647f81efd87fa83a10f8c2484b3ce19367a0678f03a282a",
+  "generatedAt": "2026-07-21T01:23:41.058Z",
+  "sourceBundleSha256": "ef9ec51e9e93b084752365b1fc6fcfd0023c23e9051573544fba02e33628e249",
   "companyCount": 1200,
   "progressCount": 353,
-  "detailedExtractedCount": 5,
+  "detailedExtractedCount": 4,
   "progressRowKeyShapes": [
     "actualFiscalYear|actualSource|actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt",
     "actualValue|code|fiscalYear|metric|note|progressRate|source|targetValue|unit|updatedAt"
@@ -18,15 +18,14 @@
   },
   "counts": {
     "detailedWithProgressFlag": 2,
-    "detailedWithoutProgressFlag": 3,
+    "detailedWithoutProgressFlag": 2,
     "detailedWithMatchedProgressRows": 0,
     "progressExistsButFlagMissing": 0,
-    "pageEvidenceAndPublicationReadyButProgressMissing": 3
+    "pageEvidenceAndPublicationReadyButProgressMissing": 2
   },
   "queues": {
     "progressExistsButFlagMissingCodes": [],
     "pageEvidenceAndPublicationReadyButProgressMissingCodes": [
-      "4478",
       "4612",
       "7733"
     ]
@@ -100,29 +99,6 @@
     }
   ],
   "candidates": [
-    {
-      "code": "4478",
-      "name": "フリー",
-      "lastVerifiedDate": "2026-07-13",
-      "planPublishedDate": "2026-01-06",
-      "evidenceRefCount": 5,
-      "pageEvidenceRefCount": 5,
-      "hasProgressFlag": false,
-      "progressFlagValue": false,
-      "matchedProgressRows": 0,
-      "matchedProgressSample": [],
-      "companyFlagKeys": [
-        "ma",
-        "capitalEfficiency",
-        "shareholderReturn",
-        "progress",
-        "overseas",
-        "dx",
-        "humanCapital",
-        "newBusiness",
-        "restructuring"
-      ]
-    },
     {
       "code": "4523",
       "name": "エーザイ",

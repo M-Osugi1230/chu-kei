@@ -55815,5 +55815,51 @@
     "reviewDecisionId": "review-9678-20260721-production-double-check",
     "detectedAt": "2026-07-21T10:19:00.000Z",
     "correctedAt": "2026-07-21T11:19:00.000Z"
+  },
+  {
+    "id": "correction-4478-20260721-progress-classification",
+    "companyCode": "4478",
+    "fieldPath": "progressAssessment,flags.progress,lastVerifiedDate,warnings",
+    "before": {
+      "progressAssessment": null,
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-13"
+    },
+    "after": {
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "既存の公式一次資料には計画・実績・会社予想の数値が含まれるが、同一定義・同一単位・同一企業範囲の対応を確定できないため、単純な進捗率を表示しない。",
+        "sourceRef": "ファクトブック PDF p.28: 法人プロダクト浸透率の中期約30%、長期50%以上。"
+      },
+      "progressFlag": false,
+      "lastVerifiedDate": "2026-07-21"
+    },
+    "reason": "既存の公式一次資料には計画・実績・会社予想の数値が含まれるが、同一定義・同一単位・同一企業範囲の対応を確定できないため、単純な進捗率を表示しない。",
+    "sourceUrl": "https://corp.freee.co.jp/ir/factbook_ja.pdf",
+    "sourcePage": "ファクトブック PDF p.28: 法人プロダクト浸透率の中期約30%、長期50%以上。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4478-20260721-progress-classification",
+    "detectedAt": "2026-07-21T12:00:00.000Z",
+    "correctedAt": "2026-07-21T12:30:00.000Z"
+  },
+  {
+    "id": "correction-4478-20260721-production-promotion",
+    "companyCode": "4478",
+    "fieldPath": "stage,tier,warnings",
+    "before": {
+      "stage": "detailed_extracted",
+      "tier": "詳細抽出済みβ"
+    },
+    "after": {
+      "stage": "core",
+      "tier": "本番品質"
+    },
+    "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+    "sourceUrl": "https://corp.freee.co.jp/ir/factbook_ja.pdf",
+    "sourcePage": "ファクトブック PDF p.28: 法人プロダクト浸透率の中期約30%、長期50%以上。 / 同 PDF p.30: 2028年6月期の売上高500億円以上、成長率20%以上、調整後FCFマージン15%以上、Rule of 40、2027年6月期法人NRR110%以上。 / 同 PDF p.31: FY2030財務モデルと長期の調整後営業利益率40%以上。 / 同 PDF p.32-p.36: Rule of 40達成に向けたコア事業、新規事業、会計事務所、AIの4ドライバー。 / 同 PDF p.34: 新規事業の収益貢献と戦略的M&A。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4478-20260721-production-double-check",
+    "detectedAt": "2026-07-21T10:00:00.000Z",
+    "correctedAt": "2026-07-21T11:00:00.000Z"
   }
 ]

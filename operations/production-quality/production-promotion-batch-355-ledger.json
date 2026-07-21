@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "production-promotion-batch-355",
+  "automaticApprovalAllowed": false,
+  "explicitProductionApproval": true,
+  "reviews": [
+    {
+      "id": "review-4478-20260721-production-primary",
+      "companyCode": "4478",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "production-quality-agent",
+      "reviewer": "production-quality-review",
+      "sourceUrl": "https://corp.freee.co.jp/ir/factbook_ja.pdf",
+      "sourcePages": [
+        "ファクトブック PDF p.28: 法人プロダクト浸透率の中期約30%、長期50%以上。",
+        "同 PDF p.30: 2028年6月期の売上高500億円以上、成長率20%以上、調整後FCFマージン15%以上、Rule of 40、2027年6月期法人NRR110%以上。",
+        "同 PDF p.31: FY2030財務モデルと長期の調整後営業利益率40%以上。",
+        "同 PDF p.32-p.36: Rule of 40達成に向けたコア事業、新規事業、会計事務所、AIの4ドライバー。",
+        "同 PDF p.34: 新規事業の収益貢献と戦略的M&A。"
+      ],
+      "note": "既存の公式一次資料・証跡・構造化内容・進捗評価を企業単位で本番昇格監査した。",
+      "decisionReason": "本番品質の機械要件を全件満たし、個別証跡レビューを通過したため。",
+      "createdAt": "2026-07-21T08:00:00.000Z",
+      "reviewedAt": "2026-07-21T09:00:00.000Z"
+    },
+    {
+      "id": "review-4478-20260721-production-double-check",
+      "companyCode": "4478",
+      "fromStage": "detailed_extracted",
+      "targetStage": "core",
+      "status": "approved",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "independent-release-agent",
+      "reviewer": "independent-release-review",
+      "sourceUrl": "https://corp.freee.co.jp/ir/factbook_ja.pdf",
+      "sourcePages": [
+        "ファクトブック PDF p.28: 法人プロダクト浸透率の中期約30%、長期50%以上。",
+        "同 PDF p.30: 2028年6月期の売上高500億円以上、成長率20%以上、調整後FCFマージン15%以上、Rule of 40、2027年6月期法人NRR110%以上。",
+        "同 PDF p.31: FY2030財務モデルと長期の調整後営業利益率40%以上。",
+        "同 PDF p.32-p.36: Rule of 40達成に向けたコア事業、新規事業、会計事務所、AIの4ドライバー。",
+        "同 PDF p.34: 新規事業の収益貢献と戦略的M&A。"
+      ],
+      "note": "一次レビューとは別の役割で、データ契約・証跡・進捗評価・検索・詳細表示・モバイル表示を独立再検証した。",
+      "decisionReason": "独立した再検証で本番品質要件への適合を確認したため。",
+      "createdAt": "2026-07-21T10:00:00.000Z",
+      "reviewedAt": "2026-07-21T11:00:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-4478-20260721-production-promotion",
+      "companyCode": "4478",
+      "fieldPath": "stage,tier,warnings",
+      "before": {
+        "stage": "detailed_extracted",
+        "tier": "詳細抽出済みβ"
+      },
+      "after": {
+        "stage": "core",
+        "tier": "本番品質"
+      },
+      "reason": "明示的な個別レビューと独立再検証を通過したため本番品質へ昇格する。",
+      "sourceUrl": "https://corp.freee.co.jp/ir/factbook_ja.pdf",
+      "sourcePage": "ファクトブック PDF p.28: 法人プロダクト浸透率の中期約30%、長期50%以上。 / 同 PDF p.30: 2028年6月期の売上高500億円以上、成長率20%以上、調整後FCFマージン15%以上、Rule of 40、2027年6月期法人NRR110%以上。 / 同 PDF p.31: FY2030財務モデルと長期の調整後営業利益率40%以上。 / 同 PDF p.32-p.36: Rule of 40達成に向けたコア事業、新規事業、会計事務所、AIの4ドライバー。 / 同 PDF p.34: 新規事業の収益貢献と戦略的M&A。",
+      "status": "corrected",
+      "reviewDecisionId": "review-4478-20260721-production-double-check",
+      "detectedAt": "2026-07-21T10:00:00.000Z",
+      "correctedAt": "2026-07-21T11:00:00.000Z"
+    }
+  ]
+}

@@ -27,16 +27,13 @@ function readBundle() {
   return JSON.parse(zlib.gunzipSync(compressed).toString('utf8'));
 }
 
-function pageFromMetric(value) {
-  return Number(String(value || '').match(/公式PDF p\.(\d+)/)?.[1]) || null;
-}
-
-function safeMetric(value, label) {
+const pageFromMetric = value => Number(String(value || '').match(/公式PDF p\.(\d+)/)?.[1]) || null;
+const safeMetric = (value, label) => {
   const page = pageFromMetric(value);
   return page
     ? `公式PDF p.${page}で${label}に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。`
     : `固定の中期${label}は当該公式資料の抽出範囲で確認できない。`;
-}
+};
 
 function sanitizeRecord(candidate) {
   const source = candidate.record || {};
@@ -58,8 +55,8 @@ function sanitizeRecord(candidate) {
         reason: 'JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。',
         sourceRef: evidenceRefs[0],
       };
-  const themeText = themes.length ? themes.join('、') : '事業戦略';
   const identity = `${candidate.name}（${candidate.code}）`;
+  const themeText = themes.length ? themes.join('、') : '事業戦略';
   return {
     code: String(candidate.code),
     name: candidate.name,
@@ -104,14 +101,12 @@ function validateRecoveryCandidate(candidate, proposal) {
     proposal.allowedDocumentPattern
       || '中期|中長期|長期経営|事業計画|経営計画|経営戦略|成長戦略|経営方針|決算説明|決算補足|決算短信|統合報告',
   );
-  const minimumConfidence = Number(proposal.minimumConfidence || 85);
-  const minimumDate = String(proposal.minimumPublicationDate || '2022-01-01');
   const checks = {
     allowedOriginalStatus: allowedOriginalStatuses.has(candidate.status),
     officialJpxPdf: /^https:\/\/www2\.jpx\.co\.jp\/disc\//.test(document.url || source.sourceUrl || ''),
     identityMatch: candidate.identityMatch === true,
-    confidence: Number(candidate.confidence || 0) >= minimumConfidence,
-    publicationDate: Boolean(document.date && document.date >= minimumDate),
+    confidence: Number(candidate.confidence || 0) >= Number(proposal.minimumConfidence || 85),
+    publicationDate: Boolean(document.date && document.date >= String(proposal.minimumPublicationDate || '2022-01-01')),
     documentType: allowedDocumentPattern.test(String(document.title || '')),
     pageEvidence: evidenceRefs.length >= 2,
     pageCount: Number(candidate.pageCount || 0) >= 2,
@@ -124,32 +119,18 @@ function validateRecoveryCandidate(candidate, proposal) {
 }
 
 const config = readJson(CONFIG_PATH);
-if (config.schemaVersion !== 'source-research-bulk-approval-v1') {
-  throw new Error(`Unsupported bulk approval schema: ${config.schemaVersion}`);
-}
+if (config.schemaVersion !== 'source-research-bulk-approval-v1') throw new Error(`Unsupported bulk approval schema: ${config.schemaVersion}`);
 if (config.explicitApproval !== true) throw new Error('explicitApproval=true is required');
-if (config.automaticSelectionAllowed !== false) {
-  throw new Error('automaticSelectionAllowed must be false');
-}
-if (!config.proposalPath || !config.approvedProposalSha256) {
-  throw new Error('proposalPath and approvedProposalSha256 are required');
-}
-if (!config.structuredBatchId || !config.structuredConfigPath) {
-  throw new Error('structuredBatchId and structuredConfigPath are required');
-}
+if (config.automaticSelectionAllowed !== false) throw new Error('automaticSelectionAllowed must be false');
+if (!config.proposalPath || !config.approvedProposalSha256) throw new Error('proposalPath and approvedProposalSha256 are required');
+if (!config.structuredBatchId || !config.structuredConfigPath) throw new Error('structuredBatchId and structuredConfigPath are required');
 
 const proposalPath = path.resolve(config.proposalPath);
 const proposal = readJson(proposalPath);
-if (proposal.schemaVersion !== 'source-research-bulk-proposal-v1') {
-  throw new Error(`Unsupported proposal schema: ${proposal.schemaVersion}`);
-}
+if (proposal.schemaVersion !== 'source-research-bulk-proposal-v1') throw new Error(`Unsupported proposal schema: ${proposal.schemaVersion}`);
 const computedProposalSha = sha256(proposal.identity);
-if (proposal.proposalSha256 !== computedProposalSha) {
-  throw new Error('Proposal identity hash is invalid');
-}
-if (proposal.proposalSha256 !== config.approvedProposalSha256) {
-  throw new Error('Approved proposal SHA-256 does not match');
-}
+if (proposal.proposalSha256 !== computedProposalSha) throw new Error('Proposal identity hash is invalid');
+if (proposal.proposalSha256 !== config.approvedProposalSha256) throw new Error('Approved proposal SHA-256 does not match');
 if (proposal.automaticApproval !== false || proposal.automaticProductionPromotion !== false) {
   throw new Error('Proposal must explicitly prohibit automatic approval and production promotion');
 }
@@ -167,6 +148,7 @@ if (Number.isInteger(config.maximumApprovedCount) && codes.length > config.maxim
 }
 
 const bundle = readBundle();
+const companyCount = bundle.companies.length;
 const structuredBefore = bundle.companies.filter(company => ['core', 'detailed_extracted'].includes(company.stage)).length;
 if (Number.isInteger(config.expectedStructuredBefore) && structuredBefore !== config.expectedStructuredBefore) {
   throw new Error(`Structured count mismatch: ${structuredBefore} !== ${config.expectedStructuredBefore}`);
@@ -194,7 +176,7 @@ const structuredConfig = {
   createdAtBase: config.createdAtBase,
   reviewedAtBase: config.reviewedAtBase,
   targetStructuredCount,
-  expectedCompanyCount: 1200,
+  expectedCompanyCount: companyCount,
   expectedSourceConfirmed: targetStructuredCount,
   fromStage: 'jpx_indexed',
   targetStage: 'detailed_extracted',
@@ -210,25 +192,24 @@ const structuredConfig = {
   records,
 };
 writeJson(path.resolve(config.structuredConfigPath), structuredConfig);
-writeJson(
-  path.join(ROOT, 'operations', 'source-research', `${config.approvalId}-report.json`),
-  {
-    schemaVersion: 'source-research-bulk-approval-report-v1',
-    approvalId: config.approvalId,
-    proposalSha256: proposal.proposalSha256,
-    explicitApproval: true,
-    automaticSelectionAllowed: false,
-    recoveryMode: recoveryMode ? proposal.recoveryMode : null,
-    structuredBefore,
-    approvedCount: records.length,
-    targetStructuredCount,
-    approvedCodes: codes,
-    structuredConfigPath: config.structuredConfigPath,
-  },
-);
+writeJson(path.join(ROOT, 'operations', 'source-research', `${config.approvalId}-report.json`), {
+  schemaVersion: 'source-research-bulk-approval-report-v1',
+  approvalId: config.approvalId,
+  proposalSha256: proposal.proposalSha256,
+  explicitApproval: true,
+  automaticSelectionAllowed: false,
+  recoveryMode: recoveryMode ? proposal.recoveryMode : null,
+  companyCount,
+  structuredBefore,
+  approvedCount: records.length,
+  targetStructuredCount,
+  approvedCodes: codes,
+  structuredConfigPath: config.structuredConfigPath,
+});
 console.log(JSON.stringify({
   approvalId: config.approvalId,
   recoveryMode: recoveryMode ? proposal.recoveryMode : null,
+  companyCount,
   approvedCount: records.length,
   structuredBefore,
   targetStructuredCount,

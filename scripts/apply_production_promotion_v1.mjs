@@ -13,6 +13,7 @@ const MARKER_PATHS = [
   path.join(QUALITY_DIR, 'run-production-promotion.json'),
 ];
 const READINESS_PATH = path.join(QUALITY_DIR, 'production-readiness-v1.json');
+const TARGET_PATH = path.join(QUALITY_DIR, 'production-quality-target-v1.json');
 const MILESTONE_PATH = path.join(OPS_DIR, 'quality', 'coverage-milestone-v1.json');
 const CHUNK_SIZE = 1536;
 
@@ -117,6 +118,11 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(approvalDate)) throw new Error(`Invalid approval
 const compactApprovalDate = approvalDate.replaceAll('-', '');
 
 const readiness = readJson(READINESS_PATH);
+const target = readJson(TARGET_PATH);
+if (target.schemaVersion !== 'production-quality-target-v1') throw new Error(`Unsupported production target: ${target.schemaVersion}`);
+if (config.targetCoreCount > target.targetProductionCompanies) {
+  throw new Error(`Promotion target exceeds configured production target: ${config.targetCoreCount} > ${target.targetProductionCompanies}`);
+}
 const allowed = new Set(readiness.queues?.approvalRequiredCodes || []);
 const { manifest, bundle } = readBundle();
 if (readiness.bundleSha256 !== manifest.sha256) {
@@ -222,7 +228,7 @@ const finalCore = finalBundle.companies.filter(company => company.stage === 'cor
 if (finalCore !== config.targetCoreCount) throw new Error(`Core target mismatch: ${finalCore} !== ${config.targetCoreCount}`);
 const milestone = readJson(MILESTONE_PATH);
 milestone.expectedCore = finalCore;
-milestone.targetProductionQuality = 1000;
+milestone.targetProductionQuality = target.targetProductionCompanies;
 milestone.currentProductionQuality = finalCore;
 writeJson(MILESTONE_PATH, milestone);
 writeJson(path.join(QUALITY_DIR, `${config.batchId}-report.json`), {
@@ -233,8 +239,8 @@ writeJson(path.join(QUALITY_DIR, `${config.batchId}-report.json`), {
   previousCoreCount: finalCore - codes.length,
   currentCoreCount: finalCore,
   targetCoreCount: config.targetCoreCount,
-  longTermTarget: 1000,
-  remainingGap: 1000 - finalCore,
+  longTermTarget: target.targetProductionCompanies,
+  remainingGap: Math.max(0, target.targetProductionCompanies - finalCore),
   automaticSelectionUsed: false,
   approvalsPerCompany: 2,
   reviewerRoles: [config.primaryReviewer, config.independentReviewer],

@@ -20,6 +20,16 @@ async function expectAccessible(page) {
     .analyze();
   expect(result.violations, JSON.stringify(result.violations, null, 2)).toEqual([]);
 }
+async function expectQueueSummary(page) {
+  const candidateCount = await page.locator('#queue-body tr[data-company-code]').count();
+  await expect(page.locator('#queue-summary')).toHaveText(`${candidateCount}社を表示`);
+  if (candidateCount === 0) {
+    await expect(page.locator('#queue-body .empty-row')).toHaveCount(1);
+  } else {
+    await expect(page.locator('#queue-body .empty-row')).toHaveCount(0);
+  }
+  return candidateCount;
+}
 
 test.describe('Accessibility and performance budgets', () => {
   test('portal meets WCAG A/AA and interaction budgets', async ({ page }, testInfo) => {
@@ -64,24 +74,24 @@ test.describe('Accessibility and performance budgets', () => {
     const errors = captureErrors(page);
     const started = Date.now();
     await page.goto('/quality.html');
-    await expect(page.locator('#queue-body tr').first()).toBeVisible();
-    const queueCount = await page.locator('#queue-body tr').count();
-    expect(queueCount).toBeGreaterThan(0);
-    await expect(page.locator('#queue-summary')).toHaveText(`${queueCount}社を表示`);
+    await expect(page.locator('#queue-summary')).toBeVisible();
+    const queueCount = await expectQueueSummary(page);
     expect(Date.now() - started).toBeLessThan(8_000);
     await expectAccessible(page);
 
     const filterStarted = Date.now();
     await page.locator('#queue-priority').selectOption('A');
-    const priorityACount = await page.locator('#queue-body tr').count();
-    await expect(page.locator('#queue-summary')).toHaveText(`${priorityACount}社を表示`);
+    const priorityACount = await expectQueueSummary(page);
     expect(Date.now() - filterStarted).toBeLessThan(1_500);
 
     await page.locator('#queue-priority').selectOption('B');
-    const priorityBCount = await page.locator('#queue-body tr').count();
-    await expect(page.locator('#queue-summary')).toHaveText(`${priorityBCount}社を表示`);
+    const priorityBCount = await expectQueueSummary(page);
     expect(priorityACount + priorityBCount).toBe(queueCount);
-    expect(priorityACount).toBeGreaterThan(0);
+    if (queueCount > 0) expect(priorityACount).toBeGreaterThan(0);
+
+    const productionAuditRow = page.locator('#audit-body tr').filter({ has: page.getByRole('rowheader', { name: '本番', exact: true }) });
+    await expect(productionAuditRow).toContainText('1500 / 1500');
+    await expect(page.getByText('本番の一次証跡要確認').locator('..').getByText('0社')).toBeVisible();
 
     if (testInfo.project.name === 'mobile') {
       const width = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));

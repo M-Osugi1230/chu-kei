@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "production-bulk-promotion-approval-v1",
+  "approvalId": "production-bulk-promotion-approval-008",
+  "explicitApproval": true,
+  "automaticSelectionAllowed": false,
+  "sourceResearchApprovalReportPaths": [
+    "operations/source-research/source-research-bulk-approval-008-report.json",
+    "operations/source-research/source-research-bulk-approval-009-report.json",
+    "operations/source-research/source-research-bulk-approval-010-report.json",
+    "operations/source-research/source-research-bulk-approval-011-report.json"
+  ],
+  "approvedProposalSha256s": [
+    "784dc94cb31b5e1b689f217a51f61acec0ed5605b57b5d1206e104d78d834088",
+    "ef10d2fbe2f51d44963e282f5410c0e6a29e6b1926ab6b9842f9f8554a986333",
+    "279e78bc050219f5e9d8eca6ecd84b067e523992719f230b243f04d7bc9cb0e0",
+    "6b2c9d7300aca3e1ae998033aca91a58b6c8b754721f9503c7b0ca0dadbe43b4"
+  ],
+  "expectedBundleSha256": "32dea2e11c5b4d1961992a259869b014294e1e87c01f3322aede23173c40558d",
+  "expectedApprovedCount": 496,
+  "expectedCoreBefore": 1000,
+  "targetCoreCount": 1496,
+  "productionBatchId": "production-promotion-batch-356",
+  "primaryAuthor": "production-quality-agent",
+  "primaryReviewer": "production-quality-review-1500",
+  "independentAuthor": "independent-release-agent",
+  "independentReviewer": "independent-release-review-1500",
+  "approvalDate": "2026-07-21"
+}

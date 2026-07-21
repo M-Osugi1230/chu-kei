@@ -10,6 +10,7 @@ const DATA_DIR = path.join(ROOT, 'site', 'data');
 const QUALITY_DIR = path.join(ROOT, 'operations', 'production-quality');
 const LEGACY_MARKER_PATH = path.join(QUALITY_DIR, 'run-core-evidence-repair.json');
 const CHUNK_SIZE = 1536;
+const COMPLETED_PROGRESS_STATUSES = new Set(['not_comparable', 'not_disclosed']);
 
 const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 const writeJson = (file, value) => {
@@ -69,6 +70,22 @@ function findEmbeddedRepair() {
   return null;
 }
 
+function validateProgressAssessment(code, assessment, evidenceRefs) {
+  if (!assessment) return;
+  if (!COMPLETED_PROGRESS_STATUSES.has(assessment.status)) {
+    throw new Error(`Unsupported repaired progress status: ${code}:${assessment.status}`);
+  }
+  if (!assessment.reason || String(assessment.reason).trim().length < 20) {
+    throw new Error(`Detailed progress assessment reason is required: ${code}`);
+  }
+  if (!assessment.sourceRef || !isPrimaryEvidenceReference(assessment.sourceRef)) {
+    throw new Error(`Primary sourceRef is required for progress assessment: ${code}`);
+  }
+  if (!evidenceRefs.includes(assessment.sourceRef)) {
+    throw new Error(`Progress sourceRef must be included in evidenceRefs: ${code}`);
+  }
+}
+
 let markerPath = null;
 let configPath = null;
 let embeddedRepair = null;
@@ -119,13 +136,19 @@ for (const [index, record] of config.records.entries()) {
   if (record.expectedStage && record.expectedStage !== company.stage) {
     throw new Error(`Evidence repair expected stage mismatch: ${code}:${company.stage} !== ${record.expectedStage}`);
   }
-  if (!record.sourceUrl?.startsWith('https://')) throw new Error(`Official HTTPS source is required: ${code}`);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(record.planPublishedDate || '')) throw new Error(`Valid planPublishedDate is required: ${code}`);
+  const preserveExistingSource = record.preserveExistingSource === true;
+  const evidenceSourceUrl = record.evidenceSourceUrl || record.sourceUrl;
+  if (!evidenceSourceUrl?.startsWith('https://')) throw new Error(`Official HTTPS evidence source is required: ${code}`);
+  if (!preserveExistingSource) {
+    if (!record.sourceUrl?.startsWith('https://')) throw new Error(`Official HTTPS source is required: ${code}`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(record.planPublishedDate || '')) throw new Error(`Valid planPublishedDate is required: ${code}`);
+  }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(record.verifiedDate || '')) throw new Error(`Valid verifiedDate is required: ${code}`);
   if (!Array.isArray(record.evidenceRefs) || record.evidenceRefs.length < 2) throw new Error(`At least two primary evidence refs are required: ${code}`);
   if (!record.evidenceRefs.every(isPrimaryEvidenceReference)) {
     throw new Error(`Every evidence ref must contain a PDF page number or a named official Web heading with concrete content: ${code}`);
   }
+  validateProgressAssessment(code, record.progressAssessment, record.evidenceRefs);
   if (!record.reason || String(record.reason).length < 20) throw new Error(`Detailed repair reason is required: ${code}`);
 
   const before = {
@@ -134,15 +157,24 @@ for (const [index, record] of config.records.entries()) {
     planPublishedDate: company.planPublishedDate ?? null,
     lastVerifiedDate: company.lastVerifiedDate ?? null,
     evidenceRefs: company.evidenceRefs ?? [],
+    progressAssessment: company.progressAssessment ?? null,
     stage: company.stage,
   };
-  company.sourceUrl = record.sourceUrl;
-  company.document = record.document;
-  company.planPublishedDate = record.planPublishedDate;
+  if (!preserveExistingSource) {
+    company.sourceUrl = record.sourceUrl;
+    company.document = record.document;
+    company.planPublishedDate = record.planPublishedDate;
+  }
   company.lastVerifiedDate = record.verifiedDate;
   company.evidenceRefs = [...new Set([...(company.evidenceRefs || []), ...record.evidenceRefs])];
-  const warnings = (company.warnings || []).filter(warning => !/ページ証跡.*不足|一次証跡.*不足|証跡補修対象/.test(String(warning)));
-  warnings.push('公式一次資料のページ番号またはWeb見出し証跡を再確認済み。');
+  if (record.progressAssessment) {
+    company.progressAssessment = record.progressAssessment;
+    company.flags = { ...(company.flags || {}), progress: false };
+  }
+  const warnings = (company.warnings || []).filter(warning => !/ページ証跡.*不足|一次証跡.*不足|証跡補修対象|進捗評価.*未完了|進捗評価.*不足/.test(String(warning)));
+  warnings.push(record.progressAssessment
+    ? '公式一次資料に基づく証跡と進捗評価区分を再確認済み。'
+    : '公式一次資料のページ番号またはWeb見出し証跡を再確認済み。');
   company.warnings = [...new Set(warnings)];
 
   const compactDate = record.verifiedDate.replaceAll('-', '');
@@ -165,9 +197,9 @@ for (const [index, record] of config.records.entries()) {
     },
     author: 'source-research-agent',
     reviewer: 'quality-evidence-agent',
-    sourceUrl: record.sourceUrl,
+    sourceUrl: evidenceSourceUrl,
     sourcePages: record.evidenceRefs,
-    note: '企業区分を変更せず、公式一次資料に基づくページ番号またはWeb見出し証跡・資料公表日・出典導線を補修し、本番昇格は別の二段階承認で行う。',
+    note: '企業区分を変更せず、公式一次資料に基づく証跡・進捗評価区分を補修し、本番昇格は別の二段階承認で行う。',
     decisionReason: record.reason,
     createdAt: `${record.verifiedDate}T06:${minute}:00.000Z`,
     reviewedAt: `${record.verifiedDate}T07:${minute}:00.000Z`,
@@ -175,7 +207,7 @@ for (const [index, record] of config.records.entries()) {
   corrections.push({
     id: `correction-${code}-${compactDate}-evidence`,
     companyCode: code,
-    fieldPath: 'sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,warnings',
+    fieldPath: 'sourceUrl,document,planPublishedDate,lastVerifiedDate,evidenceRefs,progressAssessment,warnings',
     before,
     after: {
       sourceUrl: company.sourceUrl,
@@ -183,10 +215,11 @@ for (const [index, record] of config.records.entries()) {
       planPublishedDate: company.planPublishedDate,
       lastVerifiedDate: company.lastVerifiedDate,
       evidenceRefs: company.evidenceRefs,
+      progressAssessment: company.progressAssessment ?? null,
       stage: company.stage,
     },
     reason: record.reason,
-    sourceUrl: record.sourceUrl,
+    sourceUrl: evidenceSourceUrl,
     sourcePage: record.evidenceRefs.join(' / '),
     status: 'corrected',
     reviewDecisionId: reviewId,
@@ -232,6 +265,7 @@ writeJson(path.join(QUALITY_DIR, `${config.batchId}-report.json`), {
   expectedFiveStarAfterApproval: config.expectedFiveStarAfterApproval,
   automaticSelectionUsed: false,
   pageEvidenceRefsAdded: config.records.reduce((sum, record) => sum + record.evidenceRefs.length, 0),
+  progressAssessmentsRepaired: config.records.filter(record => record.progressAssessment).length,
 });
 if (markerPath) {
   fs.rmSync(markerPath);
@@ -239,4 +273,4 @@ if (markerPath) {
   delete config.runRequested;
   writeJson(configPath, config);
 }
-console.log(`Repaired primary evidence for ${codes.length} companies.`);
+console.log(`Repaired primary evidence and progress assessments for ${codes.length} companies.`);

@@ -20,6 +20,17 @@ async function expectNoErrors(errors) {
   expect(errors.pageErrors, `page errors: ${errors.pageErrors.join(' | ')}`).toEqual([]);
 }
 
+async function expectQueueSummary(page) {
+  const candidateCount = await page.locator('#queue-body tr[data-company-code]').count();
+  await expect(page.locator('#queue-summary')).toHaveText(`${candidateCount}社を表示`);
+  if (candidateCount === 0) {
+    await expect(page.locator('#queue-body .empty-row')).toHaveCount(1);
+  } else {
+    await expect(page.locator('#queue-body .empty-row')).toHaveCount(0);
+  }
+  return candidateCount;
+}
+
 test.describe('Chu-kei portal', () => {
   test('loads the milestone company set and supports search, strategy, detail and comparison', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
@@ -139,33 +150,35 @@ test.describe('Chu-kei portal', () => {
     await expectNoErrors(errors);
   });
 
-  test('quality dashboard exposes a complete evidence-driven A/B review queue', async ({ page }, testInfo) => {
+  test('quality dashboard exposes an evidence-driven review queue or a verified completed state', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     await page.goto('/quality.html');
     await expect(page).toHaveTitle(/品質ダッシュボード/);
     await expect(page.locator('.quality-stat')).toHaveCount(8);
-    await expect(page.locator('#queue-body tr').first()).toBeVisible();
-    const queueCount = await page.locator('#queue-body tr').count();
-    expect(queueCount).toBeGreaterThan(0);
-    await expect(page.locator('#queue-summary')).toHaveText(`${queueCount}社を表示`);
+    await expect(page.locator('#queue-summary')).toBeVisible();
+    const queueCount = await expectQueueSummary(page);
 
     await page.locator('#queue-priority').selectOption('A');
-    const priorityACount = await page.locator('#queue-body tr').count();
-    await expect(page.locator('#queue-summary')).toHaveText(`${priorityACount}社を表示`);
+    const priorityACount = await expectQueueSummary(page);
 
     await page.locator('#queue-priority').selectOption('B');
-    const priorityBCount = await page.locator('#queue-body tr').count();
-    await expect(page.locator('#queue-summary')).toHaveText(`${priorityBCount}社を表示`);
+    const priorityBCount = await expectQueueSummary(page);
     expect(priorityACount + priorityBCount).toBe(queueCount);
-    expect(priorityACount).toBeGreaterThan(0);
-    expect(priorityBCount).toBeGreaterThanOrEqual(0);
+    if (queueCount > 0) expect(priorityACount).toBeGreaterThan(0);
 
     await page.locator('#queue-priority').selectOption('');
-    const firstCodeText = await page.locator('#queue-body tr').first().locator('th small').textContent();
-    const firstCode = firstCodeText.split('・')[0];
-    await page.locator('#queue-search').fill(firstCode);
-    await expect(page.locator('#queue-body tr')).toHaveCount(1);
-    await expect(page.locator('#queue-body')).toContainText(firstCode);
+    if (queueCount > 0) {
+      const firstCodeText = await page.locator('#queue-body tr[data-company-code]').first().locator('th small').textContent();
+      const firstCode = firstCodeText.split('・')[0];
+      await page.locator('#queue-search').fill(firstCode);
+      await expect(page.locator('#queue-body tr[data-company-code]')).toHaveCount(1);
+      await expect(page.locator('#queue-body')).toContainText(firstCode);
+    } else {
+      await expect(page.locator('#queue-body .empty-row')).toContainText('条件に一致する企業がありません。');
+      await expect(page.locator('#quality-summary')).toContainText('本番品質1500社');
+      const productionAuditRow = page.locator('#audit-body tr').filter({ has: page.getByRole('rowheader', { name: '本番', exact: true }) });
+      await expect(productionAuditRow).toContainText('1500 / 1500');
+    }
 
     if (testInfo.project.name === 'mobile') {
       const width = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));

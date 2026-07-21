@@ -12,8 +12,10 @@ on:
       - 'scripts/normalize_source_research_candidates_v1.mjs'
       - 'scripts/summarize_source_research_candidates_v1.mjs'
       - 'scripts/generate_bulk_source_research_proposal_v1.mjs'
+      - 'scripts/generate_source_research_recovery_proposal_v1.mjs'
       - 'scripts/prepare_bulk_source_research_approval_v1.mjs'
       - 'scripts/prepare_structured_candidate_approval_v1.mjs'
+      - 'scripts/prepare_final_production_company_v1.mjs'
       - 'scripts/audit_production_readiness_v1.mjs'
       - 'scripts/apply_core_approval_batch_v1.mjs'
       - 'scripts/apply_core_evidence_repair_v1.mjs'
@@ -63,6 +65,16 @@ jobs:
           ref: ${{ steps.target.outputs.branch }}
           fetch-depth: 0
 
+      - name: Detect explicit apply request
+        id: request
+        shell: bash
+        run: |
+          if grep -R -E --include='*.json' '"runRequested"[[:space:]]*:[[:space:]]*true' operations >/dev/null 2>&1; then
+            echo "requested=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "requested=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -101,6 +113,7 @@ jobs:
       - name: Commit generated source of truth
         env:
           TARGET_BRANCH: ${{ steps.target.outputs.branch }}
+          APPLY_REQUESTED: ${{ steps.request.outputs.requested }}
         run: |
           set -euo pipefail
           git config user.name github-actions[bot]
@@ -108,6 +121,12 @@ jobs:
           git add -A
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
+            exit 0
+          fi
+          CURRENT_PRODUCTION="$(node -p "require('./operations/production-quality/production-readiness-v1.json').currentProduction")"
+          if [ "${CURRENT_PRODUCTION}" = "1000" ] && [ "${APPLY_REQUESTED}" = "false" ]; then
+            echo "Production target is complete and no explicit request exists; validation-only run."
+            git reset --hard HEAD
             exit 0
           fi
           git commit -m "quality: 本番品質1000社の昇格監査を更新"

@@ -43,9 +43,8 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Use current UTC date for scheduled freshness watch
-        if: github.event_name == 'schedule'
-        run: echo "QUALITY_AS_OF_DATE=$(date -u +%F)" >> "$GITHUB_ENV"
+      - name: Use current Japan date for freshness validation
+        run: echo "QUALITY_AS_OF_DATE=$(TZ=Asia/Tokyo date +%F)" >> "$GITHUB_ENV"
 
       - name: Run existing strict gates
         run: |

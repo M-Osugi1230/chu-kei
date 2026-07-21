@@ -31,6 +31,13 @@ const allowedDocumentPattern = new RegExp(
   config.allowedDocumentPattern
     || '中期|中長期|長期経営|事業計画|経営計画|経営戦略|成長戦略|経営方針|決算説明|決算補足|決算短信|統合報告',
 );
+const maximumProposedCount = config.maximumProposedCount == null
+  ? null
+  : Number(config.maximumProposedCount);
+if (maximumProposedCount != null
+  && (!Number.isInteger(maximumProposedCount) || maximumProposedCount <= 0)) {
+  throw new Error(`Invalid maximumProposedCount: ${config.maximumProposedCount}`);
+}
 
 const evaluations = (report.results || []).map(candidate => {
   const record = candidate.record || {};
@@ -61,8 +68,13 @@ const evaluations = (report.results || []).map(candidate => {
   };
 });
 
-const approvedRows = evaluations.filter(row => row.approvedByRules);
-const codes = approvedRows.map(row => row.code).sort((a, b) => a.localeCompare(b, 'ja'));
+const qualifiedRows = evaluations
+  .filter(row => row.approvedByRules)
+  .sort((a, b) => a.code.localeCompare(b.code, 'ja'));
+const approvedRows = maximumProposedCount == null
+  ? qualifiedRows
+  : qualifiedRows.slice(0, maximumProposedCount);
+const codes = approvedRows.map(row => row.code);
 const proposalIdentity = {
   schemaVersion: 'source-research-bulk-proposal-identity-v1',
   batchId: report.batchId,
@@ -70,6 +82,7 @@ const proposalIdentity = {
   candidatePath: path.relative(ROOT, candidatePath),
   minimumConfidence,
   minimumPublicationDate: minimumDate,
+  maximumProposedCount,
   codes,
 };
 const proposalSha256 = sha256(proposalIdentity);
@@ -83,10 +96,13 @@ writeJson(outputPath, {
   candidatePath: path.relative(ROOT, candidatePath),
   sourceBundleSha256: report.sourceBundleSha256,
   selectedCount: evaluations.length,
+  qualifiedCount: qualifiedRows.length,
   proposedCount: codes.length,
-  rejectedCount: evaluations.length - codes.length,
+  truncatedCount: qualifiedRows.length - approvedRows.length,
+  rejectedCount: evaluations.length - qualifiedRows.length,
   minimumConfidence,
   minimumPublicationDate: minimumDate,
+  maximumProposedCount,
   proposedCodes: codes,
   proposedRows: approvedRows,
   rejectionReasons: Object.fromEntries(
@@ -101,6 +117,8 @@ console.log(JSON.stringify({
   outputPath: path.relative(ROOT, outputPath),
   proposalSha256,
   selectedCount: evaluations.length,
+  qualifiedCount: qualifiedRows.length,
   proposedCount: codes.length,
-  rejectedCount: evaluations.length - codes.length,
+  truncatedCount: qualifiedRows.length - approvedRows.length,
+  rejectedCount: evaluations.length - qualifiedRows.length,
 }, null, 2));

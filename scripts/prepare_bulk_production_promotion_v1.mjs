@@ -1,3 +1,4 @@
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -12,6 +13,7 @@ const writeJson = (file, value) => {
   fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
 };
 const sorted = values => [...values].map(String).sort((a, b) => a.localeCompare(b, 'ja'));
+const sha256 = value => crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 const config = readJson(CONFIG_PATH);
 if (config.schemaVersion !== 'production-bulk-promotion-approval-v1') {
@@ -21,34 +23,67 @@ if (config.explicitApproval !== true) throw new Error('explicitApproval=true is 
 if (config.automaticSelectionAllowed !== false) {
   throw new Error('automaticSelectionAllowed must be false');
 }
-if (!config.sourceResearchApprovalReportPath || !config.approvedProposalSha256) {
-  throw new Error('sourceResearchApprovalReportPath and approvedProposalSha256 are required');
-}
 if (!config.productionBatchId || !config.targetCoreCount) {
   throw new Error('productionBatchId and targetCoreCount are required');
 }
 
-const approvalReportPath = path.resolve(config.sourceResearchApprovalReportPath);
-const approvalReport = readJson(approvalReportPath);
-if (approvalReport.schemaVersion !== 'source-research-bulk-approval-report-v1') {
-  throw new Error(`Unsupported approval report: ${approvalReport.schemaVersion}`);
+const reportPathValues = Array.isArray(config.sourceResearchApprovalReportPaths)
+  ? config.sourceResearchApprovalReportPaths
+  : [config.sourceResearchApprovalReportPath].filter(Boolean);
+const expectedProposalHashes = Array.isArray(config.approvedProposalSha256s)
+  ? config.approvedProposalSha256s
+  : [config.approvedProposalSha256].filter(Boolean);
+if (!reportPathValues.length || reportPathValues.length !== expectedProposalHashes.length) {
+  throw new Error('Approval report paths and proposal SHA-256 values must be non-empty and have equal length');
 }
-if (approvalReport.explicitApproval !== true || approvalReport.automaticSelectionAllowed !== false) {
-  throw new Error('Source research approval report does not preserve explicit approval policy');
+
+const approvalReports = reportPathValues.map((relativePath, index) => {
+  const reportPath = path.resolve(relativePath);
+  const report = readJson(reportPath);
+  if (report.schemaVersion !== 'source-research-bulk-approval-report-v1') {
+    throw new Error(`Unsupported approval report: ${report.schemaVersion}`);
+  }
+  if (report.explicitApproval !== true || report.automaticSelectionAllowed !== false) {
+    throw new Error(`Source research approval report does not preserve explicit approval policy: ${relativePath}`);
+  }
+  if (report.proposalSha256 !== expectedProposalHashes[index]) {
+    throw new Error(`Approved proposal SHA-256 mismatch: ${relativePath}`);
+  }
+  const codes = sorted(report.approvedCodes || []);
+  if (!codes.length || codes.length !== report.approvedCount) {
+    throw new Error(`Approved code count mismatch: ${relativePath}`);
+  }
+  return {
+    path: path.relative(ROOT, reportPath),
+    proposalSha256: report.proposalSha256,
+    approvalId: report.approvalId,
+    approvedCount: report.approvedCount,
+    codes,
+  };
+});
+
+const codeOrigins = new Map();
+for (const report of approvalReports) {
+  for (const code of report.codes) {
+    const origins = codeOrigins.get(code) || [];
+    origins.push(report.path);
+    codeOrigins.set(code, origins);
+  }
 }
-if (approvalReport.proposalSha256 !== config.approvedProposalSha256) {
-  throw new Error('Approved proposal SHA-256 mismatch');
+const duplicates = [...codeOrigins.entries()].filter(([, origins]) => origins.length > 1);
+if (duplicates.length) {
+  throw new Error(`Approval reports contain duplicate codes: ${duplicates.map(([code]) => code).join(',')}`);
 }
-const codes = sorted(approvalReport.approvedCodes || []);
-if (!codes.length || codes.length !== approvalReport.approvedCount) {
-  throw new Error('Approved code count mismatch');
-}
+const codes = sorted(codeOrigins.keys());
 if (Number.isInteger(config.expectedApprovedCount) && codes.length !== config.expectedApprovedCount) {
   throw new Error(`Expected ${config.expectedApprovedCount} approved codes, got ${codes.length}`);
 }
 
 const readinessPath = path.join(ROOT, 'operations', 'production-quality', 'production-readiness-v1.json');
 const readiness = readJson(readinessPath);
+if (config.expectedBundleSha256 && readiness.bundleSha256 !== config.expectedBundleSha256) {
+  throw new Error(`Readiness bundle SHA-256 mismatch: ${readiness.bundleSha256} !== ${config.expectedBundleSha256}`);
+}
 if (readiness.currentProduction !== config.expectedCoreBefore) {
   throw new Error(`Core count mismatch: ${readiness.currentProduction} !== ${config.expectedCoreBefore}`);
 }
@@ -64,6 +99,21 @@ if (JSON.stringify(approvalRequired) !== JSON.stringify(codes)) {
 if (readiness.machineReadyNotProduction !== codes.length) {
   throw new Error(`machineReadyNotProduction mismatch: ${readiness.machineReadyNotProduction} !== ${codes.length}`);
 }
+
+const approvalIdentity = {
+  schemaVersion: 'production-bulk-promotion-aggregate-identity-v1',
+  readinessBundleSha256: readiness.bundleSha256,
+  expectedCoreBefore: config.expectedCoreBefore,
+  targetCoreCount: config.targetCoreCount,
+  reports: approvalReports.map(report => ({
+    path: report.path,
+    proposalSha256: report.proposalSha256,
+    approvalId: report.approvalId,
+    approvedCount: report.approvedCount,
+  })),
+  codes,
+};
+const aggregateApprovalSha256 = sha256(approvalIdentity);
 
 const batchPath = path.join(
   ROOT,
@@ -84,8 +134,13 @@ writeJson(batchPath, {
   independentReviewer: config.independentReviewer || 'independent-release-review',
   approvalDate: config.approvalDate,
   sourceResearchBulkApproval: {
-    approvalReportPath: path.relative(ROOT, approvalReportPath),
-    proposalSha256: approvalReport.proposalSha256,
+    approvalReports: approvalReports.map(report => ({
+      path: report.path,
+      proposalSha256: report.proposalSha256,
+      approvalId: report.approvalId,
+      approvedCount: report.approvedCount,
+    })),
+    aggregateApprovalSha256,
     approvedCount: codes.length,
   },
 });
@@ -101,7 +156,8 @@ writeJson(
   {
     schemaVersion: 'production-bulk-promotion-approval-report-v1',
     approvalId: config.approvalId,
-    proposalSha256: approvalReport.proposalSha256,
+    aggregateApprovalSha256,
+    approvalIdentity,
     explicitApproval: true,
     automaticSelectionAllowed: false,
     expectedCoreBefore: config.expectedCoreBefore,
@@ -112,6 +168,8 @@ writeJson(
 );
 console.log(JSON.stringify({
   approvalId: config.approvalId,
+  aggregateApprovalSha256,
+  sourceApprovalReports: approvalReports.length,
   approvedCount: codes.length,
   expectedCoreBefore: config.expectedCoreBefore,
   targetCoreCount: config.targetCoreCount,

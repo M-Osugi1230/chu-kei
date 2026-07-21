@@ -60773,5 +60773,2255 @@
     "reviewDecisionId": "review-9059-20260721-structured-expansion",
     "detectedAt": "2026-07-21T12:25:00.000Z",
     "correctedAt": "2026-07-21T12:55:00.000Z"
+  },
+  {
+    "id": "correction-1724-20260721-structured-expansion",
+    "companyCode": "1724",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-02-12",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "シンクレイヤの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/17240/140120260212557499.pdf",
+    "sourcePage": "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-1724-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:00:00.000Z",
+    "correctedAt": "2026-07-21T11:30:00.000Z"
+  },
+  {
+    "id": "correction-1758-20260721-structured-expansion",
+    "companyCode": "1758",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-03-14",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.7: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "太洋基礎工業の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/17580/140120250314593701.pdf",
+    "sourcePage": "公式PDF p.7: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.3: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-1758-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:01:00.000Z",
+    "correctedAt": "2026-07-21T11:31:00.000Z"
+  },
+  {
+    "id": "correction-1764-20260721-structured-expansion",
+    "companyCode": "1764",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-06-28",
+      "revenue": "公式PDF p.6で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.6: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "工藤建設の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/17640/140120240627539959.pdf",
+    "sourcePage": "公式PDF p.6: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.4: 計画・成長戦略に関する記載を確認する。 / 公式PDF p.2: 計画・成長戦略に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-1764-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:02:00.000Z",
+    "correctedAt": "2026-07-21T11:32:00.000Z"
+  },
+  {
+    "id": "correction-1770-20260721-structured-expansion",
+    "companyCode": "1770",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-12",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "藤田エンジニアリングの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/17700/140120260427511858.pdf",
+    "sourcePage": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.9: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-1770-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:03:00.000Z",
+    "correctedAt": "2026-07-21T11:33:00.000Z"
+  },
+  {
+    "id": "correction-2293-20260721-structured-expansion",
+    "companyCode": "2293",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-12",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "滝沢ハムの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/22930/140120260512524544.pdf",
+    "sourcePage": "公式PDF p.4: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.9: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2293-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:04:00.000Z",
+    "correctedAt": "2026-07-21T11:34:00.000Z"
+  },
+  {
+    "id": "correction-2573-20260721-structured-expansion",
+    "companyCode": "2573",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "北海道コカ・コーラボトリングの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/25730/140120260507518278.pdf",
+    "sourcePage": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.4: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.7: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2573-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:05:00.000Z",
+    "correctedAt": "2026-07-21T11:35:00.000Z"
+  },
+  {
+    "id": "correction-2597-20260721-structured-expansion",
+    "companyCode": "2597",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-08-14",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.10: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "ユニカフェの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/25970/140120250813541200.pdf",
+    "sourcePage": "公式PDF p.10: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.11: 計画・成長戦略に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2597-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:06:00.000Z",
+    "correctedAt": "2026-07-21T11:36:00.000Z"
+  },
+  {
+    "id": "correction-2612-20260721-structured-expansion",
+    "companyCode": "2612",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2023-11-13",
+      "revenue": "公式PDF p.5で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "かどや製油の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/26120/140120231113588441.pdf",
+    "sourcePage": "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.5: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.3: 計画・成長戦略に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2612-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:07:00.000Z",
+    "correctedAt": "2026-07-21T11:37:00.000Z"
+  },
+  {
+    "id": "correction-2747-20260721-structured-expansion",
+    "companyCode": "2747",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-07-10",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "北雄ラッキーの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/27470/140120260710590918.pdf",
+    "sourcePage": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2747-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:08:00.000Z",
+    "correctedAt": "2026-07-21T11:38:00.000Z"
+  },
+  {
+    "id": "correction-2788-20260721-structured-expansion",
+    "companyCode": "2788",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-03-02",
+      "revenue": "公式PDF p.3で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.10: 財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "アップルインターナショナルの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/27880/140120260302573880.pdf",
+    "sourcePage": "公式PDF p.10: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.3: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.13: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2788-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:09:00.000Z",
+    "correctedAt": "2026-07-21T11:39:00.000Z"
+  },
+  {
+    "id": "correction-2795-20260721-structured-expansion",
+    "companyCode": "2795",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "公式PDF p.5で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "日本プリメックスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/27950/140120260513530088.pdf",
+    "sourcePage": "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-2795-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:10:00.000Z",
+    "correctedAt": "2026-07-21T11:40:00.000Z"
+  },
+  {
+    "id": "correction-3004-20260721-structured-expansion",
+    "companyCode": "3004",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-05-10",
+      "revenue": "固定の中期売上高・売上収益は当該公式資料の抽出範囲で確認できない。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "神栄の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/30040/140120240510588239.pdf",
+    "sourcePage": "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.6: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3004-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:11:00.000Z",
+    "correctedAt": "2026-07-21T11:41:00.000Z"
+  },
+  {
+    "id": "correction-3238-20260721-structured-expansion",
+    "companyCode": "3238",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-09",
+      "revenue": "公式PDF p.2で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "セントラル総合開発の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/32380/140120250424522282.pdf",
+    "sourcePage": "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3238-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:12:00.000Z",
+    "correctedAt": "2026-07-21T11:42:00.000Z"
+  },
+  {
+    "id": "correction-3246-20260721-structured-expansion",
+    "companyCode": "3246",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-03-12",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "コーセーアールイーの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/32460/140120260303574720.pdf",
+    "sourcePage": "公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.3: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3246-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:13:00.000Z",
+    "correctedAt": "2026-07-21T11:43:00.000Z"
+  },
+  {
+    "id": "correction-3277-20260721-structured-expansion",
+    "companyCode": "3277",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-08-08",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "サンセイランディックの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/32770/140120250807535712.pdf",
+    "sourcePage": "公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.3: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3277-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:14:00.000Z",
+    "correctedAt": "2026-07-21T11:44:00.000Z"
+  },
+  {
+    "id": "correction-3444-20260721-structured-expansion",
+    "companyCode": "3444",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-12",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "菊池製作所の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/34440/140120260612569261.pdf",
+    "sourcePage": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.9: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3444-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:15:00.000Z",
+    "correctedAt": "2026-07-21T11:45:00.000Z"
+  },
+  {
+    "id": "correction-3446-20260721-structured-expansion",
+    "companyCode": "3446",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-08-13",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "ジェイテックコーポレーションの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/34460/140120250813540115.pdf",
+    "sourcePage": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.3: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3446-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:16:00.000Z",
+    "correctedAt": "2026-07-21T11:46:00.000Z"
+  },
+  {
+    "id": "correction-3447-20260721-structured-expansion",
+    "companyCode": "3447",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-26",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.10: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "信和の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/34470/140120260626581284.pdf",
+    "sourcePage": "公式PDF p.10: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.25: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.23: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3447-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:17:00.000Z",
+    "correctedAt": "2026-07-21T11:47:00.000Z"
+  },
+  {
+    "id": "correction-3449-20260721-structured-expansion",
+    "companyCode": "3449",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-13",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.6: 財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "テクノフレックスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/34490/140120260513528150.pdf",
+    "sourcePage": "公式PDF p.6: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.5: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.4: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3449-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:18:00.000Z",
+    "correctedAt": "2026-07-21T11:48:00.000Z"
+  },
+  {
+    "id": "correction-3583-20260721-structured-expansion",
+    "companyCode": "3583",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-12",
+      "revenue": "公式PDF p.6で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.15: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "オーベクスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/35830/140120250510539641.pdf",
+    "sourcePage": "公式PDF p.15: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.14: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.13: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3583-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:19:00.000Z",
+    "correctedAt": "2026-07-21T11:49:00.000Z"
+  },
+  {
+    "id": "correction-3597-20260721-structured-expansion",
+    "companyCode": "3597",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-13",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "自重堂の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/35970/140120260423508719.pdf",
+    "sourcePage": "公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.4: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3597-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:20:00.000Z",
+    "correctedAt": "2026-07-21T11:50:00.000Z"
+  },
+  {
+    "id": "correction-3598-20260721-structured-expansion",
+    "companyCode": "3598",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-08",
+      "revenue": "公式PDF p.6で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "山喜の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/35980/140120260508520026.pdf",
+    "sourcePage": "公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.13: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.14: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3598-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:21:00.000Z",
+    "correctedAt": "2026-07-21T11:51:00.000Z"
+  },
+  {
+    "id": "correction-3600-20260721-structured-expansion",
+    "companyCode": "3600",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "公式PDF p.5で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "フジックスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/36000/140120260513529464.pdf",
+    "sourcePage": "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3600-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:22:00.000Z",
+    "correctedAt": "2026-07-21T11:52:00.000Z"
+  },
+  {
+    "id": "correction-3955-20260721-structured-expansion",
+    "companyCode": "3955",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-03-14",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.3: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "イムラの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/39550/140120240314553427.pdf",
+    "sourcePage": "公式PDF p.3: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.2: 計画・成長戦略に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3955-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:23:00.000Z",
+    "correctedAt": "2026-07-21T11:53:00.000Z"
+  },
+  {
+    "id": "correction-3958-20260721-structured-expansion",
+    "companyCode": "3958",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-02-12",
+      "revenue": "公式PDF p.8で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "笹徳印刷の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/39580/140120260210553079.pdf",
+    "sourcePage": "公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.13: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.10: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-3958-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:24:00.000Z",
+    "correctedAt": "2026-07-21T11:54:00.000Z"
+  },
+  {
+    "id": "correction-4224-20260721-structured-expansion",
+    "companyCode": "4224",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "ロンシール工業の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/42240/140120260513529466.pdf",
+    "sourcePage": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.9: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-4224-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:25:00.000Z",
+    "correctedAt": "2026-07-21T11:55:00.000Z"
+  },
+  {
+    "id": "correction-5290-20260721-structured-expansion",
+    "companyCode": "5290",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-05-10",
+      "revenue": "公式PDF p.30で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.30: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "ベルテクスコーポレーションの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/52900/140120240510590092.pdf",
+    "sourcePage": "公式PDF p.30: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.3: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.20: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5290-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:26:00.000Z",
+    "correctedAt": "2026-07-21T11:56:00.000Z"
+  },
+  {
+    "id": "correction-5304-20260721-structured-expansion",
+    "companyCode": "5304",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-10",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "ＳＥＣカーボンの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/53040/140120260410502020.pdf",
+    "sourcePage": "公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.9: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5304-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:27:00.000Z",
+    "correctedAt": "2026-07-21T11:57:00.000Z"
+  },
+  {
+    "id": "correction-5331-20260721-structured-expansion",
+    "companyCode": "5331",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-09",
+      "revenue": "公式PDF p.15で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.29: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "ノリタケの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/53310/140120250507533149.pdf",
+    "sourcePage": "公式PDF p.29: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.15: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.3: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5331-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:28:00.000Z",
+    "correctedAt": "2026-07-21T11:58:00.000Z"
+  },
+  {
+    "id": "correction-5337-20260721-structured-expansion",
+    "companyCode": "5337",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-15",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "ダントーホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/53370/140120260515536157.pdf",
+    "sourcePage": "公式PDF p.4: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.12: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5337-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:29:00.000Z",
+    "correctedAt": "2026-07-21T11:59:00.000Z"
+  },
+  {
+    "id": "correction-5341-20260721-structured-expansion",
+    "companyCode": "5341",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2022-06-10",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "ＡＳＡＨＩ ＥＩＴＯホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/53410/140120220610576679.pdf",
+    "sourcePage": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.2: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.3: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5341-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:30:00.000Z",
+    "correctedAt": "2026-07-21T12:00:00.000Z"
+  },
+  {
+    "id": "correction-5344-20260721-structured-expansion",
+    "companyCode": "5344",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-08",
+      "revenue": "公式PDF p.5で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "ＭＡＲＵＷＡの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/53440/140120260508518995.pdf",
+    "sourcePage": "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.4: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5344-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:31:00.000Z",
+    "correctedAt": "2026-07-21T12:01:00.000Z"
+  },
+  {
+    "id": "correction-5351-20260721-structured-expansion",
+    "companyCode": "5351",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-05-13",
+      "revenue": "公式PDF p.9で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.9: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "品川リフラの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/53510/140120240513591401.pdf",
+    "sourcePage": "公式PDF p.9: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.11: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.17: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5351-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:32:00.000Z",
+    "correctedAt": "2026-07-21T12:02:00.000Z"
+  },
+  {
+    "id": "correction-5355-20260721-structured-expansion",
+    "companyCode": "5355",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-08",
+      "revenue": "公式PDF p.13で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.13: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "日本坩堝の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/53550/140120250507532783.pdf",
+    "sourcePage": "公式PDF p.13: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.22: 計画・成長戦略・投資・株主還元に関する記載を確認する。 / 公式PDF p.10: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5355-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:33:00.000Z",
+    "correctedAt": "2026-07-21T12:03:00.000Z"
+  },
+  {
+    "id": "correction-5357-20260721-structured-expansion",
+    "companyCode": "5357",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-05-10",
+      "revenue": "公式PDF p.2で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.13: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "ヨータイの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/53570/140120240510588554.pdf",
+    "sourcePage": "公式PDF p.13: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.5: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5357-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:34:00.000Z",
+    "correctedAt": "2026-07-21T12:04:00.000Z"
+  },
+  {
+    "id": "correction-5658-20260721-structured-expansion",
+    "companyCode": "5658",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "公式PDF p.6で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "日亜鋼業の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/56580/140120260513530584.pdf",
+    "sourcePage": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.6: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.9: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5658-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:35:00.000Z",
+    "correctedAt": "2026-07-21T12:05:00.000Z"
+  },
+  {
+    "id": "correction-5660-20260721-structured-expansion",
+    "companyCode": "5660",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-05-09",
+      "revenue": "公式PDF p.11で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.11: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "神鋼鋼線工業の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/56600/140120240509586100.pdf",
+    "sourcePage": "公式PDF p.11: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.17: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.19: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5660-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:36:00.000Z",
+    "correctedAt": "2026-07-21T12:06:00.000Z"
+  },
+  {
+    "id": "correction-5695-20260721-structured-expansion",
+    "companyCode": "5695",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-03-31",
+      "revenue": "公式PDF p.5で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "パウダーテックの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/56950/140120250331504078.pdf",
+    "sourcePage": "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5695-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:37:00.000Z",
+    "correctedAt": "2026-07-21T12:07:00.000Z"
+  },
+  {
+    "id": "correction-5697-20260721-structured-expansion",
+    "companyCode": "5697",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-12",
+      "revenue": "公式PDF p.14で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.14: 財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "サンユウの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/56970/140120260424510700.pdf",
+    "sourcePage": "公式PDF p.14: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.17: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5697-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:38:00.000Z",
+    "correctedAt": "2026-07-21T12:08:00.000Z"
+  },
+  {
+    "id": "correction-5699-20260721-structured-expansion",
+    "companyCode": "5699",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-03-28",
+      "revenue": "公式PDF p.7で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "イボキンの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/56990/140120240327561312.pdf",
+    "sourcePage": "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.5: 計画・成長戦略・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5699-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:39:00.000Z",
+    "correctedAt": "2026-07-21T12:09:00.000Z"
+  },
+  {
+    "id": "correction-5819-20260721-structured-expansion",
+    "companyCode": "5819",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-28",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "カナレ電気の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/58190/140120260417506257.pdf",
+    "sourcePage": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.10: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5819-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:40:00.000Z",
+    "correctedAt": "2026-07-21T12:10:00.000Z"
+  },
+  {
+    "id": "correction-5900-20260721-structured-expansion",
+    "companyCode": "5900",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-07-10",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "ダイケンの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/59000/140120260703587515.pdf",
+    "sourcePage": "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.4: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-5900-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:41:00.000Z",
+    "correctedAt": "2026-07-21T12:11:00.000Z"
+  },
+  {
+    "id": "correction-7215-20260721-structured-expansion",
+    "companyCode": "7215",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2023-05-26",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.3: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "ファルテックの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/72150/140120230526583928.pdf",
+    "sourcePage": "公式PDF p.3: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.4: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7215-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:42:00.000Z",
+    "correctedAt": "2026-07-21T12:12:00.000Z"
+  },
+  {
+    "id": "correction-7217-20260721-structured-expansion",
+    "companyCode": "7217",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-15",
+      "revenue": "公式PDF p.7で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "テインの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/72170/140120260515536977.pdf",
+    "sourcePage": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.5: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7217-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:43:00.000Z",
+    "correctedAt": "2026-07-21T12:13:00.000Z"
+  },
+  {
+    "id": "correction-7218-20260721-structured-expansion",
+    "companyCode": "7218",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "公式PDF p.3で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.13: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "田中精密工業の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/72180/140120260514532168.pdf",
+    "sourcePage": "公式PDF p.13: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.12: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7218-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:44:00.000Z",
+    "correctedAt": "2026-07-21T12:14:00.000Z"
+  },
+  {
+    "id": "correction-7219-20260721-structured-expansion",
+    "companyCode": "7219",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-07-10",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "エッチ・ケー・エスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/72190/140120260709590132.pdf",
+    "sourcePage": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.4: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7219-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:45:00.000Z",
+    "correctedAt": "2026-07-21T12:15:00.000Z"
+  },
+  {
+    "id": "correction-7228-20260721-structured-expansion",
+    "companyCode": "7228",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-12",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "デイトナの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/72280/140120260511521409.pdf",
+    "sourcePage": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.11: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7228-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:46:00.000Z",
+    "correctedAt": "2026-07-21T12:16:00.000Z"
+  },
+  {
+    "id": "correction-7235-20260721-structured-expansion",
+    "companyCode": "7235",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "東京ラヂエーター製造の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/72350/140120260514532659.pdf",
+    "sourcePage": "公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.22: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.12: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7235-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:47:00.000Z",
+    "correctedAt": "2026-07-21T12:17:00.000Z"
+  },
+  {
+    "id": "correction-7305-20260721-structured-expansion",
+    "companyCode": "7305",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-13",
+      "revenue": "公式PDF p.3で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.17: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "新家工業の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/73050/140120260513529341.pdf",
+    "sourcePage": "公式PDF p.17: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.3: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.12: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7305-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:48:00.000Z",
+    "correctedAt": "2026-07-21T12:18:00.000Z"
+  },
+  {
+    "id": "correction-7819-20260721-structured-expansion",
+    "companyCode": "7819",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-29",
+      "revenue": "公式PDF p.2で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.12: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "粧美堂の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/78190/140120260529555117.pdf",
+    "sourcePage": "公式PDF p.12: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.4: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7819-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:49:00.000Z",
+    "correctedAt": "2026-07-21T12:19:00.000Z"
+  },
+  {
+    "id": "correction-7822-20260721-structured-expansion",
+    "companyCode": "7822",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-13",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "永大産業の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/78220/140120260513527968.pdf",
+    "sourcePage": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.6: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.7: 計画・成長戦略・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7822-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:50:00.000Z",
+    "correctedAt": "2026-07-21T12:20:00.000Z"
+  },
+  {
+    "id": "correction-7827-20260721-structured-expansion",
+    "companyCode": "7827",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2022-12-13",
+      "revenue": "公式PDF p.6で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "オービスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/78270/140120221213577640.pdf",
+    "sourcePage": "公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.12: 投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7827-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:51:00.000Z",
+    "correctedAt": "2026-07-21T12:21:00.000Z"
+  },
+  {
+    "id": "correction-7831-20260721-structured-expansion",
+    "companyCode": "7831",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-06-12",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "ウイルコホールディングスの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/78310/140120260612568989.pdf",
+    "sourcePage": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.4: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7831-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:52:00.000Z",
+    "correctedAt": "2026-07-21T12:22:00.000Z"
+  },
+  {
+    "id": "correction-7914-20260721-structured-expansion",
+    "companyCode": "7914",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-15",
+      "revenue": "公式PDF p.2で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "共同印刷の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/79140/140120250515554066.pdf",
+    "sourcePage": "公式PDF p.2: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.6: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.1: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7914-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:53:00.000Z",
+    "correctedAt": "2026-07-21T12:23:00.000Z"
+  },
+  {
+    "id": "correction-7921-20260721-structured-expansion",
+    "companyCode": "7921",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-07-08",
+      "revenue": "公式PDF p.7で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.26: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "ＴＡＫＡＲＡ ＆ ＣＯＭＰＡＮＹの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/79210/140120260708589702.pdf",
+    "sourcePage": "公式PDF p.26: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.27: 計画・成長戦略・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7921-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:54:00.000Z",
+    "correctedAt": "2026-07-21T12:24:00.000Z"
+  },
+  {
+    "id": "correction-7944-20260721-structured-expansion",
+    "companyCode": "7944",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-02-13",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "ローランドの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/79440/140120260213559322.pdf",
+    "sourcePage": "公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.2: 主要な事業方針・数値記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-7944-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:55:00.000Z",
+    "correctedAt": "2026-07-21T12:25:00.000Z"
+  },
+  {
+    "id": "correction-8011-20260721-structured-expansion",
+    "companyCode": "8011",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-14",
+      "revenue": "公式PDF p.20で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.20: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "三陽商会の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/80110/140120260413502628.pdf",
+    "sourcePage": "公式PDF p.20: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.25: 計画・成長戦略・投資・株主還元に関する記載を確認する。 / 公式PDF p.19: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8011-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:56:00.000Z",
+    "correctedAt": "2026-07-21T12:26:00.000Z"
+  },
+  {
+    "id": "correction-8737-20260721-structured-expansion",
+    "companyCode": "8737",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-15",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "あかつき本社の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/87370/140120260515536277.pdf",
+    "sourcePage": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.11: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8737-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:57:00.000Z",
+    "correctedAt": "2026-07-21T12:27:00.000Z"
+  },
+  {
+    "id": "correction-8742-20260721-structured-expansion",
+    "companyCode": "8742",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-12",
+      "revenue": "公式PDF p.5で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "小林洋行の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/87420/140120260512524940.pdf",
+    "sourcePage": "公式PDF p.5: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.10: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8742-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:58:00.000Z",
+    "correctedAt": "2026-07-21T12:28:00.000Z"
+  },
+  {
+    "id": "correction-8747-20260721-structured-expansion",
+    "companyCode": "8747",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-08",
+      "revenue": "公式PDF p.6で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.6: 計画・成長戦略に関する記載を確認する。"
+      }
+    },
+    "reason": "豊トラスティ証券の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/87470/140120260507517830.pdf",
+    "sourcePage": "公式PDF p.6: 計画・成長戦略に関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.10: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-8747-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T11:59:00.000Z",
+    "correctedAt": "2026-07-21T12:29:00.000Z"
+  },
+  {
+    "id": "correction-9057-20260721-structured-expansion",
+    "companyCode": "9057",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-03-26",
+      "revenue": "公式PDF p.3で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 計画・成長戦略・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "遠州トラックの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/90570/140120260326589540.pdf",
+    "sourcePage": "公式PDF p.1: 計画・成長戦略・投資・株主還元に関する記載を確認する。 / 公式PDF p.3: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9057-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:00:00.000Z",
+    "correctedAt": "2026-07-21T12:30:00.000Z"
+  },
+  {
+    "id": "correction-9060-20260721-structured-expansion",
+    "companyCode": "9060",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-28",
+      "revenue": "公式PDF p.5で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "日本ロジテムの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/90600/140120260527550485.pdf",
+    "sourcePage": "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9060-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:01:00.000Z",
+    "correctedAt": "2026-07-21T12:31:00.000Z"
+  },
+  {
+    "id": "correction-9063-20260721-structured-expansion",
+    "companyCode": "9063",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-06-27",
+      "revenue": "公式PDF p.6で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.6: 財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "岡山県貨物運送の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/90630/140120250619593481.pdf",
+    "sourcePage": "公式PDF p.6: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.9: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.2: 計画・成長戦略に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9063-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:02:00.000Z",
+    "correctedAt": "2026-07-21T12:32:00.000Z"
+  },
+  {
+    "id": "correction-9074-20260721-structured-expansion",
+    "companyCode": "9074",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-05-13",
+      "revenue": "公式PDF p.5で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.9: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "日本石油輸送の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/90740/140120240510590061.pdf",
+    "sourcePage": "公式PDF p.9: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.8: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.5: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9074-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:03:00.000Z",
+    "correctedAt": "2026-07-21T12:33:00.000Z"
+  },
+  {
+    "id": "correction-9353-20260721-structured-expansion",
+    "companyCode": "9353",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-06-18",
+      "revenue": "固定の中期売上高・売上収益は当該公式資料の抽出範囲で確認できない。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.3: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "櫻島埠頭の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/93530/140120240618530830.pdf",
+    "sourcePage": "公式PDF p.3: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.19: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.13: 計画・成長戦略に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9353-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:04:00.000Z",
+    "correctedAt": "2026-07-21T12:34:00.000Z"
+  },
+  {
+    "id": "correction-9355-20260721-structured-expansion",
+    "companyCode": "9355",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "公式PDF p.7で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.7: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "リンコーコーポレーションの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/93550/140120260513530385.pdf",
+    "sourcePage": "公式PDF p.7: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.10: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9355-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:05:00.000Z",
+    "correctedAt": "2026-07-21T12:35:00.000Z"
+  },
+  {
+    "id": "correction-9361-20260721-structured-expansion",
+    "companyCode": "9361",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-08",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "伏木海陸運送の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/93610/140120260507518373.pdf",
+    "sourcePage": "公式PDF p.4: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9361-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:06:00.000Z",
+    "correctedAt": "2026-07-21T12:36:00.000Z"
+  },
+  {
+    "id": "correction-9362-20260721-structured-expansion",
+    "companyCode": "9362",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-04-30",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "兵機海運の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/93620/140120250430527155.pdf",
+    "sourcePage": "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.1: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9362-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:07:00.000Z",
+    "correctedAt": "2026-07-21T12:37:00.000Z"
+  },
+  {
+    "id": "correction-9363-20260721-structured-expansion",
+    "companyCode": "9363",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-14",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "大運の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/93630/140120260514533372.pdf",
+    "sourcePage": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.10: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.16: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9363-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:08:00.000Z",
+    "correctedAt": "2026-07-21T12:38:00.000Z"
+  },
+  {
+    "id": "correction-9365-20260721-structured-expansion",
+    "companyCode": "9365",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-05-13",
+      "revenue": "固定の中期売上高・売上収益は当該公式資料の抽出範囲で確認できない。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "トレーディアの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/93650/140120260512527288.pdf",
+    "sourcePage": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.9: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.14: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9365-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:09:00.000Z",
+    "correctedAt": "2026-07-21T12:39:00.000Z"
+  },
+  {
+    "id": "correction-9511-20260721-structured-expansion",
+    "companyCode": "9511",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2026-04-30",
+      "revenue": "公式PDF p.1で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "沖縄電力の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/95110/140120260428513938.pdf",
+    "sourcePage": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.20: 投資・株主還元に関する記載を確認する。 / 公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9511-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:10:00.000Z",
+    "correctedAt": "2026-07-21T12:40:00.000Z"
+  },
+  {
+    "id": "correction-9513-20260721-structured-expansion",
+    "companyCode": "9513",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-05-09",
+      "revenue": "固定の中期売上高・売上収益は当該公式資料の抽出範囲で確認できない。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.6: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "電源開発の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/95130/140120240509586660.pdf",
+    "sourcePage": "公式PDF p.6: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.31: 財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.12: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9513-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:11:00.000Z",
+    "correctedAt": "2026-07-21T12:41:00.000Z"
+  },
+  {
+    "id": "correction-9519-20260721-structured-expansion",
+    "companyCode": "9519",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-05-13",
+      "revenue": "公式PDF p.47で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.19: 財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    "reason": "レノバの公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/95190/140120250513543757.pdf",
+    "sourcePage": "公式PDF p.19: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.18: 財務目標・KPIに関する記載を確認する。 / 公式PDF p.47: 財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9519-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:12:00.000Z",
+    "correctedAt": "2026-07-21T12:42:00.000Z"
+  },
+  {
+    "id": "correction-9531-20260721-structured-expansion",
+    "companyCode": "9531",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2025-10-29",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.8: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "東京瓦斯の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/95310/140120251029581154.pdf",
+    "sourcePage": "公式PDF p.8: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。 / 公式PDF p.3: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9531-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:13:00.000Z",
+    "correctedAt": "2026-07-21T12:43:00.000Z"
+  },
+  {
+    "id": "correction-9532-20260721-structured-expansion",
+    "companyCode": "9532",
+    "fieldPath": "category,stage,tier,sourceUrl,document,period,planPublishedDate,lastVerifiedDate,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,flags,progressAssessment",
+    "before": {
+      "stage": "jpx_indexed",
+      "pageEvidence": false,
+      "planPublishedDate": null,
+      "revenue": null,
+      "progressAssessment": null
+    },
+    "after": {
+      "stage": "detailed_extracted",
+      "pageEvidence": true,
+      "planPublishedDate": "2024-03-19",
+      "revenue": "公式PDF p.38で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.8: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    "reason": "大阪瓦斯の公式計画と進捗評価を比較可能にする。",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/95320/140120240319556190.pdf",
+    "sourcePage": "公式PDF p.8: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.19: 計画・成長戦略・財務目標・KPI・投資・株主還元に関する記載を確認する。 / 公式PDF p.21: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+    "status": "corrected",
+    "reviewDecisionId": "review-9532-20260721-structured-expansion",
+    "detectedAt": "2026-07-21T12:14:00.000Z",
+    "correctedAt": "2026-07-21T12:44:00.000Z"
   }
 ]

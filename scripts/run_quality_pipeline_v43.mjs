@@ -62,6 +62,7 @@ const findSourceResearchBatchRequest = () => findRequestedConfig(sourceResearchD
 const findSourceResearchRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-batch-\d+-config\.json$/);
 const findSourceResearchApprovalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-approval-\d+\.json$/);
 const findSourceResearchProposalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-proposal-\d+-config\.json$/);
+const findSourceResearchRecoveryProposalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-recovery-proposal-\d+-config\.json$/);
 const findSourceResearchBulkApprovalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-bulk-approval-\d+\.json$/);
 
 const companyCoverageMarker = firstExisting(companyCoverageMarkers);
@@ -119,6 +120,14 @@ if (isApplyWorkflow) {
       SOURCE_RESEARCH_PROPOSAL_CONFIG: path.relative(ROOT, proposalRequest.filePath),
     });
     consumeRequestedConfig(proposalRequest, 'Source research proposal');
+  }
+
+  const recoveryProposalRequest = findSourceResearchRecoveryProposalRequest();
+  if (recoveryProposalRequest) {
+    runNode('scripts/generate_source_research_recovery_proposal_v1.mjs', {
+      SOURCE_RESEARCH_RECOVERY_PROPOSAL_CONFIG: path.relative(ROOT, recoveryProposalRequest.filePath),
+    });
+    consumeRequestedConfig(recoveryProposalRequest, 'Source research recovery proposal');
   }
 
   const bulkApproval = findSourceResearchBulkApprovalRequest();

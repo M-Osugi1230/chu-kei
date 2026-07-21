@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-v1",
+  "batchId": "evidence-repair-batch-48",
+  "runRequested": true,
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "allowedStages": [
+    "detailed_extracted"
+  ],
+  "expectedCoreCount": 1496,
+  "expectedDetailedExtractedCount": 4,
+  "expectedFiveStarAfterApproval": 1500,
+  "records": [
+    {
+      "code": "4612",
+      "expectedStage": "detailed_extracted",
+      "preserveExistingSource": true,
+      "evidenceSourceUrl": "https://www.nipponpaint-holdings.com/ir/management_policy/management_plan/",
+      "verifiedDate": "2026-07-21",
+      "reason": "公式の中期経営方針では連結CAGRと地域・事業別レンジを中心に示しており、買収による企業範囲変更も含むため、固定目標と確定実績の単純な進捗率を作らず比較不可として明示するため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 中期経営方針アップデートのポイント）: 2023年の事業ポートフォリオを前提に、中期連結CAGRとして売上収益8～9%、EPS10～12%の成長を目指す。",
+        "公式Webページ（見出し: アセット別成長予想・市場成長予想）: 2024年実績と地域・事業別の売上収益CAGR・営業利益率予想を異なる範囲と前提条件で開示している。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "目標は2023年時点の事業ポートフォリオを前提としたCAGRと地域別レンジであり、その後の買収による連結範囲変更や指標前提の差があるため、固定額目標に対する単純な進捗率へ接続しない。",
+        "sourceRef": "公式Webページ（見出し: 中期経営方針アップデートのポイント）: 2023年の事業ポートフォリオを前提に、中期連結CAGRとして売上収益8～9%、EPS10～12%の成長を目指す。"
+      }
+    },
+    {
+      "code": "7733",
+      "expectedStage": "detailed_extracted",
+      "preserveExistingSource": true,
+      "evidenceSourceUrl": "https://www.olympus-global.com/ir/data/pdf/02_Corporate_Strategy_FY20262Q_en.pdf",
+      "verifiedDate": "2026-07-21",
+      "reason": "公式Corporate StrategyはFY26を基準とする各年度の前年比成長率・マージン改善幅を示しており、固定額の最終目標と同一定義の確定実績を単純比較できないため、比較不可の進捗評価をページ証跡付きで登録するため。",
+      "evidenceRefs": [
+        "公式PDF p.10: FY26を基準にFY27は3%、FY28は4%、FY29は5%の売上成長と、各年度約100bpのマージン改善を目指す3カ年財務計画を示す。",
+        "公式PDF p.11: FY27～FY29の財務志向としてFY29売上成長約5%、各年約100bpの営業利益率改善、FY26からEPS CAGR10%超を掲げる。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "計画値はFY26を基準とする恒常為替ベースの前年比成長率と調整後指標であり、固定額の最終目標ではないため、確定実績との単純な達成率を算出しない。",
+        "sourceRef": "公式PDF p.10: FY26を基準にFY27は3%、FY28は4%、FY29は5%の売上成長と、各年度約100bpのマージン改善を目指す3カ年財務計画を示す。"
+      }
+    },
+    {
+      "code": "4523",
+      "expectedStage": "detailed_extracted",
+      "preserveExistingSource": true,
+      "evidenceSourceUrl": "https://www.eisai.co.jp/sustainability/impact/index.html",
+      "verifiedDate": "2026-07-21",
+      "reason": "エーザイ公式サイトの社会的インパクト創出モデルで、重点領域、投入資本、マテリアリティ、社会価値と財務価値の循環を具体的な見出し単位で再確認し、一次証跡不足を補修するため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: 社会的インパクト創出モデル）: 人的資本・知的資本など6つの資本を認知症、がん、グローバルヘルスの3領域へ集中的に投入し、15のマテリアリティに優先的に取り組む。",
+        "公式Webページ（見出し: 社会的インパクト創出モデル）: 薬剤とソリューションを通じて健康憂慮の解消と医療較差の是正を図り、財務価値創出と6つの資本への再投資の循環を目指す。"
+      ]
+    },
+    {
+      "code": "6594",
+      "expectedStage": "detailed_extracted",
+      "preserveExistingSource": true,
+      "evidenceSourceUrl": "https://www.nidec.com/jp/ir/management/strategy/",
+      "verifiedDate": "2026-07-21",
+      "reason": "ニデック公式の中期経営計画Conversion 2027で、ROIC経営による高収益構造化、拠点最適化、事業5本柱を具体的な公式見出し単位で再確認し、一次証跡不足を補修するため。",
+      "evidenceRefs": [
+        "公式Webページ（見出し: ①高収益構造への転換）: NIDEC式ROIC経営で事業ポートフォリオを可視化し、不採算・ノンコア事業の見直しと高収益事業比率の向上を進める。",
+        "公式Webページ（見出し: ②成長を支える「事業5本柱」への転換）: AI社会、サステナブル・インフラとエネルギー、産業の生産効率化、Better Life、モビリティイノベーションを注力領域とする。"
+      ]
+    }
+  ],
+  "productionPromotion": {
+    "schemaVersion": "production-promotion-batch-v1",
+    "batchId": "production-promotion-batch-357",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "codes": [
+      "4612",
+      "7733",
+      "4523",
+      "6594"
+    ],
+    "targetCoreCount": 1500,
+    "primaryAuthor": "production-quality-agent",
+    "primaryReviewer": "production-quality-review-final4",
+    "independentAuthor": "independent-release-agent",
+    "independentReviewer": "independent-release-review-final4",
+    "approvalDate": "2026-07-21"
+  }
+}

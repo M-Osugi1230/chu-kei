@@ -4,6 +4,9 @@ import { test, expect } from '@playwright/test';
 const milestone = JSON.parse(
   fs.readFileSync(new URL('../../operations/quality/coverage-milestone-v1.json', import.meta.url), 'utf8'),
 );
+const productionReadiness = JSON.parse(
+  fs.readFileSync(new URL('../../operations/production-quality/production-readiness-v1.json', import.meta.url), 'utf8'),
+);
 
 function captureErrors(page) {
   const consoleErrors = [];
@@ -174,10 +177,11 @@ test.describe('Chu-kei portal', () => {
       await expect(page.locator('#queue-body tr[data-company-code]')).toHaveCount(1);
       await expect(page.locator('#queue-body')).toContainText(firstCode);
     } else {
+      const productionCount = productionReadiness.currentProduction;
       await expect(page.locator('#queue-body .empty-row')).toContainText('条件に一致する企業がありません。');
-      await expect(page.locator('#quality-summary')).toContainText('本番品質1500社');
+      await expect(page.locator('#quality-summary')).toContainText(`本番品質${productionCount}社`);
       const productionAuditRow = page.locator('#audit-body tr').filter({ has: page.getByRole('rowheader', { name: '本番', exact: true }) });
-      await expect(productionAuditRow).toContainText('1500 / 1500');
+      await expect(productionAuditRow).toContainText(`${productionCount} / ${productionCount}`);
     }
 
     if (testInfo.project.name === 'mobile') {

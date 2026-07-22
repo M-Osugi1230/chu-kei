@@ -1,7 +1,7 @@
 {
   "schemaVersion": "production-quality-target-v1",
-  "targetProductionCompanies": 1500,
-  "companyUniverse": 1900,
+  "targetProductionCompanies": 1549,
+  "companyUniverse": 2500,
   "qualityPrinciple": "公式一次資料・比較可能な構造化・ページ証跡・進捗接続・個別レビュー・独立再検証を満たした企業だけを本番品質として扱う",
   "automaticPromotionAllowed": false,
   "requiredMachineChecks": [
@@ -21,12 +21,12 @@
   "minimumPageEvidenceRefs": 2,
   "minimumProductionApprovals": 2,
   "reviewerIndependenceRequired": true,
-  "targetSetAt": "2026-07-21",
+  "targetSetAt": "2026-07-22",
   "notes": [
     "stage名や品質ラベルの一括置換による数合わせは禁止する",
     "未開示項目は未開示として記録し、推計値で要件を満たしてはならない",
     "既存coreも同じ監査対象とし、要件不足は補修キューへ残す",
     "機械要件を満たしても個別承認と独立再検証なしでは昇格しない",
-    "構造化済み1500社すべてを同一品質基準で監査し、要件不足企業は個別補修する"
+    "第12回公式資料調査の優先49社だけを提案ハッシュ固定・二段階承認で本番品質へ昇格する"
   ]
 }

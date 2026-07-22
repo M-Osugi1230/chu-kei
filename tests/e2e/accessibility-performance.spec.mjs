@@ -1,5 +1,10 @@
+import fs from 'node:fs';
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+
+const productionReadiness = JSON.parse(
+  fs.readFileSync(new URL('../../operations/production-quality/production-readiness-v1.json', import.meta.url), 'utf8'),
+);
 
 function captureErrors(page) {
   const consoleErrors = [];
@@ -10,16 +15,19 @@ function captureErrors(page) {
   page.on('pageerror', error => pageErrors.push(error.message));
   return { consoleErrors, pageErrors };
 }
+
 async function expectNoErrors(errors) {
   expect(errors.consoleErrors, `console errors: ${errors.consoleErrors.join(' | ')}`).toEqual([]);
   expect(errors.pageErrors, `page errors: ${errors.pageErrors.join(' | ')}`).toEqual([]);
 }
+
 async function expectAccessible(page) {
   const result = await new AxeBuilder({ page })
     .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
     .analyze();
   expect(result.violations, JSON.stringify(result.violations, null, 2)).toEqual([]);
 }
+
 async function expectQueueSummary(page) {
   const candidateCount = await page.locator('#queue-body tr[data-company-code]').count();
   await expect(page.locator('#queue-summary')).toHaveText(`${candidateCount}社を表示`);
@@ -62,7 +70,12 @@ test.describe('Accessibility and performance budgets', () => {
       expect(width.scroll).toBeLessThanOrEqual(width.client);
       const targets = await page.locator('button, a, input, select').evaluateAll(elements => elements.map(element => {
         const rect = element.getBoundingClientRect();
-        return { text: element.textContent?.trim() || element.getAttribute('aria-label') || element.getAttribute('placeholder'), width: rect.width, height: rect.height, visible: rect.width > 0 && rect.height > 0 };
+        return {
+          text: element.textContent?.trim() || element.getAttribute('aria-label') || element.getAttribute('placeholder'),
+          width: rect.width,
+          height: rect.height,
+          visible: rect.width > 0 && rect.height > 0,
+        };
       }).filter(item => item.visible));
       const undersized = targets.filter(item => item.width < 24 || item.height < 24);
       expect(undersized, JSON.stringify(undersized, null, 2)).toEqual([]);
@@ -89,8 +102,11 @@ test.describe('Accessibility and performance budgets', () => {
     expect(priorityACount + priorityBCount).toBe(queueCount);
     if (queueCount > 0) expect(priorityACount).toBeGreaterThan(0);
 
-    const productionAuditRow = page.locator('#audit-body tr').filter({ has: page.getByRole('rowheader', { name: '本番', exact: true }) });
-    await expect(productionAuditRow).toContainText('1500 / 1500');
+    const productionCount = productionReadiness.currentProduction;
+    const productionAuditRow = page.locator('#audit-body tr').filter({
+      has: page.getByRole('rowheader', { name: '本番', exact: true }),
+    });
+    await expect(productionAuditRow).toContainText(`${productionCount} / ${productionCount}`);
     await expect(page.getByText('本番の一次証跡要確認').locator('..').getByText('0社')).toBeVisible();
 
     if (testInfo.project.name === 'mobile') {

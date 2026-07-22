@@ -30,21 +30,29 @@ const writeJson = (file, value) => fs.writeFileSync(file, `${JSON.stringify(valu
 const firstExisting = paths => paths.find(file => fs.existsSync(file)) || null;
 const isApplyWorkflow = process.env.GITHUB_WORKFLOW === 'Apply Structured Source of Truth';
 
-function findRequestedConfig(directory, pattern) {
-  if (!fs.existsSync(directory)) return null;
+function configNumber(file) {
+  return Number(file.match(/\d+/)?.[0] || 0);
+}
+
+function findRequestedConfigs(directory, pattern, order = 'desc') {
+  if (!fs.existsSync(directory)) return [];
   const files = fs.readdirSync(directory)
     .filter(file => pattern.test(file))
-    .sort((a, b) => {
-      const aNumber = Number(a.match(/\d+/)?.[0] || 0);
-      const bNumber = Number(b.match(/\d+/)?.[0] || 0);
-      return bNumber - aNumber || b.localeCompare(a);
+    .sort((left, right) => {
+      const delta = configNumber(left) - configNumber(right);
+      if (delta !== 0) return order === 'asc' ? delta : -delta;
+      return order === 'asc' ? left.localeCompare(right) : right.localeCompare(left);
     });
-  for (const file of files) {
-    const filePath = path.join(directory, file);
-    const config = readJson(filePath);
-    if (config.runRequested === true) return { filePath, config };
-  }
-  return null;
+  return files
+    .map(file => {
+      const filePath = path.join(directory, file);
+      return { filePath, config: readJson(filePath) };
+    })
+    .filter(request => request.config.runRequested === true);
+}
+
+function findRequestedConfig(directory, pattern) {
+  return findRequestedConfigs(directory, pattern, 'desc')[0] || null;
 }
 
 function consumeRequestedConfig(request, label) {
@@ -59,12 +67,23 @@ const findEmbeddedStructuredRequest = () => findRequestedConfig(patchDir, /^stru
 const findEmbeddedProgressRequest = () => findRequestedConfig(productionQualityDir, /^progress-connection-batch-\d+\.json$/);
 const findFinalProductionCompanyRequest = () => findRequestedConfig(productionQualityDir, /^final-production-company-\d+\.json$/);
 const findBulkProductionPromotionRequest = () => findRequestedConfig(productionQualityDir, /^production-bulk-promotion-approval-\d+\.json$/);
-const findSourceResearchBatchRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-batch-request-\d+\.json$/);
+const findSourceResearchBatchRequests = () => findRequestedConfigs(sourceResearchDir, /^source-research-batch-request-\d+\.json$/, 'asc');
 const findSourceResearchRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-batch-\d+-config\.json$/);
 const findSourceResearchApprovalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-approval-\d+\.json$/);
 const findSourceResearchProposalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-proposal-\d+-config\.json$/);
 const findSourceResearchRecoveryProposalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-recovery-proposal-\d+-config\.json$/);
 const findSourceResearchBulkApprovalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-bulk-approval-\d+\.json$/);
+
+function executeSourceResearch(sourceResearch) {
+  runCommand('python3', [
+    'scripts/research_jpx_documents_v1.py',
+    '--config', path.relative(ROOT, sourceResearch.filePath),
+  ]);
+  runNode('scripts/normalize_source_research_candidates_v1.mjs', {
+    SOURCE_RESEARCH_CONFIG: path.relative(ROOT, sourceResearch.filePath),
+  });
+  consumeRequestedConfig(sourceResearch, 'Source research');
+}
 
 const companyCoverageMarker = firstExisting(companyCoverageMarkers);
 if (isApplyWorkflow && companyCoverageMarker) {
@@ -95,24 +114,28 @@ if (isApplyWorkflow && fs.existsSync(sourceNormalizationMarker)) {
 }
 
 if (isApplyWorkflow) {
-  const batchRequest = findSourceResearchBatchRequest();
-  if (batchRequest) {
+  const batchRequests = findSourceResearchBatchRequests();
+  for (const batchRequest of batchRequests) {
     runNode('scripts/prepare_source_research_batch_v1.mjs', {
       SOURCE_RESEARCH_BATCH_REQUEST: path.relative(ROOT, batchRequest.filePath),
     });
     consumeRequestedConfig(batchRequest, 'Source research batch preparation');
+
+    const generatedConfigPath = path.resolve(batchRequest.config.outputConfigPath || '');
+    if (!generatedConfigPath || !fs.existsSync(generatedConfigPath)) {
+      throw new Error(`Generated source research config not found: ${batchRequest.config.outputConfigPath}`);
+    }
+    const generatedRequest = { filePath: generatedConfigPath, config: readJson(generatedConfigPath) };
+    if (generatedRequest.config.runRequested !== true) {
+      throw new Error(`Generated source research config is not pending: ${batchRequest.config.outputConfigPath}`);
+    }
+    executeSourceResearch(generatedRequest);
   }
 
-  const sourceResearch = findSourceResearchRequest();
-  if (sourceResearch) {
-    runCommand('python3', [
-      'scripts/research_jpx_documents_v1.py',
-      '--config', path.relative(ROOT, sourceResearch.filePath),
-    ]);
-    runNode('scripts/normalize_source_research_candidates_v1.mjs', {
-      SOURCE_RESEARCH_CONFIG: path.relative(ROOT, sourceResearch.filePath),
-    });
-    consumeRequestedConfig(sourceResearch, 'Source research');
+  let sourceResearch = findSourceResearchRequest();
+  while (sourceResearch) {
+    executeSourceResearch(sourceResearch);
+    sourceResearch = findSourceResearchRequest();
   }
 
   const proposalRequest = findSourceResearchProposalRequest();

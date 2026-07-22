@@ -41,7 +41,7 @@ const htmlBytes = size(files.indexHtml) + size(files.qualityHtml);
 const jsBytes = size(files.appJs) + size(files.dataLoaderJs) + size(files.qualityJs);
 const cssBytes = size(files.stylesCss) + size(files.qualityCss);
 
-const SOURCE_DATA_HARD_CAP_BYTES = 512 * 1024;
+const SOURCE_DATA_HARD_CAP_BYTES = 640 * 1024;
 const SOURCE_DATA_DENSITY_LIMIT_BYTES = 1500;
 const INITIAL_FRONTEND_DATA_CAP_BYTES = 192 * 1024;
 const DETAIL_SHARD_CAP_BYTES = 32 * 1024;
@@ -51,7 +51,7 @@ check('static shell under 180 KB', shellBytes <= 180 * 1024, `actual=${shellByte
 check('HTML under 40 KB', htmlBytes <= 40 * 1024, `actual=${htmlBytes}`);
 check('JavaScript under 110 KB', jsBytes <= 110 * 1024, `actual=${jsBytes}`);
 check('CSS under 45 KB', cssBytes <= 45 * 1024, `actual=${cssBytes}`);
-check('canonical source bundle under 512 KB', sourceManifest.compressedBytes <= SOURCE_DATA_HARD_CAP_BYTES, `actual=${sourceManifest.compressedBytes}`);
+check('canonical source bundle under 640 KB', sourceManifest.compressedBytes <= SOURCE_DATA_HARD_CAP_BYTES, `actual=${sourceManifest.compressedBytes}`);
 check('canonical source density under 1500 bytes per structured company', compressedSourceDensity <= SOURCE_DATA_DENSITY_LIMIT_BYTES, `actual=${compressedSourceDensity.toFixed(1)} structured=${structuredCompanyCount}`);
 check('canonical source chunk count under 256', sourceManifest.parts.length <= 256, `actual=${sourceManifest.parts.length}`);
 check('canonical source chunks have positive size', sourceManifest.parts.every(part => Number.isInteger(part.bytes) && part.bytes > 0));

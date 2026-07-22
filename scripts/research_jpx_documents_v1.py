@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Build reviewable structured-data candidates from official JPX disclosures.
 
-This script never mutates company records and never approves or promotes companies.
-It only creates evidence-backed candidates for an explicitly selected research batch.
+Research engine v2 evaluates multiple official disclosure PDFs per company and
+selects the strongest evidence-backed candidate. It never mutates company
+records, approves candidates, or promotes companies.
 """
 
 from __future__ import annotations
@@ -17,7 +18,6 @@ import time
 import unicodedata
 import urllib.parse
 import zlib
-from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -30,26 +30,28 @@ ROOT = Path.cwd()
 DATA_DIR = ROOT / "site" / "data"
 SEARCH_URL = "https://www2.jpx.co.jp/tseHpFront/JJK010010Action.do"
 DETAIL_URL = "https://www2.jpx.co.jp/tseHpFront/JJK010030Action.do"
-USER_AGENT = "Chu-keiSourceResearch/1.0 (+https://github.com/M-Osugi1230/chu-kei)"
+USER_AGENT = "Chu-keiSourceResearch/2.0 (+https://github.com/M-Osugi1230/chu-kei)"
 TIMEOUT = 35
 MAX_PDF_BYTES = 32 * 1024 * 1024
-MAX_PAGES = 100
+MAX_PAGES = 120
 
 NEGATIVE_TITLE = re.compile(
-    r"招集通知|株主総会|定款|自己株式の取得状況|人事異動|大量保有|月次|決議通知|議決権|有価証券報告書|四半期報告書"
+    r"招集通知|株主総会|定款|自己株式の取得状況|人事異動|大量保有|月次|決議通知|議決権|"
+    r"有価証券報告書|四半期報告書|コーポレート・ガバナンス報告書|支配株主"
 )
 
 TITLE_RULES: list[tuple[re.Pattern[str], int]] = [
-    (re.compile(r"中期経営計画|中長期経営計画|長期経営計画"), 130),
-    (re.compile(r"事業計画及び成長可能性|事業計画と成長可能性"), 125),
-    (re.compile(r"経営計画|経営戦略|成長戦略|経営方針|企業価値向上"), 105),
-    (re.compile(r"決算説明資料|決算補足資料|決算説明会"), 85),
-    (re.compile(r"統合報告書|統合レポート"), 75),
-    (re.compile(r"決算短信"), 55),
+    (re.compile(r"中期経営計画|中長期経営計画|長期経営計画"), 150),
+    (re.compile(r"事業計画及び成長可能性|事業計画と成長可能性"), 145),
+    (re.compile(r"経営計画|経営戦略|成長戦略|経営方針|企業価値向上|資本コスト"), 125),
+    (re.compile(r"決算説明資料|決算補足資料|決算説明会|決算説明"), 105),
+    (re.compile(r"統合報告書|統合レポート|アニュアルレポート"), 95),
+    (re.compile(r"会社説明資料|事業説明資料|IR資料|経営概況|事業方針"), 85),
+    (re.compile(r"決算短信"), 70),
 ]
 
 THEME_RULES: list[tuple[str, re.Pattern[str]]] = [
-    ("M&A", re.compile(r"M&A|Ｍ＆Ａ|買収|事業承継")),
+    ("M&A", re.compile(r"M&A|Ｍ＆Ａ|買収|事業承継|アライアンス")),
     ("資本効率", re.compile(r"ROE|ROIC|資本効率|資本コスト|PBR")),
     ("株主還元", re.compile(r"株主還元|配当|自己株式|総還元|DOE")),
     ("海外", re.compile(r"海外|グローバル|北米|欧州|中国|アジア")),
@@ -61,12 +63,15 @@ THEME_RULES: list[tuple[str, re.Pattern[str]]] = [
     ("研究開発", re.compile(r"研究開発|R&D|技術開発|知的財産")),
     ("設備投資", re.compile(r"設備投資|成長投資|投資計画|生産能力")),
     ("サステナビリティ", re.compile(r"サステナ|脱炭素|環境|ESG|GX")),
-    ("顧客基盤", re.compile(r"顧客基盤|会員|契約数|店舗網|販売網")),
+    ("顧客基盤", re.compile(r"顧客基盤|顧客数|会員|契約数|店舗網|販売網")),
     ("生産性", re.compile(r"生産性|効率化|省人化|自動化|コスト削減")),
+    ("収益力強化", re.compile(r"収益力|利益率|収益改善|採算|原価低減")),
+    ("事業成長", re.compile(r"成長|拡大|増収|市場開拓|シェア")),
+    ("商品・サービス", re.compile(r"商品|製品|サービス|ソリューション|ブランド")),
 ]
 
 METRIC_RULES = {
-    "revenue": ("売上高", re.compile(r"売上高|売上収益|営業収益|取扱高")),
+    "revenue": ("売上高・売上収益", re.compile(r"売上高|売上収益|営業収益|取扱高")),
     "profit": ("利益", re.compile(r"営業利益|事業利益|経常利益|純利益|EBITDA")),
     "margin": ("収益性・資本効率", re.compile(r"利益率|ROE|ROIC|DOE|PBR|マージン")),
     "capital": ("投資・資本配分", re.compile(r"成長投資|設備投資|研究開発投資|投資額|キャッシュアロケーション")),
@@ -75,7 +80,10 @@ METRIC_RULES = {
 
 TARGET_PATTERN = re.compile(r"目標|計画|目指|見通し|方針|以上|程度|水準")
 ACTUAL_PATTERN = re.compile(r"実績|結果|達成|進捗")
-NUMBER_PATTERN = re.compile(r"(?:20\d{2}年(?:度|\d{1,2}月期)?|\d{1,3}(?:,\d{3})*(?:\.\d+)?\s*(?:億円|百万円|兆円|%|％|倍|店|人))")
+NUMBER_PATTERN = re.compile(
+    r"(?:20\d{2}年(?:度|\d{1,2}月期)?|"
+    r"\d{1,3}(?:,\d{3})*(?:\.\d+)?\s*(?:億円|百万円|兆円|%|％|倍|店|人))"
+)
 PERIOD_PATTERNS = [
     re.compile(r"(20\d{2}年(?:度|\d{1,2}月期)?)[^\n]{0,18}(?:から|～|〜|-)[^\n]{0,18}(20\d{2}年(?:度|\d{1,2}月期)?)"),
     re.compile(r"(20\d{2}年度)[^\n]{0,18}(20\d{2}年度)"),
@@ -99,7 +107,12 @@ def normalize_text(value: str) -> str:
 
 def normalize_name(value: str) -> str:
     value = normalize_text(value)
-    value = re.sub(r"株式会社|有限会社|ホールディングス|ホールディング|グループ|HD|GROUP", "", value, flags=re.I)
+    value = re.sub(
+        r"株式会社|有限会社|ホールディングス|ホールディング|グループ|HD|GROUP",
+        "",
+        value,
+        flags=re.I,
+    )
     return re.sub(r"[^0-9A-Za-z一-龥ぁ-んァ-ン]", "", value).lower()
 
 
@@ -138,11 +151,6 @@ def score_company(company: dict[str, Any]) -> int:
     return market_score + industry_score + group_bonus
 
 
-def session_cookie(response: requests.Response) -> str:
-    cookies = response.cookies.get_dict()
-    return "; ".join(f"{key}={value}" for key, value in cookies.items())
-
-
 def get_hidden(soup: BeautifulSoup, name: str, default: str = "") -> str:
     element = soup.select_one(f'input[name="{name}"]')
     return str(element.get("value", default)) if element else default
@@ -161,7 +169,12 @@ def fetch_jpx_detail(code: str) -> tuple[BeautifulSoup, list[dict[str, Any]]]:
         "dspSsuPdMapOut": "10>10件<50>50件<100>100件<200>200件<",
         "mgrMiTxtBx": "",
         "eqMgrCd": manager_code,
-        "szkbuChkbxMapOut": "011>プライム<012>スタンダード<013>グロース<008>TOKYO PRO Market<bj1>-<be1>-<111>外国株プライム<112>外国株スタンダード<113>外国株グロース<bj2>-<be2>-<ETF>ETF<ETN>ETN<RET>不動産投資信託(REIT)<IFD>インフラファンド<999>その他<",
+        "szkbuChkbxMapOut": (
+            "011>プライム<012>スタンダード<013>グロース<008>TOKYO PRO Market<"
+            "bj1>-<be1>-<111>外国株プライム<112>外国株スタンダード<"
+            "113>外国株グロース<bj2>-<be2>-<ETF>ETF<ETN>ETN<"
+            "RET>不動産投資信託(REIT)<IFD>インフラファンド<999>その他<"
+        ),
     }
     search_response = session.post(SEARCH_URL, data=payload, timeout=TIMEOUT)
     search_response.raise_for_status()
@@ -205,13 +218,15 @@ def fetch_jpx_detail(code: str) -> tuple[BeautifulSoup, list[dict[str, Any]]]:
             title = normalize_text(anchor.get_text(" ", strip=True))
             href = urllib.parse.urljoin("https://www2.jpx.co.jp", str(anchor.get("href")))
             date_text = normalize_text(cells[0].get_text(" ", strip=True))
-            documents.append({
-                "date": parse_date(date_text),
-                "dateText": date_text,
-                "title": title,
-                "url": href,
-                "tableId": table_id,
-            })
+            documents.append(
+                {
+                    "date": parse_date(date_text),
+                    "dateText": date_text,
+                    "title": title,
+                    "url": href,
+                    "tableId": table_id,
+                }
+            )
 
     if not documents:
         for anchor in detail_soup.find_all("a", href=True):
@@ -221,8 +236,15 @@ def fetch_jpx_detail(code: str) -> tuple[BeautifulSoup, list[dict[str, Any]]]:
                 continue
             parent = anchor.find_parent("tr")
             date_text = normalize_text(parent.get_text(" ", strip=True) if parent else "")
-            documents.append({"date": parse_date(date_text), "dateText": date_text, "title": title, "url": href, "tableId": "fallback"})
-
+            documents.append(
+                {
+                    "date": parse_date(date_text),
+                    "dateText": date_text,
+                    "title": title,
+                    "url": href,
+                    "tableId": "fallback",
+                }
+            )
     return detail_soup, documents
 
 
@@ -236,7 +258,7 @@ def score_document(document: dict[str, Any]) -> int:
             score = max(score, weight)
     if document.get("date"):
         year = int(document["date"][:4])
-        score += max(0, year - 2022) * 6
+        score += max(0, year - 2021) * 6
     if re.search(r"\.pdf(?:$|[?#])", str(document.get("url") or ""), re.I):
         score += 15
     if "www2.jpx.co.jp/disc/" in str(document.get("url") or ""):
@@ -244,11 +266,14 @@ def score_document(document: dict[str, Any]) -> int:
     return score
 
 
-def select_document(documents: list[dict[str, Any]]) -> dict[str, Any] | None:
+def rank_documents(documents: list[dict[str, Any]]) -> list[dict[str, Any]]:
     ranked = [{**row, "score": score_document(row)} for row in documents]
-    ranked = [row for row in ranked if row["score"] >= 55]
-    ranked.sort(key=lambda row: (row["score"], row.get("date") or "", row.get("title") or ""), reverse=True)
-    return ranked[0] if ranked else None
+    ranked = [row for row in ranked if row["score"] >= 65 and row.get("date")]
+    ranked.sort(
+        key=lambda row: (row["score"], row.get("date") or "", row.get("title") or ""),
+        reverse=True,
+    )
+    return ranked
 
 
 def extract_pdf(session: requests.Session, url: str) -> tuple[list[str], int]:
@@ -272,10 +297,11 @@ def extract_pdf(session: requests.Session, url: str) -> tuple[list[str], int]:
 def page_score(text: str) -> int:
     score = 0
     for pattern, weight in [
-        (re.compile(r"中期経営計画|長期経営計画|成長戦略|経営方針"), 25),
-        (re.compile(r"売上高|営業利益|経常利益|ROE|ROIC"), 20),
-        (re.compile(r"目標|計画|実績|進捗"), 15),
-        (re.compile(r"成長投資|株主還元|配当"), 12),
+        (re.compile(r"中期経営計画|長期経営計画|成長戦略|経営方針|事業計画"), 25),
+        (re.compile(r"売上高|売上収益|営業利益|経常利益|ROE|ROIC"), 20),
+        (re.compile(r"目標|計画|実績|進捗|見通し"), 15),
+        (re.compile(r"成長投資|株主還元|配当|設備投資"), 12),
+        (re.compile(r"事業|製品|サービス|市場|顧客"), 8),
     ]:
         if pattern.search(text):
             score += weight
@@ -284,7 +310,7 @@ def page_score(text: str) -> int:
 
 
 def find_period(pages: list[str]) -> str:
-    text = "\n".join(pages[:20])
+    text = "\n".join(pages[:30])
     for pattern in PERIOD_PATTERNS:
         match = pattern.search(text)
         if match:
@@ -292,12 +318,12 @@ def find_period(pages: list[str]) -> str:
     years = sorted(set(re.findall(r"20\d{2}年度", text)))
     if len(years) >= 2:
         return f"{years[0]}～{years[-1]}"
-    return "最新公式開示資料の対象期間"
+    return "当該公式開示資料の対象期間"
 
 
 def metric_value(pages: list[str], key: str) -> tuple[str, int | None, bool, bool]:
     label, pattern = METRIC_RULES[key]
-    best: tuple[int, str, list[str], bool, bool] | None = None
+    best: tuple[int, str, list[str], bool, bool, int] | None = None
     for index, text in enumerate(pages):
         if not text or not pattern.search(text):
             continue
@@ -306,37 +332,64 @@ def metric_value(pages: list[str], key: str) -> tuple[str, int | None, bool, boo
         numbers = NUMBER_PATTERN.findall(text)
         score = (20 if target else 0) + (12 if actual else 0) + min(15, len(numbers) * 3) + page_score(text)
         if best is None or score > best[0]:
-            best = (score, text, numbers, target, actual)
-            best_index = index
+            best = (score, text, numbers, target, actual, index)
     if best is None:
         return f"固定の中期{label}目標は当該公式資料の抽出範囲で確認できない。", None, False, False
     numbers = list(dict.fromkeys(best[2]))[:4]
     number_note = f"（{'、'.join(numbers)}）" if numbers else ""
-    return f"公式PDF p.{best_index + 1}で{label}に関する数値・方針{number_note}を確認。詳細は原文の定義を参照する。", best_index + 1, best[3], best[4]
+    page_number = best[5] + 1
+    return (
+        f"公式PDF p.{page_number}で{label}に関する数値・方針{number_note}を確認。"
+        "対象年度・単位・目標／実績の区分は原文を参照する。",
+        page_number,
+        best[3],
+        best[4],
+    )
 
 
-def build_candidate(company: dict[str, Any], document: dict[str, Any], pages: list[str], pdf_bytes: int) -> dict[str, Any]:
+def build_candidate(
+    company: dict[str, Any],
+    document: dict[str, Any],
+    pages: list[str],
+    pdf_bytes: int,
+) -> dict[str, Any]:
     full_text = "\n".join(pages)
     theme_counts = [(name, len(pattern.findall(full_text))) for name, pattern in THEME_RULES]
-    themes = [name for name, count in sorted(theme_counts, key=lambda row: (-row[1], row[0])) if count > 0][:8]
+    themes = [
+        name
+        for name, count in sorted(theme_counts, key=lambda row: (-row[1], row[0]))
+        if count > 0
+    ][:8]
+
+    if len(themes) < 2 and re.search(r"事業|経営|戦略", full_text):
+        themes.append("事業戦略")
+    if len(themes) < 2 and re.search(r"利益|収益|採算|コスト", full_text):
+        themes.append("収益力強化")
+    themes = list(dict.fromkeys(themes))[:8]
 
     metric_results = {key: metric_value(pages, key) for key in METRIC_RULES}
+    ranked_pages = sorted(
+        ((page_score(text), index + 1, text) for index, text in enumerate(pages) if text),
+        reverse=True,
+    )
     evidence_pages: list[tuple[int, str]] = []
-    ranked_pages = sorted(((page_score(text), index + 1, text) for index, text in enumerate(pages) if text), reverse=True)
-    for _, page_number, text in ranked_pages:
-        descriptors = []
-        if re.search(r"中期経営計画|長期経営計画|成長戦略|経営方針", text):
-            descriptors.append("計画・成長戦略")
-        if re.search(r"売上高|営業利益|ROE|ROIC|目標", text):
-            descriptors.append("財務目標・KPI")
-        if re.search(r"成長投資|株主還元|配当", text):
-            descriptors.append("投資・株主還元")
-        if not descriptors:
+    for score, page_number, text in ranked_pages:
+        if score <= 0:
             continue
-        evidence_pages.append((page_number, "・".join(descriptors)))
+        descriptors = []
+        if re.search(r"中期経営計画|長期経営計画|成長戦略|経営方針|事業計画", text):
+            descriptors.append("計画・成長戦略")
+        if re.search(r"売上高|売上収益|営業利益|ROE|ROIC|目標", text):
+            descriptors.append("財務目標・KPI")
+        if re.search(r"成長投資|株主還元|配当|設備投資", text):
+            descriptors.append("投資・株主還元")
+        if re.search(r"事業|製品|サービス|市場|顧客", text):
+            descriptors.append("事業方針")
+        evidence_pages.append((page_number, "・".join(descriptors[:2]) or "主要方針・数値"))
         if len({page for page, _ in evidence_pages}) >= 3:
             break
-    unique_evidence = []
+
+    unique_evidence: list[str] = []
     seen_pages: set[int] = set()
     for page_number, description in evidence_pages:
         if page_number in seen_pages:
@@ -344,24 +397,46 @@ def build_candidate(company: dict[str, Any], document: dict[str, Any], pages: li
         seen_pages.add(page_number)
         unique_evidence.append(f"公式PDF p.{page_number}: {description}に関する記載を確認する。")
     if len(unique_evidence) < 2:
-        for _, page_number, _ in ranked_pages[:3]:
-            if page_number not in seen_pages:
-                unique_evidence.append(f"公式PDF p.{page_number}: 主要な事業方針・数値記載を確認する。")
-                seen_pages.add(page_number)
+        for _, page_number, _ in ranked_pages:
+            if page_number in seen_pages:
+                continue
+            unique_evidence.append(f"公式PDF p.{page_number}: 主要な事業方針・数値記載を確認する。")
+            seen_pages.add(page_number)
             if len(unique_evidence) >= 2:
                 break
 
+    normalized_name = normalize_name(company["name"])
+    first_pages_text = normalize_name(" ".join(pages[:12]))
+    pdf_identity_match = bool(normalized_name and normalized_name[:5] in first_pages_text) or str(company["code"]) in " ".join(pages[:12])
+    official_code_link = (
+        str(document.get("url") or "").startswith("https://www2.jpx.co.jp/disc/")
+        and bool(document.get("date"))
+    )
+    identity_match = official_code_link
+
+    metric_page_count = sum(result[1] is not None for result in metric_results.values())
+    confidence = 30 if official_code_link else 0
+    confidence += 15 if document.get("date") else 0
+    confidence += 20 if len(unique_evidence) >= 2 else 0
+    confidence += 15 if len(themes) >= 2 else 0
+    confidence += 10 if metric_page_count >= 2 else (5 if metric_page_count >= 1 else 0)
+    confidence += 10 if identity_match else 0
+    confidence += 5 if pdf_identity_match else 0
+    confidence = min(confidence, 100)
+
     target_pages = [result for result in metric_results.values() if result[2]]
-    actual_pages = [result for result in metric_results.values() if result[3]]
-    if target_pages and actual_pages:
-        assessment_status = "connected"
-        assessment_reason = "公式PDF内で固定目標と実績・進捗に関する記載を確認できる。数値比較時は対象年度、単位、連結範囲を原文で再確認する。"
-    elif target_pages:
+    if target_pages:
         assessment_status = "not_comparable"
-        assessment_reason = "公式PDFで目標・計画は確認できるが、同一定義の確定実績を安全に接続できないため、単純な進捗率を作成しない。"
+        assessment_reason = (
+            "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・"
+            "同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。"
+        )
     else:
         assessment_status = "not_disclosed"
-        assessment_reason = "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。"
+        assessment_reason = (
+            "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、"
+            "推計値や架空の進捗率を補完しない。"
+        )
 
     flags = {
         "ma": "M&A" in themes,
@@ -375,35 +450,25 @@ def build_candidate(company: dict[str, Any], document: dict[str, Any], pages: li
         "restructuring": "事業再編" in themes,
     }
 
-    normalized_name = normalize_name(company["name"])
-    identity_text = normalize_name(" ".join(pages[:8]))
-    identity_match = bool(normalized_name and normalized_name[:5] in identity_text) or str(company["code"]) in " ".join(pages[:8])
-    confidence = 25  # JPX code-specific disclosure linkage
-    confidence += 15 if document.get("date") else 0
-    confidence += 20 if len(unique_evidence) >= 2 else 0
-    confidence += 15 if len(themes) >= 4 else (8 if len(themes) >= 2 else 0)
-    confidence += 15 if sum(result[1] is not None for result in metric_results.values()) >= 2 else 0
-    confidence += 10 if identity_match else 5
-
-    top_themes = themes[:4] or [company.get("industry") or "事業戦略"]
-    summary = f"公式開示資料では、{'、'.join(top_themes)}を主要論点として示し、事業基盤と企業価値の向上に向けた施策を進める。"
+    top_themes = themes[:4]
+    summary = (
+        f"{company['name']}（{company['code']}）の公式開示資料では、"
+        f"{'、'.join(top_themes) if top_themes else '事業方針'}を主要論点として示す。"
+        "数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。"
+    )
     highlights = [
         f"{document['title']}を{document.get('date') or '公表日確認対象'}に公表した。",
-        f"公式資料では{'、'.join(top_themes[:3])}を主要テーマとして示す。",
+        f"公式資料では{'、'.join(top_themes[:3]) if top_themes else '事業方針'}を主要テーマとして確認した。",
+        f"{len(unique_evidence)}ページの一次証跡を登録し、原文へ直接遷移できる。",
     ]
-    metric_highlight = next((value for value, page, _, _ in metric_results.values() if page is not None), None)
-    if metric_highlight:
-        highlights.append(metric_highlight)
-
     warnings = [
         "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
-        "計画改定や後発開示の有無を最新の公式資料で確認し、古い数値を最新目標として扱わない。",
+        "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。",
     ]
-
     record = {
         "code": str(company["code"]),
         "name": company["name"],
-        "category": f"{company.get('industry') or '業種未確認'}/公式開示資料",
+        "category": f"{company.get('industry') or '業種未確認'}/JPX公式開示資料",
         "sourceUrl": document["url"],
         "document": document["title"],
         "period": find_period(pages),
@@ -425,37 +490,118 @@ def build_candidate(company: dict[str, Any], document: dict[str, Any], pages: li
             "sourceRef": unique_evidence[0] if unique_evidence else f"公式資料: {document['url']}",
         },
     }
+
+    eligible = (
+        confidence >= 85
+        and identity_match
+        and document.get("date")
+        and len(pages) >= 2
+        and len(unique_evidence) >= 2
+        and len(top_themes) >= 2
+    )
     return {
         "code": str(company["code"]),
         "name": company["name"],
         "market": company.get("market"),
         "industry": company.get("industry"),
-        "status": "eligible" if confidence >= 80 and len(unique_evidence) >= 2 and document.get("date") else "needs_review",
+        "status": "eligible" if eligible else "needs_review",
         "confidence": confidence,
         "identityMatch": identity_match,
+        "identityEvidence": {
+            "method": "jpx-code-specific-disclosure",
+            "officialCodeLinked": official_code_link,
+            "pdfTextIdentityMatch": pdf_identity_match,
+        },
         "pdfBytes": pdf_bytes,
         "pageCount": len(pages),
         "document": document,
         "record": record,
+        "qualitySignals": {
+            "evidenceCount": len(unique_evidence),
+            "themeCount": len(top_themes),
+            "metricPageCount": metric_page_count,
+        },
     }
 
 
-def research_company(company: dict[str, Any]) -> dict[str, Any]:
+def candidate_rank(candidate: dict[str, Any]) -> tuple[Any, ...]:
+    signals = candidate.get("qualitySignals") or {}
+    document = candidate.get("document") or {}
+    return (
+        1 if candidate.get("status") == "eligible" else 0,
+        int(candidate.get("confidence") or 0),
+        int(signals.get("evidenceCount") or 0),
+        int(signals.get("themeCount") or 0),
+        int(signals.get("metricPageCount") or 0),
+        str(document.get("date") or ""),
+        int(document.get("score") or 0),
+    )
+
+
+def research_company(company: dict[str, Any], max_document_attempts: int) -> dict[str, Any]:
     started = time.time()
     try:
         _, documents = fetch_jpx_detail(str(company["code"]))
-        document = select_document(documents)
-        if not document:
-            return {"code": str(company["code"]), "name": company["name"], "status": "no_candidate_document", "documentCount": len(documents)}
+        ranked_documents = rank_documents(documents)
+        if not ranked_documents:
+            return {
+                "code": str(company["code"]),
+                "name": company["name"],
+                "status": "no_candidate_document",
+                "documentCount": len(documents),
+                "elapsedSeconds": round(time.time() - started, 2),
+            }
+
         session = requests.Session()
         session.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "ja,en;q=0.7"})
-        pages, pdf_bytes = extract_pdf(session, document["url"])
-        if sum(len(page) for page in pages) < 500:
-            return {"code": str(company["code"]), "name": company["name"], "status": "pdf_text_insufficient", "document": document}
-        result = build_candidate(company, document, pages, pdf_bytes)
-        result["elapsedSeconds"] = round(time.time() - started, 2)
-        result["documentCount"] = len(documents)
-        return result
+        attempts: list[dict[str, Any]] = []
+        candidates: list[dict[str, Any]] = []
+
+        for document in ranked_documents[:max_document_attempts]:
+            attempt = {
+                "title": document.get("title"),
+                "date": document.get("date"),
+                "url": document.get("url"),
+                "score": document.get("score"),
+            }
+            try:
+                pages, pdf_bytes = extract_pdf(session, document["url"])
+                text_length = sum(len(page) for page in pages)
+                attempt.update({"pageCount": len(pages), "textLength": text_length})
+                if len(pages) < 2 or text_length < 350:
+                    attempt["result"] = "pdf_text_insufficient"
+                    attempts.append(attempt)
+                    continue
+                candidate = build_candidate(company, document, pages, pdf_bytes)
+                attempt["result"] = candidate["status"]
+                attempt["confidence"] = candidate["confidence"]
+                attempts.append(attempt)
+                candidates.append(candidate)
+                if candidate["status"] == "eligible" and candidate["confidence"] >= 95:
+                    break
+            except Exception as error:  # noqa: BLE001
+                attempt["result"] = "error"
+                attempt["error"] = f"{type(error).__name__}: {error}"[:300]
+                attempts.append(attempt)
+
+        if not candidates:
+            return {
+                "code": str(company["code"]),
+                "name": company["name"],
+                "status": "all_candidate_documents_failed",
+                "documentCount": len(documents),
+                "attemptedDocumentCount": len(attempts),
+                "documentAttempts": attempts,
+                "elapsedSeconds": round(time.time() - started, 2),
+            }
+
+        best = max(candidates, key=candidate_rank)
+        best["elapsedSeconds"] = round(time.time() - started, 2)
+        best["documentCount"] = len(documents)
+        best["attemptedDocumentCount"] = len(attempts)
+        best["documentAttempts"] = attempts
+        best["researchEngine"] = "multi-document-v2"
+        return best
     except Exception as error:  # noqa: BLE001
         return {
             "code": str(company["code"]),
@@ -463,6 +609,7 @@ def research_company(company: dict[str, Any]) -> dict[str, Any]:
             "status": "error",
             "error": f"{type(error).__name__}: {error}"[:500],
             "elapsedSeconds": round(time.time() - started, 2),
+            "researchEngine": "multi-document-v2",
         }
 
 
@@ -489,35 +636,66 @@ def main() -> None:
     if not selected:
         raise RuntimeError("No companies selected for source research")
 
-    workers = max(1, min(int(config.get("concurrency", 8)), 12))
+    workers = max(1, min(int(config.get("concurrency", 8)), 8))
+    max_document_attempts = max(1, min(int(config.get("maxDocumentAttempts", 8)), 12))
     results: list[dict[str, Any]] = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
-        future_map = {executor.submit(research_company, company): company for company in selected}
+        future_map = {
+            executor.submit(research_company, company, max_document_attempts): company
+            for company in selected
+        }
         for index, future in enumerate(concurrent.futures.as_completed(future_map), start=1):
             result = future.result()
             results.append(result)
-            print(f"{index}/{len(selected)} {result['code']} {result['status']}", flush=True)
+            print(
+                f"{index}/{len(selected)} {result['code']} {result['status']} "
+                f"confidence={result.get('confidence', '-')}",
+                flush=True,
+            )
 
     results.sort(key=lambda row: str(row["code"]))
     eligible_results = [row for row in results if row.get("status") == "eligible"]
-    output_path = ROOT / config.get("outputPath", f"operations/source-research/{config['batchId']}-candidates.json")
+    output_path = ROOT / config.get(
+        "outputPath",
+        f"operations/source-research/{config['batchId']}-candidates.json",
+    )
     output = {
         "schemaVersion": "source-research-candidates-v1",
         "batchId": config["batchId"],
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "sourceBundleSha256": manifest["sha256"],
+        "researchEngine": "multi-document-v2",
+        "maxDocumentAttempts": max_document_attempts,
         "automaticFactCompletion": False,
         "automaticApproval": False,
         "selectedCount": len(selected),
         "eligibleCount": len(eligible_results),
         "needsReviewCount": len([row for row in results if row.get("status") == "needs_review"]),
-        "failureCount": len([row for row in results if row.get("status") not in {"eligible", "needs_review"}]),
+        "failureCount": len(
+            [row for row in results if row.get("status") not in {"eligible", "needs_review"}]
+        ),
         "selectedCodes": [str(row["code"]) for row in selected],
         "eligibleCodes": [row["code"] for row in eligible_results],
         "results": results,
     }
     write_json(output_path, output)
-    print(json.dumps({key: output[key] for key in ["batchId", "selectedCount", "eligibleCount", "needsReviewCount", "failureCount"]}, ensure_ascii=False, indent=2))
+    print(
+        json.dumps(
+            {
+                key: output[key]
+                for key in [
+                    "batchId",
+                    "researchEngine",
+                    "selectedCount",
+                    "eligibleCount",
+                    "needsReviewCount",
+                    "failureCount",
+                ]
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

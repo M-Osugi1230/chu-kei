@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "production-bulk-promotion-approval-report-v1",
+  "approvalId": "production-bulk-promotion-approval-018",
+  "aggregateApprovalSha256": "fb1cec83057477cab1705483914690b57126fb6fd24c89d7dd4275575750812f",
+  "approvalIdentity": {
+    "schemaVersion": "production-bulk-promotion-aggregate-identity-v1",
+    "readinessBundleSha256": "7fe677dbf8aaa5cdb48da4d16e02b90c92a75f91d9fa286719581f625399b8d8",
+    "expectedCoreBefore": 2996,
+    "targetCoreCount": 3000,
+    "reports": [
+      {
+        "path": "operations/source-research/source-research-bulk-approval-021-report.json",
+        "proposalSha256": "c72dc13c3d2d1033e9c6eb53a38cb130651165e82daf2a246ac897555cc39440",
+        "approvalId": "source-research-bulk-approval-021",
+        "approvedCount": 4
+      }
+    ],
+    "codes": [
+      "4076",
+      "4997",
+      "7039",
+      "9832"
+    ]
+  },
+  "explicitApproval": true,
+  "automaticSelectionAllowed": false,
+  "expectedCoreBefore": 2996,
+  "approvedCount": 4,
+  "targetCoreCount": 3000,
+  "productionBatchPath": "operations/production-quality/production-promotion-batch-367.json"
+}

@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "structured-expansion-batch-config-v2",
+  "batchId": "structured-expansion-batch-87",
+  "patchPrefix": "batch87",
+  "dateTag": "20260722",
+  "lastVerifiedDate": "2026-07-22",
+  "createdAtBase": "2026-07-22T07:35:00.000Z",
+  "reviewedAtBase": "2026-07-22T07:45:00.000Z",
+  "targetStructuredCount": 2500,
+  "expectedCompanyCount": 2500,
+  "expectedSourceConfirmed": 2500,
+  "fromStage": "jpx_indexed",
+  "targetStage": "detailed_extracted",
+  "sourceResearchBulkApproval": {
+    "proposalPath": "operations/source-research/source-research-proposal-2500-replacements.json",
+    "proposalSha256": "6ab2986db38c94a4692b19ab00565f7a165e8104342476d3a5612901e160e539",
+    "candidatePath": "operations/source-research/source-research-batch-022-candidates.json",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "recoveryMode": null,
+    "approvedCount": 3
+  },
+  "records": [
+    {
+      "code": "3905",
+      "name": "データセクション",
+      "category": "情報・通信業/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/39050/140120260630584947.pdf",
+      "document": "事業計画及び成長可能性に関する事項",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-06-30",
+      "themes": [
+        "AI",
+        "事業成長",
+        "海外",
+        "商品・サービス"
+      ],
+      "summary": "データセクション（3905）は、JPXの企業コード別公式開示資料でAI、事業成長、海外、商品・サービスを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "公式PDF p.35で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "profit": "公式PDF p.35で利益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "margin": "固定の中期収益性・資本効率は当該公式資料の抽出範囲で確認できない。",
+      "capital": "公式PDF p.38で投資・資本配分に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "returnPolicy": "固定の中期株主還元は当該公式資料の抽出範囲で確認できない。",
+      "highlights": [
+        "事業計画及び成長可能性に関する事項を2026-06-30に公表した。",
+        "公式資料ではAI、事業成長、海外を主要テーマとして確認した。",
+        "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.36: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.35: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.40: 計画・成長戦略・投資・株主還元に関する記載を確認する。"
+      ],
+      "flags": {
+        "ma": true,
+        "capitalEfficiency": false,
+        "shareholderReturn": false,
+        "progress": false,
+        "overseas": true,
+        "dx": true,
+        "humanCapital": true,
+        "newBusiness": false,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.36: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    {
+      "code": "6069",
+      "name": "トレンダーズ",
+      "category": "サービス業/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/60690/140120260630584209.pdf",
+      "document": "事業計画及び成長可能性に関する事項",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-06-30",
+      "themes": [
+        "商品・サービス",
+        "事業成長",
+        "株主還元",
+        "DX"
+      ],
+      "summary": "トレンダーズ（6069）は、JPXの企業コード別公式開示資料で商品・サービス、事業成長、株主還元、DXを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "公式PDF p.7で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "profit": "公式PDF p.7で利益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "margin": "固定の中期収益性・資本効率は当該公式資料の抽出範囲で確認できない。",
+      "capital": "固定の中期投資・資本配分は当該公式資料の抽出範囲で確認できない。",
+      "returnPolicy": "公式PDF p.41で株主還元に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "highlights": [
+        "事業計画及び成長可能性に関する事項を2026-06-30に公表した。",
+        "公式資料では商品・サービス、事業成長、株主還元を主要テーマとして確認した。",
+        "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.30: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.40: 財務目標・KPI・事業方針に関する記載を確認する。",
+        "公式PDF p.39: 財務目標・KPI・事業方針に関する記載を確認する。"
+      ],
+      "flags": {
+        "ma": true,
+        "capitalEfficiency": false,
+        "shareholderReturn": true,
+        "progress": false,
+        "overseas": false,
+        "dx": true,
+        "humanCapital": false,
+        "newBusiness": true,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.30: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    {
+      "code": "6564",
+      "name": "ミダックホールディングス",
+      "category": "サービス業/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/65640/140120260713592478.pdf",
+      "document": "株式会社ミダックと函南町は「地震等大規模災害時における災害廃棄物の処理等に関する協定書」を締結しました",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-07-14",
+      "themes": [
+        "事業戦略",
+        "商品・サービス",
+        "経営基盤"
+      ],
+      "summary": "ミダックホールディングス（6564）は、JPXの企業コード別公式開示資料で事業戦略、商品・サービス、経営基盤を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "固定の中期売上高・売上収益は当該公式資料の抽出範囲で確認できない。",
+      "profit": "固定の中期利益は当該公式資料の抽出範囲で確認できない。",
+      "margin": "固定の中期収益性・資本効率は当該公式資料の抽出範囲で確認できない。",
+      "capital": "固定の中期投資・資本配分は当該公式資料の抽出範囲で確認できない。",
+      "returnPolicy": "固定の中期株主還元は当該公式資料の抽出範囲で確認できない。",
+      "highlights": [
+        "株式会社ミダックと函南町は「地震等大規模災害時における災害廃棄物の処理等に関する協定書」を締結しましたを2026-07-14に公表した。",
+        "公式資料では事業戦略、商品・サービス、経営基盤を主要テーマとして確認した。",
+        "2ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.2: 事業方針に関する記載を確認する。",
+        "公式PDF p.1: 主要な事業方針・数値記載を確認する。"
+      ],
+      "flags": {
+        "ma": false,
+        "capitalEfficiency": false,
+        "shareholderReturn": false,
+        "progress": false,
+        "overseas": false,
+        "dx": false,
+        "humanCapital": false,
+        "newBusiness": false,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該JPX公式開示資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.2: 事業方針に関する記載を確認する。"
+      }
+    }
+  ]
+}

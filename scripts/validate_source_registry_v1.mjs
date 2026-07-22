@@ -3,12 +3,14 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
 import net from 'node:net';
+import { countPrimaryEvidenceReferences } from './lib/evidence_reference_v1.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const ARTIFACT_DIR = path.join(ROOT, 'artifacts');
 const REPORT_PATH = path.join(ARTIFACT_DIR, 'source-registry-report-v1.json');
 const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
+const PRODUCTION_TARGET_PATH = path.join(ROOT, 'operations', 'production-quality', 'production-quality-target-v1.json');
 const checks = [];
 const issues = [];
 const warnings = [];
@@ -16,6 +18,9 @@ const warnings = [];
 const milestone = fs.existsSync(MILESTONE_PATH)
   ? JSON.parse(fs.readFileSync(MILESTONE_PATH, 'utf8'))
   : { schemaVersion: 'coverage-milestone-v1', minimumSourceConfirmed: 200 };
+const productionTarget = fs.existsSync(PRODUCTION_TARGET_PATH)
+  ? JSON.parse(fs.readFileSync(PRODUCTION_TARGET_PATH, 'utf8'))
+  : { minimumPageEvidenceRefs: 2 };
 
 if (milestone.schemaVersion !== 'coverage-milestone-v1') {
   throw new Error(`Unsupported coverage milestone schema: ${milestone.schemaVersion}`);
@@ -108,16 +113,17 @@ for (const stage of ['core', 'detailed_extracted', 'source_indexed']) {
   stageSummary[stage] = {
     companies: rows.length,
     publicationDate: rows.filter(company => company.planPublishedDate).length,
-    pageEvidence: rows.filter(company => (company.evidenceRefs || []).some(ref => /(?:p\.?\s*\d|ページ\s*\d)/i.test(String(ref)))).length,
+    pageEvidence: rows.filter(company => countPrimaryEvidenceReferences(company.evidenceRefs) >= productionTarget.minimumPageEvidenceRefs).length,
     verifiedDate: rows.filter(company => /^\d{4}-\d{2}-\d{2}$/.test(company.lastVerifiedDate || '')).length,
   };
 }
 
 fs.mkdirSync(ARTIFACT_DIR, { recursive: true });
 const report = {
-  version: 'source-audit-v1',
+  version: 'source-audit-v1.1',
   checkedAt: new Date().toISOString(),
   milestone,
+  minimumPageEvidenceRefs: productionTarget.minimumPageEvidenceRefs,
   summary: {
     sourceConfirmedCompanies: sourceConfirmed.length,
     uniqueUrls: urlGroups.size,

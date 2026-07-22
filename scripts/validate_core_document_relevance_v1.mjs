@@ -65,18 +65,20 @@ for (const company of coreCompanies) {
   }
 }
 
+const mismatchCompanyCodes = [...new Set(metricEvidenceMismatches.map(row => row.code))];
 const issues = [
   ...irrelevantDocuments.map(row => ({ type: 'administrative_document_without_strategy_anchor', ...row })),
   ...metricEvidenceMismatches.map(row => ({ type: 'metric_page_missing_from_evidence_refs', ...row })),
 ];
 const report = {
-  version: 'core-document-relevance-v1',
+  version: 'core-document-relevance-v1.1',
   checkedAt: new Date().toISOString(),
   bundleSha256: manifest.sha256,
   companyCount: bundle.companies?.length || 0,
   coreCompanyCount: coreCompanies.length,
   irrelevantDocumentCount: irrelevantDocuments.length,
   metricEvidenceMismatchCount: metricEvidenceMismatches.length,
+  metricEvidenceMismatchCompanyCount: mismatchCompanyCodes.length,
   allPassed: issues.length === 0,
   irrelevantDocuments,
   metricEvidenceMismatches,
@@ -89,9 +91,17 @@ console.log(JSON.stringify({
   companyCount: report.companyCount,
   coreCompanyCount: report.coreCompanyCount,
   irrelevantDocumentCount: report.irrelevantDocumentCount,
+  irrelevantDocuments,
   metricEvidenceMismatchCount: report.metricEvidenceMismatchCount,
+  metricEvidenceMismatchCompanyCount: report.metricEvidenceMismatchCompanyCount,
+  metricEvidenceMismatchSample: metricEvidenceMismatches.slice(0, 20).map(row => ({
+    code: row.code,
+    name: row.name,
+    field: row.field,
+    page: row.page,
+  })),
   allPassed: report.allPassed,
 }, null, 2));
 if (!report.allPassed) {
-  throw new Error(`Core document relevance audit failed: irrelevant=${irrelevantDocuments.length}, metricEvidenceMismatch=${metricEvidenceMismatches.length}`);
+  throw new Error(`Core document relevance audit failed: irrelevant=${irrelevantDocuments.length}, metricEvidenceMismatch=${metricEvidenceMismatches.length}, mismatchCompanies=${mismatchCompanyCodes.length}`);
 }

@@ -29,6 +29,35 @@ function readCurrentBundle() {
   };
 }
 
+function candidateRank(candidate) {
+  const statusScore = {
+    eligible: 4,
+    needs_review: 3,
+    pdf_text_insufficient: 2,
+    error: 1,
+  }[String(candidate.status || '')] || 0;
+  const documentDate = String(candidate.document?.date || '').replace(/-/g, '');
+  const evidenceCount = (candidate.record?.evidenceRefs || [])
+    .filter(ref => /公式PDF p\.\d+/.test(String(ref))).length;
+  return [
+    statusScore,
+    candidate.identityMatch === true ? 1 : 0,
+    Number(candidate.confidence || 0),
+    Number(documentDate || 0),
+    Number(candidate.pageCount || 0),
+    evidenceCount,
+  ];
+}
+
+function isBetterCandidate(next, current) {
+  const nextRank = candidateRank(next);
+  const currentRank = candidateRank(current);
+  for (let index = 0; index < nextRank.length; index += 1) {
+    if (nextRank[index] !== currentRank[index]) return nextRank[index] > currentRank[index];
+  }
+  return false;
+}
+
 const config = readJson(CONFIG_PATH);
 if (config.schemaVersion !== 'source-research-proposal-config-v1') {
   throw new Error(`Unsupported proposal config: ${config.schemaVersion}`);
@@ -60,16 +89,25 @@ const requiredCurrentStage = config.requiredCurrentStage == null
   : String(config.requiredCurrentStage);
 
 const resultByCode = new Map();
+const duplicateCodes = new Set();
+const candidateOrigins = new Map();
 for (const { report, candidatePath } of sourceReports) {
+  const relativeCandidatePath = path.relative(ROOT, candidatePath);
   for (const candidate of report.results || []) {
     const code = String(candidate.code);
-    if (resultByCode.has(code)) {
-      throw new Error(`Duplicate candidate code across reports: ${code}`);
+    const origins = candidateOrigins.get(code) || [];
+    origins.push(relativeCandidatePath);
+    candidateOrigins.set(code, origins);
+    const current = resultByCode.get(code);
+    if (current) {
+      duplicateCodes.add(code);
+      if (isBetterCandidate(candidate, current)) resultByCode.set(code, candidate);
+    } else {
+      resultByCode.set(code, candidate);
     }
-    resultByCode.set(code, candidate);
   }
   if ((report.results || []).length !== Number(report.selectedCount || 0)) {
-    throw new Error(`Candidate selectedCount mismatch: ${path.relative(ROOT, candidatePath)}`);
+    throw new Error(`Candidate selectedCount mismatch: ${relativeCandidatePath}`);
   }
 }
 
@@ -104,6 +142,8 @@ if (sourceReports.length === 1) {
     eligibleCount: results.filter(candidate => candidate.status === 'eligible').length,
     needsReviewCount: results.filter(candidate => candidate.status === 'needs_review').length,
     failureCount: results.filter(candidate => !['eligible', 'needs_review'].includes(candidate.status)).length,
+    duplicateCodeCount: duplicateCodes.size,
+    duplicateCodes: [...duplicateCodes].sort((left, right) => left.localeCompare(right, 'ja')),
     selectedCodes: results.map(candidate => String(candidate.code)),
     eligibleCodes: results.filter(candidate => candidate.status === 'eligible').map(candidate => String(candidate.code)),
     sourceReports: sourceReports.map(({ candidatePath: sourcePath, report: sourceReport }) => ({
@@ -112,6 +152,11 @@ if (sourceReports.length === 1) {
       selectedCount: sourceReport.selectedCount,
       sourceBundleSha256: sourceReport.sourceBundleSha256,
     })),
+    candidateOrigins: Object.fromEntries(
+      [...candidateOrigins.entries()]
+        .filter(([, origins]) => origins.length > 1)
+        .sort(([left], [right]) => left.localeCompare(right, 'ja')),
+    ),
     results,
   };
   writeJson(candidatePath, report);
@@ -217,6 +262,7 @@ console.log(JSON.stringify({
   outputPath: path.relative(ROOT, outputPath),
   candidatePath: path.relative(ROOT, candidatePath),
   sourceReportCount: sourceReports.length,
+  duplicateCodeCount: duplicateCodes.size,
   currentBundleSha256: currentManifest.sha256,
   requiredCurrentStage,
   proposalSha256,

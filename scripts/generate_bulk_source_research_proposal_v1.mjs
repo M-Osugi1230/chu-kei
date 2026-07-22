@@ -1,8 +1,10 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
+import zlib from 'node:zlib';
 
 const ROOT = path.resolve('.');
+const DATA_DIR = path.join(ROOT, 'site', 'data');
 const CONFIG_PATH = path.resolve(
   process.env.SOURCE_RESEARCH_PROPOSAL_CONFIG
     || 'operations/source-research/source-research-proposal-config.json',
@@ -13,6 +15,19 @@ const writeJson = (file, value) => {
   fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
 };
 const sha256 = value => crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
+
+function readCurrentBundle() {
+  const manifest = readJson(path.join(DATA_DIR, 'bundle.manifest.json'));
+  const compressed = Buffer.concat(
+    manifest.parts.map(part => fs.readFileSync(path.join(DATA_DIR, part.file))),
+  );
+  const digest = crypto.createHash('sha256').update(compressed).digest('hex');
+  if (digest !== manifest.sha256) throw new Error('Bundle SHA-256 mismatch');
+  return {
+    manifest,
+    bundle: JSON.parse(zlib.gunzipSync(compressed).toString('utf8')),
+  };
+}
 
 const config = readJson(CONFIG_PATH);
 if (config.schemaVersion !== 'source-research-proposal-config-v1') {
@@ -36,13 +51,15 @@ const sourceReports = configuredCandidatePaths.map(relativePath => {
   return { candidatePath, report };
 });
 
-const sourceBundleSha256s = [...new Set(sourceReports.map(({ report }) => report.sourceBundleSha256))];
-if (sourceBundleSha256s.length !== 1 || !sourceBundleSha256s[0]) {
-  throw new Error(`Candidate reports must share one source bundle SHA-256: ${sourceBundleSha256s.join(', ')}`);
-}
+const { manifest: currentManifest, bundle: currentBundle } = readCurrentBundle();
+const currentStageByCode = new Map(
+  (currentBundle.companies || []).map(company => [String(company.code), String(company.stage || '')]),
+);
+const requiredCurrentStage = config.requiredCurrentStage == null
+  ? null
+  : String(config.requiredCurrentStage);
 
 const resultByCode = new Map();
-const selectedCodes = [];
 for (const { report, candidatePath } of sourceReports) {
   for (const candidate of report.results || []) {
     const code = String(candidate.code);
@@ -50,10 +67,6 @@ for (const { report, candidatePath } of sourceReports) {
       throw new Error(`Duplicate candidate code across reports: ${code}`);
     }
     resultByCode.set(code, candidate);
-  }
-  for (const rawCode of report.selectedCodes || []) {
-    const code = String(rawCode);
-    if (!selectedCodes.includes(code)) selectedCodes.push(code);
   }
   if ((report.results || []).length !== Number(report.selectedCount || 0)) {
     throw new Error(`Candidate selectedCount mismatch: ${path.relative(ROOT, candidatePath)}`);
@@ -77,12 +90,14 @@ if (sourceReports.length === 1) {
     throw new Error('mergedCandidateOutputPath is required when candidatePaths contains multiple reports');
   }
   candidatePath = path.resolve(config.mergedCandidateOutputPath);
-  const results = [...resultByCode.values()].sort((left, right) => String(left.code).localeCompare(String(right.code), 'ja'));
+  const results = [...resultByCode.values()]
+    .sort((left, right) => String(left.code).localeCompare(String(right.code), 'ja'));
   report = {
     schemaVersion: 'source-research-candidates-v1',
     batchId: aggregateBatchId,
     generatedAt: new Date().toISOString(),
-    sourceBundleSha256: sourceBundleSha256s[0],
+    sourceBundleSha256: currentManifest.sha256,
+    sourceReportBundleSha256s: [...new Set(sourceReports.map(({ report: sourceReport }) => sourceReport.sourceBundleSha256))],
     automaticFactCompletion: false,
     automaticApproval: false,
     selectedCount: results.length,
@@ -95,6 +110,7 @@ if (sourceReports.length === 1) {
       path: path.relative(ROOT, sourcePath),
       batchId: sourceReport.batchId,
       selectedCount: sourceReport.selectedCount,
+      sourceBundleSha256: sourceReport.sourceBundleSha256,
     })),
     results,
   };
@@ -117,10 +133,13 @@ if (maximumProposedCount != null
 }
 
 const evaluations = (report.results || []).map(candidate => {
+  const code = String(candidate.code);
   const record = candidate.record || {};
   const document = candidate.document || {};
   const evidenceRefs = record.evidenceRefs || [];
+  const currentStage = currentStageByCode.get(code) || null;
   const checks = {
+    currentStage: requiredCurrentStage == null || currentStage === requiredCurrentStage,
     allowedStatus: allowedStatuses.has(candidate.status),
     officialJpxPdf: /^https:\/\/www2\.jpx\.co\.jp\/disc\//.test(document.url || record.sourceUrl || ''),
     identityMatch: candidate.identityMatch === true,
@@ -134,8 +153,9 @@ const evaluations = (report.results || []).map(candidate => {
     progressGuard: record.progressAssessment?.status !== 'connected',
   };
   return {
-    code: String(candidate.code),
+    code,
     name: candidate.name,
+    currentStage,
     documentDate: document.date || null,
     documentTitle: document.title || null,
     documentUrl: document.url || record.sourceUrl || null,
@@ -155,8 +175,9 @@ const codes = approvedRows.map(row => row.code);
 const proposalIdentity = {
   schemaVersion: 'source-research-bulk-proposal-identity-v1',
   batchId: report.batchId,
-  sourceBundleSha256: report.sourceBundleSha256,
+  sourceBundleSha256: currentManifest.sha256,
   candidatePath: path.relative(ROOT, candidatePath),
+  requiredCurrentStage,
   minimumConfidence,
   minimumPublicationDate: minimumDate,
   maximumProposedCount,
@@ -172,7 +193,8 @@ writeJson(outputPath, {
   automaticProductionPromotion: false,
   candidatePath: path.relative(ROOT, candidatePath),
   sourceCandidatePaths: sourceReports.map(({ candidatePath: sourcePath }) => path.relative(ROOT, sourcePath)),
-  sourceBundleSha256: report.sourceBundleSha256,
+  sourceBundleSha256: currentManifest.sha256,
+  requiredCurrentStage,
   selectedCount: evaluations.length,
   qualifiedCount: qualifiedRows.length,
   proposedCount: codes.length,
@@ -195,6 +217,8 @@ console.log(JSON.stringify({
   outputPath: path.relative(ROOT, outputPath),
   candidatePath: path.relative(ROOT, candidatePath),
   sourceReportCount: sourceReports.length,
+  currentBundleSha256: currentManifest.sha256,
+  requiredCurrentStage,
   proposalSha256,
   selectedCount: evaluations.length,
   qualifiedCount: qualifiedRows.length,

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "production-quality-target-v1",
-  "targetProductionCompanies": 2500,
-  "companyUniverse": 2500,
+  "targetProductionCompanies": 3000,
+  "companyUniverse": 3000,
   "qualityPrinciple": "公式一次資料・比較可能な構造化・ページ証跡・進捗接続・個別レビュー・独立再検証を満たした企業だけを本番品質として扱う",
   "automaticPromotionAllowed": false,
   "requiredMachineChecks": [
@@ -27,8 +27,8 @@
     "未開示項目は未開示として記録し、推計値で要件を満たしてはならない",
     "既存coreも同じ監査対象とし、要件不足は補修キューへ残す",
     "機械要件を満たしても個別承認と独立再検証なしでは昇格しない",
-    "残るCoverageβ500社を現時点のJPX企業コード別公式開示から再調査する",
+    "最新JPX上場銘柄一覧から現行上場企業500社を追加し、Coverageβとして個別調査する",
     "複数資料を比較し、公表日、企業同一性、複数ページ証跡、構造化項目を満たす企業だけを提案ハッシュ固定・二段階承認で昇格する",
-    "最終目標は掲載2,500社すべての本番品質化とし、未達企業は不足理由を記録して補修する"
+    "最終目標は掲載3,000社すべての本番品質化とし、未達企業は不足理由を記録して補修する"
   ]
 }

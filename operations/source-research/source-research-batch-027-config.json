@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "source-research-batch-v1",
+  "batchId": "source-research-batch-027",
+  "codes": [
+    "7039",
+    "4997",
+    "9832",
+    "4076"
+  ],
+  "concurrency": 4,
+  "outputPath": "operations/source-research/source-research-batch-027-candidates.json",
+  "selectionPolicy": {
+    "stage": "jpx_indexed",
+    "explicitCodesPreparedFromBundle": true,
+    "scorePolicy": "market-industry-holding-company-v1",
+    "excludedCodeCount": 0,
+    "exclusionReports": []
+  },
+  "safety": {
+    "automaticFactCompletion": false,
+    "automaticApproval": false,
+    "automaticProductionPromotion": false,
+    "requireJpxCodeSpecificDisclosure": true,
+    "requirePdfPageEvidence": true,
+    "requirePublicationDate": true,
+    "requireIdentityMatchBeforeApproval": true,
+    "automaticConnectedStatusAllowed": false
+  }
+}

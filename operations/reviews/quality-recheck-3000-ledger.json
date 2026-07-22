@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "governance-ledger-batch-v1",
+  "batchId": "quality-recheck-3000-20260722",
+  "automaticApprovalAllowed": false,
+  "reviews": [
+    {
+      "id": "review-545A-20260722-quality-recheck",
+      "companyCode": "545A",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "changes_requested",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "numbersUnitsYears": true,
+        "strategyClassification": false,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "quality-recheck-agent",
+      "reviewer": "independent-quality-reviewer",
+      "sourceUrl": "https://www.toranvia.co.jp/news/",
+      "sourcePages": [
+        "公式Webページ（見出し: お知らせ一覧）",
+        "公式Webページ（見出し: 2026年度事業計画 説明動画）"
+      ],
+      "note": "株主優待制度のお知らせが事業計画資料として昇格していたため、会社公式の2026年度事業計画説明動画へ修正する。",
+      "decisionReason": "資料種別がChu-keiの中期・事業計画調査目的と一致していなかった。",
+      "createdAt": "2026-07-22T12:30:00.000Z",
+      "reviewedAt": "2026-07-22T12:40:00.000Z"
+    },
+    {
+      "id": "review-3911-20260722-quality-recheck",
+      "companyCode": "3911",
+      "fromStage": "core",
+      "targetStage": "core",
+      "status": "changes_requested",
+      "checklist": {
+        "officialSource": true,
+        "publicationDate": true,
+        "pageEvidence": false,
+        "numbersUnitsYears": true,
+        "strategyClassification": true,
+        "comparisonDisplay": true,
+        "mobileDisplay": true
+      },
+      "author": "quality-recheck-agent",
+      "reviewer": "independent-quality-reviewer",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/39110/140120251028580150.pdf",
+      "sourcePages": [
+        "公式PDF p.20",
+        "公式PDF p.6",
+        "公式PDF p.45"
+      ],
+      "note": "数値欄が参照するp.20・p.6が一次証跡一覧に含まれていなかったため、証跡を整合させる。",
+      "decisionReason": "数値欄とevidenceRefsのページ対応が不一致だった。",
+      "createdAt": "2026-07-22T12:31:00.000Z",
+      "reviewedAt": "2026-07-22T12:41:00.000Z"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "correction-545A-20260722-source-relevance",
+      "companyCode": "545A",
+      "fieldPath": "sourceUrl,document,period,planPublishedDate,themes,summary,metrics,evidenceRefs,progressAssessment",
+      "before": "株主優待制度の導入に関するお知らせ",
+      "after": "会社公式の2026年度事業計画 説明動画",
+      "reason": "事務的な株主優待資料を事業計画資料として扱っていた誤りを修正する。",
+      "sourceUrl": "https://www.toranvia.co.jp/news/",
+      "sourcePage": "お知らせ一覧 / 2026年度事業計画 説明動画",
+      "status": "corrected",
+      "reviewDecisionId": "review-545A-20260722-quality-recheck",
+      "detectedAt": "2026-07-22T12:25:00.000Z",
+      "correctedAt": "2026-07-22T12:45:00.000Z"
+    },
+    {
+      "id": "correction-3911-20260722-evidence-linkage",
+      "companyCode": "3911",
+      "fieldPath": "evidenceRefs,progressAssessment.sourceRef,warnings",
+      "before": "数値欄のp.20・p.6が一次証跡一覧に未登録",
+      "after": "p.20・p.6・p.45を一次証跡として登録",
+      "reason": "数値欄と一次証跡のページ対応を一致させる。",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/39110/140120251028580150.pdf",
+      "sourcePage": "p.20 / p.6 / p.45",
+      "status": "corrected",
+      "reviewDecisionId": "review-3911-20260722-quality-recheck",
+      "detectedAt": "2026-07-22T12:26:00.000Z",
+      "correctedAt": "2026-07-22T12:46:00.000Z"
+    }
+  ]
+}

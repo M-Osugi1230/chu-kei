@@ -38,7 +38,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - name: Validate frontend budgets
         run: node scripts/validate_frontend_budget_v1.mjs
       - name: Upload static budget report
@@ -59,7 +59,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - name: Install pinned browser test dependencies
         run: npm install --no-save --ignore-scripts --no-audit --no-fund @playwright/test@1.53.0 @axe-core/playwright@4.10.2
       - name: Install Chromium

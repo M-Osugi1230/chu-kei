@@ -75,8 +75,14 @@ const findSourceResearchRecoveryProposalRequest = () => findRequestedConfig(sour
 const findSourceResearchBulkApprovalRequest = () => findRequestedConfig(sourceResearchDir, /^source-research-bulk-approval-\d+\.json$/);
 
 function executeSourceResearch(sourceResearch) {
+  const researchScript = String(
+    sourceResearch.config.researchScript || 'scripts/research_jpx_documents_v1.py',
+  );
+  if (!researchScript.startsWith('scripts/') || !researchScript.endsWith('.py')) {
+    throw new Error(`Invalid researchScript: ${researchScript}`);
+  }
   runCommand('python3', [
-    'scripts/research_jpx_documents_v1.py',
+    researchScript,
     '--config', path.relative(ROOT, sourceResearch.filePath),
   ]);
   runNode('scripts/normalize_source_research_candidates_v1.mjs', {

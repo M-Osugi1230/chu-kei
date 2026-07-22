@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "source-research-batch-v1",
+  "batchId": "source-research-batch-025",
+  "batchSize": 29,
+  "concurrency": 8,
+  "maxDocumentAttempts": 12,
+  "researchScript": "scripts/research_jpx_documents_recent_v2.py",
+  "excludeCodes": [],
+  "outputPath": "operations/source-research/source-research-batch-025-candidates.json",
+  "selectionPolicy": {
+    "stage": "jpx_indexed",
+    "explicitCodesPreparedFromBundle": false,
+    "documentDateFloor": "2022-01-01",
+    "engine": "multi-document-v2-recent"
+  },
+  "safety": {
+    "automaticFactCompletion": false,
+    "automaticApproval": false,
+    "automaticProductionPromotion": false,
+    "requireJpxCodeSpecificDisclosure": true,
+    "requirePdfPageEvidence": true,
+    "requirePublicationDate": true,
+    "requireIdentityMatchBeforeApproval": true,
+    "automaticConnectedStatusAllowed": false
+  },
+  "runRequested": true
+}

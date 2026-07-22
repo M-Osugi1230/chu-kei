@@ -7,8 +7,10 @@ import { buildQualityProfile } from './lib/quality_profile_v2.mjs';
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
 const INPUT_PATH = path.join(ROOT, 'operations', 'research', 'jpx-listed-companies-latest.json');
+const RUN_CONFIG_PATH = path.join(ROOT, 'operations', 'coverage-growth', 'run-company-coverage.json');
 const MILESTONE_PATH = path.join(ROOT, 'operations', 'quality', 'coverage-milestone-v1.json');
 const REPORT_PATH = path.join(ROOT, 'operations', 'coverage-growth', 'company-total-1000-report.json');
+const ARCHIVE_PATH = path.join(ROOT, 'operations', 'research', 'delisted-company-archive-v1.json');
 const TARGET_TOTAL = Number(process.env.TARGET_COMPANY_TOTAL || 1000);
 const VERIFIED_DATE = process.env.COVERAGE_VERIFIED_DATE || new Date().toISOString().slice(0, 10);
 const BUNDLE_BUDGET = Number(process.env.COMPANY_COVERAGE_BUNDLE_BUDGET || 262144);
@@ -111,9 +113,57 @@ function stageCounts(companies) {
 
 const jpx = readJson(INPUT_PATH);
 if (jpx.version !== 'jpx-listed-companies-v1') throw new Error(`Unsupported JPX list version: ${jpx.version}`);
+const runConfig = fs.existsSync(RUN_CONFIG_PATH) ? readJson(RUN_CONFIG_PATH) : {};
+const replacementRows = Array.isArray(runConfig.replaceCompanies) ? runConfig.replaceCompanies : [];
+const replacementByCode = new Map(replacementRows.map(row => [String(row.code).toUpperCase(), row]));
+const replaceCodes = new Set(replacementByCode.keys());
 const { manifest: beforeManifest, payload } = readBundle();
 const beforeCount = payload.companies.length;
-const needed = Math.max(0, TARGET_TOTAL - beforeCount);
+
+const removed = payload.companies.filter(company => replaceCodes.has(String(company.code).toUpperCase()));
+if (removed.length !== replaceCodes.size) {
+  const found = new Set(removed.map(company => String(company.code).toUpperCase()));
+  const missing = [...replaceCodes].filter(code => !found.has(code));
+  throw new Error(`Replacement codes missing from bundle: ${missing.join(', ')}`);
+}
+for (const company of removed) {
+  if (company.stage !== 'jpx_indexed') {
+    throw new Error(`Refusing to replace non-Coverageβ company: ${company.code} stage=${company.stage}`);
+  }
+}
+payload.companies = payload.companies.filter(company => !replaceCodes.has(String(company.code).toUpperCase()));
+
+if (removed.length) {
+  const existingArchive = fs.existsSync(ARCHIVE_PATH)
+    ? readJson(ARCHIVE_PATH)
+    : { schemaVersion: 'delisted-company-archive-v1', companies: [] };
+  const archivedByCode = new Map((existingArchive.companies || []).map(row => [String(row.code), row]));
+  for (const company of removed) {
+    const metadata = replacementByCode.get(String(company.code).toUpperCase()) || {};
+    archivedByCode.set(String(company.code), {
+      code: String(company.code),
+      name: company.name,
+      formerMarket: company.market,
+      industry: company.industry,
+      archivedAt: VERIFIED_DATE,
+      delistedDate: metadata.delistedDate || null,
+      delistingReason: metadata.reason || null,
+      officialDelistingSource: metadata.officialSource || null,
+      previousStage: company.stage,
+      previousTier: company.tier,
+      previousSourceUrl: company.sourceUrl,
+    });
+  }
+  writeJson(ARCHIVE_PATH, {
+    schemaVersion: 'delisted-company-archive-v1',
+    updatedAt: VERIFIED_DATE,
+    automaticDeletion: false,
+    companies: [...archivedByCode.values()].sort((left, right) => String(left.code).localeCompare(String(right.code), 'ja')),
+  });
+}
+
+const afterRemovalCount = payload.companies.length;
+const needed = Math.max(0, TARGET_TOTAL - afterRemovalCount);
 const existingCodes = new Set(payload.companies.map(company => String(company.code)));
 const candidates = jpx.records
   .map(row => ({
@@ -127,7 +177,8 @@ const candidates = jpx.records
     && row.name
     && row.market
     && isValidIndustry(row.industry)
-    && !existingCodes.has(row.code));
+    && !existingCodes.has(row.code)
+    && !replaceCodes.has(row.code));
 
 const selected = diversifiedSelection(candidates, needed);
 if (selected.length < needed) {
@@ -220,7 +271,14 @@ writeJson(REPORT_PATH, {
   sourceWorkbook: jpx.sourceWorkbook,
   jpxRecordCount: jpx.recordCount,
   companyCountBefore: beforeCount,
+  companyCountAfterRemoval: afterRemovalCount,
   companyCountAfter: payload.companies.length,
+  removedCount: removed.length,
+  removed: removed.map(company => ({
+    code: company.code,
+    name: company.name,
+    metadata: replacementByCode.get(String(company.code).toUpperCase()) || null,
+  })),
   addedCount: added.length,
   sourceConfirmed,
   structured,
@@ -242,8 +300,12 @@ writeJson(REPORT_PATH, {
 
 console.log(JSON.stringify({
   companyCountBefore: beforeCount,
+  companyCountAfterRemoval: afterRemovalCount,
   companyCountAfter: payload.companies.length,
+  removedCount: removed.length,
+  removedCodes: removed.map(company => String(company.code)),
   addedCount: added.length,
+  addedCodes: added.map(company => String(company.code)),
   stages,
   sourceConfirmed,
   structured,

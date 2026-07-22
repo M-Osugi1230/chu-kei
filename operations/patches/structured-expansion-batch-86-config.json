@@ -1,0 +1,373 @@
+{
+  "schemaVersion": "structured-expansion-batch-config-v2",
+  "batchId": "structured-expansion-batch-86",
+  "patchPrefix": "batch86",
+  "dateTag": "20260722",
+  "lastVerifiedDate": "2026-07-22",
+  "createdAtBase": "2026-07-22T07:20:00.000Z",
+  "reviewedAtBase": "2026-07-22T07:30:00.000Z",
+  "targetStructuredCount": 2497,
+  "expectedCompanyCount": 2500,
+  "expectedSourceConfirmed": 2497,
+  "fromStage": "jpx_indexed",
+  "targetStage": "detailed_extracted",
+  "sourceResearchBulkApproval": {
+    "proposalPath": "operations/source-research/source-research-proposal-2500-completion.json",
+    "proposalSha256": "8db7e043d5fd248e235340fa7193982bed46def0385226995ae37365e74f1861",
+    "candidatePath": "operations/source-research/source-research-batch-021-candidates.json",
+    "explicitApproval": true,
+    "automaticSelectionAllowed": false,
+    "recoveryMode": null,
+    "approvedCount": 7
+  },
+  "records": [
+    {
+      "code": "2424",
+      "name": "ブラス",
+      "category": "サービス業/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/24240/140120260716594908.pdf",
+      "document": "夫婦&家族写真を毎年撮影!8/1~8/17の期間に全国25会場で結婚式後のイベント「ブラス夏祭り(夏の撮影会)2026」を開催!",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-07-16",
+      "themes": [
+        "事業戦略",
+        "事業成長",
+        "商品・サービス",
+        "経営基盤"
+      ],
+      "summary": "ブラス（2424）は、JPXの企業コード別公式開示資料で事業戦略、事業成長、商品・サービス、経営基盤を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "固定の中期売上高・売上収益は当該公式資料の抽出範囲で確認できない。",
+      "profit": "固定の中期利益は当該公式資料の抽出範囲で確認できない。",
+      "margin": "固定の中期収益性・資本効率は当該公式資料の抽出範囲で確認できない。",
+      "capital": "固定の中期投資・資本配分は当該公式資料の抽出範囲で確認できない。",
+      "returnPolicy": "固定の中期株主還元は当該公式資料の抽出範囲で確認できない。",
+      "highlights": [
+        "夫婦&家族写真を毎年撮影!8/1~8/17の期間に全国25会場で結婚式後のイベント「ブラス夏祭り(夏の撮影会)2026」を開催!を2026-07-16に公表した。",
+        "公式資料では事業戦略、事業成長、商品・サービスを主要テーマとして確認した。",
+        "2ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.1: 事業方針に関する記載を確認する。",
+        "公式PDF p.4: 事業方針に関する記載を確認する。"
+      ],
+      "flags": {
+        "ma": false,
+        "capitalEfficiency": false,
+        "shareholderReturn": false,
+        "progress": false,
+        "overseas": false,
+        "dx": false,
+        "humanCapital": false,
+        "newBusiness": false,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該JPX公式開示資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.1: 事業方針に関する記載を確認する。"
+      }
+    },
+    {
+      "code": "4480",
+      "name": "メドレー",
+      "category": "情報・通信業/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/44800/140120260512526895.pdf",
+      "document": "2026年12月期 第1四半期決算短信〔日本基準〕(連結)",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-05-13",
+      "themes": [
+        "人的資本",
+        "株主還元",
+        "商品・サービス",
+        "事業成長"
+      ],
+      "summary": "メドレー（4480）は、JPXの企業コード別公式開示資料で人的資本、株主還元、商品・サービス、事業成長を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "公式PDF p.4で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "profit": "公式PDF p.4で利益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "margin": "固定の中期収益性・資本効率は当該公式資料の抽出範囲で確認できない。",
+      "capital": "公式PDF p.4で投資・資本配分に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "returnPolicy": "公式PDF p.2で株主還元に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "highlights": [
+        "2026年12月期 第1四半期決算短信〔日本基準〕(連結)を2026-05-13に公表した。",
+        "公式資料では人的資本、株主還元、商品・サービスを主要テーマとして確認した。",
+        "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.12: 財務目標・KPI・事業方針に関する記載を確認する。"
+      ],
+      "flags": {
+        "ma": false,
+        "capitalEfficiency": false,
+        "shareholderReturn": true,
+        "progress": false,
+        "overseas": false,
+        "dx": true,
+        "humanCapital": true,
+        "newBusiness": false,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      }
+    },
+    {
+      "code": "543A",
+      "name": "ＡＲＣＨＩＯＮ",
+      "category": "輸送用機器/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/543A0/140120260714593697.pdf",
+      "document": "株式の売出しに係る仮条件等の決定に関するお知らせ",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-07-15",
+      "themes": [
+        "海外",
+        "事業戦略"
+      ],
+      "summary": "ＡＲＣＨＩＯＮ（543A）は、JPXの企業コード別公式開示資料で海外、事業戦略を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "固定の中期売上高・売上収益は当該公式資料の抽出範囲で確認できない。",
+      "profit": "固定の中期利益は当該公式資料の抽出範囲で確認できない。",
+      "margin": "固定の中期収益性・資本効率は当該公式資料の抽出範囲で確認できない。",
+      "capital": "固定の中期投資・資本配分は当該公式資料の抽出範囲で確認できない。",
+      "returnPolicy": "固定の中期株主還元は当該公式資料の抽出範囲で確認できない。",
+      "highlights": [
+        "株式の売出しに係る仮条件等の決定に関するお知らせを2026-07-15に公表した。",
+        "公式資料では海外、事業戦略を主要テーマとして確認した。",
+        "2ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.1: 主要方針・数値に関する記載を確認する。",
+        "公式PDF p.2: 主要方針・数値に関する記載を確認する。"
+      ],
+      "flags": {
+        "ma": false,
+        "capitalEfficiency": false,
+        "shareholderReturn": false,
+        "progress": false,
+        "overseas": true,
+        "dx": false,
+        "humanCapital": false,
+        "newBusiness": false,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該JPX公式開示資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.1: 主要方針・数値に関する記載を確認する。"
+      }
+    },
+    {
+      "code": "544A",
+      "name": "ＧＭＳグループ",
+      "category": "機械/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/544A0/140120260508520388.pdf",
+      "document": "上場廃止となった子会社(日精樹脂工業株式会社)に関する決算開示について",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-05-14",
+      "themes": [
+        "株主還元",
+        "商品・サービス",
+        "海外",
+        "収益力強化"
+      ],
+      "summary": "ＧＭＳグループ（544A）は、JPXの企業コード別公式開示資料で株主還元、商品・サービス、海外、収益力強化を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "公式PDF p.5で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "profit": "公式PDF p.5で利益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "margin": "公式PDF p.2で収益性・資本効率に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "capital": "公式PDF p.5で投資・資本配分に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "returnPolicy": "公式PDF p.3で株主還元に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "highlights": [
+        "上場廃止となった子会社(日精樹脂工業株式会社)に関する決算開示についてを2026-05-14に公表した。",
+        "公式資料では株主還元、商品・サービス、海外を主要テーマとして確認した。",
+        "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.10: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      ],
+      "flags": {
+        "ma": false,
+        "capitalEfficiency": false,
+        "shareholderReturn": true,
+        "progress": false,
+        "overseas": true,
+        "dx": true,
+        "humanCapital": true,
+        "newBusiness": false,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      }
+    },
+    {
+      "code": "547A",
+      "name": "ムニノバホールディングス",
+      "category": "その他金融業/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/547A0/140120260713592279.pdf",
+      "document": "会社分割(簡易吸収分割) 及び無担保社債の名称変更・連帯保証 に関するお知らせ",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-07-13",
+      "themes": [
+        "事業戦略",
+        "収益力強化"
+      ],
+      "summary": "ムニノバホールディングス（547A）は、JPXの企業コード別公式開示資料で事業戦略、収益力強化を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "公式PDF p.3で売上高・売上収益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "profit": "公式PDF p.3で利益に関する数値または方針を確認。対象年度・単位・実績／目標の区分は原文を参照する。",
+      "margin": "固定の中期収益性・資本効率は当該公式資料の抽出範囲で確認できない。",
+      "capital": "固定の中期投資・資本配分は当該公式資料の抽出範囲で確認できない。",
+      "returnPolicy": "固定の中期株主還元は当該公式資料の抽出範囲で確認できない。",
+      "highlights": [
+        "会社分割(簡易吸収分割) 及び無担保社債の名称変更・連帯保証 に関するお知らせを2026-07-13に公表した。",
+        "公式資料では事業戦略、収益力強化を主要テーマとして確認した。",
+        "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.3: 財務目標・KPI・事業方針に関する記載を確認する。",
+        "公式PDF p.2: 事業方針に関する記載を確認する。",
+        "公式PDF p.1: 事業方針に関する記載を確認する。"
+      ],
+      "flags": {
+        "ma": false,
+        "capitalEfficiency": false,
+        "shareholderReturn": false,
+        "progress": false,
+        "overseas": false,
+        "dx": false,
+        "humanCapital": false,
+        "newBusiness": false,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "JPX公式開示資料で計画・数値・方針を確認したが、自動抽出では目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.3: 財務目標・KPI・事業方針に関する記載を確認する。"
+      }
+    },
+    {
+      "code": "575A",
+      "name": "前澤ホールディングス",
+      "category": "機械/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/575A0/140120260714593157.pdf",
+      "document": "株主優待制度導入に関するお知らせ",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-07-14",
+      "themes": [
+        "サステナビリティ",
+        "商品・サービス",
+        "事業成長"
+      ],
+      "summary": "前澤ホールディングス（575A）は、JPXの企業コード別公式開示資料でサステナビリティ、商品・サービス、事業成長を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "固定の中期売上高・売上収益は当該公式資料の抽出範囲で確認できない。",
+      "profit": "固定の中期利益は当該公式資料の抽出範囲で確認できない。",
+      "margin": "固定の中期収益性・資本効率は当該公式資料の抽出範囲で確認できない。",
+      "capital": "固定の中期投資・資本配分は当該公式資料の抽出範囲で確認できない。",
+      "returnPolicy": "固定の中期株主還元は当該公式資料の抽出範囲で確認できない。",
+      "highlights": [
+        "株主優待制度導入に関するお知らせを2026-07-14に公表した。",
+        "公式資料ではサステナビリティ、商品・サービス、事業成長を主要テーマとして確認した。",
+        "2ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.2: 主要方針・数値に関する記載を確認する。",
+        "公式PDF p.1: 主要方針・数値に関する記載を確認する。"
+      ],
+      "flags": {
+        "ma": false,
+        "capitalEfficiency": false,
+        "shareholderReturn": false,
+        "progress": false,
+        "overseas": false,
+        "dx": false,
+        "humanCapital": false,
+        "newBusiness": false,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該JPX公式開示資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.2: 主要方針・数値に関する記載を確認する。"
+      }
+    },
+    {
+      "code": "6194",
+      "name": "アトラエ",
+      "category": "サービス業/JPX公式開示資料",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/61940/140120260710590933.pdf",
+      "document": "株主優待制度の変更(拡充)に関するお知らせ",
+      "period": "当該公式開示資料の対象期間",
+      "planPublishedDate": "2026-07-10",
+      "themes": [
+        "商品・サービス",
+        "株主還元",
+        "DX"
+      ],
+      "summary": "アトラエ（6194）は、JPXの企業コード別公式開示資料で商品・サービス、株主還元、DXを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+      "revenue": "固定の中期売上高・売上収益は当該公式資料の抽出範囲で確認できない。",
+      "profit": "固定の中期利益は当該公式資料の抽出範囲で確認できない。",
+      "margin": "固定の中期収益性・資本効率は当該公式資料の抽出範囲で確認できない。",
+      "capital": "固定の中期投資・資本配分は当該公式資料の抽出範囲で確認できない。",
+      "returnPolicy": "固定の中期株主還元は当該公式資料の抽出範囲で確認できない。",
+      "highlights": [
+        "株主優待制度の変更(拡充)に関するお知らせを2026-07-10に公表した。",
+        "公式資料では商品・サービス、株主還元、DXを主要テーマとして確認した。",
+        "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+      ],
+      "warnings": [
+        "自動抽出した数値を目標値・確定実績・会社予想へ自動分類せず、原文の対象年度・単位・連結範囲を優先する。",
+        "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.3: 投資・株主還元・事業方針に関する記載を確認する。",
+        "公式PDF p.2: 事業方針に関する記載を確認する。",
+        "公式PDF p.1: 事業方針に関する記載を確認する。"
+      ],
+      "flags": {
+        "ma": false,
+        "capitalEfficiency": false,
+        "shareholderReturn": true,
+        "progress": false,
+        "overseas": false,
+        "dx": true,
+        "humanCapital": false,
+        "newBusiness": false,
+        "restructuring": false
+      },
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該JPX公式開示資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.3: 投資・株主還元・事業方針に関する記載を確認する。"
+      }
+    }
+  ]
+}

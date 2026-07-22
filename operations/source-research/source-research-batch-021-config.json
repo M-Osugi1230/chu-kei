@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "source-research-batch-v1",
+  "batchId": "source-research-batch-021",
+  "codes": [
+    "544A",
+    "575A",
+    "547A",
+    "3681",
+    "4480",
+    "543A",
+    "6194",
+    "7317",
+    "2424",
+    "5903"
+  ],
+  "concurrency": 5,
+  "maxDocumentAttempts": 20,
+  "researchScript": "scripts/research_jpx_documents_exhaustive_v2.py",
+  "outputPath": "operations/source-research/source-research-batch-021-candidates.json",
+  "selectionPolicy": {
+    "stage": "jpx_indexed",
+    "explicitCodesPreparedFromBundle": true,
+    "documentDateFloor": "2022-01-01",
+    "engine": "recent-official-pdf-exhaustive-v2"
+  },
+  "safety": {
+    "automaticFactCompletion": false,
+    "automaticApproval": false,
+    "automaticProductionPromotion": false,
+    "requireJpxCodeSpecificDisclosure": true,
+    "requirePdfPageEvidence": true,
+    "requirePublicationDate": true,
+    "requireIdentityMatchBeforeApproval": true,
+    "automaticConnectedStatusAllowed": false
+  }
+}

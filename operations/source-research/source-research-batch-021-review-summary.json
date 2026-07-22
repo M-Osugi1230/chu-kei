@@ -1,0 +1,393 @@
+{
+  "schemaVersion": "source-research-review-summary-v1",
+  "batchId": "source-research-batch-021",
+  "generatedAt": "2026-07-22T07:07:04.411Z",
+  "automaticApproval": false,
+  "counts": {
+    "selected": 10,
+    "eligible": 7,
+    "manualReviewPriority": 0,
+    "manualReviewRequired": 7,
+    "hold": 3,
+    "earningsOnly": 1
+  },
+  "priorityCodes": [],
+  "rows": [
+    {
+      "code": "2424",
+      "name": "ブラス",
+      "market": "Standard",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 95,
+      "identityMatch": true,
+      "documentDate": "2026-07-16",
+      "documentTitle": "夫婦&家族写真を毎年撮影!8/1~8/17の期間に全国25会場で結婚式後のイベント「ブラス夏祭り(夏の撮影会)2026」を開催!",
+      "documentUrl": "https://www2.jpx.co.jp/disc/24240/140120260716594908.pdf",
+      "documentScore": 86,
+      "pageCount": 4,
+      "documentCount": 265,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "事業戦略",
+        "事業成長",
+        "商品・サービス",
+        "経営基盤"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.1: 事業方針に関する記載を確認する。",
+        "公式PDF p.4: 事業方針に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.1: 事業方針に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "固定の中期売上高・売上収益目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "固定の中期利益目標は当該公式資料の抽出範囲で確認できない。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "3681",
+      "name": "ブイキューブ",
+      "status": "error",
+      "confidence": null,
+      "identityMatch": false,
+      "documentDate": null,
+      "documentTitle": null,
+      "documentUrl": null,
+      "documentScore": null,
+      "pageCount": null,
+      "documentCount": null,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "hold",
+      "themes": [],
+      "evidenceRefs": [],
+      "progressAssessment": null,
+      "metrics": {
+        "revenue": null,
+        "profit": null,
+        "margin": null,
+        "capital": null,
+        "returnPolicy": null
+      },
+      "failure": "RuntimeError: JPX search mismatch: none != 36810"
+    },
+    {
+      "code": "4480",
+      "name": "メドレー",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-05-13",
+      "documentTitle": "2026年12月期 第1四半期決算短信〔日本基準〕(連結)",
+      "documentUrl": "https://www2.jpx.co.jp/disc/44800/140120260512526895.pdf",
+      "documentScore": 125,
+      "pageCount": 12,
+      "documentCount": 196,
+      "isPlanDocument": false,
+      "isEarningsOnly": true,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "人的資本",
+        "株主還元",
+        "商品・サービス",
+        "事業成長"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.12: 財務目標・KPI・事業方針に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（2026年12月期、10,189百万円、25.2%、48.1%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（2026年12月期、10,189百万円、25.2%、48.1%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "公式PDF p.4で投資・資本配分に関する数値・方針（2026年12月期、10,189百万円、25.2%、48.1%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2026年12月期、2025年12月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "543A",
+      "name": "ＡＲＣＨＩＯＮ",
+      "market": "Prime",
+      "industry": "輸送用機器",
+      "status": "eligible",
+      "confidence": 95,
+      "identityMatch": true,
+      "documentDate": "2026-07-15",
+      "documentTitle": "株式の売出しに係る仮条件等の決定に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/543A0/140120260714593697.pdf",
+      "documentScore": 86,
+      "pageCount": 2,
+      "documentCount": 22,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "海外",
+        "事業戦略"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.1: 主要方針・数値に関する記載を確認する。",
+        "公式PDF p.2: 主要方針・数値に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.1: 主要方針・数値に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "固定の中期売上高・売上収益目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "固定の中期利益目標は当該公式資料の抽出範囲で確認できない。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "544A",
+      "name": "ＧＭＳグループ",
+      "market": "Prime",
+      "industry": "機械",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-05-14",
+      "documentTitle": "上場廃止となった子会社(日精樹脂工業株式会社)に関する決算開示について",
+      "documentUrl": "https://www2.jpx.co.jp/disc/544A0/140120260508520388.pdf",
+      "documentScore": 86,
+      "pageCount": 18,
+      "documentCount": 12,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "株主還元",
+        "商品・サービス",
+        "海外",
+        "収益力強化"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+        "公式PDF p.10: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.5で売上高・売上収益に関する数値・方針（1.5%、4百万円、8百万円、2百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.5で利益に関する数値・方針（1.5%、4百万円、8百万円、2百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.2で収益性・資本効率に関する数値・方針（2026年3月期、2026年、2025年3月期、256百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.5で投資・資本配分に関する数値・方針（1.5%、4百万円、8百万円、2百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.3で株主還元に関する数値・方針（2026年3月期、2025年3月期、32,264百万円、33,207百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。"
+      },
+      "failure": null
+    },
+    {
+      "code": "547A",
+      "name": "ムニノバホールディングス",
+      "market": "Prime",
+      "industry": "その他金融業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-07-13",
+      "documentTitle": "会社分割(簡易吸収分割) 及び無担保社債の名称変更・連帯保証 に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/547A0/140120260713592279.pdf",
+      "documentScore": 86,
+      "pageCount": 4,
+      "documentCount": 20,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "事業戦略",
+        "収益力強化"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.3: 財務目標・KPI・事業方針に関する記載を確認する。",
+        "公式PDF p.2: 事業方針に関する記載を確認する。",
+        "公式PDF p.1: 事業方針に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.3: 財務目標・KPI・事業方針に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.3で売上高・売上収益に関する数値・方針（2026年、28百万円、100%、2026年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.3で利益に関する数値・方針（2026年、28百万円、100%、2026年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "575A",
+      "name": "前澤ホールディングス",
+      "market": "Prime",
+      "industry": "機械",
+      "status": "eligible",
+      "confidence": 95,
+      "identityMatch": true,
+      "documentDate": "2026-07-14",
+      "documentTitle": "株主優待制度導入に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/575A0/140120260714593157.pdf",
+      "documentScore": 86,
+      "pageCount": 2,
+      "documentCount": 12,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "サステナビリティ",
+        "商品・サービス",
+        "事業成長"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.2: 主要方針・数値に関する記載を確認する。",
+        "公式PDF p.1: 主要方針・数値に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.2: 主要方針・数値に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "固定の中期売上高・売上収益目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "固定の中期利益目標は当該公式資料の抽出範囲で確認できない。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "5903",
+      "name": "シンポ",
+      "status": "error",
+      "confidence": null,
+      "identityMatch": false,
+      "documentDate": null,
+      "documentTitle": null,
+      "documentUrl": null,
+      "documentScore": null,
+      "pageCount": null,
+      "documentCount": null,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "hold",
+      "themes": [],
+      "evidenceRefs": [],
+      "progressAssessment": null,
+      "metrics": {
+        "revenue": null,
+        "profit": null,
+        "margin": null,
+        "capital": null,
+        "returnPolicy": null
+      },
+      "failure": "RuntimeError: JPX search mismatch: none != 59030"
+    },
+    {
+      "code": "6194",
+      "name": "アトラエ",
+      "market": "Prime",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 95,
+      "identityMatch": true,
+      "documentDate": "2026-07-10",
+      "documentTitle": "株主優待制度の変更(拡充)に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/61940/140120260710590933.pdf",
+      "documentScore": 86,
+      "pageCount": 4,
+      "documentCount": 222,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "商品・サービス",
+        "株主還元",
+        "DX"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.3: 投資・株主還元・事業方針に関する記載を確認する。",
+        "公式PDF p.2: 事業方針に関する記載を確認する。",
+        "公式PDF p.1: 事業方針に関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.3: 投資・株主還元・事業方針に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "固定の中期売上高・売上収益目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "固定の中期利益目標は当該公式資料の抽出範囲で確認できない。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "7317",
+      "name": "松屋アールアンドディ",
+      "status": "error",
+      "confidence": null,
+      "identityMatch": false,
+      "documentDate": null,
+      "documentTitle": null,
+      "documentUrl": null,
+      "documentScore": null,
+      "pageCount": null,
+      "documentCount": null,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "hold",
+      "themes": [],
+      "evidenceRefs": [],
+      "progressAssessment": null,
+      "metrics": {
+        "revenue": null,
+        "profit": null,
+        "margin": null,
+        "capital": null,
+        "returnPolicy": null
+      },
+      "failure": "RuntimeError: JPX search mismatch: none != 73170"
+    }
+  ]
+}

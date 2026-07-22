@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "company-data-patch-v1",
+  "patchId": "quality-recheck-3911-20260722",
+  "companyCode": "3911",
+  "companyName": "Ａｉｍｉｎｇ",
+  "sourceUrl": "https://www2.jpx.co.jp/disc/39110/140120251028580150.pdf",
+  "reviewDecisionId": "review-3911-20260722-quality-recheck",
+  "automaticFactCompletion": false,
+  "expectedBefore": {
+    "stage": "core",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/39110/140120251028580150.pdf",
+    "document": "2025年12月期第3四半期決算説明資料(事業計画及び成長可能性に関する事項)",
+    "evidenceRefs": [
+      "公式PDF p.12: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+      "公式PDF p.46: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+      "公式PDF p.45: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+    ]
+  },
+  "updates": {
+    "evidenceRefs": [
+      "公式PDF p.20: 売上高・利益に関する数値または方針を確認する。",
+      "公式PDF p.6: 収益性・資本効率に関する数値または方針を確認する。",
+      "公式PDF p.45: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+    ],
+    "progressAssessment": {
+      "status": "not_comparable",
+      "reason": "JPX公式開示資料で計画・数値・方針を確認したが、目標と実績の同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+      "sourceRef": "公式PDF p.20: 売上高・利益に関する数値または方針を確認する。"
+    },
+    "warnings": [
+      "数値欄が参照するp.20・p.6を一次証跡へ明示し、目標値・確定実績・会社予想の区分は原文を優先する。",
+      "後発の計画改定や決算更新がある場合は最新の公式開示を優先し、古い数値を最新目標として扱わない。"
+    ]
+  }
+}

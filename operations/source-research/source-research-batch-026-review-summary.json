@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "source-research-review-summary-v1",
+  "batchId": "source-research-batch-026",
+  "generatedAt": "2026-07-22T12:15:47.677Z",
+  "automaticApproval": false,
+  "counts": {
+    "selected": 3,
+    "eligible": 2,
+    "manualReviewPriority": 0,
+    "manualReviewRequired": 2,
+    "hold": 1,
+    "earningsOnly": 1
+  },
+  "priorityCodes": [],
+  "rows": [
+    {
+      "code": "545A",
+      "name": "トランヴィア",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "status": "eligible",
+      "confidence": 95,
+      "identityMatch": true,
+      "documentDate": "2026-05-14",
+      "documentTitle": "株主優待制度の導入に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/545A0/140120260514532541.pdf",
+      "documentScore": 86,
+      "pageCount": 2,
+      "documentCount": 11,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "事業成長",
+        "設備投資"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.1: 事業方針に関する記載を確認する。",
+        "公式PDF p.2: 主要な事業方針・数値記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_disclosed",
+        "reason": "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+        "sourceRef": "公式PDF p.1: 事業方針に関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "固定の中期売上高・売上収益目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "固定の中期利益目標は当該公式資料の抽出範囲で確認できない。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。"
+      },
+      "failure": null
+    },
+    {
+      "code": "7940",
+      "name": "ウェーブロックホールディングス",
+      "status": "error",
+      "confidence": null,
+      "identityMatch": false,
+      "documentDate": null,
+      "documentTitle": null,
+      "documentUrl": null,
+      "documentScore": null,
+      "pageCount": null,
+      "documentCount": null,
+      "isPlanDocument": false,
+      "isEarningsOnly": false,
+      "recentPlan": false,
+      "recommendation": "hold",
+      "themes": [],
+      "evidenceRefs": [],
+      "progressAssessment": null,
+      "metrics": {
+        "revenue": null,
+        "profit": null,
+        "margin": null,
+        "capital": null,
+        "returnPolicy": null
+      },
+      "failure": "RuntimeError: JPX search mismatch: none != 79400"
+    },
+    {
+      "code": "9216",
+      "name": "ビーウィズ",
+      "market": "Prime",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "documentDate": "2026-07-13",
+      "documentTitle": "2026年5月期 決算短信〔日本基準〕(連結)",
+      "documentUrl": "https://www2.jpx.co.jp/disc/92160/140120260713592010.pdf",
+      "documentScore": 125,
+      "pageCount": 17,
+      "documentCount": 135,
+      "isPlanDocument": false,
+      "isEarningsOnly": true,
+      "recentPlan": false,
+      "recommendation": "manual_review_required",
+      "themes": [
+        "株主還元",
+        "AI",
+        "事業成長",
+        "商品・サービス"
+      ],
+      "evidenceRefs": [
+        "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+        "公式PDF p.15: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      ],
+      "progressAssessment": {
+        "status": "not_comparable",
+        "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+        "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+      },
+      "metrics": {
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（2026年5月期、28.3 %、14.7億円、37.8%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（2026年5月期、28.3 %、14.7億円、37.8%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.6で収益性・資本効率に関する数値・方針（2026年5月期、2027年5月期、2026年、38,300百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.4で投資・資本配分に関する数値・方針（2026年5月期、28.3 %、14.7億円、37.8%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2027年5月期、2026年、2027年、2026年5月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。"
+      },
+      "failure": null
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "version": "company-coverage-1000-v1",
-  "appliedAt": "2026-07-22T07:05:14.492Z",
+  "appliedAt": "2026-07-22T12:13:35.812Z",
   "automaticFactCompletion": false,
   "sourcePage": "https://www.jpx.co.jp/markets/statistics-equities/misc/01.html",
   "sourceWorkbook": "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls",
   "jpxRecordCount": 4430,
-  "companyCountBefore": 2500,
-  "companyCountAfterRemoval": 2497,
-  "companyCountAfter": 2500,
-  "removedCount": 3,
+  "companyCountBefore": 3000,
+  "companyCountAfterRemoval": 2996,
+  "companyCountAfter": 3000,
+  "removedCount": 4,
   "removed": [
     {
       "code": "3681",
@@ -42,51 +42,71 @@
         "reason": "株式等売渡請求による取得",
         "officialSource": "https://www.jpx.co.jp/news/1023/20260625-11.html"
       }
+    },
+    {
+      "code": "7940",
+      "name": "ウェーブロックホールディングス",
+      "metadata": {
+        "code": "7940",
+        "name": "ウェーブロックホールディングス",
+        "delistedDate": "2026-07-09",
+        "reason": "特定の者以外の株主が1株未満となる株式併合",
+        "officialSource": "https://www.jpx.co.jp/news/1023/20260618-11.html"
+      }
     }
   ],
-  "addedCount": 3,
-  "sourceConfirmed": 2497,
-  "structured": 2497,
+  "addedCount": 4,
+  "sourceConfirmed": 2996,
+  "structured": 2996,
   "stages": {
-    "core": 2497,
+    "core": 2996,
     "detailed_extracted": 0,
     "source_indexed": 0,
-    "jpx_indexed": 3
+    "jpx_indexed": 4
   },
   "addedByMarket": {
-    "Prime": 1,
+    "Prime": 2,
     "Standard": 0,
     "Growth": 2
   },
   "addedByIndustry": {
-    "サービス業": 2,
+    "サービス業": 1,
+    "卸売業": 1,
+    "化学": 1,
     "情報・通信業": 1
   },
   "added": [
     {
-      "code": "6069",
-      "name": "トレンダーズ",
+      "code": "7039",
+      "name": "ブリッジインターナショナルグループ",
       "market": "Growth",
       "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6069"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=7039"
     },
     {
-      "code": "3905",
-      "name": "データセクション",
+      "code": "4076",
+      "name": "シイエヌエス",
       "market": "Growth",
       "industry": "情報・通信業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=3905"
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4076"
     },
     {
-      "code": "6564",
-      "name": "ミダックホールディングス",
+      "code": "9832",
+      "name": "オートバックスセブン",
       "market": "Prime",
-      "industry": "サービス業",
-      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=6564"
+      "industry": "卸売業",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=9832"
+    },
+    {
+      "code": "4997",
+      "name": "日本農薬",
+      "market": "Prime",
+      "industry": "化学",
+      "sourceUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=4997"
     }
   ],
-  "bundleBeforeSha256": "494640b7809ad1c9c0526665cc1ad293d8bc1af3648cc27961c9e3ab4694d870",
-  "bundleAfterSha256": "e25ddb7e8dd40c8c2c71cdb6cfdf59817f5558e0037ad7b919915a7993b6b680",
-  "bundleAfterCompressedBytes": 621734,
+  "bundleBeforeSha256": "cbfadf990ca75c3ce78f19b35f9917e43eeed97b15fc7e57ef8e14356fc70dca",
+  "bundleAfterSha256": "0199d9cedfeaa684d8693b92516b6cd9f7d1460e77d62dd97348f45c9a85aeb2",
+  "bundleAfterCompressedBytes": 701791,
   "bundleBudgetBytes": 1572864
 }

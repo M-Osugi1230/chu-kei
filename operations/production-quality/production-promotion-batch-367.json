@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "production-promotion-batch-v1",
+  "batchId": "production-promotion-batch-367",
+  "explicitApproval": true,
+  "automaticSelectionAllowed": false,
+  "codes": [
+    "4076",
+    "4997",
+    "7039",
+    "9832"
+  ],
+  "targetCoreCount": 3000,
+  "primaryAuthor": "production-quality-agent",
+  "primaryReviewer": "production-quality-review-3000",
+  "independentAuthor": "independent-release-agent",
+  "independentReviewer": "independent-release-review-3000",
+  "approvalDate": "2026-07-22",
+  "sourceResearchBulkApproval": {
+    "approvalReports": [
+      {
+        "path": "operations/source-research/source-research-bulk-approval-021-report.json",
+        "proposalSha256": "c72dc13c3d2d1033e9c6eb53a38cb130651165e82daf2a246ac897555cc39440",
+        "approvalId": "source-research-bulk-approval-021",
+        "approvedCount": 4
+      }
+    ],
+    "aggregateApprovalSha256": "fb1cec83057477cab1705483914690b57126fb6fd24c89d7dd4275575750812f",
+    "approvedCount": 4
+  }
+}

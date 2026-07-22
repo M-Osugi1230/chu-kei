@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "source-research-batch-request-v1",
+  "batchId": "source-research-batch-027",
+  "batchSize": 4,
+  "concurrency": 4,
+  "excludeCandidateReports": [],
+  "excludeCodes": [],
+  "outputConfigPath": "operations/source-research/source-research-batch-027-config.json",
+  "outputCandidatePath": "operations/source-research/source-research-batch-027-candidates.json",
+  "researchPolicy": {
+    "engine": "multi-document-v2",
+    "maximumDocumentAttempts": 12,
+    "currentStageOnly": "jpx_indexed"
+  }
+}

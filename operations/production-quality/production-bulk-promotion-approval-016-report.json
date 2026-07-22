@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "production-bulk-promotion-approval-report-v1",
+  "approvalId": "production-bulk-promotion-approval-016",
+  "aggregateApprovalSha256": "f582f8b10a1d3b7dbd4aba7028e17200efebe411a60ed68cae42ae311faf6528",
+  "approvalIdentity": {
+    "schemaVersion": "production-bulk-promotion-aggregate-identity-v1",
+    "readinessBundleSha256": "1d046c98ec667621e2c9e78659de0bcfb548fb3321f6af6a64f188faa41427b0",
+    "expectedCoreBefore": 2971,
+    "targetCoreCount": 2994,
+    "reports": [
+      {
+        "path": "operations/source-research/source-research-bulk-approval-019-report.json",
+        "proposalSha256": "9a3cb06a29910c801f355dc05cede061815f37005a6b481316ea02a52959d7f5",
+        "approvalId": "source-research-bulk-approval-019",
+        "approvedCount": 23
+      }
+    ],
+    "codes": [
+      "3021",
+      "3370",
+      "3372",
+      "3547",
+      "3845",
+      "3851",
+      "4317",
+      "4743",
+      "4839",
+      "4927",
+      "6195",
+      "6366",
+      "6436",
+      "6440",
+      "6469",
+      "6800",
+      "6823",
+      "6867",
+      "6904",
+      "6920",
+      "8153",
+      "8410",
+      "9842"
+    ]
+  },
+  "explicitApproval": true,
+  "automaticSelectionAllowed": false,
+  "expectedCoreBefore": 2971,
+  "approvedCount": 23,
+  "targetCoreCount": 2994,
+  "productionBatchPath": "operations/production-quality/production-promotion-batch-365.json"
+}

@@ -1,0 +1,2684 @@
+{
+  "schemaVersion": "source-research-candidates-v1",
+  "batchId": "source-research-batch-025",
+  "generatedAt": "2026-07-22T12:02:20.417548+00:00",
+  "sourceBundleSha256": "2b74a49931dc994e44144a4eee74b10bd93dfcf5abf88ac47a88f5c229c08fd3",
+  "researchEngine": "multi-document-v2",
+  "maxDocumentAttempts": 12,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "selectedCount": 29,
+  "eligibleCount": 23,
+  "needsReviewCount": 0,
+  "failureCount": 6,
+  "selectedCodes": [
+    "4927",
+    "3681",
+    "4743",
+    "4839",
+    "545A",
+    "6436",
+    "6440",
+    "6800",
+    "6823",
+    "6920",
+    "9216",
+    "8153",
+    "8410",
+    "7940",
+    "9842",
+    "6195",
+    "7317",
+    "3547",
+    "3845",
+    "3851",
+    "6469",
+    "6867",
+    "6904",
+    "3021",
+    "4317",
+    "3370",
+    "3372",
+    "6366",
+    "5903"
+  ],
+  "eligibleCodes": [
+    "3021",
+    "3370",
+    "3372",
+    "3547",
+    "3845",
+    "3851",
+    "4317",
+    "4743",
+    "4839",
+    "4927",
+    "6195",
+    "6366",
+    "6436",
+    "6440",
+    "6469",
+    "6800",
+    "6823",
+    "6867",
+    "6904",
+    "6920",
+    "8153",
+    "8410",
+    "9842"
+  ],
+  "results": [
+    {
+      "code": "3021",
+      "name": "パシフィックネット",
+      "market": "Standard",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 4276192,
+      "pageCount": 67,
+      "document": {
+        "date": "2026-07-15",
+        "dateText": "2026/07/15",
+        "title": "2026年5月期 決算説明資料",
+        "url": "https://www2.jpx.co.jp/disc/30210/140120260714593550.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 160
+      },
+      "record": {
+        "code": "3021",
+        "name": "パシフィックネット",
+        "category": "サービス業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/30210/140120260714593550.pdf",
+        "document": "2026年5月期 決算説明資料",
+        "period": "当該公式開示資料の対象期間",
+        "planPublishedDate": "2026-07-15",
+        "themes": [
+          "事業成長",
+          "商品・サービス",
+          "人的資本",
+          "資本効率"
+        ],
+        "summary": "パシフィックネット（3021）の公式開示資料では、事業成長、商品・サービス、人的資本、資本効率を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.22で売上高・売上収益に関する数値・方針（2020年、2026年、1.2倍、1.7百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.30で利益に関する数値・方針（18%、10%、13.3%、6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.30で収益性・資本効率に関する数値・方針（18%、10%、13.3%、6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.30で投資・資本配分に関する数値・方針（18%、10%、13.3%、6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.30で株主還元に関する数値・方針（18%、10%、13.3%、6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年5月期 決算説明資料を2026-07-15に公表した。",
+          "公式資料では事業成長、商品・サービス、人的資本を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.30: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.31: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.22: 財務目標・KPI・事業方針に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": true,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": false,
+          "dx": true,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.30: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 5
+      },
+      "elapsedSeconds": 19.41,
+      "documentCount": 319,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年5月期 決算説明資料",
+          "date": "2026-07-15",
+          "url": "https://www2.jpx.co.jp/disc/30210/140120260714593550.pdf",
+          "score": 160,
+          "pageCount": 67,
+          "textLength": 25586,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "3370",
+      "name": "フジタコーポレーション",
+      "market": "Standard",
+      "industry": "小売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 326756,
+      "pageCount": 19,
+      "document": {
+        "date": "2026-05-15",
+        "dateText": "2026/05/15",
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/33700/140120260514533722.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "3370",
+        "name": "フジタコーポレーション",
+        "category": "小売業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/33700/140120260514533722.pdf",
+        "document": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "period": "2026年3月期～2025年3月期",
+        "planPublishedDate": "2026-05-15",
+        "themes": [
+          "株主還元",
+          "商品・サービス",
+          "サステナビリティ",
+          "収益力強化"
+        ],
+        "summary": "フジタコーポレーション（3370）の公式開示資料では、株主還元、商品・サービス、サステナビリティ、収益力強化を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.5で売上高・売上収益に関する数値・方針（47店、48店、3.6%、40.9%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.5で利益に関する数値・方針（47店、48店、3.6%、40.9%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.1で収益性・資本効率に関する数値・方針（2026年3月期、2026年、2025年3月期、134百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.15で投資・資本配分に関する数値・方針（2025年、2026年、2026年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2026年3月期、2025年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年3月期 決算短信〔日本基準〕(連結)を2026-05-15に公表した。",
+          "公式資料では株主還元、商品・サービス、サステナビリティを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.10: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": true,
+          "newBusiness": true,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 5
+      },
+      "elapsedSeconds": 7.4,
+      "documentCount": 255,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+          "date": "2026-05-15",
+          "url": "https://www2.jpx.co.jp/disc/33700/140120260514533722.pdf",
+          "score": 125,
+          "pageCount": 19,
+          "textLength": 19369,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "3372",
+      "name": "関門海",
+      "market": "Standard",
+      "industry": "小売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": false
+      },
+      "pdfBytes": 217564,
+      "pageCount": 14,
+      "document": {
+        "date": "2026-05-15",
+        "dateText": "2026/05/15",
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/33720/140120260511521908.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "3372",
+        "name": "関門海",
+        "category": "小売業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/33720/140120260511521908.pdf",
+        "document": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "period": "当該公式開示資料の対象期間",
+        "planPublishedDate": "2026-05-15",
+        "themes": [
+          "商品・サービス",
+          "株主還元",
+          "人的資本",
+          "事業成長"
+        ],
+        "summary": "関門海（3372）の公式開示資料では、商品・サービス、株主還元、人的資本、事業成長を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.5で売上高・売上収益に関する数値・方針（2022年3月期、2023年3月期、2024年3月期、2025年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.5で利益に関する数値・方針（2022年3月期、2023年3月期、2024年3月期、2025年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.5で株主還元に関する数値・方針（2022年3月期、2023年3月期、2024年3月期、2025年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年3月期 決算短信〔日本基準〕(連結)を2026-05-15に公表した。",
+          "公式資料では商品・サービス、株主還元、人的資本を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.5: 財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.13: 財務目標・KPI・事業方針に関する記載を確認する。",
+          "公式PDF p.4: 財務目標・KPI・事業方針に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.5: 財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 3
+      },
+      "elapsedSeconds": 6.44,
+      "documentCount": 186,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+          "date": "2026-05-15",
+          "url": "https://www2.jpx.co.jp/disc/33720/140120260511521908.pdf",
+          "score": 125,
+          "pageCount": 14,
+          "textLength": 16962,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "3547",
+      "name": "ユニシアホールディングス",
+      "market": "Standard",
+      "industry": "小売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 566056,
+      "pageCount": 18,
+      "document": {
+        "date": "2026-07-15",
+        "dateText": "2026/07/15",
+        "title": "2026年11月期第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/35470/140120260715594631.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "3547",
+        "name": "ユニシアホールディングス",
+        "category": "小売業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/35470/140120260715594631.pdf",
+        "document": "2026年11月期第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "period": "2026年11月期～2025年11月期",
+        "planPublishedDate": "2026-07-15",
+        "themes": [
+          "株主還元",
+          "事業成長",
+          "商品・サービス",
+          "サステナビリティ"
+        ],
+        "summary": "ユニシアホールディングス（3547）の公式開示資料では、株主還元、事業成長、商品・サービス、サステナビリティを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.15で売上高・売上収益に関する数値・方針（2026年11月期、2025年、1,000店、60店）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.5で利益に関する数値・方針（2026年11月期、202.4%、120.2%、106.4%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "公式PDF p.18で投資・資本配分に関する数値・方針（2026年11月期、2026年、500百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2026年11月期、2025年11月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年11月期第2四半期(中間期)決算短信〔日本基準〕(連結)を2026-07-15に公表した。",
+          "公式資料では株主還元、事業成長、商品・サービスを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.15: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.5: 財務目標・KPI・事業方針に関する記載を確認する。",
+          "公式PDF p.17: 財務目標・KPI・事業方針に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": true,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": false,
+          "dx": false,
+          "humanCapital": true,
+          "newBusiness": true,
+          "restructuring": true
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.15: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 10.56,
+      "documentCount": 338,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年11月期第2四半期(中間期)決算短信〔日本基準〕(連結)",
+          "date": "2026-07-15",
+          "url": "https://www2.jpx.co.jp/disc/35470/140120260715594631.pdf",
+          "score": 125,
+          "pageCount": 18,
+          "textLength": 20107,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "3681",
+      "name": "ブイキューブ",
+      "status": "error",
+      "error": "RuntimeError: JPX search mismatch: none != 36810",
+      "elapsedSeconds": 0.5,
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "3845",
+      "name": "アイフリークモバイル",
+      "market": "Standard",
+      "industry": "情報・通信業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 2574512,
+      "pageCount": 26,
+      "document": {
+        "date": "2026-05-15",
+        "dateText": "2026/05/15",
+        "title": "2026年3月期決算短信補足説明資料",
+        "url": "https://www2.jpx.co.jp/disc/38450/140120260514535218.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "3845",
+        "name": "アイフリークモバイル",
+        "category": "情報・通信業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/38450/140120260514535218.pdf",
+        "document": "2026年3月期決算短信補足説明資料",
+        "period": "2023年～2023年",
+        "planPublishedDate": "2026-05-15",
+        "themes": [
+          "DX",
+          "AI",
+          "商品・サービス",
+          "人的資本"
+        ],
+        "summary": "アイフリークモバイル（3845）の公式開示資料では、DX、AI、商品・サービス、人的資本を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（2026年3月期、2025年3月期、6.9%、8.5%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.15で利益に関する数値・方針（2027年3月期、2026年3月期、10.5%、97.7%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。",
+        "highlights": [
+          "2026年3月期決算短信補足説明資料を2026-05-15に公表した。",
+          "公式資料ではDX、AI、商品・サービスを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.15: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.13: 計画・成長戦略・事業方針に関する記載を確認する。",
+          "公式PDF p.8: 財務目標・KPI・事業方針に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": true,
+          "capitalEfficiency": false,
+          "shareholderReturn": false,
+          "progress": false,
+          "overseas": false,
+          "dx": true,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": true
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.15: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 2
+      },
+      "elapsedSeconds": 13.35,
+      "documentCount": 334,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年3月期決算短信補足説明資料",
+          "date": "2026-05-15",
+          "url": "https://www2.jpx.co.jp/disc/38450/140120260514535218.pdf",
+          "score": 125,
+          "pageCount": 26,
+          "textLength": 8794,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "3851",
+      "name": "日本一ソフトウェア",
+      "market": "Standard",
+      "industry": "情報・通信業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 283235,
+      "pageCount": 15,
+      "document": {
+        "date": "2026-05-15",
+        "dateText": "2026/05/15",
+        "title": "令和8年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/38510/140120260515537162.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "3851",
+        "name": "日本一ソフトウェア",
+        "category": "情報・通信業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/38510/140120260515537162.pdf",
+        "document": "令和8年3月期 決算短信〔日本基準〕(連結)",
+        "period": "当該公式開示資料の対象期間",
+        "planPublishedDate": "2026-05-15",
+        "themes": [
+          "株主還元",
+          "海外",
+          "商品・サービス",
+          "事業成長"
+        ],
+        "summary": "日本一ソフトウェア（3851）の公式開示資料では、株主還元、海外、商品・サービス、事業成長を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（31.9%、33.0%、81.6%、24.4%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（31.9%、33.0%、81.6%、24.4%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.1で収益性・資本効率に関する数値・方針（89百万円、194百万円、7,823百万円、7,759百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2,773百万円、3,148百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "令和8年3月期 決算短信〔日本基準〕(連結)を2026-05-15に公表した。",
+          "公式資料では株主還元、海外、商品・サービスを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.5: 財務目標・KPI・事業方針に関する記載を確認する。",
+          "公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.5: 財務目標・KPI・事業方針に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 7.12,
+      "documentCount": 150,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "令和8年3月期 決算短信〔日本基準〕(連結)",
+          "date": "2026-05-15",
+          "url": "https://www2.jpx.co.jp/disc/38510/140120260515537162.pdf",
+          "score": 125,
+          "pageCount": 15,
+          "textLength": 16625,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "4317",
+      "name": "レイ",
+      "market": "Standard",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 535953,
+      "pageCount": 10,
+      "document": {
+        "date": "2026-07-14",
+        "dateText": "2026/07/14",
+        "title": "令和9年2月期第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/43170/140120260714592753.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "4317",
+        "name": "レイ",
+        "category": "サービス業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/43170/140120260714592753.pdf",
+        "document": "令和9年2月期第1四半期決算短信〔日本基準〕(連結)",
+        "period": "当該公式開示資料の対象期間",
+        "planPublishedDate": "2026-07-14",
+        "themes": [
+          "株主還元",
+          "商品・サービス",
+          "サステナビリティ"
+        ],
+        "summary": "レイ（4317）の公式開示資料では、株主還元、商品・サービス、サステナビリティを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（3,780百万円、17.5%、446百万円、9.1%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（3,780百万円、17.5%、446百万円、9.1%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "令和9年2月期第1四半期決算短信〔日本基準〕(連結)を2026-07-14に公表した。",
+          "公式資料では株主還元、商品・サービス、サステナビリティを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": false,
+          "dx": false,
+          "humanCapital": false,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 3,
+        "metricPageCount": 3
+      },
+      "elapsedSeconds": 7.34,
+      "documentCount": 177,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "令和9年2月期第1四半期決算短信〔日本基準〕(連結)",
+          "date": "2026-07-14",
+          "url": "https://www2.jpx.co.jp/disc/43170/140120260714592753.pdf",
+          "score": 125,
+          "pageCount": 10,
+          "textLength": 10394,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "4743",
+      "name": "アイティフォー",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 10223485,
+      "pageCount": 41,
+      "document": {
+        "date": "2024-09-30",
+        "dateText": "2024/09/30",
+        "title": "統合報告書「アイティフォー統合レポート2024」",
+        "url": "https://www2.jpx.co.jp/disc/47430/140120240927590406.pdf",
+        "tableId": "closeUpFili26",
+        "score": 138
+      },
+      "record": {
+        "code": "4743",
+        "name": "アイティフォー",
+        "category": "情報・通信業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/47430/140120240927590406.pdf",
+        "document": "統合報告書「アイティフォー統合レポート2024」",
+        "period": "2023年度～2023年度",
+        "planPublishedDate": "2024-09-30",
+        "themes": [
+          "人的資本",
+          "商品・サービス",
+          "サステナビリティ",
+          "事業成長"
+        ],
+        "summary": "アイティフォー（4743）の公式開示資料では、人的資本、商品・サービス、サステナビリティ、事業成長を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.18で売上高・売上収益に関する数値・方針（2022年度、34億円、2023年度、50%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.18で利益に関する数値・方針（2022年度、34億円、2023年度、50%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.18で収益性・資本効率に関する数値・方針（2022年度、34億円、2023年度、50%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.18で投資・資本配分に関する数値・方針（2022年度、34億円、2023年度、50%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.18で株主還元に関する数値・方針（2022年度、34億円、2023年度、50%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "統合報告書「アイティフォー統合レポート2024」を2024-09-30に公表した。",
+          "公式資料では人的資本、商品・サービス、サステナビリティを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.25: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.18: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.20: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": true,
+          "shareholderReturn": false,
+          "progress": false,
+          "overseas": false,
+          "dx": true,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.25: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 5
+      },
+      "elapsedSeconds": 62.8,
+      "documentCount": 214,
+      "attemptedDocumentCount": 5,
+      "documentAttempts": [
+        {
+          "title": "新中期経営計画の策定に関するお知らせ",
+          "date": "2024-05-09",
+          "url": "https://www2.jpx.co.jp/disc/47430/140120240509586010.pdf",
+          "score": 193,
+          "pageCount": 1,
+          "textLength": 799,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "統合報告書「アイティフォー統合レポート2025」",
+          "date": "2025-10-01",
+          "url": "https://www2.jpx.co.jp/disc/47430/140120250930564851.pdf",
+          "score": 144,
+          "pageCount": 70,
+          "textLength": 161023,
+          "result": "needs_review",
+          "confidence": 75
+        },
+        {
+          "title": "統合報告書発行に関するお知らせ",
+          "date": "2025-09-30",
+          "url": "https://www2.jpx.co.jp/disc/47430/140120250930564765.pdf",
+          "score": 144,
+          "pageCount": 1,
+          "textLength": 611,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "統合報告書発行に関するお知らせ",
+          "date": "2024-09-30",
+          "url": "https://www2.jpx.co.jp/disc/47430/140120240927590396.pdf",
+          "score": 138,
+          "pageCount": 1,
+          "textLength": 570,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "統合報告書「アイティフォー統合レポート2024」",
+          "date": "2024-09-30",
+          "url": "https://www2.jpx.co.jp/disc/47430/140120240927590406.pdf",
+          "score": 138,
+          "pageCount": 41,
+          "textLength": 101725,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "4839",
+      "name": "ＷＯＷＯＷ",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 361898,
+      "pageCount": 3,
+      "document": {
+        "date": "2024-04-26",
+        "dateText": "2024/04/26",
+        "title": "資本コストや株価を意識した経営の実現に向けた対応について",
+        "url": "https://www2.jpx.co.jp/disc/48390/140120240325558582.pdf",
+        "tableId": "closeUpKaiJi98",
+        "score": 168
+      },
+      "record": {
+        "code": "4839",
+        "name": "ＷＯＷＯＷ",
+        "category": "情報・通信業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/48390/140120240325558582.pdf",
+        "document": "資本コストや株価を意識した経営の実現に向けた対応について",
+        "period": "2018年度～2019年度",
+        "planPublishedDate": "2024-04-26",
+        "themes": [
+          "資本効率",
+          "商品・サービス",
+          "サステナビリティ",
+          "株主還元"
+        ],
+        "summary": "ＷＯＷＯＷ（4839）の公式開示資料では、資本効率、商品・サービス、サステナビリティ、株主還元を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.1で売上高・売上収益に関する数値・方針（2024年、2018年度、8%、2020年度）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.1で利益に関する数値・方針（2024年、2018年度、8%、2020年度）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.1で収益性・資本効率に関する数値・方針（2024年、2018年度、8%、2020年度）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "資本コストや株価を意識した経営の実現に向けた対応についてを2024-04-26に公表した。",
+          "公式資料では資本効率、商品・サービス、サステナビリティを主要テーマとして確認した。",
+          "2ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.1: 財務目標・KPI・事業方針に関する記載を確認する。",
+          "公式PDF p.2: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": true,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": false,
+          "dx": false,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": true
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.1: 財務目標・KPI・事業方針に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 2,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 5.17,
+      "documentCount": 389,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "資本コストや株価を意識した経営の実現に向けた対応について",
+          "date": "2024-04-26",
+          "url": "https://www2.jpx.co.jp/disc/48390/140120240325558582.pdf",
+          "score": 168,
+          "pageCount": 3,
+          "textLength": 1801,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "4927",
+      "name": "ポーラ・オルビスホールディングス",
+      "market": "Prime",
+      "industry": "化学",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 1047002,
+      "pageCount": 26,
+      "document": {
+        "date": "2026-05-11",
+        "dateText": "2026/05/11",
+        "title": "2026年12月期 第1四半期 決算補足資料",
+        "url": "https://www2.jpx.co.jp/disc/49270/140120260507518143.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 160
+      },
+      "record": {
+        "code": "4927",
+        "name": "ポーラ・オルビスホールディングス",
+        "category": "化学/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/49270/140120260507518143.pdf",
+        "document": "2026年12月期 第1四半期 決算補足資料",
+        "period": "2026年～2026年",
+        "planPublishedDate": "2026-05-11",
+        "themes": [
+          "商品・サービス",
+          "海外",
+          "株主還元",
+          "事業成長"
+        ],
+        "summary": "ポーラ・オルビスホールディングス（4927）の公式開示資料では、商品・サービス、海外、株主還元、事業成長を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.18で売上高・売上収益に関する数値・方針（2026年12月期、2025年、121.5%、8,385百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.18で利益に関する数値・方針（2026年12月期、2025年、121.5%、8,385百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.25で収益性・資本効率に関する数値・方針（60%、2026年、127.8%、2025年）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.18で投資・資本配分に関する数値・方針（2026年12月期、2025年、121.5%、8,385百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.18で株主還元に関する数値・方針（2026年12月期、2025年、121.5%、8,385百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年12月期 第1四半期 決算補足資料を2026-05-11に公表した。",
+          "公式資料では商品・サービス、海外、株主還元を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.26: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.25: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.18: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": true,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": true
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.26: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 5
+      },
+      "elapsedSeconds": 7.04,
+      "documentCount": 232,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年12月期 第1四半期 決算補足資料",
+          "date": "2026-05-11",
+          "url": "https://www2.jpx.co.jp/disc/49270/140120260507518143.pdf",
+          "score": 160,
+          "pageCount": 26,
+          "textLength": 12210,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "545A",
+      "name": "トランヴィア",
+      "status": "no_candidate_document",
+      "documentCount": 11,
+      "elapsedSeconds": 0.82
+    },
+    {
+      "code": "5903",
+      "name": "シンポ",
+      "status": "error",
+      "error": "RuntimeError: JPX search mismatch: none != 59030",
+      "elapsedSeconds": 0.82,
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6195",
+      "name": "ホープ",
+      "market": "Growth",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 617097,
+      "pageCount": 26,
+      "document": {
+        "date": "2026-05-14",
+        "dateText": "2026/05/14",
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/61950/140120260506517352.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "6195",
+        "name": "ホープ",
+        "category": "サービス業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/61950/140120260506517352.pdf",
+        "document": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "period": "2024年～2027年3月期",
+        "planPublishedDate": "2026-05-14",
+        "themes": [
+          "株主還元",
+          "商品・サービス",
+          "事業成長",
+          "収益力強化"
+        ],
+        "summary": "ホープ（6195）の公式開示資料では、株主還元、商品・サービス、事業成長、収益力強化を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.7で売上高・売上収益に関する数値・方針（2026年3月期、1人、2027年3月期、2024年）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.7で利益に関する数値・方針（2026年3月期、1人、2027年3月期、2024年）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.7で収益性・資本効率に関する数値・方針（2026年3月期、1人、2027年3月期、2024年）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.7で株主還元に関する数値・方針（2026年3月期、1人、2027年3月期、2024年）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年3月期 決算短信〔日本基準〕(連結)を2026-05-14に公表した。",
+          "公式資料では株主還元、商品・サービス、事業成長を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.5: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.26: 財務目標・KPI・事業方針に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 60.09,
+      "documentCount": 436,
+      "attemptedDocumentCount": 9,
+      "documentAttempts": [
+        {
+          "title": "事業計画及び成長可能性に関する事項",
+          "date": "2026-05-14",
+          "url": "https://www2.jpx.co.jp/disc/61950/140120260514532528.pdf",
+          "score": 200,
+          "pageCount": 67,
+          "textLength": 15506,
+          "result": "needs_review",
+          "confidence": 75
+        },
+        {
+          "title": "事業計画及び成長可能性に関する事項",
+          "date": "2025-05-14",
+          "url": "https://www2.jpx.co.jp/disc/61950/140120250514550356.pdf",
+          "score": 194,
+          "pageCount": 63,
+          "textLength": 14075,
+          "result": "needs_review",
+          "confidence": 75
+        },
+        {
+          "title": "中期経営計画",
+          "date": "2024-05-15",
+          "url": "https://www2.jpx.co.jp/disc/61950/140120240515598771.pdf",
+          "score": 193,
+          "pageCount": 21,
+          "textLength": 3799,
+          "result": "needs_review",
+          "confidence": 75
+        },
+        {
+          "title": "事業計画及び成長可能性に関する事項",
+          "date": "2024-05-15",
+          "url": "https://www2.jpx.co.jp/disc/61950/140120240515597322.pdf",
+          "score": 188,
+          "pageCount": 72,
+          "textLength": 14815,
+          "result": "needs_review",
+          "confidence": 75
+        },
+        {
+          "title": "事業計画及び成長可能性に関する事項",
+          "date": "2023-05-11",
+          "url": "https://www2.jpx.co.jp/disc/61950/140120230510563957.pdf",
+          "score": 182,
+          "pageCount": 53,
+          "textLength": 11874,
+          "result": "needs_review",
+          "confidence": 75
+        },
+        {
+          "title": "事業計画及び成長可能性に関する事項",
+          "date": "2022-06-08",
+          "url": "https://www2.jpx.co.jp/disc/61950/140120220607573374.pdf",
+          "score": 176,
+          "pageCount": 48,
+          "textLength": 10742,
+          "result": "needs_review",
+          "confidence": 75
+        },
+        {
+          "title": "2023年3月期 第1四半期決算補足資料",
+          "date": "2022-08-08",
+          "url": "https://www2.jpx.co.jp/disc/61950/140120220808514768.pdf",
+          "score": 136,
+          "pageCount": 52,
+          "textLength": 14089,
+          "result": "needs_review",
+          "confidence": 75
+        },
+        {
+          "title": "2022年6月期 第2四半期決算補足資料",
+          "date": "2022-02-14",
+          "url": "https://www2.jpx.co.jp/disc/61950/140120220214590191.pdf",
+          "score": 136,
+          "pageCount": 65,
+          "textLength": 16344,
+          "result": "needs_review",
+          "confidence": 75
+        },
+        {
+          "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+          "date": "2026-05-14",
+          "url": "https://www2.jpx.co.jp/disc/61950/140120260506517352.pdf",
+          "score": 125,
+          "pageCount": 26,
+          "textLength": 27082,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6366",
+      "name": "千代田化工建設",
+      "market": "Standard",
+      "industry": "建設業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 2271893,
+      "pageCount": 28,
+      "document": {
+        "date": "2025-05-08",
+        "dateText": "2025/05/08",
+        "title": "経営計画2025",
+        "url": "https://www2.jpx.co.jp/disc/63660/140120250508533261.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 174
+      },
+      "record": {
+        "code": "6366",
+        "name": "千代田化工建設",
+        "category": "建設業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/63660/140120250508533261.pdf",
+        "document": "経営計画2025",
+        "period": "2024年度～2027年度",
+        "planPublishedDate": "2025-05-08",
+        "themes": [
+          "人的資本",
+          "サステナビリティ",
+          "商品・サービス",
+          "事業成長"
+        ],
+        "summary": "千代田化工建設（6366）の公式開示資料では、人的資本、サステナビリティ、商品・サービス、事業成長を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.7で売上高・売上収益に関する数値・方針（150億円、10%、9,500億円、3,800億円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.7で利益に関する数値・方針（150億円、10%、9,500億円、3,800億円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "公式PDF p.21で投資・資本配分に関する数値・方針（42%、37%、16%、5%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。",
+        "highlights": [
+          "経営計画2025を2025-05-08に公表した。",
+          "公式資料では人的資本、サステナビリティ、商品・サービスを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.7: 財務目標・KPI・事業方針に関する記載を確認する。",
+          "公式PDF p.2: 計画・成長戦略・事業方針に関する記載を確認する。",
+          "公式PDF p.27: 計画・成長戦略・事業方針に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": false,
+          "progress": false,
+          "overseas": true,
+          "dx": true,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.7: 財務目標・KPI・事業方針に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 3
+      },
+      "elapsedSeconds": 13.46,
+      "documentCount": 272,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "経営計画2025",
+          "date": "2025-05-08",
+          "url": "https://www2.jpx.co.jp/disc/63660/140120250508533261.pdf",
+          "score": 174,
+          "pageCount": 28,
+          "textLength": 16726,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6436",
+      "name": "アマノ",
+      "market": "Prime",
+      "industry": "機械",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 532671,
+      "pageCount": 20,
+      "document": {
+        "date": "2026-04-27",
+        "dateText": "2026/04/27",
+        "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/64360/140120260414503875.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "6436",
+        "name": "アマノ",
+        "category": "機械/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/64360/140120260414503875.pdf",
+        "document": "2026年3月期 決算短信〔日本基準〕(連結)",
+        "period": "2026年～2029年",
+        "planPublishedDate": "2026-04-27",
+        "themes": [
+          "株主還元",
+          "海外",
+          "事業成長",
+          "サステナビリティ"
+        ],
+        "summary": "アマノ（6436）の公式開示資料では、株主還元、海外、事業成長、サステナビリティを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（2026年3月期、2023年、176,467百万円、0.6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（2026年3月期、2023年、176,467百万円、0.6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.9で収益性・資本効率に関する数値・方針（2026年3月期、2031年、2029年3月期、2,000億円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.4で投資・資本配分に関する数値・方針（2026年3月期、2023年、176,467百万円、0.6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.8で株主還元に関する数値・方針（2026年3月期、2031年、40%、55%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年3月期 決算短信〔日本基準〕(連結)を2026-04-27に公表した。",
+          "公式資料では株主還元、海外、事業成長を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.9: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.8: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": true,
+          "humanCapital": false,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 5
+      },
+      "elapsedSeconds": 7.93,
+      "documentCount": 175,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+          "date": "2026-04-27",
+          "url": "https://www2.jpx.co.jp/disc/64360/140120260414503875.pdf",
+          "score": 125,
+          "pageCount": 20,
+          "textLength": 26637,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6440",
+      "name": "ＪＵＫＩ",
+      "market": "Prime",
+      "industry": "機械",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 566500,
+      "pageCount": 13,
+      "document": {
+        "date": "2026-05-12",
+        "dateText": "2026/05/12",
+        "title": "2026年12月期第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/64400/140120260511522272.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "6440",
+        "name": "ＪＵＫＩ",
+        "category": "機械/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/64400/140120260511522272.pdf",
+        "document": "2026年12月期第1四半期決算短信〔日本基準〕(連結)",
+        "period": "2026年12月期～2026年",
+        "planPublishedDate": "2026-05-12",
+        "themes": [
+          "収益力強化",
+          "海外",
+          "株主還元",
+          "事業再編"
+        ],
+        "summary": "ＪＵＫＩ（6440）の公式開示資料では、収益力強化、海外、株主還元、事業再編を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（2026年12月期、2024年、2百万円、9.9%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（2026年12月期、2024年、2百万円、9.9%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.5で収益性・資本効率に関する数値・方針（2026年12月期、444%、6.1%、4.8%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2026年12月期、2025年12月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年12月期第1四半期決算短信〔日本基準〕(連結)を2026-05-12に公表した。",
+          "公式資料では収益力強化、海外、株主還元を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": true
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 6.15,
+      "documentCount": 177,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年12月期第1四半期決算短信〔日本基準〕(連結)",
+          "date": "2026-05-12",
+          "url": "https://www2.jpx.co.jp/disc/64400/140120260511522272.pdf",
+          "score": 125,
+          "pageCount": 13,
+          "textLength": 13234,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6469",
+      "name": "放電精密加工研究所",
+      "market": "Standard",
+      "industry": "機械",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 554465,
+      "pageCount": 14,
+      "document": {
+        "date": "2026-07-07",
+        "dateText": "2026/07/07",
+        "title": "2027年2月期 第1四半期決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/64690/140120260619575101.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "6469",
+        "name": "放電精密加工研究所",
+        "category": "機械/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/64690/140120260619575101.pdf",
+        "document": "2027年2月期 第1四半期決算短信〔日本基準〕(連結)",
+        "period": "2027年2月期～2026年2月期",
+        "planPublishedDate": "2026-07-07",
+        "themes": [
+          "事業成長",
+          "株主還元",
+          "サステナビリティ",
+          "商品・サービス"
+        ],
+        "summary": "放電精密加工研究所（6469）の公式開示資料では、事業成長、株主還元、サステナビリティ、商品・サービスを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（2027年2月期、2026年、4,317百万円、20.8%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（2027年2月期、2026年、4,317百万円、20.8%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2027年2月期、2026年2月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2027年2月期 第1四半期決算短信〔日本基準〕(連結)を2026-07-07に公表した。",
+          "公式資料では事業成長、株主還元、サステナビリティを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.5: 財務目標・KPI・事業方針に関する記載を確認する。",
+          "公式PDF p.4: 財務目標・KPI・事業方針に関する記載を確認する。",
+          "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": true,
+          "humanCapital": false,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.5: 財務目標・KPI・事業方針に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 3
+      },
+      "elapsedSeconds": 11.07,
+      "documentCount": 167,
+      "attemptedDocumentCount": 2,
+      "documentAttempts": [
+        {
+          "title": "「中期経営計画2027」の策定に関するお知らせ",
+          "date": "2024-04-09",
+          "url": "https://www2.jpx.co.jp/disc/64690/140120240408567461.pdf",
+          "score": 193,
+          "pageCount": 2,
+          "textLength": 2799,
+          "result": "needs_review",
+          "confidence": 80
+        },
+        {
+          "title": "2027年2月期 第1四半期決算短信〔日本基準〕(連結)",
+          "date": "2026-07-07",
+          "url": "https://www2.jpx.co.jp/disc/64690/140120260619575101.pdf",
+          "score": 125,
+          "pageCount": 14,
+          "textLength": 12630,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6800",
+      "name": "ヨコオ",
+      "market": "Prime",
+      "industry": "電気機器",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 647840,
+      "pageCount": 21,
+      "document": {
+        "date": "2026-05-13",
+        "dateText": "2026/05/13",
+        "title": "2026年3月期 決算短信[日本基準](連結)",
+        "url": "https://www2.jpx.co.jp/disc/68000/140120260512527212.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "6800",
+        "name": "ヨコオ",
+        "category": "電気機器/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/68000/140120260512527212.pdf",
+        "document": "2026年3月期 決算短信[日本基準](連結)",
+        "period": "2026年3月期～2025年3月期",
+        "planPublishedDate": "2026-05-13",
+        "themes": [
+          "株主還元",
+          "商品・サービス",
+          "海外",
+          "事業成長"
+        ],
+        "summary": "ヨコオ（6800）の公式開示資料では、株主還元、商品・サービス、海外、事業成長を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（2026年3月期、90,090百万円、8.7%、5,016百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.6で利益に関する数値・方針（2026年3月期、2,679百万円、3,886百万円、1,142百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.1で収益性・資本効率に関する数値・方針（2026年3月期、2026年、2025年、2025年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2026年3月期、2025年3月期、2025年、2026年）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年3月期 決算短信[日本基準](連結)を2026-05-13に公表した。",
+          "公式資料では株主還元、商品・サービス、海外を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.6: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.4: 財務目標・KPI・事業方針に関する記載を確認する。",
+          "公式PDF p.2: 財務目標・KPIに関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": true,
+          "humanCapital": true,
+          "newBusiness": true,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.6: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 8.67,
+      "documentCount": 198,
+      "attemptedDocumentCount": 2,
+      "documentAttempts": [
+        {
+          "title": "(訂正・数値データ訂正) 「2026年3月期 決算短信〔日本基準〕(連結)」の一部訂正に関するお知らせ",
+          "date": "2026-05-22",
+          "url": "https://www2.jpx.co.jp/disc/68000/140120260521543508.pdf",
+          "score": 125,
+          "pageCount": 1,
+          "textLength": 949,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年3月期 決算短信[日本基準](連結)",
+          "date": "2026-05-13",
+          "url": "https://www2.jpx.co.jp/disc/68000/140120260512527212.pdf",
+          "score": 125,
+          "pageCount": 21,
+          "textLength": 21888,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6823",
+      "name": "リオン",
+      "market": "Prime",
+      "industry": "電気機器",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 642677,
+      "pageCount": 12,
+      "document": {
+        "date": "2024-10-30",
+        "dateText": "2024/10/30",
+        "title": "2025年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/68230/140120241030506258.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 113
+      },
+      "record": {
+        "code": "6823",
+        "name": "リオン",
+        "category": "電気機器/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/68230/140120241030506258.pdf",
+        "document": "2025年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+        "period": "2025年3月期～2024年3月期",
+        "planPublishedDate": "2024-10-30",
+        "themes": [
+          "商品・サービス",
+          "株主還元",
+          "サステナビリティ",
+          "海外"
+        ],
+        "summary": "リオン（6823）の公式開示資料では、商品・サービス、株主還元、サステナビリティ、海外を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.1で売上高・売上収益に関する数値・方針（2025年3月期、2024年、2024年3月期、1,256百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.1で利益に関する数値・方針（2025年3月期、2024年、2024年3月期、1,256百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "公式PDF p.5で投資・資本配分に関する数値・方針（2025年3月期、2023年、2024年）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2025年3月期、2024年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2025年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)を2024-10-30に公表した。",
+          "公式資料では商品・サービス、株主還元、サステナビリティを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.8: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.5: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": false,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 113.5,
+      "documentCount": 149,
+      "attemptedDocumentCount": 10,
+      "documentAttempts": [
+        {
+          "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+          "date": "2026-04-28",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120260428512838.pdf",
+          "score": 125,
+          "pageCount": 17,
+          "textLength": 0,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年3月期 決算短信〔日本基準〕(連結)",
+          "date": "2026-04-28",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120260428512838.pdf",
+          "score": 125,
+          "pageCount": 17,
+          "textLength": 0,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年3月期 第3四半期決算短信〔日本基準〕(連結)",
+          "date": "2026-01-29",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120260128540644.pdf",
+          "score": 125,
+          "pageCount": 11,
+          "textLength": 0,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+          "date": "2025-10-30",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120251030582248.pdf",
+          "score": 119,
+          "pageCount": 12,
+          "textLength": 0,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+          "date": "2025-10-30",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120251030582248.pdf",
+          "score": 119,
+          "pageCount": 12,
+          "textLength": 0,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年3月期 第1四半期決算短信〔日本基準〕(連結)",
+          "date": "2025-07-30",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120250730523757.pdf",
+          "score": 119,
+          "pageCount": 11,
+          "textLength": 0,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2025年3月期 決算短信〔日本基準〕(連結)",
+          "date": "2025-04-28",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120250428525783.pdf",
+          "score": 119,
+          "pageCount": 17,
+          "textLength": 0,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2025年3月期 決算短信〔日本基準〕(連結)",
+          "date": "2025-04-28",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120250428525783.pdf",
+          "score": 119,
+          "pageCount": 17,
+          "textLength": 0,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2025年3月期 第3四半期決算短信〔日本基準〕(連結)",
+          "date": "2025-01-30",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120250130558189.pdf",
+          "score": 119,
+          "pageCount": 11,
+          "textLength": 0,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2025年3月期 第2四半期(中間期)決算短信〔日本基準〕(連結)",
+          "date": "2024-10-30",
+          "url": "https://www2.jpx.co.jp/disc/68230/140120241030506258.pdf",
+          "score": 113,
+          "pageCount": 12,
+          "textLength": 9819,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6867",
+      "name": "リーダー電子",
+      "market": "Standard",
+      "industry": "電気機器",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 1854057,
+      "pageCount": 16,
+      "document": {
+        "date": "2024-05-15",
+        "dateText": "2024/05/15",
+        "title": "2024年3月期 決算説明資料",
+        "url": "https://www2.jpx.co.jp/disc/68670/140120240515599161.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 148
+      },
+      "record": {
+        "code": "6867",
+        "name": "リーダー電子",
+        "category": "電気機器/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/68670/140120240515599161.pdf",
+        "document": "2024年3月期 決算説明資料",
+        "period": "2024年度～2025年度",
+        "planPublishedDate": "2024-05-15",
+        "themes": [
+          "事業成長",
+          "海外",
+          "商品・サービス",
+          "株主還元"
+        ],
+        "summary": "リーダー電子（6867）の公式開示資料では、事業成長、海外、商品・サービス、株主還元を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.3で売上高・売上収益に関する数値・方針（4百万円、8%、295 百万円、72.1%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.3で利益に関する数値・方針（4百万円、8%、295 百万円、72.1%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.8で収益性・資本効率に関する数値・方針（72.1%、260百万円、964百万円、49百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.3で投資・資本配分に関する数値・方針（4百万円、8%、295 百万円、72.1%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.15で株主還元に関する数値・方針を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2024年3月期 決算説明資料を2024-05-15に公表した。",
+          "公式資料では事業成長、海外、商品・サービスを主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.3: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.11: 財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.4: 財務目標・KPIに関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": true,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": false,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.3: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 5
+      },
+      "elapsedSeconds": 27.14,
+      "documentCount": 199,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2024年3月期 決算説明資料",
+          "date": "2024-05-15",
+          "url": "https://www2.jpx.co.jp/disc/68670/140120240515599161.pdf",
+          "score": 148,
+          "pageCount": 16,
+          "textLength": 4645,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6904",
+      "name": "原田工業",
+      "market": "Standard",
+      "industry": "電気機器",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 283404,
+      "pageCount": 16,
+      "document": {
+        "date": "2026-05-14",
+        "dateText": "2026/05/14",
+        "title": "2026年3月期決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/69040/140120260427512009.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "6904",
+        "name": "原田工業",
+        "category": "電気機器/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/69040/140120260427512009.pdf",
+        "document": "2026年3月期決算短信〔日本基準〕(連結)",
+        "period": "2025年～2026年3月期",
+        "planPublishedDate": "2026-05-14",
+        "themes": [
+          "株主還元",
+          "海外",
+          "事業成長",
+          "事業再編"
+        ],
+        "summary": "原田工業（6904）の公式開示資料では、株主還元、海外、事業成長、事業再編を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（92百万円、5.9%、98百万円、38.7%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.5で利益に関する数値・方針（43百万円、32百万円、89百万円、64百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "公式PDF p.5で投資・資本配分に関する数値・方針（43百万円、32百万円、89百万円、64百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.13で株主還元に関する数値・方針（2024年、2025年、2026年、2026年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年3月期決算短信〔日本基準〕(連結)を2026-05-14に公表した。",
+          "公式資料では株主還元、海外、事業成長を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.5: 投資・株主還元・事業方針に関する記載を確認する。",
+          "公式PDF p.6: 財務目標・KPI・事業方針に関する記載を確認する。",
+          "公式PDF p.4: 財務目標・KPI・事業方針に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": false,
+          "newBusiness": true,
+          "restructuring": true
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.5: 投資・株主還元・事業方針に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 8.67,
+      "documentCount": 193,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年3月期決算短信〔日本基準〕(連結)",
+          "date": "2026-05-14",
+          "url": "https://www2.jpx.co.jp/disc/69040/140120260427512009.pdf",
+          "score": 125,
+          "pageCount": 16,
+          "textLength": 19032,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "6920",
+      "name": "レーザーテック",
+      "market": "Prime",
+      "industry": "電気機器",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 245210,
+      "pageCount": 12,
+      "document": {
+        "date": "2026-04-30",
+        "dateText": "2026/04/30",
+        "title": "2026年6月期 第3四半期決算短信〔日本基準〕 (連結)",
+        "url": "https://www2.jpx.co.jp/disc/69200/140120260430514363.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "6920",
+        "name": "レーザーテック",
+        "category": "電気機器/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/69200/140120260430514363.pdf",
+        "document": "2026年6月期 第3四半期決算短信〔日本基準〕 (連結)",
+        "period": "2025年6月期～2026年6月期",
+        "planPublishedDate": "2026-04-30",
+        "themes": [
+          "株主還元",
+          "商品・サービス",
+          "海外",
+          "AI"
+        ],
+        "summary": "レーザーテック（6920）の公式開示資料では、株主還元、商品・サービス、海外、AIを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（39百万円、0.4%、64百万円、6.7%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（39百万円、0.4%、64百万円、6.7%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "公式PDF p.4で投資・資本配分に関する数値・方針（39百万円、0.4%、64百万円、6.7%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.4で株主還元に関する数値・方針（39百万円、0.4%、64百万円、6.7%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年6月期 第3四半期決算短信〔日本基準〕 (連結)を2026-04-30に公表した。",
+          "公式資料では株主還元、商品・サービス、海外を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.1: 財務目標・KPI・投資・株主還元に関する記載を確認する。",
+          "公式PDF p.7: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": true,
+          "humanCapital": false,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_disclosed",
+          "reason": "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+          "sourceRef": "公式PDF p.4: 財務目標・KPI・投資・株主還元に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 5.83,
+      "documentCount": 196,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年6月期 第3四半期決算短信〔日本基準〕 (連結)",
+          "date": "2026-04-30",
+          "url": "https://www2.jpx.co.jp/disc/69200/140120260430514363.pdf",
+          "score": 125,
+          "pageCount": 12,
+          "textLength": 11071,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "7317",
+      "name": "松屋アールアンドディ",
+      "status": "error",
+      "error": "RuntimeError: JPX search mismatch: none != 73170",
+      "elapsedSeconds": 1.11,
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "7940",
+      "name": "ウェーブロックホールディングス",
+      "status": "error",
+      "error": "RuntimeError: JPX search mismatch: none != 79400",
+      "elapsedSeconds": 0.71,
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "8153",
+      "name": "モスフードサービス",
+      "market": "Prime",
+      "industry": "卸売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 727445,
+      "pageCount": 25,
+      "document": {
+        "date": "2026-05-15",
+        "dateText": "2026/05/15",
+        "title": "2026年3月期決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/81530/140120260512525368.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "8153",
+        "name": "モスフードサービス",
+        "category": "卸売業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/81530/140120260512525368.pdf",
+        "document": "2026年3月期決算短信〔日本基準〕(連結)",
+        "period": "2026年3月期～2025年3月期",
+        "planPublishedDate": "2026-05-15",
+        "themes": [
+          "商品・サービス",
+          "株主還元",
+          "海外",
+          "人的資本"
+        ],
+        "summary": "モスフードサービス（8153）の公式開示資料では、商品・サービス、株主還元、海外、人的資本を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（2026年3月期、2025年、2027年度、2店）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（2026年3月期、2025年、2027年度、2店）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.1で収益性・資本効率に関する数値・方針（2026年3月期、2026年、2025年、2025年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.25で投資・資本配分に関する数値・方針（2026年3月期、2026年、4,146百万円、2,012百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.20で株主還元に関する数値・方針（2026年3月期、270百万円、333百万円、129百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年3月期決算短信〔日本基準〕(連結)を2026-05-15に公表した。",
+          "公式資料では商品・サービス、株主還元、海外を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.10: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": false,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 5
+      },
+      "elapsedSeconds": 12.26,
+      "documentCount": 159,
+      "attemptedDocumentCount": 4,
+      "documentAttempts": [
+        {
+          "title": "中期経営計画策定に関するお知らせ",
+          "date": "2025-05-15",
+          "url": "https://www2.jpx.co.jp/disc/81530/140120250514552542.pdf",
+          "score": 199,
+          "pageCount": 1,
+          "textLength": 750,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "中期経営計画の修正について",
+          "date": "2024-05-15",
+          "url": "https://www2.jpx.co.jp/disc/81530/140120240514597032.pdf",
+          "score": 193,
+          "pageCount": 1,
+          "textLength": 909,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "中期経営計画策定に関するお知らせ",
+          "date": "2022-05-13",
+          "url": "https://www2.jpx.co.jp/disc/81530/140120220512543702.pdf",
+          "score": 181,
+          "pageCount": 1,
+          "textLength": 762,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年3月期決算短信〔日本基準〕(連結)",
+          "date": "2026-05-15",
+          "url": "https://www2.jpx.co.jp/disc/81530/140120260512525368.pdf",
+          "score": 125,
+          "pageCount": 25,
+          "textLength": 27706,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "8410",
+      "name": "セブン銀行",
+      "market": "Prime",
+      "industry": "銀行業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 2719596,
+      "pageCount": 52,
+      "document": {
+        "date": "2026-05-08",
+        "dateText": "2026/05/08",
+        "title": "2026年3月期決算説明資料",
+        "url": "https://www2.jpx.co.jp/disc/84100/140120260508519091.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 160
+      },
+      "record": {
+        "code": "8410",
+        "name": "セブン銀行",
+        "category": "銀行業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/84100/140120260508519091.pdf",
+        "document": "2026年3月期決算説明資料",
+        "period": "当該公式開示資料の対象期間",
+        "planPublishedDate": "2026-05-08",
+        "themes": [
+          "事業成長",
+          "商品・サービス",
+          "海外",
+          "株主還元"
+        ],
+        "summary": "セブン銀行（8410）の公式開示資料では、事業成長、商品・サービス、海外、株主還元を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.18で売上高・売上収益に関する数値・方針（1,035億円、271億円、2021年）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.31で利益に関する数値・方針（2021年、11.3%、8.7%、7.6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.31で収益性・資本効率に関する数値・方針（2021年、11.3%、8.7%、7.6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.38で株主還元に関する数値・方針（2028年度、40%、75.5%、2027年3月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年3月期決算説明資料を2026-05-08に公表した。",
+          "公式資料では事業成長、商品・サービス、海外を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.31: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.33: 計画・成長戦略・事業方針に関する記載を確認する。",
+          "公式PDF p.27: 事業方針に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": true,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.31: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 14.32,
+      "documentCount": 338,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年3月期決算説明資料",
+          "date": "2026-05-08",
+          "url": "https://www2.jpx.co.jp/disc/84100/140120260508519091.pdf",
+          "score": 160,
+          "pageCount": 52,
+          "textLength": 22007,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "9216",
+      "name": "ビーウィズ",
+      "status": "all_candidate_documents_failed",
+      "documentCount": 135,
+      "attemptedDocumentCount": 12,
+      "documentAttempts": [
+        {
+          "title": "2026年5月期決算・中長期経営計画2030説明会 書き起こし公開のお知らせ",
+          "date": "2026-07-21",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260717596059.pdf",
+          "score": 205,
+          "pageCount": 1,
+          "textLength": 533,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "中長期経営計画2030公開のお知らせ",
+          "date": "2026-07-13",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260711591747.pdf",
+          "score": 205,
+          "pageCount": 1,
+          "textLength": 376,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "中期経営計画2025 ローリングプラン2024公開のお知らせ",
+          "date": "2024-07-11",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120240709546166.pdf",
+          "score": 193,
+          "pageCount": 1,
+          "textLength": 504,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "中期経営計画公開のお知らせ",
+          "date": "2023-07-13",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120230713521687.pdf",
+          "score": 187,
+          "pageCount": 1,
+          "textLength": 385,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年5月期 決算説明資料公開のお知らせ",
+          "date": "2026-07-13",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260711591312.pdf",
+          "score": 160,
+          "pageCount": 1,
+          "textLength": 340,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年5月期第3四半期 決算説明資料公開のお知らせ",
+          "date": "2026-04-10",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260410501556.pdf",
+          "score": 160,
+          "pageCount": 1,
+          "textLength": 350,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年5月期 第2四半期 決算説明会動画および書き起こし公開のお知らせ",
+          "date": "2026-01-16",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260116535260.pdf",
+          "score": 160,
+          "pageCount": 1,
+          "textLength": 632,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年5月期 第2四半期 決算説明資料公開のお知らせ",
+          "date": "2026-01-09",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260108530793.pdf",
+          "score": 160,
+          "pageCount": 1,
+          "textLength": 349,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年5月期第1四半期 決算説明資料公開のお知らせ",
+          "date": "2025-10-10",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120251010571750.pdf",
+          "score": 154,
+          "pageCount": 1,
+          "textLength": 351,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2025年5月期 決算説明資料公開のお知らせ",
+          "date": "2025-07-11",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120250709510754.pdf",
+          "score": 154,
+          "pageCount": 1,
+          "textLength": 336,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2025年5月期 第3四半期 決算説明資料公開のお知らせ",
+          "date": "2025-04-11",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120250410512198.pdf",
+          "score": 154,
+          "pageCount": 1,
+          "textLength": 348,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2025年5月期 第2四半期 決算説明資料公開のお知らせ",
+          "date": "2025-01-10",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120250109548496.pdf",
+          "score": 154,
+          "pageCount": 1,
+          "textLength": 343,
+          "result": "pdf_text_insufficient"
+        }
+      ],
+      "elapsedSeconds": 6
+    },
+    {
+      "code": "9842",
+      "name": "アークランズ",
+      "market": "Prime",
+      "industry": "小売業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 340410,
+      "pageCount": 21,
+      "document": {
+        "date": "2026-04-14",
+        "dateText": "2026/04/14",
+        "title": "2026年2月期 決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/98420/140120260414503331.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "9842",
+        "name": "アークランズ",
+        "category": "小売業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/98420/140120260414503331.pdf",
+        "document": "2026年2月期 決算短信〔日本基準〕(連結)",
+        "period": "2026年2月期～2025年2月期",
+        "planPublishedDate": "2026-04-14",
+        "themes": [
+          "株主還元",
+          "商品・サービス",
+          "事業成長",
+          "サステナビリティ"
+        ],
+        "summary": "アークランズ（9842）の公式開示資料では、株主還元、商品・サービス、事業成長、サステナビリティを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.7で売上高・売上収益に関する数値・方針（2027年2月期、3人、2026年12月期、25店）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.7で利益に関する数値・方針（2027年2月期、3人、2026年12月期、25店）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.5で収益性・資本効率に関する数値・方針（3,891百万円、12.1%、474百万円、19.6%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2026年2月期、2025年2月期、137,558百万円、132,475百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年2月期 決算短信〔日本基準〕(連結)を2026-04-14に公表した。",
+          "公式資料では株主還元、商品・サービス、事業成長を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.2: 財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.21: 財務目標・KPI・事業方針に関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": true,
+          "humanCapital": true,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.7: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 4
+      },
+      "elapsedSeconds": 5.45,
+      "documentCount": 219,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "2026年2月期 決算短信〔日本基準〕(連結)",
+          "date": "2026-04-14",
+          "url": "https://www2.jpx.co.jp/disc/98420/140120260414503331.pdf",
+          "score": 125,
+          "pageCount": 21,
+          "textLength": 21626,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    }
+  ],
+  "safetyNormalization": {
+    "automaticConnectedStatusAllowed": false,
+    "connectedDowngrades": 0,
+    "identityDowngrades": 0
+  }
+}

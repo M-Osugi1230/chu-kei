@@ -5,9 +5,12 @@ on:
     branches:
       - main
     paths:
+      - 'operations/coverage-growth/**'
       - 'operations/patches/structured-expansion-batch-*-config.json'
       - 'operations/production-quality/**'
       - 'operations/source-research/**'
+      - 'scripts/fetch_jpx_listed_companies_v1.py'
+      - 'scripts/apply_company_coverage_1000_v1.mjs'
       - 'scripts/research_jpx_documents_v1.py'
       - 'scripts/normalize_source_research_candidates_v1.mjs'
       - 'scripts/summarize_source_research_candidates_v1.mjs'

@@ -1,0 +1,265 @@
+{
+  "schemaVersion": "source-research-candidates-v1",
+  "batchId": "source-research-batch-026",
+  "generatedAt": "2026-07-22T12:07:24.017257+00:00",
+  "sourceBundleSha256": "35fa6f398c76628d1c564cd76fe836155368c9709b2df392a451f4d3273e36e2",
+  "researchEngine": "multi-document-v2",
+  "maxDocumentAttempts": 12,
+  "automaticFactCompletion": false,
+  "automaticApproval": false,
+  "selectedCount": 3,
+  "eligibleCount": 2,
+  "needsReviewCount": 0,
+  "failureCount": 1,
+  "selectedCodes": [
+    "545A",
+    "7940",
+    "9216"
+  ],
+  "eligibleCodes": [
+    "545A",
+    "9216"
+  ],
+  "results": [
+    {
+      "code": "545A",
+      "name": "トランヴィア",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "status": "eligible",
+      "confidence": 95,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 91941,
+      "pageCount": 2,
+      "document": {
+        "date": "2026-05-14",
+        "dateText": "2026/05/14",
+        "title": "株主優待制度の導入に関するお知らせ",
+        "url": "https://www2.jpx.co.jp/disc/545A0/140120260514532541.pdf",
+        "tableId": "closeUpKaiJi2",
+        "score": 86
+      },
+      "record": {
+        "code": "545A",
+        "name": "トランヴィア",
+        "category": "情報・通信業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/545A0/140120260514532541.pdf",
+        "document": "株主優待制度の導入に関するお知らせ",
+        "period": "当該公式開示資料の対象期間",
+        "planPublishedDate": "2026-05-14",
+        "themes": [
+          "事業成長",
+          "設備投資"
+        ],
+        "summary": "トランヴィア（545A）の公式開示資料では、事業方針を主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "固定の中期売上高・売上収益目標は当該公式資料の抽出範囲で確認できない。",
+        "profit": "固定の中期利益目標は当該公式資料の抽出範囲で確認できない。",
+        "margin": "固定の中期収益性・資本効率目標は当該公式資料の抽出範囲で確認できない。",
+        "capital": "固定の中期投資・資本配分目標は当該公式資料の抽出範囲で確認できない。",
+        "returnPolicy": "固定の中期株主還元目標は当該公式資料の抽出範囲で確認できない。",
+        "highlights": [
+          "株主優待制度の導入に関するお知らせを2026-05-14に公表した。",
+          "公式資料では事業方針を主要テーマとして確認した。",
+          "2ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.1: 事業方針に関する記載を確認する。",
+          "公式PDF p.2: 主要な事業方針・数値記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": false,
+          "progress": false,
+          "overseas": false,
+          "dx": false,
+          "humanCapital": false,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_disclosed",
+          "reason": "当該公式資料の抽出範囲では固定中期財務目標を確認できないため、推計値や架空の進捗率を補完しない。",
+          "sourceRef": "公式PDF p.1: 事業方針に関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 2,
+        "themeCount": 2,
+        "metricPageCount": 0
+      },
+      "recoveryReview": {
+        "mode": "recent-official-pdf-exhaustive-v2",
+        "officialJpxPdf": true,
+        "identityMatch": true,
+        "publicationDate": true,
+        "pageEvidence": true,
+        "pageCount": true,
+        "themes": true,
+        "structuredSummary": true,
+        "approvedByHardChecks": true
+      },
+      "elapsedSeconds": 0.84,
+      "documentCount": 11,
+      "attemptedDocumentCount": 1,
+      "documentAttempts": [
+        {
+          "title": "株主優待制度の導入に関するお知らせ",
+          "date": "2026-05-14",
+          "url": "https://www2.jpx.co.jp/disc/545A0/140120260514532541.pdf",
+          "score": 86,
+          "pageCount": 2,
+          "textLength": 661,
+          "result": "eligible",
+          "confidence": 95
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "7940",
+      "name": "ウェーブロックホールディングス",
+      "status": "error",
+      "error": "RuntimeError: JPX search mismatch: none != 79400",
+      "elapsedSeconds": 0.48,
+      "researchEngine": "multi-document-v2"
+    },
+    {
+      "code": "9216",
+      "name": "ビーウィズ",
+      "market": "Prime",
+      "industry": "サービス業",
+      "status": "eligible",
+      "confidence": 100,
+      "identityMatch": true,
+      "identityEvidence": {
+        "method": "jpx-code-specific-disclosure",
+        "officialCodeLinked": true,
+        "pdfTextIdentityMatch": true
+      },
+      "pdfBytes": 619105,
+      "pageCount": 17,
+      "document": {
+        "date": "2026-07-13",
+        "dateText": "2026/07/13",
+        "title": "2026年5月期 決算短信〔日本基準〕(連結)",
+        "url": "https://www2.jpx.co.jp/disc/92160/140120260713592010.pdf",
+        "tableId": "closeUpKaiJi0",
+        "score": 125
+      },
+      "record": {
+        "code": "9216",
+        "name": "ビーウィズ",
+        "category": "サービス業/JPX公式開示資料",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/92160/140120260713592010.pdf",
+        "document": "2026年5月期 決算短信〔日本基準〕(連結)",
+        "period": "2026年～2027年",
+        "planPublishedDate": "2026-07-13",
+        "themes": [
+          "株主還元",
+          "AI",
+          "事業成長",
+          "商品・サービス"
+        ],
+        "summary": "ビーウィズ（9216）の公式開示資料では、株主還元、AI、事業成長、商品・サービスを主要論点として示す。数値・施策はページ証跡とともに登録し、目標・実績・会社予想を区別して確認する。",
+        "revenue": "公式PDF p.4で売上高・売上収益に関する数値・方針（2026年5月期、28.3 %、14.7億円、37.8%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "profit": "公式PDF p.4で利益に関する数値・方針（2026年5月期、28.3 %、14.7億円、37.8%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "margin": "公式PDF p.6で収益性・資本効率に関する数値・方針（2026年5月期、2027年5月期、2026年、38,300百万円）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "capital": "公式PDF p.4で投資・資本配分に関する数値・方針（2026年5月期、28.3 %、14.7億円、37.8%）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "returnPolicy": "公式PDF p.2で株主還元に関する数値・方針（2027年5月期、2026年、2027年、2026年5月期）を確認。対象年度・単位・目標／実績の区分は原文を参照する。",
+        "highlights": [
+          "2026年5月期 決算短信〔日本基準〕(連結)を2026-07-13に公表した。",
+          "公式資料では株主還元、AI、事業成長を主要テーマとして確認した。",
+          "3ページの一次証跡を登録し、原文へ直接遷移できる。"
+        ],
+        "warnings": [
+          "目標値、確定実績、会社予想の区分は、原文の対象年度・単位・連結範囲を確認する。",
+          "計画改定や後発開示がある場合は最新の公式資料を優先し、古い数値を最新目標として扱わない。"
+        ],
+        "evidenceRefs": [
+          "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.6: 計画・成長戦略・財務目標・KPIに関する記載を確認する。",
+          "公式PDF p.15: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        ],
+        "flags": {
+          "ma": false,
+          "capitalEfficiency": false,
+          "shareholderReturn": true,
+          "progress": false,
+          "overseas": true,
+          "dx": true,
+          "humanCapital": false,
+          "newBusiness": false,
+          "restructuring": false
+        },
+        "progressAssessment": {
+          "status": "not_comparable",
+          "reason": "公式PDFで目標・計画に関する記載を確認したが、自動抽出では実績との同一定義・同一単位・同一企業範囲を最終確認できないため、単純な進捗率を作成しない。",
+          "sourceRef": "公式PDF p.4: 計画・成長戦略・財務目標・KPIに関する記載を確認する。"
+        }
+      },
+      "qualitySignals": {
+        "evidenceCount": 3,
+        "themeCount": 4,
+        "metricPageCount": 5
+      },
+      "elapsedSeconds": 2.07,
+      "documentCount": 135,
+      "attemptedDocumentCount": 4,
+      "documentAttempts": [
+        {
+          "title": "2026年5月期決算・中長期経営計画2030説明会 書き起こし公開のお知らせ",
+          "date": "2026-07-21",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260717596059.pdf",
+          "score": 205,
+          "pageCount": 1,
+          "textLength": 533,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "中長期経営計画2030公開のお知らせ",
+          "date": "2026-07-13",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260711591747.pdf",
+          "score": 205,
+          "pageCount": 1,
+          "textLength": 376,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年5月期 決算説明資料公開のお知らせ",
+          "date": "2026-07-13",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260711591312.pdf",
+          "score": 160,
+          "pageCount": 1,
+          "textLength": 340,
+          "result": "pdf_text_insufficient"
+        },
+        {
+          "title": "2026年5月期 決算短信〔日本基準〕(連結)",
+          "date": "2026-07-13",
+          "url": "https://www2.jpx.co.jp/disc/92160/140120260713592010.pdf",
+          "score": 125,
+          "pageCount": 17,
+          "textLength": 16400,
+          "result": "eligible",
+          "confidence": 100
+        }
+      ],
+      "researchEngine": "multi-document-v2"
+    }
+  ],
+  "safetyNormalization": {
+    "automaticConnectedStatusAllowed": false,
+    "connectedDowngrades": 0,
+    "identityDowngrades": 0
+  }
+}

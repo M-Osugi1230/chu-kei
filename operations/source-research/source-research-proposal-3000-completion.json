@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "source-research-bulk-proposal-v1",
+  "generatedAt": "2026-07-22T12:07:24.251Z",
+  "proposalSha256": "a715be1d9b1927277c30b9b737e2278b48dcf3a7277e72ecfe889576ecaba54b",
+  "automaticApproval": false,
+  "automaticProductionPromotion": false,
+  "candidatePath": "operations/source-research/source-research-batch-026-candidates.json",
+  "sourceCandidatePaths": [
+    "operations/source-research/source-research-batch-026-candidates.json"
+  ],
+  "sourceBundleSha256": "35fa6f398c76628d1c564cd76fe836155368c9709b2df392a451f4d3273e36e2",
+  "requiredCurrentStage": "jpx_indexed",
+  "selectedCount": 3,
+  "qualifiedCount": 2,
+  "proposedCount": 2,
+  "truncatedCount": 0,
+  "rejectedCount": 1,
+  "minimumConfidence": 85,
+  "minimumPublicationDate": "2022-01-01",
+  "maximumProposedCount": 3,
+  "proposedCodes": [
+    "545A",
+    "9216"
+  ],
+  "proposedRows": [
+    {
+      "code": "545A",
+      "name": "トランヴィア",
+      "currentStage": "jpx_indexed",
+      "documentDate": "2026-05-14",
+      "documentTitle": "株主優待制度の導入に関するお知らせ",
+      "documentUrl": "https://www2.jpx.co.jp/disc/545A0/140120260514532541.pdf",
+      "confidence": 95,
+      "checks": {
+        "currentStage": true,
+        "allowedStatus": true,
+        "officialJpxPdf": true,
+        "identityMatch": true,
+        "confidence": true,
+        "publicationDate": true,
+        "documentType": true,
+        "pageEvidence": true,
+        "pageCount": true,
+        "themes": true,
+        "structuredSummary": true,
+        "progressGuard": true
+      },
+      "approvedByRules": true
+    },
+    {
+      "code": "9216",
+      "name": "ビーウィズ",
+      "currentStage": "jpx_indexed",
+      "documentDate": "2026-07-13",
+      "documentTitle": "2026年5月期 決算短信〔日本基準〕(連結)",
+      "documentUrl": "https://www2.jpx.co.jp/disc/92160/140120260713592010.pdf",
+      "confidence": 100,
+      "checks": {
+        "currentStage": true,
+        "allowedStatus": true,
+        "officialJpxPdf": true,
+        "identityMatch": true,
+        "confidence": true,
+        "publicationDate": true,
+        "documentType": true,
+        "pageEvidence": true,
+        "pageCount": true,
+        "themes": true,
+        "structuredSummary": true,
+        "progressGuard": true
+      },
+      "approvedByRules": true
+    }
+  ],
+  "rejectionReasons": {
+    "currentStage": 0,
+    "allowedStatus": 1,
+    "officialJpxPdf": 1,
+    "identityMatch": 1,
+    "confidence": 1,
+    "publicationDate": 1,
+    "documentType": 1,
+    "pageEvidence": 1,
+    "pageCount": 1,
+    "themes": 1,
+    "structuredSummary": 1,
+    "progressGuard": 0
+  },
+  "identity": {
+    "schemaVersion": "source-research-bulk-proposal-identity-v1",
+    "batchId": "source-research-batch-026",
+    "sourceBundleSha256": "35fa6f398c76628d1c564cd76fe836155368c9709b2df392a451f4d3273e36e2",
+    "candidatePath": "operations/source-research/source-research-batch-026-candidates.json",
+    "requiredCurrentStage": "jpx_indexed",
+    "minimumConfidence": 85,
+    "minimumPublicationDate": "2022-01-01",
+    "maximumProposedCount": 3,
+    "codes": [
+      "545A",
+      "9216"
+    ]
+  }
+}

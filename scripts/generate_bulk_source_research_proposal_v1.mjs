@@ -18,10 +18,87 @@ const config = readJson(CONFIG_PATH);
 if (config.schemaVersion !== 'source-research-proposal-config-v1') {
   throw new Error(`Unsupported proposal config: ${config.schemaVersion}`);
 }
-const candidatePath = path.resolve(config.candidatePath);
-const report = readJson(candidatePath);
-if (report.schemaVersion !== 'source-research-candidates-v1') {
-  throw new Error(`Unsupported candidate report: ${report.schemaVersion}`);
+
+const configuredCandidatePaths = Array.isArray(config.candidatePaths)
+  ? config.candidatePaths
+  : [config.candidatePath].filter(Boolean);
+if (!configuredCandidatePaths.length) {
+  throw new Error('candidatePath or candidatePaths is required');
+}
+
+const sourceReports = configuredCandidatePaths.map(relativePath => {
+  const candidatePath = path.resolve(relativePath);
+  if (!fs.existsSync(candidatePath)) throw new Error(`Candidate report not found: ${relativePath}`);
+  const report = readJson(candidatePath);
+  if (report.schemaVersion !== 'source-research-candidates-v1') {
+    throw new Error(`Unsupported candidate report: ${relativePath}`);
+  }
+  return { candidatePath, report };
+});
+
+const sourceBundleSha256s = [...new Set(sourceReports.map(({ report }) => report.sourceBundleSha256))];
+if (sourceBundleSha256s.length !== 1 || !sourceBundleSha256s[0]) {
+  throw new Error(`Candidate reports must share one source bundle SHA-256: ${sourceBundleSha256s.join(', ')}`);
+}
+
+const resultByCode = new Map();
+const selectedCodes = [];
+for (const { report, candidatePath } of sourceReports) {
+  for (const candidate of report.results || []) {
+    const code = String(candidate.code);
+    if (resultByCode.has(code)) {
+      throw new Error(`Duplicate candidate code across reports: ${code}`);
+    }
+    resultByCode.set(code, candidate);
+  }
+  for (const rawCode of report.selectedCodes || []) {
+    const code = String(rawCode);
+    if (!selectedCodes.includes(code)) selectedCodes.push(code);
+  }
+  if ((report.results || []).length !== Number(report.selectedCount || 0)) {
+    throw new Error(`Candidate selectedCount mismatch: ${path.relative(ROOT, candidatePath)}`);
+  }
+}
+
+const aggregateBatchId = String(
+  config.aggregateBatchId
+    || (sourceReports.length === 1
+      ? sourceReports[0].report.batchId
+      : `source-research-aggregate-${sourceReports.length}`),
+);
+
+let candidatePath;
+let report;
+if (sourceReports.length === 1) {
+  candidatePath = sourceReports[0].candidatePath;
+  report = sourceReports[0].report;
+} else {
+  if (!config.mergedCandidateOutputPath) {
+    throw new Error('mergedCandidateOutputPath is required when candidatePaths contains multiple reports');
+  }
+  candidatePath = path.resolve(config.mergedCandidateOutputPath);
+  const results = [...resultByCode.values()].sort((left, right) => String(left.code).localeCompare(String(right.code), 'ja'));
+  report = {
+    schemaVersion: 'source-research-candidates-v1',
+    batchId: aggregateBatchId,
+    generatedAt: new Date().toISOString(),
+    sourceBundleSha256: sourceBundleSha256s[0],
+    automaticFactCompletion: false,
+    automaticApproval: false,
+    selectedCount: results.length,
+    eligibleCount: results.filter(candidate => candidate.status === 'eligible').length,
+    needsReviewCount: results.filter(candidate => candidate.status === 'needs_review').length,
+    failureCount: results.filter(candidate => !['eligible', 'needs_review'].includes(candidate.status)).length,
+    selectedCodes: results.map(candidate => String(candidate.code)),
+    eligibleCodes: results.filter(candidate => candidate.status === 'eligible').map(candidate => String(candidate.code)),
+    sourceReports: sourceReports.map(({ candidatePath: sourcePath, report: sourceReport }) => ({
+      path: path.relative(ROOT, sourcePath),
+      batchId: sourceReport.batchId,
+      selectedCount: sourceReport.selectedCount,
+    })),
+    results,
+  };
+  writeJson(candidatePath, report);
 }
 
 const minimumConfidence = Number(config.minimumConfidence || 93);
@@ -94,6 +171,7 @@ writeJson(outputPath, {
   automaticApproval: false,
   automaticProductionPromotion: false,
   candidatePath: path.relative(ROOT, candidatePath),
+  sourceCandidatePaths: sourceReports.map(({ candidatePath: sourcePath }) => path.relative(ROOT, sourcePath)),
   sourceBundleSha256: report.sourceBundleSha256,
   selectedCount: evaluations.length,
   qualifiedCount: qualifiedRows.length,
@@ -115,6 +193,8 @@ writeJson(outputPath, {
 });
 console.log(JSON.stringify({
   outputPath: path.relative(ROOT, outputPath),
+  candidatePath: path.relative(ROOT, candidatePath),
+  sourceReportCount: sourceReports.length,
   proposalSha256,
   selectedCount: evaluations.length,
   qualifiedCount: qualifiedRows.length,

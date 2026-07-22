@@ -6,7 +6,8 @@ on:
       - main
     paths:
       - 'operations/coverage-growth/**'
-      - 'operations/patches/structured-expansion-batch-*-config.json'
+      - 'operations/patches/**'
+      - 'operations/reviews/**'
       - 'operations/production-quality/**'
       - 'operations/source-research/**'
       - 'scripts/fetch_jpx_listed_companies_v1.py'
@@ -26,6 +27,10 @@ on:
       - 'scripts/apply_production_promotion_v1.mjs'
       - 'scripts/sync_production_approval_metadata_v1.mjs'
       - 'scripts/apply_structured_expansion_ci_v1.mjs'
+      - 'scripts/apply_structured_correction_v1.mjs'
+      - 'scripts/align_metric_evidence_refs_v1.mjs'
+      - 'scripts/validate_core_document_relevance_v1.mjs'
+      - 'scripts/validate_source_registry_v1.mjs'
       - 'scripts/prepare_bulk_production_promotion_v1.mjs'
       - 'scripts/lib/quality_profile_v2.mjs'
       - 'scripts/validate_quality_score_v2.mjs'

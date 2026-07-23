@@ -17,6 +17,7 @@ const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 const planDate = /^\d{4}(?:-\d{2}(?:-\d{2})?)?$/;
 
 const sync = readJson('operations/site-sync/chukei-insight-v15.json');
+const currentRelease = readJson('operations/site-sync/current.json');
 const publication = readJson('operations/site-sync/incoming/chukei-insight-v15-publication-date-audit.json');
 const changes = readJson('operations/site-sync/incoming/chukei-insight-v15-company-change-history.json');
 const publicationSchema = readJson('schemas/publication-date-audit-import-v1.schema.json');
@@ -32,7 +33,7 @@ const companyByCode = new Map((data.companies ?? []).map((company) => [String(co
 add('public site URL aligned', sync.publicUrl === publication.publicUrl && sync.publicUrl === changes.publicUrl, sync.publicUrl);
 add('site release aligned', sync.release === publication.siteRelease && sync.release === changes.siteRelease, sync.release);
 add('bundle SHA-256 valid', digest === manifest.sha256, digest);
-add('bundle company count 570', companyByCode.size === 570, `actual=${companyByCode.size}`);
+add('bundle company count matches current release', companyByCode.size === currentRelease.repository.companies, `actual=${companyByCode.size}, expected=${currentRelease.repository.companies}`);
 add('publication schema registered', publicationSchema.$id?.includes('publication-date-audit-import-v1'), publicationSchema.$id ?? 'missing');
 add('change history schema registered', changeSchema.$id?.includes('company-change-history-import-v1'), changeSchema.$id ?? 'missing');
 add('automatic publication update prohibited', publication.automaticUpdateAllowed === false);
@@ -120,6 +121,7 @@ const report = {
   siteRelease: sync.release,
   publicUrl: sync.publicUrl,
   bundleSha256: manifest.sha256,
+  currentCompanyCount: currentRelease.repository.companies,
   publicationImport: {
     status: publication.status,
     expectedCounts: publication.expectedCounts,

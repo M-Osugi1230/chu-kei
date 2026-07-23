@@ -16,10 +16,13 @@ assert.equal(history.schemaVersion,'plan-history-v1');
 assert.equal(events.schemaVersion,'progress-events-v1');
 assert.equal(release.schemaVersion,'site-release-status-v1');
 assert.deepEqual(release,releaseSource,'site and operations release status must match');
-assert.equal(release.repository.companies,570);
-assert.equal(release.repository.production+release.repository.detailedBeta+release.repository.sourceIndexed+release.repository.coverageBeta,570);
+assert.equal(release.repository.companies,3000);
+assert.equal(release.repository.production+release.repository.detailedBeta+release.repository.sourceIndexed+release.repository.coverageBeta,release.repository.companies);
 assert.equal(release.repository.production+release.repository.detailedBeta,release.repository.structured);
 assert.equal(release.repository.production+release.repository.detailedBeta+release.repository.sourceIndexed,release.repository.sourceConfirmed);
+assert.equal(release.repository.production,3000);
+assert.equal(release.repository.coverageBeta,0);
+assert.equal(release.repository.qualityDebt,0);
 assert.equal(promotion.automaticPromotionAllowed,false);
 assert.equal(promotion.sourceStage,'detailed_extracted');
 assert.equal(promotion.targetStage,'core');
@@ -71,11 +74,11 @@ for(const offer of offers.offers){
   assert(offer.requiredReview.length>0,`review requirements required: ${offer.id}`);
 }
 assert.equal(release.repository.commercialOffers,offers.offers.length);
-assert.deepEqual(release.repository.forms,['spot-report-request','product-waitlist']);
+assert.deepEqual(release.repository.forms,['general-inquiry','spot-report-request','product-waitlist']);
 assert.equal(release.repository.historyCompanies,history.companies.length);
 assert.equal(release.repository.historyPlans,history.companies.reduce((sum,company)=>sum+company.plans.length,0));
 assert.equal(release.repository.progressEvents,events.events.length);
-assert.equal(release.sync.status,'blocked');
+assert.equal(release.sync.status,'partial');
 assert.equal(release.publicSite.verificationIssue,49);
 
 assert.equal(intakeExample.schemaVersion,'commercial-intake-v1');
@@ -89,11 +92,14 @@ assert(String(intakeExample.scope.purpose).includes('架空'),'intake example mu
 
 const reportsHtml=text('site/reports.html');
 const pricingHtml=text('site/pricing.html');
+const contactHtml=text('site/contact.html');
 const thanksHtml=text('site/thanks.html');
 assert(reportsHtml.includes('name="spot-report-request"'));
 assert(reportsHtml.includes('action="/thanks.html"'));
 assert(pricingHtml.includes('name="product-waitlist"'));
 assert(pricingHtml.includes('action="/thanks.html"'));
+assert(contactHtml.includes('name="general-inquiry"'));
+assert(contactHtml.includes('action="/thanks.html"'));
 assert(thanksHtml.includes('送信を受け付けました'));
 for(const offer of offers.offers){
   assert(reportsHtml.includes(offer.id),`report intake must use canonical offer id: ${offer.id}`);
@@ -105,16 +111,18 @@ for(const pattern of ['operations/commercial/private/','operations/commercial/le
   assert(gitignore.includes(pattern),`commercial data ignore pattern is required: ${pattern}`);
 }
 for(const file of [
-  'site/history.html','site/release.html','site/metrics.html','site/reports.html','site/pricing.html','site/privacy.html','site/thanks.html',
+  'site/history.html','site/release.html','site/metrics.html','site/reports.html','site/pricing.html','site/contact.html','site/privacy.html','site/thanks.html','site/robots.txt','site/sitemap.xml',
   'site/assets/local-metrics.js','site/data/offers.json','operations/commercial/offers-v1.json','operations/commercial/intake.example.json','operations/commercial/README.md',
   'schemas/commercial-offers.schema.json','schemas/commercial-intake.schema.json',
-  'docs/SPOT_RESEARCH_REPORT_TEMPLATE_V1.md','docs/SPOT_RESEARCH_OPERATIONS_V1.md','docs/COMMERCIAL_DATA_HANDLING_V1.md'
+  'docs/SPOT_RESEARCH_REPORT_TEMPLATE_V1.md','docs/SPOT_RESEARCH_OPERATIONS_V1.md','docs/COMMERCIAL_DATA_HANDLING_V1.md','docs/PUBLIC_LAUNCH_RUNBOOK_20260724.md'
 ]){
   assert(fs.existsSync(file),`${file} is required`);
 }
 
 console.log(JSON.stringify({
   passed:true,
+  companies:release.repository.companies,
+  production:release.repository.production,
   historyCompanies:history.companies.length,
   plans:history.companies.reduce((sum,company)=>sum+company.plans.length,0),
   progressEvents:events.events.length,

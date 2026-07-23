@@ -69,8 +69,9 @@ check('frontend detail company count matches canonical bundle', frontendManifest
 const html = shellFiles.filter(file => file.endsWith('.html')).map(file => fs.readFileSync(path.join(SITE, file), 'utf8')).join('\n');
 const scripts = shellFiles.filter(file => file.endsWith('.js')).map(file => fs.readFileSync(path.join(SITE, file), 'utf8')).join('\n');
 const css = shellFiles.filter(file => file.endsWith('.css')).map(file => fs.readFileSync(path.join(SITE, file), 'utf8')).join('\n');
+const externalStylesheet = /<link(?=[^>]*\brel=["']stylesheet["'])(?=[^>]*\bhref=["']https?:\/\/)[^>]*>/i;
 check('no external script dependency', !/<script[^>]+src=["']https?:\/\//i.test(html));
-check('no external stylesheet dependency', !/<link[^>]+href=["']https?:\/\//i.test(html));
+check('no external stylesheet dependency', !externalStylesheet.test(html));
 check('no remote CSS imports', !/@import\s+(?:url\()?['"]?https?:\/\//i.test(css));
 check('no eval usage', !/\beval\s*\(/.test(scripts));
 check('no document.write usage', !/document\.write\s*\(/.test(scripts));

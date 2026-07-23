@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Chu-kei事務局への一般問い合わせページです。掲載情報、調査依頼、サービス、データ利用についてお問い合わせいただけます。">
+  <meta name="theme-color" content="#102a43">
+  <title>お問い合わせ｜Chu-kei</title>
+  <link rel="canonical" href="https://chukei-insight.osugimurata.chatgpt.site/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Chu-kei">
+  <meta property="og:title" content="お問い合わせ｜Chu-kei">
+  <meta property="og:description" content="Chu-kei事務局への一般問い合わせページです。">
+  <meta property="og:url" content="https://chukei-insight.osugimurata.chatgpt.site/contact.html">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="./assets/platform-pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./">Chu-kei</a>
+      <span class="subtitle">お問い合わせ</span>
+      <nav class="header-nav" aria-label="主要ナビゲーション">
+        <a class="text-link" href="./">企業を探す</a>
+        <a class="text-link" href="./reports.html">スポット調査</a>
+        <a class="text-link" href="./pricing.html">Pro・Team</a>
+        <a class="text-link" href="./privacy.html">プライバシー</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Chu-kei事務局への<br>お問い合わせ</h1>
+      <p>掲載情報、公式資料、調査依頼、サービス、データ利用について受け付けます。送信時点では契約・課金は成立しません。</p>
+    </section>
+    <div class="content-shell">
+      <section class="platform-card">
+        <h2>お問い合わせフォーム</h2>
+        <p class="form-note">送信内容は問い合わせ対応のみに利用します。機密情報、未公表情報、個人番号、決済情報は入力しないでください。</p>
+        <form name="general-inquiry" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="general-inquiry">
+          <p hidden><label>入力しないでください <input name="bot-field"></label></p>
+          <div class="form-grid">
+            <label><span>氏名 *</span><input name="name" required autocomplete="name"></label>
+            <label><span>会社名</span><input name="company" autocomplete="organization"></label>
+            <label><span>メールアドレス *</span><input type="email" name="email" required autocomplete="email"></label>
+            <label><span>お問い合わせ種別 *</span><select name="category" required><option value="">選択してください</option><option value="listing">掲載情報・出典</option><option value="research">調査依頼</option><option value="product">Pro・Team・Data/API</option><option value="media">取材・提携</option><option value="other">その他</option></select></label>
+            <label class="full"><span>対象企業・ページ</span><input name="target" placeholder="会社名、証券コード、ページURLなど"></label>
+            <label class="full"><span>お問い合わせ内容 *</span><textarea name="message" required></textarea></label>
+            <label class="full"><input type="checkbox" name="consent" required> <span><a href="./privacy.html">プライバシー方針</a>に同意します *</span></label>
+            <div class="full actions"><button class="primary-button" type="submit">問い合わせを送信する</button></div>
+          </div>
+        </form>
+      </section>
+      <section class="section platform-card">
+        <h2>運営</h2>
+        <p>Chu-kei事務局</p>
+        <p class="form-note">個人名や個人のメールアドレスは公開せず、本フォームを公式窓口として使用します。</p>
+      </section>
+    </div>
+  </main>
+  <footer><p>運営：Chu-kei事務局　<a href="./privacy.html">プライバシー</a></p></footer>
+  <script src="./assets/local-metrics.js"></script>
+</body>
+</html>

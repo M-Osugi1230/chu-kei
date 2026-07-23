@@ -1,45 +1,50 @@
 {
   "schemaVersion": "site-release-status-v1",
-  "updatedAt": "2026-07-12",
+  "updatedAt": "2026-07-24",
   "repository": {
-    "release": "v43 Quality Hardened Beta + Research Platform v2",
-    "lastVerifiedMainSha": "5abfa5f0f7a42bab3e288729d003b21d8d1a7c17",
-    "companies": 570,
-    "sourceConfirmed": 200,
-    "structured": 110,
-    "production": 30,
-    "detailedBeta": 80,
-    "sourceIndexed": 90,
-    "coverageBeta": 370,
-    "progressCompanies": 44,
-    "progressRows": 149,
-    "actualCompanies": 16,
-    "actualRows": 54,
-    "qualityDebt": 89,
+    "release": "v43 Production 3000 + Public Launch Candidate",
+    "lastVerifiedMainSha": "8bdb477f00bce44b462f8c5c61b53c87410980d6",
+    "launchCandidateBranch": "release/public-launch-20260724",
+    "companies": 3000,
+    "sourceConfirmed": 3000,
+    "structured": 3000,
+    "production": 3000,
+    "detailedBeta": 0,
+    "sourceIndexed": 0,
+    "coverageBeta": 0,
+    "progressCompanies": "集計更新中",
+    "progressRows": 353,
+    "actualCompanies": "集計更新中",
+    "actualRows": "集計更新中",
+    "qualityDebt": 0,
     "historyCompanies": 1,
     "historyPlans": 2,
     "progressEvents": 9,
     "commercialOffers": 3,
-    "forms": ["spot-report-request", "product-waitlist"]
+    "forms": ["general-inquiry", "spot-report-request", "product-waitlist"],
+    "seo": {
+      "robots": true,
+      "sitemap": true,
+      "canonicalContact": true,
+      "operatorDisclosure": "Chu-kei事務局"
+    }
   },
   "publicSite": {
-    "release": "v15 alignment record; current main deployment unverified",
-    "verifiedAt": "2026-07-11",
-    "verificationStatus": "unverified",
-    "verificationIssue": 49,
-    "detailedBeta": 70,
-    "publicationDateAudited": 59,
-    "underReview": 11,
-    "companyChangeHistory": 14
+    "url": "https://chukei-insight.osugimurata.chatgpt.site/",
+    "release": "公開候補をmainへ統合後に本番反映",
+    "verifiedAt": null,
+    "verificationStatus": "deployment_pending",
+    "verificationIssue": 49
   },
   "sync": {
-    "status": "blocked",
-    "label": "公開確認待ち",
+    "status": "ready",
+    "label": "公開反映待ち",
     "pending": [
-      "Issue #45: GitHub Actionsがjob step開始前に失敗する実行基盤ブロッカーの解消",
-      "Issue #49: Research Platform v2、新規ページ、三菱重工の過去中計、Netlify Formsの公開確認",
-      "PR #42: 第4構造化拡張バッチの正本データ生成と品質ゲート",
-      "公開サイト側59社の監査根拠と14件の変更履歴の正本同期"
+      "最新mainをProduction deployへ反映し、公開URLの表示内容と3,000社データを確認する",
+      "Netlify Formsでgeneral-inquiry、spot-report-request、product-waitlistの3フォームを検出する",
+      "フォーム通知先を運営者メールへ設定し、スパム対策と3フォームのテスト送信を確認する",
+      "Google Search Consoleへサイトを登録し、sitemap.xmlを送信する",
+      "公開確認後にverifiedAt、公開SHA、同期状態をsyncedへ更新する"
     ]
   }
 }

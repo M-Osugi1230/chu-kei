@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "core-evidence-repair-batch-draft-v1",
+  "batchId": "evidence-repair-batch-27",
+  "status": "researched_not_executable",
+  "explicitSelection": true,
+  "automaticSelectionAllowed": false,
+  "contingentOn": {"requiredPreviousBatch":"evidence-repair-batch-26","requiredCoreCount":185,"requiredFiveStarCount":171,"requiredDetailedExtractedCount":37},
+  "proposedResult": {"coreCount":190,"fiveStarCount":176,"detailedExtractedCount":32,"remainingGapTo1000":810},
+  "records": [
+    {
+      "code":"3402","expectedStage":"detailed_extracted","sourceUrl":"https://www.toray.co.jp/ir/individual/managementplan/","document":"東レ 中期経営課題 IGNITION 2028","planPublishedDate":"2026-03-25","verifiedDate":"2026-07-17",
+      "reason":"東レ公式ページで計画期間、2028年度財務目標、設備投資、DOEと株主還元方針を具体的な見出し単位で確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: IGNITION 2028の位置づけ）: 2026年度から2028年度を長期経営方針TORAY Challenges 2035の最初の実行フェーズと位置づける。","公式Webページ（見出し: 2028年度財務目標）: 売上収益3兆円、事業利益2,300億円、事業利益率8%、ROIC約7%、ROE約8%を掲げる。","公式Webページ（見出し: キャピタル・アロケーション）: 設備投資4,000～5,000億円、2028年度DOE3%以上、累進配当と機動的な自己株式取得を掲げる。"]
+    },
+    {
+      "code":"4005","expectedStage":"detailed_extracted","sourceUrl":"https://www.sumitomo-chem.co.jp/ir/policy/plan/","document":"住友化学 2025～2027年度中期経営計画 Leap Beyond","planPublishedDate":"2025-03-04","verifiedDate":"2026-07-17",
+      "reason":"住友化学公式ページで成長ドライバー、財務・資本効率改善、2027年度の経営目標と財務規律を確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: 2025～2027年度 中期経営計画の概要）: アグロ＆ライフとICT＆モビリティへ経営資源を集中する。","公式Webページ（見出し: 財務・資本効率の改善）: 2027年度ROIC6%、追加キャッシュ創出2,000億円、総額1.1兆円の最適配分を掲げる。","公式Webページ（見出し: 経営目標）: 売上収益2兆4,000億円、コア営業利益2,000億円、親会社帰属利益1,000億円、ROE8%を掲げる。"]
+    },
+    {
+      "code":"7752","expectedStage":"detailed_extracted","sourceUrl":"https://jp.ricoh.com/release/2026/0325_1","document":"リコー 中期経営戦略'26","planPublishedDate":"2026-03-25","verifiedDate":"2026-07-17",
+      "reason":"リコー公式発表で2026～2030年度の戦略期間、毎年ローリング更新する方式、改革と投資の継続実行を確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: 中期経営戦略'26）: 2026年度から2030年度を対象とする5年戦略を毎年ローリング更新する方式へ転換。","公式Webページ（見出し: 本戦略の目的）: 市場変化への迅速な対応、改革・投資の継続実行、単年度計画の精度向上を目指す。","公式Webページ（見出し: リコーグループについて）: デジタルサービス、印刷・画像ソリューションを世界約200の国と地域で展開する。"]
+    },
+    {
+      "code":"8113","expectedStage":"detailed_extracted","sourceUrl":"https://www.unicharm.co.jp/ja/ir/report/message.html","document":"ユニ・チャーム 第13次中期経営計画 Project Renaissance","planPublishedDate":"2026-02-12","verifiedDate":"2026-07-17",
+      "reason":"ユニ・チャーム公式ページで3つのRによる構造変革、2030年の財務目標、キャッシュアロケーションと株主還元方針を確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: 第13次中期経営計画 Project Renaissanceの始動）: 3つのRで人間中心の価値創造と事業モデル変革を進める。","公式Webページ（見出し: 成長と資本効率を両立する）: 2030年に売上高1.5兆円、コア営業利益率17%、ROE17%をチャレンジ目標とする。","公式Webページ（見出し: 成長と資本効率を両立する）: 最大1兆円の営業CF、成長投資約4,000億円、M&A待機資金約1,500億円、総還元性向65%以上を掲げる。"]
+    },
+    {
+      "code":"8801","expectedStage":"detailed_extracted","sourceUrl":"https://www.mitsuifudosan.co.jp/corporate/news/2024/0411/","document":"三井不動産グループ長期経営方針 & INNOVATION 2030","planPublishedDate":"2024-04-11","verifiedDate":"2026-07-17",
+      "reason":"三井不動産公式発表で2030年前後のEPS成長率・ROE、投資枠、事業戦略の三本の道を確認できるため。",
+      "evidenceRefs":["公式Webページ（見出し: 本リリースの骨子）: 2030年前後のEPS成長率年8%以上、ROE10%以上を定量目標とする。","公式Webページ（見出し: 事業戦略の三本の道）: コア事業成長、新たなアセットクラス、新事業領域の探索を進める。","公式Webページ（見出し: 事業戦略の三本の道）: コア事業投資2兆円、M&A投資4,000億円以上、スタートアップ出資1,000億円以上を設定。"]
+    }
+  ],
+  "proposedProductionPromotion":{"schemaVersion":"production-promotion-batch-v1","batchId":"production-promotion-batch-311","explicitApproval":true,"automaticSelectionAllowed":false,"codes":["3402","4005","7752","8113","8801"],"targetCoreCount":190,"primaryAuthor":"production-quality-agent","primaryReviewer":"production-quality-review","independentAuthor":"independent-release-agent","independentReviewer":"independent-release-review","approvalDate":"2026-07-17"}
+}

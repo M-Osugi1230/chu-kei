@@ -50,9 +50,14 @@ const release = JSON.parse(releaseStatus);
 const operations = JSON.parse(operationsStatus);
 for (const [label, value] of [['公開データ', release], ['運用台帳', operations]]) {
   assert(value.repository.companies === 3000, `${label}の掲載企業数が3,000社ではありません。`);
-  assert(value.repository.production === 3000, `${label}の本番品質が3,000社ではありません。`);
+  assert(value.repository.production === 0, `${label}の深掘り確認済みがPhase 0基準の0社ではありません。`);
+  assert(value.repository.reAuditPool === 315, `${label}の再監査母集団が315社ではありません。`);
+  assert(value.repository.templateReviewRequired === 2685, `${label}のテンプレート型が2,685社ではありません。`);
+  assert(value.repository.strictEarningsReleaseReSearch === 610, `${label}の決算短信再探索対象が610社ではありません。`);
+  assert(value.repository.actualCompanies === 72, `${label}の実績接続企業が72社ではありません。`);
+  assert(value.repository.actualRows === 258, `${label}の実績接続レコードが258件ではありません。`);
   assert(value.repository.coverageBeta === 0, `${label}のCoverageβが0社ではありません。`);
-  assert(value.repository.qualityDebt === 0, `${label}の品質負債が0ではありません。`);
+  assert(value.repository.qualityDebt === 3000, `${label}の深掘り未完了件数が3,000社ではありません。`);
   assert(Array.isArray(value.repository.forms), `${label}のフォーム一覧がありません。`);
   for (const form of ['general-inquiry', 'spot-report-request', 'product-waitlist']) {
     assert(value.repository.forms.includes(form), `${label}のフォーム一覧に${form}がありません。`);

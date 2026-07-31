@@ -7,7 +7,7 @@ import {
   QUALITY_PROFILE_VERSION,
   QUALITY_WEIGHTS,
   buildQualityProfile,
-} from './lib/quality_profile_v2.mjs';
+} from './lib/quality_profile_v3.mjs';
 
 const ROOT = path.resolve('.');
 const SITE_DATA = path.join(ROOT, 'site', 'data');
@@ -50,7 +50,7 @@ function writeBundle(data, originalManifest) {
 
   const manifest = {
     ...originalManifest,
-    version: 'v43-quality-score-v2',
+    version: 'v43-quality-score-v3',
     format: 'gzip-json-chunks',
     compressedBytes: compressed.length,
     uncompressedBytes: json.length,
@@ -84,7 +84,7 @@ for (const stage of ['core', 'detailed_extracted', 'source_indexed', 'jpx_indexe
 
 fs.mkdirSync(REPORT_DIR, { recursive: true });
 const report = {
-  version: 'quality-score-v2',
+  version: 'quality-score-v3',
   generatedAt: new Date().toISOString(),
   profileVersion: QUALITY_PROFILE_VERSION,
   storage: {
@@ -96,10 +96,10 @@ const report = {
   rule: {
     weights: QUALITY_WEIGHTS,
     extractionStages: ['core', 'detailed_extracted'],
-    fiveStars: 'all eight evidence and review checks must be true',
-    fourStars: 'score >= 65',
-    threeStars: 'score >= 45',
-    twoStars: 'official source confirmed',
+    fiveStars: 'explicit deep verification approval plus all legacy machine checks',
+    fourStars: 'non-template company currently in explicit deep review',
+    threeStars: 'non-template structured company awaiting deep verification',
+    twoStars: 'official source confirmed but template-like or deep review not started',
     oneStar: 'coverage only or insufficient evidence',
   },
   before,
@@ -112,7 +112,7 @@ const report = {
   },
 };
 fs.writeFileSync(
-  path.join(REPORT_DIR, 'QUALITY_SCORE_V2_REPORT.json'),
+  path.join(REPORT_DIR, 'QUALITY_SCORE_V3_REPORT.json'),
   `${JSON.stringify(report, null, 2)}\n`,
 );
 console.log(JSON.stringify(report, null, 2));

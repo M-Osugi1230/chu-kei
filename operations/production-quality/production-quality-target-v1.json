@@ -1,8 +1,8 @@
 {
   "schemaVersion": "production-quality-target-v1",
-  "targetProductionCompanies": 3000,
+  "targetProductionCompanies": 500,
   "companyUniverse": 3000,
-  "qualityPrinciple": "公式一次資料・比較可能な構造化・ページ証跡・進捗接続・個別レビュー・独立再検証を満たした企業だけを本番品質として扱う",
+  "qualityPrinciple": "全文精読、正式中計判定、項目別ページ証跡、年度・単位・連結範囲の数値検査、二段階承認を満たした企業だけを深掘り確認済みとして扱う",
   "automaticPromotionAllowed": false,
   "requiredMachineChecks": [
     "officialSource",
@@ -11,24 +11,24 @@
     "structuredAnalysis",
     "metricExtraction",
     "progressConnected",
-    "freshness"
+    "freshness",
+    "templateSpecificity"
   ],
   "requiredApprovalChecks": [
     "productionReviewApproved",
-    "independentDoubleCheckApproved"
+    "independentDoubleCheckApproved",
+    "deepVerificationApproved"
   ],
   "freshnessDays": 180,
   "minimumPageEvidenceRefs": 2,
   "minimumProductionApprovals": 2,
   "reviewerIndependenceRequired": true,
-  "targetSetAt": "2026-07-22",
+  "targetSetAt": "2026-08-01",
   "notes": [
-    "stage名や品質ラベルの一括置換による数合わせは禁止する",
-    "未開示項目は未開示として記録し、推計値で要件を満たしてはならない",
-    "既存coreも同じ監査対象とし、要件不足は補修キューへ残す",
-    "機械要件を満たしても個別承認と独立再検証なしでは昇格しない",
-    "最新JPX上場銘柄一覧から現行上場企業500社を追加し、Coverageβとして個別調査する",
-    "複数資料を比較し、公表日、企業同一性、複数ページ証跡、構造化項目を満たす企業だけを提案ハッシュ固定・二段階承認で昇格する",
-    "最終目標は掲載3,000社すべての本番品質化とし、未達企業は不足理由を記録して補修する"
+    "Phase 2の目標は深掘り確認済み500社。Phase 1の50社を含む。",
+    "旧stage=core、旧5つ星、旧productionApprovalだけでは深掘り確認済みとしない。",
+    "テンプレート文が残る企業は深掘り承認できない。",
+    "自動事実補完、自動選定、自動承認、自動本番昇格を禁止する。",
+    "未開示項目は未開示として記録し、推計値で要件を満たしてはならない。"
   ]
 }

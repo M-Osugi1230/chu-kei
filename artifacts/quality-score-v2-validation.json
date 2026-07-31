@@ -1,0 +1,103 @@
+{
+  "version": "quality-score-v2-validation",
+  "checkedAt": "2026-07-31T21:20:53.587Z",
+  "profileVersion": "3.0",
+  "distribution": {
+    "1": 0,
+    "2": 2685,
+    "3": 315,
+    "4": 0,
+    "5": 0
+  },
+  "passed": 17,
+  "total": 17,
+  "allPassed": true,
+  "checks": [
+    {
+      "name": "quality score bundle readable",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality score manifest version",
+      "ok": true,
+      "detail": "actual=v43-quality-score-v3"
+    },
+    {
+      "name": "quality profile version 3.0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality check mask contract",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "verbose quality fields removed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "coverage remains one star and unscored",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "scored companies have numeric score",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality check mask matches source fields",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality score matches source fields",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality stars match thresholds",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality label matches stage and evidence",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "five stars require every legacy check and explicit deep verification approval",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "five-star core requires explicit production approval metadata",
+      "ok": true,
+      "detail": "five-star-core=0"
+    },
+    {
+      "name": "non-core companies cannot carry production approval metadata",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "template-like companies cannot be three stars or higher without explicit review",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no legacy five-star carryover",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality distribution totals company count",
+      "ok": true,
+      "detail": "{\"1\":0,\"2\":2685,\"3\":315,\"4\":0,\"5\":0}"
+    }
+  ],
+  "issues": []
+}

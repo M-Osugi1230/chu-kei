@@ -1,33 +1,44 @@
 {
   "schemaVersion": "site-release-status-v1",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-01",
   "repository": {
-    "release": "v43 Production 3000 + Public Launch Candidate",
+    "release": "Phase 0 Quality Rebase / Phase 1-2 Queue",
     "lastVerifiedMainSha": "8bdb477f00bce44b462f8c5c61b53c87410980d6",
-    "launchCandidateBranch": "release/public-launch-20260724",
+    "launchCandidateBranch": "agent/quality-rebase-phase0-2",
     "companies": 3000,
     "sourceConfirmed": 3000,
-    "structured": 3000,
-    "production": 3000,
+    "structured": 315,
+    "production": 0,
     "detailedBeta": 0,
     "sourceIndexed": 0,
     "coverageBeta": 0,
-    "progressCompanies": "集計更新中",
+    "progressCompanies": 100,
     "progressRows": 353,
-    "actualCompanies": "集計更新中",
-    "actualRows": "集計更新中",
-    "qualityDebt": 0,
+    "actualCompanies": 72,
+    "actualRows": 258,
+    "qualityDebt": 3000,
     "historyCompanies": 1,
     "historyPlans": 2,
     "progressEvents": 9,
     "commercialOffers": 3,
-    "forms": ["general-inquiry", "spot-report-request", "product-waitlist"],
+    "forms": [
+      "general-inquiry",
+      "spot-report-request",
+      "product-waitlist"
+    ],
     "seo": {
       "robots": true,
       "sitemap": true,
       "canonicalContact": true,
       "operatorDisclosure": "Chu-kei事務局"
-    }
+    },
+    "deepVerified": 0,
+    "reAuditPool": 315,
+    "templateReviewRequired": 2685,
+    "strictEarningsReleaseReSearch": 610,
+    "phase1Selected": 50,
+    "phase2Queued": 450,
+    "knownBrokenLinks": 6
   },
   "publicSite": {
     "url": "https://chukei-insight.osugimurata.chatgpt.site/",
@@ -37,14 +48,14 @@
     "verificationIssue": 49
   },
   "sync": {
-    "status": "partial",
-    "label": "公開反映待ち",
+    "status": "quality_rebase_in_progress",
+    "label": "品質再監査中",
     "pending": [
-      "最新mainをProduction deployへ反映し、公開URLの表示内容と3,000社データを確認する",
-      "Netlify Formsでgeneral-inquiry、spot-report-request、product-waitlistの3フォームを検出する",
-      "フォーム通知先を運営者メールへ設定し、スパム対策と3フォームのテスト送信を確認する",
-      "Google Search Consoleへサイトを登録し、sitemap.xmlを送信する",
-      "公開確認後にverifiedAt、公開SHA、同期状態をsyncedへ更新する"
+      "Phase 1の50社を新工程で全文精読し、二段階承認を完了する",
+      "Phase 2追加450社を50社単位で処理し、深掘り確認済み500社へ到達する",
+      "証跡候補116社をレビューする",
+      "既知404 6件を修復する",
+      "品質表示の公開反映後に公開URLを再監査する"
     ]
   }
 }

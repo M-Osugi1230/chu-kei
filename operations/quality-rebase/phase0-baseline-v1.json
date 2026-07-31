@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "quality-rebase-phase0-baseline-v1",
+  "referenceDate": "2026-08-01",
+  "purpose": "旧5つ星評価と深掘り確認済みを分離し、Phase 0からPhase 2までの再監査・量産対象を固定する。",
+  "roadmapBaseline": {
+    "totalCompanies": 3000,
+    "provisionalCompanies": 315,
+    "templateTypeCompanies": 2685,
+    "financialStatementCompanies": 610,
+    "evidenceCandidateCompanies": 116,
+    "progressRecords": 353,
+    "progressConnectedCompanies": 72,
+    "knownBrokenLinks": 6
+  },
+  "qualityPolicy": {
+    "legacyFiveStarMeansDeepVerified": false,
+    "deepVerifiedRequiresExplicitApproval": true,
+    "templateTextMayBePublishedAsDeepVerified": false,
+    "formalPlanDocumentRequired": true,
+    "evidencePageRequiredForEveryMandatoryField": true,
+    "metricDefinitionValidationRequired": true,
+    "independentDoubleCheckRequired": true
+  },
+  "approvalPolicy": {
+    "automaticFactCompletionAllowed": false,
+    "automaticCompanySelectionAsApprovalAllowed": false,
+    "automaticDeepApprovalAllowed": false,
+    "minimumReviewers": 2,
+    "reviewerIndependenceRequired": true,
+    "requiredChecks": [
+      "formalPlanConfirmed",
+      "fullTextReviewed",
+      "strategyStructured",
+      "metricsValidated",
+      "evidenceLinked",
+      "independentDoubleCheck"
+    ]
+  },
+  "phase1": {
+    "targetCompanies": 50,
+    "marketQuota": {
+      "Prime": 25,
+      "Standard": 15,
+      "Growth": 10
+    },
+    "preferPlanPublishedWithinYears": 3,
+    "industryConcentrationSuppressed": true,
+    "preferNumericTargetsAndProgressMaterials": true,
+    "status": "selection_and_full_review_required"
+  },
+  "phase2": {
+    "targetCompanies": 500,
+    "phase1CountsTowardTarget": true,
+    "batchSize": 50,
+    "requiredProcess": [
+      "formal_plan_selection",
+      "pdf_full_text_extraction",
+      "strategy_metric_capital_policy_structuring",
+      "field_level_evidence_linking",
+      "year_unit_scope_validation",
+      "independent_double_check",
+      "approval_before_publication",
+      "post_publication_link_and_render_check"
+    ],
+    "status": "queue_generation_required"
+  },
+  "phase0WorkItems": [
+    {
+      "id": "P0-01",
+      "title": "暫定315社を新基準で再監査",
+      "status": "in_progress"
+    },
+    {
+      "id": "P0-02",
+      "title": "2,685社のテンプレート型データを資料確認済み以下へ適正化",
+      "status": "in_progress"
+    },
+    {
+      "id": "P0-03",
+      "title": "決算短信610社を正式な中計資料の再探索対象にする",
+      "status": "in_progress"
+    },
+    {
+      "id": "P0-04",
+      "title": "過大評価された5つ星判定を廃止・再設計",
+      "status": "in_progress"
+    },
+    {
+      "id": "P0-05",
+      "title": "353件の進捗データと企業詳細を同期",
+      "status": "in_progress"
+    },
+    {
+      "id": "P0-06",
+      "title": "72社の実績接続を正しく反映",
+      "status": "in_progress"
+    },
+    {
+      "id": "P0-07",
+      "title": "6件の404を修復",
+      "status": "queued"
+    },
+    {
+      "id": "P0-08",
+      "title": "証跡候補116社をレビュー",
+      "status": "queued"
+    },
+    {
+      "id": "P0-09",
+      "title": "指標名の表記揺れを統一",
+      "status": "in_progress"
+    }
+  ]
+}

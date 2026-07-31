@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/audit_quality_rebase_phase0_v1.mjs'
       - 'scripts/reconcile_phase0_definitions_v1.mjs'
+      - 'scripts/lib/quality_profile_v3.mjs'
       - 'operations/quality-rebase/**'
       - '.github/workflows/quality-rebase-phase0.yml'
       - 'site/data/**'
@@ -14,6 +15,7 @@ on:
     paths:
       - 'scripts/audit_quality_rebase_phase0_v1.mjs'
       - 'scripts/reconcile_phase0_definitions_v1.mjs'
+      - 'scripts/lib/quality_profile_v3.mjs'
       - 'operations/quality-rebase/**'
       - '.github/workflows/quality-rebase-phase0.yml'
       - 'site/data/**'
@@ -25,7 +27,7 @@ permissions:
 jobs:
   phase0-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -64,6 +66,11 @@ jobs:
           }, null, 2));
           NODE
 
+      - name: Create source snapshot
+        run: |
+          tar --exclude='.git' --exclude='node_modules' -czf /tmp/chu-kei-quality-rebase-source.tar.gz .
+          sha256sum /tmp/chu-kei-quality-rebase-source.tar.gz
+
       - name: Upload Phase 0 audit artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -75,3 +82,11 @@ jobs:
             operations/quality-rebase/phase0-company-classification-v1.csv
             operations/quality-rebase/phase1-cohort-50-v1.json
             operations/quality-rebase/phase2-queue-500-v1.json
+
+      - name: Upload branch source snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-quality-rebase-source
+          if-no-files-found: error
+          compression-level: 0
+          path: /tmp/chu-kei-quality-rebase-source.tar.gz

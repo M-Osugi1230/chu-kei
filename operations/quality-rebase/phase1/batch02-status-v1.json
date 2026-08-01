@@ -8,12 +8,13 @@
     "automaticDeepApprovalAllowed": false
   },
   "counts": {
-    "primaryReviewComplete": 5,
-    "independentReviewReady": 4,
-    "additionalSourceMappingRequired": 1,
+    "primaryReviewComplete": 9,
+    "independentReviewReady": 7,
+    "additionalSourceMappingRequired": 2,
+    "sourceIdentityConflictBlocked": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReview": 5
+    "remainingPrimaryReview": 1
   },
   "companies": [
     {
@@ -41,7 +42,8 @@
       "order": 14,
       "code": "3099",
       "name": "三越伊勢丹ホールディングス",
-      "status": "official_plan_review_in_progress"
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/3099-primary-review-v1.json"
     },
     {
       "order": 15,
@@ -54,13 +56,15 @@
       "order": 16,
       "code": "3197",
       "name": "すかいらーくホールディングス",
-      "status": "official_plan_review_in_progress"
+      "status": "primary_review_complete_financial_table_mapping_and_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/3197-primary-review-v1.json"
     },
     {
       "order": 17,
       "code": "2502",
       "name": "アサヒグループホールディングス",
-      "status": "official_pdf_identification_in_progress"
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/2502-primary-review-v1.json"
     },
     {
       "order": 18,
@@ -73,13 +77,15 @@
       "order": 19,
       "code": "4568",
       "name": "第一三共",
-      "status": "official_pdf_identification_in_progress"
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/4568-primary-review-v1.json"
     },
     {
       "order": 20,
       "code": "1375",
       "name": "ユキグニファクトリー",
-      "status": "official_pdf_identification_in_progress"
+      "status": "blocked_source_identity_conflict",
+      "sourceResolutionFile": "operations/quality-rebase/phase1/source-resolution/1375-source-conflict-v1.json"
     }
   ],
   "approvalGate": {
@@ -93,6 +99,6 @@
       "independentDoubleCheck",
       "postPublicationLinkAndRenderCheck"
     ],
-    "rule": "一次レビュー完了だけでは最高品質へ昇格しない。独立再確認と公開後検査を含む全条件を満たした企業だけを承認する。"
+    "rule": "一次レビュー完了だけでは最高品質へ昇格しない。独立再確認と公開後検査を含む全条件を満たした企業だけを承認する。資料同一性が解消しない企業は承認対象から隔離する。"
   }
 }

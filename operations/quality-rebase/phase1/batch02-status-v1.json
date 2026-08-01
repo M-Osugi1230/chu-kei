@@ -8,24 +8,79 @@
     "automaticDeepApprovalAllowed": false
   },
   "counts": {
-    "primaryReviewComplete": 0,
-    "independentReviewReady": 0,
-    "additionalSourceMappingRequired": 0,
+    "primaryReviewComplete": 5,
+    "independentReviewReady": 4,
+    "additionalSourceMappingRequired": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReview": 10
+    "remainingPrimaryReview": 5
   },
   "companies": [
-    {"order":11,"code":"6976","name":"太陽誘電","status":"official_pdf_identification_in_progress"},
-    {"order":12,"code":"8601","name":"大和証券グループ本社","status":"official_plan_review_in_progress"},
-    {"order":13,"code":"2784","name":"アルフレッサ ホールディングス","status":"primary_review_in_progress"},
-    {"order":14,"code":"3099","name":"三越伊勢丹ホールディングス","status":"official_plan_review_in_progress"},
-    {"order":15,"code":"3132","name":"マクニカホールディングス","status":"primary_review_in_progress"},
-    {"order":16,"code":"3197","name":"すかいらーくホールディングス","status":"official_plan_review_in_progress"},
-    {"order":17,"code":"2502","name":"アサヒグループホールディングス","status":"official_pdf_identification_in_progress"},
-    {"order":18,"code":"9252","name":"ラストワンマイル","status":"primary_review_in_progress"},
-    {"order":19,"code":"4568","name":"第一三共","status":"official_pdf_identification_in_progress"},
-    {"order":20,"code":"1375","name":"ユキグニファクトリー","status":"official_pdf_identification_in_progress"}
+    {
+      "order": 11,
+      "code": "6976",
+      "name": "太陽誘電",
+      "status": "primary_review_complete_independent_review_and_official_pdf_link_confirmation_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/6976-primary-review-v1.json"
+    },
+    {
+      "order": 12,
+      "code": "8601",
+      "name": "大和証券グループ本社",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/8601-primary-review-v1.json"
+    },
+    {
+      "order": 13,
+      "code": "2784",
+      "name": "アルフレッサ ホールディングス",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/2784-primary-review-v1.json"
+    },
+    {
+      "order": 14,
+      "code": "3099",
+      "name": "三越伊勢丹ホールディングス",
+      "status": "official_plan_review_in_progress"
+    },
+    {
+      "order": 15,
+      "code": "3132",
+      "name": "マクニカホールディングス",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/3132-primary-review-v1.json"
+    },
+    {
+      "order": 16,
+      "code": "3197",
+      "name": "すかいらーくホールディングス",
+      "status": "official_plan_review_in_progress"
+    },
+    {
+      "order": 17,
+      "code": "2502",
+      "name": "アサヒグループホールディングス",
+      "status": "official_pdf_identification_in_progress"
+    },
+    {
+      "order": 18,
+      "code": "9252",
+      "name": "ラストワンマイル",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/9252-primary-review-v1.json"
+    },
+    {
+      "order": 19,
+      "code": "4568",
+      "name": "第一三共",
+      "status": "official_pdf_identification_in_progress"
+    },
+    {
+      "order": 20,
+      "code": "1375",
+      "name": "ユキグニファクトリー",
+      "status": "official_pdf_identification_in_progress"
+    }
   ],
   "approvalGate": {
     "minimumIndependentReviewers": 2,
@@ -37,6 +92,7 @@
       "evidenceLinked",
       "independentDoubleCheck",
       "postPublicationLinkAndRenderCheck"
-    ]
+    ],
+    "rule": "一次レビュー完了だけでは最高品質へ昇格しない。独立再確認と公開後検査を含む全条件を満たした企業だけを承認する。"
   }
 }

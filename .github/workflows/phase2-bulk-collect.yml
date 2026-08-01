@@ -1,0 +1,153 @@
+name: Phase 2 Bulk Collection
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: 'Phase 2 batch number (2-10)'
+        required: true
+        default: '2'
+        type: choice
+        options: ['2','3','4','5','6','7','8','9','10']
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase2/bulk-collection-request.json'
+      - 'scripts/phase2_bulk_collect_v1.py'
+      - '.github/workflows/phase2-bulk-collect.yml'
+
+permissions:
+  contents: write
+
+env:
+  TARGET_BRANCH: agent/quality-rebase-phase0-2
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    outputs:
+      batch: ${{ steps.batch.outputs.value }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+      - id: batch
+        shell: bash
+        run: |
+          if [ -n "${{ inputs.batch }}" ]; then
+            value="${{ inputs.batch }}"
+          else
+            value="$(python - <<'PY'
+          import json
+          print(json.load(open('operations/quality-rebase/phase2/bulk-collection-request.json'))['batch'])
+          PY
+          )"
+          fi
+          if ! [[ "$value" =~ ^(2|3|4|5|6|7|8|9|10)$ ]]; then
+            echo "Invalid batch: $value" >&2
+            exit 1
+          fi
+          echo "value=$value" >> "$GITHUB_OUTPUT"
+
+  collect:
+    needs: resolve
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        wave: [1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install collection dependencies
+        run: pip install requests beautifulsoup4 pypdf
+      - name: Collect ten companies
+        run: python scripts/phase2_bulk_collect_v1.py --batch '${{ needs.resolve.outputs.batch }}' --wave '${{ matrix.wave }}'
+      - name: Assert no automatic approval
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('operations/quality-rebase/phase2/bulk-collection')
+          for path in root.rglob('*.json'):
+              value = json.loads(path.read_text())
+              text = json.dumps(value)
+              if '"deepVerificationApproved": true' in text or '"automaticApprovalAllowed": true' in text:
+                  raise SystemExit(f'unsafe approval flag: {path}')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase2-batch-${{ needs.resolve.outputs.batch }}-wave-${{ matrix.wave }}
+          if-no-files-found: error
+          retention-days: 14
+          path: operations/quality-rebase/phase2/bulk-collection/batch-${{ format('{0:00}', needs.resolve.outputs.batch) }}/wave-${{ format('{0:00}', matrix.wave) }}/
+
+  aggregate:
+    needs: [resolve, collect]
+    if: always() && needs.resolve.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: phase2-batch-${{ needs.resolve.outputs.batch }}-wave-*
+          merge-multiple: true
+          path: /tmp/phase2-results
+      - name: Merge available results
+        shell: bash
+        run: |
+          target="operations/quality-rebase/phase2/bulk-collection/batch-$(printf '%02d' '${{ needs.resolve.outputs.batch }}')"
+          mkdir -p "$target"
+          find /tmp/phase2-results -mindepth 1 -maxdepth 1 -type d -name 'wave-*' -exec cp -R {} "$target/" \;
+          python - <<'PY'
+          import json, pathlib
+          batch = int('${{ needs.resolve.outputs.batch }}')
+          root = pathlib.Path(f'operations/quality-rebase/phase2/bulk-collection/batch-{batch:02d}')
+          summaries = []
+          for path in sorted(root.glob('wave-*/summary.json')):
+              summaries.append(json.loads(path.read_text()))
+          counts = {}
+          companies = []
+          for summary in summaries:
+              for key, value in summary.get('counts', {}).items():
+                  counts[key] = counts.get(key, 0) + value
+              companies.extend(summary.get('companies', []))
+          report = {
+              'schemaVersion': 'phase2-bulk-collection-batch-v1',
+              'batch': batch,
+              'wavesExpected': 5,
+              'wavesCollected': len(summaries),
+              'targetCompanies': 50,
+              'processedCompanies': len(companies),
+              'counts': counts,
+              'automaticApprovalAllowed': False,
+              'deepVerificationApproved': 0,
+              'companies': companies,
+          }
+          (root / 'summary.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit collection artifacts
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/bulk-collection
+          if git diff --cached --quiet; then
+            echo 'No collection changes.'
+          else
+            git commit -m "quality: collect Phase 2 batch ${{ needs.resolve.outputs.batch }} primary sources"
+            git pull --rebase origin "$TARGET_BRANCH"
+            git push origin "HEAD:$TARGET_BRANCH"
+          fi

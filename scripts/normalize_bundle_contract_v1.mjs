@@ -2,12 +2,12 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
-import { QUALITY_CHECK_KEYS, QUALITY_PROFILE_VERSION } from './lib/quality_profile_v2.mjs';
+import { QUALITY_CHECK_KEYS, QUALITY_PROFILE_VERSION } from './lib/quality_profile_v3.mjs';
 
 const root = path.resolve('.');
 const dataDir = path.join(root, 'site', 'data');
 const manifestPath = path.join(dataDir, 'bundle.manifest.json');
-const qualityReportPath = path.join(root, 'reports', 'v43', 'QUALITY_SCORE_V2_REPORT.json');
+const qualityReportPath = path.join(root, 'reports', 'v43', 'QUALITY_SCORE_V3_REPORT.json');
 const artifactDir = path.join(root, 'artifacts');
 const TARGET_PARTS = 43;
 
@@ -18,7 +18,7 @@ const compressed = Buffer.concat(
 const payload = JSON.parse(zlib.gunzipSync(compressed).toString('utf8'));
 
 const stageTier = {
-  core: '本番',
+  core: '資料登録済み（再監査中）',
   detailed_extracted: '詳細抽出済みβ',
   source_indexed: '一次確認β',
   jpx_indexed: 'Coverageβ',
@@ -66,9 +66,9 @@ for (const company of payload.companies ?? []) {
     company.industry = '未確認';
     changes.push({ code, field: 'industry', action: 'set_explicit_unknown' });
   }
-  if (typeof company.tier !== 'string' || !company.tier.trim()) {
+  if (typeof company.tier !== 'string' || !company.tier.trim() || company.tier === '本番') {
     company.tier = stageTier[company.stage] ?? '未確認';
-    changes.push({ code, field: 'tier', action: 'derive_from_stage' });
+    changes.push({ code, field: 'tier', action: 'derive_from_phase0_stage' });
   }
   if (typeof company.summary !== 'string') {
     company.summary = '';
@@ -80,7 +80,7 @@ for (const company of payload.companies ?? []) {
   }
 }
 
-const qualityV2Ready = (payload.companies ?? []).every((company) => (
+const qualityV3Ready = (payload.companies ?? []).every((company) => (
   company.quality?.version === QUALITY_PROFILE_VERSION
   && Number.isInteger(company.quality?.stars)
   && company.quality.stars >= 1
@@ -88,14 +88,17 @@ const qualityV2Ready = (payload.companies ?? []).every((company) => (
   && Number.isInteger(company.quality?.checkMask)
   && company.quality.checkMask >= 0
   && company.quality.checkMask < (1 << QUALITY_CHECK_KEYS.length)
+  && typeof company.quality?.templateLike === 'boolean'
+  && typeof company.quality?.deepVerified === 'boolean'
+  && typeof company.quality?.deepVerificationStatus === 'string'
   && !Object.hasOwn(company.quality, 'checks')
   && !Object.hasOwn(company.quality, 'reasons')
   && !Object.hasOwn(company.quality, 'missing')
 ));
-if (!qualityV2Ready) {
+if (!qualityV3Ready) {
   blocking.push({
     field: 'quality',
-    reason: `全570社のquality.version=${QUALITY_PROFILE_VERSION}と${QUALITY_CHECK_KEYS.length}ビットのcheckMaskを確認できないため、正本を再圧縮できません`,
+    reason: `全${payload.companies?.length ?? 0}社のquality.version=${QUALITY_PROFILE_VERSION}、${QUALITY_CHECK_KEYS.length}ビットのcheckMask、テンプレート判定、深掘り承認状態を確認できないため、正本を再圧縮できません`,
   });
 }
 
@@ -122,6 +125,7 @@ for (let index = 0; index < TARGET_PARTS; index += 1) {
   const start = index * partSize;
   const end = Math.min(start + partSize, nextCompressed.length);
   const buffer = nextCompressed.subarray(start, end);
+  if (!buffer.length) break;
   const file = `bundle.gz.part${String(index).padStart(3, '0')}`;
   fs.writeFileSync(path.join(dataDir, file), buffer);
   nextParts.push({ file, bytes: buffer.length, blobSha: gitBlobSha(buffer) });
@@ -129,7 +133,7 @@ for (let index = 0; index < TARGET_PARTS; index += 1) {
 
 const nextManifest = {
   ...manifest,
-  version: 'v43-quality-score-v2',
+  version: 'v43-quality-score-v3',
   compressedBytes: nextCompressed.length,
   uncompressedBytes: json.length,
   sha256: crypto.createHash('sha256').update(nextCompressed).digest('hex'),
@@ -151,9 +155,10 @@ if (fs.existsSync(qualityReportPath)) {
 
 fs.mkdirSync(artifactDir, { recursive: true });
 const report = {
-  version: 'bundle-contract-normalization-v1',
+  version: 'bundle-contract-normalization-v2',
   generatedAt: new Date().toISOString(),
   automaticFactCompletion: false,
+  automaticDeepApproval: false,
   companyCount: payload.companies?.length ?? 0,
   progressCount: payload.progress?.length ?? 0,
   qualityProfileVersion: QUALITY_PROFILE_VERSION,

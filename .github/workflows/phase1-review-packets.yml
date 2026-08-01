@@ -1,0 +1,141 @@
+name: Phase 1 Review Packets
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase1-review-packets-request.json'
+      - 'scripts/collect_phase1_review_packets_v1.py'
+      - 'scripts/run_phase1_review_packets_v1.py'
+      - '.github/workflows/phase1-review-packets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase1-review-packets
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        batch:
+          - { start: 1, label: '01-10' }
+          - { start: 11, label: '11-20' }
+          - { start: 21, label: '21-30' }
+          - { start: 31, label: '31-40' }
+          - { start: 41, label: '41-50' }
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Compile collector
+        run: |
+          python -m py_compile scripts/collect_phase1_review_packets_v1.py
+          python -m py_compile scripts/run_phase1_review_packets_v1.py
+
+      - name: Collect official review packets
+        id: collect
+        continue-on-error: true
+        run: |
+          rm -rf artifacts/quality-rebase/phase1-review-packets
+          python scripts/run_phase1_review_packets_v1.py --start '${{ matrix.batch.start }}' --limit 10
+
+      - name: Validate batch output
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          summary = Path('artifacts/quality-rebase/phase1-review-packets-summary-v1.json')
+          if not summary.exists():
+              raise SystemExit('summary file missing')
+          data = json.loads(summary.read_text(encoding='utf-8'))
+          selected = data['range']['selected']
+          results = data['results']
+          if selected != 10 or len(results) != 10:
+              raise SystemExit(f'unexpected selected/result count: {selected}/{len(results)}')
+          for result in results:
+              review = Path('artifacts/quality-rebase/phase1-review-packets') / result['reviewFile']
+              if not review.exists():
+                  raise SystemExit(f'missing review template: {review}')
+              review_data = json.loads(review.read_text(encoding='utf-8'))
+              if review_data['approval']['automaticApprovalAllowed'] is not False:
+                  raise SystemExit(f'automatic approval enabled: {review}')
+              if review_data['approval']['approved'] is not False:
+                  raise SystemExit(f'pre-approved review packet: {review}')
+          print(json.dumps(data['counts'], ensure_ascii=False, indent=2))
+          PY
+
+      - name: Upload batch packets
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-review-packets-${{ matrix.batch.label }}
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            artifacts/quality-rebase/phase1-review-packets-summary-v1.json
+            artifacts/quality-rebase/phase1-review-packets/*.json
+            artifacts/quality-rebase/phase1-review-packets/*.json.gz
+
+  summarize:
+    needs: collect
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Download all packet batches
+        uses: actions/download-artifact@v4
+        with:
+          pattern: phase1-review-packets-*
+          path: downloaded
+
+      - name: Build collection summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          summaries = sorted(Path('downloaded').glob('**/phase1-review-packets-summary-v1.json'))
+          if len(summaries) != 5:
+              raise SystemExit(f'expected 5 summaries, got {len(summaries)}')
+          rows = [json.loads(path.read_text(encoding='utf-8')) for path in summaries]
+          results = [item for row in rows for item in row['results']]
+          aggregate = {
+              'schemaVersion': 'quality-rebase-phase1-review-packets-aggregate-v1',
+              'selected': sum(row['range']['selected'] for row in rows),
+              'collected': sum(row['counts']['collected'] for row in rows),
+              'failed': sum(row['counts']['failed'] for row in rows),
+              'results': sorted(results, key=lambda item: item['order']),
+              'automaticDeepApprovalAllowed': False,
+          }
+          if aggregate['selected'] != 50 or len(aggregate['results']) != 50:
+              raise SystemExit('Phase 1 aggregate does not cover 50 companies')
+          output = Path('phase1-review-packets-aggregate-v1.json')
+          output.write_text(json.dumps(aggregate, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps({k: aggregate[k] for k in ['selected', 'collected', 'failed']}, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Upload aggregate summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-review-packets-aggregate
+          if-no-files-found: error
+          retention-days: 90
+          path: phase1-review-packets-aggregate-v1.json

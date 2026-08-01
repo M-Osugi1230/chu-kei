@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "phase1-independent-review-generation-request-v1",
+  "requestedAt": "2026-08-01T19:04:00+09:00",
+  "batchId": "phase1-batch-01",
+  "runRequested": true,
+  "expected": {
+    "totalPackets": 10,
+    "readyForIndependentReview": 9,
+    "blockedForAdditionalSourceMapping": 1,
+    "preApproved": 0
+  },
+  "policy": {
+    "automaticApprovalAllowed": false,
+    "minimumDistinctReviewers": 2,
+    "allChecksRequired": true,
+    "postPublicationCheckRequired": true
+  }
+}

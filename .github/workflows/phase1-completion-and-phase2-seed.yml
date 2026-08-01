@@ -1,0 +1,60 @@
+name: Phase 1 Completion and Phase 2 Seed
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'scripts/validate_phase1_complete_and_seed_phase2_v1.mjs'
+      - 'operations/quality-rebase/phase1/**'
+      - 'operations/quality-rebase/phase2-queue-500-v1.json'
+      - 'operations/quality-rebase/phase2-seed-request.json'
+      - '.github/workflows/phase1-completion-and-phase2-seed.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase1-completion-and-phase2-seed
+  cancel-in-progress: false
+
+jobs:
+  validate-and-seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout quality branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate Phase 1 and seed Phase 2
+        run: node scripts/validate_phase1_complete_and_seed_phase2_v1.mjs
+
+      - name: Commit generated status files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase1/completion-gate-v1.json operations/quality-rebase/phase2/batch02-status-v1.json
+          if git diff --cached --quiet; then
+            echo 'No generated changes to commit.'
+          else
+            git commit -m 'quality: validate Phase 1 completion and seed Phase 2 batch 02'
+            git push origin HEAD:agent/quality-rebase-phase0-2
+          fi
+
+      - name: Upload completion reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-completion-phase2-seed
+          if-no-files-found: error
+          path: |
+            operations/quality-rebase/phase1/completion-gate-v1.json
+            operations/quality-rebase/phase2/batch02-status-v1.json

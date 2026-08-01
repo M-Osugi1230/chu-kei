@@ -1,18 +1,26 @@
 {
-  "schemaVersion": "quality-rebase-phase2-current-status-v1",
-  "updatedAt": "2026-08-01",
+  "schemaVersion": "quality-rebase-phase2-current-status-v2",
+  "updatedAt": "2026-08-01T23:23:00+09:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
   "additionalCompaniesTarget": 450,
   "additionalCompaniesQueued": 450,
   "automaticDeepApprovalAllowed": false,
-  "counts": {
-    "batchesQueued": 9,
-    "batchesStarted": 1,
-    "companiesInStartedBatch": 50,
-    "wavesStarted": 1,
-    "companiesActivelyQueued": 10,
+  "collection": {
+    "status": "complete",
+    "batchesExpected": 9,
+    "batchesCollected": 9,
+    "companiesCollected": 450,
+    "uniqueCompaniesCollected": 450,
+    "collectionCompletePrimaryHumanReviewPending": 384,
+    "collectionFailed": 52,
+    "pdfNotFound": 14,
+    "sourceRelevanceAuditRequired": 384,
+    "deepVerificationApproved": 0,
+    "sourceFile": "operations/quality-rebase/phase2/bulk-collection/full-rollout-summary.json"
+  },
+  "review": {
     "sourceIdentityConfirmed": 2,
     "formalPlanConfirmed": 2,
     "primaryReviewComplete": 2,
@@ -20,44 +28,7 @@
     "additionalSourceMappingRequired": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingAdditionalCompanies": 448
-  },
-  "startedBatch": {
-    "batch": 2,
-    "target": 50,
-    "status": "in_progress",
-    "waves": [
-      {
-        "wave": 1,
-        "orders": "51-60",
-        "statusFile": "operations/quality-rebase/phase2/batch02-wave01-status-v1.json",
-        "queued": 10,
-        "primaryReviewComplete": 2,
-        "independentReviewReady": 1,
-        "additionalSourceMappingRequired": 1,
-        "deepVerificationApproved": 0
-      },
-      {
-        "wave": 2,
-        "orders": "61-70",
-        "status": "not_started"
-      },
-      {
-        "wave": 3,
-        "orders": "71-80",
-        "status": "not_started"
-      },
-      {
-        "wave": 4,
-        "orders": "81-90",
-        "status": "not_started"
-      },
-      {
-        "wave": 5,
-        "orders": "91-100",
-        "status": "not_started"
-      }
-    ]
+    "remainingPrimaryReviews": 448
   },
   "completedPrimaryReviews": [
     {
@@ -77,28 +48,26 @@
       "sourceCorrectionRequired": false
     }
   ],
-  "additionalWork": [
+  "qualityFindings": [
     {
-      "code": "4061",
-      "name": "デンカ",
-      "type": "visual_figure_review_and_public_url_correction",
-      "requiredResolution": [
-        "PDF全52ページの独立再確認",
-        "p.5・p.7・p.10・p.13の図表原寸確認",
-        "旧404 URLを現行公式PDF URLへ置換",
-        "公開ページの表示・検索・PDFリンク検査"
-      ]
+      "code": "4063",
+      "name": "信越化学工業",
+      "finding": "collector_selected_irrelevant_pdf",
+      "selectedPdf": "休日のお知らせ.pdf",
+      "requiredAction": "正式な経営方針または中期計画資料を再特定する"
     }
   ],
   "nextProcessingOrder": [
-    "日本触媒、住友ベークライト、ADEKAを直接PDFから処理する",
-    "バイタルKSKとUTグループは計画ページ・改定資料を分離する",
-    "駅探は正式中計部分と成長可能性資料部分を分離する",
-    "DCM、TREホールディングスを正式中計として精読する",
-    "Wave 1完了後にWave 2の10社を開始する"
+    "384社の資料関連性監査を実行し、正式資料候補・低信頼候補・誤候補に再分類する",
+    "52社の収集失敗をHTTP種別・アクセス拒否・容量超過・解析失敗に分解する",
+    "14社のPDF未特定についてHTML本文を一次証跡として確認し、正式PDFまたは公式ページを再探索する",
+    "高信頼候補から50社単位で一次レビュー作業票を生成する",
+    "一次レビュー完了企業だけを独立再確認キューへ移す"
   ],
   "approvalRule": {
     "primaryReviewDoesNotEqualApproval": true,
+    "collectionDoesNotEqualReview": true,
+    "sourceCandidateDoesNotEqualFormalPlanConfirmation": true,
     "minimumDistinctReviewers": 2,
     "fieldLevelEvidenceRequired": true,
     "yearUnitScopeValidationRequired": true,

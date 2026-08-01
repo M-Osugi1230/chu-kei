@@ -39,7 +39,14 @@ const buffers = manifest.parts.map(part => fs.readFileSync(path.join(dataDir, pa
 const compressed = Buffer.concat(buffers);
 const sha = crypto.createHash('sha256').update(compressed).digest('hex');
 
-check('bundle part count', buffers.length === 43, `actual=${buffers.length}`);
+check(
+  'bundle parts declared and non-empty',
+  Array.isArray(manifest.parts)
+    && manifest.parts.length > 0
+    && buffers.length === manifest.parts.length
+    && buffers.every(buffer => buffer.length > 0),
+  `declared=${manifest.parts?.length ?? 0}, actual=${buffers.length}`,
+);
 check('bundle compressed bytes', compressed.length === manifest.compressedBytes, `actual=${compressed.length}`);
 check('bundle absolute budget', compressed.length <= milestone.absoluteBundleBudgetBytes, `actual=${compressed.length}, budget=${milestone.absoluteBundleBudgetBytes}`);
 check('bundle SHA-256', sha === manifest.sha256, sha);

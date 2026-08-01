@@ -1,0 +1,62 @@
+name: Phase 2 Review Queue
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase2/bulk-collection/**'
+      - 'scripts/phase2_build_review_queue_v1.py'
+      - '.github/workflows/phase2-review-queue.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-review-queue
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build primary review routing queue
+        run: python scripts/phase2_build_review_queue_v1.py
+      - name: Validate queue safety and uniqueness
+        run: |
+          python - <<'PY'
+          import json
+          path = 'operations/quality-rebase/phase2/review-queue-v1.json'
+          value = json.load(open(path))
+          packets = value['packets']
+          codes = [str(row['code']) for row in packets]
+          assert len(codes) == len(set(codes)), 'duplicate company codes'
+          assert value['automaticApprovalAllowed'] is False
+          assert value['deepVerificationApproved'] == 0
+          for row in packets:
+              assert row['automaticApprovalAllowed'] is False
+              assert row['deepVerificationApproved'] is False
+              assert row['requiredActions']
+          print(json.dumps({'packets': len(packets), 'counts': value['counts']}, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit review queue
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/review-queue-v1.json
+          if git diff --cached --quiet; then
+            echo 'No review queue changes.'
+          else
+            git commit -m 'quality: route Phase 2 collection packets into review queues'
+            git pull --rebase origin agent/quality-rebase-phase0-2
+            git push origin HEAD:agent/quality-rebase-phase0-2
+          fi

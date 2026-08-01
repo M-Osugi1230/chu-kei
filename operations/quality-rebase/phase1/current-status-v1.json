@@ -6,135 +6,28 @@
   "counts": {
     "batchesStarted": 4,
     "companiesQueued": 40,
-    "primaryReviewComplete": 33,
-    "independentReviewReady": 28,
-    "additionalSourceMappingRequired": 5,
+    "primaryReviewComplete": 40,
+    "independentReviewReady": 34,
+    "additionalSourceMappingRequired": 6,
     "sourceIdentityConflictBlocked": 0,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviewInStartedBatches": 7,
+    "remainingPrimaryReviewInStartedBatches": 0,
     "remainingPhase1CompaniesNotStarted": 10
   },
   "batches": [
-    {
-      "id": "phase1-batch-01",
-      "orders": "1-10",
-      "statusFile": "operations/quality-rebase/phase1/batch01-status-v1.json",
-      "primaryReviewComplete": 10,
-      "independentReviewReady": 9,
-      "additionalSourceMappingRequired": 1,
-      "sourceIdentityConflictBlocked": 0,
-      "independentReviewComplete": 0,
-      "deepVerificationApproved": 0,
-      "remainingPrimaryReview": 0
-    },
-    {
-      "id": "phase1-batch-02",
-      "orders": "11-20",
-      "statusFile": "operations/quality-rebase/phase1/batch02-status-v1.json",
-      "primaryReviewComplete": 10,
-      "independentReviewReady": 8,
-      "additionalSourceMappingRequired": 2,
-      "sourceIdentityConflictBlocked": 0,
-      "independentReviewComplete": 0,
-      "deepVerificationApproved": 0,
-      "remainingPrimaryReview": 0
-    },
-    {
-      "id": "phase1-batch-03",
-      "orders": "21-30",
-      "statusFile": "operations/quality-rebase/phase1/batch03-status-v1.json",
-      "primaryReviewComplete": 10,
-      "independentReviewReady": 9,
-      "additionalSourceMappingRequired": 1,
-      "sourceIdentityConflictBlocked": 0,
-      "independentReviewComplete": 0,
-      "deepVerificationApproved": 0,
-      "remainingPrimaryReview": 0
-    },
-    {
-      "id": "phase1-batch-04",
-      "orders": "31-40",
-      "statusFile": "operations/quality-rebase/phase1/batch04-status-v1.json",
-      "primaryReviewComplete": 3,
-      "independentReviewReady": 2,
-      "additionalSourceMappingRequired": 1,
-      "sourceIdentityConflictBlocked": 0,
-      "independentReviewComplete": 0,
-      "deepVerificationApproved": 0,
-      "remainingPrimaryReview": 7
-    }
+    {"id":"phase1-batch-01","orders":"1-10","statusFile":"operations/quality-rebase/phase1/batch01-status-v1.json","primaryReviewComplete":10,"independentReviewReady":9,"additionalSourceMappingRequired":1,"sourceIdentityConflictBlocked":0,"independentReviewComplete":0,"deepVerificationApproved":0,"remainingPrimaryReview":0},
+    {"id":"phase1-batch-02","orders":"11-20","statusFile":"operations/quality-rebase/phase1/batch02-status-v1.json","primaryReviewComplete":10,"independentReviewReady":8,"additionalSourceMappingRequired":2,"sourceIdentityConflictBlocked":0,"independentReviewComplete":0,"deepVerificationApproved":0,"remainingPrimaryReview":0},
+    {"id":"phase1-batch-03","orders":"21-30","statusFile":"operations/quality-rebase/phase1/batch03-status-v1.json","primaryReviewComplete":10,"independentReviewReady":9,"additionalSourceMappingRequired":1,"sourceIdentityConflictBlocked":0,"independentReviewComplete":0,"deepVerificationApproved":0,"remainingPrimaryReview":0},
+    {"id":"phase1-batch-04","orders":"31-40","statusFile":"operations/quality-rebase/phase1/batch04-status-v1.json","primaryReviewComplete":10,"independentReviewReady":8,"additionalSourceMappingRequired":2,"sourceIdentityConflictBlocked":0,"independentReviewComplete":0,"deepVerificationApproved":0,"remainingPrimaryReview":0}
   ],
   "blockedOrAdditionalWork": [
-    {
-      "code": "6113",
-      "name": "アマダ",
-      "batchId": "phase1-batch-01",
-      "type": "additional_source_mapping",
-      "status": "primary_review_complete_independent_review_and_detailed_deck_mapping_pending",
-      "requiredResolution": [
-        "2026年3月期本決算説明会資料の正式PDF特定と全ページ確認",
-        "詳細資料内の財務目標・投資・株主還元のページ単位マッピング",
-        "別確認者による公式リリース・社長メッセージ・詳細資料の原文突合",
-        "公開ページの表示・リンク検査"
-      ]
-    },
-    {
-      "code": "6976",
-      "name": "太陽誘電",
-      "batchId": "phase1-batch-02",
-      "type": "additional_source_mapping",
-      "status": "primary_review_complete_independent_review_and_official_pdf_link_confirmation_pending",
-      "requiredResolution": [
-        "PDF全38ページの独立した再確認",
-        "会社公式IR上のPDF直リンク固定とTDnet同一資料であることの確認",
-        "2030年度目標・5年累計キャピタルアロケーション・中長期DOEの別確認者による原文突合",
-        "製品区分変更注記と社会価値KPIの再確認",
-        "公開ページの表示・リンク検査"
-      ]
-    },
-    {
-      "code": "3197",
-      "name": "すかいらーくホールディングス",
-      "batchId": "phase1-batch-02",
-      "type": "additional_source_mapping",
-      "status": "primary_review_complete_financial_table_mapping_and_independent_review_pending",
-      "requiredResolution": [
-        "公式計画画像または正式提出PDFの原寸取得と売上高・利益目標表の固定",
-        "公式Web全関連ページと画像証跡の独立した再確認",
-        "2024年度実績・2025年度進捗・2027年度目標の別確認者による原文突合",
-        "M&A上振れの計画数値への包含有無と株主還元方針の再確認",
-        "公開ページの表示・リンク検査"
-      ]
-    },
-    {
-      "code": "2586",
-      "name": "フルッタフルッタ",
-      "batchId": "phase1-batch-03",
-      "type": "formal_plan_classification",
-      "status": "primary_review_complete_formal_plan_classification_and_independent_review_pending",
-      "requiredResolution": [
-        "事業計画及び成長可能性資料を正式中期経営計画と同一視しない分類の独立確認",
-        "PDF全62ページの独立した再確認",
-        "2026年3月期実績・2027年3月期予想・5年後供給目標・長期構想の原文突合",
-        "資金調達・充当状況と株主還元ロードマップの再確認",
-        "公開ページの表示・リンク検査"
-      ]
-    },
-    {
-      "code": "5834",
-      "name": "SBIリーシングサービス",
-      "batchId": "phase1-batch-04",
-      "type": "formal_plan_period_figure_and_shareholder_return_source_mapping",
-      "status": "primary_review_complete_formal_plan_period_figure_and_shareholder_return_source_pending",
-      "requiredResolution": [
-        "PDF p.22-p.24の図表原寸取得と再確認",
-        "固定の中期経営計画期間・最終年度が別の会社公式資料に存在するか確認",
-        "株主還元・ROE・ROIC・資本コストの会社公式方針を確認",
-        "組成金額・販売金額・売上高・経常利益の定義を独立再確認",
-        "公開ページの表示・PDFリンク検査"
-      ]
-    }
+    {"code":"6113","name":"アマダ","batchId":"phase1-batch-01","type":"additional_source_mapping","status":"primary_review_complete_independent_review_and_detailed_deck_mapping_pending","requiredResolution":["2026年3月期本決算説明会資料の正式PDF特定と全ページ確認","詳細資料内の財務目標・投資・株主還元のページ単位マッピング","別確認者による公式リリース・社長メッセージ・詳細資料の原文突合","公開ページの表示・リンク検査"]},
+    {"code":"6976","name":"太陽誘電","batchId":"phase1-batch-02","type":"additional_source_mapping","status":"primary_review_complete_independent_review_and_official_pdf_link_confirmation_pending","requiredResolution":["PDF全38ページの独立した再確認","会社公式IR上のPDF直リンク固定とTDnet同一資料であることの確認","2030年度目標・5年累計キャピタルアロケーション・中長期DOEの別確認者による原文突合","製品区分変更注記と社会価値KPIの再確認","公開ページの表示・リンク検査"]},
+    {"code":"3197","name":"すかいらーくホールディングス","batchId":"phase1-batch-02","type":"additional_source_mapping","status":"primary_review_complete_financial_table_mapping_and_independent_review_pending","requiredResolution":["公式計画画像または正式提出PDFの原寸取得と売上高・利益目標表の固定","公式Web全関連ページと画像証跡の独立した再確認","2024年度実績・2025年度進捗・2027年度目標の別確認者による原文突合","M&A上振れの計画数値への包含有無と株主還元方針の再確認","公開ページの表示・リンク検査"]},
+    {"code":"2586","name":"フルッタフルッタ","batchId":"phase1-batch-03","type":"formal_plan_classification","status":"primary_review_complete_formal_plan_classification_and_independent_review_pending","requiredResolution":["事業計画及び成長可能性資料を正式中期経営計画と同一視しない分類の独立確認","PDF全62ページの独立した再確認","2026年3月期実績・2027年3月期予想・5年後供給目標・長期構想の原文突合","資金調達・充当状況と株主還元ロードマップの再確認","公開ページの表示・リンク検査"]},
+    {"code":"5834","name":"SBIリーシングサービス","batchId":"phase1-batch-04","type":"formal_plan_period_figure_and_shareholder_return_source_mapping","status":"primary_review_complete_formal_plan_period_figure_and_shareholder_return_source_pending","requiredResolution":["PDF p.22-p.24の図表原寸取得と再確認","固定の中期経営計画期間・最終年度が別の会社公式資料に存在するか確認","株主還元・ROE・ROIC・資本コストの会社公式方針を確認","組成金額・販売金額・売上高・経常利益の定義を独立再確認","公開ページの表示・PDFリンク検査"]},
+    {"code":"278A","name":"Terra Drone","batchId":"phase1-batch-04","type":"current_formal_midterm_plan_and_shareholder_return_source_mapping","status":"primary_review_complete_current_formal_midterm_plan_and_shareholder_return_source_pending","requiredResolution":["現行の固定複数年中期計画が会社公式に公表されたか確認","昨年度の中長期成長イメージを現行目標として流用しないことの独立確認","2026年1月期実績・2027年1月期単年度予想・未公表の中長期目標を分離","非連続成長投資600百万円と上場時調達資金再修正計画981百万円の重複有無を確認","株主還元・ROE・ROIC・資本コストの会社公式方針を確認","公開ページの表示・PDFリンク検査"]}
   ],
   "approvalRule": {
     "primaryReviewDoesNotEqualApproval": true,
@@ -145,10 +38,9 @@
     "approvedOnlyAfterAllChecks": true
   },
   "nextProcessingOrder": [
-    "第四バッチ34-40番を順番に一次精読する",
-    "独立再確認可能28社を別担当レビューへ送る",
-    "追加証跡・資料区分待ち5社の公式資料・画像・リンクを固定する",
     "第五バッチ41-50社を順番に一次精読する",
+    "独立再確認可能34社を別担当レビューへ送る",
+    "追加証跡・資料区分待ち6社の公式資料・画像・リンクを固定する",
     "別担当確認と公開後検査が完了した企業のみ最高品質へ昇格する"
   ]
 }

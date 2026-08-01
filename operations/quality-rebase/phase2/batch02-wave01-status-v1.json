@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "quality-rebase-phase2-wave-status-v1",
+  "batch": 2,
+  "wave": 1,
+  "orders": "51-60",
+  "targetCompanies": 10,
+  "updatedAt": "2026-08-01",
+  "automaticDeepApprovalAllowed": false,
+  "counts": {
+    "queued": 10,
+    "sourceIdentityConfirmed": 0,
+    "formalPlanConfirmed": 0,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "additionalSourceMappingRequired": 0,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0
+  },
+  "companies": [
+    {
+      "order": 51,
+      "code": "4061",
+      "name": "デンカ",
+      "market": "Prime",
+      "industry": "化学",
+      "document": "経営計画 Mission 2030 フェーズ2",
+      "planPublishedDate": "2026-02-27",
+      "sourceUrl": "https://www.denka.co.jp/pdf/ir/presentation/20260227_denka_ir_management.pdf",
+      "sourceTypeExpected": "formal_midterm_plan_update_pdf",
+      "status": "official_pdf_full_review_pending"
+    },
+    {
+      "order": 52,
+      "code": "8113",
+      "name": "ユニ・チャーム",
+      "market": "Prime",
+      "industry": "化学",
+      "document": "第13次中期経営計画 Project Renaissance",
+      "planPublishedDate": "2026-02-12",
+      "sourceUrl": "https://www.unicharm.co.jp/ja/ir/library/chukei.html",
+      "sourceTypeExpected": "official_plan_library_page_and_pdf",
+      "status": "official_pdf_identification_pending"
+    },
+    {
+      "order": 53,
+      "code": "4114",
+      "name": "日本触媒",
+      "market": "Prime",
+      "industry": "化学",
+      "document": "中期経営計画2027",
+      "planPublishedDate": "2025-04-15",
+      "sourceUrl": "https://www.shokubai.co.jp/ja/ir/assets/pdf/management/vision/mid-term_managementplan.pdf",
+      "sourceTypeExpected": "formal_midterm_plan_pdf",
+      "status": "official_pdf_full_review_pending"
+    },
+    {
+      "order": 54,
+      "code": "4203",
+      "name": "住友ベークライト",
+      "market": "Prime",
+      "industry": "化学",
+      "document": "中期経営計画2024-26",
+      "planPublishedDate": "2024-05-13",
+      "sourceUrl": "https://www.sumibe.co.jp/ir/library/presentation/files/2024/p_001-2.pdf",
+      "sourceTypeExpected": "formal_midterm_plan_pdf",
+      "status": "official_pdf_full_review_pending"
+    },
+    {
+      "order": 55,
+      "code": "4401",
+      "name": "ADEKA",
+      "market": "Prime",
+      "industry": "化学",
+      "document": "中期経営計画 ADX 2026",
+      "planPublishedDate": "2024-05-30",
+      "sourceUrl": "https://www.adeka.co.jp/ir/library/pdf/240530_ADX2026.pdf",
+      "sourceTypeExpected": "formal_midterm_plan_pdf",
+      "status": "official_pdf_full_review_pending"
+    },
+    {
+      "order": 56,
+      "code": "3151",
+      "name": "バイタルケーエスケー・ホールディングス",
+      "market": "Prime",
+      "industry": "卸売業",
+      "document": "中期経営計画2027 Move on to the Next Stage",
+      "planPublishedDate": "2025-04-17",
+      "sourceUrl": "https://www.vitalksk.co.jp/ir/management/plan2027/",
+      "sourceTypeExpected": "official_plan_page_and_pdf",
+      "status": "official_pdf_identification_pending"
+    },
+    {
+      "order": 57,
+      "code": "3646",
+      "name": "駅探",
+      "market": "Standard",
+      "industry": "情報・通信業",
+      "document": "新中期経営計画の策定について／事業計画及び成長可能性に関する事項",
+      "planPublishedDate": "2026-01-30",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/36460/140120260130543384.pdf",
+      "sourceTypeExpected": "formal_plan_embedded_in_growth_potential_pdf",
+      "status": "formal_plan_boundary_and_full_review_pending"
+    },
+    {
+      "order": 58,
+      "code": "3050",
+      "name": "DCMホールディングス",
+      "market": "Prime",
+      "industry": "小売業",
+      "document": "第4次中期経営計画（2026～2028年度）",
+      "planPublishedDate": "2026-04-14",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+      "sourceTypeExpected": "formal_midterm_plan_pdf",
+      "status": "official_pdf_full_review_pending"
+    },
+    {
+      "order": 59,
+      "code": "9247",
+      "name": "TREホールディングス",
+      "market": "Prime",
+      "industry": "サービス業",
+      "document": "第2次中期経営計画（2024年度～2028年度）",
+      "planPublishedDate": "2024-05-15",
+      "sourceUrl": "https://tre-hd.co.jp/download/assets/uploads/trehd_mtbp.pdf",
+      "sourceTypeExpected": "formal_midterm_plan_pdf",
+      "status": "official_pdf_full_review_pending"
+    },
+    {
+      "order": 60,
+      "code": "2146",
+      "name": "UTグループ",
+      "market": "Prime",
+      "industry": "サービス業",
+      "document": "第5次中期経営計画の見直し",
+      "planPublishedDate": "2025-11-13",
+      "sourceUrl": "https://www.ut-g.co.jp/ir/management/strategy/",
+      "sourceTypeExpected": "official_original_plan_and_revision_sources",
+      "status": "original_plan_and_revision_separation_pending"
+    }
+  ],
+  "approvalGate": {
+    "minimumIndependentReviewers": 2,
+    "requiredChecks": [
+      "companyIdentityConfirmed",
+      "formalPlanConfirmedOrClassified",
+      "fullTextReviewed",
+      "strategyStructured",
+      "metricsValidated",
+      "fieldLevelEvidenceLinked",
+      "yearUnitScopeValidated",
+      "independentDoubleCheck",
+      "postPublicationLinkAndRenderCheck"
+    ],
+    "rule": "計画本体・改定・進捗・成長可能性資料を区別し、一次精読だけでは最高品質へ昇格しない。"
+  }
+}

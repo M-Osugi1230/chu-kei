@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "deep-verification-independent-review-v1",
+  "company": {
+    "code": "6506",
+    "name": "安川電機",
+    "order": 10
+  },
+  "primaryReview": {
+    "file": "operations/quality-rebase/phase1/reviews/6506-primary-review-v1.json",
+    "sha256": "7c3fc04c1a27b97f43e07180d5399c19b1bf01295cd77c65c4b377bf2a04517f",
+    "status": "primary_review_complete_independent_review_pending",
+    "completedAt": "2026-08-01"
+  },
+  "sourceSet": {
+    "officialUrl": "https://www.yaskawa.co.jp/wp-content/uploads/2026/05/Dash35.pdf",
+    "supplementalOfficialUrl": null,
+    "verificationMirrorUrl": null,
+    "pageCount": 32,
+    "title": "中期経営計画 Dash 35",
+    "publishedDate": "2026-05-22"
+  },
+  "queue": {
+    "status": "ready_for_independent_review",
+    "blockedReasons": [],
+    "priority": 10
+  },
+  "reviewChecks": {
+    "companyIdentityConfirmed": false,
+    "formalPlanConfirmed": false,
+    "publicationDateConfirmed": false,
+    "fullTextReviewedIndependently": false,
+    "strategyMatchesSource": false,
+    "allTargetsMatchSource": false,
+    "yearUnitScopeValidated": false,
+    "capitalPolicyMatchesSource": false,
+    "fieldLevelEvidenceValidated": false,
+    "forecastActualSeparationValidated": false,
+    "templateTextAbsent": false,
+    "linkReachabilityChecked": false,
+    "renderChecked": false
+  },
+  "discrepancies": [],
+  "reviewer": {
+    "reviewerId": null,
+    "reviewerType": null,
+    "independentFromPrimaryReview": null,
+    "reviewedAt": null
+  },
+  "decision": {
+    "status": "pending",
+    "approved": false,
+    "changesRequested": false,
+    "reason": null
+  },
+  "policy": {
+    "automaticApprovalAllowed": false,
+    "approvalRequiresAllChecksTrue": true,
+    "minimumDistinctReviewersAcrossPrimaryAndIndependent": 2,
+    "deepVerificationApproved": false
+  }
+}

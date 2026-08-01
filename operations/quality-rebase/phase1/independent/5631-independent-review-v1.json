@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "deep-verification-independent-review-v1",
+  "company": {
+    "code": "5631",
+    "name": "日本製鋼所",
+    "order": 1
+  },
+  "primaryReview": {
+    "file": "operations/quality-rebase/phase1/reviews/5631-primary-review-v1.json",
+    "sha256": "f40c7d3800efb23fa59085a22e56ec479cfca06b9d63b1b49c2b234c6e87522d",
+    "status": "primary_review_complete_independent_review_pending",
+    "completedAt": "2026-08-01"
+  },
+  "sourceSet": {
+    "officialUrl": "https://www.jsw.co.jp/pdf/ir/library/presentation/2027/JGP2028_202607.pdf",
+    "supplementalOfficialUrl": null,
+    "verificationMirrorUrl": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260713/20260710591714.pdf",
+    "pageCount": 40,
+    "title": "中期経営計画 JGP2028 Update",
+    "publishedDate": "2026-07-13"
+  },
+  "queue": {
+    "status": "ready_for_independent_review",
+    "blockedReasons": [
+      "会社公式PDF URLの到達性を別環境で再確認する"
+    ],
+    "priority": 1
+  },
+  "reviewChecks": {
+    "companyIdentityConfirmed": false,
+    "formalPlanConfirmed": false,
+    "publicationDateConfirmed": false,
+    "fullTextReviewedIndependently": false,
+    "strategyMatchesSource": false,
+    "allTargetsMatchSource": false,
+    "yearUnitScopeValidated": false,
+    "capitalPolicyMatchesSource": false,
+    "fieldLevelEvidenceValidated": false,
+    "forecastActualSeparationValidated": false,
+    "templateTextAbsent": false,
+    "linkReachabilityChecked": false,
+    "renderChecked": false
+  },
+  "discrepancies": [],
+  "reviewer": {
+    "reviewerId": null,
+    "reviewerType": null,
+    "independentFromPrimaryReview": null,
+    "reviewedAt": null
+  },
+  "decision": {
+    "status": "pending",
+    "approved": false,
+    "changesRequested": false,
+    "reason": null
+  },
+  "policy": {
+    "automaticApprovalAllowed": false,
+    "approvalRequiresAllChecksTrue": true,
+    "minimumDistinctReviewersAcrossPrimaryAndIndependent": 2,
+    "deepVerificationApproved": false
+  }
+}

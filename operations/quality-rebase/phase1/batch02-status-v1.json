@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "quality-rebase-phase1-batch-status-v1",
+  "batch": {
+    "id": "phase1-batch-02",
+    "orders": "11-20",
+    "targetCompanies": 10,
+    "updatedAt": "2026-08-01",
+    "automaticDeepApprovalAllowed": false
+  },
+  "counts": {
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "additionalSourceMappingRequired": 0,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0,
+    "remainingPrimaryReview": 10
+  },
+  "companies": [
+    {"order":11,"code":"6976","name":"太陽誘電","status":"official_pdf_identification_in_progress"},
+    {"order":12,"code":"8601","name":"大和証券グループ本社","status":"official_plan_review_in_progress"},
+    {"order":13,"code":"2784","name":"アルフレッサ ホールディングス","status":"primary_review_in_progress"},
+    {"order":14,"code":"3099","name":"三越伊勢丹ホールディングス","status":"official_plan_review_in_progress"},
+    {"order":15,"code":"3132","name":"マクニカホールディングス","status":"primary_review_in_progress"},
+    {"order":16,"code":"3197","name":"すかいらーくホールディングス","status":"official_plan_review_in_progress"},
+    {"order":17,"code":"2502","name":"アサヒグループホールディングス","status":"official_pdf_identification_in_progress"},
+    {"order":18,"code":"9252","name":"ラストワンマイル","status":"primary_review_in_progress"},
+    {"order":19,"code":"4568","name":"第一三共","status":"official_pdf_identification_in_progress"},
+    {"order":20,"code":"1375","name":"ユキグニファクトリー","status":"official_pdf_identification_in_progress"}
+  ],
+  "approvalGate": {
+    "minimumIndependentReviewers": 2,
+    "requiredChecks": [
+      "formalPlanConfirmed",
+      "fullTextReviewed",
+      "strategyStructured",
+      "metricsValidated",
+      "evidenceLinked",
+      "independentDoubleCheck",
+      "postPublicationLinkAndRenderCheck"
+    ]
+  }
+}

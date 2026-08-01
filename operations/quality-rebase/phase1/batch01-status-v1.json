@@ -8,17 +8,21 @@
     "automaticDeepApprovalAllowed": false
   },
   "counts": {
-    "primaryReviewComplete": 5,
+    "primaryReviewComplete": 10,
+    "independentReviewReady": 9,
+    "additionalSourceMappingRequired": 1,
+    "linkRecheckRequired": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReview": 5
+    "remainingPrimaryReview": 0
   },
   "companies": [
     {
       "order": 1,
       "code": "5631",
       "name": "日本製鋼所",
-      "status": "official_pdf_identification_in_progress"
+      "status": "primary_review_complete_independent_review_pending_official_link_recheck",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/5631-primary-review-v1.json"
     },
     {
       "order": 2,
@@ -52,7 +56,8 @@
       "order": 6,
       "code": "3031",
       "name": "ラクーンホールディングス",
-      "status": "primary_review_in_progress"
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/3031-primary-review-v1.json"
     },
     {
       "order": 7,
@@ -65,19 +70,22 @@
       "order": 8,
       "code": "8308",
       "name": "りそなホールディングス",
-      "status": "official_pdf_identification_in_progress"
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/8308-primary-review-v1.json"
     },
     {
       "order": 9,
       "code": "6113",
       "name": "アマダ",
-      "status": "primary_review_in_progress"
+      "status": "primary_review_complete_detailed_deck_mapping_and_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/6113-primary-review-v1.json"
     },
     {
       "order": 10,
       "code": "6506",
       "name": "安川電機",
-      "status": "primary_review_in_progress"
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/6506-primary-review-v1.json"
     }
   ],
   "approvalGate": {
@@ -90,6 +98,7 @@
       "evidenceLinked",
       "independentDoubleCheck",
       "postPublicationLinkAndRenderCheck"
-    ]
+    ],
+    "rule": "一次レビュー完了だけでは最高品質へ昇格しない。独立再確認と公開後検査を含む全条件を満たした企業だけを承認する。"
   }
 }

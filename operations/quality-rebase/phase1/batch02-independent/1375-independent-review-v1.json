@@ -6,29 +6,40 @@
     "order": 20
   },
   "sourceRecord": {
-    "type": "source_identity_conflict",
-    "file": "operations/quality-rebase/phase1/source-resolution/1375-source-conflict-v1.json",
-    "sha256": "751ee23a0bc101005323db22ed1d6d87b4594477d23c3726e8c8b836f62b3db3"
+    "type": "primary_review_and_resolved_source_identity",
+    "primaryReviewFile": "operations/quality-rebase/phase1/reviews/1375-primary-review-v1.json",
+    "sourceResolutionFile": "operations/quality-rebase/phase1/source-resolution/1375-source-conflict-v1.json"
   },
   "sourceSet": {
     "officialUrl": "https://www.yukiguni-factory.co.jp/ir/middleplan/",
-    "title": "中期経営計画",
-    "publishedDate": null
+    "officialLibraryUrl": "https://www.yukiguni-factory.co.jp/ir/library/middleplan-data/",
+    "shareholderReturnUrl": "https://www.yukiguni-factory.co.jp/ir/dividend/",
+    "title": "中期経営計画（2024年3月期～2028年3月期）",
+    "publishedDate": null,
+    "externalReportExcluded": {
+      "date": "2025-11-14",
+      "publisher": "Sessa Investment Research",
+      "type": "FY2026/3 Q2フォローアップ"
+    }
   },
   "queue": {
-    "status": "blocked_source_identity_conflict",
-    "blockedReasons": [
-      "会社公式IRニュースまたは適時開示から2025年11月14日付資料の存在を確認する",
-      "2030計画が存在する場合は正式PDF URL・資料名・公表日・ページ数を固定する",
-      "存在しない場合はPhase 1候補を2024年3月期～2028年3月期の正式計画へ訂正する",
-      "候補訂正後に全文抽出・項目別証跡・数値定義検査を最初から実施する"
-    ],
+    "status": "ready_for_independent_review",
+    "blockedReasons": [],
     "priority": 20
   },
+  "requiredFocus": [
+    "会社公式の現行中計が2024年3月期～2028年3月期であること",
+    "2025年11月14日外部調査レポートを会社公式中計として扱っていないこと",
+    "2024年3月期実績・2025年3月期予想・2028年3月期計画・年度未特定アップサイドの分離",
+    "海外売上収益比率とコアEBITDAの定義",
+    "連結配当性向30%程度の別ソース接続",
+    "公式中期経営計画資料の直接ファイルURLと公表日の追補可否",
+    "公開ページの画像・リンク・表示"
+  ],
   "reviewChecks": {
     "companyIdentityConfirmed": false,
     "formalPlanConfirmed": false,
-    "publicationDateConfirmed": false,
+    "publicationDateConfirmedOrExplicitlyUnknown": false,
     "fullTextReviewedIndependently": false,
     "strategyMatchesSource": false,
     "allTargetsMatchSource": false,
@@ -36,6 +47,7 @@
     "capitalPolicyMatchesSource": false,
     "fieldLevelEvidenceValidated": false,
     "forecastActualSeparationValidated": false,
+    "externalResearchSeparated": false,
     "templateTextAbsent": false,
     "linkReachabilityChecked": false,
     "renderChecked": false

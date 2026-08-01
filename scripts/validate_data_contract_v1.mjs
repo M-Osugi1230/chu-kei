@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
-import { QUALITY_CHECK_KEYS, QUALITY_PROFILE_VERSION } from './lib/quality_profile_v2.mjs';
+import { QUALITY_CHECK_KEYS, QUALITY_PROFILE_VERSION } from './lib/quality_profile_v3.mjs';
 
 const root = path.resolve('.');
 const dataDir = path.join(root, 'site', 'data');
@@ -47,6 +47,14 @@ const companies = data.companies || [];
 const progress = data.progress || [];
 const markets = new Set(['Prime', 'Standard', 'Growth']);
 const stages = new Set(['core', 'detailed_extracted', 'source_indexed', 'jpx_indexed']);
+const deepVerificationStatuses = new Set([
+  'not_started',
+  'selected',
+  'queued',
+  'in_review',
+  'changes_requested',
+  'approved',
+]);
 const isoPartial = value => value == null || value === '' || /^\d{4}(-\d{2})?(-\d{2})?$/.test(value);
 const isoDay = value => /^\d{4}-\d{2}-\d{2}$/.test(value || '');
 
@@ -110,6 +118,24 @@ check(
     && company.quality.checkMask < (1 << QUALITY_CHECK_KEYS.length)),
 );
 check(
+  'quality v3 rebase fields contract',
+  companies.every(company => typeof company.quality?.templateLike === 'boolean'
+    && typeof company.quality?.deepVerified === 'boolean'
+    && deepVerificationStatuses.has(company.quality?.deepVerificationStatus)),
+);
+check(
+  'approved status and deep verified stay consistent',
+  companies.every(company => company.quality.deepVerified
+    ? company.quality.deepVerificationStatus === 'approved'
+    : company.quality.deepVerificationStatus !== 'approved'),
+);
+check(
+  'five stars require approved deep verification',
+  companies.every(company => company.quality.stars !== 5
+    || (company.quality.deepVerified === true
+      && company.quality.deepVerificationStatus === 'approved')),
+);
+check(
   'verbose quality fields forbidden',
   companies.every(company => !Object.hasOwn(company.quality || {}, 'checks')
     && !Object.hasOwn(company.quality || {}, 'reasons')
@@ -161,8 +187,9 @@ check('recommendation language forbidden', forbidden.every(term => !JSON.stringi
 
 fs.mkdirSync('artifacts', { recursive: true });
 const report = {
-  version: 'data-contract-v1',
+  version: 'data-contract-v1.1-quality-v3',
   checkedAt: new Date().toISOString(),
+  qualityProfileVersion: QUALITY_PROFILE_VERSION,
   milestone,
   passed: checks.filter(item => item.ok).length,
   total: checks.length,

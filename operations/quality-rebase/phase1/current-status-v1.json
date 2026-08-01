@@ -6,13 +6,13 @@
   "counts": {
     "batchesStarted": 3,
     "companiesQueued": 30,
-    "primaryReviewComplete": 19,
-    "independentReviewReady": 16,
+    "primaryReviewComplete": 20,
+    "independentReviewReady": 17,
     "additionalSourceMappingRequired": 3,
     "sourceIdentityConflictBlocked": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviewInStartedBatches": 11,
+    "remainingPrimaryReviewInStartedBatches": 10,
     "remainingPhase1CompaniesNotStarted": 20
   },
   "batches": [
@@ -24,7 +24,9 @@
       "independentReviewReady": 9,
       "additionalSourceMappingRequired": 1,
       "sourceIdentityConflictBlocked": 0,
-      "deepVerificationApproved": 0
+      "independentReviewComplete": 0,
+      "deepVerificationApproved": 0,
+      "remainingPrimaryReview": 0
     },
     {
       "id": "phase1-batch-02",
@@ -34,43 +36,77 @@
       "independentReviewReady": 7,
       "additionalSourceMappingRequired": 2,
       "sourceIdentityConflictBlocked": 1,
-      "deepVerificationApproved": 0
+      "independentReviewComplete": 0,
+      "deepVerificationApproved": 0,
+      "remainingPrimaryReview": 1
     },
     {
       "id": "phase1-batch-03",
       "orders": "21-30",
       "statusFile": "operations/quality-rebase/phase1/batch03-status-v1.json",
-      "primaryReviewComplete": 0,
-      "independentReviewReady": 0,
+      "primaryReviewComplete": 1,
+      "independentReviewReady": 1,
       "additionalSourceMappingRequired": 0,
       "sourceIdentityConflictBlocked": 0,
-      "deepVerificationApproved": 0
+      "independentReviewComplete": 0,
+      "deepVerificationApproved": 0,
+      "remainingPrimaryReview": 9
     }
   ],
   "blockedOrAdditionalWork": [
     {
       "code": "6113",
       "name": "アマダ",
+      "batchId": "phase1-batch-01",
       "type": "additional_source_mapping",
-      "reason": "2026年3月期本決算説明会資料の正式PDF特定とページ単位マッピングが未完了"
+      "status": "primary_review_complete_independent_review_and_detailed_deck_mapping_pending",
+      "requiredResolution": [
+        "2026年3月期本決算説明会資料の正式PDF特定と全ページ確認",
+        "詳細資料内の財務目標・投資・株主還元のページ単位マッピング",
+        "別確認者による公式リリース・社長メッセージ・詳細資料の原文突合",
+        "公開ページの表示・リンク検査"
+      ]
     },
     {
       "code": "6976",
       "name": "太陽誘電",
-      "type": "official_pdf_link_confirmation",
-      "reason": "会社公式IR上のPDF直リンク固定とTDnet同一資料確認が必要"
+      "batchId": "phase1-batch-02",
+      "type": "additional_source_mapping",
+      "status": "primary_review_complete_independent_review_and_official_pdf_link_confirmation_pending",
+      "requiredResolution": [
+        "PDF全38ページの独立した再確認",
+        "会社公式IR上のPDF直リンク固定とTDnet同一資料であることの確認",
+        "2030年度目標・5年累計キャピタルアロケーション・中長期DOEの別確認者による原文突合",
+        "製品区分変更注記と社会価値KPIの再確認",
+        "公開ページの表示・リンク検査"
+      ]
     },
     {
       "code": "3197",
       "name": "すかいらーくホールディングス",
-      "type": "financial_table_mapping",
-      "reason": "売上高・利益目標表の公式画像または正式PDFを原寸で固定する必要がある"
+      "batchId": "phase1-batch-02",
+      "type": "additional_source_mapping",
+      "status": "primary_review_complete_financial_table_mapping_and_independent_review_pending",
+      "requiredResolution": [
+        "公式計画画像または正式提出PDFの原寸取得と売上高・利益目標表の固定",
+        "公式Web全関連ページと画像証跡の独立した再確認",
+        "2024年度実績・2025年度進捗・2027年度目標の別確認者による原文突合",
+        "M&A上振れの計画数値への包含有無と株主還元方針の再確認",
+        "公開ページの表示・リンク検査"
+      ]
     },
     {
       "code": "1375",
       "name": "ユキグニファクトリー",
+      "batchId": "phase1-batch-02",
       "type": "source_identity_conflict",
-      "reason": "候補の2030計画・2025年11月14日と公式掲載の2028計画が一致しない"
+      "status": "blocked_source_identity_conflict",
+      "requiredResolution": [
+        "会社公式IRニュースまたは適時開示から2025年11月14日付資料の存在を確認する",
+        "2030計画が存在する場合は正式PDF URL・資料名・公表日・ページ数を固定する",
+        "存在しない場合はPhase 1候補を2024年3月期～2028年3月期の正式計画へ訂正する",
+        "候補訂正後に全文抽出・項目別証跡・数値定義検査を最初から実施する"
+      ]
     }
   ],
   "approvalRule": {
@@ -82,10 +118,10 @@
     "approvedOnlyAfterAllChecks": true
   },
   "nextProcessingOrder": [
-    "第三バッチ21～30社の正式資料選定と一次精読",
-    "第一バッチ9社と第二バッチ7社の独立再確認",
-    "追加証跡待ち3社の資料固定",
-    "ユキグニファクトリーの資料同一性解消",
-    "第四・第五バッチ31～50社の開始"
+    "開始済みバッチの正式資料選定と一次精読を完了する",
+    "独立再確認可能企業を別担当レビューへ送る",
+    "追加証跡待ち企業の公式資料・画像・リンクを固定する",
+    "資料同一性競合を公式情報で解消する",
+    "未開始バッチを10社単位で開始する"
   ]
 }

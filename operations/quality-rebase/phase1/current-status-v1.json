@@ -6,13 +6,13 @@
   "counts": {
     "batchesStarted": 3,
     "companiesQueued": 30,
-    "primaryReviewComplete": 23,
-    "independentReviewReady": 19,
+    "primaryReviewComplete": 29,
+    "independentReviewReady": 25,
     "additionalSourceMappingRequired": 4,
     "sourceIdentityConflictBlocked": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviewInStartedBatches": 7,
+    "remainingPrimaryReviewInStartedBatches": 1,
     "remainingPhase1CompaniesNotStarted": 20
   },
   "batches": [
@@ -44,13 +44,13 @@
       "id": "phase1-batch-03",
       "orders": "21-30",
       "statusFile": "operations/quality-rebase/phase1/batch03-status-v1.json",
-      "primaryReviewComplete": 4,
-      "independentReviewReady": 3,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 9,
       "additionalSourceMappingRequired": 1,
       "sourceIdentityConflictBlocked": 0,
       "independentReviewComplete": 0,
       "deepVerificationApproved": 0,
-      "remainingPrimaryReview": 6
+      "remainingPrimaryReview": 0
     }
   ],
   "blockedOrAdditionalWork": [
@@ -132,10 +132,10 @@
     "approvedOnlyAfterAllChecks": true
   },
   "nextProcessingOrder": [
-    "第三バッチの残る6社を順番に一次精読する",
-    "独立再確認可能19社を別担当レビューへ送る",
+    "ユキグニファクトリーの資料同一性競合を公式情報で解消し、第二バッチを完了する",
+    "独立再確認可能25社を別担当レビューへ送る",
     "追加証跡・資料区分待ち4社の公式資料・画像・リンクを固定する",
-    "資料同一性競合1社を公式情報で解消する",
-    "第四・第五バッチを10社単位で開始する"
+    "第四・第五バッチを10社単位で開始する",
+    "別担当確認と公開後検査が完了した企業のみ最高品質へ昇格する"
   ]
 }

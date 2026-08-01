@@ -1,0 +1,29 @@
+{
+  "schemaVersion":"deep-verification-primary-review-v1",
+  "company":{"code":"7218","name":"田中精密工業","market":"Standard","industry":"輸送用機器"},
+  "document":{"title":"長期経営計画 Next35","publishedDate":"2026-05-14","period":"2027年3月期-2036年3月期","officialUrl":"https://www2.jpx.co.jp/disc/72180/140120260514532168.pdf","contentType":"application/pdf","pageCount":17,"documentClassification":"ten_year_long_term_plan_with_2030_step1_targets","formalPlanConfirmed":true,"fullTextExtractionComplete":true,"fullTextHumanReviewComplete":false,"figureScreenshotAttempted":true,"figureScreenshotStatus":"web_cache_miss"},
+  "structuredAnalysis": {
+    "managementDirection":"部品製造・ソリューション・モビリティの3事業を、次世代モビリティ・製造SIer・LTV型サービスへ変革し、新事業・新領域を含むポートフォリオへ再構築する",
+    "strategyThemes":["ICE部品からxEV・熱マネジメント・航空宇宙等へ移行する","自動搬送・電動装置・製造自動化を製造SIerとして拡大する","車両販売中心から整備・中古・レンタカー・生活支援を含むLTV型へ転換する","M&Aで新領域・新事業を創出する","ROICと市場ニーズでポートフォリオを評価する","成長投資を優先しながら配当性向30%へ段階的に高める"],
+    "groupTargets":[
+      {"metric":"営業利益","baseValue":23,"target":25,"unit":"億円","baseYear":"2025年度","targetYear":"2030年度","scope":"連結・STEP1","evidence":"公式PDF p.10"},
+      {"metric":"ROE","baseValue":5,"target":7,"unit":"%","baseYear":"2025年度","targetYear":"2030年度","scope":"連結・STEP1","evidence":"公式PDF p.10"},
+      {"metric":"ROIC","baseValue":5,"target":7,"unit":"%","baseYear":"2025年度","targetYear":"2030年度","scope":"連結・STEP1","evidence":"公式PDF p.10"},
+      {"metric":"営業利益","target":43,"unit":"億円","targetYear":"2035年度","scope":"連結・長期最終段階","evidence":"公式PDF p.10"},
+      {"metric":"ROE","target":10,"unit":"%","targetYear":"2035年度","scope":"連結・長期最終段階","evidence":"公式PDF p.10"},
+      {"metric":"ROIC","target":8,"unit":"%","targetYear":"2035年度","scope":"連結・長期最終段階","evidence":"公式PDF p.10"},
+      {"metric":"新事業・新領域の営業利益構成比","target":30,"targetQualifier":"以上","unit":"%","targetYear":"2035年度","scope":"新事業16%＋部品製造新領域8%＋モビリティ新領域8%の構想","evidence":"公式PDF p.6"},
+      {"metric":"営業キャッシュフロー","target":300,"unit":"億円・5年間累計","targetYear":"2026年度-2030年度","scope":"キャピタルアロケーションIN","evidence":"公式PDF p.11"},
+      {"metric":"成長投資","target":350,"unit":"億円・5年間累計","targetYear":"2026年度-2030年度","scope":"戦略投資250億円＋M&A100億円","evidence":"公式PDF p.11"},
+      {"metric":"戦略投資","target":250,"unit":"億円・5年間累計","targetYear":"2026年度-2030年度","scope":"ROIC向上に向けた投資","evidence":"公式PDF p.11"},
+      {"metric":"M&A","target":100,"unit":"億円・5年間累計","targetYear":"2026年度-2030年度","scope":"新領域・新たな事業の柱","evidence":"公式PDF p.11"},
+      {"metric":"配当性向","target":30,"unit":"%目標水準","targetYear":"長期方針","scope":"段階的株主還元","evidence":"公式PDF p.12"},
+      {"metric":"自己株式取得","target":11,"unit":"億円程度・予定","targetYear":"2027年3月期","scope":"株主還元","evidence":"公式PDF p.12"},
+      {"metric":"年間配当","target":34,"unit":"円/株・予想","targetYear":"2027年3月期","scope":"普通株式配当・図表値","evidence":"公式PDF p.12"}
+    ],
+    "capitalPolicy":{"cashGeneration":"2026-2030年度の営業CF300億円と手元資金等を原資にする","growthInvestment":"戦略投資250億円とM&A100億円の計350億円を優先する","shareholderReturn":"配当性向30%を目標水準として段階的に引き上げ、機動的な自己株式取得を行う。2027年3月期は約11億円の取得を予定する","capitalEfficiency":"ROIC向上を投資判断の軸とし、資本滞留を避け最適資本構成を意識する","evidence":"公式PDF p.11-p.12"},
+    "importantDefinitions":["計画期間は2027年3月期から2036年3月期までの10年間","図表の2025・2030・2035は基準・STEP1・長期段階として扱う","2030年度の25億円・7%・7%と2035年度の43億円・10%・8%を混同しない","売上高437億円は2026年3月期実績で、長期売上高目標は本資料で確認できない","新事業・新領域30%以上は営業利益構成比","営業CF300億円と成長投資350億円の差は手元資金等で補う構造で、株主還元総額は図表原寸再確認まで確定しない","2027年3月期自己株式取得約11億円と過去の1.2億円取得を分離する","配当性向30%は段階的目標で、2027年3月期予想22%程度を最終水準としない" ]
+  },
+  "validation":{"strategyStructured":true,"metricsValidatedPrimaryPass":true,"evidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"longTermAndStep1TargetsSeparated":true,"profitCompositionCaptured":true,"cashAllocationPartialFigureCaptured":true,"shareBuybackPeriodsSeparated":true,"undisclosedRevenueTargetPreserved":true,"figureScreenshotAttempted":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review":{"status":"primary_review_complete_independent_long_term_stage_and_cash_allocation_figure_check_pending","primaryReviewCompletedAt":"2026-08-01","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["PDF全17ページの独立した再確認","p.6・p.10-p.12の図表原寸再取得・再確認","2025・2030・2035各段階の営業利益・ROE・ROICの対応確認","営業CF300億円・成長投資350億円・手元資金等・株主還元の図表全体確認","自己株式取得11億円・年間配当34円・配当性向の年度対応確認","計画開始/終了の会計年度と暦年表示の対応確認","公開ページの表示・PDFリンク検査"]}
+}

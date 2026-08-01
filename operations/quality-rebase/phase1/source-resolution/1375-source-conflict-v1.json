@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "phase1-source-identity-conflict-v1",
+  "company": {
+    "code": "1375",
+    "name": "ユキグニファクトリー",
+    "market": "Prime",
+    "industry": "水産・農林業"
+  },
+  "cohortCandidate": {
+    "document": "中期経営計画2030／2025年11月アップデート",
+    "planPublishedDate": "2025-11-14",
+    "sourceUrl": "https://www.yukiguni-factory.co.jp/ir/middleplan/"
+  },
+  "officialSourceObserved": {
+    "planPage": "https://www.yukiguni-factory.co.jp/ir/middleplan/",
+    "planLibrary": "https://www.yukiguni-factory.co.jp/ir/library/middleplan-data/",
+    "displayedPlanPeriod": "2024年3月期～2028年3月期",
+    "displayedTitle": "中期経営計画",
+    "displayedTargets": [
+      {
+        "metric": "売上収益",
+        "baseValue": 334.4,
+        "forecastValue": 367.7,
+        "target": "420超",
+        "upside": "600前後",
+        "unit": "億円",
+        "baseYear": "2024年3月期実績",
+        "forecastYear": "2025年3月期予想",
+        "targetYear": "2028年3月期計画"
+      },
+      {
+        "metric": "海外売上収益比率",
+        "target": "6～7前後",
+        "upside": "30前後",
+        "unit": "%",
+        "targetYear": "2028年3月期計画"
+      },
+      {
+        "metric": "コアEBITDAマージン",
+        "baseValue": 14.4,
+        "forecastValue": 14.1,
+        "target": "18前後",
+        "unit": "%",
+        "baseYear": "2024年3月期実績",
+        "forecastYear": "2025年3月期予想",
+        "targetYear": "2028年3月期計画"
+      },
+      {
+        "metric": "ROIC",
+        "baseValue": 6.4,
+        "target": "10前後",
+        "unit": "%",
+        "baseYear": "2024年3月期実績",
+        "targetYear": "2028年3月期計画"
+      }
+    ],
+    "strategyThemes": [
+      "国内の事業基盤強化",
+      "全社横断BPRによる事業プロセス合理化",
+      "海外企業のPMIと追加買収候補の探索"
+    ]
+  },
+  "conflicts": [
+    {
+      "field": "documentTitle",
+      "candidate": "中期経営計画2030／2025年11月アップデート",
+      "officialObserved": "中期経営計画（2024年3月期～2028年3月期）",
+      "status": "unresolved"
+    },
+    {
+      "field": "planPublishedDate",
+      "candidate": "2025-11-14",
+      "officialObserved": "公式計画ページ・資料一覧から同日付の2030計画を確認できない",
+      "status": "unresolved"
+    },
+    {
+      "field": "planPeriod",
+      "candidate": "2030年度を含む計画と推定される表記",
+      "officialObserved": "2028年3月期まで",
+      "status": "unresolved"
+    }
+  ],
+  "decision": {
+    "status": "blocked_source_identity_conflict",
+    "primaryReviewComplete": false,
+    "independentReviewReady": false,
+    "deepVerificationApproved": false,
+    "automaticApprovalAllowed": false,
+    "reason": "候補台帳の資料名・公表日・計画期間を会社公式ページで再現できないため、既存の2028計画を2030計画として流用しない"
+  },
+  "requiredResolution": [
+    "会社公式IRニュースまたは適時開示から2025年11月14日付資料の存在を確認する",
+    "2030計画が存在する場合は正式PDF URL・資料名・公表日・ページ数を固定する",
+    "存在しない場合はPhase 1候補を2024年3月期～2028年3月期の正式計画へ訂正する",
+    "候補訂正後に全文抽出・項目別証跡・数値定義検査を最初から実施する"
+  ],
+  "checkedAt": "2026-08-01"
+}

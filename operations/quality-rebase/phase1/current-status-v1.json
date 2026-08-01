@@ -4,16 +4,16 @@
   "targetCompanies": 50,
   "automaticDeepApprovalAllowed": false,
   "counts": {
-    "batchesStarted": 3,
-    "companiesQueued": 30,
-    "primaryReviewComplete": 30,
+    "batchesStarted": 4,
+    "companiesQueued": 40,
+    "primaryReviewComplete": 31,
     "independentReviewReady": 26,
-    "additionalSourceMappingRequired": 4,
+    "additionalSourceMappingRequired": 5,
     "sourceIdentityConflictBlocked": 0,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviewInStartedBatches": 0,
-    "remainingPhase1CompaniesNotStarted": 20
+    "remainingPrimaryReviewInStartedBatches": 9,
+    "remainingPhase1CompaniesNotStarted": 10
   },
   "batches": [
     {
@@ -51,6 +51,18 @@
       "independentReviewComplete": 0,
       "deepVerificationApproved": 0,
       "remainingPrimaryReview": 0
+    },
+    {
+      "id": "phase1-batch-04",
+      "orders": "31-40",
+      "statusFile": "operations/quality-rebase/phase1/batch04-status-v1.json",
+      "primaryReviewComplete": 1,
+      "independentReviewReady": 0,
+      "additionalSourceMappingRequired": 1,
+      "sourceIdentityConflictBlocked": 0,
+      "independentReviewComplete": 0,
+      "deepVerificationApproved": 0,
+      "remainingPrimaryReview": 9
     }
   ],
   "blockedOrAdditionalWork": [
@@ -108,6 +120,20 @@
         "資金調達・充当状況と株主還元ロードマップの再確認",
         "公開ページの表示・リンク検査"
       ]
+    },
+    {
+      "code": "5834",
+      "name": "SBIリーシングサービス",
+      "batchId": "phase1-batch-04",
+      "type": "formal_plan_period_figure_and_shareholder_return_source_mapping",
+      "status": "primary_review_complete_formal_plan_period_figure_and_shareholder_return_source_pending",
+      "requiredResolution": [
+        "PDF p.22-p.24の図表原寸取得と再確認",
+        "固定の中期経営計画期間・最終年度が別の会社公式資料に存在するか確認",
+        "株主還元・ROE・ROIC・資本コストの会社公式方針を確認",
+        "組成金額・販売金額・売上高・経常利益の定義を独立再確認",
+        "公開ページの表示・PDFリンク検査"
+      ]
     }
   ],
   "approvalRule": {
@@ -119,9 +145,9 @@
     "approvedOnlyAfterAllChecks": true
   },
   "nextProcessingOrder": [
-    "第四バッチ31-40社を順番に一次精読する",
+    "第四バッチ32-40番を順番に一次精読する",
     "独立再確認可能26社を別担当レビューへ送る",
-    "追加証跡・資料区分待ち4社の公式資料・画像・リンクを固定する",
+    "追加証跡・資料区分待ち5社の公式資料・画像・リンクを固定する",
     "第五バッチ41-50社を順番に一次精読する",
     "別担当確認と公開後検査が完了した企業のみ最高品質へ昇格する"
   ]

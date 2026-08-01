@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4401",
+    "name": "ADEKA"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4401-primary-review-v1.json",
+  "source": {
+    "title": "ADEKAグループ 中期経営計画『ADX 2026』（2024-2026年度）",
+    "officialUrl": "https://www.adeka.co.jp/ir/library/pdf/240530_ADX2026.pdf",
+    "pdfSha256": "ba88eca7dc6b6399ebe7cac51b4fa867cd20fb0d33d1ab4899b8139cef012cf3",
+    "pageCount": 42
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "公式ドメイン、会社名、証券コード4401、計画名称ADX 2026、公開日、PDFハッシュを独立に再確認する。",
+      "expectedEvidencePages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "計画期間が2024年度から2026年度までの3カ年であり、ADEKA VISION 2030のセカンドステージであることを確認する。",
+      "expectedEvidencePages": [1, 8],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "稼ぐ力の強化、環境貢献製品拡大・GHG削減、経営基盤強靭化の3基本戦略を図表と本文で再確認する。",
+      "expectedEvidencePages": [9, 12],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2026年度の売上高5,000億円、営業利益530億円、ROE11.0%、ROIC10.5%を再確認し、2023年度実績と混同していないことを確認する。",
+      "expectedEvidencePages": [5, 10, 13],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "3カ年設備投資額750億円と、半導体材料関連の個別投資額について対象、期間、重複関係を図表レベルで確認する。",
+      "expectedEvidencePages": [10, 14],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向40%以上の方針と安定配当維持の注記を再確認する。",
+      "expectedEvidencePages": [10],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_targets",
+      "description": "環境貢献製品売上高1,150億円、GHG排出量199千t-CO2e、女性管理職比率6%以上の年度、比較基準、連結・単体範囲を確認する。",
+      "expectedEvidencePages": [10],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後にリンク、表示、検索、数値単位、年度、改行崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

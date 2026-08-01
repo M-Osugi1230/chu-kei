@@ -1,0 +1,48 @@
+name: Phase 1 Batch 02 Review Gate
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase1/batch02-status-v1.json'
+      - 'operations/quality-rebase/phase1/reviews/**'
+      - 'operations/quality-rebase/phase1/source-resolution/**'
+      - 'scripts/validate_phase1_batch_reviews_v2.mjs'
+      - '.github/workflows/phase1-batch02-review-gate.yml'
+  pull_request:
+    paths:
+      - 'operations/quality-rebase/phase1/batch02-status-v1.json'
+      - 'operations/quality-rebase/phase1/reviews/**'
+      - 'operations/quality-rebase/phase1/source-resolution/**'
+      - 'scripts/validate_phase1_batch_reviews_v2.mjs'
+      - '.github/workflows/phase1-batch02-review-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-batch02:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate Phase 1 batch 02
+        run: node scripts/validate_phase1_batch_reviews_v2.mjs operations/quality-rebase/phase1/batch02-status-v1.json
+
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-batch02-review-validation
+          if-no-files-found: error
+          retention-days: 90
+          path: artifacts/quality-rebase/phase1-batch-02-review-validation-v2.json

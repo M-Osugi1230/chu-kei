@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase1-current-status-v1",
+  "updatedAt": "2026-08-01",
+  "targetCompanies": 50,
+  "automaticDeepApprovalAllowed": false,
+  "counts": {
+    "batchesStarted": 3,
+    "companiesQueued": 30,
+    "primaryReviewComplete": 19,
+    "independentReviewReady": 16,
+    "additionalSourceMappingRequired": 3,
+    "sourceIdentityConflictBlocked": 1,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0,
+    "remainingPrimaryReviewInStartedBatches": 11,
+    "remainingPhase1CompaniesNotStarted": 20
+  },
+  "batches": [
+    {
+      "id": "phase1-batch-01",
+      "orders": "1-10",
+      "statusFile": "operations/quality-rebase/phase1/batch01-status-v1.json",
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 9,
+      "additionalSourceMappingRequired": 1,
+      "sourceIdentityConflictBlocked": 0,
+      "deepVerificationApproved": 0
+    },
+    {
+      "id": "phase1-batch-02",
+      "orders": "11-20",
+      "statusFile": "operations/quality-rebase/phase1/batch02-status-v1.json",
+      "primaryReviewComplete": 9,
+      "independentReviewReady": 7,
+      "additionalSourceMappingRequired": 2,
+      "sourceIdentityConflictBlocked": 1,
+      "deepVerificationApproved": 0
+    },
+    {
+      "id": "phase1-batch-03",
+      "orders": "21-30",
+      "statusFile": "operations/quality-rebase/phase1/batch03-status-v1.json",
+      "primaryReviewComplete": 0,
+      "independentReviewReady": 0,
+      "additionalSourceMappingRequired": 0,
+      "sourceIdentityConflictBlocked": 0,
+      "deepVerificationApproved": 0
+    }
+  ],
+  "blockedOrAdditionalWork": [
+    {
+      "code": "6113",
+      "name": "アマダ",
+      "type": "additional_source_mapping",
+      "reason": "2026年3月期本決算説明会資料の正式PDF特定とページ単位マッピングが未完了"
+    },
+    {
+      "code": "6976",
+      "name": "太陽誘電",
+      "type": "official_pdf_link_confirmation",
+      "reason": "会社公式IR上のPDF直リンク固定とTDnet同一資料確認が必要"
+    },
+    {
+      "code": "3197",
+      "name": "すかいらーくホールディングス",
+      "type": "financial_table_mapping",
+      "reason": "売上高・利益目標表の公式画像または正式PDFを原寸で固定する必要がある"
+    },
+    {
+      "code": "1375",
+      "name": "ユキグニファクトリー",
+      "type": "source_identity_conflict",
+      "reason": "候補の2030計画・2025年11月14日と公式掲載の2028計画が一致しない"
+    }
+  ],
+  "approvalRule": {
+    "primaryReviewDoesNotEqualApproval": true,
+    "minimumDistinctReviewers": 2,
+    "allFieldLevelEvidenceRequired": true,
+    "yearUnitScopeValidationRequired": true,
+    "postPublicationLinkAndRenderCheckRequired": true,
+    "approvedOnlyAfterAllChecks": true
+  },
+  "nextProcessingOrder": [
+    "第三バッチ21～30社の正式資料選定と一次精読",
+    "第一バッチ9社と第二バッチ7社の独立再確認",
+    "追加証跡待ち3社の資料固定",
+    "ユキグニファクトリーの資料同一性解消",
+    "第四・第五バッチ31～50社の開始"
+  ]
+}

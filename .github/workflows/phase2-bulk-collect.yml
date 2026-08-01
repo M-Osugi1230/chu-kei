@@ -66,7 +66,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: pip
       - name: Install collection dependencies
         run: pip install requests beautifulsoup4 pypdf
       - name: Collect ten companies
@@ -82,12 +81,21 @@ jobs:
               if '"deepVerificationApproved": true' in text or '"automaticApprovalAllowed": true' in text:
                   raise SystemExit(f'unsafe approval flag: {path}')
           PY
+      - name: Locate wave output
+        id: output
+        shell: bash
+        run: |
+          batch_dir="batch-$(printf '%02d' '${{ needs.resolve.outputs.batch }}')"
+          wave_dir="wave-$(printf '%02d' '${{ matrix.wave }}')"
+          path="operations/quality-rebase/phase2/bulk-collection/$batch_dir/$wave_dir"
+          test -f "$path/summary.json"
+          echo "path=$path" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@v4
         with:
           name: phase2-batch-${{ needs.resolve.outputs.batch }}-wave-${{ matrix.wave }}
           if-no-files-found: error
           retention-days: 14
-          path: operations/quality-rebase/phase2/bulk-collection/batch-${{ format('{0:00}', needs.resolve.outputs.batch) }}/wave-${{ format('{0:00}', matrix.wave) }}/
+          path: ${{ steps.output.outputs.path }}/
 
   aggregate:
     needs: [resolve, collect]
@@ -102,21 +110,26 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           pattern: phase2-batch-${{ needs.resolve.outputs.batch }}-wave-*
-          merge-multiple: true
+          merge-multiple: false
           path: /tmp/phase2-results
       - name: Merge available results
         shell: bash
         run: |
           target="operations/quality-rebase/phase2/bulk-collection/batch-$(printf '%02d' '${{ needs.resolve.outputs.batch }}')"
           mkdir -p "$target"
-          find /tmp/phase2-results -mindepth 1 -maxdepth 1 -type d -name 'wave-*' -exec cp -R {} "$target/" \;
+          for artifact in /tmp/phase2-results/phase2-batch-${{ needs.resolve.outputs.batch }}-wave-*; do
+            [ -d "$artifact" ] || continue
+            wave="${artifact##*-wave-}"
+            destination="$target/wave-$(printf '%02d' "$wave")"
+            rm -rf "$destination"
+            mkdir -p "$destination"
+            cp -R "$artifact"/. "$destination"/
+          done
           python - <<'PY'
           import json, pathlib
           batch = int('${{ needs.resolve.outputs.batch }}')
           root = pathlib.Path(f'operations/quality-rebase/phase2/bulk-collection/batch-{batch:02d}')
-          summaries = []
-          for path in sorted(root.glob('wave-*/summary.json')):
-              summaries.append(json.loads(path.read_text()))
+          summaries = [json.loads(path.read_text()) for path in sorted(root.glob('wave-*/summary.json'))]
           counts = {}
           companies = []
           for summary in summaries:
@@ -137,6 +150,8 @@ jobs:
           }
           (root / 'summary.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
           print(json.dumps(report, ensure_ascii=False, indent=2))
+          if len(companies) != 50:
+              print(f'warning: only {len(companies)} companies collected', flush=True)
           PY
       - name: Commit collection artifacts
         shell: bash

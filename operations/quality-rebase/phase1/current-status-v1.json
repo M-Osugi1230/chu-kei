@@ -6,13 +6,13 @@
   "counts": {
     "batchesStarted": 4,
     "companiesQueued": 40,
-    "primaryReviewComplete": 31,
-    "independentReviewReady": 26,
+    "primaryReviewComplete": 33,
+    "independentReviewReady": 28,
     "additionalSourceMappingRequired": 5,
     "sourceIdentityConflictBlocked": 0,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviewInStartedBatches": 9,
+    "remainingPrimaryReviewInStartedBatches": 7,
     "remainingPhase1CompaniesNotStarted": 10
   },
   "batches": [
@@ -56,13 +56,13 @@
       "id": "phase1-batch-04",
       "orders": "31-40",
       "statusFile": "operations/quality-rebase/phase1/batch04-status-v1.json",
-      "primaryReviewComplete": 1,
-      "independentReviewReady": 0,
+      "primaryReviewComplete": 3,
+      "independentReviewReady": 2,
       "additionalSourceMappingRequired": 1,
       "sourceIdentityConflictBlocked": 0,
       "independentReviewComplete": 0,
       "deepVerificationApproved": 0,
-      "remainingPrimaryReview": 9
+      "remainingPrimaryReview": 7
     }
   ],
   "blockedOrAdditionalWork": [
@@ -145,8 +145,8 @@
     "approvedOnlyAfterAllChecks": true
   },
   "nextProcessingOrder": [
-    "第四バッチ32-40番を順番に一次精読する",
-    "独立再確認可能26社を別担当レビューへ送る",
+    "第四バッチ34-40番を順番に一次精読する",
+    "独立再確認可能28社を別担当レビューへ送る",
     "追加証跡・資料区分待ち5社の公式資料・画像・リンクを固定する",
     "第五バッチ41-50社を順番に一次精読する",
     "別担当確認と公開後検査が完了した企業のみ最高品質へ昇格する"

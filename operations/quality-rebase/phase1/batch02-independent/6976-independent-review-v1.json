@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "deep-verification-independent-review-v1",
+  "company": {
+    "code": "6976",
+    "name": "太陽誘電",
+    "order": 11
+  },
+  "sourceRecord": {
+    "type": "primary_review",
+    "file": "operations/quality-rebase/phase1/reviews/6976-primary-review-v1.json",
+    "sha256": "259766e1867b8b31a21c31b0391b7d9dcdb4316ed0823506c6a023be19f53fdd"
+  },
+  "sourceSet": {
+    "officialUrl": "https://www.yuden.co.jp/jp/ir/library/fr_presentation.html",
+    "supplementalOfficialUrl": null,
+    "pageCount": 38,
+    "title": "中期経営計画2030",
+    "publishedDate": "2026-05-08"
+  },
+  "queue": {
+    "status": "blocked_additional_source_mapping",
+    "blockedReasons": [
+      "PDF全38ページの独立した再確認",
+      "会社公式IR上のPDF直リンク固定とTDnet同一資料であることの確認",
+      "公開ページの表示・リンク検査"
+    ],
+    "priority": 11
+  },
+  "reviewChecks": {
+    "companyIdentityConfirmed": false,
+    "formalPlanConfirmed": false,
+    "publicationDateConfirmed": false,
+    "fullTextReviewedIndependently": false,
+    "strategyMatchesSource": false,
+    "allTargetsMatchSource": false,
+    "yearUnitScopeValidated": false,
+    "capitalPolicyMatchesSource": false,
+    "fieldLevelEvidenceValidated": false,
+    "forecastActualSeparationValidated": false,
+    "templateTextAbsent": false,
+    "linkReachabilityChecked": false,
+    "renderChecked": false
+  },
+  "discrepancies": [],
+  "reviewer": {
+    "reviewerId": null,
+    "reviewerType": null,
+    "independentFromPrimaryReview": null,
+    "reviewedAt": null
+  },
+  "decision": {
+    "status": "pending",
+    "approved": false,
+    "changesRequested": false,
+    "reason": null
+  },
+  "policy": {
+    "automaticApprovalAllowed": false,
+    "approvalRequiresAllChecksTrue": true,
+    "minimumDistinctReviewersAcrossPrimaryAndIndependent": 2,
+    "deepVerificationApproved": false
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "4043",
+    "name": "トクヤマ",
+    "market": "Prime",
+    "industry": "化学"
+  },
+  "document": {
+    "title": "中期経営計画2030",
+    "publishedDate": "2026-05-29",
+    "period": "2026年度-2030年度",
+    "officialUrl": "https://www.tokuyama.co.jp/ir/pdf/2026mar_managementplan.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 36,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "電子・健康領域を中心とする事業ポートフォリオへの転換と資本効率の改善",
+    "strategyThemes": [
+      "電子先端材料の半導体関連需要を取り込む増産・研究開発投資",
+      "ライフサイエンスのオーガニック成長とM&Aによる領域拡大",
+      "化成品の合理化による収益水準維持",
+      "セメント事業の縮小・再編",
+      "GHG排出量削減とカーボンニュートラル対応"
+    ],
+    "groupTargets": [
+      {
+        "metric": "売上高",
+        "baseValue": 3494,
+        "target": 4075,
+        "unit": "億円",
+        "baseYear": "2025年度実績",
+        "targetYear": "2030年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.26（資料内ページ24）"
+      },
+      {
+        "metric": "営業利益",
+        "baseValue": 370,
+        "target": 570,
+        "unit": "億円",
+        "baseYear": "2025年度実績",
+        "targetYear": "2030年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.26（資料内ページ24）"
+      },
+      {
+        "metric": "売上高営業利益率",
+        "baseValue": 10.6,
+        "target": 14.0,
+        "unit": "%",
+        "baseYear": "2025年度実績",
+        "targetYear": "2030年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.26（資料内ページ24）"
+      },
+      {
+        "metric": "EPS",
+        "baseValue": 309,
+        "target": 551,
+        "unit": "円",
+        "baseYear": "2025年度実績",
+        "targetYear": "2030年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.26（資料内ページ24）"
+      },
+      {
+        "metric": "ROE",
+        "baseValue": 8.2,
+        "target": 10.6,
+        "unit": "%",
+        "baseYear": "2025年度実績",
+        "targetYear": "2030年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.25・p.26"
+      },
+      {
+        "metric": "ROIC",
+        "baseValue": 6.8,
+        "target": 9.1,
+        "unit": "%",
+        "baseYear": "2025年度実績",
+        "targetYear": "2030年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.25・p.26"
+      },
+      {
+        "metric": "DOE",
+        "baseValue": 3.3,
+        "target": 4.0,
+        "unit": "%",
+        "baseYear": "2025年度実績",
+        "targetYear": "2030年度",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.24・p.26"
+      }
+    ],
+    "capitalPolicy": {
+      "allocation": [
+        "事業投資 約54%",
+        "品質維持向上 約12%",
+        "環境対応 約8%",
+        "株主還元 約14%",
+        "長期借入金返済・財務健全性 約12%"
+      ],
+      "importantQualification": "原燃料調達・コストの不確実性から2026年度業績予想の算定が困難なため、キャッシュ配分額は非表示で構成比を目安として提示。業績予想算定後に再配分予定",
+      "shareholderReturn": "2030年度DOE4.0%を目標に、安定かつ継続的な配当を実施",
+      "evidence": "公式PDF p.19・p.24"
+    },
+    "segmentEvidence": {
+      "evidence": "公式PDF p.20",
+      "notes": "電子先端材料・ライフサイエンス・化成品・環境事業・セメント等の売上高、営業利益、利益率、CAGRを確認"
+    }
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalAllocationQualificationCaptured": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全36ページの独立した再確認",
+      "主要7指標と配分構成比の別確認者による原文突合",
+      "キャッシュ配分額が未開示である点の公開表示確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

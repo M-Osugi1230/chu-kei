@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 9,
+  "wave": 1,
+  "orders": "401-410",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "collection_failed": 2,
+    "collection_complete_primary_human_review_pending": 8
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 401,
+      "code": "2229",
+      "name": "カルビー",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 402,
+      "code": "2342",
+      "name": "トランスジェニックグループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/23420/140120250625598787.pdf",
+      "pageCount": 47,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 403,
+      "code": "2461",
+      "name": "ファンコミュニケーションズ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/24610/140120260206550877.pdf",
+      "pageCount": 35,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 404,
+      "code": "248A",
+      "name": "キッズスター",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/248A0/140120260325588314.pdf",
+      "pageCount": 53,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 405,
+      "code": "265A",
+      "name": "Hmcomm",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/265A0/140120260330592649.pdf",
+      "pageCount": 61,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 406,
+      "code": "2678",
+      "name": "アスクル",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 407,
+      "code": "277A",
+      "name": "グロービング",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/277A0/140120250730524189.pdf",
+      "pageCount": 56,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 408,
+      "code": "2813",
+      "name": "和弘食品",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/28130/140120260310578824.pdf",
+      "pageCount": 20,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 409,
+      "code": "298A",
+      "name": "GVA TECH",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/298A0/140120260331594633.pdf",
+      "pageCount": 62,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 410,
+      "code": "3040",
+      "name": "ソリトンシステムズ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/30400/140120260319585240.pdf",
+      "pageCount": 23,
+      "documentTypeCandidate": "plan_revision_or_update"
+    }
+  ]
+}

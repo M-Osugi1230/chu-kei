@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 168,
+  "company": {
+    "code": "3401",
+    "name": "帝人",
+    "market": "Prime",
+    "industry": "繊維製品",
+    "document": "帝人グループ 中期経営計画 2026-2028",
+    "planPublishedDate": "2026-05-11",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/34010/140120260508520675.pdf",
+    "phaseScore": 111,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "generic_page_evidence",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.272,
+  "requiresManualSourceRecovery": true
+}

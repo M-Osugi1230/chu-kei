@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 401,
+  "company": {
+    "code": "2229",
+    "name": "カルビー",
+    "market": "Prime",
+    "industry": "食料品",
+    "document": "カルビーグループ成長戦略「Accelerate the Future」策定のお知らせ",
+    "planPublishedDate": "2026-03-27",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/22290/140120260327590826.pdf",
+    "phaseScore": 106,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.602,
+  "requiresManualSourceRecovery": true
+}

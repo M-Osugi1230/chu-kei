@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 360,
+  "company": {
+    "code": "6632",
+    "name": "JVCケンウッド",
+    "market": "Prime",
+    "industry": "電気機器",
+    "document": "新中期経営計画「VISION2030」の策定に関するお知らせ",
+    "planPublishedDate": "2026-05-01",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/66320/140120260501516686.pdf",
+    "phaseScore": 107,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.218,
+  "requiresManualSourceRecovery": true
+}

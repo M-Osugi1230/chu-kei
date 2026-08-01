@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 223,
+  "company": {
+    "code": "6558",
+    "name": "クックビズ",
+    "market": "Growth",
+    "industry": "サービス業",
+    "document": "事業計画及び成長可能性に関する事項",
+    "planPublishedDate": "2026-02-26",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/65580/140120260226569402.pdf",
+    "phaseScore": 110,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "generic_page_evidence",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.437,
+  "requiresManualSourceRecovery": true
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 311,
+  "company": {
+    "code": "2359",
+    "name": "コア",
+    "market": "Prime",
+    "industry": "情報・通信業",
+    "document": "第15次コアグループ中期経営計画(2027年3月期~2029年3月期)策定に関するお知らせ",
+    "planPublishedDate": "2026-05-01",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/23590/140120260501515963.pdf",
+    "phaseScore": 107,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "generic_page_evidence",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.368,
+  "requiresManualSourceRecovery": true
+}

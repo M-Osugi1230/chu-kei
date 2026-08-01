@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 255,
+  "company": {
+    "code": "3692",
+    "name": "FFRIセキュリティ",
+    "market": "Growth",
+    "industry": "情報・通信業",
+    "document": "事業計画及び成長可能性に関する事項",
+    "planPublishedDate": "2026-06-29",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/36920/140120260629582844.pdf",
+    "phaseScore": 108,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "generic_page_evidence",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.478,
+  "requiresManualSourceRecovery": true
+}

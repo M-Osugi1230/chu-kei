@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 3,
+  "wave": 2,
+  "orders": "111-120",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "pdf_not_found": 2,
+    "collection_complete_primary_human_review_pending": 3,
+    "collection_failed": 5
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 111,
+      "code": "4013",
+      "name": "勤次郎",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 112,
+      "code": "6196",
+      "name": "ストライクグループ",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "management_policy_or_strategy"
+    },
+    {
+      "order": 113,
+      "code": "6302",
+      "name": "住友重機械工業",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/2026management_plan.pdf",
+      "pageCount": 25,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 114,
+      "code": "7752",
+      "name": "リコー",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 115,
+      "code": "8591",
+      "name": "オリックス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 116,
+      "code": "8802",
+      "name": "三菱地所",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.mec.co.jp/assets/img/plan2030/plan200124.pdf",
+      "pageCount": 51,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 117,
+      "code": "9699",
+      "name": "ニシオホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 118,
+      "code": "8058",
+      "name": "三菱商事",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 119,
+      "code": "8876",
+      "name": "リログループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.relo.jp/ir/library/docs/20250509_J.pdf",
+      "pageCount": 38,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 120,
+      "code": "285A",
+      "name": "キオクシアホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "quality-rebase-phase1-batch-status-v1",
+  "batch": {
+    "id": "phase1-batch-03",
+    "orders": "21-30",
+    "targetCompanies": 10,
+    "updatedAt": "2026-08-01",
+    "automaticDeepApprovalAllowed": false
+  },
+  "counts": {
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "additionalSourceMappingRequired": 0,
+    "sourceIdentityConflictBlocked": 0,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0,
+    "remainingPrimaryReview": 10
+  },
+  "companies": [
+    {
+      "order": 21,
+      "code": "1332",
+      "name": "ニッスイ",
+      "market": "Prime",
+      "industry": "水産・農林業",
+      "document": "中期経営計画 GOOD FOODS Recipe2／2026年3月期決算",
+      "planPublishedDate": "2025-04-09",
+      "sourceUrl": "https://www.nissui.co.jp/ir/ir_library/qa/2025_mid-term/index.html",
+      "status": "official_plan_review_pending"
+    },
+    {
+      "order": 22,
+      "code": "1417",
+      "name": "ミライト・ワン",
+      "market": "Prime",
+      "industry": "建設業",
+      "document": "第5次中期経営計画 2022-2026／2026年度計画更新",
+      "planPublishedDate": "2026-05-28",
+      "sourceUrl": "https://www.mirait-one.com/corporate/management/?imgsize=2",
+      "status": "formal_plan_and_progress_update_separation_pending"
+    },
+    {
+      "order": 23,
+      "code": "3232",
+      "name": "三重交通グループホールディングス",
+      "market": "Prime",
+      "industry": "不動産業",
+      "document": "中期経営計画 2023-2026／数値計画見直し",
+      "planPublishedDate": "2025-05-08",
+      "sourceUrl": "https://holdings.sanco.co.jp/ir/management/plan/",
+      "status": "formal_plan_and_revision_review_pending"
+    },
+    {
+      "order": 24,
+      "code": "4503",
+      "name": "アステラス製薬",
+      "market": "Prime",
+      "industry": "医薬品",
+      "document": "経営計画2026",
+      "planPublishedDate": "2026-05-26",
+      "sourceUrl": "https://www.astellas.com/jp/about/corporate-strategic-plan",
+      "status": "official_pdf_identification_pending"
+    },
+    {
+      "order": 25,
+      "code": "5901",
+      "name": "東洋製罐グループホールディングス",
+      "market": "Prime",
+      "industry": "金属製品",
+      "document": "中期経営計画2030 Open Up!2030",
+      "planPublishedDate": "2026-05-14",
+      "sourceUrl": "https://www.tskg-hd.com/ir/policy/plan/",
+      "status": "official_pdf_identification_pending"
+    },
+    {
+      "order": 26,
+      "code": "5929",
+      "name": "三和ホールディングス",
+      "market": "Prime",
+      "industry": "金属製品",
+      "document": "中期経営計画2027 三和グローバルビジョン2030 Phase3",
+      "planPublishedDate": "2025-05-14",
+      "sourceUrl": "https://www.sanwa-hldgs.co.jp/ir/management/midterm_plan.html",
+      "status": "official_pdf_identification_pending"
+    },
+    {
+      "order": 27,
+      "code": "1447",
+      "name": "SAAFホールディングス",
+      "market": "Growth",
+      "industry": "建設業",
+      "document": "事業計画及び成長可能性に関する事項／中期経営計画 MTG2028",
+      "planPublishedDate": "2026-06-30",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/14470/140120260630585085.pdf",
+      "status": "primary_review_pending"
+    },
+    {
+      "order": 28,
+      "code": "2586",
+      "name": "フルッタフルッタ",
+      "market": "Growth",
+      "industry": "食料品",
+      "document": "事業計画及び成長可能性に関する事項",
+      "planPublishedDate": "2026-06-30",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/25860/140120260630584357.pdf",
+      "status": "formal_plan_relevance_and_primary_review_pending"
+    },
+    {
+      "order": 29,
+      "code": "3490",
+      "name": "アズ企画設計",
+      "market": "Standard",
+      "industry": "不動産業",
+      "document": "新中期経営計画について／新株予約権発行に関する補足資料",
+      "planPublishedDate": "2026-07-08",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/34900/140120260708589852.pdf",
+      "status": "formal_plan_and_financing_document_separation_pending"
+    },
+    {
+      "order": 30,
+      "code": "5210",
+      "name": "日本山村硝子",
+      "market": "Standard",
+      "industry": "ガラス・土石製品",
+      "document": "2026年3月期 決算・新中期経営計画説明会",
+      "planPublishedDate": "2026-06-09",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/52100/140120260608565790.pdf",
+      "status": "financial_results_and_formal_plan_separation_pending"
+    }
+  ],
+  "approvalGate": {
+    "minimumIndependentReviewers": 2,
+    "requiredChecks": [
+      "formalPlanConfirmed",
+      "fullTextReviewed",
+      "strategyStructured",
+      "metricsValidated",
+      "evidenceLinked",
+      "independentDoubleCheck",
+      "postPublicationLinkAndRenderCheck"
+    ],
+    "rule": "決算資料、計画更新、資金調達資料、事業計画資料を正式中計と混同せず、資料種別と対象年度を確定してから一次レビューへ進める。"
+  }
+}

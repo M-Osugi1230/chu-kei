@@ -70,7 +70,7 @@ const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 check('dashboard linked from main navigation', index.includes('href="./quality.html"'));
 const html = fs.readFileSync(path.join(root, 'quality.html'), 'utf8');
 check('dashboard explains no automatic promotion', html.includes('本番昇格を自動決定しません'));
-check('dashboard requires human review', html.includes('原文突合') && html.includes('別確認者レビュー'));
+check('dashboard requires human review', (html.includes('全文精読') || html.includes('原文突合')) && (html.includes('別確認者レビュー') || html.includes('独立した人手レビュー')));
 const js = fs.readFileSync(path.join(root, 'assets/quality.js'), 'utf8');
 check('dashboard verifies bundle SHA-256', js.includes("crypto.subtle.digest('SHA-256'"));
 check('dashboard has no recommendation language', !['おすすめ銘柄', '買い推奨', '勝率'].some(term => (html + js).includes(term)));

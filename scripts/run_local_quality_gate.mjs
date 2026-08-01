@@ -42,7 +42,10 @@ function run(name, command) {
     cwd: process.cwd(),
     encoding: 'utf8',
     stdio: 'pipe',
-    env: process.env,
+    env: {
+      ...process.env,
+      QUALITY_AS_OF_DATE: process.env.QUALITY_AS_OF_DATE || new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date()),
+    },
   });
   const passed = result.status === 0;
   results.push({

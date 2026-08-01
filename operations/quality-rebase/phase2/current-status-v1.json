@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "quality-rebase-phase2-current-status-v2",
-  "updatedAt": "2026-08-01T23:23:00+09:00",
+  "schemaVersion": "quality-rebase-phase2-current-status-v3",
+  "updatedAt": "2026-08-02T01:21:23+09:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -13,17 +13,31 @@
     "batchesCollected": 9,
     "companiesCollected": 450,
     "uniqueCompaniesCollected": 450,
-    "collectionCompletePrimaryHumanReviewPending": 384,
-    "collectionFailed": 52,
-    "pdfNotFound": 14,
-    "sourceRelevanceAuditRequired": 384,
     "deepVerificationApproved": 0,
     "sourceFile": "operations/quality-rebase/phase2/bulk-collection/full-rollout-summary.json"
+  },
+  "sourceRelevanceAudit": {
+    "status": "complete",
+    "auditedCompanies": 450,
+    "uniqueCompanies": 450,
+    "primaryReviewCandidates": 313,
+    "humanRelevanceReviewRequired": 11,
+    "likelyWrongDocument": 60,
+    "pdfIdentificationRequired": 14,
+    "sourceRecoveryRequired": 52,
+    "knownFalsePositiveRegressionCodes": ["4063"],
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": 0,
+    "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
     "sourceIdentityConfirmed": 2,
     "formalPlanConfirmed": 2,
     "primaryReviewComplete": 2,
+    "primaryReviewCandidatesAvailable": 313,
+    "primaryReviewWaveAssigned": 10,
+    "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave01-v1.json",
     "independentReviewReady": 1,
     "additionalSourceMappingRequired": 1,
     "independentReviewComplete": 0,
@@ -54,15 +68,45 @@
       "name": "信越化学工業",
       "finding": "collector_selected_irrelevant_pdf",
       "selectedPdf": "休日のお知らせ.pdf",
-      "requiredAction": "正式な経営方針または中期計画資料を再特定する"
+      "resolutionFile": "operations/quality-rebase/phase2/source-repairs/4063-source-resolution-v1.json",
+      "status": "wrong_document_isolated_replacement_source_human_review_pending"
+    }
+  ],
+  "activeWork": [
+    {
+      "workstream": "primary_review_wave01",
+      "companies": 10,
+      "status": "assigned",
+      "completionCount": 0,
+      "file": "operations/quality-rebase/phase2/primary-review-wave01-v1.json"
+    },
+    {
+      "workstream": "likely_wrong_document_repair",
+      "companies": 60,
+      "status": "queued"
+    },
+    {
+      "workstream": "source_recovery",
+      "companies": 52,
+      "status": "queued"
+    },
+    {
+      "workstream": "pdf_identification",
+      "companies": 14,
+      "status": "queued"
+    },
+    {
+      "workstream": "human_relevance_review",
+      "companies": 11,
+      "status": "queued"
     }
   ],
   "nextProcessingOrder": [
-    "384社の資料関連性監査を実行し、正式資料候補・低信頼候補・誤候補に再分類する",
-    "52社の収集失敗をHTTP種別・アクセス拒否・容量超過・解析失敗に分解する",
-    "14社のPDF未特定についてHTML本文を一次証跡として確認し、正式PDFまたは公式ページを再探索する",
-    "高信頼候補から50社単位で一次レビュー作業票を生成する",
-    "一次レビュー完了企業だけを独立再確認キューへ移す"
+    "第1ウェーブ10社について資料区分・全文・数値・資本政策・項目別証跡を確認する",
+    "60社の誤資料候補を負のシグナル別に分解し、公式IRページから代替資料を再特定する",
+    "52社の収集失敗をHTTP種別・アクセス拒否・容量超過・解析失敗に分解して再取得する",
+    "14社のPDF未特定について公式HTMLを一次証跡として確認し、正式PDFまたは公式ページを再探索する",
+    "一次レビュー完了企業のみ独立再確認キューへ移す"
   ],
   "approvalRule": {
     "primaryReviewDoesNotEqualApproval": true,

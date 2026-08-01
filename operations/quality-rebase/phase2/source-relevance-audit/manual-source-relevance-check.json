@@ -1,0 +1,668 @@
+{
+  "schemaVersion": "phase2-source-relevance-queue-v1",
+  "queue": "manual-source-relevance-check",
+  "count": 19,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 67,
+      "code": "4911",
+      "name": "資生堂",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://corp.shiseido.com/jp/news/detail.html?n=00000000004093",
+      "resolvedPdfUrl": "https://corp.shiseido.com/jp/newsimg/4093_q3u08_jp.pdf",
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 57,
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present",
+        "multiple_financial_metric_terms",
+        "strategy_terms_present",
+        "multiple_year_references"
+      ],
+      "blockers": [
+        "very_short_without_strong_plan_terms"
+      ],
+      "signals": {
+        "strongPlanHits": 0,
+        "planHits": 6,
+        "metricHits": 22,
+        "strategyHits": 1,
+        "yearHits": 2,
+        "negativeHits": 0,
+        "severeNegativeHits": 0,
+        "pageCount": 2,
+        "textCharacters": 3193
+      }
+    },
+    {
+      "order": 74,
+      "code": "1377",
+      "name": "サカタのタネ",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://corporate.sakataseed.co.jp/news/2026/20260713.html",
+      "resolvedPdfUrl": "https://corporate.sakataseed.co.jp/news/2026/lum8rp00000002qe-att/20260713_sakata_release.pdf",
+      "documentTypeCandidate": "formal_management_plan",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 57,
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present",
+        "multiple_financial_metric_terms",
+        "strategy_terms_present",
+        "multiple_year_references"
+      ],
+      "blockers": [
+        "very_short_without_strong_plan_terms"
+      ],
+      "signals": {
+        "strongPlanHits": 0,
+        "planHits": 6,
+        "metricHits": 21,
+        "strategyHits": 1,
+        "yearHits": 5,
+        "negativeHits": 0,
+        "severeNegativeHits": 0,
+        "pageCount": 2,
+        "textCharacters": 1369
+      }
+    },
+    {
+      "order": 91,
+      "code": "1419",
+      "name": "タマホーム",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www.tamahome.jp/company/ir/release.html",
+      "resolvedPdfUrl": "https://www.tamahome.jp/company/ir/upload_file/tdnrelease/1419_20170714431559_P01_.pdf",
+      "documentTypeCandidate": "formal_management_plan",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 30,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present"
+      ],
+      "blockers": [
+        "insufficient_extracted_text"
+      ],
+      "signals": {
+        "strongPlanHits": 1,
+        "planHits": 1,
+        "metricHits": 0,
+        "strategyHits": 0,
+        "yearHits": 0,
+        "negativeHits": 0,
+        "severeNegativeHits": 0,
+        "pageCount": 1,
+        "textCharacters": 408
+      }
+    },
+    {
+      "order": 107,
+      "code": "9962",
+      "name": "ミスミグループ本社",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www.misumi.co.jp/ir/",
+      "resolvedPdfUrl": "https://www.misumi.co.jp/sites/default/files/2026-07/news_260731_1.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 25,
+      "reasons": [
+        "expected_title_present",
+        "multiple_financial_metric_terms"
+      ],
+      "blockers": [
+        "very_short_without_strong_plan_terms"
+      ],
+      "signals": {
+        "strongPlanHits": 0,
+        "planHits": 0,
+        "metricHits": 21,
+        "strategyHits": 0,
+        "yearHits": 0,
+        "negativeHits": 0,
+        "severeNegativeHits": 0,
+        "pageCount": 2,
+        "textCharacters": 2001
+      }
+    },
+    {
+      "order": 127,
+      "code": "545A",
+      "name": "トランヴィア",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www.toranvia.co.jp/news/",
+      "resolvedPdfUrl": "https://www.toranvia.co.jp/news/files/20260401_en_news.pdf",
+      "documentTypeCandidate": "manual_classification_required",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 44,
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present"
+      ],
+      "blockers": [],
+      "signals": {
+        "strongPlanHits": 0,
+        "planHits": 2,
+        "metricHits": 0,
+        "strategyHits": 0,
+        "yearHits": 0,
+        "negativeHits": 0,
+        "severeNegativeHits": 0,
+        "pageCount": 3,
+        "textCharacters": 3076
+      }
+    },
+    {
+      "order": 173,
+      "code": "4275",
+      "name": "カーリット",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/42750/140120260515538295.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/42750/140120260515538295.pdf",
+      "documentTypeCandidate": "formal_management_plan",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 73,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 7,
+        "planHits": 7,
+        "metricHits": 54,
+        "strategyHits": 10,
+        "yearHits": 36,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 12,
+        "textCharacters": 4856
+      }
+    },
+    {
+      "order": 193,
+      "code": "8237",
+      "name": "松屋",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 57,
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present",
+        "multiple_financial_metric_terms",
+        "strategy_terms_present",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 0,
+        "planHits": 10,
+        "metricHits": 53,
+        "strategyHits": 1,
+        "yearHits": 62,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 16,
+        "textCharacters": 5257
+      }
+    },
+    {
+      "order": 201,
+      "code": "1847",
+      "name": "イチケン",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/18470/140120260224567535.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/18470/140120260224567535.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 78,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 17,
+        "planHits": 31,
+        "metricHits": 104,
+        "strategyHits": 15,
+        "yearHits": 39,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 18,
+        "textCharacters": 15094
+      }
+    },
+    {
+      "order": 202,
+      "code": "195A",
+      "name": "MUSCAT GROUP",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 68,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 2,
+        "planHits": 4,
+        "metricHits": 98,
+        "strategyHits": 46,
+        "yearHits": 63,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 40,
+        "textCharacters": 12246
+      }
+    },
+    {
+      "order": 224,
+      "code": "6817",
+      "name": "スミダコーポレーション",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/68170/140120260205549079.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/68170/140120260205549079.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 78,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 18,
+        "planHits": 18,
+        "metricHits": 42,
+        "strategyHits": 7,
+        "yearHits": 40,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 26,
+        "textCharacters": 7990
+      }
+    },
+    {
+      "order": 284,
+      "code": "6579",
+      "name": "ログリー",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
+      "documentTypeCandidate": "growth_potential_document",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 68,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 4,
+        "planHits": 8,
+        "metricHits": 115,
+        "strategyHits": 46,
+        "yearHits": 104,
+        "negativeHits": 2,
+        "severeNegativeHits": 0,
+        "pageCount": 45,
+        "textCharacters": 18429
+      }
+    },
+    {
+      "order": 306,
+      "code": "2109",
+      "name": "DM三井製糖",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/21090/140120260520542189.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/21090/140120260520542189.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 78,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 24,
+        "planHits": 24,
+        "metricHits": 77,
+        "strategyHits": 89,
+        "yearHits": 17,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 40,
+        "textCharacters": 16541
+      }
+    },
+    {
+      "order": 346,
+      "code": "5368",
+      "name": "日本インシュレーション",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
+      "documentTypeCandidate": "formal_management_plan",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 73,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 13,
+        "planHits": 13,
+        "metricHits": 20,
+        "strategyHits": 7,
+        "yearHits": 31,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 18,
+        "textCharacters": 4826
+      }
+    },
+    {
+      "order": 377,
+      "code": "7871",
+      "name": "フクビ化学工業",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/78710/140120260514533115.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/78710/140120260514533115.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 78,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 15,
+        "planHits": 16,
+        "metricHits": 78,
+        "strategyHits": 13,
+        "yearHits": 33,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 13,
+        "textCharacters": 8487
+      }
+    },
+    {
+      "order": 392,
+      "code": "9044",
+      "name": "NANKAI",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/90440/140120260430514378.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/90440/140120260430514378.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 68,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 8,
+        "planHits": 8,
+        "metricHits": 47,
+        "strategyHits": 3,
+        "yearHits": 21,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 6,
+        "textCharacters": 3503
+      }
+    },
+    {
+      "order": 428,
+      "code": "4060",
+      "name": "rakumo",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
+      "documentTypeCandidate": "growth_potential_document",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 73,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 3,
+        "planHits": 5,
+        "metricHits": 120,
+        "strategyHits": 48,
+        "yearHits": 76,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 75,
+        "textCharacters": 32435
+      }
+    },
+    {
+      "order": 429,
+      "code": "4235",
+      "name": "ウルトラファブリックス・ホールディングス",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/42350/140120260212558515.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/42350/140120260212558515.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 78,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 12,
+        "planHits": 13,
+        "metricHits": 89,
+        "strategyHits": 8,
+        "yearHits": 48,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 17,
+        "textCharacters": 5861
+      }
+    },
+    {
+      "order": 487,
+      "code": "3242",
+      "name": "アーバネットコーポレーション",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/32420/140120250513546640.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/32420/140120250513546640.pdf",
+      "documentTypeCandidate": "formal_management_plan",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 63,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 11,
+        "planHits": 12,
+        "metricHits": 71,
+        "strategyHits": 5,
+        "yearHits": 12,
+        "negativeHits": 4,
+        "severeNegativeHits": 0,
+        "pageCount": 26,
+        "textCharacters": 8353
+      }
+    },
+    {
+      "order": 493,
+      "code": "4434",
+      "name": "サーバーワークス",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/44340/140120250410512537.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/44340/140120250410512537.pdf",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false,
+      "relevanceClassification": "manual_source_relevance_check",
+      "relevanceScore": 63,
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "signals": {
+        "strongPlanHits": 1,
+        "planHits": 10,
+        "metricHits": 74,
+        "strategyHits": 28,
+        "yearHits": 32,
+        "negativeHits": 1,
+        "severeNegativeHits": 0,
+        "pageCount": 28,
+        "textCharacters": 9492
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "2327",
+    "name": "日鉄ソリューションズ",
+    "market": "Prime",
+    "industry": "情報・通信業"
+  },
+  "document": {
+    "title": "2025-2027中期経営計画",
+    "publishedDate": "2025-02-28",
+    "period": "2025年度-2027年度",
+    "officialUrl": "https://www.nssol.nipponsteel.com/ir/management-plan/pdf/nssol_2025-2027_mtbp-j.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 46,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "人的資本・技術・M&Aへの成長投資を拡大し、TAM型ビジネスの比率向上と高収益化を進める",
+    "strategyThemes": [
+      "TAM型ビジネスモデルの拡大",
+      "クラウド・データ・AI・セキュリティ等の成長領域強化",
+      "人的資本と研究開発への継続投資",
+      "M&Aを活用した事業領域・顧客基盤の拡大",
+      "資本コストを意識した財務運営と株主還元"
+    ],
+    "groupTargets": [
+      {
+        "metric": "売上高",
+        "target": 4500,
+        "unit": "億円",
+        "targetYear": "2027年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.16"
+      },
+      {
+        "metric": "営業利益",
+        "target": 600,
+        "unit": "億円",
+        "targetYear": "2027年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.16"
+      },
+      {
+        "metric": "営業利益率",
+        "target": 13,
+        "unit": "%",
+        "targetYear": "2027年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.16"
+      },
+      {
+        "metric": "ROE",
+        "target": 13,
+        "unit": "%程度",
+        "targetYear": "2027年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.16・p.35"
+      },
+      {
+        "metric": "TAM型売上高比率",
+        "target": 75,
+        "unit": "%程度",
+        "targetYear": "2027年度",
+        "scope": "事業モデルKPI",
+        "evidence": "公式PDF p.16"
+      },
+      {
+        "metric": "成長投資対売上高比率",
+        "target": 5,
+        "unit": "%程度",
+        "targetYear": "2027年度",
+        "scope": "成長投資KPI",
+        "evidence": "公式PDF p.16"
+      },
+      {
+        "metric": "配当性向",
+        "target": 50,
+        "unit": "%",
+        "targetYear": "中計期間",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.16・p.35"
+      }
+    ],
+    "capitalPolicy": {
+      "operatingCashFlow": "中計期間累計1,280億円",
+      "borrowing": "追加借入440億円を活用",
+      "humanCapitalInvestment": "人的資本投資170億円",
+      "growthInvestment": "成長投資520億円",
+      "maInvestment": "M&A投資1,500億円",
+      "shareholderReturn": "株主還元480億円、配当性向50%を基本方針",
+      "endingCash": "期末手元資金900億円を想定",
+      "evidence": "公式PDF p.35-p.36"
+    },
+    "importantDefinitions": [
+      "ROEは約13%であり、厳密な下限表現ではない",
+      "M&A投資1,500億円は3カ年の投資枠",
+      "TAM型売上高比率と成長投資比率は事業・投資KPIとして財務目標と区分"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "approximateTargetsPreserved": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全46ページの独立した再確認",
+      "財務目標・TAM型KPI・投資枠の別確認者による原文突合",
+      "約・程度など目標表現の公開表示確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

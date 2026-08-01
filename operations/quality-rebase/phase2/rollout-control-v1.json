@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "phase2-rollout-control-v1",
+  "updatedAt": "2026-08-01T22:03:00+09:00",
+  "target": {
+    "phase1Companies": 50,
+    "phase2AdditionalCompanies": 450,
+    "deepVerifiedTargetIncludingPhase1": 500,
+    "batches": 9,
+    "waves": 45,
+    "companiesPerWave": 10
+  },
+  "executionPaths": {
+    "githubActions": {
+      "workflow": ".github/workflows/phase2-full-rollout.yml",
+      "status": "external_approval_required",
+      "observedConclusion": "action_required",
+      "jobsGenerated": false,
+      "automaticApprovalAllowed": false
+    },
+    "localRunner": {
+      "script": "scripts/run_phase2_full_rollout_local_v1.sh",
+      "status": "ready",
+      "resumable": true,
+      "checkpointAfterEachWave": true,
+      "continueOnCompanyFailure": true,
+      "automaticApprovalAllowed": false
+    }
+  },
+  "preflight": {
+    "script": "scripts/audit_phase2_rollout_readiness_v1.py",
+    "required": true,
+    "checks": [
+      "450社・9バッチ・各50社の件数整合",
+      "企業コードの重複・欠落",
+      "HTTPS公式ソースURL",
+      "自動事実補完・自動承認の禁止",
+      "独立した2名以上のレビュー要件"
+    ]
+  },
+  "postCollection": {
+    "reviewQueueScript": "scripts/build_phase2_review_queue_v1.py",
+    "queues": [
+      "ready_for_primary_review",
+      "pdf_identification_required",
+      "image_pdf_visual_review_required",
+      "source_repair_required"
+    ],
+    "deepVerificationApproved": 0,
+    "rule": "収集・抽出・キュー配分は自動化するが、一次精読・独立再確認・公開後検査を経ずに最高品質へ昇格しない。"
+  },
+  "nextActions": [
+    "GitHub Actionsの外部承認を行いPhase 2 Full 450 Rolloutを実行する",
+    "承認が難しい場合は依存関係を導入したローカル環境でrun_phase2_full_rollout_local_v1.shを実行する",
+    "45ウェーブのチェックポイントとレビューキューを確認する",
+    "一次レビュー可能企業を50社単位で精読工程へ送る",
+    "URL・PDF・画像エラー企業だけを再探索キューで修復する"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-02T01:21:23+09:00",
+  "wave": 1,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-v2/summary.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeAlreadyPrimaryReviewed": true,
+    "preferFormalManagementPlan": true,
+    "allowPlanRevisionOrUpdateWithBoundaryCheck": true,
+    "allowGrowthPotentialDocumentOnlyWithFormalPlanBoundaryCheck": true,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 53,
+      "code": "4114",
+      "name": "日本触媒",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 42,
+      "pageCount": 34,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/4114/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 63,
+      "code": "175A",
+      "name": "Will Smart",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 39,
+      "pageCount": 40,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/175A/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "growthPotentialDocumentSeparation", "fieldLevelEvidence"]
+    },
+    {
+      "order": 65,
+      "code": "421A",
+      "name": "ムービン・ストラテジック・キャリア",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 37,
+      "pageCount": 37,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/421A/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "growthPotentialDocumentSeparation", "fieldLevelEvidence"]
+    },
+    {
+      "order": 58,
+      "code": "3050",
+      "name": "DCMホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 36,
+      "pageCount": 31,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/3050/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 54,
+      "code": "4203",
+      "name": "住友ベークライト",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 35,
+      "pageCount": 31,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/4203/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 70,
+      "code": "9861",
+      "name": "吉野家ホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 34,
+      "pageCount": 6,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/9861/primary-review-template.json",
+      "status": "primary_review_assigned_section_scope_check_required",
+      "requiredChecks": ["formalPlanBoundary", "sectionScopeValidation", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 55,
+      "code": "4401",
+      "name": "ADEKA",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 32,
+      "pageCount": 42,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/4401/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 59,
+      "code": "9247",
+      "name": "TREホールディングス",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 30,
+      "pageCount": 48,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/9247/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanConfirmation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 62,
+      "code": "6103",
+      "name": "オークマ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 30,
+      "pageCount": 23,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/6103/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 66,
+      "code": "4612",
+      "name": "日本ペイントホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 28,
+      "pageCount": 26,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/4612/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 1,
+    "planRevisionOrUpdateCandidates": 7,
+    "growthPotentialDocumentCandidates": 2,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、項目別証跡を人が確認した場合のみ記録する。"
+}

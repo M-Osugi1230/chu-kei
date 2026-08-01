@@ -1,0 +1,79 @@
+name: Phase 2 Source Relevance Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'scripts/phase2_source_relevance_audit_v1.py'
+      - 'operations/quality-rebase/phase2/bulk-collection/**'
+      - '.github/workflows/phase2-source-relevance-audit.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-source-relevance-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Audit all 450 source packets
+        run: python scripts/phase2_source_relevance_audit_v1.py
+
+      - name: Validate safety and queue totals
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('operations/quality-rebase/phase2/source-relevance-audit')
+          summary = json.loads((root / 'summary.json').read_text())
+          assert summary['collectionPacketsAudited'] == 450
+          assert summary['uniqueCompanies'] == 450
+          assert summary['automaticApprovalAllowed'] is False
+          assert summary['deepVerificationApproved'] == 0
+
+          queue_total = 0
+          for path in root.glob('*-required.json'):
+              value = json.loads(path.read_text())
+              assert value['automaticApprovalAllowed'] is False
+              assert value['deepVerificationApproved'] == 0
+              queue_total += value['count']
+          for name in [
+              'primary-review-candidates.json',
+              'manual-source-relevance-check.json',
+              'probable-wrong-document.json',
+          ]:
+              value = json.loads((root / name).read_text())
+              assert value['automaticApprovalAllowed'] is False
+              assert value['deepVerificationApproved'] == 0
+              queue_total += value['count']
+          assert queue_total == 450, queue_total
+          PY
+
+      - name: Commit audit queues
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/source-relevance-audit
+          if git diff --cached --quiet; then
+            echo 'No source relevance changes.'
+          else
+            git commit -m 'quality: classify 450 Phase 2 source packets by relevance'
+            git pull --rebase origin agent/quality-rebase-phase0-2
+            git push origin HEAD:agent/quality-rebase-phase0-2
+          fi

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-02T03:23:00+09:00",
+  "updatedAt": "2026-08-02T04:23:00+09:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -32,17 +32,17 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 3,
-    "formalPlanConfirmed": 3,
-    "primaryReviewComplete": 3,
+    "sourceIdentityConfirmed": 4,
+    "formalPlanConfirmed": 4,
+    "primaryReviewComplete": 4,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave01-v1.json",
-    "independentReviewReady": 2,
+    "independentReviewReady": 3,
     "additionalSourceMappingRequired": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 447
+    "remainingPrimaryReviews": 446
   },
   "completedPrimaryReviews": [
     {
@@ -70,6 +70,16 @@
       "status": "primary_review_complete_independent_review_ready",
       "sourceCorrectionRequired": false,
       "sourceClassification": "official_integrated_report_management_plan_section"
+    },
+    {
+      "order": 59,
+      "code": "9247",
+      "name": "TREホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/9247-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan"
     }
   ],
   "qualityFindings": [
@@ -87,8 +97,8 @@
       "workstream": "primary_review_wave01",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 1,
-      "remainingCount": 9,
+      "completionCount": 2,
+      "remainingCount": 8,
       "file": "operations/quality-rebase/phase2/primary-review-wave01-v1.json"
     },
     {
@@ -97,6 +107,13 @@
       "status": "ready",
       "completionCount": 0,
       "file": "operations/quality-rebase/phase2/independent/9861-independent-review-v1.json"
+    },
+    {
+      "workstream": "independent_review_9247",
+      "companies": 1,
+      "status": "ready",
+      "completionCount": 0,
+      "file": "operations/quality-rebase/phase2/independent/9247-independent-review-v1.json"
     },
     {
       "workstream": "likely_wrong_document_repair",
@@ -120,8 +137,8 @@
     }
   ],
   "nextProcessingOrder": [
-    "第1ウェーブ残り9社について資料区分・全文・数値・資本政策・項目別証跡を確認する",
-    "吉野家ホールディングスの公式PDF全6ページを独立確認者が再確認する",
+    "第1ウェーブ残り8社について資料区分・全文・数値・資本政策・項目別証跡を確認する",
+    "吉野家ホールディングスとTREホールディングスを独立確認者が再確認する",
     "60社の誤資料候補を負のシグナル別に分解し、公式IRページから代替資料を再特定する",
     "52社の収集失敗をHTTP種別・アクセス拒否・容量超過・解析失敗に分解して再取得する",
     "14社のPDF未特定について公式HTMLを一次証跡として確認し、正式PDFまたは公式ページを再探索する",

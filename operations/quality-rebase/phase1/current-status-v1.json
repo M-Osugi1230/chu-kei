@@ -6,13 +6,13 @@
   "counts": {
     "batchesStarted": 3,
     "companiesQueued": 30,
-    "primaryReviewComplete": 29,
-    "independentReviewReady": 25,
+    "primaryReviewComplete": 30,
+    "independentReviewReady": 26,
     "additionalSourceMappingRequired": 4,
-    "sourceIdentityConflictBlocked": 1,
+    "sourceIdentityConflictBlocked": 0,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviewInStartedBatches": 1,
+    "remainingPrimaryReviewInStartedBatches": 0,
     "remainingPhase1CompaniesNotStarted": 20
   },
   "batches": [
@@ -32,13 +32,13 @@
       "id": "phase1-batch-02",
       "orders": "11-20",
       "statusFile": "operations/quality-rebase/phase1/batch02-status-v1.json",
-      "primaryReviewComplete": 9,
-      "independentReviewReady": 7,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 8,
       "additionalSourceMappingRequired": 2,
-      "sourceIdentityConflictBlocked": 1,
+      "sourceIdentityConflictBlocked": 0,
       "independentReviewComplete": 0,
       "deepVerificationApproved": 0,
-      "remainingPrimaryReview": 1
+      "remainingPrimaryReview": 0
     },
     {
       "id": "phase1-batch-03",
@@ -108,19 +108,6 @@
         "資金調達・充当状況と株主還元ロードマップの再確認",
         "公開ページの表示・リンク検査"
       ]
-    },
-    {
-      "code": "1375",
-      "name": "ユキグニファクトリー",
-      "batchId": "phase1-batch-02",
-      "type": "source_identity_conflict",
-      "status": "blocked_source_identity_conflict",
-      "requiredResolution": [
-        "会社公式IRニュースまたは適時開示から2025年11月14日付資料の存在を確認する",
-        "2030計画が存在する場合は正式PDF URL・資料名・公表日・ページ数を固定する",
-        "存在しない場合はPhase 1候補を2024年3月期-2028年3月期の正式計画へ訂正する",
-        "候補訂正後に全文抽出・項目別証跡・数値定義検査を最初から実施する"
-      ]
     }
   ],
   "approvalRule": {
@@ -132,10 +119,10 @@
     "approvedOnlyAfterAllChecks": true
   },
   "nextProcessingOrder": [
-    "ユキグニファクトリーの資料同一性競合を公式情報で解消し、第二バッチを完了する",
-    "独立再確認可能25社を別担当レビューへ送る",
+    "第四バッチ31-40社を順番に一次精読する",
+    "独立再確認可能26社を別担当レビューへ送る",
     "追加証跡・資料区分待ち4社の公式資料・画像・リンクを固定する",
-    "第四・第五バッチを10社単位で開始する",
+    "第五バッチ41-50社を順番に一次精読する",
     "別担当確認と公開後検査が完了した企業のみ最高品質へ昇格する"
   ]
 }

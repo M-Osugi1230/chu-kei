@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "3490",
+    "name": "アズ企画設計",
+    "market": "Standard",
+    "industry": "不動産業"
+  },
+  "document": {
+    "title": "新中期経営計画について／新株予約権発行に関する補足資料",
+    "publishedDate": "2026-07-08",
+    "period": "2027年2月期-2029年2月期",
+    "officialUrl": "https://www2.jpx.co.jp/disc/34900/140120260708589852.pdf",
+    "verificationMirrorUrl": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260708/20260708589852.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 33,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false,
+    "documentSections": {
+      "formalPlan": "新中期経営計画の戦略・財務目標・資本効率・株主還元",
+      "financingSupplement": "新株予約権発行の目的・設計・資金調達補足"
+    }
+  },
+  "structuredAnalysis": {
+    "managementDirection": "収益性、人的生産性、資本効率性を一体で改善し、東京都心を中心とする収益不動産事業の拡大と新規事業・M&Aを通じて営業利益を成長させる",
+    "strategyThemes": [
+      "東京都心を中心に5億円以上、10億円から20億円規模の大型収益不動産の取扱いを拡大する",
+      "物件種別を多様化し、富士ホームを活用した中小型物件の仕入販売を開始する",
+      "重点地域戦略、外部企業との連携、戦略的M&Aにより営業利益を積み上げる",
+      "人材採用・育成と組織基盤を強化し、一人当たり営業利益を高める",
+      "財務健全性と資本効率を意識し、PBR1倍超とROE向上を目指す"
+    ],
+    "groupTargets": [
+      {
+        "metric": "営業利益",
+        "baseValue": 7.7,
+        "target": 18,
+        "unit": "億円",
+        "baseYear": "2026年2月期実績",
+        "targetYear": "2029年2月期",
+        "scope": "全社",
+        "evidence": "公式PDF p.13・p.18"
+      },
+      {
+        "metric": "一人当たり営業利益",
+        "baseValue": 1019,
+        "target": 3000,
+        "unit": "万円",
+        "baseYear": "2026年2月期実績",
+        "targetYear": "2029年2月期",
+        "scope": "会社定義の従業員一人当たり営業利益",
+        "evidence": "公式PDF p.13"
+      },
+      {
+        "metric": "ROE",
+        "baseValue": 8.5,
+        "target": 12,
+        "unit": "%以上",
+        "baseYear": "2026年2月期実績",
+        "targetYear": "2029年2月期",
+        "scope": "全社",
+        "evidence": "公式PDF p.13・p.22"
+      },
+      {
+        "metric": "売上高",
+        "target": 155,
+        "unit": "億円",
+        "targetYear": "2027年2月期予想",
+        "scope": "全社",
+        "evidence": "公式PDF p.16"
+      },
+      {
+        "metric": "営業利益",
+        "target": 12.5,
+        "unit": "億円",
+        "targetYear": "2027年2月期予想",
+        "scope": "全社",
+        "evidence": "公式PDF p.16"
+      },
+      {
+        "metric": "年間配当金",
+        "target": 30,
+        "unit": "円/株・予定",
+        "targetYear": "2027年2月期",
+        "scope": "普通株式配当",
+        "evidence": "公式PDF p.23"
+      },
+      {
+        "metric": "配当・優待合算利回り",
+        "targetMin": 3.93,
+        "targetMax": 4.64,
+        "unit": "%・資料前提による試算",
+        "targetYear": "2027年2月期予定",
+        "scope": "100株・200株・300株の継続保有条件を満たす株主の試算",
+        "evidence": "公式PDF p.23"
+      },
+      {
+        "metric": "株主優待",
+        "targetMin": 8000,
+        "targetMax": 30000,
+        "unit": "円/年・QUOカード",
+        "targetYear": "株主優待制度適用期間",
+        "scope": "保有株数・継続保有条件別",
+        "evidence": "公式PDF p.23"
+      }
+    ],
+    "capitalPolicy": {
+      "capitalAllocation": "利益剰余金および調達資金を収益不動産事業への再投資、M&A・新規事業、人材・組織、株主還元へ配分する",
+      "capitalEfficiency": "推定株主資本コスト8%を意識し、2029年2月期ROE12%以上とPBR1倍超を目指す",
+      "shareholderReturn": "2027年2月期は1株当たり年間30円の配当を予定し、QUOカード優待と合わせた還元を実施する",
+      "financingSeparation": "新株予約権の発行条件・資金調達説明は中期経営計画の財務目標とは分離して記録する",
+      "evidence": "公式PDF p.21-p.23および資金調達補足部分"
+    },
+    "importantDefinitions": [
+      "営業利益7.7億円、一人当たり営業利益1,019万円、ROE8.5%は2026年2月期実績",
+      "売上高155億円・営業利益12.5億円は2027年2月期予想であり、2029年2月期の最終目標ではない",
+      "営業利益18億円・一人当たり営業利益3,000万円・ROE12%以上は2029年2月期の中計目標",
+      "営業利益30億円・時価総額100億円は中計最終年度より先の将来構想であり、2029年2月期目標と分離する",
+      "旧計画の2027年2月期営業利益10.8億円と新予想12.5億円を混同しない",
+      "総合利回り3.93%から4.64%は資料記載の株価・保有株数・継続保有条件に基づく試算であり、保証利回りではない",
+      "新株予約権発行の補足資料を中期経営計画本体の数値目標として扱わない"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "actualForecastSeparated": true,
+    "oldPlanAndNewForecastSeparated": true,
+    "midTermAndAspirationalTargetsSeparated": true,
+    "formalPlanAndFinancingSupplementSeparated": true,
+    "shareholderReturnAssumptionsCaptured": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_and_financing_section_check_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全33ページの独立した再確認",
+      "中期経営計画部分と新株予約権発行補足部分の境界・記載内容の再確認",
+      "2026年2月期実績・2027年2月期予想・2029年2月期中計目標・将来構想の原文突合",
+      "営業利益18億円への増益要因と各施策の対応関係を再確認",
+      "ROE12%以上・PBR1倍超・推定株主資本コスト8%の定義を再確認",
+      "年間配当30円、株主優待、総合利回り試算の前提条件を再確認",
+      "新株予約権の資金使途と中計上の投資方針の接続範囲を再確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

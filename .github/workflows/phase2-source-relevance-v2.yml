@@ -1,0 +1,65 @@
+name: Phase 2 Source Relevance V2
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'scripts/phase2_source_relevance_gate_v2.py'
+      - 'tests/test_phase2_source_relevance_gate_v2.py'
+      - 'operations/quality-rebase/phase2/bulk-collection/**'
+      - '.github/workflows/phase2-source-relevance-v2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile relevance gate
+        run: python -m py_compile scripts/phase2_source_relevance_gate_v2.py
+      - name: Run relevance regression tests
+        run: python -m unittest tests/test_phase2_source_relevance_gate_v2.py -v
+      - name: Audit all 450 collection packets
+        run: python scripts/phase2_source_relevance_gate_v2.py
+      - name: Verify no automatic approval
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('operations/quality-rebase/phase2/source-relevance-v2')
+          summary = json.loads((root / 'summary.json').read_text(encoding='utf-8'))
+          assert summary['targetCompanies'] == 450
+          assert summary['auditedCompanies'] == 450
+          assert summary['uniqueCompanies'] == 450
+          assert summary['automaticFactCompletionAllowed'] is False
+          assert summary['automaticApprovalAllowed'] is False
+          assert summary['deepVerificationApproved'] == 0
+          for path in root.glob('*.json'):
+              text = path.read_text(encoding='utf-8')
+              assert '"automaticApprovalAllowed": true' not in text
+              assert '"deepVerificationApproved": true' not in text
+          PY
+      - name: Commit audit queues
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/source-relevance-v2
+          if git diff --cached --quiet; then
+            echo 'No relevance audit changes.'
+          else
+            git commit -m 'quality: classify Phase 2 source relevance v2'
+            git pull --rebase origin agent/quality-rebase-phase0-2
+            git push origin HEAD:agent/quality-rebase-phase0-2
+          fi

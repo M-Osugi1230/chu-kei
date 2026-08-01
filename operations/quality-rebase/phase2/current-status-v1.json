@@ -13,14 +13,14 @@
     "companiesInStartedBatch": 50,
     "wavesStarted": 1,
     "companiesActivelyQueued": 10,
-    "sourceIdentityConfirmed": 1,
-    "formalPlanConfirmed": 1,
-    "primaryReviewComplete": 1,
-    "independentReviewReady": 0,
+    "sourceIdentityConfirmed": 2,
+    "formalPlanConfirmed": 2,
+    "primaryReviewComplete": 2,
+    "independentReviewReady": 1,
     "additionalSourceMappingRequired": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingAdditionalCompanies": 449
+    "remainingAdditionalCompanies": 448
   },
   "startedBatch": {
     "batch": 2,
@@ -32,8 +32,8 @@
         "orders": "51-60",
         "statusFile": "operations/quality-rebase/phase2/batch02-wave01-status-v1.json",
         "queued": 10,
-        "primaryReviewComplete": 1,
-        "independentReviewReady": 0,
+        "primaryReviewComplete": 2,
+        "independentReviewReady": 1,
         "additionalSourceMappingRequired": 1,
         "deepVerificationApproved": 0
       },
@@ -67,6 +67,14 @@
       "reviewFile": "operations/quality-rebase/phase2/reviews/4061-primary-review-v1.json",
       "status": "primary_review_complete_independent_visual_and_full_text_review_pending",
       "sourceCorrectionRequired": true
+    },
+    {
+      "order": 52,
+      "code": "8113",
+      "name": "ユニ・チャーム",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/8113-primary-review-v1.json",
+      "status": "primary_review_complete_independent_full_text_review_pending",
+      "sourceCorrectionRequired": false
     }
   ],
   "additionalWork": [
@@ -83,7 +91,6 @@
     }
   ],
   "nextProcessingOrder": [
-    "ユニ・チャームの公式PDFを特定し全文精読する",
     "日本触媒、住友ベークライト、ADEKAを直接PDFから処理する",
     "バイタルKSKとUTグループは計画ページ・改定資料を分離する",
     "駅探は正式中計部分と成長可能性資料部分を分離する",

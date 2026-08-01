@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "quality-rebase-phase1-batch-status-v1",
+  "batch": {
+    "id": "phase1-batch-04",
+    "orders": "31-40",
+    "targetCompanies": 10,
+    "updatedAt": "2026-08-01",
+    "automaticDeepApprovalAllowed": false
+  },
+  "counts": {
+    "primaryReviewComplete": 1,
+    "independentReviewReady": 0,
+    "additionalSourceMappingRequired": 1,
+    "sourceIdentityConflictBlocked": 0,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0,
+    "remainingPrimaryReview": 9
+  },
+  "companies": [
+    {
+      "order": 31,
+      "code": "5834",
+      "name": "SBIリーシングサービス",
+      "market": "Growth",
+      "industry": "証券、商品先物取引業",
+      "document": "事業計画及び成長可能性に関する事項",
+      "planPublishedDate": "2026-06-24",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/58340/140120260624577849.pdf",
+      "status": "primary_review_complete_formal_plan_period_figure_and_shareholder_return_source_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/5834-primary-review-v1.json"
+    },
+    {
+      "order": 32,
+      "code": "7771",
+      "name": "日本精密",
+      "market": "Standard",
+      "industry": "精密機器",
+      "document": "中期経営計画 ASEAN Project3",
+      "planPublishedDate": "2026-06-29",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/77710/140120260619574692.pdf",
+      "status": "primary_review_pending"
+    },
+    {
+      "order": 33,
+      "code": "9204",
+      "name": "スカイマーク",
+      "market": "Growth",
+      "industry": "空運業",
+      "document": "事業計画及び成長可能性に関する資料",
+      "planPublishedDate": "2026-06-18",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/92040/140120260611568685.pdf",
+      "status": "formal_plan_relevance_and_primary_review_pending"
+    },
+    {
+      "order": 34,
+      "code": "278A",
+      "name": "Terra Drone",
+      "market": "Growth",
+      "industry": "精密機器",
+      "document": "事業計画及び成長可能性に関する事項",
+      "planPublishedDate": "2026-04-30",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/278A0/140120260428513214.pdf",
+      "status": "formal_plan_relevance_and_primary_review_pending"
+    },
+    {
+      "order": 35,
+      "code": "3598",
+      "name": "山喜",
+      "market": "Standard",
+      "industry": "繊維製品",
+      "document": "中期経営計画（2026～2028年度）",
+      "planPublishedDate": "2026-05-08",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/35980/140120260508520026.pdf",
+      "status": "primary_review_pending"
+    },
+    {
+      "order": 36,
+      "code": "9073",
+      "name": "京極運輸商事",
+      "market": "Standard",
+      "industry": "陸運業",
+      "document": "第3次中期経営計画（2026年度-2028年度）",
+      "planPublishedDate": "2026-05-18",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/90730/140120260518539970.pdf",
+      "status": "primary_review_pending"
+    },
+    {
+      "order": 37,
+      "code": "9366",
+      "name": "サンリツ",
+      "market": "Standard",
+      "industry": "倉庫・運輸関連業",
+      "document": "中期経営計画の策定について",
+      "planPublishedDate": "2026-05-14",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/93660/140120260514532100.pdf",
+      "status": "primary_review_pending"
+    },
+    {
+      "order": 38,
+      "code": "9367",
+      "name": "大東港運",
+      "market": "Standard",
+      "industry": "倉庫・運輸関連業",
+      "document": "大東港運グループ第9次中期経営計画 Stronger Together",
+      "planPublishedDate": "2026-05-13",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/93670/140120260513528865.pdf",
+      "status": "primary_review_pending"
+    },
+    {
+      "order": 39,
+      "code": "3204",
+      "name": "トーア紡コーポレーション",
+      "market": "Standard",
+      "industry": "繊維製品",
+      "document": "中期経営計画の修正に関するお知らせ",
+      "planPublishedDate": "2026-02-13",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/32040/140120260212558620.pdf",
+      "status": "original_plan_and_revision_review_pending"
+    },
+    {
+      "order": 40,
+      "code": "7957",
+      "name": "フジコピアン",
+      "market": "Standard",
+      "industry": "その他製品",
+      "document": "中期経営計画（2026～2030）",
+      "planPublishedDate": "2026-03-05",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/79570/140120260305576489.pdf",
+      "status": "primary_review_pending"
+    }
+  ],
+  "approvalGate": {
+    "minimumIndependentReviewers": 2,
+    "requiredChecks": [
+      "formalPlanConfirmed",
+      "fullTextReviewed",
+      "strategyStructured",
+      "metricsValidated",
+      "evidenceLinked",
+      "independentDoubleCheck",
+      "postPublicationLinkAndRenderCheck"
+    ],
+    "rule": "事業計画・成長可能性資料、正式中計、修正版を区別し、固定期間・予想値・目標値・資本政策を確認してから独立再確認へ進める。"
+  }
+}

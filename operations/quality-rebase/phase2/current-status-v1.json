@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "quality-rebase-phase2-current-status-v1",
+  "updatedAt": "2026-08-01",
+  "phase2TargetIncludingPhase1": 500,
+  "phase1PrimaryReviewComplete": 50,
+  "phase1DeepVerificationApproved": 0,
+  "additionalCompaniesTarget": 450,
+  "additionalCompaniesQueued": 450,
+  "automaticDeepApprovalAllowed": false,
+  "counts": {
+    "batchesQueued": 9,
+    "batchesStarted": 1,
+    "companiesInStartedBatch": 50,
+    "wavesStarted": 1,
+    "companiesActivelyQueued": 10,
+    "sourceIdentityConfirmed": 1,
+    "formalPlanConfirmed": 1,
+    "primaryReviewComplete": 1,
+    "independentReviewReady": 0,
+    "additionalSourceMappingRequired": 1,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0,
+    "remainingAdditionalCompanies": 449
+  },
+  "startedBatch": {
+    "batch": 2,
+    "target": 50,
+    "status": "in_progress",
+    "waves": [
+      {
+        "wave": 1,
+        "orders": "51-60",
+        "statusFile": "operations/quality-rebase/phase2/batch02-wave01-status-v1.json",
+        "queued": 10,
+        "primaryReviewComplete": 1,
+        "independentReviewReady": 0,
+        "additionalSourceMappingRequired": 1,
+        "deepVerificationApproved": 0
+      },
+      {
+        "wave": 2,
+        "orders": "61-70",
+        "status": "not_started"
+      },
+      {
+        "wave": 3,
+        "orders": "71-80",
+        "status": "not_started"
+      },
+      {
+        "wave": 4,
+        "orders": "81-90",
+        "status": "not_started"
+      },
+      {
+        "wave": 5,
+        "orders": "91-100",
+        "status": "not_started"
+      }
+    ]
+  },
+  "completedPrimaryReviews": [
+    {
+      "order": 51,
+      "code": "4061",
+      "name": "デンカ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4061-primary-review-v1.json",
+      "status": "primary_review_complete_independent_visual_and_full_text_review_pending",
+      "sourceCorrectionRequired": true
+    }
+  ],
+  "additionalWork": [
+    {
+      "code": "4061",
+      "name": "デンカ",
+      "type": "visual_figure_review_and_public_url_correction",
+      "requiredResolution": [
+        "PDF全52ページの独立再確認",
+        "p.5・p.7・p.10・p.13の図表原寸確認",
+        "旧404 URLを現行公式PDF URLへ置換",
+        "公開ページの表示・検索・PDFリンク検査"
+      ]
+    }
+  ],
+  "nextProcessingOrder": [
+    "ユニ・チャームの公式PDFを特定し全文精読する",
+    "日本触媒、住友ベークライト、ADEKAを直接PDFから処理する",
+    "バイタルKSKとUTグループは計画ページ・改定資料を分離する",
+    "駅探は正式中計部分と成長可能性資料部分を分離する",
+    "DCM、TREホールディングスを正式中計として精読する",
+    "Wave 1完了後にWave 2の10社を開始する"
+  ],
+  "approvalRule": {
+    "primaryReviewDoesNotEqualApproval": true,
+    "minimumDistinctReviewers": 2,
+    "fieldLevelEvidenceRequired": true,
+    "yearUnitScopeValidationRequired": true,
+    "postPublicationLinkAndRenderCheckRequired": true,
+    "approvedOnlyAfterAllChecks": true
+  }
+}

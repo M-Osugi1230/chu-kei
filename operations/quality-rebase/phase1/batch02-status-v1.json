@@ -8,13 +8,13 @@
     "automaticDeepApprovalAllowed": false
   },
   "counts": {
-    "primaryReviewComplete": 9,
-    "independentReviewReady": 7,
+    "primaryReviewComplete": 10,
+    "independentReviewReady": 8,
     "additionalSourceMappingRequired": 2,
-    "sourceIdentityConflictBlocked": 1,
+    "sourceIdentityConflictBlocked": 0,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReview": 1
+    "remainingPrimaryReview": 0
   },
   "companies": [
     {
@@ -131,10 +131,11 @@
       "name": "ユキグニファクトリー",
       "market": "Prime",
       "industry": "水産・農林業",
-      "document": "中期経営計画2030/2025年11月アップデート",
-      "planPublishedDate": "2025-11-14",
+      "document": "中期経営計画（2024年3月期～2028年3月期）",
+      "planPublishedDate": null,
       "sourceUrl": "https://www.yukiguni-factory.co.jp/ir/middleplan/",
-      "status": "blocked_source_identity_conflict",
+      "status": "primary_review_complete_independent_image_and_source_history_check_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/1375-primary-review-v1.json",
       "sourceResolutionFile": "operations/quality-rebase/phase1/source-resolution/1375-source-conflict-v1.json"
     }
   ],
@@ -149,6 +150,6 @@
       "independentDoubleCheck",
       "postPublicationLinkAndRenderCheck"
     ],
-    "rule": "一次レビュー完了だけでは最高品質へ昇格しない。独立再確認と公開後検査を含む全条件を満たした企業だけを承認する。資料同一性が解消しない企業は承認対象から隔離する。"
+    "rule": "一次レビュー完了だけでは最高品質へ昇格しない。独立再確認と公開後検査を含む全条件を満たした企業だけを承認する。"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "quality-rebase-phase1-review-packets-request-v1",
+  "requestedAt": "2026-08-01",
+  "cohortPath": "operations/quality-rebase/phase1-cohort-50-v1.json",
+  "targetCompanies": 50,
+  "batchSize": 10,
+  "runRequested": true,
+  "policy": {
+    "officialSourcesOnly": true,
+    "fullTextExtractionRequired": true,
+    "automaticFactCompletionAllowed": false,
+    "automaticDeepApprovalAllowed": false,
+    "humanFullTextReviewRequired": true,
+    "minimumIndependentReviewers": 2
+  }
+}

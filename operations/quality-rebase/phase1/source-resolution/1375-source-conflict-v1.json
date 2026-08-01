@@ -60,39 +60,50 @@
       "海外企業のPMIと追加買収候補の探索"
     ]
   },
+  "externalSourceIdentity": {
+    "date": "2025-11-14",
+    "publisher": "Sessa Investment Research",
+    "documentType": "FY2026/3 Q2フォローアップ調査レポート",
+    "companyOfficialPlan": false,
+    "finding": "候補日付は外部調査レポートの日付に由来し、会社公式の中期経営計画2030公表日ではない"
+  },
   "conflicts": [
     {
       "field": "documentTitle",
       "candidate": "中期経営計画2030／2025年11月アップデート",
       "officialObserved": "中期経営計画（2024年3月期～2028年3月期）",
-      "status": "unresolved"
+      "status": "resolved_candidate_corrected"
     },
     {
       "field": "planPublishedDate",
       "candidate": "2025-11-14",
-      "officialObserved": "公式計画ページ・資料一覧から同日付の2030計画を確認できない",
-      "status": "unresolved"
+      "officialObserved": "同日は外部調査会社のFY2026/3 Q2フォローアップ日",
+      "status": "resolved_external_report_date_removed"
     },
     {
       "field": "planPeriod",
-      "candidate": "2030年度を含む計画と推定される表記",
-      "officialObserved": "2028年3月期まで",
-      "status": "unresolved"
+      "candidate": "2030年度を含む計画",
+      "officialObserved": "2024年3月期～2028年3月期",
+      "status": "resolved_official_period_adopted"
     }
   ],
   "decision": {
-    "status": "blocked_source_identity_conflict",
-    "primaryReviewComplete": false,
-    "independentReviewReady": false,
+    "status": "resolved_official_plan_adopted",
+    "primaryReviewComplete": true,
+    "independentReviewReady": true,
     "deepVerificationApproved": false,
     "automaticApprovalAllowed": false,
-    "reason": "候補台帳の資料名・公表日・計画期間を会社公式ページで再現できないため、既存の2028計画を2030計画として流用しない"
+    "canonicalDocument": "中期経営計画（2024年3月期～2028年3月期）",
+    "canonicalSourceUrl": "https://www.yukiguni-factory.co.jp/ir/middleplan/",
+    "primaryReviewFile": "operations/quality-rebase/phase1/reviews/1375-primary-review-v1.json",
+    "reason": "会社公式IRの現行中計を正本とし、外部調査レポート由来の誤った資料名・日付を除外した"
   },
-  "requiredResolution": [
-    "会社公式IRニュースまたは適時開示から2025年11月14日付資料の存在を確認する",
-    "2030計画が存在する場合は正式PDF URL・資料名・公表日・ページ数を固定する",
-    "存在しない場合はPhase 1候補を2024年3月期～2028年3月期の正式計画へ訂正する",
-    "候補訂正後に全文抽出・項目別証跡・数値定義検査を最初から実施する"
+  "requiredBeforeApproval": [
+    "公式中計ページ本文と画像の独立した再確認",
+    "公式中期経営計画資料の直接ファイルURL・公表日の追補可否確認",
+    "実績・予想・2028年計画・年度未特定アップサイドの原文突合",
+    "公開ページの表示・画像・リンク検査"
   ],
-  "checkedAt": "2026-08-01"
+  "checkedAt": "2026-08-01",
+  "resolvedAt": "2026-08-01"
 }

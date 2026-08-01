@@ -1,13 +1,13 @@
 {
   "schemaVersion": "phase1-independent-review-queue-v1",
-  "generatedAt": "2026-08-01T11:04:30.960Z",
+  "generatedAt": "2026-08-01T20:18:00+09:00",
   "batchId": "phase1-batch-02",
   "automaticApprovalAllowed": false,
   "counts": {
     "total": 10,
-    "ready": 7,
+    "ready": 8,
     "blockedAdditionalSourceMapping": 2,
-    "blockedSourceIdentityConflict": 1,
+    "blockedSourceIdentityConflict": 0,
     "approved": 0
   },
   "approvalRule": {
@@ -101,14 +101,9 @@
       "order": 20,
       "code": "1375",
       "name": "ユキグニファクトリー",
-      "status": "blocked_source_identity_conflict",
+      "status": "ready_for_independent_review",
       "packetFile": "operations/quality-rebase/phase1/batch02-independent/1375-independent-review-v1.json",
-      "blockedReasons": [
-        "会社公式IRニュースまたは適時開示から2025年11月14日付資料の存在を確認する",
-        "2030計画が存在する場合は正式PDF URL・資料名・公表日・ページ数を固定する",
-        "存在しない場合はPhase 1候補を2024年3月期～2028年3月期の正式計画へ訂正する",
-        "候補訂正後に全文抽出・項目別証跡・数値定義検査を最初から実施する"
-      ]
+      "blockedReasons": []
     }
   ]
 }

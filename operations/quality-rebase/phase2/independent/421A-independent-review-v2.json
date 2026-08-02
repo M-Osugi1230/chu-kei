@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "421A",
+    "name": "ムービン・ストラテジック・キャリア"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/421A-primary-review-v2.json",
+  "source": {
+    "title": "中期経営計画（事業計画及び成長可能性に関する事項）",
+    "originalOfficialUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
+    "originalPdfSha256": "26c39be7814ced99a399fcb55de226267a08c9a34182ef7ddf71e879288a79f5",
+    "originalPageCount": 37,
+    "correctionNoticeUrl": "https://www2.jpx.co.jp/disc/421A0/140120260324588022.pdf",
+    "correctedOfficialListingUrl": "https://corp.movin.co.jp/ir/disclosure.html",
+    "correctedExpectedPageCount": 36,
+    "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json"
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity_and_correction_notice",
+      "description": "会社名、証券コード421A、2026年3月24日の当初開示と同日19時の公式訂正通知、各URL、当初PDFハッシュを独立に再確認する。",
+      "expectedEvidenceOriginalPdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "corrected_pdf_resolution",
+      "description": "会社公式IRページから訂正後36ページ版の直接PDF URL、PDFハッシュ、ページ数を特定し、当初37ページ版との差分を保存する。",
+      "status": "pending"
+    },
+    {
+      "id": "deleted_page_exclusion",
+      "description": "訂正前PDFの印字14頁（PDF15頁）『市場環境：人材紹介市場は安定拡大』が訂正後資料から削除され、一次レビューの戦略・数値・証跡に使用されていないことを確認する。",
+      "status": "pending"
+    },
+    {
+      "id": "formal_plan_boundary",
+      "description": "事業計画及び成長可能性資料の中にFY26～FY28の正式中期経営計画が掲載され、外部市場統計・事業説明・リスク情報と会社計画を分離していることを確認する。",
+      "expectedEvidenceOriginalPdfPages": [1, 2, 3, 4],
+      "status": "pending"
+    },
+    {
+      "id": "financial_plan",
+      "description": "FY24・FY25実績、FY26～FY28計画の売上高・営業利益を図表で再確認し、億円から百万円への換算を検算する。",
+      "expectedEvidenceOriginalPdfPages": [3, 4],
+      "status": "pending"
+    },
+    {
+      "id": "organic_growth_and_ma_separation",
+      "description": "FY28売上高100億円、FY25～FY28売上CAGR約38%がオーガニック目標であり、M&Aはプラスアルファであることを確認する。",
+      "expectedEvidenceOriginalPdfPages": [3, 4],
+      "status": "pending"
+    },
+    {
+      "id": "advisor_kpis",
+      "description": "FY26期末150人、FY27期末200人超、FY28期末260人超、一人当たり売上高357万円／月の年度・単位・範囲を確認する。",
+      "expectedEvidenceOriginalPdfPages": [3, 6],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "クライアントシフト、求職者集客・DB活用、AIによる早期戦力化、人員拡大、生涯キャリアハブ・M&Aの構造を確認する。",
+      "expectedEvidenceOriginalPdfPages": [3, 6, 7, 10, 28, 29],
+      "status": "pending"
+    },
+    {
+      "id": "capital_and_shareholder_return",
+      "description": "人材採用、M&A、事業機会、AIシステムへの成長投資を優先し、適切な投資機会がなくなった段階で自己株取得・配当等を検討する順序と、固定投資額・配当性向が非開示であることを確認する。",
+      "expectedEvidenceOriginalPdfPages": [10],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、訂正後公式PDFリンク、年度、単位、削除ページ非表示、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

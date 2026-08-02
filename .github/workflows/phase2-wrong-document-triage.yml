@@ -1,0 +1,70 @@
+name: Phase 2 Wrong Document Triage
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'scripts/triage_phase2_wrong_documents.py'
+      - 'operations/quality-rebase/phase2/source-relevance-v2/**'
+      - '.github/workflows/phase2-wrong-document-triage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-wrong-document-triage-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebase on latest branch
+        run: git pull --rebase origin agent/quality-rebase-phase0-2
+
+      - name: Build audited 60-company repair queue
+        run: python scripts/triage_phase2_wrong_documents.py
+
+      - name: Validate approval safety
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('operations/quality-rebase/phase2/source-repairs/likely-wrong-document-queue-v1.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert d['counts']['companies'] == 60
+          assert d['counts']['recovered'] == 0
+          assert d['counts']['deepVerificationApproved'] == 0
+          assert d['approvalSafety']['automaticFactCompletionAllowed'] is False
+          assert d['approvalSafety']['automaticApprovalAllowed'] is False
+          assert d['approvalSafety']['deepVerificationApproved'] is False
+          assert all(row['status'] == 'queued_official_ir_source_recovery' for row in d['companies'])
+          print('wrong-document repair queue safety: ok')
+          PY
+
+      - name: Commit repair queue
+        run: |
+          path='operations/quality-rebase/phase2/source-repairs/likely-wrong-document-queue-v1.json'
+          if git diff --quiet -- "$path"; then
+            echo 'No repair queue changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$path"
+          git commit -m 'quality: 誤資料候補60社を修復キューへ分類'
+          git push origin HEAD:agent/quality-rebase-phase0-2

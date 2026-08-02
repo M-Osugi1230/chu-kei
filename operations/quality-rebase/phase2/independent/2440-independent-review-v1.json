@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "2440",
+    "name": "ぐるなび"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2440-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画2028 ～指数関数的成長への『始動』～",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/24400/140120260512526671.pdf",
+    "pdfSha256": "3201fa0223f78e78989a1e1b1ef2730b1158b1be6b708f79594cd04ac586898d",
+    "pageCount": 50
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社ぐるなび、証券コード2440、公表日2026年5月13日、PDFハッシュ、50ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "候補の更新資料区分ではなく、2027年3月期～2029年3月期を対象に新規策定された正式中計であることを確認する。",
+      "expectedEvidencePdfPages": [1, 16],
+      "status": "pending"
+    },
+    {
+      "id": "fiscal_year_mapping",
+      "description": "資料内FY2026～FY2028が2027年3月期～2029年3月期に対応することを確認する。",
+      "expectedEvidencePdfPages": [1, 5, 16, 20, 21],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "前・中期事業方針FY2023～FY2025、現行FY2026～FY2028、2029年度以降の次期計画構想を分離していることを確認する。",
+      "expectedEvidencePdfPages": [5, 6, 7, 48],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "FY2028の売上189億円、営業利益13億円、営業利益率7%、ROE21%、ROIC16%を再確認する。",
+      "expectedEvidencePdfPages": [16, 21, 44, 46],
+      "status": "pending"
+    },
+    {
+      "id": "store_targets",
+      "description": "FY2028 4Qの有料加盟6万店舗、総加盟10万店舗と各CAGRを再確認する。",
+      "expectedEvidencePdfPages": [5, 16, 22, 48],
+      "status": "pending"
+    },
+    {
+      "id": "market_data_boundary",
+      "description": "インバウンド、BPO、AI、決済等の市場予測をぐるなび自身の売上目標として扱っていないことを確認する。",
+      "expectedEvidencePdfPages": [12, 19, 27],
+      "status": "pending"
+    },
+    {
+      "id": "capital_sources",
+      "description": "期首現預金33億円、営業CF40億円、資産圧縮2億円の基本原資75億円を再計算する。",
+      "expectedEvidencePdfPage": 47,
+      "status": "pending"
+    },
+    {
+      "id": "capital_uses",
+      "description": "借入返済6億円、投資30億円、株主還元2億円＋α、期末現預金37億円を目視確認し、＋αを落としていないことを確認する。",
+      "expectedEvidencePdfPage": 47,
+      "status": "pending"
+    },
+    {
+      "id": "balance_sheet_guidelines",
+      "description": "D/Eレシオ0.5倍程度、自己資本比率45%以上、手元流動性2か月分以上を確認する。",
+      "expectedEvidencePdfPages": [44, 47],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "FY2028での復配計画と株主還元2億円＋αを確認し、1株配当や配当性向の確約に変換していないことを確認する。",
+      "expectedEvidencePdfPages": [44, 47],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、単位、楽天協業表現、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

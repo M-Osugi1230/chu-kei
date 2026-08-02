@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-02T10:40:00+09:00",
+  "updatedAt": "2026-08-02T11:00:00+09:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -32,17 +32,17 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 10,
-    "formalPlanConfirmed": 10,
-    "primaryReviewComplete": 10,
+    "sourceIdentityConfirmed": 12,
+    "formalPlanConfirmed": 12,
+    "primaryReviewComplete": 12,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave01-v1.json",
-    "independentReviewReady": 8,
+    "independentReviewReady": 10,
     "additionalSourceMappingRequired": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 440
+    "remainingPrimaryReviews": 438
   },
   "completedPrimaryReviews": [
     {
@@ -122,6 +122,26 @@
       "sourceClassification": "official_formal_management_plan"
     },
     {
+      "order": 63,
+      "code": "175A",
+      "name": "Will Smart",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/175A-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/175A-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_growth_potential_document_with_formal_management_plan"
+    },
+    {
+      "order": 65,
+      "code": "421A",
+      "name": "ムービン・ストラテジック・キャリア",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/421A-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/421A-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_growth_potential_document_with_formal_management_plan"
+    },
+    {
       "order": 66,
       "code": "4612",
       "name": "日本ペイントホールディングス",
@@ -156,66 +176,28 @@
     {
       "workstream": "primary_review_wave01",
       "companies": 10,
-      "status": "in_progress",
-      "completionCount": 8,
-      "remainingCount": 2,
+      "status": "complete",
+      "completionCount": 10,
+      "remainingCount": 0,
       "file": "operations/quality-rebase/phase2/primary-review-wave01-v1.json"
     },
     {
-      "workstream": "independent_review_4114",
-      "companies": 1,
+      "workstream": "independent_review_ready_queue",
+      "companies": 10,
       "status": "ready",
       "completionCount": 0,
-      "file": "operations/quality-rebase/phase2/independent/4114-independent-review-v1.json"
-    },
-    {
-      "workstream": "independent_review_4203",
-      "companies": 1,
-      "status": "ready",
-      "completionCount": 0,
-      "file": "operations/quality-rebase/phase2/independent/4203-independent-review-v1.json"
-    },
-    {
-      "workstream": "independent_review_4401",
-      "companies": 1,
-      "status": "ready",
-      "completionCount": 0,
-      "file": "operations/quality-rebase/phase2/independent/4401-independent-review-v1.json"
-    },
-    {
-      "workstream": "independent_review_3050",
-      "companies": 1,
-      "status": "ready",
-      "completionCount": 0,
-      "file": "operations/quality-rebase/phase2/independent/3050-independent-review-v1.json"
-    },
-    {
-      "workstream": "independent_review_9247",
-      "companies": 1,
-      "status": "ready",
-      "completionCount": 0,
-      "file": "operations/quality-rebase/phase2/independent/9247-independent-review-v1.json"
-    },
-    {
-      "workstream": "independent_review_6103",
-      "companies": 1,
-      "status": "ready",
-      "completionCount": 0,
-      "file": "operations/quality-rebase/phase2/independent/6103-independent-review-v1.json"
-    },
-    {
-      "workstream": "independent_review_4612",
-      "companies": 1,
-      "status": "ready",
-      "completionCount": 0,
-      "file": "operations/quality-rebase/phase2/independent/4612-independent-review-v1.json"
-    },
-    {
-      "workstream": "independent_review_9861",
-      "companies": 1,
-      "status": "ready",
-      "completionCount": 0,
-      "file": "operations/quality-rebase/phase2/independent/9861-independent-review-v1.json"
+      "files": [
+        "operations/quality-rebase/phase2/independent/4114-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4203-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4401-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3050-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/9247-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6103-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/175A-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/421A-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4612-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/9861-independent-review-v1.json"
+      ]
     },
     {
       "workstream": "likely_wrong_document_repair",
@@ -239,12 +221,12 @@
     }
   ],
   "nextProcessingOrder": [
-    "第1ウェーブ残り2社について成長可能性資料と正式中計の境界、全文、数値、資本政策、項目別証跡を確認する",
-    "日本触媒、住友ベークライト、ADEKA、DCMホールディングス、TREホールディングス、オークマ、日本ペイントホールディングス、吉野家ホールディングスを独立確認者が再確認する",
+    "第1ウェーブ10社の品質ゲートを通過させ、レビュー記録・独立確認票・正本件数の整合を確定する",
+    "第2ウェーブを一次レビュー候補から選定し、正式資料優先で次の10社を割り当てる",
+    "10社の独立再確認を別確認者へ引き渡し、原資料・図表・年度・単位・範囲を再確認する",
     "60社の誤資料候補を負のシグナル別に分解し、公式IRページから代替資料を再特定する",
     "52社の収集失敗をHTTP種別・アクセス拒否・容量超過・解析失敗に分解して再取得する",
-    "14社のPDF未特定について公式HTMLを一次証跡として確認し、正式PDFまたは公式ページを再探索する",
-    "一次レビュー完了企業のみ独立再確認キューへ移す"
+    "14社のPDF未特定について公式HTMLを一次証跡として確認し、正式PDFまたは公式ページを再探索する"
   ],
   "approvalRule": {
     "primaryReviewDoesNotEqualApproval": true,

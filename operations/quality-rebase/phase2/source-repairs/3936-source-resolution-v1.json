@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "quality-rebase-phase2-source-resolution-v1",
+  "company": {
+    "code": "3936",
+    "name": "グローバルウェイ"
+  },
+  "candidate": {
+    "title": "事業計画及び成長可能性について",
+    "candidatePublishedDate": "2026-06-25",
+    "officialUrl": "https://www2.jpx.co.jp/disc/39360/140120260623577326.pdf",
+    "pdfSha256": "e279512f1a71f760d2b4d93772df2e3c4b8ef4ed9907ab2a86023d7e4bde3e1f",
+    "pageCount": 38,
+    "documentTypeCandidate": "growth_potential_document"
+  },
+  "finding": {
+    "type": "formal_management_plan_boundary_not_met",
+    "sourceIdentityConfirmed": true,
+    "growthPotentialDocumentConfirmed": true,
+    "formalManagementPlanConfirmed": false,
+    "coverDateDiscrepancy": {
+      "coverDate": "2025-06-25",
+      "candidatePublishedDate": "2026-06-25",
+      "note": "資料本文は2026年3月期実績と2027年3月期予想を含み、著作権表記も2026年であるため、表紙日付の独立確認が必要。"
+    },
+    "evidence": [
+      {
+        "pdfPage": 5,
+        "statement": "2030年3月期の営業利益約14億円・純利益10億円以上を長期目標として掲げている。"
+      },
+      {
+        "pdfPage": 21,
+        "statement": "2030年目標を含む次期中長期計画を2027年3月期中に策定予定と明記しており、本資料時点では正式な次期中長期計画が未策定である。"
+      }
+    ],
+    "reason": "成長可能性資料内に経営方針と長期目標はあるが、資料自身が次期中長期計画を今後策定すると明記している。現時点の正式中計として一次レビュー完了扱いにできない。"
+  },
+  "resolution": {
+    "status": "source_isolated_formal_plan_search_required",
+    "waveEligibility": false,
+    "replacementRequired": true,
+    "replacementCompany": {
+      "code": "2303",
+      "name": "ドーン",
+      "reason": "2026年7月公表の中期経営計画進捗説明資料が収集済みで、現行計画の期間・実績・目標の境界を人手確認できるため。"
+    },
+    "nextActions": [
+      "グローバルウェイが次期中長期計画を正式公表した後に再収集する",
+      "表紙日付と適時開示日付の不一致を独立確認する",
+      "現行資料は成長可能性・経営方針資料として保管し、正式中計ラベルを付与しない"
+    ]
+  },
+  "approval": {
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

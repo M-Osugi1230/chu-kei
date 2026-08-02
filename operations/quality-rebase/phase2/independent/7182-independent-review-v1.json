@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "7182",
+    "name": "ゆうちょ銀行"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7182-primary-review-v1.json",
+  "source": {
+    "title": "ゆうちょ銀行 中期経営計画（2026～2028年度）",
+    "officialLandingPage": "https://www.jp-bank.japanpost.jp/aboutus/company/abt_cmp_strategy.html",
+    "officialUrl": "https://www.jp-bank.japanpost.jp/aboutus/company/pdf/rev_managementplan2026.pdf",
+    "pdfSha256": "5023c76f2c3b073b61216bfe0c83a71343c5ab82699d41b830d9bcce27fd1e18",
+    "pageCount": 41
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "ゆうちょ銀行公式サイト、会社名、計画名称、公表日2026年5月15日、公式PDF URL、ハッシュ、41ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 3],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period_and_vision_boundary",
+      "description": "2026～2028年度の3カ年中計と、2040年の2つの中長期ビジョンを区別して確認する。",
+      "expectedEvidencePdfPages": [2, 5, 6],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2028年度の当期純利益1兆円超、株主資本ベースROE10%程度、OHR40%程度、CET1平時目標11～13%を再確認する。",
+      "expectedEvidencePdfPages": [3, 11, 13, 16],
+      "status": "pending"
+    },
+    {
+      "id": "actual_target_separation",
+      "description": "2025年度実績の当期純利益5,255億円、ROE5.3%、OHR55.5%等を2028年度目標と混同していないことを確認する。",
+      "expectedEvidencePdfPages": [11, 13],
+      "status": "pending"
+    },
+    {
+      "id": "growth_strategy_kpis",
+      "description": "通帳アプリ2,500万口座、長期資産形成制度110万人、資金収支等2.3兆円超、子会社GP投資60件600億円程度の年度・単位・範囲を確認する。",
+      "expectedEvidencePdfPages": [3, 17, 20, 23, 27],
+      "status": "pending"
+    },
+    {
+      "id": "it_investment",
+      "description": "新中計期間のIT投資総額5,000億円程度がAI等新技術投資を含むことを確認する。",
+      "expectedEvidencePdfPages": [14],
+      "status": "pending"
+    },
+    {
+      "id": "capital_definition",
+      "description": "CET1比率がバーゼルIII最終化完全適用・その他有価証券評価益除く内部管理ベースであり、規制所要自己資本比率4%以上と異なることを確認する。",
+      "expectedEvidencePdfPages": [16],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向50%程度、累進的配当、現状年1回期末配当、中間配当復活・自己株式取得・特別配当等の検討方針を再確認する。",
+      "expectedEvidencePdfPages": [3, 15, 16],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation_boundary",
+      "description": "CET1比率見通し図を固定金額のキャピタルアロケーションへ変換していないことを確認する。",
+      "expectedEvidencePdfPages": [16],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、図表・改行表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

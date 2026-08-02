@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "3050",
+    "name": "DCMホールディングス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3050-primary-review-v1.json",
+  "source": {
+    "title": "DCMホールディングス 第4次中期経営計画（2026年度-2028年度）",
+    "officialUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "pdfSha256": "d9fb2a477cf373adfe2ae909080297f731573c27e25e2e4e60fccf4816939c04",
+    "pageCount": 31
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード3050、公開日2026年4月14日、第4次中期経営計画の表題、公式開示URL、PDFハッシュを独立に再確認する。",
+      "expectedEvidencePdfPages": [
+        1,
+        2
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period_and_boundary",
+      "description": "計画期間が2026年度から2028年度までであり、2030年長期事業構想および2026年度単年度予想と混同していないことを確認する。",
+      "expectedEvidencePdfPages": [
+        1,
+        9,
+        27,
+        30
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2028年度の売上高6,500億円、売上総利益率35.9%、営業利益423億円、営業利益率6.5%、経常利益405億円、当期純利益265億円、ROE8.0%を再計数し、2025年度実績と分離する。",
+      "expectedEvidencePdfPages": [
+        1,
+        27
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "顧客、商品、店舗、リフォーム、DXの5事業戦略と、財務、人的資本、サステナビリティの位置付けを再確認する。",
+      "expectedEvidencePdfPages": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        20,
+        21
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "business_kpis",
+      "description": "アプリ会員600万人、PB比率40%、既存店客数+4.0%、リフォーム売上高500億円の年度、比較基準、対象範囲を確認する。",
+      "expectedEvidencePdfPages": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "キャッシュイン・アウト各約1,500億円、営業CF1,200億円、新店・改装390億円、システム・物流150億円、配当210億円を再確認する。未来投資（M&A等）と自己株式取得の最大900億円枠が共通枠か個別枠かを図表レベルで判定する。",
+      "expectedEvidencePdfPages": [
+        17
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "総還元性向70%目標、配当性向40%目安、自己株式取得方針、保有自己株式5%目安と超過分償却、配当210億円の下限注記を再確認する。",
+      "expectedEvidencePdfPages": [
+        17,
+        18
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "capital_efficiency",
+      "description": "PBR1.0倍以上、ROE8.0%以上、PER10～15倍の目標と2025年度実績を分離して確認する。",
+      "expectedEvidencePdfPages": [
+        19
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "human_capital_and_sustainability",
+      "description": "人的資本とサステナビリティについて、方針記述と定量目標の有無を再確認し、記載のない数値を補完していないことを確認する。",
+      "expectedEvidencePdfPages": [
+        20,
+        21
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後にリンク、表示、検索、数値単位、年度、対象範囲、改行崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

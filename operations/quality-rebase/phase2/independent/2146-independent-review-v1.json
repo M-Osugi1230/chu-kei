@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {"code":"2146","name":"UTグループ"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
+  "source": {
+    "title": "第4次中期経営計画ローリングプラン（2026年5月更新）",
+    "officialLandingPage": "https://www.ut-g.co.jp/ir/library/plan",
+    "officialUrl": "https://www.ut-g.co.jp/hubfs/ir/library/plan/UTG_rollingplan_2026_ja.pdf",
+    "pdfSha256": "ae89935ed53f5b1e4a687eb98e5a4891924970b8405a65d5dd7ba9539312b894",
+    "pageCount": 11,
+    "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/2146-source-resolution-v1.json"
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {"id":"source_identity","description":"会社公式IRサイト、2026年5月11日のローリングプラン、公式URL、PDFハッシュ、11ページを確認する。","expectedEvidencePdfPages":[1,2],"status":"pending"},
+    {"id":"candidate_metadata_correction","description":"候補メタデータの2025年更新ではなく、収集された最新公式PDFが2026年更新版であることを確認する。","status":"pending"},
+    {"id":"rolling_boundary","description":"2023年元計画、2025年ローリング版、2026年ローリング版、2030年最終目標を区別する。","expectedEvidencePdfPages":[2,3],"status":"pending"},
+    {"id":"current_2027_targets","description":"2027年3月期の技術職社員39,281人、売上1,960億円、EBITDA190億円、純利益125億円、EPS94.98円を確認する。","expectedEvidencePdfPages":[3],"status":"pending"},
+    {"id":"previous_target_exclusion","description":"2025年版の技術職社員42,550人、売上2,230億円、EBITDA330億円、純利益200億円を現行目標としていないことを確認する。","expectedEvidencePdfPages":[3],"status":"pending"},
+    {"id":"long_term_targets","description":"2030年3月期の技術職社員5万人、売上3,000億円、EBITDA450億円、EBITDA率15%、純利益250億円を確認する。","expectedEvidencePdfPages":[3],"status":"pending"},
+    {"id":"capital_policy","description":"オーガニック成長、M&A・新規事業、財務健全性、株主還元の配分方針と、固定投資総額が非開示であることを確認する。","expectedEvidencePdfPages":[8,9,10,11],"status":"pending"},
+    {"id":"shareholder_return","description":"総還元性向60%以上と最低配当168.19円の対象年度・株式単位・自己株式取得との関係を確認する。","expectedEvidencePdfPages":[10,11],"status":"pending"},
+    {"id":"post_publication","description":"公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、図表表示を確認する。","status":"pending"}
+  ],
+  "review": {"minimumDistinctReviewers":2,"primaryReviewerMustNotSelfApprove":true,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"completedAt":null,"reviewer":null}
+}

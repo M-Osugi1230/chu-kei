@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4612",
+    "name": "日本ペイントホールディングス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4612-primary-review-v1.json",
+  "source": {
+    "title": "日本ペイント 中期経営方針アップデート説明会 ～「アセット・アセンブラー」としてのロードマップ～",
+    "officialLandingPage": "https://www.nipponpaint-holdings.com/ir/library/materials/20260213_file2/",
+    "officialUrl": "https://www.nipponpaint-holdings.com/ir/assets/files/name/20260213ir02_2j.pdf",
+    "pdfSha256": "f2fc849656ed27b3bb7d9e9ed171b3d61416f84ce247d3e32dfe7d8fb3613507",
+    "pageCount": 26
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社公式IRページ、会社名、資料名称、2026年2月13日の公表日、公式PDF URL、PDFハッシュ、26ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "formal_plan_boundary",
+      "description": "2024年4月策定方針の2026年アップデートであり、新規の固定3カ年計画として扱っていないことを確認する。",
+      "expectedEvidencePdfPages": [1, 5],
+      "status": "pending"
+    },
+    {
+      "id": "medium_term_growth_targets",
+      "description": "2025年事業ポートフォリオを前提とする売上収益CAGR MSD、調整後営業利益CAGR HSD、調整後EPS CAGR HSDを確認し、絶対額目標へ変換していないことを確認する。",
+      "expectedEvidencePdfPages": [3, 6, 14],
+      "status": "pending"
+    },
+    {
+      "id": "baseline_actuals",
+      "description": "2025年通期の売上収益1兆7,742億円、調整後営業利益2,749億円、同利益率15.5%、調整後EPS86.0円を目標値と混同していないことを確認する。",
+      "expectedEvidencePdfPages": [4],
+      "status": "pending"
+    },
+    {
+      "id": "ma_criteria",
+      "description": "買収初年度EPS貢献、3年以内ROIC>WACC、ボルトオン型・アセット取得型、対象会社の競争優位性要件を確認する。",
+      "expectedEvidencePdfPages": [3, 9],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "設備投資は売上収益の約3%、累進配当、M&A優先、M&Aがない場合の借入返済という配分方針を確認する。",
+      "expectedEvidencePdfPages": [13],
+      "status": "pending"
+    },
+    {
+      "id": "leverage_reference",
+      "description": "2026年末Net Debt/EBITDA予想2.3～2.5倍の条件・注記と、2025年末の借入期間・平均金利・固定変動比率を再確認する。",
+      "expectedEvidencePdfPages": [13],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "累進配当方針を確認し、資料にない固定配当性向・総還元性向を補完していないことを確認する。",
+      "expectedEvidencePdfPages": [13],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_scope",
+      "description": "DuluxGroup太平洋、日本グループ等の地域別2030年環境目標と2050-2060年ロードマップを、連結一律目標へ誤変換していないことを確認する。",
+      "expectedEvidencePdfPages": [24, 25],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、対象範囲、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

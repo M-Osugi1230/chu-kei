@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4902",
+    "name": "コニカミノルタ"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4902-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画 Corporate Plan 2026-2028",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/49020/140120260423508783.pdf",
+    "pdfSha256": "70aacb636a9be464db5b6a7d9264f7c55113286485e86ba6547b8e11e762b930",
+    "pageCount": 35
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "コニカミノルタ株式会社、証券コード4902、公表日2026年4月23日、PDFハッシュ、35ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "候補の更新資料区分ではなく、2026～2028年度の新規正式中計であることを確認する。",
+      "expectedEvidencePdfPages": [1, 8],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "2023-2025前中計、FY2025見通し、FY2028中計目標、長期ROE10%以上を分離していることを確認する。",
+      "expectedEvidencePdfPages": [3, 5, 6, 10, 30],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "FY2028の事業貢献利益率6.5%、当期利益率3.8%、財務レバレッジ2.2倍、総資産回転率0.98倍、ROE8%、ROIC6%を確認する。",
+      "expectedEvidencePdfPages": [10, 20, 24, 30],
+      "status": "pending"
+    },
+    {
+      "id": "sales_cagr",
+      "description": "売上高はFY2025～FY2028のCAGR3%で開示され、FY2028絶対額を逆算値で公式目標化していないことを確認する。",
+      "expectedEvidencePdfPages": [10, 11],
+      "status": "pending"
+    },
+    {
+      "id": "business_growth",
+      "description": "事業別売上・事業貢献利益CAGRと、インオーガニック成長を含まないという注記を確認する。",
+      "expectedEvidencePdfPage": 11,
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "FY2026～FY2028のキャッシュイン2,300億円と、設備投資・投融資1,800億円、有利子負債圧縮・株主還元500億円の一致を再計算する。",
+      "expectedEvidencePdfPage": 21,
+      "status": "pending"
+    },
+    {
+      "id": "growth_investment",
+      "description": "成長投資900億円が設備投資・投融資1,800億円の内数であり、追加計上されていないことを確認する。",
+      "expectedEvidencePdfPage": 21,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "有利子負債圧縮と株主還元の合計500億円のみが開示され、株主還元単独額・配当性向・1株配当が未開示であることを確認する。",
+      "expectedEvidencePdfPages": [21, 30],
+      "status": "pending"
+    },
+    {
+      "id": "growth_option_boundary",
+      "description": "成長の芽150～200億円規模は中計目標に含まれない長期イメージであることを確認する。",
+      "expectedEvidencePdfPages": [23, 24],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、事業貢献利益の定義、億円・百万円換算、表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

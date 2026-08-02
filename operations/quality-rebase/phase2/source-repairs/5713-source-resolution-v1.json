@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "quality-rebase-phase2-source-resolution-v1",
+  "company": {
+    "code": "5713",
+    "name": "住友金属鉱山"
+  },
+  "expectedSource": {
+    "candidateTitle": "住友金属鉱山 中期経営計画2027",
+    "candidatePublishedDate": "2025-05-12",
+    "officialLandingPage": "https://www.smm.co.jp/ir/management/plan/",
+    "candidatePdfUrl": "https://www.smm.co.jp/ir/management/plan/pdf/070220setsumeikai.pdf"
+  },
+  "collectedDocument": {
+    "actualTitle": "2006年中期経営計画 成長戦略の推進による企業価値のさらなる向上",
+    "actualPublishedDate": "2007-02-20",
+    "actualPlanPeriod": "2006年中期経営計画",
+    "pageCount": 42,
+    "pdfSha256": "ac51680059e80976d35b321fcf45a99124303d422f2e90c662e2e07cfb5d6851",
+    "identityEvidence": "抽出本文の表紙に『2006年中期経営計画』、2007年2月20日、旧社長名が明記されている。"
+  },
+  "finding": {
+    "type": "collector_selected_obsolete_management_plan",
+    "severity": "blocking",
+    "expectedAndActualDocumentDiffer": true,
+    "yearMismatch": true,
+    "titleMismatch": true,
+    "formalPlanReviewAllowed": false,
+    "statement": "2025年公表の中計候補に、2007年公表の旧中計PDFが接続されているため、一次レビュー対象として使用しない。"
+  },
+  "resolution": {
+    "status": "blocked_wrong_document_replacement_source_required",
+    "removedFromPrimaryReviewWave": true,
+    "replacementCompanyCode": "2146",
+    "replacementCompanyName": "UTグループ",
+    "requiredActions": [
+      "住友金属鉱山公式IRページから2025年中期経営計画の直接PDF URLを再特定する",
+      "表紙、公開日、計画期間、ページ数、PDFハッシュを確認する",
+      "旧2006年中計PDFを回帰テスト用の誤資料として隔離する",
+      "正しい資料の収集と関連性監査が完了するまで一次レビューへ再投入しない"
+    ]
+  },
+  "review": {
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "resolvedAt": null,
+    "reviewer": null
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-02T02:58:29+00:00",
+  "updatedAt": "2026-08-02T02:59:12+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,9 +34,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 26,
-    "formalPlanConfirmed": 26,
-    "primaryReviewComplete": 26,
+    "sourceIdentityConfirmed": 27,
+    "formalPlanConfirmed": 27,
+    "primaryReviewComplete": 27,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 3,
@@ -47,11 +47,11 @@
       "operations/quality-rebase/phase2/primary-review-wave02-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave03-v1.json"
     ],
-    "independentReviewReady": 24,
+    "independentReviewReady": 25,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 424
+    "remainingPrimaryReviews": 423
   },
   "completedPrimaryReviews": [
     {
@@ -312,6 +312,16 @@
       "status": "primary_review_complete_independent_review_ready",
       "sourceCorrectionRequired": false,
       "sourceClassification": "official_growth_potential_document_with_formal_management_plan"
+    },
+    {
+      "order": 150,
+      "code": "6030",
+      "name": "アドベンチャー",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6030-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6030-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
     }
   ],
   "qualityFindings": [
@@ -364,13 +374,13 @@
       "workstream": "primary_review_wave03",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 4,
-      "remainingCount": 6,
+      "completionCount": 5,
+      "remainingCount": 5,
       "file": "operations/quality-rebase/phase2/primary-review-wave03-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 24,
+      "companies": 25,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -397,7 +407,8 @@
         "operations/quality-rebase/phase2/independent/2303-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/3447-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/368A-independent-review-v1.json",
-        "operations/quality-rebase/phase2/independent/441A-independent-review-v1.json"
+        "operations/quality-rebase/phase2/independent/441A-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6030-independent-review-v1.json"
       ]
     },
     {

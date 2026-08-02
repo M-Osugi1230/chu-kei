@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "5703",
+    "name": "日本軽金属ホールディングス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/5703-primary-review-v1.json",
+  "source": {
+    "title": "長期ビジョン『2035ビジョン』、中期経営計画『26中計』",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/57030/140120260514533287.pdf",
+    "pdfSha256": "2fef0091b5fc084a0c594b2df111f1b93116048a13b441b9b141a6b9ad5d2141",
+    "pageCount": 17
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "日本軽金属ホールディングス株式会社、証券コード5703、公表日2026年5月15日、PDFハッシュ、17ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "候補の更新資料区分ではなく、2035ビジョンと新規3カ年26中計を同時策定した資料であることを確認する。",
+      "expectedEvidencePdfPages": [1, 2, 4, 5],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "23中計実績、F26予想、26中計目標、2035ビジョンを分離していることを確認する。",
+      "expectedEvidencePdfPages": [2, 3, 11, 13],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "26中計期間内の早期に経常利益300億円超、ROIC8%以上を目指すことを確認する。",
+      "expectedEvidencePdfPage": 11,
+      "status": "pending"
+    },
+    {
+      "id": "long_term_target",
+      "description": "ROIC10%が2035ビジョンの長期目標であり、26中計目標8%以上と混同されていないことを確認する。",
+      "expectedEvidencePdfPage": 11,
+      "status": "pending"
+    },
+    {
+      "id": "capital_sources_and_uses",
+      "description": "営業CF1,500億円、投資CF1,100億円、研究開発200億円、株主還元200億円程度を再計算する。",
+      "expectedEvidencePdfPage": 14,
+      "status": "pending"
+    },
+    {
+      "id": "investment_breakdown",
+      "description": "成長・新商品250億円、省力化・安全450億円、維持更新300億円、共創投資・M&A100億円が投資CF1,100億円と一致することを確認する。",
+      "expectedEvidencePdfPage": 14,
+      "status": "pending"
+    },
+    {
+      "id": "depreciation_boundary",
+      "description": "減価償却費720億円を追加キャッシュアウトとして重複計上していないことを図表で確認する。",
+      "expectedEvidencePdfPage": 14,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "26中計の総還元性向40%程度、自己株取得を含むこと、2026年度年間配当100円は単年度予想であることを確認する。",
+      "expectedEvidencePdfPages": [14, 15],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、F年度表記、億円・百万円換算、長期・中期目標の表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

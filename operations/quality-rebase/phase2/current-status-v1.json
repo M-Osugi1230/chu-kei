@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-02T11:40:00+09:00",
+  "updatedAt": "2026-08-02T12:05:00+09:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -32,9 +32,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 12,
-    "formalPlanConfirmed": 12,
-    "primaryReviewComplete": 12,
+    "sourceIdentityConfirmed": 13,
+    "formalPlanConfirmed": 13,
+    "primaryReviewComplete": 13,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 2,
@@ -44,11 +44,11 @@
       "operations/quality-rebase/phase2/primary-review-wave01-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave02-v1.json"
     ],
-    "independentReviewReady": 10,
+    "independentReviewReady": 11,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 438
+    "remainingPrimaryReviews": 437
   },
   "completedPrimaryReviews": [
     {
@@ -159,6 +159,16 @@
       "sourceClassification": "official_management_policy_update"
     },
     {
+      "order": 68,
+      "code": "7130",
+      "name": "ヤマエグループホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7130-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7130-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan"
+    },
+    {
       "order": 70,
       "code": "9861",
       "name": "吉野家ホールディングス",
@@ -202,13 +212,13 @@
       "workstream": "primary_review_wave02",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 0,
-      "remainingCount": 10,
+      "completionCount": 1,
+      "remainingCount": 9,
       "file": "operations/quality-rebase/phase2/primary-review-wave02-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 10,
+      "companies": 11,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -221,6 +231,7 @@
         "operations/quality-rebase/phase2/independent/175A-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/421A-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/4612-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/7130-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/9861-independent-review-v1.json"
       ]
     },
@@ -253,10 +264,10 @@
     }
   ],
   "nextProcessingOrder": [
-    "第2ウェーブ10社の資料区分・全文・主要数値・資本政策・項目別証跡を確認する",
-    "ヤマエグループホールディングスの正式中計Create ONE 28から第2ウェーブ一次レビューを開始する",
+    "第2ウェーブ残り9社の資料区分・全文・主要数値・資本政策・項目別証跡を確認する",
+    "次にオープンアップグループの中期経営方針を一次レビューする",
     "ムービン・ストラテジック・キャリアの訂正後36ページ版PDF直接URL・ハッシュを独立確認者が特定する",
-    "第1ウェーブ10社の独立再確認を別確認者へ引き渡し、原資料・図表・年度・単位・範囲を再確認する",
+    "独立再確認可能11社を別確認者へ引き渡し、原資料・図表・年度・単位・範囲を再確認する",
     "60社の誤資料候補を負のシグナル別に分解し、公式IRページから代替資料を再特定する",
     "52社の収集失敗をHTTP種別・アクセス拒否・容量超過・解析失敗に分解して再取得する",
     "14社のPDF未特定について公式HTMLを一次証跡として確認し、正式PDFまたは公式ページを再探索する"

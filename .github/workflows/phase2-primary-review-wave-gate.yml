@@ -22,8 +22,15 @@ permissions:
 
 jobs:
   validate-primary-review-wave:
+    name: validate-primary-review-wave-${{ matrix.wave }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        wave:
+          - '01'
+          - '02'
     steps:
       - name: Checkout target branch
         uses: actions/checkout@v4
@@ -36,6 +43,6 @@ jobs:
       - name: Validate queue integrity and approval safety
         run: |
           python scripts/validate_phase2_primary_review_wave.py \
-            --wave operations/quality-rebase/phase2/primary-review-wave01-v1.json \
+            --wave operations/quality-rebase/phase2/primary-review-wave${{ matrix.wave }}-v1.json \
             --status operations/quality-rebase/phase2/current-status-v1.json \
             --repo-root .

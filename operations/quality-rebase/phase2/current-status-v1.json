@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-02T02:17:45+00:00",
+  "updatedAt": "2026-08-02T02:50:14+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,23 +34,24 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 22,
-    "formalPlanConfirmed": 22,
-    "primaryReviewComplete": 22,
+    "sourceIdentityConfirmed": 23,
+    "formalPlanConfirmed": 23,
+    "primaryReviewComplete": 23,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
-    "primaryReviewWavesAssigned": 2,
-    "primaryReviewCompaniesAssignedTotal": 20,
-    "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave02-v1.json",
+    "primaryReviewWavesAssigned": 3,
+    "primaryReviewCompaniesAssignedTotal": 30,
+    "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave03-v1.json",
     "primaryReviewWaveFiles": [
       "operations/quality-rebase/phase2/primary-review-wave01-v1.json",
-      "operations/quality-rebase/phase2/primary-review-wave02-v1.json"
+      "operations/quality-rebase/phase2/primary-review-wave02-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave03-v1.json"
     ],
-    "independentReviewReady": 20,
+    "independentReviewReady": 21,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 428
+    "remainingPrimaryReviews": 427
   },
   "completedPrimaryReviews": [
     {
@@ -271,6 +272,16 @@
       "status": "primary_review_complete_independent_review_ready",
       "sourceCorrectionRequired": false,
       "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 143,
+      "code": "3447",
+      "name": "信和",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3447-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3447-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
     }
   ],
   "qualityFindings": [
@@ -320,8 +331,16 @@
       "file": "operations/quality-rebase/phase2/primary-review-wave02-v1.json"
     },
     {
+      "workstream": "primary_review_wave03",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 1,
+      "remainingCount": 9,
+      "file": "operations/quality-rebase/phase2/primary-review-wave03-v1.json"
+    },
+    {
       "workstream": "independent_review_ready_queue",
-      "companies": 20,
+      "companies": 21,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -344,7 +363,8 @@
         "operations/quality-rebase/phase2/independent/7182-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/9684-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/6302-independent-review-v1.json",
-        "operations/quality-rebase/phase2/independent/8876-independent-review-v1.json"
+        "operations/quality-rebase/phase2/independent/8876-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3447-independent-review-v1.json"
       ]
     },
     {

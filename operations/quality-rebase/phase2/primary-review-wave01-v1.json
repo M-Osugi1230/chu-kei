@@ -1,7 +1,7 @@
 {
   "schemaVersion": "phase2-primary-review-wave-v1",
   "generatedAt": "2026-08-02T01:21:23+09:00",
-  "updatedAt": "2026-08-02T10:40:00+09:00",
+  "updatedAt": "2026-08-02T11:00:00+09:00",
   "wave": 1,
   "targetCompanies": 10,
   "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-v2/summary.json",
@@ -40,8 +40,13 @@
       "relevanceScore": 39,
       "pageCount": 40,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/175A/primary-review-template.json",
-      "status": "primary_review_assigned_formal_plan_boundary_required",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "growthPotentialDocumentSeparation", "fieldLevelEvidence"]
+      "reviewFile": "operations/quality-rebase/phase2/reviews/175A-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/175A-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "growthPotentialDocumentSeparation", "fieldLevelEvidence"],
+      "completedChecks": ["formalPlanBoundary", "growthPotentialDocumentSeparation", "fullTextReview", "visualFigureReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation", "actualPlanTargetSeparation", "marketForecastCompanyTargetSeparation", "valuationReferenceSeparation", "organicMaUpsideSeparation"],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
     },
     {
       "order": 65,
@@ -51,8 +56,13 @@
       "relevanceScore": 37,
       "pageCount": 37,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/421A/primary-review-template.json",
-      "status": "primary_review_assigned_formal_plan_boundary_required",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "growthPotentialDocumentSeparation", "fieldLevelEvidence"]
+      "reviewFile": "operations/quality-rebase/phase2/reviews/421A-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/421A-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "growthPotentialDocumentSeparation", "fieldLevelEvidence"],
+      "completedChecks": ["formalPlanBoundary", "growthPotentialDocumentSeparation", "fullTextReview", "visualFigureReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation", "actualPlanTargetSeparation", "organicMaUpsideSeparation", "marketDataCompanyTargetSeparation", "shareholderReturnDefinitionValidation"],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
     },
     {
       "order": 58,
@@ -162,7 +172,7 @@
       "independentReviewFile": "operations/quality-rebase/phase2/independent/4612-independent-review-v1.json",
       "status": "primary_review_complete_independent_review_ready",
       "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"],
-      "completedChecks": ["formalPlanBoundary", "growthPotentialDocumentSeparation", "fullTextReview", "visualFigureReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation", "actualForecastTargetSeparation", "cagrAbsoluteTargetSeparation", "regionalNonFinancialScopeValidation"],
+      "completedChecks": ["formalPlanBoundary", "managementPolicyUpdateSeparation", "fullTextReview", "visualFigureReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation", "actualForecastTargetSeparation", "cagrAbsoluteTargetSeparation", "regionalNonFinancialScopeValidation"],
       "automaticApprovalAllowed": false,
       "deepVerificationApproved": false
     }
@@ -172,8 +182,8 @@
     "formalManagementPlanCandidates": 2,
     "planRevisionOrUpdateCandidates": 6,
     "growthPotentialDocumentCandidates": 2,
-    "primaryReviewComplete": 8,
-    "independentReviewReady": 8,
+    "primaryReviewComplete": 10,
+    "independentReviewReady": 10,
     "deepVerificationApproved": 0
   },
   "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、項目別証跡を人が確認した場合のみ記録する。"

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4203",
+    "name": "住友ベークライト"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4203-primary-review-v1.json",
+  "source": {
+    "title": "住友ベークライト 中期経営計画2024-26",
+    "officialUrl": "https://www.sumibe.co.jp/ir/library/presentation/files/2024/p_001-2.pdf",
+    "pdfSha256": "a9bbfacf19c60a14ebd866221a21f376d32c8d9b4c4a38e9e67feabab8a3716d",
+    "pageCount": 31
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社公式ドメイン、会社名、公開日、計画名称、PDFハッシュ、31ページであることを独立に再確認する。",
+      "expectedEvidencePages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period_boundary",
+      "description": "計画期間が2024年度から2026年度までであり、2030年度のありたい姿および2027-29年度の次期計画表示と混同していないことを確認する。",
+      "expectedEvidencePages": [1, 8, 19],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "既存事業収益力強化、新商品・新ソリューション創出、全社力最大化の3中期戦略と、重点領域への資源集中を再確認する。",
+      "expectedEvidencePages": [18],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2026年度の売上収益3,450億円、事業利益400億円、事業利益率11.5%、ROE9.0%を2023年度実績および2030年度目標と区別して確認する。",
+      "expectedEvidencePages": [19],
+      "status": "pending"
+    },
+    {
+      "id": "segment_targets",
+      "description": "2026年度の半導体230億円・20.5%、高機能90億円・7.5%、QOL130億円・11.5%の事業利益と利益率を図表で再確認する。",
+      "expectedEvidencePages": [20],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "2024-26年度の設備投資500億円、成長投資200億円、戦略的投資500億円、株主還元300億円の区分、合計、期間を確認する。",
+      "expectedEvidencePages": [30],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "安定的・継続的な還元方針と配当性向40%程度、従来目安30%以上からの変更を再確認する。",
+      "expectedEvidencePages": [30],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_targets",
+      "description": "2026年度SDGs貢献製品売上収益比率65%と、2030年度GHG削減目標を中計目標・長期目標として区別して確認する。",
+      "expectedEvidencePages": [12, 13],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

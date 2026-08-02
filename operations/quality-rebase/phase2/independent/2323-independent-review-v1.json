@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "2323",
+    "name": "fonfun"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2323-primary-review-v1.json",
+  "source": {
+    "title": "第二次中期経営計画 プロジェクトフェニックスⅡ",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/23230/140120260525546407.pdf",
+    "pdfSha256": "c7b43493363e80b1db0198ec82db49be2c9f2d9ee3b3b5f528768c72b00fd85d",
+    "pageCount": 40
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社fonfun、証券コード2323、公表日2026年5月25日、PDFハッシュ、40ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 4],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "第一次FY24～FY26、第二次FY27～FY29、将来第三次FY30～FY32を分離していることを確認する。",
+      "expectedEvidencePdfPages": [6, 7],
+      "status": "pending"
+    },
+    {
+      "id": "previous_results",
+      "description": "第一次計画の売上21億円、EBITDA約4.5億円、時価総額100億円、エンジニア220名が現行目標ではなく達成実績であることを確認する。",
+      "expectedEvidencePdfPages": [6, 34],
+      "status": "pending"
+    },
+    {
+      "id": "baseline_and_final_targets",
+      "description": "FY2027予想の売上35.9億円・EBITDA7.2億円と、FY2029目標の売上100億円・EBITDA20億円を再確認する。",
+      "expectedEvidencePdfPages": [6, 16],
+      "status": "pending"
+    },
+    {
+      "id": "capital_market_target",
+      "description": "時価総額300億円を業績・資金調達額と混同していないことを確認する。",
+      "expectedEvidencePdfPages": [4, 6, 25, 37],
+      "status": "pending"
+    },
+    {
+      "id": "m_and_a_policy",
+      "description": "黒字、回収5年、EBITDA倍率5倍以内、案件規模20億円程度まで、累計20件超というM&A条件と件数イメージを確認する。",
+      "expectedEvidencePdfPages": [12, 13, 14],
+      "status": "pending"
+    },
+    {
+      "id": "financing_assumption",
+      "description": "M&A買収資金50億円をデット中心に調達し、D/Eレシオ1.0～1.5倍以内を管理目標とすることを確認する。",
+      "expectedEvidencePdfPages": [9, 18],
+      "status": "pending"
+    },
+    {
+      "id": "ebitda_contribution",
+      "description": "獲得EBITDA13億円がオーガニック成長を除くM&A上積み想定で、最終EBITDA20億円へ重複加算されていないことを確認する。",
+      "expectedEvidencePdfPages": [9, 18],
+      "status": "pending"
+    },
+    {
+      "id": "valuation_analysis",
+      "description": "目標株価約1,400円、PER30～50倍、PBR8～10倍は市場評価分析の目標であり、業績予想ではないことを確認する。",
+      "expectedEvidencePdfPage": 25,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "自社株買い・配当・優待は検討方針であり、中計期間の確定額や配当性向が開示されていないことを確認する。",
+      "expectedEvidencePdfPage": 19,
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、億円・百万円換算、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

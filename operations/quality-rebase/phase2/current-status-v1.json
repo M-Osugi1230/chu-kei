@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-02T02:50:14+00:00",
+  "updatedAt": "2026-08-02T02:53:27+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,9 +34,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 23,
-    "formalPlanConfirmed": 23,
-    "primaryReviewComplete": 23,
+    "sourceIdentityConfirmed": 24,
+    "formalPlanConfirmed": 24,
+    "primaryReviewComplete": 24,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 3,
@@ -47,11 +47,11 @@
       "operations/quality-rebase/phase2/primary-review-wave02-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave03-v1.json"
     ],
-    "independentReviewReady": 21,
+    "independentReviewReady": 22,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 427
+    "remainingPrimaryReviews": 426
   },
   "completedPrimaryReviews": [
     {
@@ -282,6 +282,16 @@
       "status": "primary_review_complete_independent_review_ready",
       "sourceCorrectionRequired": false,
       "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 144,
+      "code": "368A",
+      "name": "北里コーポレーション",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/368A-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/368A-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
     }
   ],
   "qualityFindings": [
@@ -334,13 +344,13 @@
       "workstream": "primary_review_wave03",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 1,
-      "remainingCount": 9,
+      "completionCount": 2,
+      "remainingCount": 8,
       "file": "operations/quality-rebase/phase2/primary-review-wave03-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 21,
+      "companies": 22,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -364,7 +374,8 @@
         "operations/quality-rebase/phase2/independent/9684-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/6302-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/8876-independent-review-v1.json",
-        "operations/quality-rebase/phase2/independent/3447-independent-review-v1.json"
+        "operations/quality-rebase/phase2/independent/3447-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/368A-independent-review-v1.json"
       ]
     },
     {

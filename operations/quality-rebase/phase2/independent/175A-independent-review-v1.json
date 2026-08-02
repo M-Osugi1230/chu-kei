@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "175A",
+    "name": "Will Smart"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/175A-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画2030 Beyond 100（事業計画及び成長可能性に関する事項）",
+    "officialUrl": "https://ssl4.eir-parts.net/doc/175A/ir_material_for_fiscal_ym1/200999/00.pdf",
+    "tdnetUrl": "https://www2.jpx.co.jp/disc/175A0/140120260325588979.pdf",
+    "pdfSha256": "4cbcf3e1f0f9b2a72f6307c4670a631d5d3f89c2c389f4b5927331cda03a66e3",
+    "pageCount": 40
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、資料名、公開日2026年3月25日、公式PDF・TDnet、PDFハッシュ、全40ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "formal_plan_boundary",
+      "description": "外形は事業計画及び成長可能性資料である一方、資料内で初めて2030年数値計画を策定した正式中期経営計画であることを確認する。",
+      "expectedEvidencePdfPages": [1, 4, 5],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2030年12月期の売上高30億円、営業利益3.5億円、営業利益率12%、売上CAGR30%と2025年12月期実績を再確認する。",
+      "expectedEvidencePdfPages": [5, 27],
+      "status": "pending"
+    },
+    {
+      "id": "intermediate_targets",
+      "description": "2028年度の営業利益率6%、自社PF売上比率50%超を2030年最終目標と区別して確認する。",
+      "expectedEvidencePdfPages": [27, 28, 29],
+      "status": "pending"
+    },
+    {
+      "id": "business_kpis",
+      "description": "2030年度の取引社数300社以上、自社PF売上比率70%以上と2025年度基準値を確認する。",
+      "expectedEvidencePdfPages": [28],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "地域交通DX、物流DX、販売パートナー強化、受託開発と自社PFの好循環を原文・図表で確認する。",
+      "expectedEvidencePdfPages": [5, 15, 20, 22, 24],
+      "status": "pending"
+    },
+    {
+      "id": "market_and_company_target_separation",
+      "description": "交通DX約1.7兆円・物流DX約1.2兆円という外部市場予測を会社売上目標に混入していないことを確認する。",
+      "expectedEvidencePdfPages": [10, 27],
+      "status": "pending"
+    },
+    {
+      "id": "valuation_reference",
+      "description": "時価総額100億円以上は税率・PER仮定を伴う参考指標であり、確定業績目標とは区別されていることを確認する。",
+      "expectedEvidencePdfPages": [27],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "営業CF・有利子負債・エクイティを原資とし、自社PF・人材・販売網・M&Aを優先する方針と、固定投資額・配当性向が非開示であることを確認する。",
+      "expectedEvidencePdfPages": [31],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

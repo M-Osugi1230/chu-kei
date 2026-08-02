@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Validate a Phase 2 primary-review wave without granting approval.
+"""Validate an in-progress Phase 2 primary-review wave without granting approval.
 
-This validator intentionally checks only queue integrity and governance.
-It never infers factual completion and never changes review or approval state.
+The wave starts as an assignment queue and is updated as human primary reviews
+are actually completed. This validator therefore accepts both assigned and
+completed entries, but it only accepts completion when the referenced review
+record and independent-review packet exist and explicitly prohibit automatic
+approval.
 """
 
 from __future__ import annotations
@@ -10,7 +13,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 REQUIRED_COMPANY_FIELDS = {
     "order",
@@ -36,6 +39,26 @@ ALLOWED_DOCUMENT_TYPES = {
     "plan_revision_or_update",
     "growth_potential_document",
 }
+ASSIGNED_STATUSES = {
+    "primary_review_assigned",
+    "primary_review_assigned_formal_plan_boundary_required",
+}
+COMPLETED_STATUS = "primary_review_complete_independent_review_ready"
+
+SUBSTANTIVE_COMPLETION_SIGNALS = {
+    "full_text": (
+        ("validation", "fullTextHumanReviewComplete"),
+        ("document", "fullTextHumanReviewComplete"),
+        ("source", "fullTextHumanReviewComplete"),
+    ),
+    "metrics": (
+        ("validation", "metricsValidated"),
+        ("validation", "metricsValidatedPrimaryPass"),
+    ),
+    "field_evidence": (
+        ("validation", "fieldLevelEvidenceLinked"),
+    ),
+}
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -55,14 +78,122 @@ def assert_no_forbidden_true(value: Any, location: str = "root") -> None:
         for key, child in value.items():
             child_location = f"{location}.{key}"
             if key in FORBIDDEN_TRUE_KEYS and child is True:
-                raise SystemExit(f"forbidden approval/completion flag at {child_location}")
+                raise SystemExit(
+                    f"forbidden approval/completion flag at {child_location}"
+                )
+            if key == "status" and isinstance(child, str) and "approved" in child:
+                raise SystemExit(f"approved status is not allowed at {child_location}")
             assert_no_forbidden_true(child, child_location)
     elif isinstance(value, list):
         for index, child in enumerate(value):
             assert_no_forbidden_true(child, f"{location}[{index}]")
 
 
-def validate_wave(wave: dict[str, Any], repo_root: Path) -> None:
+def get_path(value: dict[str, Any], path: Iterable[str]) -> Any:
+    current: Any = value
+    for key in path:
+        if not isinstance(current, dict) or key not in current:
+            return None
+        current = current[key]
+    return current
+
+
+def has_any_true(value: dict[str, Any], paths: Iterable[tuple[str, ...]]) -> bool:
+    return any(get_path(value, path) is True for path in paths)
+
+
+def validate_primary_review_record(
+    company: dict[str, Any],
+    repo_root: Path,
+) -> None:
+    code = str(company["code"])
+    review_file_value = company.get("reviewFile")
+    if not isinstance(review_file_value, str) or not review_file_value:
+        raise SystemExit(f"completed company missing reviewFile: {code}")
+
+    review_path = repo_root / review_file_value
+    review_record = load_json(review_path)
+
+    review_company = review_record.get("company")
+    if not isinstance(review_company, dict) or str(review_company.get("code")) != code:
+        raise SystemExit(f"reviewFile company code mismatch for {code}: {review_path}")
+
+    review_state = review_record.get("review")
+    if not isinstance(review_state, dict):
+        raise SystemExit(f"review section missing for completed company {code}")
+    review_status = str(review_state.get("status", ""))
+    if not review_status.startswith("primary_review_complete"):
+        raise SystemExit(
+            f"review record is not primary-review complete for {code}: {review_status}"
+        )
+
+    completed_checks = company.get("completedChecks")
+    if not isinstance(completed_checks, list) or not completed_checks:
+        raise SystemExit(f"completedChecks missing for completed company {code}")
+    for required_check in ("fullTextReview", "metricsValidation", "fieldLevelEvidence"):
+        if required_check not in completed_checks:
+            raise SystemExit(
+                f"completed company {code} lacks completed check {required_check}"
+            )
+
+    for signal_name, signal_paths in SUBSTANTIVE_COMPLETION_SIGNALS.items():
+        if not has_any_true(review_record, signal_paths):
+            raise SystemExit(
+                f"review record lacks substantive completion signal "
+                f"{signal_name} for {code}"
+            )
+
+    assert_no_forbidden_true(review_record, f"review[{code}]")
+
+
+def validate_independent_review_packet(
+    company: dict[str, Any],
+    repo_root: Path,
+) -> None:
+    code = str(company["code"])
+    packet_file_value = company.get("independentReviewFile")
+    if not isinstance(packet_file_value, str) or not packet_file_value:
+        raise SystemExit(f"independent-ready company missing packet: {code}")
+
+    packet_path = repo_root / packet_file_value
+    packet = load_json(packet_path)
+
+    packet_company = packet.get("company")
+    if not isinstance(packet_company, dict) or str(packet_company.get("code")) != code:
+        raise SystemExit(
+            f"independent packet company code mismatch for {code}: {packet_path}"
+        )
+    if packet.get("status") != "independent_review_ready":
+        raise SystemExit(
+            f"independent packet is not ready for {code}: {packet.get('status')}"
+        )
+
+    checks = packet.get("checks")
+    if not isinstance(checks, list) or not checks:
+        raise SystemExit(f"independent packet has no checks for {code}")
+    if any(
+        not isinstance(check, dict) or check.get("status") != "pending"
+        for check in checks
+    ):
+        raise SystemExit(
+            f"independent packet must remain pending before a distinct reviewer acts: "
+            f"{code}"
+        )
+
+    review = packet.get("review")
+    if not isinstance(review, dict):
+        raise SystemExit(f"independent packet review section missing for {code}")
+    if review.get("minimumDistinctReviewers", 0) < 2:
+        raise SystemExit(f"independent packet reviewer minimum is invalid for {code}")
+    if review.get("primaryReviewerMustNotSelfApprove") is not True:
+        raise SystemExit(f"self-approval prohibition missing for {code}")
+    if review.get("completedAt") is not None or review.get("reviewer") is not None:
+        raise SystemExit(f"independent packet was prematurely completed for {code}")
+
+    assert_no_forbidden_true(packet, f"independent[{code}]")
+
+
+def validate_wave(wave: dict[str, Any], repo_root: Path) -> dict[str, int]:
     if wave.get("schemaVersion") != "phase2-primary-review-wave-v1":
         raise SystemExit("unexpected schemaVersion")
 
@@ -80,6 +211,9 @@ def validate_wave(wave: dict[str, Any], repo_root: Path) -> None:
 
     codes: list[str] = []
     orders: list[int] = []
+    completed_count = 0
+    independent_ready_count = 0
+
     for index, company in enumerate(companies):
         if not isinstance(company, dict):
             raise SystemExit(f"companies[{index}] must be an object")
@@ -125,8 +259,18 @@ def validate_wave(wave: dict[str, Any], repo_root: Path) -> None:
             raise SystemExit(f"review input does not exist for {code}: {review_input}")
 
         status = str(company["status"])
-        if "complete" in status or "approved" in status:
-            raise SystemExit(f"premature completion/approval status for {code}: {status}")
+        if status in ASSIGNED_STATUSES:
+            if company.get("reviewFile") or company.get("independentReviewFile"):
+                raise SystemExit(
+                    f"assigned company has premature review outputs for {code}"
+                )
+        elif status == COMPLETED_STATUS:
+            validate_primary_review_record(company, repo_root)
+            validate_independent_review_packet(company, repo_root)
+            completed_count += 1
+            independent_ready_count += 1
+        else:
+            raise SystemExit(f"unsupported wave status for {code}: {status}")
 
     if len(set(codes)) != len(codes):
         raise SystemExit("duplicate company codes in wave")
@@ -138,19 +282,36 @@ def validate_wave(wave: dict[str, Any], repo_root: Path) -> None:
         raise SystemExit("counts must be an object")
     if counts.get("assigned") != len(companies):
         raise SystemExit("counts.assigned does not match company count")
-    if counts.get("primaryReviewComplete") != 0:
-        raise SystemExit("primaryReviewComplete must remain zero at assignment time")
-    if counts.get("independentReviewReady") != 0:
-        raise SystemExit("independentReviewReady must remain zero at assignment time")
+    if counts.get("primaryReviewComplete") != completed_count:
+        raise SystemExit(
+            "counts.primaryReviewComplete does not match completed wave entries"
+        )
+    if counts.get("independentReviewReady") != independent_ready_count:
+        raise SystemExit(
+            "counts.independentReviewReady does not match ready packets"
+        )
     if counts.get("deepVerificationApproved") != 0:
         raise SystemExit("deepVerificationApproved must remain zero")
 
     assert_no_forbidden_true(wave)
 
+    return {
+        "assigned": len(companies),
+        "primaryReviewComplete": completed_count,
+        "independentReviewReady": independent_ready_count,
+    }
 
-def validate_status(status: dict[str, Any], wave: dict[str, Any]) -> None:
+
+def validate_status(
+    status: dict[str, Any],
+    wave: dict[str, Any],
+    wave_counts: dict[str, int],
+    repo_root: Path,
+) -> None:
     if status.get("automaticDeepApprovalAllowed") is not False:
-        raise SystemExit("current status must explicitly prohibit automatic deep approval")
+        raise SystemExit(
+            "current status must explicitly prohibit automatic deep approval"
+        )
 
     collection = status.get("collection", {})
     relevance = status.get("sourceRelevanceAudit", {})
@@ -174,14 +335,113 @@ def validate_status(status: dict[str, Any], wave: dict[str, Any]) -> None:
         )
     )
     if classified != 450:
-        raise SystemExit(f"source relevance classification total must be 450, got {classified}")
+        raise SystemExit(
+            f"source relevance classification total must be 450, got {classified}"
+        )
 
     if review.get("primaryReviewWaveAssigned") != wave.get("targetCompanies"):
         raise SystemExit("status assigned count does not match wave target")
-    if review.get("primaryReviewComplete") != 2:
-        raise SystemExit("only the two actually completed Phase 2 reviews may be counted")
+
+    completed_records = status.get("completedPrimaryReviews")
+    if not isinstance(completed_records, list):
+        raise SystemExit("completedPrimaryReviews must be an array")
+
+    completed_codes: list[str] = []
+    independent_ready_total = 0
+    for index, record in enumerate(completed_records):
+        if not isinstance(record, dict):
+            raise SystemExit(f"completedPrimaryReviews[{index}] must be an object")
+        code = str(record.get("code", ""))
+        review_file_value = record.get("reviewFile")
+        if not code or not isinstance(review_file_value, str):
+            raise SystemExit(
+                f"completedPrimaryReviews[{index}] lacks code or reviewFile"
+            )
+        completed_codes.append(code)
+
+        review_record = load_json(repo_root / review_file_value)
+        review_state = review_record.get("review", {})
+        review_status = str(review_state.get("status", ""))
+        if not review_status.startswith("primary_review_complete"):
+            raise SystemExit(
+                f"canonical completed review is not complete for {code}: "
+                f"{review_status}"
+            )
+
+        independent_file_value = record.get("independentReviewFile")
+        if independent_file_value is not None:
+            if not isinstance(independent_file_value, str):
+                raise SystemExit(f"invalid independentReviewFile for {code}")
+            packet = load_json(repo_root / independent_file_value)
+            if packet.get("status") != "independent_review_ready":
+                raise SystemExit(
+                    f"canonical independent packet is not ready for {code}"
+                )
+            independent_ready_total += 1
+
+        assert_no_forbidden_true(record, f"completedPrimaryReviews[{index}]")
+        assert_no_forbidden_true(review_record, f"canonicalReview[{code}]")
+
+    if len(set(completed_codes)) != len(completed_codes):
+        raise SystemExit("duplicate company codes in completedPrimaryReviews")
+
+    completed_total = len(completed_records)
+    if review.get("primaryReviewComplete") != completed_total:
+        raise SystemExit(
+            "review.primaryReviewComplete does not match canonical completed records"
+        )
+    if review.get("sourceIdentityConfirmed") != completed_total:
+        raise SystemExit(
+            "review.sourceIdentityConfirmed does not match canonical completed records"
+        )
+    if review.get("formalPlanConfirmed") != completed_total:
+        raise SystemExit(
+            "review.formalPlanConfirmed does not match canonical completed records"
+        )
+    if review.get("independentReviewReady") != independent_ready_total:
+        raise SystemExit(
+            "review.independentReviewReady does not match canonical ready packets"
+        )
+
+    additional_target = status.get("additionalCompaniesTarget")
+    if not isinstance(additional_target, int):
+        raise SystemExit("additionalCompaniesTarget must be an integer")
+    if review.get("remainingPrimaryReviews") != additional_target - completed_total:
+        raise SystemExit(
+            "review.remainingPrimaryReviews does not match target minus completed"
+        )
+
     if review.get("deepVerificationApproved") != 0:
         raise SystemExit("review.deepVerificationApproved must remain zero")
+    if review.get("independentReviewComplete") != 0:
+        raise SystemExit(
+            "independentReviewComplete must remain zero until distinct review occurs"
+        )
+
+    active_work = status.get("activeWork")
+    if not isinstance(active_work, list):
+        raise SystemExit("activeWork must be an array")
+    wave_work = next(
+        (
+            item
+            for item in active_work
+            if isinstance(item, dict)
+            and item.get("workstream") == "primary_review_wave01"
+        ),
+        None,
+    )
+    if wave_work is None:
+        raise SystemExit("activeWork lacks primary_review_wave01")
+    if wave_work.get("completionCount") != wave_counts["primaryReviewComplete"]:
+        raise SystemExit(
+            "activeWork wave completionCount does not match wave completion"
+        )
+    if wave_work.get("remainingCount") != (
+        wave_counts["assigned"] - wave_counts["primaryReviewComplete"]
+    ):
+        raise SystemExit(
+            "activeWork wave remainingCount does not match wave completion"
+        )
 
     assert_no_forbidden_true(status)
 
@@ -201,7 +461,7 @@ def main() -> None:
     parser.add_argument(
         "--repo-root",
         default=".",
-        help="Repository root used to resolve reviewInput paths",
+        help="Repository root used to resolve review files",
     )
     args = parser.parse_args()
 
@@ -209,17 +469,30 @@ def main() -> None:
     wave = load_json(repo_root / args.wave)
     status = load_json(repo_root / args.status)
 
-    validate_wave(wave, repo_root)
-    validate_status(status, wave)
+    wave_counts = validate_wave(wave, repo_root)
+    validate_status(status, wave, wave_counts, repo_root)
 
     print(
         json.dumps(
             {
                 "status": "ok",
                 "wave": wave["wave"],
-                "assignedCompanies": len(wave["companies"]),
-                "sourceRelevanceAudited": status["sourceRelevanceAudit"]["auditedCompanies"],
-                "primaryReviewComplete": status["review"]["primaryReviewComplete"],
+                "assignedCompanies": wave_counts["assigned"],
+                "wavePrimaryReviewComplete": wave_counts[
+                    "primaryReviewComplete"
+                ],
+                "waveIndependentReviewReady": wave_counts[
+                    "independentReviewReady"
+                ],
+                "sourceRelevanceAudited": status[
+                    "sourceRelevanceAudit"
+                ]["auditedCompanies"],
+                "primaryReviewComplete": status["review"][
+                    "primaryReviewComplete"
+                ],
+                "independentReviewReady": status["review"][
+                    "independentReviewReady"
+                ],
                 "deepVerificationApproved": 0,
             },
             ensure_ascii=False,

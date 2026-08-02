@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "3646",
+    "name": "駅探"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3646-primary-review-v1.json",
+  "source": {
+    "title": "駅探 新中期経営計画（事業計画及び成長可能性に関する事項）",
+    "officialLandingPage": "https://ekitan.co.jp/irnews/news-2026/",
+    "officialUrl": "https://www2.jpx.co.jp/disc/36460/140120260130543384.pdf",
+    "pdfSha256": "6f5ba80f0aee5648307fc0b7144454791edd068eecdaa8dc013e78d858023de8",
+    "pageCount": 35
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "駅探公式掲載ページ、適時開示PDF、会社名、公表日2026年1月30日、ハッシュ、全35ページを独立に確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "formal_plan_boundary",
+      "description": "成長可能性・事業環境を含む資料内の正式な2027年3月期～2029年3月期中期経営計画部分を確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "baseline_and_final_targets",
+      "description": "2026年3月期予想と2029年3月期の売上高25.21億円、EBITDA5.50億円、営業利益3.50億円、当期純利益2.72億円を区別して確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "segment_targets",
+      "description": "広告メディア、ヘルスケア、法人サービスの2029年3月期売上・EBITDA・営業利益を確認し、全社調整との関係を確認する。",
+      "expectedEvidencePdfPages": [2],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "広告メディア高度化、ヘルスケアデータ、MaaS・法人サービス、地域マーケティングプラットフォームの戦略を図表で再確認する。",
+      "expectedEvidencePrintedPages": [10, 14, 17, 18, 20, 22, 24, 25, 26, 27, 28, 33],
+      "status": "pending"
+    },
+    {
+      "id": "investment_range",
+      "description": "3年間の設備・事業投資5.8～9.8億円を範囲として確認し、単一の投資確定額へ変換していないことを確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "累進配当、DOE基準、株主優待検討を確認し、資料で確定していないDOE率を補完していないことを確認する。",
+      "expectedEvidencePrintedPages": [33],
+      "status": "pending"
+    },
+    {
+      "id": "external_market_separation",
+      "description": "ヘルスケアDX、MaaS、インバウンド等の外部市場予測を駅探の財務・事業KPIへ混入していないことを確認する。",
+      "status": "pending"
+    },
+    {
+      "id": "visual_review",
+      "description": "説明資料33ページのグラフ、ポートフォリオ図、注記、PDFページと印字ページの対応を目視確認する。",
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、図表・改行表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

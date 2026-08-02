@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-02T16:20:00+09:00",
+  "updatedAt": "2026-08-02T16:20:00+09:00",
+  "wave": 3,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "preferDocumentsPublishedIn2026": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "allowGrowthPotentialDocumentOnlyWithFormalPlanBoundaryCheck": true,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 143,
+      "code": "3447",
+      "name": "信和",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 35,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/3447/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 144,
+      "code": "368A",
+      "name": "北里コーポレーション",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 97,
+      "pageCount": 38,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/368A/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 146,
+      "code": "3936",
+      "name": "グローバルウェイ",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 100,
+      "pageCount": 38,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/3936/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "growthPotentialDocumentSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 148,
+      "code": "441A",
+      "name": "NE",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 100,
+      "pageCount": 47,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/441A/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "growthPotentialDocumentSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 150,
+      "code": "6030",
+      "name": "アドベンチャー",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 8,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/6030/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 152,
+      "code": "6143",
+      "name": "ソディック",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 30,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/6143/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 156,
+      "code": "6675",
+      "name": "サクサ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 30,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/6675/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 158,
+      "code": "1450",
+      "name": "田中建設工業",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 18,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/1450/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 160,
+      "code": "2323",
+      "name": "fonfun",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 40,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/2323/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 161,
+      "code": "2440",
+      "name": "ぐるなび",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 50,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/2440/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 3,
+    "planRevisionOrUpdateCandidates": 5,
+    "growthPotentialDocumentCandidates": 2,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

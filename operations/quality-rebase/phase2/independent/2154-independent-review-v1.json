@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "2154",
+    "name": "オープンアップグループ"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2154-primary-review-v1.json",
+  "source": {
+    "title": "中期経営方針",
+    "officialLandingPage": "https://www.openupgroup.co.jp/ir/midterm-plan/",
+    "officialUrl": "https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf",
+    "supplementalOfficialUrl": "https://www.openupgroup.co.jp/sustainability/policy-advancement/",
+    "pdfSha256": "b97770392191df90b8c687f5f80acdb4281c5b65c6cadcba659fa2f97db0a7a1",
+    "pageCount": 27
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社公式IRページ、会社名、資料名称、公表日2024年8月9日、公式PDF URL、PDFハッシュ、27ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "公式補足ページを含め、中期経営方針とOPIの到達年度が2027年6月期であることを確認する。",
+      "status": "pending"
+    },
+    {
+      "id": "previous_current_boundary",
+      "description": "BY25の営業利益160億円・営業利益率8%と、更新後の成長率・利益率・還元率目標を混同していないことを確認する。",
+      "expectedEvidencePdfPages": [3, 5],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "売上高・営業利益の年率10%以上成長と営業利益率10%以上を再確認し、単一年度の絶対額目標へ変換していないことを確認する。",
+      "expectedEvidencePdfPages": [5],
+      "status": "pending"
+    },
+    {
+      "id": "growth_kpis",
+      "description": "国内エンジニア数の年率10%以上成長と、社員満足度を最重要KPIとする伴走モデルの構造を確認する。",
+      "expectedEvidencePdfPages": [5, 12, 16, 18, 19],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "社員満足度、エンゲージメント、在籍期間、スキル・キャリア、LTV、デジタル活用、M&Aの関係を再確認する。",
+      "expectedEvidencePdfPages": [12, 15, 16, 20, 21, 22, 23, 24, 25],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "社員育成投資とM&Aを成長手段としている一方、投資総額・区分別固定金額が非開示であることを確認する。",
+      "expectedEvidencePdfPages": [5, 25],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向50%以上、累進配当、自己株式取得を確認し、13期連続増配を将来目標と混同していないことを確認する。",
+      "expectedEvidencePdfPages": [5],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDF・補足ページのリンク、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

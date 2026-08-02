@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6302",
+    "name": "住友重機械工業"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6302-primary-review-v1.json",
+  "source": {
+    "title": "住友重機械工業 中期経営計画2026",
+    "officialLandingPage": "https://www.shi.co.jp/ir/policy/plan/index.html",
+    "officialUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/2026management_plan.pdf",
+    "pdfSha256": "c7d81a5d04b6cee3753078d5208183b0f63ed117234b9cd0875ce786a16be375",
+    "pageCount": 25
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity_and_candidate_correction",
+      "description": "公式掲載ページ、PDF表紙、会社名、資料名、公表日2024年2月14日、ハッシュ、25ページを確認し、収集候補の2025年目標見直しラベルを採用しないことを確認する。",
+      "expectedEvidencePdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period_boundary",
+      "description": "前中計2023、2024年度予想、2024～2026年度中計、2030年度長期目標を区別する。",
+      "expectedEvidencePdfPages": [2, 4, 5, 7],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2026年度の受注高1兆2,800億円、売上高1兆2,500億円、営業利益1,000億円、営業利益率8%、ROIC8%、ROE10%を再確認する。",
+      "expectedEvidencePdfPages": [7],
+      "status": "pending"
+    },
+    {
+      "id": "segment_targets",
+      "description": "4セグメントの2026年度売上高・営業利益・ROICを図表で再確認する。",
+      "expectedEvidencePdfPages": [8],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "収益力改善、資本効率向上、新事業探索、ポートフォリオ改革、経営基盤強化の構造を確認する。",
+      "expectedEvidencePdfPages": [3, 5, 9, 11, 12, 14],
+      "status": "pending"
+    },
+    {
+      "id": "investment_policy",
+      "description": "設備投資1,900億円、研究開発900億円、重点領域への800億円・540億円の配分と3カ年の期間を確認する。",
+      "expectedEvidencePdfPages": [7, 13],
+      "status": "pending"
+    },
+    {
+      "id": "cash_allocation",
+      "description": "研究開発費控除前営業CF3,000億円、有利子負債600億円と、設備投資・M&A1,900億円、研究開発900億円、株主還元800億円の合計関係を確認する。",
+      "expectedEvidencePdfPages": [13],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "DOE3.5%以上、最低配当125円、総還元性向40%以上、計画期間中50%以上水準、自社株買い方針を確認する。",
+      "expectedEvidencePdfPages": [13],
+      "status": "pending"
+    },
+    {
+      "id": "long_term_and_nonfinancial",
+      "description": "2030年度営業利益1,300億円・ROIC10%以上、CO2削減、女性管理職比率等を長期・非財務目標として確認する。",
+      "expectedEvidencePdfPages": [4],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、図表・改行表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

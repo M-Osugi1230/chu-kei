@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "421A",
+    "name": "ムービン・ストラテジック・キャリア"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/421A-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画（事業計画及び成長可能性に関する事項）",
+    "officialUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
+    "pdfSha256": "26c39be7814ced99a399fcb55de226267a08c9a34182ef7ddf71e879288a79f5",
+    "pageCount": 37
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード421A、公開日2026年3月24日、公式PDF、ハッシュ、全37ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "formal_plan_boundary",
+      "description": "事業計画及び成長可能性資料の中でFY26～FY28の正式中期経営計画を掲載していることを確認する。",
+      "expectedEvidencePdfPages": [1, 2, 3, 4],
+      "status": "pending"
+    },
+    {
+      "id": "financial_plan",
+      "description": "FY24・FY25実績とFY26～FY28計画の売上高・営業利益を図表から再確認し、億円から百万円への換算を確認する。",
+      "expectedEvidencePdfPages": [3, 4],
+      "status": "pending"
+    },
+    {
+      "id": "organic_growth_target",
+      "description": "FY28売上高100億円、FY25～FY28売上CAGR約38%がオーガニック成長目標であり、M&Aはプラスアルファであることを確認する。",
+      "expectedEvidencePdfPages": [3, 4],
+      "status": "pending"
+    },
+    {
+      "id": "advisor_kpis",
+      "description": "FY26期末150人、FY27期末200人超、FY28期末260人超、一人当たり売上高357万円／月のKPIを確認する。",
+      "expectedEvidencePdfPages": [3, 6],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "クライアントシフト、求職者集客、AIによる早期戦力化という基本戦略を確認する。",
+      "expectedEvidencePdfPages": [3, 7],
+      "status": "pending"
+    },
+    {
+      "id": "market_data_separation",
+      "description": "転職求人倍率、人口・産業別就業構造等の外部データを会社の財務目標・KPIへ混入していないことを確認する。",
+      "expectedEvidencePdfPages": [5, 8, 9],
+      "status": "pending"
+    },
+    {
+      "id": "capital_and_return_policy",
+      "description": "人材採用、M&A、事業機会、AIシステムへの成長投資を優先し、投資機会がない場合に自己株取得・配当等を検討する順序を確認する。",
+      "expectedEvidencePdfPages": [10],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

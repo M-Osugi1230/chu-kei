@@ -1,7 +1,7 @@
 {
   "schemaVersion": "phase2-primary-review-wave-v1",
   "generatedAt": "2026-08-02T01:21:23+09:00",
-  "updatedAt": "2026-08-02T05:21:00+09:00",
+  "updatedAt": "2026-08-02T09:55:00+09:00",
   "wave": 1,
   "targetCompanies": 10,
   "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-v2/summary.json",
@@ -25,7 +25,13 @@
       "pageCount": 34,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/4114/primary-review-template.json",
       "status": "primary_review_assigned",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
     },
     {
       "order": 63,
@@ -36,7 +42,13 @@
       "pageCount": 40,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/175A/primary-review-template.json",
       "status": "primary_review_assigned_formal_plan_boundary_required",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "growthPotentialDocumentSeparation", "fieldLevelEvidence"]
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "growthPotentialDocumentSeparation",
+        "fieldLevelEvidence"
+      ]
     },
     {
       "order": 65,
@@ -47,7 +59,13 @@
       "pageCount": 37,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/421A/primary-review-template.json",
       "status": "primary_review_assigned_formal_plan_boundary_required",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "growthPotentialDocumentSeparation", "fieldLevelEvidence"]
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "growthPotentialDocumentSeparation",
+        "fieldLevelEvidence"
+      ]
     },
     {
       "order": 58,
@@ -57,8 +75,28 @@
       "relevanceScore": 36,
       "pageCount": 31,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/3050/primary-review-template.json",
-      "status": "primary_review_assigned",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3050-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3050-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation",
+        "forecastActualSeparation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
     },
     {
       "order": 54,
@@ -69,7 +107,13 @@
       "pageCount": 31,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/4203/primary-review-template.json",
       "status": "primary_review_assigned",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
     },
     {
       "order": 70,
@@ -82,8 +126,22 @@
       "reviewFile": "operations/quality-rebase/phase2/reviews/9861-primary-review-v1.json",
       "independentReviewFile": "operations/quality-rebase/phase2/independent/9861-independent-review-v1.json",
       "status": "primary_review_complete_independent_review_ready",
-      "requiredChecks": ["formalPlanBoundary", "sectionScopeValidation", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"],
-      "completedChecks": ["formalPlanBoundary", "sectionScopeValidation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "visualFigureReview"],
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "sectionScopeValidation",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "completedChecks": [
+        "formalPlanBoundary",
+        "sectionScopeValidation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "visualFigureReview"
+      ],
       "automaticApprovalAllowed": false,
       "deepVerificationApproved": false
     },
@@ -98,8 +156,22 @@
       "reviewFile": "operations/quality-rebase/phase2/reviews/4401-primary-review-v1.json",
       "independentReviewFile": "operations/quality-rebase/phase2/independent/4401-independent-review-v1.json",
       "status": "primary_review_complete_independent_review_ready",
-      "requiredChecks": ["formalPlanConfirmation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"],
-      "completedChecks": ["formalPlanConfirmation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation", "forecastActualSeparation"],
+      "requiredChecks": [
+        "formalPlanConfirmation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation",
+        "forecastActualSeparation"
+      ],
       "automaticApprovalAllowed": false,
       "deepVerificationApproved": false
     },
@@ -114,8 +186,22 @@
       "reviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
       "independentReviewFile": "operations/quality-rebase/phase2/independent/9247-independent-review-v1.json",
       "status": "primary_review_complete_independent_review_ready",
-      "requiredChecks": ["formalPlanConfirmation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"],
-      "completedChecks": ["formalPlanConfirmation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation", "forecastActualSeparation"],
+      "requiredChecks": [
+        "formalPlanConfirmation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation",
+        "forecastActualSeparation"
+      ],
       "automaticApprovalAllowed": false,
       "deepVerificationApproved": false
     },
@@ -128,7 +214,13 @@
       "pageCount": 23,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/6103/primary-review-template.json",
       "status": "primary_review_assigned",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
     },
     {
       "order": 66,
@@ -139,7 +231,13 @@
       "pageCount": 26,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/4612/primary-review-template.json",
       "status": "primary_review_assigned",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
     }
   ],
   "counts": {
@@ -147,8 +245,8 @@
     "formalManagementPlanCandidates": 2,
     "planRevisionOrUpdateCandidates": 6,
     "growthPotentialDocumentCandidates": 2,
-    "primaryReviewComplete": 3,
-    "independentReviewReady": 3,
+    "primaryReviewComplete": 4,
+    "independentReviewReady": 4,
     "deepVerificationApproved": 0
   },
   "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、項目別証跡を人が確認した場合のみ記録する。"

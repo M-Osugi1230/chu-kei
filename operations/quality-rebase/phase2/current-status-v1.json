@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-02T03:29:47+00:00",
+  "updatedAt": "2026-08-02T03:35:06+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,9 +34,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 40,
-    "formalPlanConfirmed": 40,
-    "primaryReviewComplete": 40,
+    "sourceIdentityConfirmed": 41,
+    "formalPlanConfirmed": 41,
+    "primaryReviewComplete": 41,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 4,
@@ -48,11 +48,11 @@
       "operations/quality-rebase/phase2/primary-review-wave03-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave04-v1.json"
     ],
-    "independentReviewReady": 38,
+    "independentReviewReady": 39,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 410
+    "remainingPrimaryReviews": 409
   },
   "completedPrimaryReviews": [
     {
@@ -405,6 +405,16 @@
       "sourceClassification": "formal_management_plan"
     },
     {
+      "order": 176,
+      "code": "4651",
+      "name": "サニックスホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4651-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4651-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
       "order": 177,
       "code": "4902",
       "name": "コニカミノルタ",
@@ -513,13 +523,13 @@
       "workstream": "primary_review_wave04",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 8,
-      "remainingCount": 2,
+      "completionCount": 9,
+      "remainingCount": 1,
       "file": "operations/quality-rebase/phase2/primary-review-wave04-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 38,
+      "companies": 39,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -556,6 +566,7 @@
         "operations/quality-rebase/phase2/independent/3175-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/3679-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/4345-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4651-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/4902-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/5703-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/5988-independent-review-v1.json",

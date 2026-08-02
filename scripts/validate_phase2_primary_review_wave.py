@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Validate an in-progress Phase 2 primary-review wave safely.
+"""Validate Phase 2 primary-review waves safely.
 
-The wave begins as an assignment queue and is updated only when a human primary
+Each wave begins as an assignment queue and is updated only when a human primary
 review is actually completed. Completion is accepted only when the referenced
 review record exists, substantive validation flags are present, and an
 independent-review packet is still pending for a distinct reviewer.
 
-This validator never grants approval and never infers missing facts.
+The validator supports multiple waves, verifies cross-wave uniqueness, never
+grants approval, and never infers missing facts.
 """
 
 from __future__ import annotations
@@ -242,6 +243,10 @@ def validate_wave(wave: dict[str, Any], repo_root: Path) -> dict[str, int]:
     if wave.get("schemaVersion") != "phase2-primary-review-wave-v1":
         raise SystemExit("unexpected schemaVersion")
 
+    wave_number = wave.get("wave")
+    if not isinstance(wave_number, int) or wave_number <= 0:
+        raise SystemExit("wave must be a positive integer")
+
     companies = wave.get("companies")
     if not isinstance(companies, list):
         raise SystemExit("companies must be an array")
@@ -347,10 +352,57 @@ def validate_wave(wave: dict[str, Any], repo_root: Path) -> dict[str, int]:
     }
 
 
+def validate_cross_wave_uniqueness(repo_root: Path) -> dict[str, int]:
+    wave_paths = sorted(
+        (repo_root / "operations/quality-rebase/phase2").glob(
+            "primary-review-wave*-v1.json"
+        )
+    )
+    if not wave_paths:
+        raise SystemExit("no Phase 2 primary-review wave files found")
+
+    seen_codes: dict[str, Path] = {}
+    seen_orders: dict[int, Path] = {}
+    total_assigned = 0
+
+    for wave_path in wave_paths:
+        wave = load_json(wave_path)
+        companies = wave.get("companies")
+        if not isinstance(companies, list):
+            raise SystemExit(f"companies must be an array: {wave_path}")
+        total_assigned += len(companies)
+
+        for company in companies:
+            if not isinstance(company, dict):
+                raise SystemExit(f"invalid company entry in {wave_path}")
+            code = str(company.get("code", ""))
+            order = company.get("order")
+            if not code or not isinstance(order, int):
+                raise SystemExit(f"wave company lacks code or order: {wave_path}")
+            if code in seen_codes:
+                raise SystemExit(
+                    f"company {code} is assigned in multiple waves: "
+                    f"{seen_codes[code]} and {wave_path}"
+                )
+            if order in seen_orders:
+                raise SystemExit(
+                    f"order {order} is assigned in multiple waves: "
+                    f"{seen_orders[order]} and {wave_path}"
+                )
+            seen_codes[code] = wave_path
+            seen_orders[order] = wave_path
+
+    return {
+        "waveCount": len(wave_paths),
+        "assignedCompaniesTotal": total_assigned,
+    }
+
+
 def validate_status(
     status: dict[str, Any],
     wave: dict[str, Any],
     wave_counts: dict[str, int],
+    cross_wave_counts: dict[str, int],
     repo_root: Path,
 ) -> None:
     if status.get("automaticDeepApprovalAllowed") is not False:
@@ -386,6 +438,19 @@ def validate_status(
 
     if review.get("primaryReviewWaveAssigned") != wave.get("targetCompanies"):
         raise SystemExit("status assigned count does not match wave target")
+
+    declared_wave_count = review.get("primaryReviewWavesAssigned")
+    if declared_wave_count is not None and declared_wave_count != cross_wave_counts["waveCount"]:
+        raise SystemExit("review.primaryReviewWavesAssigned does not match wave files")
+
+    declared_assigned_total = review.get("primaryReviewCompaniesAssignedTotal")
+    if (
+        declared_assigned_total is not None
+        and declared_assigned_total != cross_wave_counts["assignedCompaniesTotal"]
+    ):
+        raise SystemExit(
+            "review.primaryReviewCompaniesAssignedTotal does not match all wave files"
+        )
 
     completed_records = status.get("completedPrimaryReviews")
     if not isinstance(completed_records, list):
@@ -432,6 +497,19 @@ def validate_status(
     if len(set(completed_codes)) != len(completed_codes):
         raise SystemExit("duplicate company codes in completedPrimaryReviews")
 
+    completed_code_set = set(completed_codes)
+    for company in wave.get("companies", []):
+        code = str(company.get("code"))
+        company_status = str(company.get("status"))
+        if company_status in ASSIGNED_STATUSES and code in completed_code_set:
+            raise SystemExit(
+                f"assigned wave company is already in canonical completed records: {code}"
+            )
+        if company_status == COMPLETED_STATUS and code not in completed_code_set:
+            raise SystemExit(
+                f"completed wave company is missing from canonical completed records: {code}"
+            )
+
     completed_total = len(completed_records)
     if review.get("primaryReviewComplete") != completed_total:
         raise SystemExit(
@@ -468,17 +546,20 @@ def validate_status(
     active_work = status.get("activeWork")
     if not isinstance(active_work, list):
         raise SystemExit("activeWork must be an array")
+
+    wave_number = wave.get("wave")
+    wave_workstream = f"primary_review_wave{wave_number:02d}"
     wave_work = next(
         (
             item
             for item in active_work
             if isinstance(item, dict)
-            and item.get("workstream") == "primary_review_wave01"
+            and item.get("workstream") == wave_workstream
         ),
         None,
     )
     if wave_work is None:
-        raise SystemExit("activeWork lacks primary_review_wave01")
+        raise SystemExit(f"activeWork lacks {wave_workstream}")
     if wave_work.get("completionCount") != wave_counts["primaryReviewComplete"]:
         raise SystemExit(
             "activeWork wave completionCount does not match wave completion"
@@ -490,6 +571,16 @@ def validate_status(
             "activeWork wave remainingCount does not match wave completion"
         )
 
+    expected_status = (
+        "complete"
+        if wave_counts["primaryReviewComplete"] == wave_counts["assigned"]
+        else "in_progress"
+    )
+    if wave_work.get("status") != expected_status:
+        raise SystemExit(
+            f"activeWork {wave_workstream} status must be {expected_status}"
+        )
+
     assert_no_forbidden_true(status)
 
 
@@ -498,7 +589,7 @@ def main() -> None:
     parser.add_argument(
         "--wave",
         default="operations/quality-rebase/phase2/primary-review-wave01-v1.json",
-        help="Path to the primary-review wave JSON",
+        help="Path to one primary-review wave JSON",
     )
     parser.add_argument(
         "--status",
@@ -517,7 +608,14 @@ def main() -> None:
     status = load_json(repo_root / args.status)
 
     wave_counts = validate_wave(wave, repo_root)
-    validate_status(status, wave, wave_counts, repo_root)
+    cross_wave_counts = validate_cross_wave_uniqueness(repo_root)
+    validate_status(
+        status,
+        wave,
+        wave_counts,
+        cross_wave_counts,
+        repo_root,
+    )
 
     print(
         json.dumps(
@@ -527,6 +625,10 @@ def main() -> None:
                 "assignedCompanies": wave_counts["assigned"],
                 "wavePrimaryReviewComplete": wave_counts["primaryReviewComplete"],
                 "waveIndependentReviewReady": wave_counts["independentReviewReady"],
+                "allWaveCount": cross_wave_counts["waveCount"],
+                "allWaveAssignedCompanies": cross_wave_counts[
+                    "assignedCompaniesTotal"
+                ],
                 "sourceRelevanceAudited": status["sourceRelevanceAudit"][
                     "auditedCompanies"
                 ],

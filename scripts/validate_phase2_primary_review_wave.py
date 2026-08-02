@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Validate an in-progress Phase 2 primary-review wave without granting approval.
+"""Validate an in-progress Phase 2 primary-review wave safely.
 
-The wave starts as an assignment queue and is updated as human primary reviews
-are actually completed. This validator therefore accepts both assigned and
-completed entries, but it only accepts completion when the referenced review
-record and independent-review packet exist and explicitly prohibit automatic
-approval.
+The wave begins as an assignment queue and is updated only when a human primary
+review is actually completed. Completion is accepted only when the referenced
+review record exists, substantive validation flags are present, and an
+independent-review packet is still pending for a distinct reviewer.
+
+This validator never grants approval and never infers missing facts.
 """
 
 from __future__ import annotations
@@ -79,7 +80,7 @@ def assert_no_forbidden_true(value: Any, location: str = "root") -> None:
             child_location = f"{location}.{key}"
             if key in FORBIDDEN_TRUE_KEYS and child is True:
                 raise SystemExit(
-                    f"forbidden approval/completion flag at {child_location}"
+                    f"forbidden automatic approval/completion flag at {child_location}"
                 )
             if key == "status" and isinstance(child, str) and "approved" in child:
                 raise SystemExit(f"approved status is not allowed at {child_location}")
@@ -146,28 +147,7 @@ def validate_primary_review_record(
     assert_no_forbidden_true(review_record, f"review[{code}]")
 
 
-def validate_independent_review_packet(
-    company: dict[str, Any],
-    repo_root: Path,
-) -> None:
-    code = str(company["code"])
-    packet_file_value = company.get("independentReviewFile")
-    if not isinstance(packet_file_value, str) or not packet_file_value:
-        raise SystemExit(f"independent-ready company missing packet: {code}")
-
-    packet_path = repo_root / packet_file_value
-    packet = load_json(packet_path)
-
-    packet_company = packet.get("company")
-    if not isinstance(packet_company, dict) or str(packet_company.get("code")) != code:
-        raise SystemExit(
-            f"independent packet company code mismatch for {code}: {packet_path}"
-        )
-    if packet.get("status") != "independent_review_ready":
-        raise SystemExit(
-            f"independent packet is not ready for {code}: {packet.get('status')}"
-        )
-
+def validate_current_packet_schema(packet: dict[str, Any], code: str) -> None:
     checks = packet.get("checks")
     if not isinstance(checks, list) or not checks:
         raise SystemExit(f"independent packet has no checks for {code}")
@@ -176,8 +156,8 @@ def validate_independent_review_packet(
         for check in checks
     ):
         raise SystemExit(
-            f"independent packet must remain pending before a distinct reviewer acts: "
-            f"{code}"
+            "independent packet checks must remain pending before a distinct "
+            f"reviewer acts: {code}"
         )
 
     review = packet.get("review")
@@ -190,7 +170,72 @@ def validate_independent_review_packet(
     if review.get("completedAt") is not None or review.get("reviewer") is not None:
         raise SystemExit(f"independent packet was prematurely completed for {code}")
 
+
+def validate_legacy_packet_schema(packet: dict[str, Any], code: str) -> None:
+    checks = packet.get("requiredChecks")
+    if not isinstance(checks, list) or not checks:
+        raise SystemExit(f"legacy independent packet has no requiredChecks for {code}")
+    if any(
+        not isinstance(check, dict) or check.get("completed") is not False
+        for check in checks
+    ):
+        raise SystemExit(
+            "legacy independent packet checks must remain incomplete before a "
+            f"distinct reviewer acts: {code}"
+        )
+
+    independence = packet.get("independenceRequirement")
+    if not isinstance(independence, dict):
+        raise SystemExit(
+            f"legacy independent packet lacks independenceRequirement for {code}"
+        )
+    if independence.get("minimumDistinctReviewers", 0) < 2:
+        raise SystemExit(f"legacy packet reviewer minimum is invalid for {code}")
+    if independence.get("reviewerMustDifferFromPrimaryReviewer") is not True:
+        raise SystemExit(f"legacy packet lacks distinct-reviewer rule for {code}")
+    if independence.get("reviewerRecorded") is not False:
+        raise SystemExit(f"legacy packet was prematurely assigned/completed for {code}")
+
+
+def validate_independent_packet_content(
+    packet: dict[str, Any],
+    code: str,
+    packet_path: Path,
+) -> None:
+    packet_company = packet.get("company")
+    if not isinstance(packet_company, dict) or str(packet_company.get("code")) != code:
+        raise SystemExit(
+            f"independent packet company code mismatch for {code}: {packet_path}"
+        )
+    if packet.get("status") != "independent_review_ready":
+        raise SystemExit(
+            f"independent packet is not ready for {code}: {packet.get('status')}"
+        )
+
+    if "checks" in packet:
+        validate_current_packet_schema(packet, code)
+    elif "requiredChecks" in packet:
+        validate_legacy_packet_schema(packet, code)
+    else:
+        raise SystemExit(
+            f"independent packet has no supported pending-check schema for {code}"
+        )
+
     assert_no_forbidden_true(packet, f"independent[{code}]")
+
+
+def validate_independent_review_packet(
+    company: dict[str, Any],
+    repo_root: Path,
+) -> None:
+    code = str(company["code"])
+    packet_file_value = company.get("independentReviewFile")
+    if not isinstance(packet_file_value, str) or not packet_file_value:
+        raise SystemExit(f"independent-ready company missing packet: {code}")
+
+    packet_path = repo_root / packet_file_value
+    packet = load_json(packet_path)
+    validate_independent_packet_content(packet, code, packet_path)
 
 
 def validate_wave(wave: dict[str, Any], repo_root: Path) -> dict[str, int]:
@@ -248,10 +293,10 @@ def validate_wave(wave: dict[str, Any], repo_root: Path) -> dict[str, int]:
         if not isinstance(page_count, int) or page_count <= 0:
             raise SystemExit(f"invalid pageCount for {code}: {page_count}")
 
-        checks = company["requiredChecks"]
-        if not isinstance(checks, list) or len(checks) < 4:
+        required_checks = company["requiredChecks"]
+        if not isinstance(required_checks, list) or len(required_checks) < 4:
             raise SystemExit(f"insufficient requiredChecks for {code}")
-        if "fieldLevelEvidence" not in checks:
+        if "fieldLevelEvidence" not in required_checks:
             raise SystemExit(f"fieldLevelEvidence check missing for {code}")
 
         review_input = repo_root / str(company["reviewInput"])
@@ -351,6 +396,7 @@ def validate_status(
     for index, record in enumerate(completed_records):
         if not isinstance(record, dict):
             raise SystemExit(f"completedPrimaryReviews[{index}] must be an object")
+
         code = str(record.get("code", ""))
         review_file_value = record.get("reviewFile")
         if not code or not isinstance(review_file_value, str):
@@ -360,6 +406,9 @@ def validate_status(
         completed_codes.append(code)
 
         review_record = load_json(repo_root / review_file_value)
+        review_company = review_record.get("company")
+        if not isinstance(review_company, dict) or str(review_company.get("code")) != code:
+            raise SystemExit(f"canonical review company code mismatch for {code}")
         review_state = review_record.get("review", {})
         review_status = str(review_state.get("status", ""))
         if not review_status.startswith("primary_review_complete"):
@@ -372,11 +421,9 @@ def validate_status(
         if independent_file_value is not None:
             if not isinstance(independent_file_value, str):
                 raise SystemExit(f"invalid independentReviewFile for {code}")
-            packet = load_json(repo_root / independent_file_value)
-            if packet.get("status") != "independent_review_ready":
-                raise SystemExit(
-                    f"canonical independent packet is not ready for {code}"
-                )
+            packet_path = repo_root / independent_file_value
+            packet = load_json(packet_path)
+            validate_independent_packet_content(packet, code, packet_path)
             independent_ready_total += 1
 
         assert_no_forbidden_true(record, f"completedPrimaryReviews[{index}]")
@@ -478,18 +525,12 @@ def main() -> None:
                 "status": "ok",
                 "wave": wave["wave"],
                 "assignedCompanies": wave_counts["assigned"],
-                "wavePrimaryReviewComplete": wave_counts[
-                    "primaryReviewComplete"
+                "wavePrimaryReviewComplete": wave_counts["primaryReviewComplete"],
+                "waveIndependentReviewReady": wave_counts["independentReviewReady"],
+                "sourceRelevanceAudited": status["sourceRelevanceAudit"][
+                    "auditedCompanies"
                 ],
-                "waveIndependentReviewReady": wave_counts[
-                    "independentReviewReady"
-                ],
-                "sourceRelevanceAudited": status[
-                    "sourceRelevanceAudit"
-                ]["auditedCompanies"],
-                "primaryReviewComplete": status["review"][
-                    "primaryReviewComplete"
-                ],
+                "primaryReviewComplete": status["review"]["primaryReviewComplete"],
                 "independentReviewReady": status["review"][
                     "independentReviewReady"
                 ],

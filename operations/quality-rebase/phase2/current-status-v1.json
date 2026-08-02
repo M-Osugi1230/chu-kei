@@ -32,17 +32,17 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 8,
-    "formalPlanConfirmed": 8,
-    "primaryReviewComplete": 8,
+    "sourceIdentityConfirmed": 9,
+    "formalPlanConfirmed": 9,
+    "primaryReviewComplete": 9,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave01-v1.json",
-    "independentReviewReady": 6,
+    "independentReviewReady": 7,
     "additionalSourceMappingRequired": 1,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 442
+    "remainingPrimaryReviews": 441
   },
   "completedPrimaryReviews": [
     {
@@ -112,6 +112,16 @@
       "sourceClassification": "official_formal_management_plan"
     },
     {
+      "order": 62,
+      "code": "6103",
+      "name": "オークマ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6103-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6103-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan"
+    },
+    {
       "order": 70,
       "code": "9861",
       "name": "吉野家ホールディングス",
@@ -137,8 +147,8 @@
       "workstream": "primary_review_wave01",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 6,
-      "remainingCount": 4,
+      "completionCount": 7,
+      "remainingCount": 3,
       "file": "operations/quality-rebase/phase2/primary-review-wave01-v1.json"
     },
     {
@@ -177,6 +187,13 @@
       "file": "operations/quality-rebase/phase2/independent/9247-independent-review-v1.json"
     },
     {
+      "workstream": "independent_review_6103",
+      "companies": 1,
+      "status": "ready",
+      "completionCount": 0,
+      "file": "operations/quality-rebase/phase2/independent/6103-independent-review-v1.json"
+    },
+    {
       "workstream": "independent_review_9861",
       "companies": 1,
       "status": "ready",
@@ -205,8 +222,8 @@
     }
   ],
   "nextProcessingOrder": [
-    "第1ウェーブ残り4社について資料区分・全文・数値・資本政策・項目別証跡を確認する",
-    "日本触媒、住友ベークライト、ADEKA、DCMホールディングス、TREホールディングス、吉野家ホールディングスを独立確認者が再確認する",
+    "第1ウェーブ残り3社について資料区分・全文・数値・資本政策・項目別証跡を確認する",
+    "日本触媒、住友ベークライト、ADEKA、DCMホールディングス、TREホールディングス、オークマ、吉野家ホールディングスを独立確認者が再確認する",
     "60社の誤資料候補を負のシグナル別に分解し、公式IRページから代替資料を再特定する",
     "52社の収集失敗をHTTP種別・アクセス拒否・容量超過・解析失敗に分解して再取得する",
     "14社のPDF未特定について公式HTMLを一次証跡として確認し、正式PDFまたは公式ページを再探索する",

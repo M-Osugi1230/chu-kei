@@ -1,7 +1,7 @@
 {
   "schemaVersion": "phase2-primary-review-wave-v1",
   "generatedAt": "2026-08-02T01:21:23+09:00",
-  "updatedAt": "2026-08-02T10:14:00+09:00",
+  "updatedAt": "2026-08-02T10:40:00+09:00",
   "wave": 1,
   "targetCompanies": 10,
   "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-v2/summary.json",
@@ -158,8 +158,13 @@
       "relevanceScore": 28,
       "pageCount": 26,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/4612/primary-review-template.json",
-      "status": "primary_review_assigned",
-      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4612-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4612-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"],
+      "completedChecks": ["formalPlanBoundary", "growthPotentialDocumentSeparation", "fullTextReview", "visualFigureReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation", "actualForecastTargetSeparation", "cagrAbsoluteTargetSeparation", "regionalNonFinancialScopeValidation"],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
     }
   ],
   "counts": {
@@ -167,8 +172,8 @@
     "formalManagementPlanCandidates": 2,
     "planRevisionOrUpdateCandidates": 6,
     "growthPotentialDocumentCandidates": 2,
-    "primaryReviewComplete": 7,
-    "independentReviewReady": 7,
+    "primaryReviewComplete": 8,
+    "independentReviewReady": 8,
     "deepVerificationApproved": 0
   },
   "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、項目別証跡を人が確認した場合のみ記録する。"

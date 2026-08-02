@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-02T11:00:00+09:00",
+  "updatedAt": "2026-08-02T11:15:00+09:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -39,7 +39,7 @@
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave01-v1.json",
     "independentReviewReady": 10,
-    "additionalSourceMappingRequired": 1,
+    "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
     "remainingPrimaryReviews": 438
@@ -137,9 +137,10 @@
       "name": "ムービン・ストラテジック・キャリア",
       "reviewFile": "operations/quality-rebase/phase2/reviews/421A-primary-review-v1.json",
       "independentReviewFile": "operations/quality-rebase/phase2/independent/421A-independent-review-v1.json",
+      "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json",
       "status": "primary_review_complete_independent_review_ready",
-      "sourceCorrectionRequired": false,
-      "sourceClassification": "official_growth_potential_document_with_formal_management_plan"
+      "sourceCorrectionRequired": true,
+      "sourceClassification": "official_growth_potential_document_with_formal_management_plan_and_official_correction"
     },
     {
       "order": 66,
@@ -170,6 +171,16 @@
       "selectedPdf": "休日のお知らせ.pdf",
       "resolutionFile": "operations/quality-rebase/phase2/source-repairs/4063-source-resolution-v1.json",
       "status": "wrong_document_isolated_replacement_source_human_review_pending"
+    },
+    {
+      "code": "421A",
+      "name": "ムービン・ストラテジック・キャリア",
+      "finding": "official_same_day_correction_deleted_page",
+      "originalPageCount": 37,
+      "correctedExpectedPageCount": 36,
+      "deletedPrintedPage": 14,
+      "resolutionFile": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json",
+      "status": "official_correction_applied_corrected_pdf_direct_url_and_hash_independent_check_pending"
     }
   ],
   "activeWork": [
@@ -200,6 +211,13 @@
       ]
     },
     {
+      "workstream": "corrected_source_resolution_421A",
+      "companies": 1,
+      "status": "independent_resolution_pending",
+      "completionCount": 0,
+      "file": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json"
+    },
+    {
       "workstream": "likely_wrong_document_repair",
       "companies": 60,
       "status": "queued"
@@ -222,6 +240,7 @@
   ],
   "nextProcessingOrder": [
     "第1ウェーブ10社の品質ゲートを通過させ、レビュー記録・独立確認票・正本件数の整合を確定する",
+    "ムービン・ストラテジック・キャリアの訂正後36ページ版PDF直接URL・ハッシュを独立確認者が特定する",
     "第2ウェーブを一次レビュー候補から選定し、正式資料優先で次の10社を割り当てる",
     "10社の独立再確認を別確認者へ引き渡し、原資料・図表・年度・単位・範囲を再確認する",
     "60社の誤資料候補を負のシグナル別に分解し、公式IRページから代替資料を再特定する",

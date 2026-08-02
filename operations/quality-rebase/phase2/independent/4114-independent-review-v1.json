@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4114",
+    "name": "日本触媒"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4114-primary-review-v1.json",
+  "source": {
+    "title": "日本触媒グループ 中期経営計画2027",
+    "officialUrl": "https://www.shokubai.co.jp/ja/ir/assets/pdf/management/vision/mid-term_managementplan.pdf",
+    "officialLandingPage": "https://www.shokubai.co.jp/ja/ir/management/vision/",
+    "pdfSha256": "4a9c704ebab26f509c1218ab6d3798be4eb513faeb5b810d5d19d1375da672c5",
+    "pageCount": 34
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社公式IRページ、会社名、計画名称、2025年4月15日の公表日、公式PDF URL、PDFハッシュを独立に再確認する。",
+      "expectedEvidencePdfPages": [
+        1,
+        2,
+        4
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period_and_boundary",
+      "description": "計画期間が2025年度から2027年度（2025年4月から2028年3月）であり、2024年度見通しおよび2030年度長期目標と混同していないことを確認する。",
+      "expectedEvidencePdfPages": [
+        3,
+        7,
+        12,
+        13
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "profit_metric_definition",
+      "description": "2027年度の350億円が営業利益単独ではなく営業利益と持分法投資損益の合計であることを確認する。",
+      "expectedEvidencePdfPages": [
+        2,
+        13,
+        31
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2027年度の利益350億円、ソリューションズ事業185億円、ROE7%以上、ROA6%以上、ROIC6%以上を原文・図表で再確認する。",
+      "expectedEvidencePdfPages": [
+        13,
+        14
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "segment_profit_targets",
+      "description": "AA・SAP90億円、EO他70億円、スペシャリティ70億円、エレクトロニクス65億円、その他50億円、全社共通5億円の合計が350億円となることを再計数する。",
+      "expectedEvidencePdfPages": [
+        14
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "investment_period_separation",
+      "description": "2,450億円が2022年度から2027年度累計であり、新中計2025年度から2027年度のキャッシュアロケーション上の投資1,550億円とは期間が異なることを確認する。",
+      "expectedEvidencePdfPages": [
+        13,
+        29
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "cash_allocation",
+      "description": "2025年度から2027年度累計の営業CF1,500億円、借入600億円、政策保有株式売却150億円、投資1,550億円、株主還元700億円を再確認する。",
+      "expectedEvidencePdfPages": [
+        29
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "balance_sheet_and_policy_shares",
+      "description": "2027年度末の総資産6,300億円イメージ、株主資本比率60%近傍、政策保有株式50%縮減目標の年度・基準を確認する。",
+      "expectedEvidencePdfPages": [
+        29
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "2027年度までの配当ルールが配当性向100%またはDOE2.0%のいずれか大きい金額であり、政策保有株式縮減資金による自己株式取得方針を確認する。",
+      "expectedEvidencePdfPages": [
+        30
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "environmental_targets",
+      "description": "2027年度環境貢献製品売上高550億円、2030年度1,350億円、2030年度GHG排出量30%削減を再確認し、中計目標と長期目標を分離する。",
+      "expectedEvidencePdfPages": [
+        26
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "ソリューションズ4成長領域、マテリアルズ収益力強化、GX、人財、デジタル、財務・資本戦略の構造を確認する。",
+      "expectedEvidencePdfPages": [
+        3,
+        12,
+        14,
+        25,
+        29
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後にリンク、表示、検索、数値単位、年度、対象範囲、改行崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

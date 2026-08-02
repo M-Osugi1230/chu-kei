@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "quality-rebase-phase2-source-resolution-v1",
+  "company": {
+    "code": "2884",
+    "name": "ヨシムラ・フード・ホールディングス"
+  },
+  "candidate": {
+    "title": "2026年2月期決算説明及び中期経営計画",
+    "candidatePublishedDate": "2026-04-15",
+    "officialUrl": "https://www2.jpx.co.jp/disc/28840/140120260415504509.pdf",
+    "pdfSha256": "f7e35a9906623ad860cf421b623fe159e026a8c784754d5990a77f5435780a2b",
+    "pageCount": 64,
+    "documentTypeCandidate": "plan_revision_or_update"
+  },
+  "finding": {
+    "type": "quantified_formal_plan_boundary_not_met",
+    "sourceIdentityConfirmed": true,
+    "managementRoadmapConfirmed": true,
+    "quantifiedMediumTermTargetsConfirmed": false,
+    "evidence": [
+      {
+        "pdfPage": 36,
+        "statement": "中期経営計画サマリーにおいて、計数目標は『足元の状況を勘案し、再度検討中』と明記されている。"
+      },
+      {
+        "pdfPage": 38,
+        "statement": "2026年2月期から2030年2月期までのM&A・オーガニック成長・海外展開・経営基盤ロードマップは示されるが、年度別または最終年度の財務目標は示されていない。"
+      },
+      {
+        "pdfPages": [43, 48],
+        "statement": "M&A対象条件と株主還元の定性的方針はあるが、中計期間の投資総額、業績目標、配当目標は未開示である。"
+      }
+    ],
+    "reason": "中期的な戦略・ロードマップは確認できるが、会社自身が計数目標を再検討中としている。数値・年度・範囲を検証する品質要件を満たさないため、正式中計の一次レビュー完了扱いにはしない。"
+  },
+  "resolution": {
+    "status": "source_isolated_quantified_plan_republication_required",
+    "waveEligibility": false,
+    "replacementRequired": true,
+    "nextActions": [
+      "計数目標を含む中期経営計画の再公表を監視する",
+      "2027年2月期単年度予想を中期目標として流用しない",
+      "M&A対象条件や株主優待を中計の財務目標として扱わない",
+      "現行資料は経営戦略・ロードマップ資料として保管する"
+    ]
+  },
+  "approval": {
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

@@ -70,7 +70,7 @@ jobs:
             --target-count '${{ inputs.target_count }}' \
             "${EXTRA_ARGS[@]}"
 
-      - name: Validate generated wave safety
+      - name: Validate generated assignment safety
         if: ${{ inputs.write_changes }}
         shell: bash
         run: |
@@ -80,10 +80,96 @@ jobs:
             echo 'No generated wave file found.' >&2
             exit 1
           fi
-          python scripts/validate_phase2_primary_review_wave.py \
-            --wave "$GENERATED_FILE" \
-            --status operations/quality-rebase/phase2/current-status-v1.json \
-            --repo-root .
+          python - "$GENERATED_FILE" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          generated_path = Path(sys.argv[1])
+          wave = json.loads(generated_path.read_text(encoding="utf-8"))
+          companies = wave.get("companies")
+          counts = wave.get("counts", {})
+          if wave.get("schemaVersion") != "phase2-primary-review-wave-v1":
+              raise SystemExit("unexpected schemaVersion")
+          if not isinstance(companies, list) or not companies:
+              raise SystemExit("generated wave has no companies")
+          if counts.get("assigned") != len(companies):
+              raise SystemExit("assigned count mismatch")
+          if counts.get("primaryReviewComplete") != 0:
+              raise SystemExit("new assignment must not contain completed reviews")
+          if counts.get("independentReviewReady") != 0:
+              raise SystemExit("new assignment must not be independent-review ready")
+          if counts.get("deepVerificationApproved") != 0:
+              raise SystemExit("new assignment must not contain approvals")
+
+          codes = []
+          orders = []
+          for company in companies:
+              code = str(company.get("code", ""))
+              order = company.get("order")
+              if not code or not isinstance(order, int):
+                  raise SystemExit("company lacks code or order")
+              if company.get("status") not in {
+                  "primary_review_assigned",
+                  "primary_review_assigned_formal_plan_boundary_required",
+              }:
+                  raise SystemExit(f"invalid assignment status for {code}")
+              if company.get("reviewFile") or company.get("independentReviewFile"):
+                  raise SystemExit(f"premature review output for {code}")
+              review_input = Path(str(company.get("reviewInput", "")))
+              if not review_input.is_file():
+                  raise SystemExit(f"missing review input for {code}: {review_input}")
+              codes.append(code)
+              orders.append(order)
+
+          if len(codes) != len(set(codes)):
+              raise SystemExit("duplicate company codes in generated wave")
+          if len(orders) != len(set(orders)):
+              raise SystemExit("duplicate queue orders in generated wave")
+
+          for existing_path in sorted(
+              Path("operations/quality-rebase/phase2").glob(
+                  "primary-review-wave*-v1.json"
+              )
+          ):
+              if existing_path == generated_path:
+                  continue
+              existing = json.loads(existing_path.read_text(encoding="utf-8"))
+              for company in existing.get("companies", []):
+                  if str(company.get("code")) in codes:
+                      raise SystemExit(
+                          f"company already assigned in {existing_path}: "
+                          f"{company.get('code')}"
+                      )
+                  if company.get("order") in orders:
+                      raise SystemExit(
+                          f"queue order already assigned in {existing_path}: "
+                          f"{company.get('order')}"
+                      )
+
+          serialized = json.dumps(wave, ensure_ascii=False)
+          for forbidden in (
+              '"automaticFactCompletionAllowed": true',
+              '"automaticApprovalAllowed": true',
+              '"deepVerificationApproved": true',
+          ):
+              if forbidden in serialized:
+                  raise SystemExit(f"forbidden flag found: {forbidden}")
+
+          print(
+              json.dumps(
+                  {
+                      "status": "ok",
+                      "file": str(generated_path),
+                      "assigned": len(companies),
+                      "automaticApprovalAllowed": False,
+                      "deepVerificationApproved": 0,
+                  },
+                  ensure_ascii=False,
+                  indent=2,
+              )
+          )
+          PY
 
       - name: Commit generated assignment wave
         if: ${{ inputs.write_changes }}

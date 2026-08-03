@@ -1,0 +1,101 @@
+name: Generate Phase 2 Next Primary Review Wave
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_count:
+        description: Number of companies to assign
+        required: true
+        default: '10'
+        type: string
+      include_growth_documents:
+        description: Include growth-potential documents that require formal-plan boundary review
+        required: true
+        default: false
+        type: boolean
+      write_changes:
+        description: Commit the generated assignment wave to the branch
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-next-primary-review-wave-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  generate-next-wave:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate generation without writing
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXTRA_ARGS=()
+          if [[ '${{ inputs.include_growth_documents }}' == 'true' ]]; then
+            EXTRA_ARGS+=(--include-growth-documents)
+          fi
+          python scripts/generate_phase2_next_primary_review_wave.py \
+            --repo-root . \
+            --target-count '${{ inputs.target_count }}' \
+            --check \
+            "${EXTRA_ARGS[@]}"
+
+      - name: Generate assignment wave
+        if: ${{ inputs.write_changes }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          EXTRA_ARGS=()
+          if [[ '${{ inputs.include_growth_documents }}' == 'true' ]]; then
+            EXTRA_ARGS+=(--include-growth-documents)
+          fi
+          python scripts/generate_phase2_next_primary_review_wave.py \
+            --repo-root . \
+            --target-count '${{ inputs.target_count }}' \
+            "${EXTRA_ARGS[@]}"
+
+      - name: Validate generated wave safety
+        if: ${{ inputs.write_changes }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          GENERATED_FILE="$(git status --short | awk '/primary-review-wave[0-9][0-9]-v1.json$/ {print $2}')"
+          if [[ -z "$GENERATED_FILE" ]]; then
+            echo 'No generated wave file found.' >&2
+            exit 1
+          fi
+          python scripts/validate_phase2_primary_review_wave.py \
+            --wave "$GENERATED_FILE" \
+            --status operations/quality-rebase/phase2/current-status-v1.json \
+            --repo-root .
+
+      - name: Commit generated assignment wave
+        if: ${{ inputs.write_changes }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/primary-review-wave*-v1.json
+          git commit -m 'quality: Phase 2次一次レビューウェーブを割当'
+          git push origin "HEAD:${{ github.ref_name }}"

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "phase2-source-resolution-v1",
+  "company": {
+    "code": "6134",
+    "name": "FUJI"
+  },
+  "resolutionStatus": "newer_official_progress_update_identified_recollection_and_boundary_review_required",
+  "collectedCandidate": {
+    "url": "https://www.fuji.co.jp/ir/library/pdf/20250513_FinancialresultbriefingJ.pdf",
+    "pdfSha256": "973efc5b258897465457e5f43ba2630acef7c078df474c52b2e2a78ad2554899",
+    "pageCount": 31,
+    "title": "決算説明及び中期経営計画1年目振り返り",
+    "publishedDate": "2025-05-13",
+    "classification": "official_management_plan_year1_progress_update",
+    "mayEnterPrimaryReviewAsLatestSource": false,
+    "reason": "公式中期経営計画ページに2026年5月14日公表の2年目振り返りが追加されており、収集済み2025年資料は最新進捗資料ではない。"
+  },
+  "currentOfficialSources": {
+    "landingPageUrl": "https://www.fuji.co.jp/ir/policy/plan.html",
+    "formalPlanPdf": {
+      "title": "中期経営計画2026",
+      "publishedDate": "2024-05-10",
+      "sourceRole": "formal_plan_baseline"
+    },
+    "latestProgressPdf": {
+      "url": "https://www.fuji.co.jp/ir/library/pdf/20260514_FinancialresultbriefingJ.pdf",
+      "title": "決算説明及び中期経営計画2年目振り返り",
+      "publishedDate": "2026-05-14",
+      "pageCount": 32,
+      "securityCode": "6134",
+      "pdfSha256": null,
+      "binaryHashStatus": "pending_retrieval_in_repository_execution_environment",
+      "sourceRole": "latest_official_plan_progress_update"
+    }
+  },
+  "documentClassification": "formal_management_plan_with_newer_official_year2_progress_update",
+  "formalPlanBoundary": {
+    "planPeriod": "2024年度から2026年度",
+    "formalPlan": "2024年5月10日公表の中期経営計画2026",
+    "year1Update": "2025年5月13日公表の1年目振り返り",
+    "year2Update": "2026年5月14日公表の2年目振り返り",
+    "statement": "正式中計の基準資料と年次進捗資料を分離し、最新実績・見通し・目標変更の有無は2年目振り返りを優先して確認する。"
+  },
+  "confirmedLatestSourceIdentity": {
+    "companyIdentityConfirmed": true,
+    "securityCodeConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pageCountConfirmed": true,
+    "latestProgressStatusConfirmed": true,
+    "evidencePdfPages": [1, 2]
+  },
+  "validation": {
+    "formalPlanLandingPageConfirmed": true,
+    "formalPlanBaselineIdentified": true,
+    "newerOfficialUpdateIdentified": true,
+    "collectedSourceMarkedStaleForLatestReview": true,
+    "latestPdfSha256Confirmed": false,
+    "formalPlanAndProgressUpdateReconciled": false,
+    "fullTextHumanReviewComplete": false,
+    "independentDoubleCheck": false
+  },
+  "requiredNextChecks": [
+    "公式中期経営計画2026の基準PDF URL、SHA-256、ページ数を固定する",
+    "2026年5月14日公表の2年目振り返りPDFを再取得しSHA-256を固定する",
+    "正式中計の当初目標と1年目・2年目進捗を項目単位で分離する",
+    "2027年3月期通期業績予想と中計最終年度目標を混在させない",
+    "目標改定、資本政策、株主還元、事業ポートフォリオ施策の変更有無を全文・図表で確認する",
+    "独立確認者が最新資料選定、年度、単位、範囲を再確認する"
+  ],
+  "primaryReviewComplete": false,
+  "independentReviewReady": false,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

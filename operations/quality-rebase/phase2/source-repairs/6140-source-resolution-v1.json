@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "phase2-source-resolution-v1",
+  "company": {
+    "code": "6140",
+    "name": "旭ダイヤモンド工業"
+  },
+  "resolutionStatus": "current_formal_plan_identity_hash_and_plan_boundary_confirmed",
+  "currentOfficialDocument": {
+    "landingPageUrl": "https://www.asahidia.co.jp/ir-resource_cat/management_plan/",
+    "pdfUrl": "https://www2.jpx.co.jp/disc/61400/140120260526547587.pdf",
+    "title": "中期経営計画2030説明会資料",
+    "publishedDate": "2026-05-26",
+    "securityCode": "6140",
+    "pageCount": 24,
+    "pdfSha256": "74c7c10f9fc6b6f9b7307bef5ecc9c25f9a3251a9e09d7101ab2203e14224dad",
+    "identityEvidencePdfPages": [1, 2, 24],
+    "identityConfirmed": true,
+    "pageCountConfirmed": true,
+    "publicationDateConfirmed": true,
+    "binaryHashConfirmed": true
+  },
+  "documentClassification": "formal_management_plan_current_2026_to_2030",
+  "formalPlanBoundary": {
+    "previousPlan": "中期経営計画2025（2023年度から2025年度）",
+    "currentPlan": "中期経営計画2030（2026年度から2030年度）",
+    "longTermVision": "VISION2030",
+    "statement": "前中計の実績・未達評価、2027年3月期単年度予想、2029年3月期中間目標、2031年3月期最終目標を分離する。退職給付費用の影響を控除した括弧内参考値を正式目標と混在させない。",
+    "evidencePdfPages": [5, 7, 11, 18, 19]
+  },
+  "confirmedCurrentPlanFacts": {
+    "period": {
+      "startFiscalYear": "2027年3月期",
+      "endFiscalYear": "2031年3月期",
+      "managementLabel": "2026年度から2030年度"
+    },
+    "terminalFinancialTargets": [
+      {
+        "metric": "売上高",
+        "target": 53000,
+        "unit": "百万円",
+        "targetFiscalYear": "2031年3月期",
+        "evidencePdfPage": 18
+      },
+      {
+        "metric": "営業利益",
+        "target": 5300,
+        "unit": "百万円",
+        "targetFiscalYear": "2031年3月期",
+        "evidencePdfPage": 18
+      },
+      {
+        "metric": "営業利益率",
+        "target": 10,
+        "unit": "%以上",
+        "targetFiscalYear": "2031年3月期",
+        "evidencePdfPages": [16, 18, 19]
+      },
+      {
+        "metric": "ROE",
+        "target": 8,
+        "unit": "%以上",
+        "targetFiscalYear": "2031年3月期",
+        "evidencePdfPages": [18, 19, 21, 22]
+      }
+    ],
+    "capitalAllocation": {
+      "period": "2027年3月期から2031年3月期の5年間累計",
+      "operatingCashFlow": 300,
+      "operatingCashFlowUnit": "億円",
+      "growthInvestmentMinimum": 150,
+      "growthInvestmentMaximum": 300,
+      "growthInvestmentUnit": "億円",
+      "shareholderReturnMinimum": 100,
+      "shareholderReturnMaximum": 200,
+      "shareholderReturnUnit": "億円",
+      "assetSalesMinimum": 10,
+      "assetSalesMaximum": 50,
+      "assetSalesUnit": "億円",
+      "borrowingMinimum": 25,
+      "borrowingMaximum": 50,
+      "borrowingUnit": "億円",
+      "evidencePdfPage": 20
+    },
+    "shareholderReturn": {
+      "progressiveDividendFloor": 34,
+      "progressiveDividendFloorUnit": "円/株以上",
+      "totalPayoutRatioMinimum": 100,
+      "totalPayoutRatioUnit": "%以上・5年累計",
+      "shareRepurchasePolicy": "機動的な自己株式取得と消却",
+      "evidencePdfPages": [20, 21]
+    }
+  },
+  "validation": {
+    "currentOfficialPdfUrlConfirmed": true,
+    "companyIdentityConfirmed": true,
+    "securityCodeConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pageCountConfirmed": true,
+    "pdfSha256Confirmed": true,
+    "formalPlanBoundaryConfirmed": true,
+    "previousAndCurrentPlanSeparated": true,
+    "forecastActualSeparated": true,
+    "referenceAdjustedFiguresSeparated": true,
+    "financialTargetsLocated": true,
+    "capitalPolicyLocated": true,
+    "shareholderReturnPolicyLocated": true,
+    "fullTextRepositoryReviewComplete": true,
+    "independentDoubleCheck": false
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6140-primary-review-v1.json",
+  "primaryReviewComplete": true,
+  "independentReviewReady": false,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

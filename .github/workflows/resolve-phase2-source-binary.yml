@@ -1,0 +1,125 @@
+name: Resolve Phase 2 Source Binary
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase2/source-binary-requests/*.json'
+      - 'scripts/resolve_phase2_source_binary.py'
+      - '.github/workflows/resolve-phase2-source-binary.yml'
+  workflow_dispatch:
+    inputs:
+      request_file:
+        description: Request JSON path under source-binary-requests
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: resolve-phase2-source-binary-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PDF parser
+        run: python -m pip install --disable-pip-version-check 'pypdf==5.9.0'
+
+      - name: Select request file
+        id: request
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ '${{ github.event_name }}' == 'workflow_dispatch' ]]; then
+            REQUEST='${{ inputs.request_file }}'
+          else
+            REQUEST="$(git diff-tree --no-commit-id --name-only -r HEAD | awk '/operations\/quality-rebase\/phase2\/source-binary-requests\/.*\.json$/ {print; exit}')"
+          fi
+          if [[ -z "$REQUEST" || ! -f "$REQUEST" ]]; then
+            echo 'No valid source binary request file found.' >&2
+            exit 1
+          fi
+          case "$REQUEST" in
+            operations/quality-rebase/phase2/source-binary-requests/*.json) ;;
+            *) echo "Request file is outside the allowed directory: $REQUEST" >&2; exit 1 ;;
+          esac
+          echo "request_file=$REQUEST" >> "$GITHUB_OUTPUT"
+
+      - name: Parse request safely
+        id: parsed
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - '${{ steps.request.outputs.request_file }}' >> "$GITHUB_OUTPUT" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          path = Path(sys.argv[1])
+          request = json.loads(path.read_text(encoding='utf-8'))
+          if request.get('schemaVersion') != 'phase2-source-binary-request-v1':
+              raise SystemExit('unexpected request schemaVersion')
+          if request.get('automaticApprovalAllowed') is not False:
+              raise SystemExit('automaticApprovalAllowed must be false')
+          if request.get('deepVerificationApproved') is not False:
+              raise SystemExit('deepVerificationApproved must be false')
+          source = request.get('sourceResolutionFile')
+          output = request.get('outputEvidenceFile')
+          if not isinstance(source, str) or not isinstance(output, str):
+              raise SystemExit('request lacks source/output paths')
+          if not source.startswith('operations/quality-rebase/phase2/source-repairs/'):
+              raise SystemExit('source resolution path is outside allowed directory')
+          if not output.startswith('operations/quality-rebase/phase2/source-binary-evidence/'):
+              raise SystemExit('output evidence path is outside allowed directory')
+          if not Path(source).is_file():
+              raise SystemExit(f'missing source resolution: {source}')
+          print(f'source_resolution={source}')
+          print(f'output_evidence={output}')
+          PY
+
+      - name: Verify official PDF and write evidence
+        run: |
+          python scripts/resolve_phase2_source_binary.py \
+            --source-resolution '${{ steps.parsed.outputs.source_resolution }}' \
+            --output '${{ steps.parsed.outputs.output_evidence }}'
+
+      - name: Confirm isolated evidence change
+        shell: bash
+        run: |
+          set -euo pipefail
+          git status --short
+          CHANGED_COUNT="$(git status --short | wc -l | tr -d ' ')"
+          if [[ "$CHANGED_COUNT" != '1' ]]; then
+            echo "Expected exactly one generated evidence file, got $CHANGED_COUNT." >&2
+            exit 1
+          fi
+          if ! git status --short | grep -Fq "?? ${{ steps.parsed.outputs.output_evidence }}"; then
+            echo 'Unexpected changed file.' >&2
+            exit 1
+          fi
+
+      - name: Commit immutable binary evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add '${{ steps.parsed.outputs.output_evidence }}'
+          git commit -m 'quality: Phase 2公式PDFバイナリ証跡を固定'
+          git push origin "HEAD:${{ github.ref_name }}"

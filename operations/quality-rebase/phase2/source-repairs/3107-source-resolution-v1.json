@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "phase2-source-resolution-v1",
+  "company": {
+    "code": "3107",
+    "name": "ダイワボウホールディングス"
+  },
+  "resolutionStatus": "stale_pdf_quarantined_current_official_candidate_identified",
+  "incorrectCandidate": {
+    "url": "https://www.daiwabo-holdings.com/ja/ir/strategy/main/01116/teaserItems1/00/linkList/0/link/20210513_mmp.pdf",
+    "pdfSha256": "a0fd36fe49991f1db84d98e66b029b23bff354aa5d01055f92677ed44c11e511",
+    "classification": "older_management_plan_pdf",
+    "reason": "候補メタデータは2025年3月期から2027年3月期の中期経営計画を示す一方、収集器は公式ページ内の2021年公開旧PDFを選択している。期間と資料実体が一致しないため一次レビュー入力として隔離する。",
+    "mayEnterPrimaryReview": false
+  },
+  "officialSources": [
+    {
+      "url": "https://www.daiwabo-holdings.com/ja/ir/strategy.html",
+      "sourceType": "official_management_plan_page",
+      "use": "現行中期経営計画の資料名、計画期間、公式PDFリンクの確定"
+    },
+    {
+      "url": "https://www.daiwabo-holdings.com/ja/ir/strategy/main/07/teaserItems1/01/link/Medium-Term%20Management%20Plan_FY0324-FY0327.pdf",
+      "sourceType": "official_current_plan_pdf_candidate",
+      "use": "2025年3月期から2027年3月期計画の正式PDF候補。再取得後にハッシュ、ページ数、本文、図表を固定する"
+    }
+  ],
+  "documentClassification": "formal_management_plan_current_pdf_recollection_required",
+  "requiredNextChecks": [
+    "公式中期経営計画ページから現行PDFを再取得する",
+    "再取得PDFの会社名、計画期間、公表日、ページ数、SHA-256を固定する",
+    "2021年公開旧計画と2025年3月期から2027年3月期計画を分離する",
+    "現行PDFの全文と図表を確認して主要数値、資本政策、株主還元を構造化する",
+    "独立確認者が旧PDF隔離と現行PDFへの差し替えを再確認する"
+  ],
+  "primaryReviewComplete": false,
+  "independentReviewReady": false,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

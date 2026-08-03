@@ -71,3 +71,5 @@ jobs:
           git add operations/quality-rebase/phase2/current-status-v1.json
           git commit -m 'quality: Phase 2ウェーブ割当を正本台帳へ同期'
           git push origin "HEAD:${{ github.ref_name }}"
+
+# The workflow is intentionally idempotent: repeated runs must not alter review completion or approval state.

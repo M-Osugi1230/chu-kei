@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {"code": "6822", "name": "大井電気"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6822-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画 2026-2028",
+    "officialUrl": "https://www2.jpx.co.jp/disc/68220/140120260515538497.pdf",
+    "pdfSha256": "ee3f7e6d39ddf62baac678623d7a2e53e7aafddaa47a369863b611dac4aa20d5",
+    "pageCount": 23
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {"id": "source_identity", "description": "会社名、証券コード6822、公表日2026年5月15日、23ページ、PDFハッシュを確認する。", "expectedEvidencePdfPages": [1, 2, 23], "status": "pending"},
+    {"id": "plan_boundary", "description": "2023-2025前中計、FY2026予想、FY2028中計目標、長期ビジョン2035を分離する。", "expectedEvidencePdfPages": [6, 8, 10, 12], "status": "pending"},
+    {"id": "financial_targets", "description": "FY2028売上高404億円、営業利益21億円、営業利益率5.20%、ROE10%以上、期間内PBR1.0倍以上を確認する。", "expectedEvidencePdfPages": [12, 20], "status": "pending"},
+    {"id": "capital_allocation", "description": "営業CF約80億円、資産売却約7億円、研究開発30-40億円、設備投資10-20億円、財務基盤10-20億円、資本政策3-10億円を確認する。", "expectedEvidencePdfPages": [19], "status": "pending"},
+    {"id": "shareholder_return", "description": "FY2025実績基準の累進的配当、将来DOE検討、機動的自己株式取得方針を確認する。", "expectedEvidencePdfPages": [21], "status": "pending"},
+    {"id": "strategy", "description": "収益性事業、成長性事業、ネットワーク工事保守、新規事業の区分と施策を確認する。", "expectedEvidencePdfPages": [13, 14, 15, 16, 17], "status": "pending"},
+    {"id": "nonfinancial", "description": "非財務開示はマテリアリティ方針中心であり、数値目標として誤登録していないことを確認する。", "expectedEvidencePdfPages": [18], "status": "pending"},
+    {"id": "post_publication", "description": "公開反映後のリンク、計画期間、主要数値、資本配分表示を確認する。", "status": "pending"}
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

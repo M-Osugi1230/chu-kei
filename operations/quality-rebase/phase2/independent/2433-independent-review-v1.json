@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {"code": "2433", "name": "博報堂DYホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2433-primary-review-v1.json",
+  "source": {
+    "documentTitle": "2024年3月期 通期 決算説明会資料＜解説つき＞",
+    "planSectionTitle": "博報堂DYグループ 新中期経営計画",
+    "officialLandingPage": "https://www.hakuhodody-holdings.co.jp/businessplan/businessplan_outline/",
+    "officialUrl": "https://ssl4.eir-parts.net/doc/2433/tdnet/2463007/00.pdf",
+    "pdfSha256": "f9e75ba2a4fddba831c5cdf2ed685e501286474adcae74f62cff5696d74655cb",
+    "pageCount": 38
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {"id": "source_identity", "description": "会社名、公表日、PDFハッシュ、38ページを確認する。", "expectedDisplayedPages": [1,6,38], "status": "pending"},
+    {"id": "document_classification", "description": "公式決算説明資料内の正式中計であることを確認する。", "expectedDisplayedPages": [1,6], "status": "pending"},
+    {"id": "plan_boundary", "description": "前中計、2025年3月期から2027年3月期の現行中計、2032年将来像を分離する。", "expectedDisplayedPages": [3,17,33,35], "status": "pending"},
+    {"id": "financial_targets", "description": "調整後営業利益CAGR10%以上、売上総利益CAGR5%以上、マージン13%以上、ROE10%以上を確認する。", "expectedDisplayedPages": [33], "status": "pending"},
+    {"id": "business_targets", "description": "国内、成長4領域、グローバルのモニタリング指標を確認する。", "expectedDisplayedPages": [34], "status": "pending"},
+    {"id": "adjustment_definition", "description": "調整後がメルカリ株式売却益除外であることを確認する。", "expectedDisplayedPages": [33], "status": "pending"},
+    {"id": "capital_and_return_absence", "description": "総投資額、キャッシュアロケーション、株主還元定量目標が本資料で未開示であることを確認する。", "status": "pending"},
+    {"id": "post_publication", "description": "公開反映後にリンク、期間、指標、未開示表示を確認する。", "status": "pending"}
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

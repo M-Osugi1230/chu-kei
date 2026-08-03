@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "phase2-source-resolution-v1",
+  "company": {
+    "code": "8316",
+    "name": "三井住友フィナンシャルグループ"
+  },
+  "resolutionStatus": "current_plan_embedded_in_official_results_presentation_identity_hash_and_boundary_confirmed",
+  "currentOfficialDocument": {
+    "landingPageUrl": "https://www.smfg.co.jp/company/strategy/",
+    "pdfUrl": "https://www.smfg.co.jp/investor/financial/latest_statement/2026_3/2026_fy_setumei.pdf",
+    "documentTitle": "2025年度決算 投資家説明会",
+    "planSectionTitle": "新中期経営計画",
+    "publishedDate": "2026-05-18",
+    "securityCode": "8316",
+    "pageCount": 83,
+    "pdfSha256": "e42f8d0d46e7bab45ecc68243c8a6fea96745a4873e54e21b0b7f8b2a5ee6260",
+    "planSectionPdfPages": [25, 59],
+    "identityEvidencePdfPages": [1, 3, 83],
+    "identityConfirmed": true,
+    "pageCountConfirmed": true,
+    "publicationDateConfirmed": true,
+    "binaryHashConfirmed": true
+  },
+  "documentClassification": "official_investor_presentation_containing_current_formal_management_plan_section",
+  "classificationStatement": "収集PDFは単独の中期経営計画PDFではなく、2025年度決算説明と新中期経営計画を収録した公式投資家説明会資料である。中計の基準情報として利用できるが、決算実績・単年度予想・中長期目標を中計最終年度目標と混在させない。",
+  "formalPlanBoundary": {
+    "previousPlan": "中期経営計画2023-2025年度",
+    "currentPlan": "中期経営計画2026-2028年度",
+    "singleYearForecast": "2026年度親会社株主純利益1兆7,000億円",
+    "currentPlanTerminalTargets": "2028年度ROTE13%、親会社株主純利益2兆円",
+    "mediumLongTermTargets": "ROTE15%程度、親会社株主純利益2兆5,000億円",
+    "statement": "2025年度実績、2026年度単年度予想、2028年度中計目標、中長期目標を四層に分離する。",
+    "evidencePdfPages": [25, 33, 43, 54]
+  },
+  "confirmedCurrentPlanFacts": {
+    "period": {
+      "startFiscalYear": "2026年度",
+      "endFiscalYear": "2028年度"
+    },
+    "financialTargets": [
+      {
+        "metric": "ROTE",
+        "target": 13,
+        "unit": "%",
+        "targetFiscalYear": "2028年度",
+        "evidencePdfPage": 43
+      },
+      {
+        "metric": "親会社株主純利益",
+        "target": 20000,
+        "unit": "億円",
+        "targetFiscalYear": "2028年度",
+        "evidencePdfPage": 43
+      },
+      {
+        "metric": "CET1比率",
+        "target": 10.5,
+        "unit": "%程度",
+        "targetRange": "10.0%から11.0%",
+        "targetFiscalYear": "2028年度末",
+        "evidencePdfPage": 54
+      }
+    ],
+    "capitalAllocation": {
+      "organicRiskWeightedAssetsIncrease": 5.5,
+      "organicRiskWeightedAssetsIncreaseUnit": "兆円・3年間",
+      "itInvestment": 1.0,
+      "itInvestmentUnit": "兆円・3年間",
+      "allocatableCapital": 5.5,
+      "allocatableCapitalUnit": "兆円・3年間の目安",
+      "dividendAllocation": 2.2,
+      "dividendAllocationUnit": "兆円・3年間の目安",
+      "evidencePdfPages": [47, 54, 58]
+    },
+    "shareholderReturn": {
+      "dividendPayoutRatio": 40,
+      "dividendPayoutRatioUnit": "%",
+      "dividendPolicy": "毎年度増配を基本方針として明確化",
+      "shareRepurchasePolicy": "資本余力、成長投資機会、株価水準等を踏まえ機動的に実施",
+      "evidencePdfPages": [54, 58]
+    },
+    "operationalTargets": [
+      {
+        "metric": "クラウド利用比率",
+        "target": 50,
+        "unit": "%",
+        "targetFiscalYear": "2028年度",
+        "evidencePdfPage": 47
+      },
+      {
+        "metric": "AI・クラウド人材",
+        "target": 1000,
+        "unit": "人",
+        "targetFiscalYear": "2028年度",
+        "evidencePdfPage": 47
+      }
+    ]
+  },
+  "validation": {
+    "currentOfficialPdfUrlConfirmed": true,
+    "companyIdentityConfirmed": true,
+    "securityCodeConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pageCountConfirmed": true,
+    "pdfSha256Confirmed": true,
+    "formalPlanBoundaryConfirmed": true,
+    "previousAndCurrentPlanSeparated": true,
+    "actualForecastPlanAndLongTermSeparated": true,
+    "financialTargetsLocated": true,
+    "capitalPolicyLocated": true,
+    "shareholderReturnPolicyLocated": true,
+    "fullTextRepositoryReviewComplete": true,
+    "visualFigureReviewComplete": true,
+    "independentDoubleCheck": false
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8316-primary-review-v1.json",
+  "primaryReviewComplete": true,
+  "independentReviewReady": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

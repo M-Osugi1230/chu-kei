@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "quality-rebase-phase2-effective-status-v1",
+  "updatedAt": "2026-08-04T11:18:00+00:00",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "appliedOverlays": [
+    "operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json"
+  ],
+  "targets": {
+    "phase1": 50,
+    "phase2Additional": 450,
+    "totalIncludingPhase1": 500
+  },
+  "review": {
+    "phase1PrimaryReviewComplete": 50,
+    "phase2PrimaryReviewComplete": 68,
+    "primaryReviewCompleteIncludingPhase1": 118,
+    "phase2PrimaryReviewCompletionRatePercent": 15.1,
+    "totalPrimaryReviewCompletionRatePercent": 23.6,
+    "independentReviewReady": 61,
+    "independentVisualReviewPending": 5,
+    "additionalSourceMappingRequired": 2,
+    "remainingPhase2PrimaryReviews": 382,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0
+  },
+  "activeWave": {
+    "wave": 7,
+    "assigned": 10,
+    "primaryReviewComplete": 10,
+    "independentReviewReady": 5,
+    "independentVisualReviewPending": 5,
+    "status": "primary_review_complete_visual_followup_open"
+  },
+  "visualFollowupCompanies": [
+    {"code": "6376", "name": "日機装", "reviewFile": "operations/quality-rebase/phase2/reviews/6376-primary-review-v1.json"},
+    {"code": "3475", "name": "グッドコムアセット", "reviewFile": "operations/quality-rebase/phase2/reviews/3475-primary-review-v1.json"},
+    {"code": "463A", "name": "インテリックスホールディングス", "reviewFile": "operations/quality-rebase/phase2/reviews/463A-primary-review-v1.json"},
+    {"code": "3559", "name": "ピーバンドットコム", "reviewFile": "operations/quality-rebase/phase2/reviews/3559-primary-review-v1.json"},
+    {"code": "3611", "name": "マツオカコーポレーション", "reviewFile": "operations/quality-rebase/phase2/reviews/3611-primary-review-v1.json"}
+  ],
+  "approvalSafety": {
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "primaryReviewerMaySelfApprove": false,
+    "deepVerificationApproved": false
+  }
+}

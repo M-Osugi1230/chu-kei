@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6140",
+    "name": "旭ダイヤモンド工業"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6140-primary-review-v1.json",
+  "visualEvidenceFile": "operations/quality-rebase/phase2/visual-evidence/6140-partial-v1.json",
+  "source": {
+    "title": "中期経営計画2030説明会資料",
+    "officialLandingPage": "https://www.asahidia.co.jp/ir-resource_cat/management_plan/",
+    "officialUrl": "https://www2.jpx.co.jp/disc/61400/140120260526547587.pdf",
+    "pdfSha256": "74c7c10f9fc6b6f9b7307bef5ecc9c25f9a3251a9e09d7101ab2203e14224dad",
+    "pageCount": 24
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード6140、公表日2026年5月26日、PDFハッシュ、全24ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 24],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "前中計2025、現行中計2030、VISION2030、2027年3月期単年度予想を分離していることを確認する。",
+      "expectedEvidencePdfPages": [4, 5, 7, 10, 17, 18],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2031年3月期の売上高530億円、営業利益53億円、営業利益率10%以上、ROE8%以上の年度・単位・範囲を確認する。",
+      "expectedEvidencePdfPages": [17, 18],
+      "status": "pending"
+    },
+    {
+      "id": "reference_figures",
+      "description": "括弧内の営業利益・営業利益率が退職給付費用影響控除後の参考値であり、正式値と混在していないことを確認する。",
+      "expectedEvidencePdfPages": [17, 18],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "営業CF300億円、成長投資150～300億円、資産売却10～50億円、借入25～50億円の5年累計範囲を確認する。",
+      "expectedEvidencePdfPages": [19],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "株主還元100～200億円、1株34円以上の累進配当、総還元性向100%以上が5年累計であることを確認する。",
+      "expectedEvidencePdfPages": [19, 20],
+      "status": "pending"
+    },
+    {
+      "id": "capital_efficiency",
+      "description": "自己資本比率を約80%から75%目安へ改善する方針、株主資本コスト7～8%水準の認識を確認する。",
+      "expectedEvidencePdfPages": [20, 21],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_targets",
+      "description": "離職率2%以下、採用者女性比率30%以上、男性育休取得率80%以上を確認する。",
+      "expectedEvidencePdfPages": [16],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に公式リンク、計画期間、主要数値、資本政策、株主還元の表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

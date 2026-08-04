@@ -1,7 +1,7 @@
 {
   "schemaVersion": "phase2-primary-review-wave-v1",
   "generatedAt": "2026-08-04T08:40:00+00:00",
-  "updatedAt": "2026-08-04T06:17:42+00:00",
+  "updatedAt": "2026-08-04T06:20:00+00:00",
   "wave": 7,
   "targetCompanies": 10,
   "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
@@ -109,14 +109,28 @@
       "relevanceScore": 100,
       "pageCount": 40,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/7164/primary-review-template.json",
-      "status": "primary_review_assigned",
+      "status": "primary_review_complete_independent_review_ready",
       "requiredChecks": [
         "formalPlanBoundary",
         "fullTextReview",
         "metricsValidation",
         "capitalPolicyReview",
         "fieldLevelEvidence"
-      ]
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7164-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7164-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
     },
     {
       "order": 229,
@@ -257,8 +271,8 @@
     "formalManagementPlanCandidates": 6,
     "planRevisionOrUpdateCandidates": 4,
     "growthPotentialDocumentCandidates": 0,
-    "primaryReviewComplete": 4,
-    "independentReviewReady": 4,
+    "primaryReviewComplete": 5,
+    "independentReviewReady": 5,
     "deepVerificationApproved": 0
   },
   "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"

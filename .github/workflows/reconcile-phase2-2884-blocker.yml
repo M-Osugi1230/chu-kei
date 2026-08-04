@@ -1,0 +1,90 @@
+name: Reconcile Phase 2 2884 Blocker
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'scripts/reconcile_phase2_2884_blocker.py'
+      - '.github/workflows/reconcile-phase2-2884-blocker.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reconcile-phase2-2884-blocker
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout quality rebase branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Reconcile blocked company records
+        run: python scripts/reconcile_phase2_2884_blocker.py
+
+      - name: Validate Phase 2 source resolutions
+        run: |
+          python scripts/validate_phase2_source_repairs.py \
+            --repo-root . \
+            --status operations/quality-rebase/phase2/current-status-v1.json
+
+      - name: Validate all Phase 2 primary-review waves
+        run: |
+          for wave in 01 02 03 04 05; do
+            python scripts/validate_phase2_primary_review_wave.py \
+              --wave operations/quality-rebase/phase2/primary-review-wave${wave}-v1.json \
+              --status operations/quality-rebase/phase2/current-status-v1.json \
+              --repo-root .
+          done
+
+      - name: Confirm blocked state
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          status = json.loads((root / 'operations/quality-rebase/phase2/current-status-v1.json').read_text())
+          wave = json.loads((root / 'operations/quality-rebase/phase2/primary-review-wave04-v1.json').read_text())
+          review = json.loads((root / 'operations/quality-rebase/phase2/reviews/2884-primary-review-v1.json').read_text())
+
+          assert all(str(row.get('code')) != '2884' for row in status['completedPrimaryReviews'])
+          company = next(row for row in wave['companies'] if str(row.get('code')) == '2884')
+          assert company['status'] == 'primary_review_assigned_formal_plan_boundary_required'
+          assert 'reviewFile' not in company
+          assert 'independentReviewFile' not in company
+          assert review['review']['status'] == 'primary_review_blocked_quantified_plan_republication_required'
+          assert review['validation']['primaryReviewCompletionEligible'] is False
+          assert not (root / 'operations/quality-rebase/phase2/independent/2884-independent-review-v1.json').exists()
+          assert status['review']['deepVerificationApproved'] == 0
+          print('2884 remains blocked without inferred completion or approval')
+          PY
+
+      - name: Commit reconciled Phase 2 state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A \
+            operations/quality-rebase/phase2/current-status-v1.json \
+            operations/quality-rebase/phase2/primary-review-wave04-v1.json \
+            operations/quality-rebase/phase2/reviews/2884-primary-review-v1.json \
+            operations/quality-rebase/phase2/independent/2884-independent-review-v1.json
+          if git diff --cached --quiet; then
+            echo 'Phase 2 company 2884 is already reconciled.'
+          else
+            git commit -m 'quality: block 2884 pending quantified plan republication'
+            git push origin HEAD:agent/quality-rebase-phase0-2
+          fi

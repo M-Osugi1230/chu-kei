@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {
+    "code": "4885",
+    "name": "室町ケミカル",
+    "market": "Standard",
+    "industry": "医薬品",
+    "phase2Order": 268
+  },
+  "source": {
+    "title": "中期経営計画2031",
+    "publishedDate": "2026-07-14",
+    "officialUrl": "https://www2.jpx.co.jp/disc/48850/140120260714593080.pdf",
+    "pdfSha256": "734a20536be969c6eaae810466894d5b8b872fab06e36014222bd2c00f58c4a7",
+    "pageCount": 16,
+    "documentClassification": "formal_management_plan_revision_and_period_extension",
+    "period": {
+      "startFiscalYear": "2027年5月期",
+      "endFiscalYear": "2031年5月期",
+      "terminalFiscalYear": "2031年5月期"
+    },
+    "formalPlanBoundary": {
+      "previousPlan": "中期経営計画2028・2026年5月期～2028年5月期・3か年",
+      "currentPlan": "中期経営計画2031・2027年5月期～2031年5月期・5か年",
+      "revisionReason": "2026年5月期の業績上振れと100億宣言の具体化",
+      "unchangedAreas": "基本方針、事業戦略、人的資本、資本コスト対応、配当方針には大きな変更なし",
+      "statement": "旧計画最終値、新計画年度別目標、VISION100、2026年5月期実績を分離する。"
+    }
+  },
+  "summary": "医薬品原薬・中間体と化学品・イオン交換樹脂を両輪に、製造設備拡張、連続生産、化学品開発センター、海外アライアンス、人的資本投資を進める。2031年5月期に売上高108億円、営業利益11.6億円、営業利益率10%以上、EBITDA14億円以上を目指す。",
+  "financialTargets": [
+    {"metric":"売上高","target":108,"unit":"億円","targetFiscalYear":"2031年5月期","previousPlanTarget":72,"previousPlanTargetUnit":"億円・2028年5月期","evidencePdfPages":[1,3,5]},
+    {"metric":"営業利益","target":11.6,"unit":"億円","targetFiscalYear":"2031年5月期","previousPlanTarget":3.6,"previousPlanTargetUnit":"億円・2028年5月期","evidencePdfPages":[1,5]},
+    {"metric":"営業利益率","target":10,"unit":"%以上","targetFiscalYear":"2031年5月期","evidencePdfPages":[3,5]},
+    {"metric":"EBITDA","target":14,"unit":"億円以上","targetFiscalYear":"2031年5月期","definition":"営業利益＋減価償却費","evidencePdfPages":[3,5]},
+    {"metric":"中間到達売上高","target":88,"unit":"億円","targetFiscalYear":"2029年5月期","evidencePdfPages":[3,5]},
+    {"metric":"中間到達営業利益率","target":8,"unit":"%以上","targetFiscalYear":"2029年5月期","evidencePdfPages":[3,5]},
+    {"metric":"中間到達EBITDA","target":10,"unit":"億円以上","targetFiscalYear":"2029年5月期","evidencePdfPages":[3,5]}
+  ],
+  "segmentTargets": [
+    {"segment":"医薬品事業","targetSales":54,"targetOperatingProfit":4.5,"targetEbitda":5.6,"unit":"億円","targetFiscalYear":"2031年5月期","evidencePdfPage":7},
+    {"segment":"化学品事業","targetSales":54,"targetOperatingProfit":7.2,"targetEbitda":8.3,"unit":"億円","targetFiscalYear":"2031年5月期","evidencePdfPage":8}
+  ],
+  "strategyThemes": [
+    {"theme":"医薬品原薬・中間体の供給力と技術高度化","evidencePdfPages":[7],"evidence":"連続生産システム、国産原薬、輸入原薬、海外メーカーとのアライアンス、新製品立上げを進める。"},
+    {"theme":"化学品・イオン交換樹脂の用途拡大","evidencePdfPages":[8],"evidence":"電力、PFAS、半導体、水処理等に展開し、化学品開発センターを2027年7月に稼働予定。"},
+    {"theme":"製造設備拡張と省人化","evidencePdfPages":[2,4,12,13],"evidence":"100億円規模の売上に対応する本社工場、開発・物流設備、自動化・省人化設備へ投資する。"},
+    {"theme":"人的資本経営の基盤構築","evidencePdfPages":[4,12,13],"evidence":"研修、社内環境、IT機器等へ投資し、成長を支える人材基盤を整える。"},
+    {"theme":"資本コストを意識した経営","evidencePdfPages":[10,11,12],"evidence":"収益力、成長投資、財務健全性、株主還元、IRを通じてROE・PER・PBR向上を目指す。"}
+  ],
+  "capitalPolicy": {
+    "status": "five_year_cash_allocation_quantified",
+    "operatingCashFlow": 3116,
+    "operatingCashFlowUnit": "百万円・計画期間",
+    "maintenanceInvestment": 865,
+    "maintenanceInvestmentUnit": "百万円",
+    "growthInvestment": 935,
+    "growthInvestmentUnit": "百万円",
+    "humanCapitalInvestment": 275,
+    "humanCapitalInvestmentUnit": "百万円",
+    "shareholderReturnMinimum": 550,
+    "shareholderReturnMinimumUnit": "百万円以上",
+    "mAndAReserve": 300,
+    "mAndAReserveUnit": "百万円",
+    "equityRatioMinimum": 35,
+    "equityRatioMaximum": 50,
+    "equityRatioUnit": "%・維持レンジ",
+    "borrowingPolicy": "必要に応じて借入を実施",
+    "policy": "営業CFを維持更新、成長設備、人的資本、累進配当、シナジー案件のM&Aへ配分する。",
+    "evidencePdfPages": [12,13]
+  },
+  "shareholderReturnPolicy": {
+    "status": "progressive_dividend_and_interim_dividend",
+    "progressiveDividend": true,
+    "definition": "原則として前年の配当実績を下回らない",
+    "interimDividendStartFiscalYear": "2026年5月期",
+    "planPeriodReturnMinimum": 550,
+    "planPeriodReturnMinimumUnit": "百万円以上",
+    "flexibleAdditionalReturn": true,
+    "policy": "累進配当を維持し、中間配当を実施する。VISION100達成を見据え、機動的な還元充実も掲げる。",
+    "evidencePdfPages": [2,13,14]
+  },
+  "capitalEfficiencyTargets": {
+    "recognizedCostOfEquityMinimum": 6.5,
+    "recognizedCostOfEquityMaximum": 7.5,
+    "recognizedCostOfEquityUnit": "%",
+    "roeTargetCurrentRoadmap": 10,
+    "roeTargetCurrentRoadmapUnit": "%以上",
+    "roeTargetLongerTermReference": 15,
+    "roeTargetLongerTermReferenceUnit": "%以上",
+    "perTarget": 15,
+    "perTargetUnit": "倍以上",
+    "pbrTarget": 1.5,
+    "pbrTargetUnit": "倍以上",
+    "note": "資料内にROE10%以上の改善目標と、上場以降のROE15%以上目標の双方があるため別定義で保持する。",
+    "evidencePdfPages": [10,12]
+  },
+  "definitions": [
+    {"term":"売上高100億宣言","definition":"2031年の方向性を示す名称上の目標。正式数値計画は売上高108億円。","evidencePdfPages":[1,2,3]},
+    {"term":"ROE10%と15%","definition":"改善方針上の当面目標10%以上と、上場以降の長期目標15%以上を分離する。","evidencePdfPages":[10,12]},
+    {"term":"キャッシュアロケーション","definition":"各項目は計画期間の配分額。必要に応じ借入を行うため営業CFだけとの単純一致を要求しない。","evidencePdfPage":13}
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": true,
+    "formalPlanBoundaryValidated": true,
+    "previousAndCurrentPlanSeparated": true,
+    "visionAndFormalTargetSeparated": true,
+    "forecastActualSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalPolicyReviewed": true,
+    "shareholderReturnPolicyReviewed": true,
+    "conflictingRoeHorizonsSeparated": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_visual_review_pending",
+    "reviewedAt": "2026-08-04T20:55:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "公式PDFの主要図表ページ3・5・7・8・10・12・13・14を原寸で独立確認する",
+      "旧計画2028と改定計画2031の数値を混在させていないことを確認する",
+      "売上100億宣言と正式目標108億円を分離確認する",
+      "ROE10%以上と15%以上の時間軸・定義を原文突合する",
+      "キャッシュアロケーション各項目と借入方針を再確認する"
+    ]
+  }
+}

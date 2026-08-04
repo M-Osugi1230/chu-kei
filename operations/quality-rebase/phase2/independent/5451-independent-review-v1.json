@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {"code": "5451", "name": "ヨドコウ"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/5451-primary-review-v1.json",
+  "source": {"title": "BLOOMING VISION 2035・中期経営計画2028", "officialUrl": "https://www2.jpx.co.jp/disc/54510/140120260325588992.pdf", "pdfSha256": "e046a8adaafb7d12477462aaf9ce2384be7f20b289162f39dba2152a0bf64f34", "pageCount": 30},
+  "status": "independent_review_ready",
+  "checks": [
+    {"id": "source_identity", "description": "会社名、証券コード5451、公表日2026年3月25日、PDFハッシュ、全30ページを確認する。", "expectedEvidencePdfPages": [1,2,30], "status": "pending"},
+    {"id": "plan_boundary", "description": "中計2025実績、中計2028、BLOOMING VISION 2035を分離する。", "expectedEvidencePdfPages": [8,10,12,19], "status": "pending"},
+    {"id": "financial_targets", "description": "2028年売上2,500億円、営業利益200億円、ROE8%を確認する。", "expectedEvidencePdfPages": [19], "status": "pending"},
+    {"id": "capital_allocation", "description": "3年間営業CF500億円以上、資産売却・調達130億円、投資620億円、還元260億円と内訳を確認する。", "expectedEvidencePdfPages": [26,29], "status": "pending"},
+    {"id": "shareholder_return", "description": "配当性向75%以上、年間配当40円以上、自己株式保有10%未満、政策保有株式20%縮減を確認する。", "expectedEvidencePdfPages": [28,29], "status": "pending"},
+    {"id": "long_term_targets", "description": "2035年売上3,000億円、営業利益230億円、ROE8%以上、自己資本比率60%前後、投資1,300～1,600億円を中計と分離する。", "expectedEvidencePdfPages": [8,9,10], "status": "pending"},
+    {"id": "one_off_adjustment", "description": "2025年度ROE8.7%の一過性要因込みと実質ROE5.9%を確認する。", "expectedEvidencePdfPages": [12], "status": "pending"}
+  ],
+  "review": {"minimumDistinctReviewers": 2, "primaryReviewerMustNotSelfApprove": true, "automaticApprovalAllowed": false, "deepVerificationApproved": false, "completedAt": null, "reviewer": null}
+}

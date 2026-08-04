@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Phase 2 waves by composing completion overlays in order."""
+"""Validate Phase 2 waves by composing append-only review overlays in order."""
 
 from __future__ import annotations
 
@@ -97,23 +97,32 @@ def main() -> None:
     overlays = [v2.load_overlay(repo_root / path) for path in args.overlay]
     overlays.sort(key=lambda item: int(item["wave"]))
 
-    if [int(item["wave"]) for item in overlays] != [7, 8]:
-        raise SystemExit("expected ordered overlays for waves 7 and 8")
-    wave7_overlay, wave8_overlay = overlays
+    overlay_waves = [int(item["wave"]) for item in overlays]
+    expected_waves = list(range(7, 7 + len(overlays)))
+    if overlay_waves != expected_waves:
+        raise SystemExit(
+            f"expected consecutive overlays {expected_waves}, got {overlay_waves}"
+        )
 
-    effective_wave = v2.apply_wave_overlay(wave, wave7_overlay)
-    effective_wave = v2.apply_wave_overlay(effective_wave, wave8_overlay)
+    effective_wave = wave
+    for overlay in overlays:
+        effective_wave = v2.apply_wave_overlay(effective_wave, overlay)
 
-    effective_status = v2.merge_status_overlay(status, wave7_overlay)
-    effective_status = v3.apply_next_wave_assignment(
-        effective_status, wave7_overlay
-    )
-    effective_status = merge_partial_completion_overlay(
-        effective_status, wave8_overlay
-    )
-    effective_status = v3.apply_next_wave_assignment(
-        effective_status, wave8_overlay
-    )
+    first_overlay, *remaining_overlays = overlays
+    effective_status = v2.merge_status_overlay(status, first_overlay)
+    if first_overlay.get("nextWaveAssignment") is not None:
+        effective_status = v3.apply_next_wave_assignment(
+            effective_status, first_overlay
+        )
+
+    for overlay in remaining_overlays:
+        effective_status = merge_partial_completion_overlay(
+            effective_status, overlay
+        )
+        if overlay.get("nextWaveAssignment") is not None:
+            effective_status = v3.apply_next_wave_assignment(
+                effective_status, overlay
+            )
 
     wave_counts = v2.validate_effective_wave(effective_wave, repo_root)
     cross_wave_counts = base.validate_cross_wave_uniqueness(repo_root)

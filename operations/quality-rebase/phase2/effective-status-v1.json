@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-effective-status-v1",
-  "updatedAt": "2026-08-04T12:25:00+00:00",
+  "updatedAt": "2026-08-04T13:20:00+00:00",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
   "appliedOverlays": [
     "operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json",
@@ -18,25 +18,25 @@
   },
   "review": {
     "phase1PrimaryReviewComplete": 50,
-    "phase2PrimaryReviewComplete": 73,
-    "primaryReviewCompleteIncludingPhase1": 123,
-    "phase2PrimaryReviewCompletionRatePercent": 16.2,
-    "totalPrimaryReviewCompletionRatePercent": 24.6,
+    "phase2PrimaryReviewComplete": 78,
+    "primaryReviewCompleteIncludingPhase1": 128,
+    "phase2PrimaryReviewCompletionRatePercent": 17.3,
+    "totalPrimaryReviewCompletionRatePercent": 25.6,
     "independentReviewReady": 61,
-    "independentVisualReviewPending": 10,
+    "independentVisualReviewPending": 15,
     "additionalSourceMappingRequired": 2,
-    "remainingPhase2PrimaryReviews": 377,
+    "remainingPhase2PrimaryReviews": 372,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0
   },
   "activeWave": {
     "wave": 8,
     "assigned": 10,
-    "primaryReviewComplete": 5,
+    "primaryReviewComplete": 10,
     "independentReviewReady": 0,
-    "independentVisualReviewPending": 5,
-    "remaining": 5,
-    "status": "in_progress"
+    "independentVisualReviewPending": 10,
+    "remaining": 0,
+    "status": "primary_review_complete_visual_followup_open"
   },
   "openFollowup": {
     "wave": 7,
@@ -52,10 +52,15 @@
     {"code": "3559", "name": "ピーバンドットコム", "wave": 7, "reviewFile": "operations/quality-rebase/phase2/reviews/3559-primary-review-v1.json"},
     {"code": "3611", "name": "マツオカコーポレーション", "wave": 7, "reviewFile": "operations/quality-rebase/phase2/reviews/3611-primary-review-v1.json"},
     {"code": "4885", "name": "室町ケミカル", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/4885-primary-review-v1.json"},
+    {"code": "5021", "name": "コスモエネルギーホールディングス", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/5021-primary-review-v1.json"},
+    {"code": "5076", "name": "インフロニア・ホールディングス", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/5076-primary-review-v1.json"},
+    {"code": "6330", "name": "東洋エンジニアリング", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/6330-primary-review-v1.json"},
+    {"code": "6455", "name": "モリタホールディングス", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/6455-primary-review-v1.json"},
     {"code": "6505", "name": "東洋電機製造", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/6505-primary-review-v1.json"},
     {"code": "6666", "name": "リバーエレテック", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/6666-primary-review-v1.json"},
     {"code": "6743", "name": "大同信号", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/6743-primary-review-v1.json"},
-    {"code": "6905", "name": "コーセル", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/6905-primary-review-v1.json"}
+    {"code": "6905", "name": "コーセル", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/6905-primary-review-v1.json"},
+    {"code": "7607", "name": "進和", "wave": 8, "reviewFile": "operations/quality-rebase/phase2/reviews/7607-primary-review-v1.json"}
   ],
   "approvalSafety": {
     "automaticFactCompletionAllowed": false,

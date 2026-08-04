@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Resolve and verify an official Phase 2 PDF binary without inferring facts.
+"""Resolve and verify one explicitly selected official Phase 2 PDF binary.
 
-The script reads a source-resolution JSON, downloads only the explicitly recorded
-currentOfficialDocument.pdfUrl, verifies that the response is a PDF, calculates
-SHA-256 and page count, and writes a separate evidence JSON. It never marks a
-primary review, independent review, or deep verification as complete.
+The request may select an ``officialPdf`` object so a company with a baseline
+plan and one or more progress updates can fix each binary independently. Older
+requests remain compatible and fall back to
+``sourceResolution.currentOfficialDocument``. The script never completes or
+approves any review stage.
 """
 
 from __future__ import annotations
@@ -12,7 +13,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import sys
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -26,7 +26,7 @@ except ImportError as exc:  # pragma: no cover - enforced by workflow
     raise SystemExit("pypdf is required: pip install pypdf") from exc
 
 MAX_PDF_BYTES = 100 * 1024 * 1024
-USER_AGENT = "Chu-kei-Quality-Rebase/1.0 (+official IR verification)"
+USER_AGENT = "Chu-kei-Quality-Rebase/1.1 (+official IR verification)"
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -47,6 +47,18 @@ def write_json(path: Path, value: dict[str, Any]) -> None:
         json.dumps(value, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+
+
+def require_false_flags(value: dict[str, Any], label: str) -> None:
+    required = ("automaticApprovalAllowed", "deepVerificationApproved")
+    for key in required:
+        if value.get(key) is not False:
+            raise SystemExit(f"{label} safety flag must be false: {key}")
+    if "automaticFactCompletionAllowed" in value:
+        if value.get("automaticFactCompletionAllowed") is not False:
+            raise SystemExit(
+                f"{label} safety flag must be false: automaticFactCompletionAllowed"
+            )
 
 
 def download_pdf(url: str) -> tuple[bytes, str | None]:
@@ -79,32 +91,75 @@ def download_pdf(url: str) -> tuple[bytes, str | None]:
     return data, content_type
 
 
-def build_evidence(source_path: Path, source: dict[str, Any]) -> dict[str, Any]:
+def resolve_target(
+    source: dict[str, Any], request: dict[str, Any]
+) -> dict[str, Any]:
+    explicit = request.get("officialPdf")
+    if explicit is not None:
+        if not isinstance(explicit, dict):
+            raise SystemExit("request.officialPdf must be an object")
+        target = explicit
+        selected_by = "request_explicit_official_pdf"
+    else:
+        current = source.get("currentOfficialDocument")
+        if not isinstance(current, dict):
+            raise SystemExit(
+                "source resolution lacks currentOfficialDocument; "
+                "request.officialPdf is required for multi-source resolutions"
+            )
+        target = current
+        selected_by = "source_current_official_document"
+
+    url = str(target.get("url") or target.get("pdfUrl") or "").strip()
+    page_count = target.get("pageCount")
+    title = str(target.get("title") or "").strip() or None
+    source_role = str(target.get("sourceRole") or "").strip() or None
+    recorded_hash = target.get("pdfSha256")
+
+    if not url.startswith("https://"):
+        raise SystemExit("official PDF URL must use HTTPS")
+    if not isinstance(page_count, int) or page_count <= 0:
+        raise SystemExit("official PDF pageCount must be a positive integer")
+    if recorded_hash is not None and (
+        not isinstance(recorded_hash, str) or len(recorded_hash) != 64
+    ):
+        raise SystemExit("official PDF pdfSha256 must be null or a 64-character string")
+
+    return {
+        "url": url,
+        "pageCount": page_count,
+        "title": title,
+        "sourceRole": source_role,
+        "recordedHash": recorded_hash,
+        "selectedBy": selected_by,
+    }
+
+
+def build_evidence(
+    source_path: Path,
+    source: dict[str, Any],
+    request_path: Path,
+    request: dict[str, Any],
+) -> dict[str, Any]:
     company = source.get("company")
-    current = source.get("currentOfficialDocument")
-    if not isinstance(company, dict) or not isinstance(current, dict):
-        raise SystemExit("source resolution lacks company/currentOfficialDocument")
+    if not isinstance(company, dict):
+        raise SystemExit("source resolution lacks company")
+
+    request_company = request.get("company")
+    if not isinstance(request_company, dict):
+        raise SystemExit("request lacks company")
 
     code = str(company.get("code", "")).strip()
     name = str(company.get("name", "")).strip()
-    url = str(current.get("pdfUrl", "")).strip()
-    expected_pages = current.get("pageCount")
-    if not code or not name or not url:
-        raise SystemExit("source resolution lacks company identity or official PDF URL")
-    if not url.startswith("https://"):
-        raise SystemExit("official PDF URL must use HTTPS")
-    if not isinstance(expected_pages, int) or expected_pages <= 0:
-        raise SystemExit("currentOfficialDocument.pageCount must be a positive integer")
+    request_code = str(request_company.get("code", "")).strip()
+    if not code or not name or request_code != code:
+        raise SystemExit("source/request company identity mismatch")
 
-    for key in (
-        "automaticFactCompletionAllowed",
-        "automaticApprovalAllowed",
-        "deepVerificationApproved",
-    ):
-        if source.get(key) is not False:
-            raise SystemExit(f"source resolution safety flag must be false: {key}")
+    require_false_flags(source, "source resolution")
+    require_false_flags(request, "request")
+    target = resolve_target(source, request)
 
-    data, content_type = download_pdf(url)
+    data, content_type = download_pdf(target["url"])
     sha256 = hashlib.sha256(data).hexdigest()
     try:
         reader = PdfReader(BytesIO(data), strict=True)
@@ -112,12 +167,13 @@ def build_evidence(source_path: Path, source: dict[str, Any]) -> dict[str, Any]:
     except Exception as exc:  # pypdf raises several concrete parser errors
         raise SystemExit(f"downloaded PDF could not be parsed: {exc}") from exc
 
+    expected_pages = target["pageCount"]
     if actual_pages != expected_pages:
         raise SystemExit(
             f"page count mismatch for {code}: expected {expected_pages}, got {actual_pages}"
         )
 
-    recorded_hash = current.get("pdfSha256")
+    recorded_hash = target["recordedHash"]
     if recorded_hash not in (None, sha256):
         raise SystemExit(
             f"recorded hash conflicts with downloaded binary for {code}: "
@@ -125,18 +181,22 @@ def build_evidence(source_path: Path, source: dict[str, Any]) -> dict[str, Any]:
         )
 
     return {
-        "schemaVersion": "phase2-source-binary-evidence-v1",
+        "schemaVersion": "phase2-source-binary-evidence-v2",
         "generatedAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "sourceResolutionFile": str(source_path),
+        "requestFile": str(request_path),
         "company": {"code": code, "name": name},
         "officialPdf": {
-            "url": url,
+            "title": target["title"],
+            "sourceRole": target["sourceRole"],
+            "selectedBy": target["selectedBy"],
+            "url": target["url"],
             "sha256": sha256,
             "bytes": len(data),
             "pageCount": actual_pages,
             "contentType": content_type,
             "pdfHeaderConfirmed": True,
-            "pageCountMatchesResolution": True,
+            "pageCountMatchesRequest": True,
         },
         "reviewImpact": {
             "primaryReviewComplete": False,
@@ -151,14 +211,17 @@ def build_evidence(source_path: Path, source: dict[str, Any]) -> dict[str, Any]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source-resolution", required=True)
+    parser.add_argument("--request", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
 
     source_path = Path(args.source_resolution)
+    request_path = Path(args.request)
     output_path = Path(args.output)
     source = load_json(source_path)
-    evidence = build_evidence(source_path, source)
+    request = load_json(request_path)
+    evidence = build_evidence(source_path, source, request_path, request)
 
     if not args.check:
         if output_path.exists():

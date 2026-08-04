@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"6485","name":"前澤給装工業","market":"Standard","industry":"機械","phase2Order":359},
+  "source": {
+    "title":"中期経営計画2029",
+    "publishedDate":"2025-08-07",
+    "officialUrl":"https://www2.jpx.co.jp/disc/64850/140120250807534847.pdf",
+    "pdfSha256":"afbbaade955b9761add9bc7414cc17e78b269e981d3a1a5c8d870d48d6db3ee8",
+    "pageCount":16,
+    "documentClassification":"formal_management_plan_current_replacing_previous_plan",
+    "period":{"startFiscalYear":"2026年3月期","endFiscalYear":"2030年3月期","terminalFiscalYear":"2030年3月期・2029年度"},
+    "formalPlanBoundary":{"previousPlan":"中期経営計画2024・2025年3月期まで","currentPlan":"中期経営計画2029・2026年3月期～2030年3月期","statement":"前計画の最終年度実績、2025年度見込み、2029年度終期目標を分離する。"}
+  },
+  "summary":"『原点回帰・未来への挑戦』を掲げ、既存事業強化、DX、次世代成長ドライバー、経営基盤、サステナビリティの5施策を進める。2029年度に売上高335億円、営業利益38億円、営業利益率11.5%以上、ROE7%以上を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":33500,"unit":"百万円","targetFiscalYear":"2029年度","baseline":"2024年度実績31,900百万円","evidencePdfPages":[1,8,9]},
+    {"metric":"営業利益","target":3800,"unit":"百万円","targetFiscalYear":"2029年度","baseline":"2024年度実績3,000百万円","evidencePdfPages":[1,8,9]},
+    {"metric":"売上高営業利益率","target":11.5,"unit":"%以上","targetFiscalYear":"2029年度","baseline":"2024年度実績9.5%","evidencePdfPages":[1,8]},
+    {"metric":"ROE","target":7.0,"unit":"%以上","targetFiscalYear":"2029年度","baseline":"2024年度実績6.04%","evidencePdfPages":[1,8,9]}
+  ],
+  "strategyThemes":[
+    {"theme":"既存事業の強化","evidencePdfPages":[9,10],"evidence":"給水装置等の安定収益基盤を強化し、不採算・低採算事業の採算を改善する。"},
+    {"theme":"DX化の推進","evidencePdfPages":[9,10],"evidence":"自動化・省人化と業務プロセス見直しで生産性を高める。"},
+    {"theme":"次世代成長ドライバー創出","evidencePdfPages":[9,11],"evidence":"顧客価値を高める商品・サービス、周辺領域、研究開発を拡大する。"},
+    {"theme":"経営基盤強化","evidencePdfPages":[9,12],"evidence":"ガバナンス、コンプライアンス、人財育成を強化する。"},
+    {"theme":"サステナビリティ推進","evidencePdfPages":[9,12],"evidence":"再生可能エネルギー導入と省エネルギー対策を進める。"}
+  ],
+  "capitalPolicy": {
+    "status":"investment_amounts_undisclosed",
+    "investmentUses":["既存事業の収益基盤強化","DX・自動化・省人化","研究開発・新規成長領域","人財育成","環境対応"],
+    "policy":"財務安定性を確保しつつ資本効率を重視し、既存事業強化と新規成長領域へ投資する。資料内に中計期間の投資総額・キャッシュアロケーション金額は開示されていないため推計しない。",
+    "evidencePdfPages":[4,7,9,10,11,12]
+  },
+  "shareholderReturnPolicy": {
+    "status":"doe_target_and_progressive_dividend",
+    "doeTarget":3.0,
+    "doeTargetUnit":"%",
+    "progressiveDividend":true,
+    "effectiveFrom":"2026年3月期配当",
+    "previousPolicy":"連結配当性向50%目安",
+    "policy":"短期利益変動の影響を受けにくいDOE3%を導入し、累進配当を基本とする。",
+    "evidencePdfPages":[13,14]
+  },
+  "nonFinancialTargets": [],
+  "definitions":[
+    {"term":"2029年度と2030年3月期","definition":"同一の中計最終年度を指す。計画期間は2026年3月期から2030年3月期。","evidencePdfPages":[1,8]},
+    {"term":"DOE3%と配当性向50%","definition":"DOE3%・累進配当が新方針。配当性向50%目安は変更前方針であり現行方針ではない。","evidencePdfPage":13},
+    {"term":"2025年度見込み","definition":"売上320億円・営業利益22億円・利益率7.0%・ROE5.0%は初年度見込みであり終期目標ではない。","evidencePdfPage":8}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousAndCurrentPlanSeparated":true,"forecastActualSeparated":true,"oldAndNewReturnPoliciesSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T07:45:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年度の売上335億円・営業利益38億円・利益率11.5%以上・ROE7%以上を原寸確認する","前計画実績と現行目標を分離確認する","DOE3%・累進配当と旧配当性向50%方針を分離確認する","投資金額が未開示であることを確認する"]}
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-04T05:35:29+00:00",
+  "updatedAt": "2026-08-04T05:37:03+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,9 +34,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 49,
-    "formalPlanConfirmed": 49,
-    "primaryReviewComplete": 49,
+    "sourceIdentityConfirmed": 50,
+    "formalPlanConfirmed": 50,
+    "primaryReviewComplete": 50,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 6,
@@ -50,11 +50,11 @@
       "operations/quality-rebase/phase2/primary-review-wave05-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave06-v1.json"
     ],
-    "independentReviewReady": 47,
+    "independentReviewReady": 48,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 401
+    "remainingPrimaryReviews": 400
   },
   "completedPrimaryReviews": [
     {
@@ -545,6 +545,16 @@
       "status": "primary_review_complete_independent_review_ready",
       "sourceCorrectionRequired": false,
       "sourceClassification": "formal_long_term_management_plan_current_2026_to_2035"
+    },
+    {
+      "order": 215,
+      "code": "4186",
+      "name": "東京応化工業",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4186-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan_with_quantitative_target_revision"
     }
   ],
   "qualityFindings": [
@@ -621,13 +631,13 @@
       "workstream": "primary_review_wave06",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 1,
-      "remainingCount": 9,
+      "completionCount": 2,
+      "remainingCount": 8,
       "file": "operations/quality-rebase/phase2/primary-review-wave06-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 47,
+      "companies": 48,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -677,7 +687,8 @@
         "operations/quality-rebase/phase2/independent/6247-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/6294-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/6822-independent-review-v1.json",
-        "operations/quality-rebase/phase2/independent/7504-independent-review-v1.json"
+        "operations/quality-rebase/phase2/independent/7504-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json"
       ]
     },
     {

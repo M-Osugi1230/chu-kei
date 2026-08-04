@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"4112","name":"保土谷化学工業","market":"Prime","industry":"化学","phase2Order":339},
+  "source": {
+    "title":"コード2030（CODE/CHORD 2030）",
+    "publishedDate":"2026-05-15",
+    "officialUrl":"https://www2.jpx.co.jp/disc/41120/140120260515538536.pdf",
+    "pdfSha256":"ff02b26fd26fbf40039298c286605a7c829ab38d7ac99cff462c0e69dfc510f0",
+    "pageCount":31,
+    "documentClassification":"formal_management_plan_replacement_after_speed25_30_phase1",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2031年3月期","terminalFiscalYear":"2031年3月期"},
+    "formalPlanBoundary":{"previousPlan":"SPEED 25/30 フェーズ1・2022年3月期～2026年3月期","currentPlan":"コード2030・2027年3月期～2031年3月期","statement":"前計画のフェーズ2ではなく、新しい5カ年計画へ刷新。前計画の未達実績、2029年3月期中間目標、2031年3月期終期目標を分離する。"}
+  },
+  "summary":"最初の3年間を構造改革・ポートフォリオ転換・M&Aの『変革』、後半2年間を収益回収の『収穫』と位置づける。2031年3月期に売上高800億円、営業利益100億円、EBITDA170億円、ROE8.0%を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":65000,"unit":"百万円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績48,000百万円","evidencePdfPages":[2,3]},
+    {"metric":"営業利益","target":6500,"unit":"百万円","targetFiscalYear":"2029年3月期","targetMargin":10.0,"targetMarginUnit":"%","evidencePdfPages":[2,3]},
+    {"metric":"EBITDA","target":13000,"unit":"百万円","targetFiscalYear":"2029年3月期","evidencePdfPage":2},
+    {"metric":"ROE","target":6.0,"unit":"%","targetFiscalYear":"2029年3月期","evidencePdfPages":[2,3]},
+    {"metric":"自己資本比率","target":50,"unit":"%程度","targetFiscalYear":"2029年3月期","evidencePdfPage":2},
+    {"metric":"売上高","target":80000,"unit":"百万円","targetFiscalYear":"2031年3月期","evidencePdfPages":[2,3]},
+    {"metric":"営業利益","target":10000,"unit":"百万円","targetFiscalYear":"2031年3月期","targetMargin":12.5,"targetMarginUnit":"%","evidencePdfPages":[2,3]},
+    {"metric":"EBITDA","target":17000,"unit":"百万円","targetFiscalYear":"2031年3月期","evidencePdfPage":2},
+    {"metric":"ROE","target":8.0,"unit":"%","targetFiscalYear":"2031年3月期","evidencePdfPages":[2,3]},
+    {"metric":"自己資本比率","target":45,"unit":"%程度","targetFiscalYear":"2031年3月期","evidencePdfPage":2}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"売上高規模","target":100000,"unit":"百万円","targetFiscalYear":"2031年度以降","classification":"aspirational_scale_beyond_current_plan","evidencePdfPage":3}
+  ],
+  "strategyThemes":[
+    {"theme":"大胆な構造改革・ポートフォリオ転換","evidencePdfPages":[11,12,13],"evidence":"不採算事業の抜本対策、資産最適化、成長領域へのリソース再配分を行う。"},
+    {"theme":"M&A・共創による非連続成長","evidencePdfPages":[12,20,21],"evidence":"Framochem買収等で欧州拠点・技術・顧客基盤を獲得し、事業立ち上げ時間を短縮する。"},
+    {"theme":"機能性色素・新規領域の拡大","evidencePdfPages":[2,14,15,16],"evidence":"有機EL、色素、核酸医薬CDMO、半導体材料を積極投資領域として伸ばす。"},
+    {"theme":"基盤事業の収益改善","evidencePdfPages":[2,17,18,22],"evidence":"機能性樹脂、基礎化学品、アグロ、物流で赤字体質脱却と安定収益を図る。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_five_year_cash_allocation",
+    "operatingCashFlow":43000,
+    "operatingCashFlowUnit":"百万円・5年間累計",
+    "debtUtilizationRange":[30000,35000],
+    "debtUtilizationUnit":"百万円",
+    "growthInvestmentIncludingMA":39000,
+    "growthInvestmentIncludingMAUnit":"百万円",
+    "platformInvestment":30000,
+    "platformInvestmentUnit":"百万円",
+    "shareholderReturn":6000,
+    "shareholderReturnUnit":"百万円以上",
+    "financialDiscipline":"自己資本比率40%超を維持",
+    "policy":"営業CF、保有資産売却、負債活用で、M&Aを含む成長投資、基盤投資、株主還元へ配分する。",
+    "evidencePdfPage":25
+  },
+  "shareholderReturnPolicy": {
+    "status":"progressive_dividend_with_doe_terminal_target",
+    "progressiveDividend":true,
+    "doeTarget":3.0,
+    "doeTargetUnit":"%以上・2031年3月期",
+    "fiveYearDividendTotal":6000,
+    "fiveYearDividendTotalUnit":"百万円以上",
+    "buybackPolicy":"資本市場・株価水準を踏まえ機動的に検討",
+    "evidencePdfPages":[23,24,25]
+  },
+  "nonFinancialTargets":[
+    {"metric":"CO2排出量","target":3.14,"unit":"万t-CO2","targetFiscalYear":"2030年度","baseline":"2013年度5.07万t-CO2・非エネルギー起源を除く","evidencePdfPage":26}
+  ],
+  "definitions":[
+    {"term":"変革の3年・収穫の2年","definition":"2027～2029年3月期に改革・投資を行い、2030～2031年3月期にリターンを最大化する段階設計。","evidencePdfPages":[3,11]},
+    {"term":"自己資本比率45%程度と40%超維持","definition":"45%程度は2031年3月期の計画値、40%超は投資実行時の財務規律。","evidencePdfPages":[2,25]},
+    {"term":"売上高1,000億円","definition":"2031年度以降を視野に入れた規模であり、現行中計の2031年3月期目標800億円とは別。","evidencePdfPage":3}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousPlanAndCurrentPlanSeparated":true,"interimAndTerminalTargetsSeparated":true,"terminalAndLongTermTargetsSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T06:50:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年3月期と2031年3月期の各指標を原寸確認する","前計画SPEED25/30とコード2030を混在させていないことを確認する","営業CF430億円・負債300～350億円・成長投資390億円・基盤投資300億円を確認する","累進配当・DOE3%以上・5年配当60億円以上を確認する"]}
+}

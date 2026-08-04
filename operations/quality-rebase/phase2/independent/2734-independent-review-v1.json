@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {"code": "2734", "name": "サーラコーポレーション"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2734-primary-review-v1.json",
+  "source": {"title": "第6次中期経営計画（2026-2030）", "officialUrl": "https://www2.jpx.co.jp/disc/27340/140120260112531990.pdf", "pdfSha256": "a3bb3a8b7fd82bcc68c14fd7ee567908e14c1f86d742f07fb1254e07424eb3cd", "pageCount": 19},
+  "status": "independent_review_ready",
+  "checks": [
+    {"id": "source_identity", "description": "会社名、証券コード2734、公表日2026年1月13日、PDFハッシュ、全19ページを確認する。", "expectedEvidencePdfPages": [1,2,19], "status": "pending"},
+    {"id": "plan_boundary", "description": "第5次中計、旧2030ビジョン、第6次中計を分離する。", "expectedEvidencePdfPages": [3,4,10,18], "status": "pending"},
+    {"id": "financial_targets", "description": "2030年売上3,000億円、営業利益120億円、純利益84億円、利益率4%、ROE10%、ROIC6%を確認する。", "expectedEvidencePdfPages": [1,18], "status": "pending"},
+    {"id": "capital_allocation", "description": "2026～2030年度の成長投資450億円、維持更新150億円、還元212億円と、2024～2025年度実績込み合計を分離する。", "expectedEvidencePdfPages": [11,17], "status": "pending"},
+    {"id": "shareholder_return", "description": "累進配当、配当性向40%以上、機動的自己株式取得を確認する。", "expectedEvidencePdfPages": [17], "status": "pending"},
+    {"id": "derivative_boundary", "description": "2025年純利益実績にデリバティブ評価益18億円を含む一方、計画値には評価損益を含めないことを確認する。", "expectedEvidencePdfPages": [1,18], "status": "pending"},
+    {"id": "nonfinancial_targets", "description": "Scope1+2排出量の2026年・2028年・2030年目標と2021年基準を確認する。", "expectedEvidencePdfPages": [18], "status": "pending"}
+  ],
+  "review": {"minimumDistinctReviewers": 2, "primaryReviewerMustNotSelfApprove": true, "automaticApprovalAllowed": false, "deepVerificationApproved": false, "completedAt": null, "reviewer": null}
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-04T06:07:53+00:00",
+  "updatedAt": "2026-08-04T06:10:32+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,9 +34,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 58,
-    "formalPlanConfirmed": 58,
-    "primaryReviewComplete": 58,
+    "sourceIdentityConfirmed": 59,
+    "formalPlanConfirmed": 59,
+    "primaryReviewComplete": 59,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 7,
@@ -51,11 +51,11 @@
       "operations/quality-rebase/phase2/primary-review-wave06-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave07-v1.json"
     ],
-    "independentReviewReady": 56,
+    "independentReviewReady": 57,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 392
+    "remainingPrimaryReviews": 391
   },
   "completedPrimaryReviews": [
     {
@@ -636,6 +636,16 @@
       "status": "primary_review_complete_independent_review_ready",
       "sourceCorrectionRequired": false,
       "sourceClassification": "formal_management_plan_current_2027_to_2031"
+    },
+    {
+      "order": 229,
+      "code": "2734",
+      "name": "サーラコーポレーション",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2734-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2734-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
     }
   ],
   "qualityFindings": [
@@ -720,13 +730,13 @@
       "workstream": "primary_review_wave07",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 0,
-      "remainingCount": 10,
+      "completionCount": 1,
+      "remainingCount": 9,
       "file": "operations/quality-rebase/phase2/primary-review-wave07-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 56,
+      "companies": 57,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -785,7 +795,8 @@
         "operations/quality-rebase/phase2/independent/2764-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/3159-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json",
-        "operations/quality-rebase/phase2/independent/4691-independent-review-v1.json"
+        "operations/quality-rebase/phase2/independent/4691-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2734-independent-review-v1.json"
       ]
     },
     {

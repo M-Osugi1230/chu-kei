@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-04T05:52:56+00:00",
+  "updatedAt": "2026-08-04T05:56:20+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,9 +34,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 55,
-    "formalPlanConfirmed": 55,
-    "primaryReviewComplete": 55,
+    "sourceIdentityConfirmed": 56,
+    "formalPlanConfirmed": 56,
+    "primaryReviewComplete": 56,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 6,
@@ -50,11 +50,11 @@
       "operations/quality-rebase/phase2/primary-review-wave05-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave06-v1.json"
     ],
-    "independentReviewReady": 53,
+    "independentReviewReady": 54,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 395
+    "remainingPrimaryReviews": 394
   },
   "completedPrimaryReviews": [
     {
@@ -567,6 +567,16 @@
       "sourceClassification": "official_formal_management_plan_progress_update_with_target_revision"
     },
     {
+      "order": 192,
+      "code": "8012",
+      "name": "長瀬産業",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/8012-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/8012-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_corrected_version"
+    },
+    {
       "order": 200,
       "code": "1719",
       "name": "安藤・間",
@@ -681,13 +691,13 @@
       "workstream": "primary_review_wave06",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 7,
-      "remainingCount": 3,
+      "completionCount": 8,
+      "remainingCount": 2,
       "file": "operations/quality-rebase/phase2/primary-review-wave06-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 53,
+      "companies": 54,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -740,6 +750,7 @@
         "operations/quality-rebase/phase2/independent/7460-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/7504-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/7743-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/8012-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/1719-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/3159-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json",

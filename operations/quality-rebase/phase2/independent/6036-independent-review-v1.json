@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6036",
+    "name": "KeePer技研"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6036-primary-review-v1.json",
+  "source": {
+    "title": "2031年6月期 中期経営計画",
+    "officialUrl": "https://www2.jpx.co.jp/disc/60360/140120260318583945.pdf",
+    "pdfSha256": "584aba27e00ceb9f01fddd5f30d50f7c470cb65d0280cc247a37b4dff7a6f885",
+    "pageCount": 42
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード6036、公表日2026年3月19日、PDFハッシュ、全42ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 42],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "2023～2025年6月期の前中計、2026～2031年6月期の新中計、計画後5年の長期像を分離する。",
+      "expectedEvidencePdfPages": [10, 11, 20, 21, 25],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2031年6月期売上高469.22億円、営業利益160.66億円、営業利益率34.2%、EPS406円、ROE30%以上を確認する。",
+      "expectedEvidencePdfPages": [6, 21, 26],
+      "status": "pending"
+    },
+    {
+      "id": "segment_targets",
+      "description": "LABO売上269.09億円・営業利益70.08億円、製品売上200.13億円・営業利益90.58億円を確認する。",
+      "expectedEvidencePdfPages": [21, 23, 26, 28],
+      "status": "pending"
+    },
+    {
+      "id": "store_network",
+      "description": "国内直営250店・FC250店の500店舗網、海外15店、年約20店の直営出店を確認する。",
+      "expectedEvidencePdfPages": [22, 24, 28, 29],
+      "status": "pending"
+    },
+    {
+      "id": "market_mix",
+      "description": "製品事業のアフターマーケット51.88億円、新車123.89億円、車以外24.35億円と、LABO海外9.66億円を確認する。",
+      "expectedEvidencePdfPages": [23, 26, 28],
+      "status": "pending"
+    },
+    {
+      "id": "investment",
+      "description": "直営店建設投資約110億円が2027～2031年6月期の5年間累計で、広告宣伝費は売上高比3～7%、全社投資総額は未開示であることを確認する。",
+      "expectedEvidencePdfPages": [23, 24],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向を2025年6月期33.5%から40%以上へ引き上げる方針と、自己株式取得額が未開示であることを確認する。",
+      "expectedEvidencePdfPages": [25],
+      "status": "pending"
+    },
+    {
+      "id": "accounting_boundary",
+      "description": "2025年下期のLABO経費計上区分変更と、前中計差異が旧基準で比較されていることを確認する。",
+      "expectedEvidencePdfPages": [11],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_policy",
+      "description": "脱PFAS、D&I、女性割合、障がい者雇用、研修・リスキリング等の方針と、全社定量KPI未開示を確認する。",
+      "expectedEvidencePdfPages": [8, 37, 38, 39, 40],
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-03T16:11:49+00:00",
+  "updatedAt": "2026-08-04T05:12:05+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,9 +34,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 47,
-    "formalPlanConfirmed": 47,
-    "primaryReviewComplete": 47,
+    "sourceIdentityConfirmed": 48,
+    "formalPlanConfirmed": 48,
+    "primaryReviewComplete": 48,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 5,
@@ -49,11 +49,11 @@
       "operations/quality-rebase/phase2/primary-review-wave04-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave05-v1.json"
     ],
-    "independentReviewReady": 45,
+    "independentReviewReady": 46,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 403
+    "remainingPrimaryReviews": 402
   },
   "completedPrimaryReviews": [
     {
@@ -496,6 +496,16 @@
       "sourceClassification": "official_results_and_formal_management_plan"
     },
     {
+      "order": 183,
+      "code": "6140",
+      "name": "旭ダイヤモンド工業",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6140-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6140-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
+    },
+    {
       "order": 184,
       "code": "6247",
       "name": "日阪製作所",
@@ -592,13 +602,13 @@
       "workstream": "primary_review_wave05",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 5,
-      "remainingCount": 5,
+      "completionCount": 6,
+      "remainingCount": 4,
       "file": "operations/quality-rebase/phase2/primary-review-wave05-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 45,
+      "companies": 46,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -644,6 +654,7 @@
         "operations/quality-rebase/phase2/independent/5703-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/5988-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/6089-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6140-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/6247-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/6294-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/6822-independent-review-v1.json"

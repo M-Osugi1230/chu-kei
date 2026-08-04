@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"6807","name":"日本航空電子工業","market":"Prime","industry":"電気機器","phase2Order":362},
+  "source": {
+    "title":"中期経営計画（2026～2028年度）",
+    "publishedDate":"2026-04-24",
+    "officialUrl":"https://www2.jpx.co.jp/disc/68070/140120260424510244.pdf",
+    "pdfSha256":"6f47a24b3c94b86f276538ecd1733c8e20098a68a771ee50ae3528fc7b1f91db",
+    "pageCount":18,
+    "documentClassification":"formal_management_plan_current_2026_to_2028",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2028年度","terminalFiscalYear":"2028年度"},
+    "formalPlanBoundary": {
+      "previousPlan":"前中期経営計画・2021年度～2025年度",
+      "currentPlan":"中期経営計画・2026年度～2028年度",
+      "longerTermManagementTargets":"2030年度ROE10%、総資産回転率1.1回転",
+      "statement":"前中計実績、2026年度予想、2028年度中計目標、2030年度経営目標を分離する。"
+    }
+  },
+  "summary":"携帯機器・自動車の収益力を再生し、産機・インフラと航空・宇宙を成長領域として拡大する。ポートフォリオ変革、京セラとの協業、IT・開発・生産基盤強化により、2028年度に売上高2,600億円、営業利益180億円、ROE8%への回帰を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":2600,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度実績2,279億円","evidencePdfPages":[5,8]},
+    {"metric":"営業利益","target":180,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度実績89億円","evidencePdfPages":[4,8]},
+    {"metric":"ROE","target":8.0,"unit":"%","targetFiscalYear":"2028年度","baseline":"2025年度実績5.1%","evidencePdfPage":5},
+    {"metric":"コネクタ事業売上高","target":2330,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度実績2,069億円・旧コネクタとUIS合算","evidencePdfPage":9},
+    {"metric":"航機事業売上高","target":270,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度実績205億円","evidencePdfPage":10}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"ROE","target":10.0,"unit":"%","targetFiscalYear":"2030年度","classification":"management_target_beyond_current_plan","evidencePdfPage":5},
+    {"metric":"総資産回転率","target":1.1,"unit":"回転","targetFiscalYear":"2030年度","classification":"management_target_beyond_current_plan","evidencePdfPage":5}
+  ],
+  "strategyThemes":[
+    {"theme":"事業ポートフォリオ変革","evidencePdfPages":[5,6,8],"evidence":"UISをコネクタ事業へ統合し、重点4市場へリソースを再配分する。"},
+    {"theme":"コネクタ事業の収益力再生","evidencePdfPage":9,"evidence":"携帯機器の商談選別、自動車の自動化・成長地域攻略、産機・宇宙の新領域を推進する。"},
+    {"theme":"航機事業の成長","evidencePdfPage":10,"evidence":"防衛の能力増強、宇宙、油田、半導体製造装置、センサ応用を拡大する。"},
+    {"theme":"京セラ協業とグローバル展開","evidencePdfPages":[7,11,12],"evidence":"顧客基盤・生産拠点・共同開発を活用し欧米・インド・アセアンを開拓する。"},
+    {"theme":"IT・事業基盤強化","evidencePdfPages":[7,14],"evidence":"プロセス改革、データ基盤、AI、DX人材で経営効率と意思決定を高度化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation",
+    "operatingProfitAndDepreciation":1050,
+    "operatingProfitAndDepreciationUnit":"億円・3年間累計",
+    "cashEfficiencyAndExternalFunding":310,
+    "cashEfficiencyAndExternalFundingUnit":"億円・3年間累計",
+    "capitalExpenditure":630,
+    "capitalExpenditureUnit":"億円・3年間累計",
+    "growthInvestment":400,
+    "growthInvestmentUnit":"億円・M&A等",
+    "debtRepayment":210,
+    "debtRepaymentUnit":"億円",
+    "dividend":120,
+    "dividendUnit":"億円",
+    "policy":"財務健全性を維持しつつ、外部調達とキャッシュマネジメント高度化も活用して成長投資を確保する。",
+    "evidencePdfPage":13
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_floor",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%以上を維持",
+    "threeYearDividendAmount":120,
+    "threeYearDividendAmountUnit":"億円",
+    "evidencePdfPage":13
+  },
+  "nonFinancialTargets":[
+    {"metric":"京セラ協業シナジー売上高","target":100,"unit":"億円・間接シナジー含む","targetFiscalYear":"2028年度","baseline":"2026年度約3億円・中間段階50億円表示","evidencePdfPage":12},
+    {"metric":"航機・防衛利益率","target":10,"unit":"%以上","targetFiscalYear":"2028年度に向けた事業方針","evidencePdfPage":10}
+  ],
+  "definitions":[
+    {"term":"2028年度ROE8%と2030年度ROE10%","definition":"8%は現中計終期の回帰目標、10%はその後の経営目標。","evidencePdfPage":5},
+    {"term":"コネクタ事業2025年度2,069億円","definition":"旧コネクタ事業とUIS事業を合算した比較基準。","evidencePdfPage":9},
+    {"term":"協業シナジー100億円","definition":"間接シナジーを含む売上高であり、全社売上計画へ別途加算する項目ではない。","evidencePdfPage":12}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousPlanForecastCurrentPlanAnd2030TargetsSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T08:35:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2025実績・2026予想・2028計画の数値列を原寸確認する","2028 ROE8%と2030 ROE10%・資産回転率1.1を分離確認する","キャッシュイン1,050・310億円と投資630・400・返済210・配当120億円を確認する","京セラ協業100億円を全社売上へ重複加算していないことを確認する"]}
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-04T14:08:00+00:00",
+  "wave": 9,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave09-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "一次レビュー済み、図表原寸確認と独立再確認は未完了。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 78,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 372,
+    "primaryReviewWavesAssigned": 9,
+    "primaryReviewCompaniesAssignedTotal": 90
+  },
+  "companyCompletions": [
+    {
+      "order": 313,
+      "code": "2428",
+      "name": "ウェルネット",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2428-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2025_07_to_2030_06"
+    },
+    {
+      "order": 317,
+      "code": "2872",
+      "name": "セイヒョー",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2872-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_replacement_after_capacity_expansion"
+    },
+    {
+      "order": 385,
+      "code": "8159",
+      "name": "立花エレテック",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/8159-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2027_to_2031"
+    }
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 3,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 3,
+    "primaryReviewComplete": 81,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 369,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {
+    "code": "7607",
+    "name": "進和",
+    "market": "Prime",
+    "industry": "卸売業",
+    "phase2Order": 289
+  },
+  "source": {
+    "title": "第5次中期経営計画 Shinwa moving forward 2029",
+    "publishedDate": "2026-07-21",
+    "officialUrl": "https://www2.jpx.co.jp/disc/76070/140120260721596486.pdf",
+    "pdfSha256": "d377485518e7f3def4467fca032f060a078fc068fc9157aabc7002ecf1670834",
+    "pageCount": 34,
+    "documentClassification": "formal_management_plan_current_2026_09_to_2029_08",
+    "period": {
+      "startDate": "2026-09-01",
+      "endDate": "2029-08-31",
+      "terminalFiscalYear": "2029年8月期"
+    },
+    "formalPlanBoundary": {
+      "previousPlan": "第4次中期経営計画",
+      "currentPlan": "第5次中期経営計画・2026年9月～2029年8月",
+      "statement": "過去実績、2026年8月期計画、第5次計画最終目標、2030年環境目標を分離する。"
+    }
+  },
+  "summary": "商社・製造・エンジニアリングを融合し、自動車中心の顧客基盤を半導体・エレクトロニクス、HVAC、グローバルサウスへ拡張する。製造開発拠点集約、自社製品比率向上、AI・DX、人的資本、サステナビリティを進め、2029年8月期に売上高1,000億円、営業利益60億円、ROE10%以上を目指す。",
+  "financialTargets": [
+    {"metric":"売上高","target":1000,"unit":"億円","targetFiscalYear":"2029年8月期","evidencePdfPages":[1,2,29]},
+    {"metric":"営業利益","target":60,"unit":"億円","targetFiscalYear":"2029年8月期","evidencePdfPages":[1,2,29]},
+    {"metric":"ROE","target":10,"unit":"%以上","targetFiscalYear":"2029年8月期","evidencePdfPages":[1,2,29,30]}
+  ],
+  "strategyThemes": [
+    {"theme":"生産性改善と拠点集約","evidencePdfPages":[1,18,19,20],"evidence":"業務改善、製造開発拠点の集約、デジタル活用により収益性と開発スピードを高める。"},
+    {"theme":"事業ポートフォリオ多様化","evidencePdfPages":[1,21,22],"evidence":"自動車で培った接合・設備・計測・スマートファクトリーの知見を他産業へ横展開する。"},
+    {"theme":"成長市場とグローバルサウス","evidencePdfPages":[1,10,23,24],"evidence":"ベトナム、インド等のグローバルサウス、半導体・エレクトロニクス、HVACを開拓する。"},
+    {"theme":"製造部門の開発機能強化","evidencePdfPages":[1,25],"evidence":"金属接合、スマートファクトリー、リマニュファクチュアリング、デジタルと熟練技術を融合する。"},
+    {"theme":"人的資本・ガバナンス・サステナビリティ","evidencePdfPages":[1,26,27],"evidence":"能力主義、人材採用・育成、ダイバーシティ、情報開示、気候変動・地域共生・ガバナンスを強化する。"},
+    {"theme":"資本効率と株主還元","evidencePdfPages":[1,2,29,30,31],"evidence":"成長投資、人的・経営基盤投資、配当・自己株式取得へ規律ある資本配分を行う。"}
+  ],
+  "operatingTargets": [
+    {"metric":"売上高に占める製品構成比率","target":30,"unit":"%","targetFiscalYear":"2029年8月期","baseline":"20%","evidencePdfPage":25}
+  ],
+  "humanCapitalTargets": [
+    {"metric":"技術人材採用数","target":50,"unit":"名・3年間","targetFiscalYear":"中計期間","evidencePdfPage":26},
+    {"metric":"平均給与水準成長率","target":6.5,"unit":"%・年率","targetFiscalYear":"中計期間","evidencePdfPage":26},
+    {"metric":"女性管理職比率","target":12.0,"unit":"%・連結","targetFiscalYear":"2029年8月期","baseline":"2025年8月期6.9%","evidencePdfPage":26}
+  ],
+  "capitalPolicy": {
+    "status": "cash_out_quantified_cash_in_partially_quantified",
+    "cashOnHandMinimum": 130,
+    "cashOnHandMaximum": 140,
+    "cashOnHandUnit": "億円",
+    "operatingCashFlowTotal": null,
+    "growthInvestment": 70,
+    "growthInvestmentUnit": "億円・中計期間",
+    "humanAndManagementFoundationInvestment": 20,
+    "humanAndManagementFoundationInvestmentUnit": "億円・中計期間",
+    "shareholderReturnMinimum": 50,
+    "shareholderReturnMaximum": 60,
+    "shareholderReturnUnit": "億円・中計期間",
+    "growthUses": ["春日井第2事業所", "ROIC10%以上の新テーマ設備", "R&D", "DX"],
+    "additionalAllocationOptions": ["M&A等の戦略投資", "自己株式取得等の追加還元", "手元資金圧縮"],
+    "policy": "手元資金と営業CFを成長投資、人的・経営基盤投資、株主還元へ配分し、投資状況に応じて追加施策を実施する。営業CF総額は図中で明示されていないため推計しない。",
+    "evidencePdfPage": 30
+  },
+  "shareholderReturnPolicy": {
+    "status": "higher_of_payout_or_doe_floor",
+    "dividendPayoutRatioFloor": 50,
+    "dividendPayoutRatioFloorUnit": "%",
+    "doeFloor": 4.0,
+    "doeFloorUnit": "%・株主資本配当率",
+    "floorRule": "配当性向50%とDOE4%のいずれか高い方を下限",
+    "shareRepurchasePolicy": "成長投資と資本効率に配慮しながら検討",
+    "planPeriodReturnMinimum": 50,
+    "planPeriodReturnMaximum": 60,
+    "planPeriodReturnUnit": "億円",
+    "evidencePdfPages": [1,2,30,31]
+  },
+  "environmentTargets": [
+    {"metric":"CO2排出削減","target":42,"unit":"%削減","targetFiscalYear":"2030年","baseline":"2020年","evidencePdfPage":27},
+    {"metric":"国内社有車の次世代車比率","target":80,"unit":"%","targetFiscalYear":"2030年","evidencePdfPage":27}
+  ],
+  "definitions": [
+    {"term":"成長投資70億円","definition":"春日井第2事業所、新テーマ設備、R&D、DX等。人的・経営基盤投資20億円とは別枠。","evidencePdfPage":30},
+    {"term":"株主還元50～60億円","definition":"中計期間のキャッシュアウト計画。配当と追加自己株式取得の確定内訳ではない。","evidencePdfPage":30},
+    {"term":"配当下限ルール","definition":"配当性向50%とDOE4%を比較し、高い方を採用する。両者を加算しない。","evidencePdfPages":[2,31]},
+    {"term":"営業CF","definition":"キャッシュイン源として表示されるが総額は資料本文で明示されないため推計しない。","evidencePdfPage":30}
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": true,
+    "formalPlanBoundaryValidated": true,
+    "previousAndCurrentPlanSeparated": true,
+    "forecastActualSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalPolicyReviewed": true,
+    "undisclosedOperatingCashFlowNotInferred": true,
+    "shareholderReturnPolicyReviewed": true,
+    "nonFinancialTargetsReviewed": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_visual_review_pending",
+    "reviewedAt": "2026-08-04T22:14:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "公式PDFの主要図表ページ25～31を原寸で独立確認する",
+      "売上高1,000億円・営業利益60億円・ROE10%以上の年度と連結範囲を確認する",
+      "成長投資70億円、人的・基盤投資20億円、還元50～60億円を分離確認する",
+      "営業CF金額を推計していないことを確認する",
+      "配当性向50%とDOE4%の高い方を下限とするルールを原文突合する"
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "7504",
+    "name": "高速"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7504-primary-review-v1.json",
+  "source": {
+    "title": "中長期経営計画 2026-2035",
+    "officialUrl": "https://www2.jpx.co.jp/disc/75040/140120260503517113.pdf",
+    "pdfSha256": "4d250c10689580bcee0d510b1255e9096ec8736222d8cd422aedd799f70334c9",
+    "pageCount": 20
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード7504、公表日2026年5月8日、PDFハッシュ、全20ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 20],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "2018～2025年度の前計画、2026年度単年度予想、2026～2035年度の現行計画を分離していることを確認する。",
+      "expectedEvidencePdfPages": [3, 4, 5, 9, 11, 14, 16],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2035年度売上高2,000億円＋α、営業利益80億円＋α、32期連続増配の年度・単位・範囲を確認する。",
+      "expectedEvidencePdfPages": [3, 4],
+      "status": "pending"
+    },
+    {
+      "id": "growth_areas",
+      "description": "食品1,600億円＋α、農産100億円、外食・テイクアウト50億円、ネット100億円、非食品300億円、メーカー系150億円、ドリパケ10億円＋αを確認する。",
+      "expectedEvidencePdfPages": [7],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "10年間配当総額1,380円＋αが一定増配仮定に基づく累計試算で、2026年度120円や2035年度156円の単年度値と混在していないことを確認する。",
+      "expectedEvidencePdfPages": [4, 17],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "財務健全性を維持しつつ負債も活用して成長投資と還元を両立する一方、将来投資総額は未開示であることを確認する。",
+      "expectedEvidencePdfPages": [3, 6, 18],
+      "status": "pending"
+    },
+    {
+      "id": "accounting_definition",
+      "description": "取扱高が旧会計基準相当、売上高が収益認識基準適用後であることを確認する。",
+      "expectedEvidencePdfPages": [15],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に公式リンク、計画期間、主要目標、配当仮定、未開示項目の表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

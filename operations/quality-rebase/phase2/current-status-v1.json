@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-04T05:41:32+00:00",
+  "updatedAt": "2026-08-04T05:43:56+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,9 +34,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 52,
-    "formalPlanConfirmed": 52,
-    "primaryReviewComplete": 52,
+    "sourceIdentityConfirmed": 53,
+    "formalPlanConfirmed": 53,
+    "primaryReviewComplete": 53,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 6,
@@ -50,11 +50,11 @@
       "operations/quality-rebase/phase2/primary-review-wave05-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave06-v1.json"
     ],
-    "independentReviewReady": 50,
+    "independentReviewReady": 51,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 398
+    "remainingPrimaryReviews": 397
   },
   "completedPrimaryReviews": [
     {
@@ -575,6 +575,16 @@
       "status": "primary_review_complete_independent_review_ready",
       "sourceCorrectionRequired": false,
       "sourceClassification": "official_formal_management_plan_with_quantitative_target_revision"
+    },
+    {
+      "order": 216,
+      "code": "4691",
+      "name": "ワシントンホテル",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4691-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4691-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2027_to_2031"
     }
   ],
   "qualityFindings": [
@@ -651,13 +661,13 @@
       "workstream": "primary_review_wave06",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 4,
-      "remainingCount": 6,
+      "completionCount": 5,
+      "remainingCount": 5,
       "file": "operations/quality-rebase/phase2/primary-review-wave06-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 50,
+      "companies": 51,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -710,7 +720,8 @@
         "operations/quality-rebase/phase2/independent/7504-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/7743-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/3159-independent-review-v1.json",
-        "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json"
+        "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4691-independent-review-v1.json"
       ]
     },
     {

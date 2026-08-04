@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-05T08:40:00+09:00",
+  "wave": 12,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave12-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "Wave12の3社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 108,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 342,
+    "primaryReviewWavesAssigned": 12,
+    "primaryReviewCompaniesAssignedTotal": 120
+  },
+  "companyCompletions": [
+    {"order":362,"code":"6807","name":"日本航空電子工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6807-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028"},
+    {"order":364,"code":"6894","name":"パルステック工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6894-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"first_public_formal_management_plan_with_capital_cost_response"},
+    {"order":370,"code":"7383","name":"ネットプロテクションズホールディングス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/7383-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_annual_rolling_update"}
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 3,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 3,
+    "primaryReviewComplete": 111,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 339,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

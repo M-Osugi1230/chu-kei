@@ -5,8 +5,10 @@ Supported source-resolution states:
 
 1. A wrong or unresolved candidate is quarantined and must not enter primary
    review.
-2. Candidate metadata is corrected to a newer official formal-plan document.
-3. A formal-plan boundary or document identity is resolved and the primary
+2. A document is official but lacks quantified medium-term targets, so it is
+   isolated until a qualifying formal plan is republished.
+3. Candidate metadata is corrected to a newer official formal-plan document.
+4. A formal-plan boundary or document identity is resolved and the primary
    review is already complete. This is accepted only when the canonical ledger,
    review file, evidence flags, and pending independent-review state agree.
 
@@ -128,6 +130,29 @@ def validate_pdf_identity(document: dict[str, Any], location: str) -> None:
         raise SystemExit(f"{location}.pageCount must be positive")
 
 
+def assert_not_completed_elsewhere(
+    code: str,
+    repo_root: Path,
+    completed_records: dict[str, dict[str, Any]],
+) -> None:
+    if code in completed_records:
+        raise SystemExit(f"quarantined company is marked complete in canonical ledger: {code}")
+
+    review_path = (
+        repo_root
+        / "operations/quality-rebase/phase2/reviews"
+        / f"{code}-primary-review-v1.json"
+    )
+    if review_path.exists():
+        review = load_json(review_path)
+        review_state = review.get("review")
+        review_status = ""
+        if isinstance(review_state, dict):
+            review_status = str(review_state.get("status", ""))
+        if review_status.startswith("primary_review_complete"):
+            raise SystemExit(f"quarantined source has a completed review record: {code}")
+
+
 def validate_legacy_quarantine(
     repair: dict[str, Any],
     repair_path: Path,
@@ -150,24 +175,7 @@ def validate_legacy_quarantine(
     if not quarantined:
         raise SystemExit(f"quarantine record must prohibit primary review: {repair_path}")
 
-    if code in completed_records:
-        raise SystemExit(
-            f"quarantined source company is marked complete in canonical ledger: {code}"
-        )
-
-    review_path = (
-        repo_root
-        / "operations/quality-rebase/phase2/reviews"
-        / f"{code}-primary-review-v1.json"
-    )
-    if review_path.exists():
-        review = load_json(review_path)
-        review_state = review.get("review")
-        review_status = ""
-        if isinstance(review_state, dict):
-            review_status = str(review_state.get("status", ""))
-        if review_status.startswith("primary_review_complete"):
-            raise SystemExit(f"quarantined source has a completed review record: {code}")
+    assert_not_completed_elsewhere(code, repo_root, completed_records)
 
     required_checks = repair.get("requiredNextChecks")
     if not isinstance(required_checks, list) or not required_checks:
@@ -178,6 +186,67 @@ def validate_legacy_quarantine(
         "mode": "quarantine",
         "quarantined": True,
         "resolutionStatus": repair.get("resolutionStatus"),
+    }
+
+
+def validate_quantified_plan_quarantine(
+    repair: dict[str, Any],
+    repair_path: Path,
+    repo_root: Path,
+    completed_records: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    code = company_code(repair, repair_path)
+
+    candidate = repair.get("candidate")
+    if not isinstance(candidate, dict):
+        raise SystemExit(f"candidate missing: {repair_path}")
+    for key in ("title", "candidatePublishedDate"):
+        if not isinstance(candidate.get(key), str) or not candidate.get(key):
+            raise SystemExit(f"candidate.{key} missing: {repair_path}")
+    validate_pdf_identity(candidate, f"{repair_path}.candidate")
+
+    finding = repair.get("finding")
+    if not isinstance(finding, dict):
+        raise SystemExit(f"finding missing: {repair_path}")
+    if finding.get("type") != "quantified_formal_plan_boundary_not_met":
+        raise SystemExit(f"unsupported quarantine finding: {repair_path}")
+    require_true(finding, "sourceIdentityConfirmed", f"{repair_path}.finding")
+    require_true(finding, "managementRoadmapConfirmed", f"{repair_path}.finding")
+    require_false(
+        finding,
+        "quantifiedMediumTermTargetsConfirmed",
+        f"{repair_path}.finding",
+    )
+    evidence = finding.get("evidence")
+    if not isinstance(evidence, list) or not evidence:
+        raise SystemExit(f"finding.evidence missing: {repair_path}")
+    if not isinstance(finding.get("reason"), str) or not finding.get("reason"):
+        raise SystemExit(f"finding.reason missing: {repair_path}")
+
+    resolution = repair.get("resolution")
+    if not isinstance(resolution, dict):
+        raise SystemExit(f"resolution missing: {repair_path}")
+    if resolution.get("status") != "source_isolated_quantified_plan_republication_required":
+        raise SystemExit(f"unsupported quarantine resolution: {repair_path}")
+    require_false(resolution, "waveEligibility", f"{repair_path}.resolution")
+    require_true(resolution, "replacementRequired", f"{repair_path}.resolution")
+    next_actions = resolution.get("nextActions")
+    if not isinstance(next_actions, list) or not next_actions:
+        raise SystemExit(f"resolution.nextActions missing: {repair_path}")
+
+    approval = repair.get("approval")
+    if not isinstance(approval, dict):
+        raise SystemExit(f"approval missing: {repair_path}")
+    require_false(approval, "automaticApprovalAllowed", f"{repair_path}.approval")
+    require_false(approval, "deepVerificationApproved", f"{repair_path}.approval")
+
+    assert_not_completed_elsewhere(code, repo_root, completed_records)
+
+    return {
+        "code": code,
+        "mode": "quantified_plan_quarantine",
+        "quarantined": True,
+        "resolutionStatus": resolution.get("status"),
     }
 
 
@@ -200,9 +269,7 @@ def validate_completed_legacy_resolution(
 
     canonical = completed_records.get(code)
     if canonical is None:
-        raise SystemExit(
-            f"completed source resolution is absent from canonical ledger: {code}"
-        )
+        raise SystemExit(f"completed source resolution is absent from canonical ledger: {code}")
 
     primary_review_file = repair.get("primaryReviewFile")
     if not isinstance(primary_review_file, str) or not primary_review_file:
@@ -216,9 +283,9 @@ def validate_completed_legacy_resolution(
     if not isinstance(review_company, dict) or str(review_company.get("code")) != code:
         raise SystemExit(f"primary review company mismatch: {code}")
     review_state = review.get("review")
-    if not isinstance(review_state, dict) or not str(
-        review_state.get("status", "")
-    ).startswith("primary_review_complete"):
+    if not isinstance(review_state, dict) or not str(review_state.get("status", "")).startswith(
+        "primary_review_complete"
+    ):
         raise SystemExit(f"primary review is not complete for resolved source: {code}")
 
     document = repair.get("currentOfficialDocument")
@@ -275,9 +342,7 @@ def validate_legacy_resolution(
 ) -> dict[str, Any]:
     incorrect = repair.get("incorrectCandidate")
     if isinstance(incorrect, dict) and incorrect.get("mayEnterPrimaryReview") is False:
-        return validate_legacy_quarantine(
-            repair, repair_path, repo_root, completed_records
-        )
+        return validate_legacy_quarantine(repair, repair_path, repo_root, completed_records)
 
     if repair.get("primaryReviewComplete") is True:
         return validate_completed_legacy_resolution(
@@ -347,6 +412,20 @@ def validate_corrected_official_source(
     }
 
 
+def validate_corrected_schema(
+    repair: dict[str, Any],
+    repair_path: Path,
+    repo_root: Path,
+    completed_records: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    resolution = repair.get("resolution")
+    if isinstance(resolution, dict) and resolution.get("waveEligibility") is False:
+        return validate_quantified_plan_quarantine(
+            repair, repair_path, repo_root, completed_records
+        )
+    return validate_corrected_official_source(repair, repair_path, completed_records)
+
+
 def validate_repair(
     repair_path: Path,
     repo_root: Path,
@@ -358,16 +437,11 @@ def validate_repair(
     schema = repair.get("schemaVersion")
     if schema == LEGACY_SCHEMA:
         return validate_legacy_resolution(
-            repair,
-            repair_path,
-            repo_root,
-            completed_records,
+            repair, repair_path, repo_root, completed_records
         )
     if schema == CORRECTED_SCHEMA:
-        return validate_corrected_official_source(
-            repair,
-            repair_path,
-            completed_records,
+        return validate_corrected_schema(
+            repair, repair_path, repo_root, completed_records
         )
     raise SystemExit(f"unexpected schemaVersion: {repair_path}: {schema}")
 
@@ -405,6 +479,11 @@ def main() -> None:
                 "sourceResolutionRecords": len(results),
                 "quarantinedCompanies": sum(
                     1 for result in results if result["quarantined"]
+                ),
+                "quantifiedPlanQuarantines": sum(
+                    1
+                    for result in results
+                    if result["mode"] == "quantified_plan_quarantine"
                 ),
                 "correctedOfficialSources": sum(
                     1

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-04T06:14:47+00:00",
+  "updatedAt": "2026-08-04T06:17:42+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,9 +34,9 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 61,
-    "formalPlanConfirmed": 61,
-    "primaryReviewComplete": 61,
+    "sourceIdentityConfirmed": 62,
+    "formalPlanConfirmed": 62,
+    "primaryReviewComplete": 62,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
     "primaryReviewWavesAssigned": 7,
@@ -51,11 +51,11 @@
       "operations/quality-rebase/phase2/primary-review-wave06-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave07-v1.json"
     ],
-    "independentReviewReady": 59,
+    "independentReviewReady": 60,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 389
+    "remainingPrimaryReviews": 388
   },
   "completedPrimaryReviews": [
     {
@@ -648,6 +648,16 @@
       "sourceClassification": "formal_management_plan_with_long_term_vision"
     },
     {
+      "order": 221,
+      "code": "6036",
+      "name": "KeePer技研",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6036-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_six_year_management_plan_current_2026_to_2031"
+    },
+    {
       "order": 229,
       "code": "2734",
       "name": "サーラコーポレーション",
@@ -750,13 +760,13 @@
       "workstream": "primary_review_wave07",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 3,
-      "remainingCount": 7,
+      "completionCount": 4,
+      "remainingCount": 6,
       "file": "operations/quality-rebase/phase2/primary-review-wave07-v1.json"
     },
     {
       "workstream": "independent_review_ready_queue",
-      "companies": 59,
+      "companies": 60,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -817,6 +827,7 @@
         "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/4691-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/5451-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/2734-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/6050-independent-review-v1.json"
       ]

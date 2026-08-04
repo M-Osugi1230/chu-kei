@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {
+    "code": "6330",
+    "name": "東洋エンジニアリング",
+    "market": "Prime",
+    "industry": "建設業",
+    "phase2Order": 278
+  },
+  "source": {
+    "title": "中期経営計画 2026-2030",
+    "publishedDate": "2026-06-19",
+    "officialUrl": "https://www2.jpx.co.jp/disc/63300/140120260618573627.pdf",
+    "pdfSha256": "d18ec384d73481ca408c7778aec74d76831af6342f138b7583c016c7bd6b2125",
+    "pageCount": 45,
+    "documentClassification": "formal_management_plan_current_2026_to_2030",
+    "period": {
+      "startFiscalYear": "2026年度",
+      "endFiscalYear": "2030年度",
+      "terminalFiscalYear": "2030年度"
+    },
+    "formalPlanBoundary": {
+      "previousPlan": "前中期経営計画・2023～2025年度",
+      "currentPlan": "中期経営計画・2026～2030年度",
+      "longTermVision": "TOYO VISION 2040",
+      "statement": "2025年度一過性損失、2026年度業績見込、2030年度KGI、2040年ビジョンを分離する。"
+    }
+  },
+  "summary": "肥料、石油化学、FPSO、GX等の基盤EPCを強靭化し、顧客との共創型EPC、プラントライフサイクル、O&M、バイオ医薬、ファインケミカル、次世代型地熱、重要鉱物へ事業を拡張する。2030年度に純利益100億円、各年度ROE12%以上を目指す。",
+  "financialTargets": [
+    {"metric":"連結当期純利益","target":100,"unit":"億円","targetFiscalYear":"2030年度","baseline":"2026年度見込60億円","evidencePdfPages":[7,21,24]},
+    {"metric":"ROE","target":12,"unit":"%以上","targetFiscalYear":"中計期間の各年度","baseline":"2026年度見込12.9%・特別利益込み17.4%","evidencePdfPages":[7,21,24,43]},
+    {"metric":"ストック型粗利構成比率","target":10,"unit":"%","targetFiscalYear":"2030年度","evidencePdfPages":[21,24]},
+    {"metric":"共創型EP・EPC受注件数比率","target":50,"unit":"%以上","targetFiscalYear":"2030年度","evidencePdfPage":24},
+    {"metric":"先端素材・ファインケミカル・バイオ医薬・O&M粗利構成比率","target":30,"unit":"%以上","targetFiscalYear":"2030年度","evidencePdfPage":24}
+  ],
+  "undisclosedTargets": [
+    {"item":"2030年度売上高","status":"not_set_as_current_kgi","note":"前中計には3,000億円の目安があったが、新中計KGIは純利益・ROE・粗利構成等を重視する。"},
+    {"item":"5年間の営業CF総額・投資総額","status":"not_disclosed","note":"配分比率は開示されるが金額総額は開示されていない。"}
+  ],
+  "strategyThemes": [
+    {"theme":"共創型EPCとリスク管理","evidencePdfPages":[13,18,19,26,27,28],"evidence":"構想・FS・FEED段階から顧客と成功条件を共有し、案件選別、契約、工程、品質、横断モニタリングを強化する。"},
+    {"theme":"EPCからPLC・O&Mへ","evidencePdfPages":[18,19,21,22,26,35],"evidence":"単発フロー収益から運転・保全・継続サービスを含むストック型収益へ拡張する。"},
+    {"theme":"基盤事業と経済安全保障","evidencePdfPages":[20,22,29],"evidence":"肥料、石油化学、FPSO、GXを通じて食料・素材・エネルギーの安定供給を支える。"},
+    {"theme":"高付加価値・新事業領域","evidencePdfPages":[12,21,22,26,31,32,33,34],"evidence":"バイオ医薬、ファインケミカル、次世代型地熱、重要鉱物、GX技術の社会実装を進める。"},
+    {"theme":"重点地域とグループ拠点力","evidencePdfPages":[22,23,29,30],"evidence":"インド、中央アジア・中東、サブサハラ等で地域拠点と技術・顧客基盤を活用する。"},
+    {"theme":"人財・DX/AX・組織改革","evidencePdfPages":[39,40,41,42],"evidence":"共創越境人財、組織改編、AWP、GDOC、AIによる業務・意思決定変革を推進する。"}
+  ],
+  "capitalPolicy": {
+    "status": "operating_cash_flow_allocation_ratios_disclosed_amounts_undisclosed",
+    "financialFoundationShare": 50,
+    "financialFoundationShareUnit": "%・営業CF配分イメージ",
+    "growthInvestmentShare": 30,
+    "growthInvestmentShareUnit": "%・営業CF配分イメージ",
+    "shareholderReturnShare": 20,
+    "shareholderReturnShareUnit": "%・営業CF配分イメージ",
+    "growthUses": ["共創型人財", "O&M・PLC", "新領域", "R&D", "M&A"],
+    "financialFoundationUses": ["流動性", "リスク耐性", "2025年度損失後の財務基盤回復・安定化"],
+    "operatingCashFlowTotal": null,
+    "growthInvestmentTotal": null,
+    "policy": "中計前半は財務基盤の回復を優先しつつ、選択的な成長投資と株主還元を継続する。配分比率はイメージであり金額へ換算しない。",
+    "evidencePdfPage": 43
+  },
+  "shareholderReturnPolicy": {
+    "status": "payout_ratio_floor_and_flexible_return",
+    "dividendPayoutRatioMinimum": 25,
+    "dividendPayoutRatioUnit": "%",
+    "otherReturn": "自己株式取得等を含む株主還元",
+    "policy": "流動性とリスク耐性を確保しつつ、配当性向25%以上を基準に配当・自己株式取得等を継続する。",
+    "evidencePdfPage": 43
+  },
+  "definitions": [
+    {"term":"2026年度純利益60億円・ROE12.9%","definition":"前中計損失後の単年度回復見込であり、2030年度終期目標ではない。特別利益込みROE17.4%とも分離する。","evidencePdfPage":7},
+    {"term":"ROE12%以上","definition":"中計期間各年度で資本コストを上回る水準の実現・維持を目指す。","evidencePdfPages":[21,24,43]},
+    {"term":"営業CF配分50/30/20","definition":"財務基盤、成長投資、株主還元への配分イメージ。開示されていない総額を推計しない。","evidencePdfPage":43},
+    {"term":"TOYO VISION 2040","definition":"EPCの枠を超える長期像であり、2026～2030年度の数値KGIとは分離する。","evidencePdfPages":[2,5]}
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": true,
+    "formalPlanBoundaryValidated": true,
+    "previousCurrentAndLongTermSeparated": true,
+    "oneOffLossAndForecastSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalPolicyReviewed": true,
+    "allocationRatiosNotConvertedToAmounts": true,
+    "shareholderReturnPolicyReviewed": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_visual_review_pending",
+    "reviewedAt": "2026-08-04T21:56:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "公式PDFの主要図表ページ7・21・24・26・39～43を原寸で独立確認する",
+      "2026年度回復見込と2030年度KGIを分離確認する",
+      "ROE12%以上が各年度目標であることを確認する",
+      "営業CF配分50/30/20を金額へ推計していないことを確認する",
+      "配当性向25%以上と自己株式取得等の方針を原文突合する"
+    ]
+  }
+}

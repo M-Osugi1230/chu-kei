@@ -14,8 +14,9 @@
     "pdfSha256": null
   },
   "purpose": "2026年5月26日訂正版の現行公式PDFを再取得し、SHA-256、バイト数、53ページを固定する。前中計PDFとは別証跡で管理する。",
-  "requestedAt": "2026-08-04T14:26:00+09:00",
-  "retryReason": "要求側で訂正版PDFを明示指定し、複数資料対応版の固定処理を使用する。",
+  "requestedAt": "2026-08-04T14:33:00+09:00",
+  "retryAfterWorkflowFix": true,
+  "retryReason": "イベントコミット基準の要求選択へ修正後、訂正版PDFを再取得する。",
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false

@@ -6,9 +6,17 @@
   },
   "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/5019-source-resolution-v1.json",
   "outputEvidenceFile": "operations/quality-rebase/phase2/source-binary-evidence/5019-v1.json",
-  "purpose": "2026年5月26日訂正版の現行公式PDFを再取得し、SHA-256、バイト数、53ページを固定する。一次レビュー完了や承認は行わない。",
-  "requestedAt": "2026-08-04T14:20:00+09:00",
-  "retryReason": "初回要求後に出力証跡が生成されていないため、同一の訂正版公式PDFを再取得する。",
+  "officialPdf": {
+    "url": "https://www.idemitsu.com/jp/company/managementplan/2026_2030plan.pdf",
+    "title": "中期経営計画（2026-2030年度）",
+    "sourceRole": "formal_plan_current_corrected_version",
+    "pageCount": 53,
+    "pdfSha256": null
+  },
+  "purpose": "2026年5月26日訂正版の現行公式PDFを再取得し、SHA-256、バイト数、53ページを固定する。前中計PDFとは別証跡で管理する。",
+  "requestedAt": "2026-08-04T14:26:00+09:00",
+  "retryReason": "要求側で訂正版PDFを明示指定し、複数資料対応版の固定処理を使用する。",
+  "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false
 }

@@ -103,12 +103,7 @@
     "growthInvestmentMinimum": 150,
     "growthInvestmentMaximum": 300,
     "growthInvestmentUnit": "億円",
-    "growthInvestmentCategories": [
-      "生産性の維持向上",
-      "新規事業創出・M&A",
-      "人的資本",
-      "IT"
-    ],
+    "growthInvestmentCategories": ["生産性の維持向上", "新規事業創出・M&A", "人的資本", "IT"],
     "assetSalesMinimum": 10,
     "assetSalesMaximum": 50,
     "assetSalesUnit": "億円",
@@ -131,24 +126,9 @@
     "evidencePdfPages": [20, 21]
   },
   "nonFinancialTargets": [
-    {
-      "metric": "離職率",
-      "target": 2,
-      "unit": "%以下",
-      "evidencePdfPage": 17
-    },
-    {
-      "metric": "採用者に占める女性比率",
-      "target": 30,
-      "unit": "%以上",
-      "evidencePdfPage": 17
-    },
-    {
-      "metric": "男性育休取得率",
-      "target": 80,
-      "unit": "%以上",
-      "evidencePdfPage": 17
-    }
+    {"metric": "離職率", "target": 2, "unit": "%以下", "evidencePdfPage": 17},
+    {"metric": "採用者に占める女性比率", "target": 30, "unit": "%以上", "evidencePdfPage": 17},
+    {"metric": "男性育休取得率", "target": 80, "unit": "%以上", "evidencePdfPage": 17}
   ],
   "definitions": [
     {
@@ -173,7 +153,7 @@
     "formalPlanConfirmed": true,
     "formalPlanBoundaryValidated": true,
     "fullTextHumanReviewComplete": true,
-    "visualFigureReviewComplete": false,
+    "visualFigureReviewComplete": true,
     "strategyStructured": true,
     "metricsValidated": true,
     "fieldLevelEvidenceLinked": true,
@@ -187,8 +167,9 @@
     "postPublicationLinkAndRenderCheck": false
   },
   "review": {
-    "status": "primary_review_complete_independent_visual_review_pending",
+    "status": "primary_review_complete_independent_review_ready",
     "reviewedAt": "2026-08-03T22:17:05+09:00",
+    "visualReviewCompletedAt": "2026-08-04T14:15:00+09:00",
     "reviewRole": "primary_reviewer",
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,

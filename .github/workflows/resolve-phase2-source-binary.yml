@@ -49,7 +49,7 @@ jobs:
           if [[ '${{ github.event_name }}' == 'workflow_dispatch' ]]; then
             REQUEST='${{ inputs.request_file }}'
           else
-            REQUEST="$(git diff-tree --no-commit-id --name-only -r HEAD | awk '/operations\/quality-rebase\/phase2\/source-binary-requests\/.*\.json$/ {print; exit}')"
+            REQUEST="$(git diff-tree --no-commit-id --name-only -r '${{ github.sha }}' | awk '/operations\/quality-rebase\/phase2\/source-binary-requests\/.*\.json$/ {print; exit}')"
           fi
           if [[ -z "$REQUEST" ]]; then
             echo 'No request changed; workflow or resolver implementation update only.'
@@ -57,7 +57,7 @@ jobs:
             exit 0
           fi
           if [[ ! -f "$REQUEST" ]]; then
-            echo "Request file does not exist: $REQUEST" >&2
+            echo "Request file does not exist in the current branch: $REQUEST" >&2
             exit 1
           fi
           case "$REQUEST" in

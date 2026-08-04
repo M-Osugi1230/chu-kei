@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "7460",
+    "name": "ヤギ"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7460-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画2029策定に関するお知らせ・中期経営計画2029",
+    "officialUrl": "https://www2.jpx.co.jp/disc/74600/140120260421507681.pdf",
+    "pdfSha256": "0ea036a2faa99732c7871c9bfabad7155a0390fcbfadb4a23acc14842fbf4b13",
+    "pageCount": 37
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード7460、公表日2026年5月11日、PDFハッシュ、全37ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 37],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "中計2026の計画・実績、2027～2029年の現行中計、2034年長期像を分離する。",
+      "expectedEvidencePdfPages": [4, 5, 9, 10, 14],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2029年売上高960億円、経常利益60億円、純利益47億円、ROE10%以上、PBR1倍超を確認する。",
+      "expectedEvidencePdfPages": [1, 9, 14, 26],
+      "status": "pending"
+    },
+    {
+      "id": "portfolio",
+      "description": "ブランド・リテールを成長事業、マテリアル・アパレルを収益事業とする資源循環方針とセグメント目標を確認する。",
+      "expectedEvidencePdfPages": [10, 13, 16, 19, 22, 23],
+      "status": "pending"
+    },
+    {
+      "id": "retail_definition",
+      "description": "リテールは持分法適用会社主体で連結売上高を表示せず、GMV195億円と店舗数3倍が事業KPIであることを確認する。",
+      "expectedEvidencePdfPages": [19, 20],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "3年間投資150～200億円、TATRAS46億円、アパレル物流10億円・人的投資8億円、政策保有株式売却20～30億円を確認する。",
+      "expectedEvidencePdfPages": [18, 23, 27, 28],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向40%以上、総還元性向70%目途、配当50億円、自己株式取得40億円規模と、2027年配当180円の単年度予想を分離する。",
+      "expectedEvidencePdfPages": [26, 27, 29],
+      "status": "pending"
+    },
+    {
+      "id": "long_term_boundary",
+      "description": "2029年ROE10%以上と2034年ROE12%以上、政策保有株式純資産比率10%以下の長期目標を分離する。",
+      "expectedEvidencePdfPages": [9, 10, 14, 28],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に公式リンク、計画期間、主要数値、セグメント、投資・還元の表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

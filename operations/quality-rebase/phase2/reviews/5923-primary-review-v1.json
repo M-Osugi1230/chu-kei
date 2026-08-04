@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"5923","name":"高田機工","market":"Standard","industry":"金属製品","phase2Order":349},
+  "source": {
+    "title":"中期経営計画2024 数値目標の修正",
+    "publishedDate":"2026-05-15",
+    "officialUrl":"https://www2.jpx.co.jp/disc/59230/140120260515537244.pdf",
+    "pdfSha256":"c545bd6100b80c7a3509f4c9bdb1bedb83b263337ce41e7465e8b0ee3a3c6ddd",
+    "pageCount":8,
+    "documentClassification":"formal_management_plan_numeric_target_revision",
+    "period":{"startFiscalYear":"2025年3月期","endFiscalYear":"2027年3月期","terminalFiscalYear":"2027年3月期"},
+    "formalPlanBoundary":{"originalPlan":"中期経営計画2024・2024年5月10日公表","currentRevision":"2026年5月15日数値目標修正","longTermVision":"VISION2035","statement":"修正前目標、修正後の期間平均、2027年3月期単年度計画、VISION2035を分離する。"}
+  },
+  "summary":"橋梁事業の外部環境対応遅れを踏まえ、2025年3月期から2027年3月期の数値目標を下方修正する。橋梁・鉄構市場の選択と集中、維持修繕・更新市場の開拓、生産・基幹システム・人財・BCPの強化を進める。",
+  "financialTargets":[
+    {"metric":"売上高","target":15754,"unit":"百万円・3年間期間平均","targetFiscalYear":"2025年3月期～2027年3月期","previousTarget":20500,"previousTargetUnit":"百万円・期間平均","evidencePdfPages":[1,3,4]},
+    {"metric":"橋梁事業売上高","target":11295,"unit":"百万円・3年間期間平均","targetFiscalYear":"2025年3月期～2027年3月期","previousTarget":14500,"previousTargetUnit":"百万円・期間平均","evidencePdfPages":[1,3,4]},
+    {"metric":"鉄構事業売上高","target":4459,"unit":"百万円・3年間期間平均","targetFiscalYear":"2025年3月期～2027年3月期","previousTarget":6000,"previousTargetUnit":"百万円・期間平均","evidencePdfPages":[1,3,4]},
+    {"metric":"営業利益","target":5,"unit":"百万円・3年間期間平均","targetFiscalYear":"2025年3月期～2027年3月期","previousTarget":1000,"previousTargetUnit":"百万円・期間平均","evidencePdfPages":[1,3,4]},
+    {"metric":"売上高","target":14500,"unit":"百万円・単年度","targetFiscalYear":"2027年3月期","evidencePdfPage":4},
+    {"metric":"営業利益","target":52,"unit":"百万円・単年度","targetFiscalYear":"2027年3月期","evidencePdfPage":4},
+    {"metric":"ROE","target":1.0,"unit":"%","targetFiscalYear":"2027年3月期","previousTarget":5.0,"previousTargetUnit":"%以上","evidencePdfPage":4}
+  ],
+  "strategyThemes":[
+    {"theme":"事業ポートフォリオ高度化","evidencePdfPages":[3,5],"evidence":"橋梁・鉄構市場を選別し、経営資源を集中する。"},
+    {"theme":"維持修繕・更新市場の開拓","evidencePdfPages":[3,5],"evidence":"設計・施工技術を活かしてストック型需要への足掛かりを築く。"},
+    {"theme":"生産・経営基盤強化","evidencePdfPage":5,"evidence":"ナレッジ標準化、ICT自動化、基幹システム刷新、人財育成体系見直しを進める。"},
+    {"theme":"サステナビリティ・BCP","evidencePdfPage":5,"evidence":"カーボンニュートラル、職場環境、ガバナンス、全社BCPを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_allocation_by_use",
+    "period":"2025年3月期～2027年3月期",
+    "businessInvestment":1500,
+    "businessInvestmentUnit":"百万円",
+    "growthInvestment":350,
+    "growthInvestmentUnit":"百万円",
+    "humanCapitalInvestment":700,
+    "humanCapitalInvestmentUnit":"百万円",
+    "dividendAllocation":1080,
+    "dividendAllocationUnit":"百万円・予定額を含む",
+    "uses":["生産設備・基幹システム更新","事業ポートフォリオ強化・設備投資・M&A","人財確保・育成・教育環境整備"],
+    "evidencePdfPage":6
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_floor_and_dividend_floor",
+    "payoutRatioTarget":50,
+    "payoutRatioTargetUnit":"%以上",
+    "annualDividendFloor":50,
+    "annualDividendFloorUnit":"円/株",
+    "policy":"配当性向50%以上とし、安定配当のため年間50円を下限とする。",
+    "evidencePdfPages":[6,7]
+  },
+  "nonFinancialTargets": [],
+  "definitions":[
+    {"term":"期間平均と単年度計画","definition":"15,754百万円・営業利益5百万円は3年間の期間平均、2027年3月期は売上14,500百万円・営業利益52百万円の単年度計画。","evidencePdfPages":[3,4]},
+    {"term":"修正前と修正後","definition":"売上20,500百万円・営業利益1,000百万円・ROE5%以上は修正前であり、現行目標ではない。","evidencePdfPages":[1,4]},
+    {"term":"VISION2035","definition":"次の10年に向けた長期ビジョンであり、中期経営計画2024の数値目標とは別。","evidencePdfPage":1}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"originalAndRevisedTargetsSeparated":true,"periodAverageAndTerminalYearSeparated":true,"visionAndPlanSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T07:45:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["修正後期間平均と2027年3月期単年度を図表原寸で分離確認する","営業利益5百万円・52百万円の列位置を独立確認する","修正前目標を現行目標として扱っていないことを確認する","投資配分15・3.5・7・10.8億円と配当下限50円を確認する"]}
+}

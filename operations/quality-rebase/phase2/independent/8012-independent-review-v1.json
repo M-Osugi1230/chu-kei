@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "8012",
+    "name": "長瀬産業"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8012-primary-review-v1.json",
+  "source": {
+    "title": "（訂正）中期経営計画 Walk the Talk 2028",
+    "officialUrl": "https://www.nagase.co.jp/assetfiles/uploads/20260512_IR_01.pdf",
+    "pdfSha256": "17e71a9133832600dee7876efaee8e2a8de79af298935d805007079efdf8e17c",
+    "pageCount": 28
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード8012、公表日2026年5月12日、訂正版PDFハッシュ、全28ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 28],
+      "status": "pending"
+    },
+    {
+      "id": "correction_markers",
+      "description": "表示8・16・17・18ページの黄色マーカー箇所と現行数値・用語を訂正前表示へ戻していないことを確認する。",
+      "expectedEvidencePdfPages": [8, 16, 17, 18],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "ACE 2.0実績、Walk the Talk 2028、2029年度以降のROE10%以上・時価総額1兆円の成長像を分離する。",
+      "expectedEvidencePdfPages": [5, 6, 13, 14, 20, 25, 26],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2028年度営業利益500億円以上、ROE9%以上、3年間EPS成長30%を確認する。",
+      "expectedEvidencePdfPages": [14, 25, 26],
+      "status": "pending"
+    },
+    {
+      "id": "segment_targets",
+      "description": "マテリアルEBITDA235億円・営業利益220億円、エレクトロニクス216億円・170億円、ライフサイエンス200億円・110億円を確認する。",
+      "expectedEvidencePdfPages": [16],
+      "status": "pending"
+    },
+    {
+      "id": "growth_investment",
+      "description": "フォーカス700億円、グロース100億円、チャレンジ200億円の3年間投資1,000億円を確認する。",
+      "expectedEvidencePdfPages": [17],
+      "status": "pending"
+    },
+    {
+      "id": "cash_allocation",
+      "description": "2026～2028年度の約2,000億円規模のキャッシュイン・アウト、政策保有株式売却・負債活用・投資・配当・買戻し・M&Aの方向性と、カテゴリ金額が非表示であることを確認する。",
+      "expectedEvidencePdfPages": [23],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "継続増配、機動的自己株式取得、EPS30%成長と、ACE 2.0期間の総還元性向100%を分離する。",
+      "expectedEvidencePdfPages": [25],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_target",
+      "description": "2028年度Scope1+2排出量を2021年度比32.7%削減する目標を確認する。",
+      "expectedEvidencePdfPages": [26],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に訂正版リンク、計画期間、KGI、セグメント、投資、修正箇所の表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

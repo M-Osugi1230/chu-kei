@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "1719",
+    "name": "安藤・間"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/1719-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画2028",
+    "officialUrl": "https://www2.jpx.co.jp/disc/17190/140120260330592593.pdf",
+    "pdfSha256": "9de9f4b6bc537ac9ab8017ce9768b864ffe17146c83c34e95b815a012870db9f",
+    "pageCount": 38
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード1719、公表日2026年3月30日、PDFハッシュ、全38ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 38],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "前中計2025の目標・見通し、現行中計2028、VISION2030を分離する。",
+      "expectedEvidencePdfPages": [1, 4, 7, 9, 10, 26],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2029年3月期の連結経常利益365億円、ROE12%以上、年間配当80円以上を確認する。",
+      "expectedEvidencePdfPages": [1, 9, 10, 26, 27],
+      "status": "pending"
+    },
+    {
+      "id": "strategy",
+      "description": "国内土木、国内建築、LCS、エネルギー、海外、グループ、建設外の注力分野と5つの価値創造を確認する。",
+      "expectedEvidencePdfPages": [4, 5, 13, 14, 15, 16, 17, 18, 19],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "3年間営業CF760億円以上、人財投資200億円、成長投資500億円以上、株主還元400億円以上、M&A別枠を確認する。",
+      "expectedEvidencePdfPages": [21, 26],
+      "status": "pending"
+    },
+    {
+      "id": "investment_breakdown",
+      "description": "技術開発250億円、エネルギー等200億円、その他設備50億円、政策保有株式圧縮240億円、借入100億円を確認する。",
+      "expectedEvidencePdfPages": [26],
+      "status": "pending"
+    },
+    {
+      "id": "balance_sheet",
+      "description": "2028年度末の総資産3,800億円、純資産2,000億円、負債1,800億円、自己資本比率40%台、政策保有株式比率10%未満を確認する。",
+      "expectedEvidencePdfPages": [27],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_targets",
+      "description": "エンゲージメントA、GHG Scope1+2 23%削減・Scope3 14%削減、DX・研修・自然共生・廃棄物KPIを確認する。",
+      "expectedEvidencePdfPages": [1, 21, 23, 25],
+      "status": "pending"
+    },
+    {
+      "id": "long_term_boundary",
+      "description": "VISION2030の経常利益400億円・成長投資1,000億円と、2035年GHG目標を現行中計から分離する。",
+      "expectedEvidencePdfPages": [4, 25, 26],
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

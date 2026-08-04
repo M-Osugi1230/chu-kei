@@ -1,6 +1,6 @@
 {
   "schemaVersion": "phase2-review-state-overlay-v1",
-  "createdAt": "2026-08-04T12:24:00+00:00",
+  "createdAt": "2026-08-04T13:18:00+00:00",
   "wave": 8,
   "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave08-v1.json",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
@@ -24,6 +24,46 @@
       "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
       "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
       "sourceClassification": "formal_management_plan_revision_and_period_extension"
+    },
+    {
+      "order": 270,
+      "code": "5021",
+      "name": "コスモエネルギーホールディングス",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/5021-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2028_with_vision2035"
+    },
+    {
+      "order": 271,
+      "code": "5076",
+      "name": "インフロニア・ホールディングス",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/5076-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_revision_after_major_acquisition"
+    },
+    {
+      "order": 278,
+      "code": "6330",
+      "name": "東洋エンジニアリング",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6330-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
+    },
+    {
+      "order": 279,
+      "code": "6455",
+      "name": "モリタホールディングス",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6455-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
     },
     {
       "order": 280,
@@ -64,15 +104,25 @@
       "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
       "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
       "sourceClassification": "formal_management_plan_current_fy2026_to_fy2028"
+    },
+    {
+      "order": 289,
+      "code": "7607",
+      "name": "進和",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7607-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_09_to_2029_08"
     }
   ],
   "effectiveCounts": {
-    "wavePrimaryReviewComplete": 5,
+    "wavePrimaryReviewComplete": 10,
     "waveIndependentReviewReady": 0,
-    "waveIndependentVisualReviewPending": 5,
-    "primaryReviewComplete": 73,
+    "waveIndependentVisualReviewPending": 10,
+    "primaryReviewComplete": 78,
     "independentReviewReady": 61,
-    "remainingPrimaryReviews": 377,
+    "remainingPrimaryReviews": 372,
     "deepVerificationApproved": 0
   },
   "automaticFactCompletionAllowed": false,

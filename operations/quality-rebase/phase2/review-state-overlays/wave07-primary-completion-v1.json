@@ -1,6 +1,6 @@
 {
   "schemaVersion": "phase2-review-state-overlay-v1",
-  "createdAt": "2026-08-04T11:15:00+00:00",
+  "createdAt": "2026-08-04T11:27:00+00:00",
   "wave": 7,
   "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave07-v1.json",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
@@ -10,7 +10,9 @@
     "waveIndependentReviewReady": 5,
     "primaryReviewComplete": 63,
     "independentReviewReady": 61,
-    "remainingPrimaryReviews": 387
+    "remainingPrimaryReviews": 387,
+    "primaryReviewWavesAssigned": 7,
+    "primaryReviewCompaniesAssignedTotal": 70
   },
   "companyCompletions": [
     {
@@ -72,6 +74,16 @@
     "independentReviewReady": 61,
     "remainingPrimaryReviews": 382,
     "deepVerificationApproved": 0
+  },
+  "nextWaveAssignment": {
+    "wave": 8,
+    "assigned": 10,
+    "completionCount": 0,
+    "remainingCount": 10,
+    "status": "in_progress",
+    "file": "operations/quality-rebase/phase2/primary-review-wave08-v1.json",
+    "effectiveWavesAssigned": 8,
+    "effectiveCompaniesAssignedTotal": 80
   },
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,

@@ -1,10 +1,10 @@
 {
   "schemaVersion": "phase2-review-state-overlay-v1",
-  "createdAt": "2026-08-04T14:08:00+00:00",
+  "createdAt": "2026-08-05T06:50:00+09:00",
   "wave": 9,
   "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave09-v1.json",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
-  "reason": "一次レビュー済み、図表原寸確認と独立再確認は未完了。",
+  "reason": "Wave9の10社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
   "expectedBase": {
     "wavePrimaryReviewComplete": 0,
     "waveIndependentReviewReady": 0,
@@ -15,44 +15,24 @@
     "primaryReviewCompaniesAssignedTotal": 90
   },
   "companyCompletions": [
-    {
-      "order": 313,
-      "code": "2428",
-      "name": "ウェルネット",
-      "status": "primary_review_complete_independent_visual_review_pending",
-      "reviewFile": "operations/quality-rebase/phase2/reviews/2428-primary-review-v1.json",
-      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
-      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
-      "sourceClassification": "formal_management_plan_current_2025_07_to_2030_06"
-    },
-    {
-      "order": 317,
-      "code": "2872",
-      "name": "セイヒョー",
-      "status": "primary_review_complete_independent_visual_review_pending",
-      "reviewFile": "operations/quality-rebase/phase2/reviews/2872-primary-review-v1.json",
-      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
-      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
-      "sourceClassification": "formal_management_plan_replacement_after_capacity_expansion"
-    },
-    {
-      "order": 385,
-      "code": "8159",
-      "name": "立花エレテック",
-      "status": "primary_review_complete_independent_visual_review_pending",
-      "reviewFile": "operations/quality-rebase/phase2/reviews/8159-primary-review-v1.json",
-      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
-      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
-      "sourceClassification": "formal_management_plan_current_2027_to_2031"
-    }
+    {"order":313,"code":"2428","name":"ウェルネット","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2428-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2025_07_to_2030_06"},
+    {"order":315,"code":"2733","name":"あらた","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2733-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_final_phase_to_2030"},
+    {"order":317,"code":"2872","name":"セイヒョー","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2872-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_replacement_after_capacity_expansion"},
+    {"order":319,"code":"2984","name":"ヤマイチエステート","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2984-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_rolling_management_plan_with_results_and_long_term_vision"},
+    {"order":321,"code":"3010","name":"ポラリス・ホールディングス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3010-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_replacing_2025_revision"},
+    {"order":322,"code":"3083","name":"スターシーズ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3083-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_business_model_transformation"},
+    {"order":323,"code":"3153","name":"八洲電機","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3153-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028"},
+    {"order":324,"code":"3157","name":"ジオリーブグループ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3157-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_corrected_complete_set"},
+    {"order":325,"code":"3284","name":"フージャースホールディングス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3284-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_third_plan"},
+    {"order":385,"code":"8159","name":"立花エレテック","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8159-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2027_to_2031"}
   ],
   "effectiveCounts": {
-    "wavePrimaryReviewComplete": 3,
+    "wavePrimaryReviewComplete": 10,
     "waveIndependentReviewReady": 0,
-    "waveIndependentVisualReviewPending": 3,
-    "primaryReviewComplete": 81,
+    "waveIndependentVisualReviewPending": 10,
+    "primaryReviewComplete": 88,
     "independentReviewReady": 61,
-    "remainingPrimaryReviews": 369,
+    "remainingPrimaryReviews": 362,
     "deepVerificationApproved": 0
   },
   "automaticFactCompletionAllowed": false,

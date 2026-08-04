@@ -1,10 +1,11 @@
 {
   "schemaVersion": "quality-rebase-phase2-effective-status-v1",
-  "updatedAt": "2026-08-04T13:42:00+00:00",
+  "updatedAt": "2026-08-04T14:15:00+00:00",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
   "appliedOverlays": [
     "operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json",
-    "operations/quality-rebase/phase2/review-state-overlays/wave08-primary-completion-v1.json"
+    "operations/quality-rebase/phase2/review-state-overlays/wave08-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave09-primary-completion-v1.json"
   ],
   "targets": {
     "phase1": 50,
@@ -18,23 +19,24 @@
   },
   "review": {
     "phase1PrimaryReviewComplete": 50,
-    "phase2PrimaryReviewComplete": 78,
-    "primaryReviewCompleteIncludingPhase1": 128,
-    "phase2PrimaryReviewCompletionRatePercent": 17.3,
-    "totalPrimaryReviewCompletionRatePercent": 25.6,
+    "phase2PrimaryReviewComplete": 81,
+    "primaryReviewCompleteIncludingPhase1": 131,
+    "phase2PrimaryReviewCompletionRatePercent": 18.0,
+    "totalPrimaryReviewCompletionRatePercent": 26.2,
     "independentReviewReady": 61,
-    "independentVisualReviewPending": 15,
+    "independentVisualReviewPending": 18,
     "additionalSourceMappingRequired": 2,
-    "remainingPhase2PrimaryReviews": 372,
+    "remainingPhase2PrimaryReviews": 369,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0
   },
   "activeWave": {
     "wave": 9,
     "assigned": 10,
-    "primaryReviewComplete": 0,
+    "primaryReviewComplete": 3,
     "independentReviewReady": 0,
-    "remaining": 10,
+    "independentVisualReviewPending": 3,
+    "remaining": 7,
     "status": "in_progress"
   },
   "openVisualFollowups": [
@@ -49,6 +51,12 @@
       "primaryReviewComplete": 10,
       "independentReviewReady": 0,
       "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 9,
+      "primaryReviewComplete": 3,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 3
     }
   ],
   "approvalSafety": {

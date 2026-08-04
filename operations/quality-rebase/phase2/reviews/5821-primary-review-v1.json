@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"5821","name":"平河ヒューテック","market":"Prime","industry":"非鉄金属","phase2Order":347},
+  "source": {
+    "title":"Plan 600 中期経営計画",
+    "publishedDate":"2026-05-11",
+    "officialUrl":"https://www2.jpx.co.jp/disc/58210/140120260511522837.pdf",
+    "pdfSha256":"bb4989b0f48fa0c6c3d73778ab0033078aa80be916e062d6090efe75e52b74ce",
+    "pageCount":34,
+    "documentClassification":"formal_management_plan_current_fy2026_to_fy2030",
+    "period":{"startFiscalYear":"FY2026","endFiscalYear":"FY2030","terminalFiscalYear":"FY2030"},
+    "formalPlanBoundary":{"currentPlan":"Plan 600・FY2026～FY2030","statement":"FY2025実績とFY2030終期目標、事業別売上目標、キャッシュアロケーションを分離する。"}
+  },
+  "summary":"車載、医療機器、産業機器、ソーラーケーブルをコア事業として拡大し、HPC等の高成長領域を育成する。FY2030に売上高600億円以上、営業利益率12%以上、ROE10%以上を目指し、営業CF200億円以上と手元資金・借入を原資に210億円を投資・還元へ配分する。",
+  "financialTargets":[
+    {"metric":"売上高","target":60000,"unit":"百万円以上","targetFiscalYear":"FY2030","baseline":"FY2025実績38,500百万円","evidencePdfPage":10},
+    {"metric":"営業利益率","target":12.0,"unit":"%以上","targetFiscalYear":"FY2030","evidencePdfPage":10},
+    {"metric":"ROE","target":10.0,"unit":"%以上","targetFiscalYear":"FY2030","evidencePdfPages":[10,11]},
+    {"metric":"コア事業売上構成比","target":70,"unit":"%","targetFiscalYear":"FY2030","baseline":"FY2025実績55%","evidencePdfPages":[12,14]},
+    {"metric":"HPC売上構成比","target":4,"unit":"%","targetFiscalYear":"FY2030","baseline":"FY2025実績1%","evidencePdfPages":[12,22]}
+  ],
+  "strategyThemes":[
+    {"theme":"車載事業","evidencePdfPages":[15,16],"evidence":"CASE対応、高周波同軸、高耐久・高信頼ケーブルをグローバルに展開する。"},
+    {"theme":"医療機器事業","evidencePdfPages":[17,18],"evidence":"医療・分析機器向け細径チューブ、ケーブル、品質保証体制を強化する。"},
+    {"theme":"産業機器事業","evidencePdfPages":[19,20],"evidence":"FA、マシンビジョン、産業自動化向け高速・高耐久製品を拡大する。"},
+    {"theme":"ソーラーケーブル・HPC","evidencePdfPages":[21,22,23,24],"evidence":"再エネ需要とAI・データセンター需要を取り込む。"},
+    {"theme":"経営基盤・サステナビリティ","evidencePdfPages":[26,27],"evidence":"供給網、環境、人材、ガバナンスを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_five_year_cash_allocation",
+    "operatingCashFlow":20000,
+    "operatingCashFlowUnit":"百万円以上・FY2026～FY2030累計",
+    "cashOutTotal":21000,
+    "cashOutTotalUnit":"百万円",
+    "equipmentDevelopmentHumanInvestment":12000,
+    "equipmentDevelopmentHumanInvestmentUnit":"百万円",
+    "shareholderReturn":6000,
+    "shareholderReturnUnit":"百万円",
+    "strategicInvestment":3000,
+    "strategicInvestmentUnit":"百万円・M&A等",
+    "additionalSources":["手元資金","借入金"],
+    "policy":"成長投資と安定還元を両立し、設備・研究開発・人材・システム、M&Aへ配分する。",
+    "evidencePdfPages":[25,26]
+  },
+  "shareholderReturnPolicy": {
+    "status":"stable_and_increasing_dividend_with_payout_floor",
+    "averagePayoutRatioTarget":30,
+    "averagePayoutRatioTargetUnit":"%以上・中計期間平均",
+    "fiveYearReturnAmount":6000,
+    "fiveYearReturnAmountUnit":"百万円",
+    "policy":"安定配当を基礎に配当金の持続的上昇を目指す。",
+    "evidencePdfPages":[25,27]
+  },
+  "nonFinancialTargets": [],
+  "definitions":[
+    {"term":"Plan 600","definition":"FY2030売上高600億円以上を象徴する現行5カ年計画。","evidencePdfPages":[1,2,10]},
+    {"term":"キャッシュアウト210億円","definition":"設備・開発・人材等120億円、株主還元60億円、戦略投資30億円の合計。","evidencePdfPage":25},
+    {"term":"FY2030バランスシート","definition":"計画イメージであり、売上・利益目標とは別の資本構成見通し。","evidencePdfPage":26}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T08:05:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["FY2030の売上・利益率・ROEを原寸確認する","コア事業70%・HPC4%の構成比を確認する","営業CF200億円以上と210億円の配分内訳を図表確認する","中計平均配当性向30%以上を確認する"]}
+}

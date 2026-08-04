@@ -5,10 +5,12 @@ on:
     paths:
       - 'operations/quality-rebase/phase2/primary-review-wave*-v1.json'
       - 'operations/quality-rebase/phase2/current-status-v1.json'
+      - 'operations/quality-rebase/phase2/review-state-overlays/*.json'
       - 'operations/quality-rebase/phase2/reviews/*-primary-review-v1.json'
       - 'operations/quality-rebase/phase2/independent/*-independent-review-v*.json'
       - 'operations/quality-rebase/phase2/source-repairs/*.json'
       - 'scripts/validate_phase2_primary_review_wave.py'
+      - 'scripts/validate_phase2_primary_review_wave_v2.py'
       - '.github/workflows/phase2-primary-review-wave-gate.yml'
   push:
     branches:
@@ -16,10 +18,12 @@ on:
     paths:
       - 'operations/quality-rebase/phase2/primary-review-wave*-v1.json'
       - 'operations/quality-rebase/phase2/current-status-v1.json'
+      - 'operations/quality-rebase/phase2/review-state-overlays/*.json'
       - 'operations/quality-rebase/phase2/reviews/*-primary-review-v1.json'
       - 'operations/quality-rebase/phase2/independent/*-independent-review-v*.json'
       - 'operations/quality-rebase/phase2/source-repairs/*.json'
       - 'scripts/validate_phase2_primary_review_wave.py'
+      - 'scripts/validate_phase2_primary_review_wave_v2.py'
       - '.github/workflows/phase2-primary-review-wave-gate.yml'
   workflow_dispatch:
 
@@ -53,7 +57,8 @@ jobs:
 
       - name: Validate queue integrity and approval safety
         run: |
-          python scripts/validate_phase2_primary_review_wave.py \
+          python scripts/validate_phase2_primary_review_wave_v2.py \
             --wave operations/quality-rebase/phase2/primary-review-wave${{ matrix.wave }}-v1.json \
             --status operations/quality-rebase/phase2/current-status-v1.json \
+            --overlay operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json \
             --repo-root .

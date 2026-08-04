@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {
+    "code": "2428",
+    "name": "ウェルネット",
+    "market": "Standard",
+    "industry": "サービス業",
+    "phase2Order": 313
+  },
+  "source": {
+    "title": "新中期経営計画 Think Wild.",
+    "publishedDate": "2025-08-08",
+    "officialUrl": "https://www2.jpx.co.jp/disc/24280/140120250808536622.pdf",
+    "pdfSha256": "76fd93e042d833600eb37ceafb346bc6fa022900614aca4b14eb162f7b1e6993",
+    "pageCount": 9,
+    "documentClassification": "formal_management_plan_current_2025_07_to_2030_06",
+    "period": {
+      "startDate": "2025-07-01",
+      "endDate": "2030-06-30",
+      "terminalFiscalYear": "2030年6月期"
+    },
+    "formalPlanBoundary": {
+      "historicalActuals": "2024年6月期・2025年6月期",
+      "nearTermForecast": "2026年6月期予想",
+      "currentPlan": "2025年7月～2030年6月の5年間",
+      "statement": "過去実績、2026年予想、2030年中計目標を分離する。"
+    }
+  },
+  "summary": "決済・収納サービスの直接販売拡大、既存顧客への全収納種類普及、大口顧客のDX伴走、電子マネー、BPO、パッケージ商材、AI・管理会計を推進する。2030年6月期に売上高170億円、経常利益30億円、当期純利益20億円、ROE15%を目指す。",
+  "financialTargets": [
+    {"metric":"売上高","target":170,"unit":"億円","targetFiscalYear":"2030年6月期","baseline":"2025年6月期実績109億円・2026年6月期予想115億円","evidencePdfPage":4},
+    {"metric":"経常利益","target":30,"unit":"億円","targetFiscalYear":"2030年6月期","baseline":"2025年6月期実績16億円・2026年6月期予想17億円","evidencePdfPage":4},
+    {"metric":"当期純利益","target":20,"unit":"億円","targetFiscalYear":"2030年6月期","baseline":"2025年6月期実績10億円・2026年6月期予想11億円","evidencePdfPage":5},
+    {"metric":"ROE","target":15,"unit":"%","targetFiscalYear":"2030年6月期","baseline":"2025年6月期実績12%・2026年6月期予想12%","evidencePdfPage":5},
+    {"metric":"付加価値","target":50,"unit":"億円","targetFiscalYear":"2030年6月期","baseline":"2025年6月期実績29億円・2026年6月期予想32億円","evidencePdfPage":7},
+    {"metric":"純資産","target":130,"unit":"億円","targetFiscalYear":"2030年6月期","baseline":"2025年6月期実績88億円・2026年6月期予想91億円","evidencePdfPage":7}
+  ],
+  "strategyThemes": [
+    {"theme":"既存決済・収納事業の収益最大化","evidencePdfPages":[1,2],"evidence":"直接販売先拡大、全収納種類普及、大口事業者のDX伴走により利益率を高める。"},
+    {"theme":"電子マネーの社会実装","evidencePdfPages":[1,3],"evidence":"アルタイル、OEM、WELLNET汎用マネーを通じて安全・安心・快適・便利な電子マネーを拡大する。"},
+    {"theme":"決済プラスαサービス","evidencePdfPages":[1,3],"evidence":"BPO、ekaiin.com、しまえーる等のパッケージ商材を拡大する。"},
+    {"theme":"AI・管理会計・内製化","evidencePdfPages":[1,3,7],"evidence":"AI活用、生産性向上、管理会計、人材投資と内製化を進める。"},
+    {"theme":"北海道での社会貢献","evidencePdfPages":[1,3],"evidence":"高等専門学校支援とウインタースポーツ振興を継続する。"}
+  ],
+  "capitalPolicy": {
+    "status": "uses_disclosed_amounts_undisclosed",
+    "uses": ["システム開発", "営業資金", "資本業務提携", "安全資産", "人材確保・育成・内製化"],
+    "totalInvestment": null,
+    "mAndAOrAllianceAmount": null,
+    "policy": "付加価値を人材へ投資し、自己資金をシステム開発、営業資金、資本業務提携、安全資産へ配分する。具体額は未開示のため推計しない。",
+    "evidencePdfPage": 7
+  },
+  "shareholderReturnPolicy": {
+    "status": "doe_floor_and_payout_ratio",
+    "annualDoeFloor": 5.0,
+    "annualDoeFloorUnit": "%・株主資本配当率",
+    "dividendPayoutRatioMinimum": 50,
+    "dividendPayoutRatioUnit": "%",
+    "interimDoeFloor": 2.5,
+    "interimDoeFloorUnit": "%・2025年12月中間期から",
+    "fiscal2030AnnualDividendPlan": 53,
+    "fiscal2030AnnualDividendPlanUnit": "円/株・計画グラフ",
+    "policy": "年間DOE5%を下限とし、配当性向50%以上を継続する。中間配当はDOE2.5%を下限に実施する。",
+    "evidencePdfPage": 6
+  },
+  "definitions": [
+    {"term":"2030-2030","definition":"2030年に経常利益30億円を目指す計画名称上の表現。純利益は20億円。","evidencePdfPages":[1,4,5]},
+    {"term":"戦略分野","definition":"アルタイルトリプルスター、電子マネー、ekaiin.comを指す。","evidencePdfPage":4},
+    {"term":"DOE5%と中間DOE2.5%","definition":"年間配当の下限と中間配当の下限を分離する。加算して7.5%とは扱わない。","evidencePdfPage":6},
+    {"term":"資本配分","definition":"用途は開示されるが金額配分は未開示。","evidencePdfPage":7}
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": true,
+    "formalPlanBoundaryValidated": true,
+    "forecastActualSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalPolicyReviewed": true,
+    "undisclosedAmountsNotInferred": true,
+    "shareholderReturnPolicyReviewed": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_visual_review_pending",
+    "reviewedAt": "2026-08-04T22:48:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "公式PDFの主要図表ページ4～7を原寸で独立確認する",
+      "2026年予想と2030年目標を分離確認する",
+      "年間DOE5%と中間DOE2.5%の関係を確認する",
+      "資本配分額を推計していないことを確認する"
+    ]
+  }
+}

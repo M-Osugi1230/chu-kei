@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8309","name":"三井住友トラストグループ","market":"Prime","industry":"銀行業","phase2Order":388},
+  "source": {
+    "title":"中期経営計画（2026～2028年度）",
+    "publishedDate":"2026-05-14",
+    "officialUrl":"https://www2.jpx.co.jp/disc/83090/140120260514534795.pdf",
+    "pdfSha256":"1fe42753778e32ff7e97d7bcb598036cb28a600be649d8de76444acd4817f71e",
+    "pageCount":14,
+    "documentClassification":"formal_management_plan_current_2026_to_2028_with_2035_vision",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2028年度","terminalFiscalYear":"2028年度"},
+    "formalPlanBoundary": {
+      "previousPlan":"前中期経営計画・2023年度～2025年度",
+      "currentPlan":"中期経営計画・2026年度～2028年度",
+      "longTermVision":"2035年のありたい姿",
+      "statement":"前中計実績、2026年度予想、2028年度中計目標、2035年のありたい姿を分離する。"
+    }
+  },
+  "summary":"資産運用を中核に、令和版産業金融、個人ビジネス、政策保有株式削減、戦略投資、AI・人的資本基盤を一体で進める。2028年度に実質業務純益5,000億円、親会社株主純利益4,100億円、ROE11%程度、ROTCE13%程度を目指し、所要資本ベースで成長投資6,000億円以上、株主還元6,000億円程度を配分する。",
+  "financialTargets":[
+    {"metric":"実質業務粗利益","target":12350,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度実績9,602億円","evidencePdfPages":[1,9]},
+    {"metric":"実質業務純益","target":5000,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度実績3,474億円","evidencePdfPages":[1,5,9]},
+    {"metric":"親会社株主純利益","target":4100,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度実績3,175億円","evidencePdfPages":[1,5,9]},
+    {"metric":"手数料収益比率","target":"50％台半ば","unit":"比率","targetFiscalYear":"2028年度","baseline":"2025年度実績58.5%","evidencePdfPages":[1,9]},
+    {"metric":"OHR","target":60,"unit":"%未満","targetFiscalYear":"2028年度","baseline":"2025年度実績63.8%","evidencePdfPages":[1,9]},
+    {"metric":"自己資本ROE","target":11,"unit":"%程度","targetFiscalYear":"2028年度","baseline":"2025年度実績9.5%","evidencePdfPages":[1,5,9]},
+    {"metric":"ROTCE","target":13,"unit":"%程度","targetFiscalYear":"2028年度","baseline":"2025年度実績9.9%","evidencePdfPages":[1,5,9]},
+    {"metric":"CET1比率","target":10,"unit":"%以上を安定確保","targetFiscalYear":"2028年度","baseline":"2025年度実績10.3%","evidencePdfPages":[1,6,9]}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"実質業務純益","target":10000,"unit":"億円規模","targetFiscalYear":"2035年度","classification":"long_term_vision","evidencePdfPages":[1,4,9]},
+    {"metric":"自己資本ROE","target":12,"unit":"%","targetFiscalYear":"2035年度","classification":"long_term_vision","evidencePdfPages":[1,4,9]},
+    {"metric":"ROTCE","target":16,"unit":"%","targetFiscalYear":"2035年度","classification":"long_term_vision","evidencePdfPages":[1,4,9]},
+    {"metric":"ファンドラップ残高","target":5,"unit":"兆円・早期達成目標","targetFiscalYear":null,"classification":"medium_to_long_term_target_beyond_2028","evidencePdfPage":1}
+  ],
+  "strategyThemes":[
+    {"theme":"資産運用ビジネスの成長","evidencePdfPages":[1,3,7],"evidence":"アクティブ運用、プライベートアセット、ファンドラップ、戦略出資を強化する。"},
+    {"theme":"令和版産業金融","evidencePdfPages":[1,3,7],"evidence":"バランスシートを活用し、インフラ・再エネ等へ長期資金を循環させる。"},
+    {"theme":"個人ビジネスのスケーリング","evidencePdfPage":1,"evidence":"三井住友信託銀行、住信SBIネット銀行、UBS SuMi TRUST等のチャネルを統合的に高度化する。"},
+    {"theme":"資本戦略","evidencePdfPages":[1,6,7,8],"evidence":"政策保有株式・低採算貸出を削減し、成長投資と株主還元へ資本を再配分する。"},
+    {"theme":"AI・人的資本・業務基盤","evidencePdfPages":[1,3],"evidence":"Human in the Design、IT・DX、人材ポートフォリオ、フロントシフトを推進する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_regulatory_capital_allocation_not_cash_flow",
+    "measurementBasis":"所要資本換算ベース・2026年度～2028年度累計",
+    "profitAccumulation":9000,
+    "profitAccumulationUnit":"億円程度",
+    "capitalCreationMinimum":3000,
+    "capitalCreationMinimumUnit":"億円以上・政策保有株式、低採算貸出削減",
+    "capitalUseMinimum":6000,
+    "capitalUseMinimumUnit":"億円以上・オーガニック、インオーガニック",
+    "growthInvestmentMinimum":6000,
+    "growthInvestmentMinimumUnit":"億円以上・所要資本換算ベース",
+    "shareholderReturn":6000,
+    "shareholderReturnUnit":"億円程度",
+    "capitalAdequacyPolicy":"CET1比率10%以上を安定的に確保し、9.5～11%の資本運営目線で活用",
+    "policy":"利益蓄積と政策保有株式・低採算貸出の削減で資本を創出し、資産運用等の成長投資と株主還元へ配分する。これはキャッシュフロー配分ではなく所要資本換算ベースのため区別する。",
+    "evidencePdfPages":[6,7]
+  },
+  "shareholderReturnPolicy": {
+    "status":"total_payout_floor_progressive_dividend_and_flexible_buybacks",
+    "totalPayoutRatioTarget":50,
+    "totalPayoutRatioTargetUnit":"%以上",
+    "dividendBase":"政策保有株式売却損益を除く修正純利益の50%程度",
+    "progressiveDividend":true,
+    "buybackPolicy":"業績・資本・株価等を踏まえ機動的に実施",
+    "threeYearReturnAmount":6000,
+    "threeYearReturnAmountUnit":"億円程度・所要資本換算の配分図",
+    "previousPolicy":"配当性向40%以上",
+    "evidencePdfPages":[1,6,8]
+  },
+  "nonFinancialTargets":[
+    {"metric":"ファンドラップ残高","target":3.6,"unit":"兆円","targetFiscalYear":"2028年度","baseline":"2025年度実績2.0兆円","evidencePdfPages":[1,9]},
+    {"metric":"プライベートアセットAUM","target":21,"unit":"兆円","targetFiscalYear":"2028年度","baseline":"2025年度実績15.7兆円","evidencePdfPages":[1,9]},
+    {"metric":"プロダクト与信比率","target":50,"unit":"%以上","targetFiscalYear":"2028年度","baseline":"2025年度実績42%","evidencePdfPages":[1,9]},
+    {"metric":"フロントシフト","target":30,"unit":"%・ミドル・バック人員の省人化目標","targetFiscalYear":"2028年度","evidencePdfPages":[1,9]}
+  ],
+  "definitions":[
+    {"term":"ROTCEとROE","definition":"ROTCEはのれん・M&A由来無形資産を控除したTCEに対する収益力、ROEとは別指標。","evidencePdfPages":[1,4,9]},
+    {"term":"修正純利益","definition":"親会社株主純利益から政策保有株式の売却損益（税後）を控除した配当基準。","evidencePdfPages":[1,8]},
+    {"term":"所要資本換算ベース","definition":"成長投資6,000億円以上等は規制・経済資本の配分尺度であり、現金支出額とは限らない。","evidencePdfPages":[6,7]},
+    {"term":"2028年度と2035年度","definition":"5,000億円・ROE11%・ROTCE13%は中計終期、1兆円・12%・16%は2035年のありたい姿。","evidencePdfPages":[4,5,9]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousForecastCurrentAndLongTermTargetsSeparated":true,"regulatoryCapitalAndCashFlowSeparated":true,"oldAndNewReturnPoliciesSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T09:30:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2025実績・2026予想・2028目標・2035姿の各列を原寸確認する","所要資本換算ベースの9,000・3,000・6,000億円以上と株主還元6,000億円程度を確認する","総還元性向50%以上・修正純利益50%程度・累進配当を確認する","ファンドラップ3.6兆円と早期5兆円を分離確認する"]}
+}

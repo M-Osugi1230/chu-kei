@@ -1,6 +1,6 @@
 {
   "schemaVersion": "phase2-review-state-overlay-v1",
-  "createdAt": "2026-08-04T12:05:00+00:00",
+  "createdAt": "2026-08-04T12:24:00+00:00",
   "wave": 8,
   "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave08-v1.json",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
@@ -36,6 +36,16 @@
       "sourceClassification": "formal_management_plan_current_2027_to_2030"
     },
     {
+      "order": 285,
+      "code": "6666",
+      "name": "リバーエレテック",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6666-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2028"
+    },
+    {
       "order": 286,
       "code": "6743",
       "name": "大同信号",
@@ -44,15 +54,25 @@
       "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
       "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
       "sourceClassification": "official_current_management_plan_progress_update"
+    },
+    {
+      "order": 287,
+      "code": "6905",
+      "name": "コーセル",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6905-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_fy2026_to_fy2028"
     }
   ],
   "effectiveCounts": {
-    "wavePrimaryReviewComplete": 3,
+    "wavePrimaryReviewComplete": 5,
     "waveIndependentReviewReady": 0,
-    "waveIndependentVisualReviewPending": 3,
-    "primaryReviewComplete": 71,
+    "waveIndependentVisualReviewPending": 5,
+    "primaryReviewComplete": 73,
     "independentReviewReady": 61,
-    "remainingPrimaryReviews": 379,
+    "remainingPrimaryReviews": 377,
     "deepVerificationApproved": 0
   },
   "automaticFactCompletionAllowed": false,

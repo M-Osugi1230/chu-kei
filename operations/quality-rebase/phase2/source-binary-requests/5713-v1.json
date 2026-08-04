@@ -6,7 +6,16 @@
   },
   "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/5713-source-resolution-v1.json",
   "outputEvidenceFile": "operations/quality-rebase/phase2/source-binary-evidence/5713-v1.json",
-  "purpose": "現行公式の中期経営計画2027 PDFを再取得し、SHA-256、バイト数、73ページを固定する。一次レビュー完了や承認は行わない。",
+  "officialPdf": {
+    "url": "https://www.smm.co.jp/ir/management/plan/pdf/250512_setsumeikai.pdf",
+    "title": "中期経営計画2027",
+    "sourceRole": "formal_plan_current",
+    "pageCount": 73,
+    "pdfSha256": null
+  },
+  "purpose": "2025年5月12日公表の現行公式PDFを再取得し、SHA-256、バイト数、73ページを固定する。旧2006年中計PDFとは別証跡で管理する。",
+  "requestedAt": "2026-08-04T14:25:00+09:00",
+  "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false
 }

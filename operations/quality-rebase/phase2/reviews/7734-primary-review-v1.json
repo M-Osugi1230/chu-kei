@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"7734","name":"理研計器","market":"Prime","industry":"精密機器","phase2Order":375},
+  "source": {
+    "title":"中期経営計画（2027年3月期～2029年3月期）",
+    "publishedDate":"2026-05-13",
+    "officialUrl":"https://www2.jpx.co.jp/disc/77340/140120260513530564.pdf",
+    "pdfSha256":"86c8af6075c77967599f0ac4eb64534839464d1097831fb12e5358ff5ff16e61",
+    "pageCount":25,
+    "documentClassification":"formal_management_plan_current_2027_to_2029",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2029年3月期","terminalFiscalYear":"2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"前中期経営計画・2024年3月期～2026年3月期",
+      "currentPlan":"中期経営計画・2027年3月期～2029年3月期",
+      "longTermVision":"安心のその先を、人と技術で創るリーディングカンパニー",
+      "statement":"前中計実績、現行3カ年数値目標、長期ビジョンを分離する。"
+    }
+  },
+  "summary":"部門間連携、顧客を含むバリューチェーン、海外市場、新領域・技能伝承、人材・生産・ERP基盤を強化する。2029年3月期に売上高700億円、営業利益140億円以上、ROE10%以上を目指し、営業CF320億円以上を成長投資130億円以上、基盤強化50億円以上、株主還元140億円以上へ配分する。",
+  "financialTargets":[
+    {"metric":"売上高","target":700,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績552.12億円","evidencePdfPages":[1,12]},
+    {"metric":"営業利益","target":140,"unit":"億円以上","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績124.25億円","evidencePdfPages":[1,12]},
+    {"metric":"ROE","target":10.0,"unit":"%以上","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績12.2%","evidencePdfPages":[1,12]},
+    {"metric":"株主資本コスト","target":7.0,"unit":"%・会社推定","targetFiscalYear":"資本効率判断前提","evidencePdfPages":[1,21]}
+  ],
+  "strategyThemes":[
+    {"theme":"部門間連携とバリューチェーン","evidencePdfPages":[10,13,14],"evidence":"顧客ニーズ、開発、生産、保守をつなぎ提供価値を高める。"},
+    {"theme":"海外市場開拓","evidencePdfPages":[10,15],"evidence":"中国、インド、東南アジア等で販売・サービス体制を拡大する。"},
+    {"theme":"技術開発・技能伝承","evidencePdfPages":[10,17],"evidence":"物理センサー、PMO、AI・データベースで開発と暗黙知継承を進める。"},
+    {"theme":"人材・生産・ERP基盤","evidencePdfPages":[18,19],"evidence":"マネジメント人材、サプライヤー支援、生産能力、原価分析、ERPを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation",
+    "operatingCashFlowMinimum":320,
+    "operatingCashFlowMinimumUnit":"億円以上",
+    "growthInvestmentMinimum":130,
+    "growthInvestmentMinimumUnit":"億円以上",
+    "platformInvestmentMinimum":50,
+    "platformInvestmentMinimumUnit":"億円以上",
+    "shareholderReturnMinimum":140,
+    "shareholderReturnMinimumUnit":"億円以上",
+    "externalFundingPolicy":"現状は外部資金調達を見込まない",
+    "investmentUses":["半導体・船舶・石油石化市場の販売体制","研究開発","M&A・共同開発","人的資本","サプライチェーン","ERP・設備更新"],
+    "evidencePdfPage":22
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_doe_and_total_return_targets",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%超",
+    "doeTarget":3.0,
+    "doeTargetUnit":"%水準",
+    "buybackUpperLimit":50,
+    "buybackUpperLimitUnit":"億円程度",
+    "totalPayoutRatioTarget":40,
+    "totalPayoutRatioTargetUnit":"%程度",
+    "threeYearReturnAmount":140,
+    "threeYearReturnAmountUnit":"億円規模",
+    "evidencePdfPages":[1,21,22]
+  },
+  "nonFinancialTargets": [],
+  "definitions":[
+    {"term":"株主還元140億円","definition":"配当と自己株式取得を含む3年間累計規模。自己株取得は上限50億円程度。","evidencePdfPages":[1,21,22]},
+    {"term":"営業CF320億円以上","definition":"3年間のキャッシュインであり、売上・利益の単年度指標ではない。","evidencePdfPage":22},
+    {"term":"前中計実績","definition":"売上552億円、営業利益124億円、二桁ROE維持は前中計振り返りであり現行目標の基準値。","evidencePdfPages":[3,4]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousAndCurrentPlanSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T08:55:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年売上700億円・営業利益140億円以上・ROE10%以上を原寸確認する","営業CF320・成長130・基盤50・還元140億円以上を確認する","配当性向・DOE・総還元性向・自己株取得上限を分離確認する","前中計実績と現行目標を混在させていないことを確認する"]}
+}

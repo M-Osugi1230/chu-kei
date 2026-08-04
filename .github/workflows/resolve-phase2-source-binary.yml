@@ -51,17 +51,24 @@ jobs:
           else
             REQUEST="$(git diff-tree --no-commit-id --name-only -r HEAD | awk '/operations\/quality-rebase\/phase2\/source-binary-requests\/.*\.json$/ {print; exit}')"
           fi
-          if [[ -z "$REQUEST" || ! -f "$REQUEST" ]]; then
-            echo 'No valid source binary request file found.' >&2
+          if [[ -z "$REQUEST" ]]; then
+            echo 'No request changed; workflow or resolver implementation update only.'
+            echo 'skip=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [[ ! -f "$REQUEST" ]]; then
+            echo "Request file does not exist: $REQUEST" >&2
             exit 1
           fi
           case "$REQUEST" in
             operations/quality-rebase/phase2/source-binary-requests/*.json) ;;
             *) echo "Request file is outside the allowed directory: $REQUEST" >&2; exit 1 ;;
           esac
+          echo 'skip=false' >> "$GITHUB_OUTPUT"
           echo "request_file=$REQUEST" >> "$GITHUB_OUTPUT"
 
       - name: Parse request safely
+        if: steps.request.outputs.skip != 'true'
         id: parsed
         shell: bash
         run: |
@@ -89,17 +96,35 @@ jobs:
               raise SystemExit('output evidence path is outside allowed directory')
           if not Path(source).is_file():
               raise SystemExit(f'missing source resolution: {source}')
+
+          official_pdf = request.get('officialPdf')
+          if official_pdf is not None:
+              if not isinstance(official_pdf, dict):
+                  raise SystemExit('officialPdf must be an object')
+              url = official_pdf.get('url')
+              pages = official_pdf.get('pageCount')
+              role = official_pdf.get('sourceRole')
+              if not isinstance(url, str) or not url.startswith('https://'):
+                  raise SystemExit('officialPdf.url must be HTTPS')
+              if not isinstance(pages, int) or pages <= 0:
+                  raise SystemExit('officialPdf.pageCount must be a positive integer')
+              if role is not None and not isinstance(role, str):
+                  raise SystemExit('officialPdf.sourceRole must be a string')
+
           print(f'source_resolution={source}')
           print(f'output_evidence={output}')
           PY
 
       - name: Verify official PDF and write evidence
+        if: steps.request.outputs.skip != 'true'
         run: |
           python scripts/resolve_phase2_source_binary.py \
             --source-resolution '${{ steps.parsed.outputs.source_resolution }}' \
+            --request '${{ steps.request.outputs.request_file }}' \
             --output '${{ steps.parsed.outputs.output_evidence }}'
 
       - name: Confirm isolated evidence change
+        if: steps.request.outputs.skip != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -115,6 +140,7 @@ jobs:
           fi
 
       - name: Commit immutable binary evidence
+        if: steps.request.outputs.skip != 'true'
         shell: bash
         run: |
           set -euo pipefail

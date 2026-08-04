@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {
+    "code": "3559",
+    "name": "ピーバンドットコム",
+    "market": "Standard",
+    "industry": "卸売業",
+    "phase2Order": 251
+  },
+  "source": {
+    "title": "中期経営計画 2027年3月期～2029年3月期",
+    "publishedDate": "2026-06-22",
+    "officialUrl": "https://www2.jpx.co.jp/disc/35590/140120260622575807.pdf",
+    "pdfSha256": "1eaabe9997aac2aae74763a6dba6abfcb99839300155ab57b476605b7bd549e3",
+    "pageCount": 34,
+    "documentClassification": "current_rolled_management_plan_2027_to_2029",
+    "period": {
+      "startFiscalYear": "2027年3月期",
+      "endFiscalYear": "2029年3月期",
+      "terminalFiscalYear": "2029年3月期"
+    },
+    "formalPlanBoundary": {
+      "previousPlan": "2024年10月17日公表の2026年3月期～2028年3月期中計",
+      "currentPlan": "2026年6月22日公表の2027年3月期～2029年3月期ローリング計画",
+      "baseline": "2026年3月期実績",
+      "longTermVision": "売上高100億円規模を視野に入れた中長期展望",
+      "statement": "旧計画、2026年3月期実績、現行3年間計画、売上100億円の長期展望を分離する。"
+    }
+  },
+  "summary": "2027年3月期を再投資・基盤整備、2028年3月期以降を成長回収と位置づけ、システム基盤刷新、専門人材採用、P板.comとGUGEN Hubによる部品調達・BOM・在庫・実装支援、AI・データ活用を進める。2029年3月期に売上高3,001百万円、売上総利益1,217百万円、当期純利益184百万円を目指し、成長投資、M&A、株主還元の順で資本配分する。",
+  "financialTargets": [
+    {"metric":"売上高","target":3001,"unit":"百万円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績2,311百万円","cagr":9,"cagrUnit":"%・約","evidencePdfPages":[1,24,28,30]},
+    {"metric":"売上総利益","target":1217,"unit":"百万円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績873百万円","cagr":11,"cagrUnit":"%・約","evidencePdfPages":[28,30]},
+    {"metric":"当期純利益","target":184,"unit":"百万円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績106百万円","cagr":20,"cagrUnit":"%・約","evidencePdfPages":[1,28,29,30]},
+    {"metric":"ROE","targetMinimum":12.5,"targetMaximum":15.0,"unit":"%","targetFiscalYear":"中計期間・資料目標レンジ","evidencePdfPages":[1,29,30]},
+    {"metric":"エクイティスプレッド","target":2.5,"unit":"%以上","targetFiscalYear":"中計期間","evidencePdfPages":[1,29,30]},
+    {"metric":"配当性向","target":30,"unit":"%以上","targetFiscalYear":"中計期間","evidencePdfPages":[1,29,30]}
+  ],
+  "revenueDriverTargets": [
+    {"category":"製造","target":16.5,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2027年3月期計画15.6億円","evidencePdfPage":24},
+    {"category":"実装","target":5.7,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2027年3月期計画4.7億円","evidencePdfPage":24},
+    {"category":"部品調達","target":2.3,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2027年3月期計画1.5億円","evidencePdfPages":[24,25]},
+    {"category":"GUGEN Hub経由売上","target":3.5,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2027年3月期計画0.4億円","targetUsers":1706,"targetUsersUnit":"ユーザー","evidencePdfPages":[24,25,26]}
+  ],
+  "strategyThemes": [
+    {"theme":"システム基盤の全面刷新","evidencePdfPages":[1,8,14,15,16],"evidence":"顧客・管理画面、セキュリティ、拡張性、UI/UXを再構築し、2027年の再投資フェーズ後に成長回収へ移る。"},
+    {"theme":"人材投資と変革推進体制","evidencePdfPages":[1,17,18],"evidence":"PM、システムエンジニア、カスタマーサクセス等を採用し、横断的な変革体制を構築する。"},
+    {"theme":"ものづくりプロセス支援プラットフォーム","evidencePdfPages":[4,19,20,21,22,23,24],"evidence":"基板製造から部品調達、BOM、在庫、実装まで支援領域を拡張しクロスセルとLTVを高める。"},
+    {"theme":"AI・一次データによる競争優位","evidencePdfPages":[6,20,21,22],"evidence":"3万社超の取引データを設計支援、品質確認、部品表作成、社内業務効率化へ活用する。"},
+    {"theme":"DigiKey連携による部品調達基盤","evidencePdfPages":[25],"evidence":"正規流通、品質、真正性、トレーサビリティに配慮した部品検索・調達基盤を強化する。"}
+  ],
+  "capitalPolicy": {
+    "status": "priority_order_and_hurdle_disclosed_amounts_undisclosed",
+    "priorityOrder": ["システム・人材の成長投資", "M&A・資本業務提携", "配当・自己株式取得"],
+    "investmentHurdle": "ROICが資本コストを上回る案件",
+    "funding": ["自己資本", "借入余力"],
+    "equityFinancingPolicy": "原則として希薄化を伴うエクイティ調達は行わない",
+    "recognizedCostOfEquity": "概ね10%前後",
+    "growthInvestmentTotal": null,
+    "mAndATotal": null,
+    "policy": "成長投資を最優先とし、基準を満たすM&Aがなければ余剰資金の自己株式取得を検討する。具体額は未開示のため推計しない。",
+    "evidencePdfPages": [29,30]
+  },
+  "shareholderReturnPolicy": {
+    "status": "payout_ratio_and_flexible_buyback",
+    "dividendPayoutRatioMinimum": 30,
+    "dividendPayoutRatioUnit": "%以上・継続目標",
+    "shareRepurchasePolicy": "余剰資金が生じる場合に選択肢として検討",
+    "policy": "利益成長に応じた安定的・継続的な配当を行い、成長投資・M&A後の余剰資金で自己株式取得を検討する。",
+    "evidencePdfPages": [29,30]
+  },
+  "undisclosedTargets": [
+    {"item":"2029年3月期営業利益","status":"not_set_as_primary_target","note":"2026年3月期営業利益190百万円は実績説明。現行中計の目標指標は売上高、売上総利益、当期純利益。"},
+    {"item":"成長投資・M&A総額","status":"not_disclosed","note":"優先順位と投資基準のみ開示。"}
+  ],
+  "longTermVisionSeparated": {
+    "targetScale": 100,
+    "targetScaleUnit": "億円・売上高規模",
+    "targetYear": null,
+    "classification": "long_term_direction_not_current_plan_terminal_target",
+    "evidencePdfPage": 31
+  },
+  "definitions": [
+    {"term":"売上高30億円水準","definition":"2029年3月期の3,001百万円を示す現中計の通過点。売上100億円は年度未設定の長期展望。","evidencePdfPages":[24,28,31]},
+    {"term":"ROE目標","definition":"公表文は12.5%以上、説明資料は12.5～15.0%のレンジ表示。下限12.5%を確定条件として扱う。","evidencePdfPages":[1,30]},
+    {"term":"営業利益190百万円","definition":"2026年3月期実績であり、2029年3月期目標ではない。","evidencePdfPages":[1,9]}
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": true,
+    "formalPlanBoundaryValidated": true,
+    "previousAndCurrentPlanSeparated": true,
+    "currentPlanAndLongTermVisionSeparated": true,
+    "forecastActualSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalPolicyReviewed": true,
+    "undisclosedAmountsNotInferred": true,
+    "shareholderReturnPolicyReviewed": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_visual_review_pending",
+    "reviewedAt": "2026-08-04T20:31:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "公式PDFの主要図表ページ24・26・28・29・30・31を原寸で独立確認する",
+      "旧中計と現行ローリング計画の境界を再確認する",
+      "ROE下限12.5%と資料レンジ上限15.0%の扱いを確認する",
+      "営業利益190百万円を最終年度目標として接続していないことを確認する",
+      "売上100億円を年度未設定の長期展望として扱うことを確認する"
+    ]
+  }
+}

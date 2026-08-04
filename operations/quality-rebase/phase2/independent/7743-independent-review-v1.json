@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "7743",
+    "name": "シード"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7743-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画の進捗状況と今後の重点課題更新",
+    "officialUrl": "https://www2.jpx.co.jp/disc/77430/140120260511522606.pdf",
+    "pdfSha256": "f05558101c8a511b463d4123775b80cf8a16c99c74db49e83b14da5aa1f49786",
+    "pageCount": 32
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード7743、公表日2026年5月11日、PDFハッシュ、全32ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 32],
+      "status": "pending"
+    },
+    {
+      "id": "revision_boundary",
+      "description": "2024年当初計画、2025年更新、2026年更新、2026年実績、2027年修正後目標、500億円規模の長期像を分離する。",
+      "expectedEvidencePdfPages": [1, 8, 14, 16],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2027年連結売上高370億円、連結営業利益22億円、EBITDA69.5億円、純利益13.5億円、ROE6.9%を確認する。",
+      "expectedEvidencePdfPages": [1, 14],
+      "status": "pending"
+    },
+    {
+      "id": "scope_separation",
+      "description": "個別売上高320億円・営業利益22億円と連結売上高370億円・営業利益22億円をスコープ別に確認する。",
+      "expectedEvidencePdfPages": [1, 14],
+      "status": "pending"
+    },
+    {
+      "id": "production_capacity",
+      "description": "2号棟別館700万枚/月、4号棟第一期1,400万枚/月、第二期1,050万枚/月を確認する。",
+      "expectedEvidencePdfPages": [19],
+      "status": "pending"
+    },
+    {
+      "id": "strategy",
+      "description": "省人化・原価低減、多品種少量、シリコーン、国内外サービス、次世代商品、人的資本・IT、SDGsを確認する。",
+      "expectedEvidencePdfPages": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "生産・IT基盤への積極投資を掲げるが、投資総額と資金配分は資料内で定量化されていないことを確認する。",
+      "expectedEvidencePdfPages": [8, 19, 20, 25],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "安定還元・適切な配当・株主優待適正化は定性的方針で、配当性向・DOE・買戻し額は未開示であることを確認する。",
+      "expectedEvidencePdfPages": [9, 18],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に公式リンク、改定値、実績、長期像、投資・還元の未開示表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-04T11:15:00+00:00",
+  "wave": 7,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave07-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "一次レビューの全文・数値・資本政策・項目別証跡は完了したが、JPX配信上の図表原寸確認が未完了のため、独立レビュー準備済みとは分離して記録する。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 5,
+    "waveIndependentReviewReady": 5,
+    "primaryReviewComplete": 63,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 387
+  },
+  "companyCompletions": [
+    {
+      "order": 222,
+      "code": "6376",
+      "name": "日機装",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6376-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2028"
+    },
+    {
+      "order": 232,
+      "code": "3475",
+      "name": "グッドコムアセット",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3475-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
+    },
+    {
+      "order": 237,
+      "code": "463A",
+      "name": "インテリックスホールディングス",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/463A-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_to_fy2031"
+    },
+    {
+      "order": 251,
+      "code": "3559",
+      "name": "ピーバンドットコム",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3559-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "current_rolled_management_plan_2027_to_2029"
+    },
+    {
+      "order": 252,
+      "code": "3611",
+      "name": "マツオカコーポレーション",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3611-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2028"
+    }
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 10,
+    "waveIndependentReviewReady": 5,
+    "waveIndependentVisualReviewPending": 5,
+    "primaryReviewComplete": 68,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 382,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

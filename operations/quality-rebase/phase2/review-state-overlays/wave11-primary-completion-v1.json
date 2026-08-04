@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-05T07:50:00+09:00",
+  "wave": 11,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave11-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "Wave11の3社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 98,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 352,
+    "primaryReviewWavesAssigned": 11,
+    "primaryReviewCompaniesAssignedTotal": 110
+  },
+  "companyCompletions": [
+    {"order":349,"code":"5923","name":"高田機工","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5923-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_numeric_target_revision"},
+    {"order":357,"code":"6365","name":"電業社機械製作所","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6365-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028"},
+    {"order":359,"code":"6485","name":"前澤給装工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6485-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_replacing_previous_plan"}
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 3,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 3,
+    "primaryReviewComplete": 101,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 349,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

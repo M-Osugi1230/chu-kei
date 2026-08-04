@@ -1,17 +1,13 @@
 {
   "schemaVersion": "quality-rebase-phase2-effective-status-v1",
-  "updatedAt": "2026-08-04T14:15:00+00:00",
+  "updatedAt": "2026-08-05T06:52:00+09:00",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
   "appliedOverlays": [
     "operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave08-primary-completion-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave09-primary-completion-v1.json"
   ],
-  "targets": {
-    "phase1": 50,
-    "phase2Additional": 450,
-    "totalIncludingPhase1": 500
-  },
+  "targets": {"phase1":50,"phase2Additional":450,"totalIncludingPhase1":500},
   "assignment": {
     "primaryReviewWavesAssigned": 9,
     "phase2CompaniesAssignedTotal": 90,
@@ -19,45 +15,30 @@
   },
   "review": {
     "phase1PrimaryReviewComplete": 50,
-    "phase2PrimaryReviewComplete": 81,
-    "primaryReviewCompleteIncludingPhase1": 131,
-    "phase2PrimaryReviewCompletionRatePercent": 18.0,
-    "totalPrimaryReviewCompletionRatePercent": 26.2,
+    "phase2PrimaryReviewComplete": 88,
+    "primaryReviewCompleteIncludingPhase1": 138,
+    "phase2PrimaryReviewCompletionRatePercent": 19.6,
+    "totalPrimaryReviewCompletionRatePercent": 27.6,
     "independentReviewReady": 61,
-    "independentVisualReviewPending": 18,
+    "independentVisualReviewPending": 25,
     "additionalSourceMappingRequired": 2,
-    "remainingPhase2PrimaryReviews": 369,
+    "remainingPhase2PrimaryReviews": 362,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0
   },
   "activeWave": {
     "wave": 9,
     "assigned": 10,
-    "primaryReviewComplete": 3,
+    "primaryReviewComplete": 10,
     "independentReviewReady": 0,
-    "independentVisualReviewPending": 3,
-    "remaining": 7,
-    "status": "in_progress"
+    "independentVisualReviewPending": 10,
+    "remaining": 0,
+    "status": "primary_review_complete_visual_followup_open"
   },
   "openVisualFollowups": [
-    {
-      "wave": 7,
-      "primaryReviewComplete": 10,
-      "independentReviewReady": 5,
-      "independentVisualReviewPending": 5
-    },
-    {
-      "wave": 8,
-      "primaryReviewComplete": 10,
-      "independentReviewReady": 0,
-      "independentVisualReviewPending": 10
-    },
-    {
-      "wave": 9,
-      "primaryReviewComplete": 3,
-      "independentReviewReady": 0,
-      "independentVisualReviewPending": 3
-    }
+    {"wave":7,"primaryReviewComplete":10,"independentReviewReady":5,"independentVisualReviewPending":5},
+    {"wave":8,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
+    {"wave":9,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10}
   ],
   "approvalSafety": {
     "automaticFactCompletionAllowed": false,

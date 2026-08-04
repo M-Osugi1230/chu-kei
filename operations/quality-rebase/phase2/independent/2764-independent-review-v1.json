@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "2764",
+    "name": "ひらまつ"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2764-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画2030 数値目標更新（上方修正）",
+    "officialUrl": "https://www2.jpx.co.jp/disc/27640/140120260225568568.pdf",
+    "pdfSha256": "7ab0ed62a14a8c2cc1bdcb5aaf429c672926bac3ffd483eb4b29f49a3ae8c748",
+    "pageCount": 55
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード2764、公表日2026年2月26日、PDFハッシュ、全55ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 55],
+      "status": "pending"
+    },
+    {
+      "id": "revision_boundary",
+      "description": "2025年度見通し、2026～2028年度の当初・修正計画、見直し対象外の2029～2030年度を分離する。",
+      "expectedEvidencePdfPages": [1, 2, 46, 50],
+      "status": "pending"
+    },
+    {
+      "id": "revised_targets",
+      "description": "2026年度売上105.91億円・営業利益3.41億円、2027年度116.98億円・4.37億円、2028年度132.03億円・6.24億円への上方修正を確認する。",
+      "expectedEvidencePdfPages": [1, 46, 50],
+      "status": "pending"
+    },
+    {
+      "id": "terminal_targets",
+      "description": "2030年度売上133.3億円、営業利益率10%、EBITDA18.5億円、ROE16.1%、ROA11.0%とAppendixの丸め差を確認する。",
+      "expectedEvidencePdfPages": [49, 50],
+      "status": "pending"
+    },
+    {
+      "id": "strategy",
+      "description": "人財戦略、ブランド再構築、新店・改装、ホテル・ブライダル、海外、知的財産、M&A、IT・生産性向上を確認する。",
+      "expectedEvidencePdfPages": [11, 18, 21, 22, 23, 24, 26, 29, 31, 34, 35, 36, 37, 38, 39],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "6年間投資45.6億円、新店24.6億円、既存店18億円、IT約3億円と、別枠のM&A30億円規模を確認する。",
+      "expectedEvidencePdfPages": [40, 42, 43, 44],
+      "status": "pending"
+    },
+    {
+      "id": "cash_flow",
+      "description": "2026～2028年度の修正後営業・投資・財務・フリーキャッシュフローと期末現預金を確認する。",
+      "expectedEvidencePdfPages": [51],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "連結配当性向30%程度、2026年度への復配前倒し、1円以上、株主優待改善を確認する。",
+      "expectedEvidencePdfPages": [47],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_targets",
+      "description": "2030年度平均給与500万円、国内店舗36店、女性管理職比率50%、生産性向上後社員純増約110人を確認する。",
+      "expectedEvidencePdfPages": [45, 49],
+      "status": "pending"
+    },
+    {
+      "id": "accounting_boundary",
+      "description": "MC契約移行後のホテル売上総額表示と、従来表示との比較上の境界を確認する。",
+      "expectedEvidencePdfPages": [4],
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

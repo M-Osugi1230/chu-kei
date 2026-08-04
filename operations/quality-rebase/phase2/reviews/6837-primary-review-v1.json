@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"6837","name":"京写","market":"Standard","industry":"電気機器","phase2Order":363},
+  "source": {
+    "title":"長期ビジョン2036および中期経営計画2029",
+    "publishedDate":"2026-05-22",
+    "officialUrl":"https://www2.jpx.co.jp/disc/68370/140120260522544728.pdf",
+    "pdfSha256":"2186d1883c2bed4949a75fe1f9e05b2a0302b5588f0fbf3045d3a4d939867d2f",
+    "pageCount":23,
+    "documentClassification":"formal_management_plan_with_long_term_vision",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2029年3月期","terminalFiscalYear":"2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"前中期経営計画・2026年3月期最終年度",
+      "currentPlan":"中期経営計画2029・2027年3月期～2029年3月期",
+      "longTermVision":"長期ビジョン2036・2036年3月期",
+      "statement":"前中計実績、現行2029年中計目標、2036年長期目標を分離する。"
+    }
+  },
+  "summary":"片面板の収益最大化、金属・厚銅基板の成長、両面板の構造改革、治具・実装の新用途開拓を進める。2029年3月期に売上高280億円、営業利益20億円、営業利益率7%、ROE10%、配当性向30%を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":280,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績246億円","evidencePdfPages":[1,9,15]},
+    {"metric":"営業利益","target":20,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績8.2億円","evidencePdfPages":[1,9,15]},
+    {"metric":"営業利益率","target":7.0,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績3.4%","evidencePdfPages":[1,9,15]},
+    {"metric":"ROE","target":10.0,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績0.8%","evidencePdfPages":[1,9,15]},
+    {"metric":"配当性向","target":30,"unit":"%目安","targetFiscalYear":"2027年3月期～2029年3月期","evidencePdfPages":[15,20]}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"売上高","target":400,"unit":"億円","targetFiscalYear":"2036年3月期","classification":"long_term_vision","evidencePdfPages":[1,9]},
+    {"metric":"営業利益","target":40,"unit":"億円","targetFiscalYear":"2036年3月期","classification":"long_term_vision","evidencePdfPages":[1,9]},
+    {"metric":"営業利益率","target":10,"unit":"%","targetFiscalYear":"2036年3月期","classification":"long_term_vision","evidencePdfPages":[1,9]},
+    {"metric":"ROE","target":10,"unit":"%","targetFiscalYear":"2036年3月期","classification":"long_term_vision","evidencePdfPages":[1,9]}
+  ],
+  "strategyThemes":[
+    {"theme":"片面板の利益最大化","evidencePdfPage":16,"evidence":"インド・アセアン需要、生産性、片面複層・機能基板を強化する。"},
+    {"theme":"金属・厚銅基板の成長","evidencePdfPage":17,"evidence":"EV、パワー半導体、AIサーバー向け放熱需要を取り込む。"},
+    {"theme":"両面板の構造改革","evidencePdfPage":18,"evidence":"国内工場集約、ベトナムの新工法・リサイクル、未開拓市場を進める。"},
+    {"theme":"治具・実装の新用途開拓","evidencePdfPage":19,"evidence":"半導体・医療、ワンストップ提案、AIスマートファクトリー化を進める。"},
+    {"theme":"DX・AI・ESG基盤","evidencePdfPages":[21,22],"evidence":"業務・生産・サプライチェーン・経営情報の高度化と非財務KPIを推進する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation",
+    "operatingCashFlow":60,
+    "operatingCashFlowUnit":"億円",
+    "funding":10,
+    "fundingUnit":"億円",
+    "structuralReformInvestment":5,
+    "structuralReformInvestmentUnit":"億円",
+    "platformInvestment":20,
+    "platformInvestmentUnit":"億円",
+    "growthInvestment":10,
+    "growthInvestmentUnit":"億円",
+    "debtRepaymentAndOther":29,
+    "debtRepaymentAndOtherUnit":"億円",
+    "shareholderReturn":6,
+    "shareholderReturnUnit":"億円",
+    "evidencePdfPage":20
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_target",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%目安",
+    "threeYearReturnAmount":6,
+    "threeYearReturnAmountUnit":"億円",
+    "policy":"営業CFを成長・構造改革・基盤強化へ優先配分しつつ、安定・持続的な配当を実施する。",
+    "evidencePdfPages":[15,20]
+  },
+  "nonFinancialTargets":[
+    {"metric":"CO2排出量","target":3,"unit":"%/年削減","targetFiscalYear":"2029年3月期まで","evidencePdfPage":22},
+    {"metric":"金属基板販売量","target":170000,"unit":"㎡/年","targetFiscalYear":"2029年3月期","baseline":"2026年3月期基準48,000㎡/年","evidencePdfPage":22},
+    {"metric":"障害者雇用率","target":3.0,"unit":"%以上","targetFiscalYear":"2029年3月期","evidencePdfPage":22},
+    {"metric":"女性監督職比率","target":15.0,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期基準11.0%","evidencePdfPage":22}
+  ],
+  "definitions":[
+    {"term":"2029年目標と2036年目標","definition":"280億円・20億円・7%は現中計終期、400億円・40億円・10%は10年後長期ビジョン。","evidencePdfPages":[1,9,15]},
+    {"term":"キャッシュイン70億円","definition":"営業CF60億円と資金調達10億円の合計。","evidencePdfPage":20},
+    {"term":"キャッシュアウト70億円","definition":"構造改革5、基盤20、成長10、返済等29、還元6億円の合計。","evidencePdfPage":20}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndLongTermPlansSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T08:55:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["前中計実績・2029目標・2036目標を原寸確認する","事業別売上・利益目標の合計と重複を確認する","キャッシュイン・アウト各70億円の内訳を確認する","非財務KPIの基準年・単位を確認する"]}
+}

@@ -111,6 +111,9 @@ def main() -> None:
     effective_status = merge_partial_completion_overlay(
         effective_status, wave8_overlay
     )
+    effective_status = v3.apply_next_wave_assignment(
+        effective_status, wave8_overlay
+    )
 
     wave_counts = v2.validate_effective_wave(effective_wave, repo_root)
     cross_wave_counts = base.validate_cross_wave_uniqueness(repo_root)

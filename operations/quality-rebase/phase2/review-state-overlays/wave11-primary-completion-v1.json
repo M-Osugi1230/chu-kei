@@ -1,10 +1,10 @@
 {
   "schemaVersion": "phase2-review-state-overlay-v1",
-  "createdAt": "2026-08-05T07:50:00+09:00",
+  "createdAt": "2026-08-05T08:10:00+09:00",
   "wave": 11,
   "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave11-v1.json",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
-  "reason": "Wave11の3社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "reason": "Wave11の10社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
   "expectedBase": {
     "wavePrimaryReviewComplete": 0,
     "waveIndependentReviewReady": 0,
@@ -15,17 +15,24 @@
     "primaryReviewCompaniesAssignedTotal": 110
   },
   "companyCompletions": [
+    {"order":345,"code":"5233","name":"太平洋セメント","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5233-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_progress_update_with_limited_text_correction"},
+    {"order":347,"code":"5821","name":"平河ヒューテック","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5821-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_fy2026_to_fy2030"},
     {"order":349,"code":"5923","name":"高田機工","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5923-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_numeric_target_revision"},
+    {"order":350,"code":"5949","name":"ユニプレス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5949-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_policy_current_with_quantitative_targets_limited_to_2026_2027"},
+    {"order":351,"code":"5994","name":"ファインシンター","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5994-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_embedded_in_results_and_plan_presentation"},
+    {"order":354,"code":"6222","name":"島精機製作所","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6222-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_numeric_target_revision"},
+    {"order":356,"code":"6226","name":"守谷輸送機工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6226-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_embedded_in_results_and_plan_presentation"},
     {"order":357,"code":"6365","name":"電業社機械製作所","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6365-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028"},
-    {"order":359,"code":"6485","name":"前澤給装工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6485-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_replacing_previous_plan"}
+    {"order":359,"code":"6485","name":"前澤給装工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6485-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_replacing_previous_plan"},
+    {"order":361,"code":"6763","name":"帝国通信工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6763-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_fy2026_to_fy2030"}
   ],
   "effectiveCounts": {
-    "wavePrimaryReviewComplete": 3,
+    "wavePrimaryReviewComplete": 10,
     "waveIndependentReviewReady": 0,
-    "waveIndependentVisualReviewPending": 3,
-    "primaryReviewComplete": 101,
+    "waveIndependentVisualReviewPending": 10,
+    "primaryReviewComplete": 108,
     "independentReviewReady": 61,
-    "remainingPrimaryReviews": 349,
+    "remainingPrimaryReviews": 342,
     "deepVerificationApproved": 0
   },
   "automaticFactCompletionAllowed": false,

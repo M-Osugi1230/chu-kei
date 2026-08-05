@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-06T12:00:00+09:00",
+  "wave": 16,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave16-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "Wave16の3社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 148,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 302,
+    "primaryReviewWavesAssigned": 16,
+    "primaryReviewCompaniesAssignedTotal": 160
+  },
+  "companyCompletions": [
+    {"order":463,"code":"8331","name":"千葉銀行","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8331-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028_post_integration_group_basis"},
+    {"order":488,"code":"3583","name":"オーベクス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3583-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2025_to_2027"},
+    {"order":495,"code":"4681","name":"リゾートトラスト","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4681-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2025_to_2029_replacing_early_achieved_plan"}
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 3,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 3,
+    "primaryReviewComplete": 151,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 299,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

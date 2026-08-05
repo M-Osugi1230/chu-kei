@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"1867","name":"植木組","market":"Standard","industry":"建設業","phase2Order":477},
+  "source": {
+    "title":"第15次中期経営計画 2025年度～2027年度",
+    "publishedDate":"2025-05-12",
+    "officialUrl":"https://www2.jpx.co.jp/disc/18670/140120250512540447.pdf",
+    "pdfSha256":"e24e55a3c1f36b65c02da34b3207d28918ed6292077b4880510e3f019f934506",
+    "pageCount":17,
+    "documentClassification":"formal_management_plan_current_2025_to_2027",
+    "period":{"startFiscalYear":"2025年度","endFiscalYear":"2027年度・2028年3月期","terminalFiscalYear":"2027年度・2028年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"第14次中期経営計画・2022年度～2024年度",
+      "currentPlan":"第15次中期経営計画・2025年度～2027年度",
+      "longTermVision":"UEKI VISION 150・創業150年に向けた長期ビジョン",
+      "statement":"前中計の実績・未達目標、現中計の単体・グループ目標、長期ビジョンを分離する。"
+    }
+  },
+  "summary":"営業力、技術力、人財力を軸に、民間建築・官庁工事、環境関連、ICT・BIM/CIM、生成AI、研究開発、採用・育成を強化する。2027年度に単体売上高550億円、営業利益約28.3億円、営業利益率5.1%、グループ売上高650億円、営業利益34億円を目指す。",
+  "financialTargets":[
+    {"metric":"単体売上高","target":550,"unit":"億円","targetFiscalYear":"2027年度","baseline":"2024年度427億円","evidencePdfPages":[5,10]},
+    {"metric":"単体営業利益","target":28.3,"unit":"億円・図表値","targetFiscalYear":"2027年度","baseline":"2024年度20.6億円","evidencePdfPages":[5,10]},
+    {"metric":"単体営業利益率","target":5.1,"unit":"%","targetFiscalYear":"2027年度","evidencePdfPage":10},
+    {"metric":"グループ売上高","target":650,"unit":"億円","targetFiscalYear":"2027年度","evidencePdfPage":11},
+    {"metric":"グループ営業利益","target":34,"unit":"億円","targetFiscalYear":"2027年度","evidencePdfPage":11},
+    {"metric":"ROE","target":7,"unit":"%以上・継続目標","targetFiscalYear":"中長期","baseline":"2024年度6.9%","evidencePdfPage":12}
+  ],
+  "previousPlanResultsSeparated":[
+    {"metric":"売上高","target":500,"unit":"億円","actual":427,"fiscalYear":"2024年度","classification":"previous_plan_target_and_actual","evidencePdfPage":5},
+    {"metric":"営業利益","target":21,"unit":"億円","actual":20.6,"fiscalYear":"2024年度","classification":"previous_plan_target_and_actual","evidencePdfPage":5},
+    {"metric":"受注高","actual":691,"unit":"億円","fiscalYear":"2024年度","classification":"previous_plan_actual","evidencePdfPage":5}
+  ],
+  "strategyThemes":[
+    {"theme":"営業力強化","evidencePdfPages":[8,9],"evidence":"新規顧客、民間建築、大型物件、官庁工事、環境関連工事の受注を拡大する。"},
+    {"theme":"技術力・DX・R&D","evidencePdfPages":[8,9],"evidence":"ICT施工、BIM/CIM、BI、設計積算、生成AI、共同研究、特許を強化する。"},
+    {"theme":"人的資本","evidencePdfPages":[8,9,14],"evidence":"新4K、育成、資格、次世代、技術伝承、離職防止、働き方改革を推進する。"},
+    {"theme":"グループ・地域戦略","evidencePdfPage":11,"evidence":"建設、不動産、IT、BtoCを組み合わせ地域社会へ総合サービスを提供する。"},
+    {"theme":"資産効率・企業価値","evidencePdfPage":12,"evidence":"資産流動化、営業CF、成長投資、ROE、配当性向を一体管理する。"}
+  ],
+  "capitalPolicy": {
+    "status":"percentage_based_cash_allocation_with_visual_subcategory_mapping_pending",
+    "period":"2025年度～2027年度",
+    "operatingCashFlowApprox":60,
+    "operatingCashFlowApproxUnit":"億円",
+    "assetMonetization":"保有目的を精査し資産流動化を実施・金額未開示",
+    "allocationRatios":{"growthInvestment":70,"shareholderReturn":30,"unit":"%"},
+    "growthInvestmentUses":["人的資本","DX","研究開発・固有技術","設備更新","脱炭素環境対策"],
+    "visualSubcategoryRatiosAwaitingMapping":[25,25,20],
+    "visualSubcategoryRatiosUnit":"%・合計70%",
+    "policy":"営業CF約60億円と資産流動化資金を成長投資70%、還元30%へ配分する。25・25・20%の個別用途対応はテキスト抽出順では確定せず原寸確認待ちとする。",
+    "evidencePdfPage":12
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_floor",
+    "payoutRatioFloor":30,
+    "payoutRatioFloorUnit":"%以上・連結",
+    "cashAllocationRatio":30,
+    "cashAllocationRatioUnit":"キャッシュアウト比%",
+    "policy":"連結配当性向30%以上の配当を継続的・長期的に実施する。",
+    "evidencePdfPage":12
+  },
+  "nonFinancialTargets":[
+    {"metric":"ZEB普及","target":50,"unit":"受注する設計業務比%以上","targetFiscalYear":"中計期間","evidencePdfPage":13},
+    {"metric":"4週8閉所","target":100,"unit":"%実現","targetFiscalYear":"中計期間","evidencePdfPage":14},
+    {"metric":"男性育児休業取得率","target":100,"unit":"%","targetFiscalYear":"中計期間","evidencePdfPage":14},
+    {"metric":"CO2排出削減","target":"燃料転換、サイトPC、熱回収、CCS・再エネで推進","unit":"施策目標・総量数値未開示","targetFiscalYear":"中計期間","evidencePdfPage":13}
+  ],
+  "definitions":[
+    {"term":"単体とグループ目標","definition":"単体は売上550億円・営業利益約28.3億円、グループは売上650億円・営業利益34億円。","evidencePdfPages":[10,11]},
+    {"term":"営業CF約60億円","definition":"中計期間のキャッシュイン概算。資産流動化額は別途未開示。","evidencePdfPage":12},
+    {"term":"投資内訳25・25・20%","definition":"成長投資70%の内訳図表値だが、用途との正確な対応は原寸確認が必要。","evidencePdfPage":12}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentCompanyAndGroupTargetsSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"uncertainSubcategoryMappingNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T09:49:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["単体550・28.3・5.1%とグループ650・34を原寸確認する","営業CF約60億円・成長70%・還元30%を確認する","25・25・20%の用途対応を原寸確認する","ROE7%以上・連結配当性向30%以上を確認する","ZEB50%以上・4週8閉所100%・男性育休100%を確認する"]}
+}

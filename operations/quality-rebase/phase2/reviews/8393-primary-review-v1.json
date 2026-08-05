@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8393","name":"宮崎銀行","market":"Prime","industry":"銀行業","phase2Order":389},
+  "source": {
+    "title":"中期経営計画 First Call Bank 2.0 シンカ",
+    "publishedDate":"2026-04-24",
+    "officialUrl":"https://www2.jpx.co.jp/disc/83930/140120260424509916.pdf",
+    "pdfSha256":"250744cfaf462fdd9a61254b4bc27f16cd62524f89e3c3e0833364de36627f9b",
+    "pageCount":18,
+    "documentClassification":"formal_management_plan_current_2026_to_2028",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2028年度・2029年3月期","terminalFiscalYear":"2028年度・2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"First Call Bank・2023年度～2025年度",
+      "currentPlan":"First Call Bank 2.0 シンカ・2026年度～2028年度",
+      "longTermVision":"2032年創立100周年・ROE8%以上、単体経常利益250億円以上",
+      "statement":"前中計目標・着地見込、現中計最終年度目標、2032年長期目標を分離する。"
+    }
+  },
+  "summary":"リアル店舗とデジタルを融合し、法人・個人のリレーション深化、デジタルバンキング、地域課題解決、AI・DX、人的資本、本部機能を強化する。2028年度に連結当期純利益165億円以上、ROE7%以上、自己資本比率10%程度を目指す。",
+  "financialTargets":[
+    {"metric":"連結当期純利益","target":165,"unit":"億円以上","targetFiscalYear":"2028年度","evidencePdfPages":[2,6,13,14]},
+    {"metric":"ROE","target":7,"unit":"%以上","targetFiscalYear":"2028年度","definition":"当期純利益÷自己資本","evidencePdfPages":[2,6,13]},
+    {"metric":"自己資本比率","target":10,"unit":"%程度","targetFiscalYear":"2028年度","evidencePdfPages":[2,13]},
+    {"metric":"単体経常利益","target":230,"unit":"億円以上・参考値","targetFiscalYear":"2028年度","evidencePdfPage":6}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"ROE","target":8,"unit":"%以上","targetFiscalYear":"2032年","classification":"long_term_vision","evidencePdfPage":6},
+    {"metric":"単体経常利益","target":250,"unit":"億円以上","targetFiscalYear":"2032年","classification":"long_term_vision","evidencePdfPage":6}
+  ],
+  "strategyThemes":[
+    {"theme":"リレーションシップバンキング","evidencePdfPages":[2,8,9],"evidence":"事業性評価、成長・再生、承継・M&A、資産形成、相続支援を強化する。"},
+    {"theme":"デジタルバンキング","evidencePdfPage":10,"evidence":"アプリ、非対面ローン、デジタルマーケティング、法人DX支援を拡大する。"},
+    {"theme":"リージョナルバンキング","evidencePdfPage":11,"evidence":"サステナ支援、カーボンクレジット、グループ総合コンサルで地域課題を解決する。"},
+    {"theme":"AI・DXと人的資本","evidencePdfPage":12,"evidence":"事務効率化、人材育成、戦略配置、本部機能高度化へ投資する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_strategic_investment_amount",
+    "period":"2026年度～2028年度",
+    "strategicInvestment":100,
+    "strategicInvestmentUnit":"億円",
+    "investmentUses":["AI・DX基盤","事務効率化","チャネル改革","人的資本","与信・リスク管理","市場運用・本部機能"],
+    "policy":"戦略投資100億円で経営基盤を強靭化する。全体キャッシュアロケーション総額は資料で明示されていないため推計しない。",
+    "evidencePdfPages":[12,14]
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_target_and_flexible_buybacks",
+    "payoutRatioTarget":40,
+    "payoutRatioTargetUnit":"%程度・2029年3月期まで",
+    "buybackPolicy":"機動的に実施",
+    "policy":"最終年度までに配当性向40%程度を目標とし、1株配当の増加を目指す。",
+    "evidencePdfPage":16
+  },
+  "nonFinancialTargets":[
+    {"metric":"メイン行取引先の付加価値額増加率","target":110,"unit":"%・2025年度比+10%","targetFiscalYear":"2028年度","evidencePdfPages":[2,6,13,15]},
+    {"metric":"ESG関連投融資新規実行額","target":4000,"unit":"億円・2026～2030年度累計","targetFiscalYear":"2030年度","evidencePdfPage":15},
+    {"metric":"行内温室効果ガス排出量","target":60,"unit":"%削減・2013年度比","targetFiscalYear":"2030年度","evidencePdfPage":15},
+    {"metric":"女性管理職比率","target":30,"unit":"%","targetFiscalYear":"2028年度","baseline":"2025年度25%","evidencePdfPage":15}
+  ],
+  "definitions":[
+    {"term":"付加価値額","definition":"経常利益＋人件費＋減価償却費＋賃借料＋金融費用＋税金。","evidencePdfPages":[13,15]},
+    {"term":"戦略投資100億円","definition":"AI・DX、人的資本、本部機能等の基盤強化投資であり、全体投資総額ではない。","evidencePdfPages":[12,14]},
+    {"term":"配当性向40%程度","definition":"中計最終年度の2029年3月期までの目標。","evidencePdfPage":16}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndLongTermSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T07:18:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["現中計165・7・10と2032年長期目標250・8を原寸確認する","戦略投資100億円の図表配置を確認する","配当性向40%程度と自己株式取得方針を確認する","ESG投融資4,000億円・女性管理職30%の対象期間を確認する"]}
+}

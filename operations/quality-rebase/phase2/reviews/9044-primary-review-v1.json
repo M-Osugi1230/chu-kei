@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"9044","name":"NANKAI","market":"Prime","industry":"陸運業","phase2Order":392},
+  "source": {
+    "title":"NANKAIグループ中期経営計画2025-2027 数値目標の修正",
+    "publishedDate":"2026-04-30",
+    "officialUrl":"https://www2.jpx.co.jp/disc/90440/140120260430514378.pdf",
+    "pdfSha256":"11f403493f8b5185ec3cec483040276a46a6422e5089bf5d375ea1663c9e0ec9",
+    "pageCount":6,
+    "documentClassification":"official_current_management_plan_quantitative_target_revision",
+    "period":{"startFiscalYear":"2025年度","endFiscalYear":"2027年度","terminalFiscalYear":"2027年度"},
+    "formalPlanBoundary": {
+      "originalPlan":"2025年3月公表のNANKAIグループ中期経営計画2025-2027",
+      "currentRevision":"2026年4月公表の数値目標修正",
+      "unchangedStrategy":"コア事業への集中投資、重点戦略、財務規律の考え方は変更なし",
+      "longTermOutlook":"2035年度までの早期に目指す水準",
+      "statement":"当初目標、修正後の現行目標、将来水準、年度別実績・予想を分離する。"
+    }
+  },
+  "summary":"不動産事業と公共交通事業をコアに最大3,600億円を集中投資する現行戦略を維持し、インバウンド需要、料金改定、不動産利益等を踏まえて2027年度営業利益目標を360億円以上から420億円以上へ、ROEを7%程度から7%以上へ上方修正した。",
+  "financialTargets":[
+    {"metric":"営業収益","target":3063,"unit":"億円","targetFiscalYear":"2027年度","evidencePdfPage":3},
+    {"metric":"営業利益","target":420,"unit":"億円以上","targetFiscalYear":"2027年度・修正後","originalTarget":"360億円以上","evidencePdfPages":[1,2,3,4]},
+    {"metric":"EBITDA","target":755,"unit":"億円","targetFiscalYear":"2027年度","definition":"営業利益＋減価償却費＋のれん償却費","evidencePdfPage":3},
+    {"metric":"純有利子負債残高/EBITDA倍率","target":"7倍台","unit":"倍","targetFiscalYear":"2027年度・修正なし","evidencePdfPages":[1,2,3,4]},
+    {"metric":"ROE","target":7,"unit":"%以上","targetFiscalYear":"2027年度・修正後","originalTarget":"7%程度","evidencePdfPages":[1,2,3,4]},
+    {"metric":"投資額","target":1247,"unit":"億円・連結消去前、M&A・出資等を含む","targetFiscalYear":"2027年度","evidencePdfPage":3},
+    {"metric":"配当性向","target":30,"unit":"%程度","targetFiscalYear":"2027年度","evidencePdfPages":[3,4]}
+  ],
+  "annualForecastsSeparated":[
+    {"fiscalYear":"2025年度実績","operatingRevenue":2647,"operatingProfit":399,"investment":991,"ebitda":686,"netDebtEbitda":"6.1倍","roe":"7.8%","payoutRatio":"22.0%","unit":"億円・比率"},
+    {"fiscalYear":"2026年度予想","operatingRevenue":2875,"operatingProfit":400,"investment":1362,"ebitda":700,"netDebtEbitda":"7.4倍","roe":"7.0%","payoutRatio":"25.0%","unit":"億円・比率"}
+  ],
+  "supersededTargetsSeparated":[
+    {"metric":"営業利益","target":360,"unit":"億円以上","targetFiscalYear":"2027年度","classification":"superseded_original_plan_target","evidencePdfPages":[1,2,3]},
+    {"metric":"ROE","target":7,"unit":"%程度","targetFiscalYear":"2027年度","classification":"superseded_original_plan_target","evidencePdfPages":[1,2]}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"営業利益","target":460,"unit":"億円以上","targetFiscalYear":"2035年度までの早期","classification":"long_term_outlook","evidencePdfPages":[2,4]},
+    {"metric":"純有利子負債残高/EBITDA倍率","target":"6倍台","unit":"倍","targetFiscalYear":"将来水準・次期中計で更新予定","classification":"long_term_outlook","evidencePdfPages":[2,4]},
+    {"metric":"ROE","target":8,"unit":"%以上","targetFiscalYear":"将来水準・次期中計で更新予定","classification":"long_term_outlook","evidencePdfPages":[2,4]}
+  ],
+  "strategyThemes":[
+    {"theme":"不動産事業の飛躍的拡大","evidencePdfPages":[2,4],"evidence":"収益不動産、回転型ビジネス、物流施設、M&Aを通じて総合不動産事業へ転換する。"},
+    {"theme":"公共交通事業の変革","evidencePdfPages":[2,4],"evidence":"料金改定、インバウンド、鉄道分社化、運営高度化、将来投資を推進する。"},
+    {"theme":"コア事業集中投資","evidencePdfPage":4,"evidence":"不動産・公共交通をコアに最大3,600億円を短期集中投資する。"},
+    {"theme":"資本効率と財務規律","evidencePdfPages":[2,4],"evidence":"格付向上、資産・資本効率、ROE・PER、PBRを意識した財務運営を強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_investment_ceiling_strategy_unchanged",
+    "period":"2025年度～2027年度・3年間",
+    "totalInvestmentCeiling":3600,
+    "totalInvestmentCeilingUnit":"億円・最大",
+    "safetyAndRenewalInvestmentCeiling":1500,
+    "revenueExpansionAndFutureExplorationCeiling":2100,
+    "unit":"億円・最大",
+    "investmentUses":["公共交通の安全・更新","不動産収益拡大","M&A・出資","未来探索","人財・DX"],
+    "policy":"コア事業への集中投資を最優先しつつ、財務体質と資本効率を重視する。投資枠は最大値であり確定支出額として扱わない。",
+    "evidencePdfPage":4
+  },
+  "shareholderReturnPolicy": {
+    "status":"stable_dividend_step_up_payout_and_flexible_buybacks",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%程度・2027年度",
+    "buybackPolicy":"状況に応じ機動的に実施",
+    "recentBuyback":120,
+    "recentBuybackUnit":"億円・2025年度取得・消却実績",
+    "policy":"安定配当を基本に連結配当性向を段階的に引き上げ、2027年度30%程度を目指す。",
+    "evidencePdfPages":[2,3,4]
+  },
+  "definitions":[
+    {"term":"EBITDA","definition":"営業利益＋減価償却費＋のれん償却費。","evidencePdfPages":[1,2,3,4]},
+    {"term":"投資額","definition":"連結消去前でM&Aや出資等を含む。","evidencePdfPage":3},
+    {"term":"最大3,600億円","definition":"中計3年間の投資上限で、安全・更新最大1,500億円と収益拡大等最大2,100億円から構成。","evidencePdfPage":4},
+    {"term":"修正範囲","definition":"営業利益とROEを上方修正し、財務規律・戦略・投資方針は変更しない。","evidencePdfPages":[1,2,4]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"originalRevisedAnnualAndLongTermSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"investmentCeilingsPreserved":true,"shareholderReturnPolicyReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T23:22:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["当初360・修正420・将来460億円を原寸確認する","ROEの7%程度・7%以上・8%以上を確認する","2027年度の営業収益・EBITDA・投資額・配当性向を確認する","最大3,600億円の投資内訳を確認する"]}
+}

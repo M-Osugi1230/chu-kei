@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8897","name":"MIRARTHホールディングス","market":"Prime","industry":"不動産業","phase2Order":469},
+  "source": {
+    "title":"中期経営計画 更新に関するお知らせ 2026年3月期～2028年3月期",
+    "publishedDate":"2026-03-09",
+    "officialUrl":"https://www2.jpx.co.jp/disc/88970/140120260306577848.pdf",
+    "pdfSha256":"920fc3abf0c61c95b50186e0859d6c4a24ec7c54433a3ba68629c8fae0556152",
+    "pageCount":14,
+    "documentClassification":"official_current_management_plan_strategy_capital_and_return_update",
+    "period":{"startFiscalYear":"2026年3月期","endFiscalYear":"2028年3月期","terminalFiscalYear":"2028年3月期"},
+    "formalPlanBoundary": {
+      "originalPlan":"2025年5月公表のPhase2中期経営計画",
+      "currentUpdate":"2026年3月期の業績修正、事業ポートフォリオ、資本配分、株主還元、経営体制を更新",
+      "unchangedFuturePlan":"2027年3月期・2028年3月期の事業計画は当初通り",
+      "nextPhase":"Phase3・2029年3月期～2031年3月期の安定回収・収益構造変革期",
+      "statement":"2026年3月期の当初・修正予想と、据置の2027・2028年計画を分離する。"
+    }
+  },
+  "summary":"エネルギー事業の減損・構造改革を実施し、戸建分譲とリニューアル再販へ資本を移す。2028年3月期に売上高2,452億円、営業利益166.5億円、純利益90億円、ROE9%以上を目指し、DOE3.5%と配当性向35～40%の高い方を還元基準とする。",
+  "financialTargets":[
+    {"metric":"売上高","target":245200,"unit":"百万円","targetFiscalYear":"2028年3月期","evidencePdfPage":2},
+    {"metric":"売上総利益","target":47650,"unit":"百万円","targetFiscalYear":"2028年3月期","evidencePdfPage":2},
+    {"metric":"営業利益","target":16650,"unit":"百万円","targetFiscalYear":"2028年3月期","evidencePdfPage":2},
+    {"metric":"経常利益","target":13650,"unit":"百万円","targetFiscalYear":"2028年3月期","evidencePdfPage":2},
+    {"metric":"親会社株主に帰属する当期純利益","target":9000,"unit":"百万円","targetFiscalYear":"2028年3月期","evidencePdfPage":2},
+    {"metric":"EBITDA","target":22450,"unit":"百万円・営業利益＋減価償却費","targetFiscalYear":"2028年3月期","evidencePdfPage":2},
+    {"metric":"自己資本比率","target":23,"unit":"%以上","targetFiscalYear":"2028年3月期末","evidencePdfPage":2},
+    {"metric":"LTV","target":65,"unit":"%未満・総資産有利子負債比率","targetFiscalYear":"毎期","evidencePdfPage":2},
+    {"metric":"D/Eレシオ","target":3.0,"unit":"倍未満","targetFiscalYear":"毎期","evidencePdfPage":2},
+    {"metric":"ROE","target":9,"unit":"%以上","targetFiscalYear":"毎期","evidencePdfPage":2}
+  ],
+  "annualForecastRevisionSeparated":[
+    {"metric":"2026年3月期売上高","original":216400,"revised":208000,"unit":"百万円","evidencePdfPage":2},
+    {"metric":"2026年3月期営業利益","original":15500,"revised":16500,"unit":"百万円","evidencePdfPage":2},
+    {"metric":"2026年3月期経常利益","original":12000,"revised":12500,"unit":"百万円","evidencePdfPage":2},
+    {"metric":"2026年3月期親会社株主純利益","original":8000,"revised":4500,"unit":"百万円・エネルギー事業減損等を反映","evidencePdfPages":[2,7]},
+    {"metric":"2026年3月期EBITDA","original":20900,"revised":21900,"unit":"百万円","evidencePdfPage":2}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"戸建分譲・リニューアル再販営業利益比率","target":30,"unit":"不動産事業セグメント比%","targetFiscalYear":"2030年度","classification":"long_term_growth_image","evidencePdfPages":[5,6,12]},
+    {"metric":"エネルギー事業営業利益","target":20,"unit":"億円","targetFiscalYear":"2030年度","classification":"long_term_growth_image","evidencePdfPages":[7,12]}
+  ],
+  "strategyThemes":[
+    {"theme":"戸建分譲・建設事業","evidencePdfPage":5,"evidence":"都心戸建、販売チャネル、資産回転、自社施工、原価・工程管理を強化する。"},
+    {"theme":"リニューアル再販","evidencePdfPage":6,"evidence":"増資、機動的仕入れ、ストック積上げ、出口多角化で資本循環を高速化する。"},
+    {"theme":"エネルギー事業再構築","evidencePdfPage":7,"evidence":"ROIC管理、資産入替、蓄電池、フィー型開発、借入オフバランス化を進める。"},
+    {"theme":"グループ再編・ガバナンス","evidencePdfPages":[8,11],"evidence":"成長会社への増資、HD直接子会社化、CRO・RAF・内部統制機能を強化する。"},
+    {"theme":"人的資本・ESG","evidencePdfPage":11,"evidence":"技術者育成、タレント管理、DE&I、地域、脱炭素、再エネ安定供給を推進する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_bridge_and_reallocation",
+    "period":"2026年3月期～2028年3月期",
+    "cashIn":{"externalFundingApprox":325,"operatingCashFlowApprox":225,"assetRotationApprox":60,"totalApprox":610,"unit":"億円"},
+    "cashOut":{"growthInvestment":500,"shareholderReturnApprox":100,"otherFlexibleAllocation":10,"totalApprox":610,"unit":"億円"},
+    "growthInvestmentBreakdown":{"realEstate":310,"hotel":50,"energy":140,"unit":"億円"},
+    "regionalRevitalizationIncluded":50,
+    "regionalRevitalizationIncludedUnit":"億円・不動産投資310億円に内包",
+    "fundingRatio":"成長投資額の約65%を外部調達する想定・返済控除後",
+    "reallocation":"戸建・再販へ60億円増、エネルギーへ60億円減、成長投資または還元枠10億円を新設",
+    "policy":"資本効率の高い不動産成長分野へ資金を移し、エネルギー投資を厳選する。概算値と柔軟枠を固定確定額へ変換しない。",
+    "evidencePdfPage":9
+  },
+  "shareholderReturnPolicy": {
+    "status":"higher_of_payout_ratio_or_doe_with_buyback",
+    "payoutRatioRange":"35～40%",
+    "doeTarget":3.5,
+    "doeTargetUnit":"%",
+    "selectionRule":"配当性向35～40%とDOE3.5%のいずれか高い方を基準",
+    "fy2027TotalReturnApprox":40,
+    "fy2027TotalReturnApproxUnit":"億円・配当と自己株式取得",
+    "buybackPolicy":"キャピタルアロケーションと株価水準を踏まえ機動的に実施",
+    "threeYearReturnApprox":100,
+    "threeYearReturnApproxUnit":"億円・キャッシュ配分図表値",
+    "policy":"DOEで下方硬直性、配当性向で利益成長連動性を確保し、自己株式取得で総還元を強化する。",
+    "evidencePdfPages":[9,10,12]
+  },
+  "nonFinancialTargets":[
+    {"metric":"リスク管理体制","target":"RAF導入・CRO選任・第2線強化","unit":"体制目標","targetFiscalYear":"中計期間","evidencePdfPage":11},
+    {"metric":"人的資本配置","target":"成長牽引事業への重点配置","unit":"施策目標","targetFiscalYear":"中計期間","evidencePdfPage":11}
+  ],
+  "definitions":[
+    {"term":"LTV","definition":"Loan to Value、総資産有利子負債比率。","evidencePdfPage":2},
+    {"term":"その他10億円","definition":"成長投資または株主還元に使う柔軟枠で、用途は事前固定されていない。","evidencePdfPage":9},
+    {"term":"2027・2028年計画","definition":"2026年3月期の業績修正後も当初計画を維持する。","evidencePdfPages":[2,3]},
+    {"term":"DOEと配当性向","definition":"DOE3.5%と配当性向35～40%の高い方を配当基準とする。","evidencePdfPage":10}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"annualRevisionAndUnchangedPlanSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"cashBridgeReconciled":true,"approximateAmountsPreserved":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T09:36:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2026年3月期当初・修正予想と2027・2028年計画を原寸確認する","KPIの23%以上・65%未満・3倍未満・ROE9%以上を確認する","資金橋325+225+60=500+100+10を確認する","投資310・50・140億円と再配分+60・-60を確認する","配当性向35～40%・DOE3.5%・総還元約40億円を確認する"]}
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"7811","name":"中本パックス","market":"Standard","industry":"その他製品","phase2Order":376},
+  "source": {
+    "title":"中期経営計画2027",
+    "publishedDate":"2026-04-16",
+    "officialUrl":"https://www2.jpx.co.jp/disc/78110/140120260416505275.pdf",
+    "pdfSha256":"f29ef4feeeff6116d699ed59b7ee718e24a323bd505c58ab6b039f3bea321f80",
+    "pageCount":19,
+    "documentClassification":"formal_management_plan_current_2027_2_to_2029_2",
+    "period":{"startFiscalYear":"2027年2月期","endFiscalYear":"2029年2月期","terminalFiscalYear":"2029年2月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"中期経営計画2024・2024年2月期～2026年2月期",
+      "currentPlan":"中期経営計画2027・2027年2月期～2029年2月期",
+      "longTermOutlook":"売上高700億円・経常利益60億円・ROE13%以上",
+      "statement":"前中計の実績、現行3カ年計画、年度未指定の長期目標を分離する。"
+    }
+  },
+  "summary":"全天候型経営、IT・工業材分野の開発、環境対応製品、M&A、製造原価低減、R&Dセンター、海外事業を推進し、2029年2月期に売上高600億円、営業利益45億円、経常利益47.5億円、ROE12%以上を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":60000,"unit":"百万円","targetFiscalYear":"2029年2月期","baseline":"2026年2月期実績49,635百万円","evidencePdfPages":[9,13]},
+    {"metric":"営業利益","target":4500,"unit":"百万円","targetFiscalYear":"2029年2月期","evidencePdfPage":13},
+    {"metric":"営業利益率","target":7.5,"unit":"%","targetFiscalYear":"2029年2月期","evidencePdfPage":13},
+    {"metric":"経常利益","target":4750,"unit":"百万円","targetFiscalYear":"2029年2月期","baseline":"2026年2月期実績3,051百万円","evidencePdfPages":[9,13]},
+    {"metric":"経常利益率","target":7.9,"unit":"%","targetFiscalYear":"2029年2月期","evidencePdfPage":13},
+    {"metric":"ROE","target":12,"unit":"%以上","targetFiscalYear":"2029年2月期","baseline":"2026年2月期実績10.8%","evidencePdfPages":[9,13]},
+    {"metric":"海外売上高比率","target":10,"unit":"%以上","targetFiscalYear":"中計期間","evidencePdfPage":12}
+  ],
+  "annualTargetsSeparated":[
+    {"targetFiscalYear":"2027年2月期","sales":52000,"operatingProfit":3250,"ordinaryProfit":3450,"roe":"10%以上","unit":"百万円、ROEは%"},
+    {"targetFiscalYear":"2028年2月期","sales":56000,"operatingProfit":3750,"ordinaryProfit":4000,"roe":"11%以上","unit":"百万円、ROEは%"}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"売上高","target":70000,"unit":"百万円","targetFiscalYear":"長期目標・年度未指定","classification":"long_term_outlook_beyond_current_plan","evidencePdfPages":[9,13]},
+    {"metric":"営業利益","target":5700,"unit":"百万円","targetFiscalYear":"長期目標・年度未指定","classification":"long_term_outlook_beyond_current_plan","evidencePdfPage":13},
+    {"metric":"経常利益","target":6000,"unit":"百万円","targetFiscalYear":"長期目標・年度未指定","classification":"long_term_outlook_beyond_current_plan","evidencePdfPages":[9,13]},
+    {"metric":"ROE","target":13,"unit":"%以上","targetFiscalYear":"長期目標・年度未指定","classification":"long_term_outlook_beyond_current_plan","evidencePdfPages":[9,13]}
+  ],
+  "strategyThemes":[
+    {"theme":"全天候型経営とM&A","evidencePdfPages":[10,11],"evidence":"業界分散と追加M&Aにより景気変動耐性と成長速度を高める。"},
+    {"theme":"IT・工業材と研究開発","evidencePdfPages":[11,12],"evidence":"半導体・スマートフォン・二次電池向けと新型コーター、R&Dセンターを強化する。"},
+    {"theme":"環境経営","evidencePdfPage":11,"evidence":"減プラ、再生材、生分解性樹脂、VOC・CO2削減、食品ロス削減を推進する。"},
+    {"theme":"製造原価低減と海外拡大","evidencePdfPage":12,"evidence":"設備更新・省人化・省エネ化と、ベトナム・米国事業の拡大を進める。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation",
+    "period":"2027年2月期～2029年2月期",
+    "cashIn":{"operatingCashFlow":110,"borrowingsAndOther":100,"unit":"億円"},
+    "cashOut":{"growthInvestment":180,"shareholderReturn":25,"unit":"億円"},
+    "investmentUses":["機能材向け新規コーター","新工場建設","生産設備更新","M&A","R&Dセンター・研究開発"],
+    "policy":"営業CFと借入等を活用し、資本コストを意識して成長投資へ優先配分する。手元資金・借入返済の個別額は図表上で明示されていないため推計しない。",
+    "evidencePdfPage":16
+  },
+  "shareholderReturnPolicy": {
+    "status":"progressive_dividend_with_payout_ratio_target",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%を目安",
+    "progressiveDividend":true,
+    "threeYearReturnAllocation":25,
+    "threeYearReturnAllocationUnit":"億円",
+    "fy2027DividendForecast":74,
+    "fy2027DividendForecastUnit":"円/株",
+    "policy":"財務体質と成長投資を両立しつつ、累進配当と配当性向30%を目安に安定的・継続的に還元する。",
+    "evidencePdfPages":[16,17]
+  },
+  "nonFinancialTargets":[
+    {"metric":"海外売上高比率","target":10,"unit":"%以上","targetFiscalYear":"中計期間","evidencePdfPage":12}
+  ],
+  "definitions":[
+    {"term":"中計2027と長期目標","definition":"2029年2月期の売上600億円等が現中計終期で、売上700億円等は年度未指定の長期目標。","evidencePdfPages":[9,13]},
+    {"term":"キャッシュイン210億円","definition":"営業CF110億円と借入等100億円の合計。手元資金は金額未記載。","evidencePdfPage":16},
+    {"term":"株主還元25億円","definition":"2027年2月期～2029年2月期の3年間累計配分。","evidencePdfPage":16}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndLongTermSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T21:44:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["年度別目標表と長期目標列を原寸確認する","キャッシュアロケーションの手元資金・借入返済部分を原寸確認する","配当性向30%・累進配当・3年間還元25億円を確認する"]}
+}

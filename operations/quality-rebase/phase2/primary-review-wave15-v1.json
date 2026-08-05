@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-06T08:52:00+09:00",
+  "updatedAt": "2026-08-06T08:52:00+09:00",
+  "wave": 15,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {"order":478,"code":"1969","name":"高砂熱学工業","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":7,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-03/1969/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":497,"code":"5204","name":"石塚硝子","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":11,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/5204/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":484,"code":"2892","name":"日本食品化工","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":12,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-04/2892/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":469,"code":"8897","name":"MIRARTHホールディングス","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":14,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-02/8897/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":477,"code":"1867","name":"植木組","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":17,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-03/1867/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":485,"code":"2908","name":"フジッコ","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":18,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-04/2908/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":483,"code":"2750","name":"石光商事","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":21,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-04/2750/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":471,"code":"9072","name":"ニッコンホールディングス","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":22,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-03/9072/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":475,"code":"1379","name":"ホクト","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":24,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-03/1379/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":465,"code":"8359","name":"八十二長野銀行","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":26,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-02/8359/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]}
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 0,
+    "planRevisionOrUpdateCandidates": 10,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8037","name":"カメイ","market":"Prime","industry":"卸売業","phase2Order":381},
+  "source": {
+    "title":"長期経営方針説明資料 2026年5月 第3版",
+    "publishedDate":"2026-05-25",
+    "officialUrl":"https://www2.jpx.co.jp/disc/80370/140120260525546307.pdf",
+    "pdfSha256":"187025eeda25ec3f0e4fb1256f0cc1621a776e1ce1dbef9a9d2ed938b73263bf",
+    "pageCount":35,
+    "documentClassification":"official_long_term_management_policy_current_revision_with_three_year_capital_allocation",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2028年度","terminalFiscalYear":"2028年度・キャッシュ配分期間"},
+    "formalPlanBoundary": {
+      "policyHistory":"2024年策定、2025年更新、2026年5月第3版へ改定",
+      "longTermGoal":"203X年のありたい姿・営業利益200億円",
+      "nearTermCapitalAllocation":"2026年度～2028年度の3カ年キャッシュフローアロケーション",
+      "statement":"資料全体は長期経営方針の更新であり、営業利益200億円は年度未確定の長期目標、3カ年数値は資本配分計画として分離する。"
+    }
+  },
+  "summary":"地域密着型総合商社として、エネルギー、建設、自動車、海外・貿易、食料を強化し、M&A、新規事業、脱炭素、海外食品、DX、人的資本を通じて営業利益200億円を目指す。2026～2028年度は営業CF650～750億円等を原資に、新規投資150～200億円、維持投資350～400億円、株主還元120～170億円へ配分する。",
+  "financialTargets":[
+    {"metric":"営業利益","target":200,"unit":"億円","targetFiscalYear":"203X年・ありたい姿","baseline":"2026年3月期169.75億円","evidencePdfPages":[16,25]},
+    {"metric":"ROE","target":8,"unit":"%以上・当面目標","targetFiscalYear":"長期経営方針期間","baseline":"2026年3月期7.2%","evidencePdfPages":[24,25]},
+    {"metric":"PBR","target":1,"unit":"倍","targetFiscalYear":"長期経営方針期間","baseline":"2026年5月時点約0.6倍","evidencePdfPages":[25,26]}
+  ],
+  "strategyThemes":[
+    {"theme":"事業ポートフォリオ変革","evidencePdfPages":[6,7,8,14,15],"evidence":"主力4事業と食料、新規事業を組み合わせ、脱石油依存と利益基盤多元化を進める。"},
+    {"theme":"海外・貿易と食料の連携","evidencePdfPages":[14,17],"evidence":"北米・ASEANを中心に日本食品の輸出、現地調達、リテール、M&Aを拡大する。"},
+    {"theme":"脱炭素・インフラ・モビリティ","evidencePdfPage":14,"evidence":"再エネ、PPA、EPC、EVインフラ、モビリティ、リノベーションを強化する。"},
+    {"theme":"新規事業創出","evidencePdfPages":[20,21,22],"evidence":"建設省力化、水処理、太陽光再生、スマート農業等を事業化し、追加案件も育成する。"},
+    {"theme":"ROIC・人的資本・ガバナンス","evidencePdfPages":[24,25,30,31],"evidence":"ROICツリー、人材育成、女性活躍、AI・DX、株式報酬、ガバナンスを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_flow_allocation_ranges",
+    "period":"2026年度～2028年度・3カ年累計",
+    "cashIn":{"operatingCashFlowRange":"650～750億円","policyShareSalesRange":"50～100億円"},
+    "cashOut":{"maintenanceInvestmentRange":"350～400億円","newInvestmentRange":"150～200億円","shareholderReturnRange":"120～170億円","dividendReference":100,"dividendReferenceUnit":"億円・図表内訳値"},
+    "newBusinessInvestment":200,
+    "newBusinessInvestmentUnit":"億円規模・2026年度以降",
+    "investmentUses":["戦略的M&A","事業投資・出資","新規事業開発","新規出店","エネルギーインフラ維持","システム更改・AI導入"],
+    "policy":"営業CFと政策保有株式売却を原資に、新規投資と株主還元を加速する。レンジと規模表記を固定値へ変換しない。",
+    "evidencePdfPages":[19,20]
+  },
+  "shareholderReturnPolicy": {
+    "status":"progressive_dividend_and_step_up_payout_ratio",
+    "payoutRatioTarget":40,
+    "payoutRatioTargetUnit":"%目安・段階的",
+    "progressiveDividend":true,
+    "fy2027DividendForecast":130,
+    "fy2027DividendForecastUnit":"円/株",
+    "shareholderBenefitIntroduced":true,
+    "buybackPolicy":"資本効率と株価を踏まえ検討・実施",
+    "policy":"累進配当を基本に、配当性向を30%目安から段階的に40%目安へ引き上げ、優待と自己株式取得も組み合わせる。",
+    "evidencePdfPages":[24,25,27,28]
+  },
+  "nonFinancialTargets":[
+    {"metric":"次世代アグリ事業規模","target":1,"unit":"ha・将来規模","targetFiscalYear":"年度未指定","evidencePdfPage":22}
+  ],
+  "definitions":[
+    {"term":"営業利益200億円","definition":"203X年のありたい姿であり、2028年度終期目標ではない。","evidencePdfPage":16},
+    {"term":"新規事業投資200億円規模","definition":"2026年度以降の新規事業向け予定額で、3カ年新規投資150～200億円レンジとの関係は図表・説明上重複可能性があるため単純加算しない。","evidencePdfPages":[19,20]},
+    {"term":"株主還元120～170億円","definition":"2026～2028年度3カ年累計のレンジ。配当100億円は図表内訳値として扱う。","evidencePdfPage":19}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"longTermPolicyAndThreeYearAllocationSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"rangesPreserved":true,"overlappingInvestmentAmountsNotAdded":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T22:12:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["営業利益200億円の203X表記を原寸確認する","3カ年キャッシュ配分の650～750、50～100、350～400、150～200、120～170億円を確認する","新規事業200億円規模と3カ年新規投資レンジを重複加算していないことを確認する","累進配当・配当性向40%目安・年間130円・優待制度を確認する"]}
+}

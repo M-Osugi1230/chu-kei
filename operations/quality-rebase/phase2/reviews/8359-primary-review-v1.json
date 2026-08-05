@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8359","name":"八十二長野銀行","market":"Prime","industry":"銀行業","phase2Order":465},
+  "source": {
+    "title":"八十二グループ 第1次中期経営計画 2026年度～2028年度",
+    "publishedDate":"2026-02-20",
+    "officialUrl":"https://www2.jpx.co.jp/disc/83590/140120260219565520.pdf",
+    "pdfSha256":"8df199db7f118c7dfac9e19e6a7492bddb94896cb81654ef361fa3943cf2fe3b",
+    "pageCount":26,
+    "documentClassification":"formal_management_plan_current_2026_to_2028_first_plan_after_integration",
+    "period":{"startFiscalYear":"2026年度・2027年3月期","endFiscalYear":"2028年度・2029年3月期","terminalFiscalYear":"2028年度・2029年3月期"},
+    "formalPlanBoundary": {
+      "previousFramework":"中期経営ビジョン2021・統合前からの目標・施策",
+      "currentPlan":"八十二グループ第1次中期経営計画・2026年度～2028年度",
+      "secondPlan":"2029年度～2031年度",
+      "thirdPlan":"2032年度～2035年度",
+      "longTermVision":"長期ビジョン2035『魅力ある未来を地域と共に創る』",
+      "statement":"旧ビジョンの実績・見込、第1次中計の目標、2035年の方向性を分離する。"
+    }
+  },
+  "summary":"総合コンサルティンググループへの飛躍を掲げ、法人・個人支援、街づくり、市場運用、人材、DX・AI、事業領域拡大、リスク・サイバー・環境対応を強化する。2029年3月期に連結純利益850億円以上、ROE8%以上を目指す。",
+  "financialTargets":[
+    {"metric":"連結当期純利益","target":850,"unit":"億円以上","targetFiscalYear":"2028年度・2029年3月期","baseline":"2025年度予想550億円","evidencePdfPages":[1,20]},
+    {"metric":"連結ROE","target":8,"unit":"%以上","targetFiscalYear":"2028年度・2029年3月期","baseline":"2025年度予想5.5%","evidencePdfPages":[1,19,20,23]},
+    {"metric":"預金・NCD平均残高","target":100000,"unit":"億円","targetFiscalYear":"2028年度","baselineChange":"2025年度見込比+2,800億円","evidencePdfPages":[1,20]},
+    {"metric":"貸出金平均残高","target":71000,"unit":"億円","targetFiscalYear":"2028年度","baselineChange":"2025年度見込比+4,500億円","evidencePdfPages":[1,20]},
+    {"metric":"資金利益","target":1300,"unit":"億円","targetFiscalYear":"2028年度","baselineChange":"2025年度見込比+200億円","evidencePdfPage":20},
+    {"metric":"役務関連利益","target":210,"unit":"億円","targetFiscalYear":"2028年度","baselineChange":"2025年度見込比+40億円","evidencePdfPages":[1,20,23]},
+    {"metric":"関連会社最終利益合計","target":40,"unit":"億円","targetFiscalYear":"2028年度","baselineChange":"2025年度見込比+25億円","evidencePdfPage":20},
+    {"metric":"CET1比率","target":12.5,"unit":"%程度・有価証券等評価差額金除く","targetFiscalYear":"2028年度","baseline":"2024年度12.3%","evidencePdfPage":22}
+  ],
+  "strategyThemes":[
+    {"theme":"法人・個人コンサルティング","evidencePdfPages":[9,10,11,12,13,23],"evidence":"M&A、承継、IT、サステナ、海外、資産形成、信託、ライフサポートを拡大する。"},
+    {"theme":"街づくり・市場運用","evidencePdfPages":[14,15,23],"evidence":"地域プロジェクト、ストラクチャードファイナンス、有価証券運用を強化する。"},
+    {"theme":"人的資本","evidencePdfPages":[16,23],"evidence":"戦略企画、ソリューション営業、成長地域、市場系へ250名を重点配置する。"},
+    {"theme":"DX・AI","evidencePdfPages":[16,17],"evidence":"データ・AI、業務変革、顧客接点、地域企業の導入支援を強化する。"},
+    {"theme":"事業領域・経営基盤","evidencePdfPages":[17,18],"evidence":"海外、人材、リース、電力、不動産、新規事業と、リスク・サイバー・自然資本対応を拡大する。"}
+  ],
+  "capitalPolicy": {
+    "status":"bank_regulatory_capital_allocation_with_strategic_buffer",
+    "period":"2026年度～2028年度",
+    "cet1Target":12.5,
+    "cet1TargetUnit":"%程度・有価証券等評価差額金除く",
+    "minimumDistributionConstraint":10.5,
+    "minimumDistributionConstraintUnit":"%・国際統一基準8.0%＋資本保全バッファ2.5%",
+    "strategicAndDisasterBuffer":2.0,
+    "strategicAndDisasterBufferUnit":"%程度",
+    "strategicInvestmentCapacityApprox":1500,
+    "strategicInvestmentCapacityApproxUnit":"億円程度・M&A・戦略投資・自然災害リスクへの備え",
+    "capitalActions":["利益蓄積","リスクアセット増加","株式売却益","資本控除・資産圧縮","株主還元"],
+    "policy":"CET1比率12.5%程度を目安に、10.5%の最低ラインと2%程度の攻守バッファを確保しながら成長投資・還元を行う。",
+    "evidencePdfPage":22
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_floor_and_flexible_buybacks",
+    "payoutRatioFloor":40,
+    "payoutRatioFloorUnit":"%以上を目安・連結",
+    "dividendPolicy":"配当金の維持または増加を目指す",
+    "buybackPolicy":"市場環境等を考慮し機動的に実施",
+    "fy2025DividendForecast":50,
+    "fy2025DividendForecastUnit":"円/株・記念配当5円を含む",
+    "policy":"連結配当性向40%以上を目安に維持・増配し、自己株式取得を組み合わせる。",
+    "evidencePdfPages":[1,21]
+  },
+  "nonFinancialTargets":[
+    {"metric":"総合コンサルティング支援件数","target":300000,"unit":"件・3年間累計","targetFiscalYear":"2026～2028年度","evidencePdfPages":[1,8,23]},
+    {"metric":"成長実現支援","target":10000,"unit":"件・3年間累計","targetFiscalYear":"2026～2028年度","evidencePdfPage":1},
+    {"metric":"生産性向上支援","target":20000,"unit":"件・3年間累計","targetFiscalYear":"2026～2028年度","evidencePdfPage":1},
+    {"metric":"資産を育てる・守る支援","target":100000,"unit":"件・3年間累計","targetFiscalYear":"2026～2028年度","evidencePdfPage":1},
+    {"metric":"資産を活かす支援","target":10000,"unit":"件・3年間累計","targetFiscalYear":"2026～2028年度","evidencePdfPage":1},
+    {"metric":"デジタルでつながる支援","target":160000,"unit":"件・3年間累計","targetFiscalYear":"2026～2028年度","evidencePdfPage":1},
+    {"metric":"Scope1・2排出量","target":80,"unit":"%削減・2019年度比","targetFiscalYear":"2028年度・2030年度目標を前倒し","baseline":"2025年度見込76.0%削減","evidencePdfPages":[1,19]},
+    {"metric":"サステナブルファイナンス実行額","target":1.5,"unit":"兆円・2021年度から累計","targetFiscalYear":"2028年度・前倒し","environmentalPortion":1.0,"environmentalPortionUnit":"兆円","evidencePdfPages":[1,19]},
+    {"metric":"長野県人口の社会増","target":"社会増の継続","unit":"状態目標","targetFiscalYear":"中計期間","evidencePdfPages":[1,19]},
+    {"metric":"戦略重点配置","target":250,"unit":"名増・2025年度比","targetFiscalYear":"中計期間","evidencePdfPage":23}
+  ],
+  "definitions":[
+    {"term":"CET1比率12.5%程度","definition":"有価証券等評価差額金を除く内部管理指標。10.5%最低ラインに2%程度の攻守バッファを加える。","evidencePdfPage":22},
+    {"term":"戦略投資余力1,500億円程度","definition":"M&A・戦略投資と自然災害等への備えを含む資本バッファの金額目安。確定投資予算ではない。","evidencePdfPage":22},
+    {"term":"支援件数30万件","definition":"法人・個人・デジタルの5区分合計で、3年間累計。","evidencePdfPage":1},
+    {"term":"第1次中計","definition":"長期ビジョン2035に向けた最初の3年間であり、2035年までの全期間計画ではない。","evidencePdfPage":7}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndLongTermSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"regulatoryCapitalDefinitionsSeparated":true,"strategicCapacityNotTreatedAsCommittedSpend":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T10:57:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年3月期純利益850・ROE8・預金10兆・貸出7.1兆・役務210を確認する","CET1 12.5%、最低10.5%、バッファ2%、1,500億円程度を原寸確認する","配当性向40%以上・維持増配・機動的自己株取得を確認する","支援件数30万件の5区分合計を確認する","CO2 80%削減・サステナファイナンス1.5兆円の前倒しを確認する"]}
+}

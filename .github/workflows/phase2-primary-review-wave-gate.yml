@@ -58,12 +58,14 @@ jobs:
           - '13'
           - '14'
           - '15'
+          - '16'
     steps:
       - name: Checkout target branch
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses:
+          actions/setup-python@v5
         with:
           python-version: '3.12'
 

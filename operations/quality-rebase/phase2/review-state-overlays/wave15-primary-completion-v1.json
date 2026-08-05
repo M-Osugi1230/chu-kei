@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-06T11:02:00+09:00",
+  "wave": 15,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave15-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "Wave15の10社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 138,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 312,
+    "primaryReviewWavesAssigned": 15,
+    "primaryReviewCompaniesAssignedTotal": 150
+  },
+  "companyCompletions": [
+    {"order":465,"code":"8359","name":"八十二長野銀行","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8359-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028_first_plan_after_integration"},
+    {"order":469,"code":"8897","name":"MIRARTHホールディングス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8897-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_strategy_capital_and_return_update"},
+    {"order":471,"code":"9072","name":"ニッコンホールディングス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9072-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028"},
+    {"order":475,"code":"1379","name":"ホクト","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/1379-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_to_2029_3_replacing_underperformed_prior_plan"},
+    {"order":477,"code":"1867","name":"植木組","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/1867-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2025_to_2027"},
+    {"order":478,"code":"1969","name":"高砂熱学工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/1969-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_quantitative_and_capital_allocation_revision"},
+    {"order":483,"code":"2750","name":"石光商事","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2750-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2025_to_2027"},
+    {"order":484,"code":"2892","name":"日本食品化工","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2892-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2025_to_2027"},
+    {"order":485,"code":"2908","name":"フジッコ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2908-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2025_to_2027_with_2030_vision"},
+    {"order":497,"code":"5204","name":"石塚硝子","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5204-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_target_timing_and_capital_policy_update"}
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 10,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 10,
+    "primaryReviewComplete": 148,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 302,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

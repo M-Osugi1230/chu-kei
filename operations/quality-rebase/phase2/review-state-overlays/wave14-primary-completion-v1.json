@@ -1,10 +1,10 @@
 {
   "schemaVersion": "phase2-review-state-overlay-v1",
-  "createdAt": "2026-08-05T23:31:00+09:00",
+  "createdAt": "2026-08-06T08:38:00+09:00",
   "wave": 14,
   "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave14-v1.json",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
-  "reason": "Wave14の2社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "reason": "Wave14の10社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
   "expectedBase": {
     "wavePrimaryReviewComplete": 0,
     "waveIndependentReviewReady": 0,
@@ -15,16 +15,24 @@
     "primaryReviewCompaniesAssignedTotal": 140
   },
   "companyCompletions": [
+    {"order":387,"code":"8304","name":"あおぞら銀行","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8304-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_progress_update_with_annual_forecast"},
+    {"order":389,"code":"8393","name":"宮崎銀行","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8393-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028"},
+    {"order":391,"code":"8844","name":"コスモスイニシア","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8844-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028_with_2035_vision"},
     {"order":392,"code":"9044","name":"NANKAI","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9044-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_quantitative_target_revision"},
-    {"order":394,"code":"9142","name":"九州旅客鉄道","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9142-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_quantitative_and_cash_allocation_update"}
+    {"order":393,"code":"9045","name":"京阪ホールディングス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9045-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028_with_updated_2030_strategy"},
+    {"order":394,"code":"9142","name":"九州旅客鉄道","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9142-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_quantitative_and_cash_allocation_update"},
+    {"order":396,"code":"9468","name":"KADOKAWA","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9468-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2027_3_to_2032_3_replacing_prior_plan"},
+    {"order":397,"code":"141A","name":"トライアルホールディングス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/141A-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2027_6_to_2029_6_post_seiyu_integration"},
+    {"order":399,"code":"2162","name":"nms ホールディングス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2162-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028_reconstruction_phase"},
+    {"order":403,"code":"2461","name":"ファンコミュニケーションズ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2461-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_partial_revision"}
   ],
   "effectiveCounts": {
-    "wavePrimaryReviewComplete": 2,
+    "wavePrimaryReviewComplete": 10,
     "waveIndependentReviewReady": 0,
-    "waveIndependentVisualReviewPending": 2,
-    "primaryReviewComplete": 130,
+    "waveIndependentVisualReviewPending": 10,
+    "primaryReviewComplete": 138,
     "independentReviewReady": 61,
-    "remainingPrimaryReviews": 320,
+    "remainingPrimaryReviews": 312,
     "deepVerificationApproved": 0
   },
   "automaticFactCompletionAllowed": false,

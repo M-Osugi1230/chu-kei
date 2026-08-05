@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8331","name":"千葉銀行","market":"Prime","industry":"銀行業","phase2Order":463},
+  "source": {
+    "title":"第16次中期経営計画 エンゲージメントバンクグループ ～フェーズ2～",
+    "publishedDate":"2026-03-25",
+    "officialUrl":"https://www2.jpx.co.jp/disc/83310/140120260325588131.pdf",
+    "pdfSha256":"1239cdb0d97e864661a407c0ce50555747102e48f5334eac1e2c8d763767a483",
+    "pageCount":21,
+    "documentClassification":"formal_management_plan_current_2026_to_2028_post_integration_group_basis",
+    "period":{"startFiscalYear":"2026年度・2027年3月期","endFiscalYear":"2028年度・2029年3月期","terminalFiscalYear":"2028年度・2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"前中期経営計画 エンゲージメントバンクグループ・フェーズ1",
+      "currentPlan":"第16次中期経営計画・フェーズ2・2026年度～2028年度",
+      "scopeChange":"主要財務目標は経営統合後の新金融グループ合算値",
+      "statement":"前中計の単独グループ実績・進捗と、新金融グループ合算の現中計目標を分離する。"
+    }
+  },
+  "summary":"人×AIによる生産性向上を軸に、顧客体験、既存事業、新事業、DX・AI、GX、WX、アライアンス、グループガバナンスを強化する。2028年度に連結純利益1,400億円以上、純資産ベースROE11%程度、CET1比率10.5～11.5%、OHR40%程度を目指す。",
+  "financialTargets":[
+    {"metric":"連結ROE","target":11,"unit":"%程度・純資産ベース","targetFiscalYear":"2028年度","scope":"経営統合後の新金融グループ合算値","evidencePdfPages":[1,7,8,9]},
+    {"metric":"親会社株主に帰属する当期純利益","target":1400,"unit":"億円以上","targetFiscalYear":"2028年度","scope":"経営統合後の新金融グループ合算値","evidencePdfPages":[1,7,8,9]},
+    {"metric":"連結普通株式等Tier1比率","targetRange":"10.5～11.5","unit":"%・バーゼルIII最終化完全実施、有価証券評価差額金除く","targetFiscalYear":"2028年度","evidencePdfPages":[1,7,9]},
+    {"metric":"連結OHR","target":40,"unit":"%程度","targetFiscalYear":"2028年度","scope":"経営統合後の新金融グループ合算値","evidencePdfPages":[1,7]},
+    {"metric":"政策金利前提","target":1.0,"unit":"%・2026年度内の利上げ前提","targetFiscalYear":"中計前提","evidencePdfPage":1}
+  ],
+  "previousPlanResultsSeparated":[
+    {"metric":"連結ROE","target":"7%台前半・株主資本ベース","forecast":"8%台半ば","unit":"%","fiscalYear":"2025年度","evidencePdfPage":1},
+    {"metric":"親会社株主に帰属する当期純利益","target":750,"forecast":900,"unit":"億円","fiscalYear":"2025年度","evidencePdfPage":1},
+    {"metric":"連結業務純益","target":1200,"forecast":1252,"unit":"億円","fiscalYear":"2025年度","evidencePdfPage":1},
+    {"metric":"連結普通株式等Tier1比率","targetRange":"10.5～11.5","forecast":11.83,"unit":"%","fiscalYear":"2025年度","evidencePdfPage":1},
+    {"metric":"連結OHR","target":45,"forecast":42.7,"unit":"%程度・予想は%","fiscalYear":"2025年度","evidencePdfPage":1}
+  ],
+  "strategyThemes":[
+    {"theme":"最高の顧客体験","evidencePdfPages":[1,7,12],"evidence":"データ、パーソナライズ、リアル・リモート・デジタルの最適チャネルを提供する。"},
+    {"theme":"既存事業と新事業","evidencePdfPages":[1,2,7],"evidence":"ソリューションの質向上と、新たな事業領域・地域エコシステムを拡大する。"},
+    {"theme":"DX・AI","evidencePdfPages":[1,11,12],"evidence":"AIエージェント、内製・外販、AI人材、アプリ、デジタル決済、地域企業支援を強化する。"},
+    {"theme":"GX・WX","evidencePdfPages":[1,11,13,14],"evidence":"再エネ、サステナブルファイナンス、脱炭素、人材・承継支援を拡大する。"},
+    {"theme":"アライアンス・グループ統治","evidencePdfPages":[1,2,7],"evidence":"他行・異業種との共同化、新サービス、統合シナジー、リスク管理を強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"bank_capital_policy_with_target_range_and_strategic_use",
+    "period":"2026年度～2028年度",
+    "cet1TargetRange":"10.5～11.5%",
+    "cet1Definition":"バーゼルIII最終化完全実施ベース・有価証券評価差額金除く",
+    "startingCet1Reference":11.83,
+    "startingCet1ReferenceUnit":"%・2025年12月時点",
+    "stressBufferApprox":0.7,
+    "stressBufferApproxUnit":"%程度",
+    "capitalUses":["合理的なリスクテイク","インオーガニック投資","配当","自己株式取得","統合影響の吸収"],
+    "subordinatedDebtPolicy":"総自己資本比率の観点から劣後債発行を検討",
+    "policy":"CET1比率を10.5～11.5%へ収束させ、RAFに基づくリスクアセット増加、戦略投資、還元、株式数コントロールを両立する。投資総額・買戻し総額は未確定のため推計しない。",
+    "evidencePdfPage":9
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_floor_and_flexible_buybacks",
+    "payoutRatioFloor":40,
+    "payoutRatioFloorUnit":"%以上を目安・連結純利益ベース",
+    "dividendPolicy":"利益成長による着実な増配",
+    "buybackPolicy":"財務健全性を維持し必要に応じ機動的に実施",
+    "fy2025PayoutReference":40,
+    "fy2025PayoutReferenceUnit":"%程度",
+    "recentBuyback":150,
+    "recentBuybackUnit":"億円・2026年3月期還元施策として決議",
+    "policy":"配当性向40%以上を目安に増配し、統合後の株式総数と資本効率を自己株式取得でコントロールする。",
+    "evidencePdfPages":[1,9,10]
+  },
+  "nonFinancialTargets":[
+    {"metric":"アプリ登録者数","target":200,"unit":"万人","targetFiscalYear":"2028年度","baseline":"2025年度着地見込146万人","evidencePdfPages":[11,12]},
+    {"metric":"AI労働力創出","target":2000,"unit":"人分","targetFiscalYear":"2028年度","evidencePdfPages":[11,12]},
+    {"metric":"AIエージェント群創出数","target":50,"unit":"件","targetFiscalYear":"2028年度","evidencePdfPages":[11,12]},
+    {"metric":"AI投資","target":50,"unit":"億円","targetFiscalYear":"中計期間","evidencePdfPage":12},
+    {"metric":"グループカード会員数","target":122,"unit":"万人","targetFiscalYear":"2028年度","baseline":"前中計107万人","evidencePdfPage":11},
+    {"metric":"グループ加盟店数","target":64,"unit":"千店舗","targetFiscalYear":"2028年度","baseline":"前中計54千店舗","evidencePdfPage":11},
+    {"metric":"再エネ発電容量","target":50,"unit":"MW","targetFiscalYear":"2028年度","baseline":"前中計9.4MW","evidencePdfPages":[11,13]},
+    {"metric":"サステナブルファイナンス累計実行額","target":3.55,"unit":"兆円","targetFiscalYear":"2028年度","baseline":"前中計2.32兆円","evidencePdfPages":[11,13]},
+    {"metric":"人材紹介業務成約件数","target":260,"unit":"件・単年ベース","targetFiscalYear":"2028年度","baseline":"2025年度見込140件","evidencePdfPages":[11,14]},
+    {"metric":"経営承継・M&A成約件数","target":336,"unit":"件・内訳はM&A36、承継300","targetFiscalYear":"2028年度","baseline":"2025年度249件","evidencePdfPages":[11,14]}
+  ],
+  "definitions":[
+    {"term":"ROEのベース変更","definition":"前中計の表示は株主資本ベース、新中計は純資産ベースであり単純比較しない。","evidencePdfPages":[1,7]},
+    {"term":"新金融グループ合算値","definition":"主要財務目標は経営統合後の新金融グループを対象とする。","evidencePdfPages":[1,7]},
+    {"term":"CET1比率","definition":"有価証券評価差額金を除くバーゼルIII最終化完全実施ベース。","evidencePdfPages":[1,9]},
+    {"term":"経営承継・M&A336件","definition":"2028年度の単年KPIで、M&A36件と経営承継300件の合計。","evidencePdfPages":[11,14]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousAndCurrentScopeSeparated":true,"roeDefinitionsSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"bankRegulatoryRatiosSeparated":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T11:43:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["純利益1,400億円・ROE11%・CET1 10.5～11.5%・OHR40%を確認する","新金融グループ合算値と前中計単独値を分離確認する","ROEの株主資本ベースと純資産ベースを確認する","配当性向40%以上・150億円自己株取得の期間を確認する","AI2,000人分・50件・50億円、アプリ200万人等のKPIを確認する"]}
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8844","name":"コスモスイニシア","market":"Standard","industry":"不動産業","phase2Order":391},
+  "source": {
+    "title":"長期ビジョン Vision2035・中期経営計画2028",
+    "publishedDate":"2026-05-12",
+    "officialUrl":"https://www2.jpx.co.jp/disc/88440/140120260512525755.pdf",
+    "pdfSha256":"35414786d9cdfa864bcd3644f93e2a04c3a024354e74df1d1fe8b71add6db847",
+    "pageCount":32,
+    "documentClassification":"formal_management_plan_current_2026_to_2028_with_2035_vision",
+    "period":{"startFiscalYear":"2026年度・2027年3月期","endFiscalYear":"2028年度・2029年3月期","terminalFiscalYear":"2028年度・2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"中期経営計画2026・2023年3月期～2027年3月期、1年前倒し達成",
+      "currentPlan":"中期経営計画2028・2027年3月期～2029年3月期",
+      "longTermVision":"Vision2035・2035年度経常利益300億円、ROE15%",
+      "statement":"前中計実績、現中計目標、Vision2035を分離する。"
+    }
+  },
+  "summary":"不動産販売の成長に加え、ホテル運営、賃貸・運営等のストック型ビジネスを拡充し、デジタル、新規事業、M&A、海外、人材へ投資する。2029年3月期に売上高2,200億円、経常利益140億円、ROE13%、自己資本比率30%程度を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":2200,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期1,492億円","evidencePdfPage":10},
+    {"metric":"経常利益","target":140,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"中計2026実績112億円","evidencePdfPages":[8,10]},
+    {"metric":"ROE","target":13,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"中計2026実績15.5%","evidencePdfPages":[8,10]},
+    {"metric":"自己資本比率","target":30,"unit":"%程度","targetFiscalYear":"2029年3月期","evidencePdfPage":10},
+    {"metric":"住宅販売事業売上高","target":620,"unit":"億円","targetFiscalYear":"2029年3月期","evidencePdfPage":18},
+    {"metric":"収益不動産販売事業売上高","target":840,"unit":"億円","targetFiscalYear":"2029年3月期","evidencePdfPage":19},
+    {"metric":"ホテル運営事業売上高","target":280,"unit":"億円","targetFiscalYear":"2029年3月期","evidencePdfPage":20}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"経常利益","target":300,"unit":"億円","targetFiscalYear":"2035年度","classification":"long_term_vision","evidencePdfPages":[4,8]},
+    {"metric":"ROE","target":15,"unit":"%","targetFiscalYear":"2035年度","classification":"long_term_vision","evidencePdfPages":[4,8]}
+  ],
+  "strategyThemes":[
+    {"theme":"事業ポートフォリオ再構築","evidencePdfPages":[8,9,17],"evidence":"フロー型不動産販売とストック型ホテル・賃貸運営を組み合わせる。"},
+    {"theme":"運営コンテンツ拡充","evidencePdfPages":[17,20],"evidence":"MIMARU、MID POINT、BIZcomfort、nears等を拡大する。"},
+    {"theme":"デジタル・新規事業・M&A","evidencePdfPages":[11,12,13,17],"evidence":"業務変革、顧客体験、データ、スタートアップ連携、新規事業を強化する。"},
+    {"theme":"海外事業","evidencePdfPages":[11,23],"evidence":"豪州、ベトナム、北米で住宅・賃貸住宅事業を拡大する。"},
+    {"theme":"人的資本・サステナビリティ","evidencePdfPages":[14,25],"evidence":"挑戦、人材育成、多様性、次世代、防災、環境、ガバナンスを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_gross_investment_with_visual_category_mapping_pending",
+    "period":"中期経営計画2028期間",
+    "grossInvestment":3700,
+    "grossInvestmentUnit":"億円",
+    "incomePropertyInvestment":2100,
+    "incomePropertyInvestmentUnit":"億円",
+    "overseasInvestment":200,
+    "overseasInvestmentUnit":"億円",
+    "diagramValuesAwaitingIndependentMapping":[60,100,180,550],
+    "diagramValuesUnit":"億円",
+    "diagramCategories":["販売用不動産純増額","賃貸資産","デジタル・新規・M&A","株主還元"],
+    "policy":"既存不動産、賃貸資産、デジタル・新規、海外へ成長投資する。図表中の60・100・180・550億円はテキスト抽出順のみではカテゴリ対応を確定できないため、用途別確定額として採用しない。",
+    "evidencePdfPage":11
+  },
+  "shareholderReturnPolicy": {
+    "status":"step_up_payout_ratio_and_shareholder_benefit",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%・2029年3月期",
+    "fy2027DividendForecast":53,
+    "fy2027DividendForecastUnit":"円/株・資料予想値",
+    "shareholderBenefitIntroduced":true,
+    "policy":"成長・戦略投資を優先しつつ、最終年度まで段階的に配当性向を30%へ引き上げる。2026年6月から株主優待を導入する。",
+    "evidencePdfPages":[11,15,28,29]
+  },
+  "nonFinancialTargets":[
+    {"metric":"MIMARU運営室数","target":3000,"unit":"室","targetFiscalYear":"2030年","evidencePdfPages":[17,20]},
+    {"metric":"次世代・防災投資予算枠","target":2,"unit":"当期純利益比%程度","targetFiscalYear":"継続方針","evidencePdfPages":[6,25]}
+  ],
+  "definitions":[
+    {"term":"中計2026実績","definition":"前計画を1年前倒しで達成した2026年3月期実績であり、現中計目標ではない。","evidencePdfPage":6},
+    {"term":"キャピタルアロケーション図","definition":"総投資3,700億円、収益不動産2,100億円、海外200億円は明示。60・100・180・550億円のカテゴリ対応は原寸確認待ち。","evidencePdfPage":11},
+    {"term":"新リース会計基準","definition":"資料の業績予想には変更影響を反映していない。","evidencePdfPage":30}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndLongTermSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"uncertainFigureOrderNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"newLeaseAccountingCaveatCaptured":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T07:34:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年3月期2,200・140・13・30の配置を確認する","2035年度300・15を確認する","キャッシュ配分図の60・100・180・550億円のカテゴリ対応を原寸確認する","配当性向30%・配当53円・優待導入を確認する"]}
+}

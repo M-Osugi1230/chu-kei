@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-05T23:31:00+09:00",
+  "wave": 14,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave14-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "Wave14の2社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 128,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 322,
+    "primaryReviewWavesAssigned": 14,
+    "primaryReviewCompaniesAssignedTotal": 140
+  },
+  "companyCompletions": [
+    {"order":392,"code":"9044","name":"NANKAI","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9044-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_quantitative_target_revision"},
+    {"order":394,"code":"9142","name":"九州旅客鉄道","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9142-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_quantitative_and_cash_allocation_update"}
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 2,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 2,
+    "primaryReviewComplete": 130,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 320,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -1,10 +1,10 @@
 {
   "schemaVersion": "phase2-review-state-overlay-v1",
-  "createdAt": "2026-08-06T11:02:00+09:00",
+  "createdAt": "2026-08-06T11:22:00+09:00",
   "wave": 15,
   "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave15-v1.json",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
-  "reason": "Wave15の10社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "reason": "Wave15の10社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。Wave16の10社を正式に次工程へ接続する。",
   "expectedBase": {
     "wavePrimaryReviewComplete": 0,
     "waveIndependentReviewReady": 0,
@@ -34,6 +34,16 @@
     "independentReviewReady": 61,
     "remainingPrimaryReviews": 302,
     "deepVerificationApproved": 0
+  },
+  "nextWaveAssignment": {
+    "wave": 16,
+    "assigned": 10,
+    "completionCount": 0,
+    "remainingCount": 10,
+    "status": "in_progress",
+    "file": "operations/quality-rebase/phase2/primary-review-wave16-v1.json",
+    "effectiveWavesAssigned": 16,
+    "effectiveCompaniesAssignedTotal": 160
   },
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,

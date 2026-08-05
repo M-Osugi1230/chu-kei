@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8078","name":"阪和興業","market":"Prime","industry":"卸売業","phase2Order":382},
+  "source": {
+    "title":"中期経営計画2028 Go Beyond ～殻を打ち破れ～",
+    "publishedDate":"2026-05-12",
+    "officialUrl":"https://www2.jpx.co.jp/disc/80780/140120260511522394.pdf",
+    "pdfSha256":"9dbe80d31dfd6247227585b160e1a9b3241d1c04ea2dcecba2b011dc5cd2c640",
+    "pageCount":30,
+    "documentClassification":"formal_management_plan_current_2026_to_2028",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2028年度","terminalFiscalYear":"2028年度"},
+    "formalPlanBoundary": {
+      "previousPlan":"中期経営計画2025",
+      "currentPlan":"中期経営計画2028・2026年度～2028年度",
+      "statement":"前中計の実績・未達項目と、新中計2028の目標・配分を分離する。"
+    }
+  },
+  "summary":"財務基盤とリスク管理を土台に、サプライチェーン創造型商社へ転換する。事業ポートフォリオ再構築、欧米・アジア展開、付加価値事業、攻めの投資、人的資本、DXを推進し、2028年度に経常利益750億円、ROE12%以上、Net DER1倍程度を目指す。",
+  "financialTargets":[
+    {"metric":"経常利益","target":750,"unit":"億円","targetFiscalYear":"2028年度","baseline":"前中計最終年度実績522億円","evidencePdfPage":12},
+    {"metric":"ROE","target":12,"unit":"%以上","targetFiscalYear":"中計期間・最終年度目標","baseline":"前中計期間平均12.8%","evidencePdfPages":[3,12]},
+    {"metric":"Net DER","target":1.0,"unit":"倍程度","targetFiscalYear":"2028年度","baseline":"前中計最終年度0.6倍","evidencePdfPages":[3,12,13]},
+    {"metric":"グローバル鉄鋼取扱重量","target":1700,"unit":"万トン","targetFiscalYear":"2028年度","baseline":"前中計最終年度実績1,433万トン","evidencePdfPages":[3,12]},
+    {"metric":"PBR","target":1,"unit":"倍以上","targetFiscalYear":"中計期間","evidencePdfPage":11},
+    {"metric":"海外売上高比率","target":50,"unit":"%・将来的目標","targetFiscalYear":"将来像","baseline":"2026年3月期38%","evidencePdfPage":15}
+  ],
+  "strategyThemes":[
+    {"theme":"サプライチェーン創造型商社","evidencePdfPages":[8,17],"evidence":"トレーディングに加え、投資・事業経営・加工・エンジニアリングで供給網を設計する。"},
+    {"theme":"事業ポートフォリオ再構築","evidencePdfPages":[16,17],"evidence":"基盤、成長牽引、次世代、再構築領域を評価し、資産入替と重点配分を進める。"},
+    {"theme":"グローバル展開","evidencePdfPage":15,"evidence":"国内50%・海外50%を将来像とし、欧米M&Aとアジアのインサイダー化を進める。"},
+    {"theme":"ユーザー・社会課題解決型ビジネス","evidencePdfPage":17,"evidence":"電池、環境原料、再エネ、エンジニアリング、加工ソリューションを強化する。"},
+    {"theme":"人的資本・DX・ガバナンス","evidencePdfPages":[5,8,11],"evidence":"人材最適配置、AI・データ活用、投融資管理、権限委譲、サステナビリティ管理を強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_capital_allocation",
+    "period":"2026年度～2028年度・中計期間累計",
+    "baseOperatingCashFlow":1700,
+    "baseOperatingCashFlowUnit":"億円",
+    "investmentTotal":1600,
+    "investmentTotalUnit":"億円",
+    "growthInvestment":1200,
+    "growthInvestmentUnit":"億円程度",
+    "groupOptimizationInvestment":400,
+    "groupOptimizationInvestmentUnit":"億円程度",
+    "shareholderReturn":550,
+    "shareholderReturnUnit":"億円",
+    "financingPolicy":"Net DER1.0倍程度まで規律ある有利子負債活用。信用格付けA格を維持。",
+    "assetRotationPolicy":"政策保有株式は、オフテイク権を有する銘柄を除き連結純資産比10%を目標に縮減。",
+    "investmentUses":["M&A","設備投資","成長分野","グループ最適化","欧米戦略","加工・エンジニアリング"],
+    "evidencePdfPage":13
+  },
+  "shareholderReturnPolicy": {
+    "status":"progressive_dividend_doe_floor_and_total_payout_target",
+    "doeFloor":3.5,
+    "doeFloorUnit":"%",
+    "totalPayoutRatioTarget":40,
+    "totalPayoutRatioTargetUnit":"%程度",
+    "progressiveDividend":true,
+    "buybackPolicy":"機動的かつ継続的に実施",
+    "threeYearReturnAllocation":550,
+    "threeYearReturnAllocationUnit":"億円",
+    "policy":"DOE下限を2.5%から3.5%へ引き上げ、総還元性向40%程度を新設し、累進配当と自己株式取得を組み合わせる。",
+    "evidencePdfPages":[12,13,14]
+  },
+  "nonFinancialTargets":[
+    {"metric":"海外売上高比率","target":50,"unit":"%","targetFiscalYear":"将来的目標","evidencePdfPage":15},
+    {"metric":"政策保有株式比率","target":10,"unit":"連結純資産比%・一部除外銘柄あり","targetFiscalYear":"中計期間","evidencePdfPages":[11,13]}
+  ],
+  "definitions":[
+    {"term":"投融資枠1,600億円","definition":"成長投資1,200億円程度とグループ最適化投資400億円程度の中計3年累計。","evidencePdfPages":[12,13]},
+    {"term":"株主還元550億円","definition":"中計期間累計のキャッシュアウト配分で、DOE・総還元性向方針とは別の金額枠。","evidencePdfPage":13},
+    {"term":"海外売上高比率50%","definition":"将来的な事業構成目標であり、2028年度の確定財務目標としては記載されていない。","evidencePdfPage":15}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousAndCurrentPlanSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"undisclosedAmountsNotInferred":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T22:22:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["定量目標750・1,700・12・1.0・1,600の配置を原寸確認する","キャッシュ配分1,700・1,200・400・550億円を確認する","DOE3.5%下限・総還元性向40%程度・累進配当を確認する","海外売上高比率50%が将来像であることを確認する"]}
+}

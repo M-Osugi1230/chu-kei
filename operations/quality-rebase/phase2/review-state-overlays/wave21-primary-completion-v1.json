@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-07T02:24:00+09:00",
+  "wave": 21,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave21-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
+  "reason": "Wave21の10社について正式中計・計画更新資料の全文、計画境界、主要数値、資本政策、株主還元、項目別証跡の一次レビューを完了した。独立レビューと残存図表確認は未完了のため、独立レビュー準備数には含めない。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 198,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 252,
+    "primaryReviewWavesAssigned": 21,
+    "primaryReviewCompaniesAssignedTotal": 210
+  },
+  "companyCompletions": [
+    {"order":431,"code":"4392","name":"FIG","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4392-primary-review-v1.json","sourceClassification":"formal_management_plan_current_fy2026_to_fy2028_with_2030_long_term_targets_and_prior_plan_review"},
+    {"order":432,"code":"4465","name":"ニイタカ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4465-primary-review-v1.json","sourceClassification":"formal_management_plan_current_fy2026_05_to_fy2028_05_with_2035_long_term_targets_and_quantified_cash_allocation"},
+    {"order":439,"code":"4664","name":"アール・エス・シー","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4664-primary-review-v1.json","sourceClassification":"formal_management_plan_current_fy2026_to_fy2030_with_quantified_cash_allocation_range"},
+    {"order":441,"code":"4971","name":"メック","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4971-primary-review-v1.json","sourceClassification":"formal_management_plan_numeric_target_update_without_strategy_change_for_phase2_2025_to_2027"},
+    {"order":447,"code":"6250","name":"やまびこ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6250-primary-review-v1.json","sourceClassification":"official_results_presentation_containing_formal_management_plan_current_fy2026_to_fy2028"},
+    {"order":450,"code":"6561","name":"HANATOUR JAPAN","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6561-primary-review-v1.json","sourceClassification":"official_results_presentation_containing_first_formal_management_plan_fy2026_to_fy2028"},
+    {"order":462,"code":"7989","name":"立川ブラインド工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/7989-primary-review-v1.json","sourceClassification":"formal_management_plan_current_2026_to_2028_with_2030_long_term_environment_target_and_quantified_cash_allocation"},
+    {"order":464,"code":"8345","name":"岩手銀行","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8345-primary-review-v1.json","sourceClassification":"formal_management_plan_current_fy2026_to_fy2028_with_long_term_targets_and_bank_capital_allocation"},
+    {"order":467,"code":"8386","name":"百十四銀行","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8386-primary-review-v1.json","sourceClassification":"formal_management_plan_current_fy2026_to_fy2028_with_long_term_vision2030_and_bank_capital_allocation"},
+    {"order":472,"code":"9308","name":"乾汽船","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9308-primary-review-v1.json","sourceClassification":"formal_management_plan_current_fy2026_to_fy2028_with_scenario_ranges_and_long_term_investment_plan"}
+  ],
+  "completedChecksForAll": [
+    "formalPlanConfirmation",
+    "formalPlanBoundary",
+    "planRevisionSeparation",
+    "fullTextReview",
+    "metricsValidation",
+    "capitalPolicyReview",
+    "shareholderReturnPolicyReview",
+    "fieldLevelEvidence",
+    "yearUnitScopeValidation"
+  ],
+  "pendingChecksForAll": [
+    "remainingVisualFigureReview",
+    "independentDoubleCheck"
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 10,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 10,
+    "primaryReviewComplete": 208,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 242,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

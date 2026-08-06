@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-effective-status-v1",
-  "updatedAt": "2026-08-07T03:00:00+09:00",
+  "updatedAt": "2026-08-07T03:40:00+09:00",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
   "appliedOverlays": [
     "operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json",
@@ -18,35 +18,38 @@
     "operations/quality-rebase/phase2/review-state-overlays/wave19-primary-completion-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave20-primary-completion-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave21-primary-completion-v1.json",
-    "operations/quality-rebase/phase2/review-state-overlays/wave22-primary-completion-v1.json"
+    "operations/quality-rebase/phase2/review-state-overlays/wave22-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave23-primary-completion-v1.json"
   ],
   "targets": {"phase1":50,"phase2Additional":450,"totalIncludingPhase1":500},
   "assignment": {
-    "primaryReviewWavesAssigned": 22,
-    "phase2CompaniesAssignedTotal": 220,
-    "currentWaveFile": "operations/quality-rebase/phase2/primary-review-wave22-v1.json"
+    "primaryReviewWavesAssigned": 23,
+    "phase2CompaniesAssignedTotal": 228,
+    "currentWaveFile": "operations/quality-rebase/phase2/primary-review-wave23-v1.json",
+    "nonGrowthPrimaryReviewCandidatesRemaining": 0,
+    "nextQueue": "growth_potential_document"
   },
   "review": {
     "phase1PrimaryReviewComplete": 50,
-    "phase2PrimaryReviewComplete": 218,
-    "primaryReviewCompleteIncludingPhase1": 268,
-    "phase2PrimaryReviewCompletionRatePercent": 48.4,
-    "totalPrimaryReviewCompletionRatePercent": 53.6,
+    "phase2PrimaryReviewComplete": 226,
+    "primaryReviewCompleteIncludingPhase1": 276,
+    "phase2PrimaryReviewCompletionRatePercent": 50.2,
+    "totalPrimaryReviewCompletionRatePercent": 55.2,
     "independentReviewReady": 61,
-    "independentVisualReviewPending": 155,
+    "independentVisualReviewPending": 163,
     "additionalSourceMappingRequired": 2,
-    "remainingPhase2PrimaryReviews": 232,
+    "remainingPhase2PrimaryReviews": 224,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0
   },
   "activeWave": {
-    "wave": 22,
-    "assigned": 10,
-    "primaryReviewComplete": 10,
+    "wave": 23,
+    "assigned": 8,
+    "primaryReviewComplete": 8,
     "independentReviewReady": 0,
-    "independentVisualReviewPending": 10,
+    "independentVisualReviewPending": 8,
     "remaining": 0,
-    "status": "primary_review_complete_pending_next_wave"
+    "status": "primary_review_complete_growth_queue_next"
   },
   "openVisualFollowups": [
     {"wave":7,"primaryReviewComplete":10,"independentReviewReady":5,"independentVisualReviewPending":5},
@@ -64,12 +67,14 @@
     {"wave":19,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
     {"wave":20,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
     {"wave":21,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":22,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10}
+    {"wave":22,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
+    {"wave":23,"primaryReviewComplete":8,"independentReviewReady":0,"independentVisualReviewPending":8}
   ],
   "approvalSafety": {
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,
     "primaryReviewerMaySelfApprove": false,
+    "growthDocumentMayBePromotedWithoutFormalPlanEvidence": false,
     "deepVerificationApproved": false
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-effective-status-v1",
-  "updatedAt": "2026-08-06T12:02:00+09:00",
+  "updatedAt": "2026-08-06T09:27:00+09:00",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
   "appliedOverlays": [
     "operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json",
@@ -22,25 +22,25 @@
   },
   "review": {
     "phase1PrimaryReviewComplete": 50,
-    "phase2PrimaryReviewComplete": 151,
-    "primaryReviewCompleteIncludingPhase1": 201,
-    "phase2PrimaryReviewCompletionRatePercent": 33.6,
-    "totalPrimaryReviewCompletionRatePercent": 40.2,
+    "phase2PrimaryReviewComplete": 158,
+    "primaryReviewCompleteIncludingPhase1": 208,
+    "phase2PrimaryReviewCompletionRatePercent": 35.1,
+    "totalPrimaryReviewCompletionRatePercent": 41.6,
     "independentReviewReady": 61,
-    "independentVisualReviewPending": 88,
+    "independentVisualReviewPending": 95,
     "additionalSourceMappingRequired": 2,
-    "remainingPhase2PrimaryReviews": 299,
+    "remainingPhase2PrimaryReviews": 292,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0
   },
   "activeWave": {
     "wave": 16,
     "assigned": 10,
-    "primaryReviewComplete": 3,
+    "primaryReviewComplete": 10,
     "independentReviewReady": 0,
-    "independentVisualReviewPending": 3,
-    "remaining": 7,
-    "status": "in_progress"
+    "independentVisualReviewPending": 10,
+    "remaining": 0,
+    "status": "complete"
   },
   "openVisualFollowups": [
     {"wave":7,"primaryReviewComplete":10,"independentReviewReady":5,"independentVisualReviewPending":5},
@@ -52,7 +52,7 @@
     {"wave":13,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
     {"wave":14,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
     {"wave":15,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":16,"primaryReviewComplete":3,"independentReviewReady":0,"independentVisualReviewPending":3}
+    {"wave":16,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10}
   ],
   "approvalSafety": {
     "automaticFactCompletionAllowed": false,

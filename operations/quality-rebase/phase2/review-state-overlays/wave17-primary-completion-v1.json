@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-06T09:40:00+09:00",
+  "wave": 17,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave17-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "Wave17の2社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 158,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 292,
+    "primaryReviewWavesAssigned": 17,
+    "primaryReviewCompaniesAssignedTotal": 170
+  },
+  "companyCompletions": [
+    {"order":440,"code":"4886","name":"あすか製薬ホールディングス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4886-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028_with_2035_long_term_vision_pre_detail_announcement"},
+    {"order":448,"code":"6459","name":"大和冷機工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6459-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028_first_public_medium_term_plan"}
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 2,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 2,
+    "primaryReviewComplete": 160,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 290,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-07T03:08:00+09:00",
+  "updatedAt": "2026-08-07T03:08:00+09:00",
+  "wave": 23,
+  "targetCompanies": 8,
+  "requestedTargetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "selectionNote": "Wave22以降に残る非growth_potential_documentの一次レビュー候補は8社。目標10社に満たないため、正式中計・計画更新候補を全件割り当て、growth_potential_documentは別キューに保持する。",
+  "companies": [
+    {"order":488,"code":"3583","name":"オーベクス","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":19,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-04/3583/primary-review-template.json","status":"primary_review_complete_existing_review_audited","reviewFile":"operations/quality-rebase/phase2/reviews/3583-primary-review-v1.json"},
+    {"order":492,"code":"4249","name":"森六","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":54,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/4249/primary-review-template.json","status":"primary_review_assigned"},
+    {"order":494,"code":"4619","name":"日本特殊塗料","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":38,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/4619/primary-review-template.json","status":"primary_review_complete_existing_review_audited","reviewFile":"operations/quality-rebase/phase2/reviews/4619-primary-review-v1.json"},
+    {"order":495,"code":"4681","name":"リゾートトラスト","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":21,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/4681/primary-review-template.json","status":"primary_review_complete_existing_review_audited","reviewFile":"operations/quality-rebase/phase2/reviews/4681-primary-review-v1.json"},
+    {"order":497,"code":"5204","name":"石塚硝子","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":11,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/5204/primary-review-template.json","status":"primary_review_complete_existing_review_audited","reviewFile":"operations/quality-rebase/phase2/reviews/5204-primary-review-v1.json"},
+    {"order":498,"code":"5706","name":"三井金属","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":42,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/5706/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required"},
+    {"order":499,"code":"6309","name":"巴工業","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":31,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/6309/primary-review-template.json","status":"primary_review_complete_existing_review_audited","reviewFile":"operations/quality-rebase/phase2/reviews/6309-primary-review-v1.json"},
+    {"order":500,"code":"6381","name":"アネスト岩田","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":33,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/6381/primary-review-template.json","status":"primary_review_complete_existing_review_audited","reviewFile":"operations/quality-rebase/phase2/reviews/6381-primary-review-v1.json"}
+  ],
+  "counts": {
+    "assigned": 8,
+    "formalManagementPlanCandidates": 2,
+    "planRevisionOrUpdateCandidates": 6,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewCompleteAtAssignment": 6,
+    "primaryReviewRemaining": 2,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

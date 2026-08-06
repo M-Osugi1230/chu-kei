@@ -1,12 +1,14 @@
 {
   "schemaVersion": "phase2-next-wave-request-v1",
   "requestedAt": "2026-08-07T07:31:00+09:00",
-  "status": "requested",
-  "requestedWave": 25,
+  "processedAt": "2026-08-07T07:31:00+09:00",
+  "status": "processed_manually",
+  "generatedWave": 25,
+  "generatedWaveFile": "operations/quality-rebase/phase2/primary-review-wave25-v1.json",
   "targetCount": 10,
   "includeGrowthDocuments": true,
   "writeChanges": true,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": 0,
-  "purpose": "Wave24完了後、未割当のgrowth_potential_documentを既存完了・既存割当・Phase1対象から除外して次の10社へ進む。正式中計内包型と非中計ロードマップを必ず分類し、自動昇格しない。"
+  "purpose": "Actions待ち行列を回避し、Wave24完了後の未割当growth_potential_documentから10社を抽出した。正式中計内包型と非中計ロードマップを分類し、自動昇格しない。"
 }

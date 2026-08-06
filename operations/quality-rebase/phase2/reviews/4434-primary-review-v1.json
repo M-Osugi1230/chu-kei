@@ -1,0 +1,31 @@
+{
+  "schemaVersion":"quality-rebase-phase2-primary-review-v1",
+  "company":{"code":"4434","name":"サーバーワークス","market":"Standard","industry":"情報・通信業","phase2Order":493},
+  "source":{"title":"サーバーワークスグループ中期経営方針 FY26～FY28","publishedDate":"2025-04-14","officialUrl":"https://www2.jpx.co.jp/disc/44340/140120250410512537.pdf","pdfSha256":"bc26c474b15d8cc5a03112b558af63d35316d43c9dde1dc5b2497ac89100f42f","pageCount":28,"documentClassification":"formal_current_medium_term_management_policy_2026_02_to_2028_02","period":{"startFiscalYear":"2026年2月期","endFiscalYear":"2028年2月期","terminalFiscalYear":"2028年2月期"},"formalPlanBoundary":{"currentPolicy":"FY26～FY28の3カ年中期経営方針","strategicAgreementReference":"AWSとの4年間SCA・2.15億ドル規模","statement":"中期業績目標、SCA契約目標、プライム市場変更方針を分離する。"}},
+  "summary":"AWSリセールによるLTV最大化を中核に、セキュリティ、生成AI、海外展開へ拡張し、2028年2月期に売上高560.92億円、営業利益16.59億円、経常利益17.29億円を目指す。成長投資を優先しつつ、ROE10%と株主還元策を検討する。",
+  "financialTargets":[
+    {"metric":"売上高","target":56092,"unit":"百万円","targetFiscalYear":"2028年2月期","evidencePdfPage":5},
+    {"metric":"売上総利益","target":6358,"unit":"百万円","targetFiscalYear":"2028年2月期","evidencePdfPage":5},
+    {"metric":"営業利益","target":1659,"unit":"百万円","targetFiscalYear":"2028年2月期","evidencePdfPage":5},
+    {"metric":"経常利益","target":1729,"unit":"百万円","targetFiscalYear":"2028年2月期","evidencePdfPage":5},
+    {"metric":"ROE","target":10,"unit":"%","targetFiscalYear":"中計期間目標","evidencePdfPages":[5,14]},
+    {"metric":"FY27・FY28営業利益合計","target":30,"unit":"億円程度・説明文上の目標","targetFiscalYear":"2027年2月期と2028年2月期合計","note":"表の各年数値合計とは丸め差があるため、個別年度値を正本とする。","evidencePdfPage":5}
+  ],
+  "externalAgreementTargetsSeparated":[{"metric":"SCA新規ビジネス創出規模","target":2.15,"unit":"億米ドル・4年間","targetFiscalYear":"2023年締結SCA期間","classification":"strategic_agreement_reference_not_medium_term_financial_target","evidencePdfPage":11}],
+  "strategyThemes":[
+    {"theme":"リセールによるLTV最大化","evidencePdfPages":[4,8,20],"evidence":"クラウド内製化支援と安定収益の循環を強化する。"},
+    {"theme":"AWS戦略的協業の推進","evidencePdfPage":11,"evidence":"SCAの4注力領域へ継続投資する。"},
+    {"theme":"生成AI・セキュリティ・海外展開","evidencePdfPages":[9,10,15,20],"evidence":"既存顧客基盤へのアップセルと新領域投資を進める。"},
+    {"theme":"人的資本と組織力","evidencePdfPage":17,"evidence":"採用、育成、定着、労働環境整備へ投資する。"}
+  ],
+  "capitalPolicy":{"status":"qualitative_multi_source_funding_and_investment_policy_no_total_amount_disclosed","fundingSources":["営業キャッシュフロー","政策保有株式売却","2020年調達資金の残存手元資金","必要に応じた有利子負債"],"policy":"既存事業・人的資本・M&A・海外進出への成長投資を優先し、内部留保とのバランスを踏まえて自己株取得や配当を検討する。","policyShareholdingReduction":"政策保有株式を毎年10～20%程度縮減","undisclosedItems":["中計期間の投資総額","株主還元総額","営業CF総額"],"evidencePdfPage":15},
+  "shareholderReturnPolicy":{"status":"consideration_stage_no_quantified_dividend_or_payout_target","buybackPolicy":"内部留保とのバランスを考慮し自己株式取得を実行","dividendPolicy":"プライム市場変更を見据え配当を検討","quantifiedTarget":null,"evidencePdfPage":15},
+  "nonFinancialTargets":[{"metric":"プライム市場変更","target":"検討・具体的申請日は未定","targetFiscalYear":"中計期間","evidencePdfPage":4}],
+  "definitions":[
+    {"term":"売上高目標の為替前提","definition":"1米ドル152.75円。為替変動で大幅変動する可能性がある。","evidencePdfPage":5},
+    {"term":"ROE10%","definition":"株主資本コストを上回る中計目標で、過去実績ではない。","evidencePdfPage":14},
+    {"term":"株主還元","definition":"自己株取得・配当の検討方針であり、配当性向やDOEの定量目標は開示されていない。","evidencePdfPage":15}
+  ],
+  "validation":{"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"agreementAndPlanTargetsSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review":{"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T19:16:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["FY28売上560.92・営業利益16.59・経常利益17.29億円を原寸確認する","ROE10%と株主資本コスト比較を確認する","政策株毎年10～20%縮減方針を確認する","定量的配当目標が未開示であることを確認する"]}
+}

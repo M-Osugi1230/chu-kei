@@ -19,6 +19,10 @@
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false
   },
+  "selectionAudit": {
+    "excludedExistingReview": {"code":"441A","name":"NE","reviewFile":"operations/quality-rebase/phase2/reviews/441A-primary-review-v1.json","reason":"既存一次レビューがprimary_review_complete_independent_review_readyのため再割当を除外"},
+    "replacement": {"code":"520A","name":"ジェイファーマ","order":149}
+  },
   "companies": [
     {"order":135,"code":"150A","name":"JSH","pageCount":95,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/150A/primary-review-template.json","status":"growth_document_classification_assigned"},
     {"order":136,"code":"192A","name":"インテグループ","pageCount":47,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/192A/primary-review-template.json","status":"growth_document_classification_assigned"},
@@ -29,7 +33,7 @@
     {"order":142,"code":"341A","name":"トヨコー","pageCount":48,"relevanceScore":90,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/341A/primary-review-template.json","status":"growth_document_classification_assigned"},
     {"order":146,"code":"3936","name":"グローバルウェイ","pageCount":38,"relevanceScore":100,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/3936/primary-review-template.json","status":"growth_document_classification_assigned"},
     {"order":147,"code":"3979","name":"うるる","pageCount":76,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/3979/primary-review-template.json","status":"growth_document_classification_assigned"},
-    {"order":148,"code":"441A","name":"NE","pageCount":47,"relevanceScore":100,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/441A/primary-review-template.json","status":"growth_document_classification_assigned"}
+    {"order":149,"code":"520A","name":"ジェイファーマ","pageCount":85,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/520A/primary-review-template.json","status":"growth_document_classification_assigned"}
   ],
   "requiredChecksForAll": [
     "sourceDocumentClassification",
@@ -44,6 +48,7 @@
   ],
   "counts": {
     "assigned": 10,
+    "excludedExistingReviewDuringSelectionAudit": 1,
     "formalPlanEmbeddedConfirmed": 0,
     "growthRoadmapNotFormalPlan": 0,
     "sourceRemapOrExclusionRequired": 0,

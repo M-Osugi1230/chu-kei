@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-06T15:28:49+00:00",
+  "updatedAt": "2026-08-06T15:28:49+00:00",
+  "wave": 21,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 431,
+      "code": "4392",
+      "name": "FIG",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 33,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-04/4392/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 432,
+      "code": "4465",
+      "name": "ニイタカ",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 50,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-04/4465/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 439,
+      "code": "4664",
+      "name": "アール・エス・シー",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 32,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-04/4664/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 441,
+      "code": "4971",
+      "name": "メック",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 40,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-05/4971/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 447,
+      "code": "6250",
+      "name": "やまびこ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 43,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-05/6250/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 450,
+      "code": "6561",
+      "name": "HANATOUR JAPAN",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 40,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-05/6561/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 462,
+      "code": "7989",
+      "name": "立川ブラインド工業",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 37,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-10/wave-02/7989/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 464,
+      "code": "8345",
+      "name": "岩手銀行",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 51,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-10/wave-02/8345/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 467,
+      "code": "8386",
+      "name": "百十四銀行",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 44,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-10/wave-02/8386/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 472,
+      "code": "9308",
+      "name": "乾汽船",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 44,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-10/wave-03/9308/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 3,
+    "planRevisionOrUpdateCandidates": 7,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

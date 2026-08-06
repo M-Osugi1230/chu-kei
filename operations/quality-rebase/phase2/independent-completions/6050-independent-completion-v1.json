@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "6050", "name": "イー・ガーディアン"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6050-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6050-independent-review-v1.json",
+  "source": {
+    "title": "中期経営計画2026-2028",
+    "officialUrl": "https://www2.jpx.co.jp/disc/60500/140120251217521239.pdf",
+    "pdfSha256": "fdf12d73aeab688e0a0fead4653313bd52dba1c3ac06040f3e946fb9b6db46b8",
+    "pageCount": 15
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,15],"result":"Phase 2収集正本・一次レビュー・独立レビューパケットでURL、PDF SHA-256、全15ページ、公表日2025年12月17日が一致する。外部の適時開示ミラーでも同日・同タイトル・3カ年計画を再確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[7],"result":"2026/2027/2028年9月期の売上高120/150/200億円、EBITDA17.5/20/25億円を確認した。"},
+    {"id":"business_model","status":"confirmed","evidencePdfPages":[10],"result":"売上高に占めるシステム・プロダクト販売比率について、中計期間30%と計画後5年の50%を異なる時間軸として確認した。"},
+    {"id":"strategy","status":"confirmed","evidencePdfPages":[4,6,9,11,12,13],"result":"AIシステム・プロダクト、AI×人の専門人材、サイバーセキュリティ、新事業、BPO・セキュリティ・テスト・AI領域のM&A戦略を確認した。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[14],"result":"現預金約110億円、営業CF約40億円を確認。M&A・成長投資・基盤投資・株主還元の個別金額は資料上『●●百万円』で未開示のため、数値を推計・補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[14],"result":"株主優待・配当による株主還元を重要視する定性的方針を確認。配当性向、DOE、自己株式取得額、還元総額の定量値は本資料では開示されていない。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-05/wave-04/6050/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "secondaryDisclosureMirror": {"url":"https://www.daiwair.co.jp/td_download.cgi?c=6050&i=3123145","confirmed":true,"note":"2025年12月17日公表、2026年9月期～2028年9月期の3カ年中期経営計画であることを別経路で再確認した。"},
+    "visualReview": {"jpxScreenshotAttempted":true,"jpxScreenshotCacheUnavailable":true,"note":"JPX PDFスクリーンショットはキャッシュミスで取得不能。独立レビューでは同一hashの収集正本、JPXページ別テキスト、別経路の適時開示を照合した。図表レンダリングの独立再確認は最終deep verificationの追加ゲートとして残す。"}
+  },
+  "finalDeepVerificationBlockers": ["independent_visual_render_recheck"],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T08:54:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_with_visual_render_recheck_reserved_for_final_gate"}
+}

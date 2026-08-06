@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "3521",
+    "name": "テルマー湯ホールディングス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3521-primary-review-v1.json",
+  "source": {
+    "documentTitle": "新・中期経営計画2028策定に関するお知らせ",
+    "officialUrl": "https://www2.jpx.co.jp/disc/35210/140120250625599340.pdf",
+    "pdfSha256": "3e281f1dbce883377db23b4407602c34a1d96c99dcb90d0e658eb06ce14ad5a8",
+    "pageCount": 19,
+    "sourceIssuerName": "エコナックホールディングス株式会社"
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "証券コード3521、公表日2025年7月1日、資料公表時の社名、PDFハッシュ、全19ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 19],
+      "status": "pending"
+    },
+    {
+      "id": "issuer_name_transition",
+      "description": "資料公表時のエコナックホールディングスと現名称テルマー湯ホールディングスが同一証券コードの社名変更であることを確認する。",
+      "expectedEvidencePdfPages": [1, 10],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "前中計2023年3月～2025年3月、2025年3月期実績、新中計2025年4月～2028年3月を分離する。",
+      "expectedEvidencePdfPages": [2, 7, 8, 13],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2028年3月期の売上高30億円、経常利益5.4億円、当期純利益3億円、ROE6%、年間配当10円を確認する。",
+      "expectedEvidencePdfPages": [13],
+      "status": "pending"
+    },
+    {
+      "id": "growth_investment",
+      "description": "3カ年の成長投資約15億円、設備投資5億円、M&A投資10億円の期間・単位・内訳を確認する。",
+      "expectedEvidencePdfPages": [12],
+      "status": "pending"
+    },
+    {
+      "id": "strategy",
+      "description": "既存温浴事業の発展、M&Aによる事業分散、職場環境整備、サステナビリティ経営の4方針を確認する。",
+      "expectedEvidencePdfPages": [11, 12, 15, 17, 18],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "継続的な安定配当方針、2028年年間配当10円、配当性向・DOE・自己株式取得額が非開示であることを確認する。",
+      "expectedEvidencePdfPages": [12, 13, 14],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_target",
+      "description": "井戸水利用による水使用量20%削減目標について基準年・対象範囲が資料内で明示されていないことを確認する。",
+      "expectedEvidencePdfPages": [18],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に公式リンク、社名遷移注記、計画期間、財務目標、投資内訳を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

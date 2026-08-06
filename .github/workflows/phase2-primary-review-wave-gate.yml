@@ -16,7 +16,8 @@ on:
       - '.github/workflows/phase2-primary-review-wave-gate.yml'
   push:
     branches:
-      - agent/quality-rebase-phase0-2
+      - main
+      - 'agent/phase2-*'
     paths:
       - 'operations/quality-rebase/phase2/primary-review-wave*-v1.json'
       - 'operations/quality-rebase/phase2/current-status-v1.json'
@@ -35,31 +36,9 @@ permissions:
   contents: read
 
 jobs:
-  validate-primary-review-wave:
-    name: validate-primary-review-wave-${{ matrix.wave }}
+  validate-primary-review-waves:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    strategy:
-      fail-fast: false
-      matrix:
-        wave:
-          - '01'
-          - '02'
-          - '03'
-          - '04'
-          - '05'
-          - '06'
-          - '07'
-          - '08'
-          - '09'
-          - '10'
-          - '11'
-          - '12'
-          - '13'
-          - '14'
-          - '15'
-          - '16'
-          - '17'
+    timeout-minutes: 15
     steps:
       - name: Checkout target branch
         uses: actions/checkout@v4
@@ -69,20 +48,38 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate queue integrity and approval safety
+      - name: Validate every existing wave and overlay
+        shell: bash
         run: |
-          python scripts/validate_phase2_primary_review_wave_v4.py \
-            --wave operations/quality-rebase/phase2/primary-review-wave${{ matrix.wave }}-v1.json \
-            --status operations/quality-rebase/phase2/current-status-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave08-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave09-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave10-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave11-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave12-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave13-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave14-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave15-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave16-primary-completion-v1.json \
-            --overlay operations/quality-rebase/phase2/review-state-overlays/wave17-primary-completion-v1.json \
-            --repo-root .
+          set -euo pipefail
+
+          mapfile -t WAVES < <(find operations/quality-rebase/phase2 \
+            -maxdepth 1 \
+            -type f \
+            -name 'primary-review-wave*-v1.json' \
+            | sort)
+          mapfile -t OVERLAYS < <(find operations/quality-rebase/phase2/review-state-overlays \
+            -maxdepth 1 \
+            -type f \
+            -name 'wave*-primary-completion-v1.json' \
+            | sort)
+
+          if [[ ${#WAVES[@]} -eq 0 ]]; then
+            echo 'No Phase 2 primary review waves found.' >&2
+            exit 1
+          fi
+
+          OVERLAY_ARGS=()
+          for overlay in "${OVERLAYS[@]}"; do
+            OVERLAY_ARGS+=(--overlay "$overlay")
+          done
+
+          echo "Validating ${#WAVES[@]} waves with ${#OVERLAYS[@]} completion overlays."
+          for wave in "${WAVES[@]}"; do
+            echo "Validating $wave"
+            python scripts/validate_phase2_primary_review_wave_v4.py \
+              --wave "$wave" \
+              --status operations/quality-rebase/phase2/current-status-v1.json \
+              "${OVERLAY_ARGS[@]}" \
+              --repo-root .
+          done

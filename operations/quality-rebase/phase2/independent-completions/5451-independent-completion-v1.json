@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "5451", "name": "ヨドコウ"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/5451-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/5451-independent-review-v1.json",
+  "source": {
+    "title": "BLOOMING VISION 2035・中期経営計画2028",
+    "officialUrl": "https://www2.jpx.co.jp/disc/54510/140120260325588992.pdf",
+    "pdfSha256": "e046a8adaafb7d12477462aaf9ce2384be7f20b289162f39dba2152a0bf64f34",
+    "pageCount": 30
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {
+      "id": "source_identity",
+      "status": "confirmed",
+      "evidencePdfPages": [1,2,30],
+      "result": "JPX公式資料で会社名、証券コード5451、公表日2026年3月25日、全30ページを確認。collection.json、一次レビュー、独立レビューパケットのPDF SHA-256が一致する。"
+    },
+    {
+      "id": "plan_boundary",
+      "status": "confirmed",
+      "evidencePdfPages": [8,10,12,19],
+      "result": "2025年度見込、中期経営計画2028（2026～2028年度）、BLOOMING VISION 2035を別期間として確認。2026年3月25日資料の2025年度値は見込値であり、後日更新された会社公式Webの実績値と混在させない。"
+    },
+    {
+      "id": "financial_targets",
+      "status": "confirmed",
+      "evidencePdfPages": [19],
+      "result": "中計2028の目標として売上高2,500億円、営業利益200億円、ROE8%をJPX資料で確認し、会社公式IRページ・IRメッセージでも再確認した。"
+    },
+    {
+      "id": "capital_allocation",
+      "status": "confirmed",
+      "evidencePdfPages": [26,29],
+      "result": "中計3年間累計として営業CF500億円以上、資産売却・資金調達130億円、投資620億円、株主還元260億円を確認。投資内訳は既存事業150億円、成長戦略400億円、経営基盤70億円。"
+    },
+    {
+      "id": "shareholder_return",
+      "status": "confirmed",
+      "evidencePdfPages": [28,29],
+      "result": "年間配当40円以上、連結配当性向75%以上、自己株式保有上限10%未満、2026年3月末残高比で政策保有株式20%相当縮減を確認。会社公式株主還元ページでも2026～2028年度の配当方針を再確認した。"
+    },
+    {
+      "id": "long_term_targets",
+      "status": "confirmed",
+      "evidencePdfPages": [8,9,10],
+      "result": "2035年度の長期目標として売上高3,000億円、営業利益230億円、ROE8%以上、自己資本比率60%前後、2026～2035年度投資1,300～1,600億円を確認し、中計2028の3年間目標・620億円投資と分離した。"
+    },
+    {
+      "id": "one_off_adjustment",
+      "status": "confirmed",
+      "evidencePdfPages": [12],
+      "result": "2026年3月25日資料では2025年度見込ROE8.7%が関係会社株式の持分譲渡等の一過性要因を含み、影響除外後の実質ROEが5.9%であることを確認した。"
+    }
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {
+      "file": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-02/5451/collection.json",
+      "pdfSha256Matched": true,
+      "pageCountMatched": true,
+      "sourceUrlMatched": true
+    },
+    "officialCompanyWeb": {
+      "managementPlanUrl": "https://www.yodoko.co.jp/ir/management/managementplan.html",
+      "longTermVisionUrl": "https://www.yodoko.co.jp/ir/management/vision.html",
+      "dividendPolicyUrl": "https://www.yodoko.co.jp/ir/ir-stock/dividend.html",
+      "confirmed": true
+    },
+    "visualReview": {
+      "managementPlanRoadmapImageConfirmed": true,
+      "cashAllocationStructureConfirmed": true,
+      "note": "会社公式Webの中計ロードマップ画像で2028年度主要財務目標を視覚確認。キャッシュアロケーションは会社公式Webの図表セクションとJPX PDFのページ別値を相互照合した。"
+    }
+  },
+  "versionBoundary": {
+    "laterOfficialUpdateDetected": true,
+    "note": "会社公式Webの中計ロードマップは、2026年3月25日資料で見込値だった2025年度を後日実績へ更新している。一次レビューの1,990億円・116億円・ROE8.7%は元資料時点の『2025年度見込』として保持し、現行Webの実績値で無断上書きしない。将来の更新処理では版・公表日を分離する。"
+  },
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "reviewRole": "independent_reviewer",
+    "primaryReviewerMustNotSelfApprove": true,
+    "completedAt": "2026-08-07T08:40:00+09:00",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "result": "confirmed_with_version_boundary_note"
+  }
+}

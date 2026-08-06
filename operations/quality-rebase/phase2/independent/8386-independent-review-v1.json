@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {"code":"8386","name":"百十四銀行"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8386-primary-review-v1.json",
+  "source": {
+    "documentTitle": "だから、挑む。－地域の未来を、たしかなカタチに－",
+    "officialLandingPage": "https://www.114bank.co.jp/company/management_plan/",
+    "officialPlanDeckUrl": "https://www.114bank.co.jp/company/management_plan/pdf/chukei_202604.pdf",
+    "officialUrl": "https://www2.jpx.co.jp/disc/83860/140120260330593288.pdf",
+    "pdfSha256": "237ee4e2122af8347a1fefe696356316c4a9f3b58e82411771fe5093d319729e",
+    "pageCount": 44
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {"id":"source_identity","description":"証券コード8386、公表日2026年4月1日、資料名、公式ランディング、PDFハッシュ、全44ページを再確認する。","expectedEvidencePdfPages":[1,4,44],"status":"pending"},
+    {"id":"plan_boundary","description":"前中計、2026～2028年度現中計、2030年度長期ビジョンを分離する。","expectedEvidencePdfPages":[1,2,3,6,10,14],"status":"pending"},
+    {"id":"financial_targets","description":"2028年度の純利益350億円以上、連結ROE8%以上、自己資本比率11.5～12.5%、単体コアOHR55%程度、貸出残高4兆円を確認する。","expectedEvidencePdfPages":[1,3,14],"status":"pending"},
+    {"id":"strategic_investment","description":"システム投資約200億円は中計期間投資、人件費・人的資本投資約50億円増は前中計最終年度比であることを確認する。","expectedEvidencePdfPages":[1,13],"status":"pending"},
+    {"id":"capital_ratio_bridge","description":"10.38%、利益+3.70pt、内部格付手法+2.17pt、リスクアセット-1.34pt、配当-1.34pt、戦略投資-1.76pt、11.5～12.5%の対応を原寸確認する。","expectedEvidencePdfPages":[13],"status":"pending"},
+    {"id":"shareholder_return","description":"計画期間中の配当性向40%以上、安定還元、機動的自己株式取得を確認する。資料公表時点の参考配当値と後日更新値を混同しない。","expectedEvidencePdfPages":[13,36],"status":"pending"},
+    {"id":"policy_shareholdings","description":"政策保有株式の中計期間中の具体縮減比率と、みなし保有を含むかを原寸確認する。","expectedEvidencePdfPages":[35],"status":"pending"},
+    {"id":"nonfinancial_targets","description":"2028年度挑戦指標と2030年度サステナビリティ指標を分離し、Scope1+2のグループ合算カーボンニュートラル等を確認する。","expectedEvidencePdfPages":[3,14,32],"status":"pending"},
+    {"id":"post_publication","description":"公開反映後に公式リンク、計画期間、主要KGI、投資定義、資本比率ブリッジ、還元方針を確認する。","status":"pending"}
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

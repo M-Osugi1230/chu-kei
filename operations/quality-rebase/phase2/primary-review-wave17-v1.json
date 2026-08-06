@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-06T09:30:00+09:00",
+  "updatedAt": "2026-08-06T09:30:00+09:00",
+  "wave": 17,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "preferShorterDocumentsForThroughput": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {"order":440,"code":"4886","name":"あすか製薬ホールディングス","documentTypeCandidate":"formal_management_plan","relevanceScore":93,"pageCount":4,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-09/wave-04/4886/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","longTermVisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":448,"code":"6459","name":"大和冷機工業","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":21,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-09/wave-05/6459/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":453,"code":"6814","name":"古野電気","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":40,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-01/6814/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":454,"code":"7033","name":"マネジメントソリューションズ","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":41,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-01/7033/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":473,"code":"9517","name":"イーレックス","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":36,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-03/9517/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":476,"code":"1762","name":"高松コンストラクショングループ","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":31,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-03/1762/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":486,"code":"3002","name":"グンゼ","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":35,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-04/3002/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":487,"code":"3242","name":"アーバネットコーポレーション","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":26,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-04/3242/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":493,"code":"4434","name":"サーバーワークス","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":28,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/4434/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":494,"code":"4619","name":"日本特殊塗料","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":38,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/4619/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]}
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 4,
+    "planRevisionOrUpdateCandidates": 6,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

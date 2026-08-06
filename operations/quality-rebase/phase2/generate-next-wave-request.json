@@ -1,14 +1,11 @@
 {
   "schemaVersion": "phase2-next-wave-request-v1",
-  "requestedAt": "2026-08-07T02:27:00+09:00",
-  "processedAt": "2026-08-07T02:43:00+09:00",
-  "status": "processed_manually",
-  "generatedWave": 22,
-  "generatedWaveFile": "operations/quality-rebase/phase2/primary-review-wave22-v1.json",
+  "requestedAt": "2026-08-07T08:32:00+09:00",
+  "status": "requested",
   "targetCount": 10,
-  "includeGrowthDocuments": false,
+  "includeGrowthDocuments": true,
   "writeChanges": true,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": 0,
-  "purpose": "Actions待ち行列を回避し、既存完了・既存割当・Phase1対象・誤資料を除外して第22一次レビューウェーブを手動生成した。"
+  "purpose": "PR分割運用へ移行後の第25一次レビューウェーブを10社単位で生成する。既存完了・既存割当・Phase1対象・誤資料を除外し、成長可能性資料は正式中計境界レビューを必須とする。"
 }

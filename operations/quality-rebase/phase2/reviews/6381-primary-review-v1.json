@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"6381","name":"アネスト岩田","market":"Prime","industry":"機械","phase2Order":500},
+  "source": {
+    "title":"第一次中期経営計画 2025-2027",
+    "publishedDate":"2025-05-09",
+    "officialUrl":"https://www2.jpx.co.jp/disc/63810/140120250508533949.pdf",
+    "pdfSha256":"b2f0a6b3ce1082751d0d67f3e50e442bd3b621754c1e9b70678c44ac82d9a57b",
+    "pageCount":33,
+    "documentClassification":"formal_management_plan_current_2025_to_2027_first_phase_of_vision2035",
+    "period":{"startFiscalYear":"2025年度・2026年3月期","endFiscalYear":"2027年度・2028年3月期","terminalFiscalYear":"2028年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"前中期経営計画・2023年3月期～2025年3月期",
+      "currentPlan":"第一次中期経営計画・2026年3月期～2028年3月期",
+      "laterPlans":"第二次中計2029～2031年3月期、第三次中計2032～2034年3月期",
+      "longTermVision":"Vision2035・2035年度売上高1,000億円",
+      "statement":"前中計実績、第一次中計、後続中計、Vision2035を分離する。"
+    }
+  },
+  "summary":"空気圧縮機・真空機器のエアエナジー事業と塗装機器・設備のコーティング事業を基盤に、海外拡張、環境対応、新市場、新技術、M&Aを推進する。2028年3月期に売上高620億円、営業利益61.7億円、ROE11%、EPS132円を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":620,"unit":"億円","targetFiscalYear":"2028年3月期","baseline":"2025年3月期実績544億円","evidencePdfPage":16},
+    {"metric":"営業利益","target":61.7,"unit":"億円","targetFiscalYear":"2028年3月期","baseline":"2025年3月期実績59.0億円","evidencePdfPage":16},
+    {"metric":"営業利益率","target":10.0,"unit":"%","targetFiscalYear":"2028年3月期","baseline":"2025年3月期実績10.7%","evidencePdfPage":16},
+    {"metric":"ROE","target":11.0,"unit":"%","targetFiscalYear":"2028年3月期","baseline":"2025年3月期実績9.4%","definition":"既存事業成長で最低限達成し、M&Aにより上振れを目指す","evidencePdfPages":[16,24]},
+    {"metric":"EPS","target":132.0,"unit":"円","targetFiscalYear":"2028年3月期","baseline":"2025年3月期実績108.2円","evidencePdfPage":16},
+    {"metric":"エアエナジー事業売上高","target":377,"unit":"億円","targetFiscalYear":"2028年3月期","baseline":"2025年3月期337億円","evidencePdfPage":21},
+    {"metric":"コーティング事業売上高","target":243,"unit":"億円","targetFiscalYear":"2028年3月期","baseline":"2025年3月期207億円","evidencePdfPage":22}
+  ],
+  "previousPlanResultsSeparated":[
+    {"metric":"連結売上高","actual":544.12,"unit":"億円","fiscalYear":"2025年3月期","previousPlanTarget":500,"previousPlanTargetUnit":"億円以上","note":"1年前倒し達成","evidencePdfPage":9},
+    {"metric":"連結営業利益","actual":59.03,"unit":"億円","fiscalYear":"2025年3月期","previousPlanTarget":55,"previousPlanTargetUnit":"億円以上","note":"2年前倒し達成","evidencePdfPage":9},
+    {"metric":"ROE","actual":9.4,"unit":"%","fiscalYear":"2025年3月期","previousPlanTarget":10,"previousPlanTargetUnit":"%以上","evidencePdfPage":9},
+    {"metric":"海外売上比率","actual":66.3,"unit":"%","fiscalYear":"2025年3月期","baseline":"2022年3月期61.5%","evidencePdfPage":10},
+    {"metric":"自己株式取得","actual":16.839181,"unit":"億円・前中計期間累計","fiscalYear":"2022年～2024年実施分","evidencePdfPage":12}
+  ],
+  "strategyThemes":[
+    {"theme":"海外重点市場の拡張","evidencePdfPages":[17,20,21,22,23],"evidence":"インド、ASEAN、中国、米州、欧州で現地化、販売網、サービス、生産を強化する。"},
+    {"theme":"新領域の創造とM&A","evidencePdfPages":[14,15,17,18,19,24],"evidence":"M&Aを主軸に新技術、新市場、新ビジネスモデルを獲得する。"},
+    {"theme":"エアエナジー事業","evidencePdfPage":21,"evidence":"研究施設、医療・食品・ヘルスケア、二次電池、EV、サービスを伸ばす。"},
+    {"theme":"コーティング事業","evidencePdfPage":22,"evidence":"EV・電池、航空宇宙、モビリティ、美容・ヘルスケアへ展開する。"},
+    {"theme":"グローバルガバナンスとESG","evidencePdfPages":[27,28,29,30],"evidence":"取締役会、地域HQ、統合データ、環境、人材、サプライチェーンを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"fully_quantified_three_year_cash_allocation_with_ranges",
+    "period":"2025年度～2027年度・2026年3月期～2028年3月期",
+    "cashIn":[
+      {"source":"営業CF","amount":208,"unit":"億円"},
+      {"source":"政策保有株式売却","amount":2,"unit":"億円"},
+      {"source":"保有現預金","amount":194,"unit":"億円"},
+      {"source":"有利子負債等","amount":null,"unit":"案件規模に応じ活用"}
+    ],
+    "cashOut":[
+      {"use":"設備投資","amount":80,"unit":"億円","breakdown":[{"use":"生産能力増強","amount":60,"unit":"億円"},{"use":"IT投資","amount":20,"unit":"億円"}]},
+      {"use":"成長投資","amount":180,"unit":"億円以上","breakdown":[{"use":"研究開発","amount":30,"unit":"億円"},{"use":"M&A・用途開発・周辺ビジネス","amount":150,"unit":"億円以上"}]},
+      {"use":"株主還元","amount":130,"unit":"億円・図表概算","breakdown":[{"use":"配当","amount":100,"unit":"億円"},{"use":"自己株式取得","amount":"30～35","unit":"億円"}]},
+      {"use":"ミニマムキャッシュ","amount":130,"unit":"億円"}
+    ],
+    "reconciliationNote":"株主還元130億円は図表概算で、配当100億円と自己株式取得30～35億円のレンジにより厳密合計は130～135億円となる。概算とレンジを潰さない。",
+    "policy":"最低現金を確保し、設備・研究開発・M&A・還元へ配分する。M&A規模に応じて借入を活用する。",
+    "evidencePdfPages":[24,25]
+  },
+  "shareholderReturnPolicy": {
+    "status":"high_doe_progressive_dividend_and_buyback_plan",
+    "doeRange":"7.0～7.5",
+    "doeRangeUnit":"%",
+    "progressiveDividendFloor":"2026年3月期を下限として累進増配",
+    "dividendTotalApprox":100,
+    "dividendTotalApproxUnit":"億円・中計期間",
+    "buybackRange":"30～35",
+    "buybackRangeUnit":"億円・発行済株式約5%規模",
+    "totalShareholderReturnApprox":130,
+    "totalShareholderReturnApproxUnit":"億円規模・図表値",
+    "policy":"DOE7.0～7.5%を採用し、2026年3月期を下回らない累進配当と30～35億円の自己株式取得を行う。",
+    "evidencePdfPages":[24,25,26]
+  },
+  "nonFinancialTargets":[
+    {"metric":"GHG排出量削減目標","target":"策定","unit":"目標設定","targetFiscalYear":"中計期間","evidencePdfPages":[15,30]},
+    {"metric":"女性取締役構成比","target":22,"unit":"%・2025年6月総会後想定構成","targetFiscalYear":"2025年6月時点の構成参考","note":"中計終期目標ではなくガバナンス構成値","evidencePdfPage":27},
+    {"metric":"独立社外取締役構成比","target":56,"unit":"%・2025年6月総会後想定構成","targetFiscalYear":"2025年6月時点の構成参考","note":"中計終期目標ではなくガバナンス構成値","evidencePdfPage":27}
+  ],
+  "longTermTargetsSeparated":[
+    {"metric":"売上高","target":1000,"unit":"億円","targetFiscalYear":"2035年度","evidencePdfPages":[4,7,14,18]},
+    {"metric":"売上高","target":620,"unit":"億円","targetFiscalYear":"第二次中計段階の図示値","note":"図上の位置関係は原寸確認対象。第一次中計の終期620億円と同値のため時間軸を混同しない。","evidencePdfPage":7}
+  ],
+  "definitions":[
+    {"term":"第一次中期経営計画","definition":"Vision2035に向けた第二創業期の最初の3年間。","evidencePdfPages":[7,14,15]},
+    {"term":"ROE11%","definition":"既存事業の成長で最低限達成する目標で、M&Aによりそれ以上を目指す。","evidencePdfPage":16},
+    {"term":"株主還元130億円","definition":"図表の概算。内訳は配当100億円、自己株取得30～35億円で、レンジ差を保持する。","evidencePdfPages":[25,26]},
+    {"term":"成長投資180億円以上","definition":"研究開発30億円とM&A等150億円以上。設備投資80億円とは別枠。","evidencePdfPage":25}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentLaterAndLongTermSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"cashAllocationRangesPreserved":true,"approximateReturnNotForcedToExact":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T09:24:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2028年3月期売上620億円・営業利益61.7億円・ROE11%・EPS132円を原寸確認する","営業CF208・現預金194・政策株売却2億円と設備80・成長180以上・還元130・最低現金130億円を確認する","配当100億円・自己株取得30～35億円と還元130億円概算の差を確認する","DOE7.0～7.5%と累進配当条件を確認する","Vision2035売上1,000億円と第一次中計目標を混同していないことを確認する"]}
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "7164", "name": "全国保証"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7164-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/7164-independent-review-v1.json",
+  "sourceIdentityOverride": "operations/quality-rebase/phase2/source-identity-overrides/7164-source-override-v1.json",
+  "source": {
+    "title": "新中期経営計画 2026-2030 Go for 50",
+    "officialUrl": "https://www2.jpx.co.jp/disc/71640/140120260316582395.pdf",
+    "pdfSha256": "d3e51a924e0c0fa7f4b813fc276afb858b769d17df535ac33417f0bdb7f8ab9b",
+    "pageCount": 40
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed_after_override","evidencePdfPages":[1,2,40],"result":"収集正本をcanonical sourceとし、2026年3月16日公表・全40ページ・PDF SHA-256を固定した。旧source metadataは監査履歴として保持する。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[4,5,6,33,37],"result":"2023～2025年度の前中計、2026～2030年度のGo for 50、2035年長期ビジョンを分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[1,7,8,10,15,28],"result":"2031年3月期の保証債務残高27.3兆円、EPS298円、ROE12～15%、従業員満足度4.9点以上を確認した。"},
+    {"id":"guarantee_growth","status":"confirmed","evidencePdfPages":[10,30],"result":"保証債務残高の純増6兆円がオーガニック2兆円・インオーガニック4兆円で構成されることを確認した。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[28,29,30],"result":"2031年必要資本約3,000億円、活用可能資本約500億円、5年間利益約1,800億円・配当約900億円を確認した。"},
+    {"id":"required_capital_definition","status":"confirmed","evidencePdfPages":[29,30],"result":"必要資本が保証債務残高・PD・LGD・平均完済期間を基礎にする管理指標であり、純資産総額と同義ではないことを確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[29,31],"result":"配当性向50%維持、5年間配当約900億円、機動的自己株式取得、2030年度1株149円の資料表示を確認した。"},
+    {"id":"previous_plan_boundary","status":"confirmed","evidencePdfPages":[33,37],"result":"前中計の成長投資約40億円、総還元約560億円、総還元性向60%を新中計計画値と分離した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/7164/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "sourceRepair": {"file":"operations/quality-rebase/phase2/source-repairs/7164-source-identity-resolution-v1.json","resolved":true},
+    "visualReview": {"kpiPageConfirmed":true,"capitalPolicyPageConfirmed":true,"shareholderReturnPageConfirmed":true,"note":"canonical JPX PDFの主要図表ページを独立に視覚確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:08:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_identity_override"}
+}

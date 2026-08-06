@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "6036", "name": "KeePer技研"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6036-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json",
+  "sourceIdentityOverride": "operations/quality-rebase/phase2/source-identity-overrides/6036-source-override-v1.json",
+  "source": {
+    "title": "中期経営計画（2031年6月期）",
+    "officialUrl": "https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf",
+    "pdfSha256": "967cca44b934477af9b9991f6dc84685b71994b3f43b4c404f5460ba766daa24",
+    "pageCount": 42
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed_after_override","evidencePdfPages":[1,2,42],"result":"収集正本をcanonical sourceとし、2026年3月19日公表・全42ページ・PDF SHA-256を固定した。旧source metadataは監査履歴として保持する。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[10,11,20,21,25],"result":"2023～2025年6月期の前中計、2026～2031年6月期の新中計、計画後5年の長期像を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[6,21,26],"result":"2031年6月期売上高469.22億円、営業利益160.66億円、営業利益率34.2%、EPS406円、ROE30%以上を確認した。"},
+    {"id":"segment_targets","status":"confirmed","evidencePdfPages":[21,23,26,28],"result":"LABO売上269.09億円・営業利益70.08億円、製品売上200.13億円・営業利益90.58億円を確認した。"},
+    {"id":"store_network","status":"confirmed","evidencePdfPages":[22,24,28,29],"result":"国内直営250店・FC250店の500店舗網、海外15店、年約20店の直営出店を確認した。"},
+    {"id":"investment","status":"confirmed","evidencePdfPages":[23,24],"result":"2027～2031年6月期の直営店建設投資約110億円を確認。全社投資総額は未開示のため合算・推計しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[25],"result":"配当性向を2025年6月期33.5%から40%以上へ引き上げる方針を確認した。自己株式取得の定量額は未開示。"},
+    {"id":"accounting_boundary","status":"confirmed","evidencePdfPages":[11],"result":"2025年下期のLABO経費計上区分変更を確認し、前中計差異は旧基準比較として分離した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/6036/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "sourceRepair": {"file":"operations/quality-rebase/phase2/source-repairs/6036-source-identity-resolution-v1.json","resolved":true},
+    "visualReview": {"independentRenderPendingForFinalDeepVerification":true,"note":"source identity・数値・ページ証跡は独立再確認済み。canonical PDFの独立レンダリングによる主要図表再確認のみ最終deep verificationゲートへ残す。"}
+  },
+  "finalDeepVerificationBlockers": ["independent_visual_render_recheck"],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:07:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_identity_override_with_visual_render_recheck_reserved"}
+}

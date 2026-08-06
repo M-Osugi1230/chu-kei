@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4691",
+    "name": "ワシントンホテル"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4691-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画2031",
+    "officialUrl": "https://www2.jpx.co.jp/disc/46910/140120260203546423.pdf",
+    "pdfSha256": "cefe28f85922b6dd5c1428d84fbd7b7a208f190cce30e13a3f3fc76be5519921",
+    "pageCount": 41
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード4691、公表日2026年2月12日、PDFハッシュ、全41ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 41],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "前中計実績、2026年見込、2029年中間目標、2031年最終目標を分離する。",
+      "expectedEvidencePdfPages": [1, 6, 7, 10, 11, 18],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2031年売上高400億円、営業利益87億円、営業利益率21%、EBITDA115億円、ROIC10%以上、ROE20%以上を確認する。",
+      "expectedEvidencePdfPages": [1, 18, 35],
+      "status": "pending"
+    },
+    {
+      "id": "operating_kpis",
+      "description": "保有室数11,000室、会員120万人、ADR11,000円、RevPAR9,000円、販売室数320万室、16ホテル改修を確認する。",
+      "expectedEvidencePdfPages": [7, 8, 20, 26, 28, 34],
+      "status": "pending"
+    },
+    {
+      "id": "strategy",
+      "description": "既存店リニューアル、藤田観光提携、ブランド・会員強化、M&A・海外・運営受託等の拠点拡大を確認する。",
+      "expectedEvidencePdfPages": [8, 16, 19, 21, 22, 23, 24, 25, 26, 27, 28],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "5年間投資201億円、成長投資188億円、維持投資13億円、新規拠点114億円、改修69億円、DX5億円を確認する。",
+      "expectedEvidencePdfPages": [33, 34, 36],
+      "status": "pending"
+    },
+    {
+      "id": "financial_discipline",
+      "description": "D/Eレシオ1倍目安、想定WACC6～7.5%、株主資本コスト7～9%、ROIC10%以上、ROE20%以上を確認する。",
+      "expectedEvidencePdfPages": [33, 35, 36],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向25%以上の早期実現と、株価・財務・成長機会を踏まえた機動的自己株式取得を確認する。",
+      "expectedEvidencePdfPages": [33, 36, 37],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_boundary",
+      "description": "環境・地域・人材・ガバナンス施策と、2025年3月期の定量実績を将来目標と混在させていないことを確認する。",
+      "expectedEvidencePdfPages": [39, 40],
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

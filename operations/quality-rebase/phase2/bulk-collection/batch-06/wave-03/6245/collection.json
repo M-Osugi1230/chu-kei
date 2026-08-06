@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 277,
+  "company": {
+    "code": "6245",
+    "name": "ヒラノテクシード",
+    "market": "Standard",
+    "industry": "機械",
+    "document": "中期経営計画(2024-2027年度)事業方向性の見直しに関するお知らせ",
+    "planPublishedDate": "2025-11-14",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/62450/140120251113500893.pdf",
+    "phaseScore": 108,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "generic_page_evidence",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.192,
+  "requiresManualSourceRecovery": true
+}

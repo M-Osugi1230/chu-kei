@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "quality-rebase-phase0-definition-reconciliation-v1",
+  "generatedAt": "2026-07-31T21:20:51.956Z",
+  "bundleSha256": "84cc99f1eefd5ef3b63d4334b5f1257fea102e61242388249947d160fec95bdd",
+  "companies": {
+    "total": 3000,
+    "templateLike": 2685,
+    "nonTemplatePool": 315,
+    "strictEarningsRelease": 610,
+    "broadFinancialResults": 987,
+    "formalPlanTitle": 1921,
+    "formalPlanNonTemplate": 206,
+    "strictEarningsReleaseNonTemplate": 6
+  },
+  "progress": {
+    "records": 353,
+    "companiesWithAnyProgressRecord": 100,
+    "explicitlyConnectedRecords": 258,
+    "explicitlyConnectedCompanies": 72,
+    "keyFrequency": {
+      "actualValue": 353,
+      "code": 353,
+      "fiscalYear": 353,
+      "metric": 353,
+      "note": 353,
+      "progressRate": 353,
+      "source": 353,
+      "targetValue": 353,
+      "unit": 353,
+      "updatedAt": 353,
+      "actualFiscalYear": 258,
+      "actualSource": 258,
+      "lastVerifiedDate": 204,
+      "sourcePage": 204,
+      "sourceUrl": 204
+    },
+    "statusCombinations": [
+      {
+        "status": {},
+        "count": 353
+      }
+    ],
+    "sampleRows": [
+      {
+        "code": "175A",
+        "fiscalYear": "FY2030",
+        "metric": "margin",
+        "targetValue": 12,
+        "actualValue": -35,
+        "unit": "%",
+        "progressRate": -291.7,
+        "source": "中期経営計画2030 Beyond 100 / 2030年目標: 売上高30億円、営業利益3.5億円、営業利益率12%以上",
+        "updatedAt": "2026-07-05",
+        "note": "既存の中計抽出データから生成した目標値。 公式PDFの数値目標表からFY2025実績を接続。 営業利益率は営業利益÷売上高で算定。",
+        "actualFiscalYear": "FY2025",
+        "actualSource": "中期経営計画2030 Beyond 100 p.27: 2025年12月期 売上高8億円、営業利益-2.8億円から算定"
+      },
+      {
+        "code": "175A",
+        "fiscalYear": "FY2030",
+        "metric": "operatingProfit",
+        "targetValue": 3.5,
+        "actualValue": -2.8,
+        "unit": "億円",
+        "progressRate": -80,
+        "source": "中期経営計画2030 Beyond 100 / 2030年目標: 売上高30億円、営業利益3.5億円、営業利益率12%以上",
+        "updatedAt": "2026-06-30",
+        "note": "既存の中計抽出データから生成した目標値。 公式PDFの中期財務目標表からFY2025実績を接続。",
+        "actualFiscalYear": "FY2025",
+        "actualSource": "中期経営計画2030 Beyond 100 p.36: 2025年12月期 営業利益-2.8億円"
+      },
+      {
+        "code": "175A",
+        "fiscalYear": "FY2030",
+        "metric": "revenue",
+        "targetValue": 30,
+        "actualValue": 8,
+        "unit": "億円",
+        "progressRate": 26.7,
+        "source": "中期経営計画2030 Beyond 100 / 2030年目標: 売上高30億円、営業利益3.5億円、営業利益率12%以上",
+        "updatedAt": "2026-06-30",
+        "note": "既存の中計抽出データから生成した目標値。 公式PDFの中期財務目標表からFY2025実績を接続。",
+        "actualFiscalYear": "FY2025",
+        "actualSource": "中期経営計画2030 Beyond 100 p.36: 2025年12月期 売上高8億円"
+      },
+      {
+        "code": "2282",
+        "fiscalYear": "FY2027",
+        "metric": "roe",
+        "targetValue": 8,
+        "actualValue": null,
+        "unit": "%",
+        "progressRate": null,
+        "source": "公式IR 中期経営計画2026 / 資本効率の向上に向けて: ROE7-8%、ROIC5-6%、投資約1,400億円、自己株式取得200億円枠",
+        "updatedAt": "2026-06-29",
+        "note": "既存の中計抽出データから生成した目標値。実績値は未接続。 レンジ表記は上限値を入力候補として採用。原文確認後に必要なら下限値も別管理する。"
+      },
+      {
+        "code": "2282",
+        "fiscalYear": "FY2027",
+        "metric": "roic",
+        "targetValue": 6,
+        "actualValue": null,
+        "unit": "%",
+        "progressRate": null,
+        "source": "公式IR 中期経営計画2026 / 資本効率の向上に向けて: ROE7-8%、ROIC5-6%、投資約1,400億円、自己株式取得200億円枠",
+        "updatedAt": "2026-06-29",
+        "note": "既存の中計抽出データから生成した目標値。実績値は未接続。 レンジ表記は上限値を入力候補として採用。原文確認後に必要なら下限値も別管理する。"
+      },
+      {
+        "code": "2282",
+        "fiscalYear": "FY2029",
+        "metric": "operatingProfit",
+        "targetValue": 790,
+        "actualValue": null,
+        "unit": "億円",
+        "progressRate": null,
+        "source": "公式IR 中期経営計画2026 / 経営課題と変革テーマ: 2029年3月期 事業利益790億円以上を見据える",
+        "updatedAt": "2026-06-29",
+        "note": "既存の中計抽出データから生成した目標値。実績値は未接続。"
+      },
+      {
+        "code": "2802",
+        "fiscalYear": "FY2030",
+        "metric": "ebitdaMargin",
+        "targetValue": 19,
+        "actualValue": null,
+        "unit": "%",
+        "progressRate": null,
+        "source": "中期ASV経営2030ロードマップ: 2030年度EBITDAマージン19%",
+        "updatedAt": "2026-07-09",
+        "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 "
+      },
+      {
+        "code": "2802",
+        "fiscalYear": "FY2030",
+        "metric": "organicGrowthCagr",
+        "targetValue": 5,
+        "actualValue": null,
+        "unit": "%以上",
+        "progressRate": null,
+        "source": "中期ASV経営2030ロードマップ: FY2026-FY2030オーガニック成長率5%以上",
+        "updatedAt": "2026-07-09",
+        "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 期間CAGRの下限型目標。"
+      },
+      {
+        "code": "2802",
+        "fiscalYear": "FY2030",
+        "metric": "roe",
+        "targetValue": 20,
+        "actualValue": null,
+        "unit": "%程度",
+        "progressRate": null,
+        "source": "中期ASV経営2030ロードマップ: 2030年度ROE約20%",
+        "updatedAt": "2026-07-09",
+        "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 目安型。"
+      },
+      {
+        "code": "2802",
+        "fiscalYear": "FY2030",
+        "metric": "roic",
+        "targetValue": 17,
+        "actualValue": null,
+        "unit": "%程度",
+        "progressRate": null,
+        "source": "中期ASV経営2030ロードマップ: 2030年度ROIC約17%",
+        "updatedAt": "2026-07-09",
+        "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 目安型。"
+      },
+      {
+        "code": "2802",
+        "fiscalYear": "FY2030",
+        "metric": "totalReturnRatioRolling3Years",
+        "targetValue": 50,
+        "actualValue": null,
+        "unit": "%以上",
+        "progressRate": null,
+        "source": "公式説明資料: ローリング3年間総還元性向50%以上",
+        "updatedAt": "2026-07-09",
+        "note": "拡張βの目標を公式資料記載に基づき登録。実績値は未接続。 ローリング3年間の下限型目標。"
+      },
+      {
+        "code": "280A",
+        "fiscalYear": "FY2028",
+        "metric": "margin",
+        "targetValue": 9.4,
+        "actualValue": 4.1,
+        "unit": "%",
+        "progressRate": 43.6,
+        "source": "事業計画及び成長可能性に関する事項 / Vision1000: 長期売上高1,000億円、営業利益率20%超",
+        "updatedAt": "2026-06-30",
+        "note": "既存の中計抽出データから生成した目標値。 公式PDFの通期業績サマリからFY2025実績を接続。",
+        "actualFiscalYear": "FY2025",
+        "actualSource": "事業計画及び成長可能性に関する事項 p.10: 2025年11月期 営業利益率4.1%"
+      }
+    ]
+  },
+  "interpretation": {
+    "provisional315Definition": "非テンプレート型の全315社。深掘り確認済みではなく再監査母集団。",
+    "strictPhase1EligibleDefinition": "正式中計、直近3年、市場比率、証跡・承認条件を満たす処理優先候補。",
+    "financialStatement610DefinitionCandidate": "資料名に「決算短信」を含む企業。決算説明資料等を含む広義件数とは分離する。",
+    "progress72DefinitionCandidate": "進捗レコードがある企業ではなく、目標と実績が比較可能な接続済み企業。"
+  }
+}

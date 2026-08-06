@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8304","name":"あおぞら銀行","market":"Prime","industry":"銀行業","phase2Order":387},
+  "source": {
+    "title":"2025年度決算および中期経営計画 AOZORA2027 の進捗状況",
+    "publishedDate":"2026-05-14",
+    "officialUrl":"https://www2.jpx.co.jp/disc/83040/140120260514532886.pdf",
+    "pdfSha256":"e2492b9a76bfa1356289bd3ec11521b9e63b802debc604d4f498698fcc3d49a0",
+    "pageCount":57,
+    "documentClassification":"official_current_management_plan_progress_update_with_annual_forecast",
+    "period":{"startFiscalYear":"2025年度","endFiscalYear":"2027年度・2028年3月期","terminalFiscalYear":"2027年度・2028年3月期"},
+    "formalPlanBoundary": {
+      "currentPlan":"AOZORA2027・2025年度～2027年度",
+      "annualActual":"2025年度実績",
+      "annualForecast":"2026年度予想",
+      "longerTermGoal":"2029年度目標",
+      "statement":"2025年度実績、2026年度予想、中計最終年度、2029年度目標を分離する。"
+    }
+  },
+  "summary":"国内投資銀行、大和証券グループとの提携、GMOあおぞらネット銀行を成長ドライバーとし、資産流動化、国内コーポレート、預り資産、レガシー資産処理、資本効率を強化する。2027年度に親会社株主純利益330億円、ROE7%程度、CET1比率10%台を目指す。",
+  "financialTargets":[
+    {"metric":"親会社株主純利益","target":330,"unit":"億円","targetFiscalYear":"2027年度","baseline":"2025年度実績257億円","evidencePdfPage":31},
+    {"metric":"ROE","target":7,"unit":"%程度","targetFiscalYear":"2027年度","baseline":"2025年度実績5.5%","evidencePdfPage":31},
+    {"metric":"CET1比率","target":"10%台","unit":"%","targetFiscalYear":"2027年度","baseline":"2025年度実績9.6%・FIRBベース","evidencePdfPages":[28,31,49]},
+    {"metric":"運用資産残高","target":5.5,"unit":"兆円・管理会計ベース","targetFiscalYear":"2027年度","baseline":"2025年度実績4.7兆円","evidencePdfPages":[19,31]},
+    {"metric":"大和証券グループ提携効果","target":100,"unit":"億円・実質業務純益ベース","targetFiscalYear":"2027年度","baseline":"2025年度実績35億円","evidencePdfPage":31},
+    {"metric":"投資銀行部門実質業務純益","target":340,"unit":"億円・管理会計ベース","targetFiscalYear":"2027年度","evidencePdfPage":33},
+    {"metric":"市場国際部門実質業務純益","target":160,"unit":"億円・管理会計ベース","targetFiscalYear":"2027年度","evidencePdfPage":35},
+    {"metric":"カスタマーリレーション部門実質業務純益","target":15,"unit":"億円・管理会計ベース","targetFiscalYear":"2027年度","evidencePdfPage":36}
+  ],
+  "annualForecastsSeparated":[
+    {"fiscalYear":"2026年度予想","consolidatedGrossProfit":1110,"consolidatedBusinessProfit":440,"ordinaryProfit":370,"netIncome":270,"annualDividend":100,"unit":"億円、配当は円/株","evidencePdfPage":8}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"親会社株主純利益","target":500,"unit":"億円","targetFiscalYear":"2029年度","classification":"longer_term_goal_beyond_current_plan","evidencePdfPage":31},
+    {"metric":"ROE","target":8,"unit":"%以上","targetFiscalYear":"2029年度","classification":"longer_term_goal_beyond_current_plan","evidencePdfPage":31},
+    {"metric":"CET1比率","target":"10%台","unit":"%","targetFiscalYear":"2029年度","classification":"longer_term_goal_beyond_current_plan","evidencePdfPages":[31,49]}
+  ],
+  "strategyThemes":[
+    {"theme":"国内投資銀行ビジネス","evidencePdfPages":[31,32,33,34],"evidence":"LBO、国内コーポレート、環境、不動産、再生、M&A、ベンチャーデットを拡大する。"},
+    {"theme":"大和証券グループとの提携","evidencePdfPages":[31,32,34],"evidence":"顧客紹介、ファンドラップ、コーポレートローン等のシナジーを拡大する。"},
+    {"theme":"GMOあおぞらネット銀行","evidencePdfPages":[16,31],"evidence":"法人基盤、預金、BaaS、手数料収益を拡大する。"},
+    {"theme":"市場国際・レガシー資産処理","evidencePdfPages":[5,23,35],"evidence":"有価証券再構築、海外貸出規律、米国オフィス・クレジットETFの残高削減を進める。"},
+    {"theme":"AI・人的資本・リスクガバナンス","evidencePdfPages":[45,46,47],"evidence":"人材配置、AI・データ基盤、サイバー、RAF、資本配分を強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"bank_capital_policy_with_ratio_targets",
+    "capitalAdequacyTarget":"CET1比率10%台",
+    "capitalAllocationPriorities":["投資銀行ビジネス","人的資本","GMOあおぞらネット銀行","新成長分野","戦略投資資産のリサイクル"],
+    "riskFramework":"リスクアペタイト・フレームワークに基づき、成長・健全性・還元を両立する。",
+    "policy":"投資銀行へ資本を重点配分し、戦略投資資産をリサイクルしながら中長期CET1比率10%台を維持する。投資総額は資料で一括開示されていないため推計しない。",
+    "evidencePdfPages":[32,47,49]
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_reference_and_quarterly_dividends",
+    "payoutRatioTarget":50,
+    "payoutRatioTargetUnit":"%程度",
+    "fy2026DividendForecast":100,
+    "fy2026DividendForecastUnit":"円/株・年間額、四半期配当継続",
+    "policy":"業績に応じ、配当性向50%程度を意識した安定還元を実施する。",
+    "evidencePdfPages":[8,47,49,50]
+  },
+  "nonFinancialTargets":[
+    {"metric":"ベンチャー向け投資件数","target":300,"unit":"累計件","targetFiscalYear":"2030年度","evidencePdfPage":43},
+    {"metric":"再生ファンド活用支援件数","target":300,"unit":"累計件","targetFiscalYear":"2030年度","evidencePdfPage":43},
+    {"metric":"エンゲージメントエクイティ投資件数","target":250,"unit":"累計件","targetFiscalYear":"2030年度","evidencePdfPage":43},
+    {"metric":"LBOファイナンス実行・組成額","target":7500,"unit":"億円・累計","targetFiscalYear":"2030年度","evidencePdfPage":43},
+    {"metric":"サステナブルファイナンス実行・組成額","target":2,"unit":"兆円・累計","targetFiscalYear":"2035年度","evidencePdfPage":44},
+    {"metric":"女性管理職比率","target":20,"unit":"%","targetFiscalYear":"2028年3月末","evidencePdfPage":44},
+    {"metric":"男性育児休業取得率","target":100,"unit":"%","targetFiscalYear":"2028年3月末","evidencePdfPage":44},
+    {"metric":"外国人管理職比率","target":3,"unit":"%","targetFiscalYear":"2028年3月末","evidencePdfPage":44},
+    {"metric":"従業員エンゲージメントスコア","target":60,"unit":"ptを維持","targetFiscalYear":"継続目標","evidencePdfPage":44}
+  ],
+  "definitions":[
+    {"term":"運用資産残高","definition":"貸出・有価証券合計から政府向け貸出・国債等を除く管理会計指標。旧ビジネスアセット。","evidencePdfPages":[19,31]},
+    {"term":"CET1比率","definition":"2025年度実績以降はFIRBベース。国内基準自己資本比率と混同しない。","evidencePdfPages":[28,31]},
+    {"term":"実質業務純益","definition":"2025年度から持分法投資損益・株式等関係損益等を含む定義へ変更し過年度も遡及。","evidencePdfPages":[7,8,10]},
+    {"term":"配当性向50%程度","definition":"固定配当額ではなく業績連動の運営目安。","evidencePdfPages":[47,49,50]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"actualAnnualForecastCurrentAndLongTermSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"bankRegulatoryRatiosSeparated":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T07:55:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2027年度330・7%程度・CET1 10%台・5.5兆円・提携100億円を確認する","2029年度500・8%以上を確認する","2026年度予想270億円・年間配当100円を確認する","FIRB移行後CET1と国内基準自己資本比率を混同していないことを確認する","配当性向50%程度を確認する"]}
+}

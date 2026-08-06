@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "deep-verification-independent-review-v1",
+  "company": {
+    "code": "6113",
+    "name": "アマダ",
+    "order": 9
+  },
+  "primaryReview": {
+    "file": "operations/quality-rebase/phase1/reviews/6113-primary-review-v1.json",
+    "sha256": "5080647cf5096da59524c7112ceed1effa76f38075433eace340bce8165257b2",
+    "status": "primary_review_complete_independent_review_and_detailed_deck_mapping_pending",
+    "completedAt": "2026-08-01"
+  },
+  "sourceSet": {
+    "officialUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+    "supplementalOfficialUrl": "https://www.amada.co.jp/ja/ir/investor/greeting/",
+    "verificationMirrorUrl": null,
+    "pageCount": 2,
+    "title": "中期経営計画2030『Transform to AMADA 2030』策定ニュースリリース",
+    "publishedDate": "2026-05-14"
+  },
+  "queue": {
+    "status": "blocked_additional_source_mapping",
+    "blockedReasons": [
+      "2026年3月期本決算説明会資料の正式PDF特定とページ単位マッピングが未完了"
+    ],
+    "priority": 9
+  },
+  "reviewChecks": {
+    "companyIdentityConfirmed": false,
+    "formalPlanConfirmed": false,
+    "publicationDateConfirmed": false,
+    "fullTextReviewedIndependently": false,
+    "strategyMatchesSource": false,
+    "allTargetsMatchSource": false,
+    "yearUnitScopeValidated": false,
+    "capitalPolicyMatchesSource": false,
+    "fieldLevelEvidenceValidated": false,
+    "forecastActualSeparationValidated": false,
+    "templateTextAbsent": false,
+    "linkReachabilityChecked": false,
+    "renderChecked": false
+  },
+  "discrepancies": [],
+  "reviewer": {
+    "reviewerId": null,
+    "reviewerType": null,
+    "independentFromPrimaryReview": null,
+    "reviewedAt": null
+  },
+  "decision": {
+    "status": "pending",
+    "approved": false,
+    "changesRequested": false,
+    "reason": null
+  },
+  "policy": {
+    "automaticApprovalAllowed": false,
+    "approvalRequiresAllChecksTrue": true,
+    "minimumDistinctReviewersAcrossPrimaryAndIndependent": 2,
+    "deepVerificationApproved": false
+  }
+}

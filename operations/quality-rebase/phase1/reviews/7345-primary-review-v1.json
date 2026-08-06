@@ -1,0 +1,24 @@
+{
+  "schemaVersion":"deep-verification-primary-review-v1",
+  "company":{"code":"7345","name":"アイ・パートナーズフィナンシャル","market":"Growth","industry":"その他金融業"},
+  "document":{"title":"事業計画及び成長可能性に関する事項","publishedDate":"2026-05-15","period":"2029年3月期までの3年後経営目標","officialUrl":"https://www2.jpx.co.jp/disc/73450/140120260515536422.pdf","contentType":"application/pdf","pageCount":52,"documentClassification":"growth_potential_disclosure_with_rolling_three_year_targets","formalPlanConfirmed":true,"rollingAnnualUpdate":true,"fullTextExtractionComplete":true,"fullTextHumanReviewComplete":false,"figureScreenshotAttempted":true,"figureScreenshotStatus":"web_cache_miss"},
+  "structuredAnalysis": {
+    "managementDirection":"顧客の最善の利益を追求するIFA向けプラットフォームとして、AUM、IFA、ROAを管理し、コンプライアンス・支援品質・AI・提携・M&Aで成長する",
+    "strategyThemes":["AUMを年平均20%で増加させる","質の高いIFAの純増と支援体制を強化する","顧客管理・営業・AIツールを拡充する","残高手数料比率を高め収益を安定化する","業務提携と必要に応じたM&Aを進める","内部統制・ガバナンスを強化する"],
+    "groupTargets":[
+      {"metric":"媒介する資産残高（AUM）","baseValue":429738,"target":779785,"unit":"百万円","baseYear":"2026年3月期末実績","targetYear":"2029年3月期末","scope":"媒介資産残高","evidence":"公式PDF p.45-p.47"},
+      {"metric":"AUM平均成長率","target":20,"unit":"%/年","targetYear":"2026年3月期末-2029年3月期末","scope":"中長期平均","evidence":"公式PDF p.45-p.47"},
+      {"metric":"所属IFA数","baseValue":214,"target":239,"unit":"名","baseYear":"2026年3月期末実績","targetYear":"2029年3月期末","scope":"所属IFA","evidence":"公式PDF p.45・p.47"},
+      {"metric":"AUMに対する金融商品仲介業売上比率（ROA）","baseValue":1.05,"target":0.92,"unit":"%","baseYear":"2026年3月期実績","targetYear":"2029年3月期","scope":"期首・期末平均AUMに対する金融商品仲介業売上","evidence":"公式PDF p.45-p.47"},
+      {"metric":"連結売上高","target":6872,"unit":"百万円","targetYear":"2029年3月期","scope":"連結・M&A等の想定売上を含まない","evidence":"公式PDF p.47"},
+      {"metric":"販売費及び一般管理費","target":817,"unit":"百万円","targetYear":"2029年3月期","scope":"連結","evidence":"公式PDF p.47"},
+      {"metric":"連結経常利益","target":376,"unit":"百万円","targetYear":"2029年3月期","scope":"連結","evidence":"公式PDF p.47"},
+      {"metric":"金融商品仲介業売上に占める残高手数料比率","baseValue":"15-20","unit":"%程度","baseYear":"2026年5月時点の開示","targetYear":null,"scope":"金融商品仲介業売上","evidence":"公式PDF p.50"},
+      {"metric":"時価総額","target":100,"unit":"億円","targetYear":"2030年","scope":"グロース市場上場維持基準への対応構想","evidence":"公式PDF p.47"}
+    ],
+    "capitalPolicy":{"growthFunding":"想定通りの利益成長と株価上昇を通じ、M&A等の市場調達を柔軟化する","shareholderReturn":"本資料では配当性向、DOE、配当下限、自己株式取得額の具体的目標を確認できない","capitalEfficiency":"時価総額100億円を目指すが、ROE・ROIC・資本コストの数値目標は確認できない","evidence":"公式PDF p.43-p.50"},
+    "importantDefinitions":["本資料は固定3カ年中計ではなく、毎年度更新する3年後経営目標","AUM7,797.85億円は2029年3月期末残高で売上高ではない","売上高68.72億円は期首・期末平均AUMとROA0.92%等から算定した計画","AUM年率20%は短期毎期保証ではなく中長期平均","IFAは毎年約12名増・4名減の前提で239名を計画","ROA低下は顧客本位運営の進展も反映するため、低下を単純な収益悪化と解釈しない","M&A・包括提携の想定売上を2029年売上計画へ含めていない","時価総額100億円は市場評価目標で財務売上目標ではない","年間業績予想は市場変動が大きいため非開示","株主還元・ROE・ROICの数値方針は未開示として保持する"]
+  },
+  "validation":{"strategyStructured":true,"metricsValidatedPrimaryPass":true,"evidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"aumSalesAndRoaSeparated":true,"rollingTargetCaptured":true,"marketCapAndFinancialTargetsSeparated":true,"marketAssumptionsCaptured":true,"undisclosedShareholderReturnPreserved":true,"figureScreenshotAttempted":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review":{"status":"primary_review_complete_independent_target_formula_and_figure_check_pending","primaryReviewCompletedAt":"2026-08-01","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["PDF全52ページの独立した再確認","p.45-p.47の図表原寸再取得・再確認","AUM・IFA・ROA・売上高・販管費・経常利益の計算前提を再確認","AUM年率20%とROA0.92%の期間・定義を再確認","M&A等の想定売上が計画に未包含であることを再確認","株主還元・ROE・ROIC・資本コストの別資料有無を確認し未開示なら維持","公開ページの表示・PDFリンク検査"]}
+}

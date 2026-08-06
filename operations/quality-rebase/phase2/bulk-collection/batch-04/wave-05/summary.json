@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 4,
+  "wave": 5,
+  "orders": "191-200",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "collection_failed": 1,
+    "collection_complete_primary_human_review_pending": 9
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 191,
+      "code": "7994",
+      "name": "オカムラ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 192,
+      "code": "8012",
+      "name": "長瀬産業",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/80120/140120260508520793.pdf",
+      "pageCount": 28,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 193,
+      "code": "8237",
+      "name": "松屋",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
+      "pageCount": 16,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 194,
+      "code": "8282",
+      "name": "ケーズホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/82820/140120260507518657.pdf",
+      "pageCount": 21,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 195,
+      "code": "9007",
+      "name": "小田急電鉄",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/90070/140120260507518914.pdf",
+      "pageCount": 49,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 196,
+      "code": "130A",
+      "name": "Veritas In Silico",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/130A0/140120260212556443.pdf",
+      "pageCount": 62,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 197,
+      "code": "138A",
+      "name": "光フードサービス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/138A0/140120260219565426.pdf",
+      "pageCount": 50,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 198,
+      "code": "145A",
+      "name": "L is B",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/145A0/140120260327591117.pdf",
+      "pageCount": 69,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 199,
+      "code": "148A",
+      "name": "ハッチ・ワーク",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/148A0/140120260326589451.pdf",
+      "pageCount": 59,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 200,
+      "code": "1719",
+      "name": "安藤・間",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/17190/140120260330592593.pdf",
+      "pageCount": 38,
+      "documentTypeCandidate": "plan_revision_or_update"
+    }
+  ]
+}

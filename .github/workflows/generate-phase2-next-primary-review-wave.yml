@@ -1,0 +1,226 @@
+name: Generate Phase 2 Next Primary Review Wave
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_count:
+        description: Number of companies to assign
+        required: true
+        default: '10'
+        type: string
+      include_growth_documents:
+        description: Include growth-potential documents that require formal-plan boundary review
+        required: true
+        default: false
+        type: boolean
+      write_changes:
+        description: Commit the generated assignment wave to the branch
+        required: true
+        default: false
+        type: boolean
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase2/generate-next-wave-request.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-next-primary-review-wave-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  generate-next-wave:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Resolve execution settings
+        id: config
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          DISPATCH_TARGET_COUNT: ${{ inputs.target_count }}
+          DISPATCH_INCLUDE_GROWTH: ${{ inputs.include_growth_documents }}
+          DISPATCH_WRITE_CHANGES: ${{ inputs.write_changes }}
+        run: |
+          set -euo pipefail
+          if [[ "$EVENT_NAME" == 'workflow_dispatch' ]]; then
+            TARGET_COUNT="${DISPATCH_TARGET_COUNT:-10}"
+            INCLUDE_GROWTH="${DISPATCH_INCLUDE_GROWTH:-false}"
+            WRITE_CHANGES="${DISPATCH_WRITE_CHANGES:-false}"
+          else
+            REQUEST='operations/quality-rebase/phase2/generate-next-wave-request.json'
+            python - "$REQUEST" <<'PY' > /tmp/phase2-next-wave-settings
+          import json
+          import sys
+          from pathlib import Path
+
+          request_path = Path(sys.argv[1])
+          request = json.loads(request_path.read_text(encoding='utf-8'))
+          if request.get('schemaVersion') != 'phase2-next-wave-request-v1':
+              raise SystemExit('unexpected request schemaVersion')
+          if request.get('status') != 'requested':
+              raise SystemExit('request status must be requested')
+          target = request.get('targetCount')
+          if not isinstance(target, int) or target <= 0 or target > 50:
+              raise SystemExit('targetCount must be an integer from 1 to 50')
+          include_growth = request.get('includeGrowthDocuments')
+          if not isinstance(include_growth, bool):
+              raise SystemExit('includeGrowthDocuments must be boolean')
+          if request.get('writeChanges') is not True:
+              raise SystemExit('writeChanges must be true for push requests')
+          if request.get('automaticApprovalAllowed') is not False:
+              raise SystemExit('automaticApprovalAllowed must be false')
+          if request.get('deepVerificationApproved') not in (False, 0):
+              raise SystemExit('deepVerificationApproved must be false or zero')
+          print(target)
+          print(str(include_growth).lower())
+          print('true')
+          PY
+            mapfile -t SETTINGS < /tmp/phase2-next-wave-settings
+            TARGET_COUNT="${SETTINGS[0]}"
+            INCLUDE_GROWTH="${SETTINGS[1]}"
+            WRITE_CHANGES="${SETTINGS[2]}"
+          fi
+          echo "target_count=$TARGET_COUNT" >> "$GITHUB_OUTPUT"
+          echo "include_growth_documents=$INCLUDE_GROWTH" >> "$GITHUB_OUTPUT"
+          echo "write_changes=$WRITE_CHANGES" >> "$GITHUB_OUTPUT"
+
+      - name: Validate generation without writing
+        shell: bash
+        env:
+          TARGET_COUNT: ${{ steps.config.outputs.target_count }}
+          INCLUDE_GROWTH: ${{ steps.config.outputs.include_growth_documents }}
+        run: |
+          set -euo pipefail
+          EXTRA_ARGS=()
+          if [[ "$INCLUDE_GROWTH" == 'true' ]]; then
+            EXTRA_ARGS+=(--include-growth-documents)
+          fi
+          python scripts/generate_phase2_next_primary_review_wave.py \
+            --repo-root . \
+            --target-count "$TARGET_COUNT" \
+            --check \
+            "${EXTRA_ARGS[@]}"
+
+      - name: Generate assignment wave
+        if: ${{ steps.config.outputs.write_changes == 'true' }}
+        shell: bash
+        env:
+          TARGET_COUNT: ${{ steps.config.outputs.target_count }}
+          INCLUDE_GROWTH: ${{ steps.config.outputs.include_growth_documents }}
+        run: |
+          set -euo pipefail
+          EXTRA_ARGS=()
+          if [[ "$INCLUDE_GROWTH" == 'true' ]]; then
+            EXTRA_ARGS+=(--include-growth-documents)
+          fi
+          python scripts/generate_phase2_next_primary_review_wave.py \
+            --repo-root . \
+            --target-count "$TARGET_COUNT" \
+            "${EXTRA_ARGS[@]}"
+
+      - name: Validate generated assignment safety
+        if: ${{ steps.config.outputs.write_changes == 'true' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          GENERATED_FILE="$(git status --short | awk '/primary-review-wave[0-9][0-9]-v1.json$/ {print $2}')"
+          if [[ -z "$GENERATED_FILE" ]]; then
+            echo 'No generated wave file found.' >&2
+            exit 1
+          fi
+          python - "$GENERATED_FILE" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          generated_path = Path(sys.argv[1])
+          wave = json.loads(generated_path.read_text(encoding='utf-8'))
+          companies = wave.get('companies')
+          counts = wave.get('counts', {})
+          if wave.get('schemaVersion') != 'phase2-primary-review-wave-v1':
+              raise SystemExit('unexpected schemaVersion')
+          if not isinstance(companies, list) or not companies:
+              raise SystemExit('generated wave has no companies')
+          if counts.get('assigned') != len(companies):
+              raise SystemExit('assigned count mismatch')
+          if counts.get('primaryReviewComplete') != 0:
+              raise SystemExit('new assignment must not contain completed reviews')
+          if counts.get('independentReviewReady') != 0:
+              raise SystemExit('new assignment must not be independent-review ready')
+          if counts.get('deepVerificationApproved') != 0:
+              raise SystemExit('new assignment must not contain approvals')
+
+          codes = []
+          orders = []
+          for company in companies:
+              code = str(company.get('code', ''))
+              order = company.get('order')
+              if not code or not isinstance(order, int):
+                  raise SystemExit('company lacks code or order')
+              if company.get('status') not in {
+                  'primary_review_assigned',
+                  'primary_review_assigned_formal_plan_boundary_required',
+              }:
+                  raise SystemExit(f'invalid assignment status for {code}')
+              if company.get('reviewFile') or company.get('independentReviewFile'):
+                  raise SystemExit(f'premature review output for {code}')
+              review_input = Path(str(company.get('reviewInput', '')))
+              if not review_input.is_file():
+                  raise SystemExit(f'missing review input for {code}: {review_input}')
+              codes.append(code)
+              orders.append(order)
+
+          if len(codes) != len(set(codes)):
+              raise SystemExit('duplicate company codes in generated wave')
+          if len(orders) != len(set(orders)):
+              raise SystemExit('duplicate queue orders in generated wave')
+
+          for existing_path in sorted(Path('operations/quality-rebase/phase2').glob('primary-review-wave*-v1.json')):
+              if existing_path == generated_path:
+                  continue
+              existing = json.loads(existing_path.read_text(encoding='utf-8'))
+              for company in existing.get('companies', []):
+                  if str(company.get('code')) in codes:
+                      raise SystemExit(f"company already assigned in {existing_path}: {company.get('code')}")
+                  if company.get('order') in orders:
+                      raise SystemExit(f"queue order already assigned in {existing_path}: {company.get('order')}")
+
+          serialized = json.dumps(wave, ensure_ascii=False)
+          for forbidden in (
+              '"automaticFactCompletionAllowed": true',
+              '"automaticApprovalAllowed": true',
+              '"deepVerificationApproved": true',
+          ):
+              if forbidden in serialized:
+                  raise SystemExit(f'forbidden flag found: {forbidden}')
+          PY
+
+      - name: Commit generated assignment wave
+        if: ${{ steps.config.outputs.write_changes == 'true' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/primary-review-wave*-v1.json
+          git commit -m 'quality: Phase 2次一次レビューウェーブを割当'
+          git push origin "HEAD:${{ github.ref_name }}"

@@ -1,0 +1,295 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-03T05:26:49+00:00",
+  "updatedAt": "2026-08-04T05:12:05+00:00",
+  "wave": 5,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 77,
+      "code": "3107",
+      "name": "ダイワボウホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 26,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-03/3107/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 79,
+      "code": "6134",
+      "name": "FUJI",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 31,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-03/6134/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 82,
+      "code": "5019",
+      "name": "出光興産",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 64,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-04/5019/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 83,
+      "code": "8316",
+      "name": "三井住友フィナンシャルグループ",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 83,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-04/8316/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/8316-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/8316-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 122,
+      "code": "5713",
+      "name": "住友金属鉱山",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 42,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-03/5713/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 125,
+      "code": "9107",
+      "name": "川崎汽船",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 33,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-03/9107/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/9107-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/9107-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 131,
+      "code": "2433",
+      "name": "博報堂DYホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 38,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/2433/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2433-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2433-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 183,
+      "code": "6140",
+      "name": "旭ダイヤモンド工業",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 24,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6140/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6140-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6140-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 185,
+      "code": "6294",
+      "name": "オカダアイヨン",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 46,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6294/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6294-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6294-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 187,
+      "code": "6822",
+      "name": "大井電気",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 23,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6822/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6822-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6822-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 3,
+    "planRevisionOrUpdateCandidates": 7,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 6,
+    "independentReviewReady": 6,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

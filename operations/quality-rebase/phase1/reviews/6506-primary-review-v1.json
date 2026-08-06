@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "6506",
+    "name": "安川電機",
+    "market": "Prime",
+    "industry": "電気機器"
+  },
+  "document": {
+    "title": "中期経営計画 Dash 35",
+    "publishedDate": "2026-05-22",
+    "period": "2026年度-2029年度",
+    "officialUrl": "https://www.yaskawa.co.jp/wp-content/uploads/2026/05/Dash35.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 32,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "2035年ビジョンに向け、コア領域の徹底した高収益化とフィジカルAI技術による新市場創出を進める",
+    "strategyThemes": [
+      "フィジカルAI市場の開拓",
+      "i3-Mechatronicsの実践拡大",
+      "世界一にこだわる新製品開発",
+      "新メカトロニクス応用領域の事業拡大",
+      "YDXの進化とi3-Singularity"
+    ],
+    "groupTargets": [
+      {
+        "metric": "売上収益",
+        "baseValue": 5421,
+        "target": 6500,
+        "unit": "億円",
+        "baseYear": "2025年度実績",
+        "targetYear": "2029年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.9"
+      },
+      {
+        "metric": "営業利益",
+        "baseValue": 473,
+        "target": 1000,
+        "unit": "億円",
+        "baseYear": "2025年度実績",
+        "targetYear": "2029年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.9"
+      },
+      {
+        "metric": "営業利益率",
+        "baseValue": 8.7,
+        "target": 15.4,
+        "unit": "%",
+        "baseYear": "2025年度実績",
+        "targetYear": "2029年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.9"
+      },
+      {
+        "metric": "ROE",
+        "baseValue": 7.7,
+        "target": 12,
+        "unit": "%以上",
+        "baseYear": "2025年度実績",
+        "targetYear": "2029年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.11"
+      },
+      {
+        "metric": "ROIC",
+        "baseValue": 6.9,
+        "target": 11,
+        "unit": "%以上",
+        "baseYear": "2025年度実績",
+        "targetYear": "2029年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.11"
+      },
+      {
+        "metric": "配当性向",
+        "baseValue": 50.0,
+        "target": 40,
+        "unit": "%以上",
+        "baseYear": "2025年度実績",
+        "targetYear": "2029年度",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.11"
+      }
+    ],
+    "capitalPolicy": {
+      "totalInvestment": "2026-2029年度累計2,500億円（対売上収益比率10%）",
+      "capitalExpenditure": "設備投資1,300億円",
+      "strategicInvestment": "戦略投資1,200億円",
+      "evidence": "公式PDF p.11"
+    },
+    "segmentEvidence": {
+      "evidence": "公式PDF p.10",
+      "notes": "モーションコントロール、ロボット、システムエンジニアリングの売上収益・営業利益・利益率目標を確認"
+    },
+    "importantDefinitions": [
+      "計画は2026-2029年度で、2027年度に中間目標が設定されている",
+      "ROE・ROICは会社定義式が明記されている",
+      "2026年度・2027年度・2029年度の想定為替レートを前提としている"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "metricDefinitionsCaptured": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全32ページの独立した再確認",
+      "2027年度中間目標と2029年度最終目標の別確認者による原文突合",
+      "ROE・ROIC定義と投資内訳の再確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "phase2-source-relevance-summary-v2",
+  "targetCompanies": 450,
+  "auditedCompanies": 450,
+  "uniqueCompanies": 450,
+  "counts": {
+    "human_relevance_review_required": 11,
+    "likely_wrong_document": 60,
+    "pdf_identification_required": 14,
+    "primary_review_candidate": 313,
+    "source_recovery_required": 52
+  },
+  "knownFalsePositiveRegressionCodes": [
+    "4063"
+  ],
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-05T23:15:00+09:00",
+  "updatedAt": "2026-08-05T23:15:00+09:00",
+  "wave": 14,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {"order":387,"code":"8304","name":"あおぞら銀行","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":57,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-04/8304/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","progressUpdateSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":389,"code":"8393","name":"宮崎銀行","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":18,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-04/8393/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":391,"code":"8844","name":"コスモスイニシア","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":32,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-05/8844/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":392,"code":"9044","name":"NANKAI","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":6,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-05/9044/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":393,"code":"9045","name":"京阪ホールディングス","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":49,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-05/9045/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","longTermStrategyAndCurrentPlanSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":394,"code":"9142","name":"九州旅客鉄道","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":8,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-05/9142/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","progressUpdateSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":396,"code":"9468","name":"KADOKAWA","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":49,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-05/9468/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":397,"code":"141A","name":"トライアルホールディングス","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":46,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-05/141A/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":399,"code":"2162","name":"nms ホールディングス","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":17,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-05/2162/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":403,"code":"2461","name":"ファンコミュニケーションズ","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":35,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-09/wave-01/2461/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]}
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 2,
+    "planRevisionOrUpdateCandidates": 8,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

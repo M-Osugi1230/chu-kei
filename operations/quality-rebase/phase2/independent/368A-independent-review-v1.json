@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "368A",
+    "name": "北里コーポレーション"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/368A-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/368A0/140120260624579242.pdf",
+    "pdfSha256": "32cd92670ed249747baee3402b3dcc74e5a800d4674dd75a7ba6db3c263d60c2",
+    "pageCount": 38
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "北里コーポレーション、証券コード368A、公表日2026年6月24日、PDFハッシュ、38ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "候補の更新資料区分ではなく、2027年3月期を初年度とする新規3カ年中計であることを適時開示本文から確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "company_name_change",
+      "description": "2026年7月1日予定の株式会社北里への商号変更と、資料公表時点の北里コーポレーションを混同していないことを確認する。",
+      "expectedEvidencePdfPage": 3,
+      "status": "pending"
+    },
+    {
+      "id": "plan_long_term_boundary",
+      "description": "第1ステージ2027年3月期～2029年3月期と、2032年・2036年までの長期ビジョンを分離していることを確認する。",
+      "expectedEvidencePdfPages": [11, 15, 16, 32],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2029年3月期の売上333億円、営業利益率50%以上、海外売上比率70%前後、ROE20%以上を図表で再確認する。",
+      "expectedEvidencePdfPages": [16, 29, 32, 35],
+      "status": "pending"
+    },
+    {
+      "id": "sales_composition",
+      "description": "既存領域133億円、新規領域200億円の構成と、新規領域が探索・具体化する事業機会として示されていることを確認する。",
+      "expectedEvidencePdfPages": [16, 33, 35],
+      "status": "pending"
+    },
+    {
+      "id": "long_term_targets",
+      "description": "2032年売上634億円規模、2036年売上830億円規模を現行3カ年目標として扱っていないことを確認する。",
+      "expectedEvidencePdfPages": [11, 15, 32],
+      "status": "pending"
+    },
+    {
+      "id": "investment_policy",
+      "description": "3年間の戦略投資100～150億円、成長投資60～100億円、研究開発・人財・経営基盤10～30億円、設備等10～20億円をレンジで確認し、機械的に合算していないことを確認する。",
+      "expectedEvidencePdfPages": [22, 23],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "DOE8.0%が中長期的な還元目安であり、現時点の公表済み配当予想を変更しないことを再確認する。",
+      "expectedEvidencePdfPages": [1, 23, 24, 38],
+      "status": "pending"
+    },
+    {
+      "id": "bs_guideline",
+      "description": "2029年3月期連結BSが社内検討用の概算レンジであり、確定予想として扱われていないことを確認する。",
+      "expectedEvidencePdfPages": [34, 35],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業名、検索、公式PDFリンク、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

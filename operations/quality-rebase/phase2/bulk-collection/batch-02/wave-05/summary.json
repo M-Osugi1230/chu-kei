@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 2,
+  "wave": 5,
+  "orders": "91-100",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "collection_complete_primary_human_review_pending": 4,
+    "collection_failed": 3,
+    "pdf_not_found": 3
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 91,
+      "code": "1419",
+      "name": "タマホーム",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.tamahome.jp/company/ir/upload_file/tdnrelease/1419_20170714431559_P01_.pdf",
+      "pageCount": 1,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 92,
+      "code": "2321",
+      "name": "ソフトフロントホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 93,
+      "code": "9627",
+      "name": "アインホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 94,
+      "code": "1301",
+      "name": "極洋",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.kyokuyo.co.jp/files/20260730.pdf",
+      "pageCount": 8,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 95,
+      "code": "167A",
+      "name": "リョーサン菱洋ホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/167A0/140120240513591650.pdf",
+      "pageCount": 4,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 96,
+      "code": "3391",
+      "name": "ツルハホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://contents.xj-storage.jp/xcontents/AS70521/b70f272c/3c0d/4b9c/9d7e/b9e307fa5738/20240509162030786s.pdf",
+      "pageCount": 35,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 97,
+      "code": "3397",
+      "name": "トリドールホールディングス",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 98,
+      "code": "3962",
+      "name": "チェンジホールディングス",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 99,
+      "code": "4011",
+      "name": "ヘッドウォータース",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "manual_classification_required"
+    },
+    {
+      "order": 100,
+      "code": "6301",
+      "name": "小松製作所",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    }
+  ]
+}

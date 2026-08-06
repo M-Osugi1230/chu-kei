@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "3447",
+    "name": "信和"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3447-primary-review-v1.json",
+  "source": {
+    "title": "2027年3月期～2031年3月期 中期経営計画 さらなる深化と新領域への挑戦",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/34470/140120260626581284.pdf",
+    "pdfSha256": "40a4eb69bf6666d4cce347cf4ddc6f9faffb75d63660c71c3690becc7977c56a",
+    "pageCount": 35
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "信和株式会社、証券コード3447、公表日2026年6月26日、計画名称、PDFハッシュ、35ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "新計画の期間が2027年3月期から2031年3月期までの5年間であることを確認する。",
+      "expectedEvidencePdfPages": [1, 14, 15],
+      "status": "pending"
+    },
+    {
+      "id": "previous_current_plan_separation",
+      "description": "2029年3月期を最終年度とした前中計、その3年前倒し達成、2026年3月期実績、新中計目標を混同していないことを確認する。",
+      "expectedEvidencePdfPages": [1, 11, 12, 15],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2027年3月期の売上収益220億円・営業利益25.2億円と、2031年3月期の売上高350億円・営業利益35億円以上・ROE12%以上を図表で再確認する。",
+      "expectedEvidencePdfPages": [1, 15, 24],
+      "status": "pending"
+    },
+    {
+      "id": "operating_profit_floor",
+      "description": "2031年3月期の営業利益35億円が下限設定であり、上限や一点予想ではないことを確認する。",
+      "expectedEvidencePdfPages": [1, 15],
+      "status": "pending"
+    },
+    {
+      "id": "segment_targets",
+      "description": "2031年3月期の仮設資材130億円以上、レンタル・施工120億円以上、物流機器100億円以上と、レンタル30億円以上・施工90億円以上の内訳を再確認する。",
+      "expectedEvidencePdfPages": [7, 16, 17, 18],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "5年間の営業キャッシュフロー約125億円、成長投資60～90億円、配当40～60億円、自己株式取得5～10億円をレンジとして確認し、合計一致を前提にしていないことを確認する。",
+      "expectedEvidencePdfPages": [25],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "年間配当金32円を下限とする累進配当、2027年3月期予定36円、柔軟な自己株式取得方針を再確認する。",
+      "expectedEvidencePdfPages": [25, 26],
+      "status": "pending"
+    },
+    {
+      "id": "pbr_goal_boundary",
+      "description": "PBR1倍超は早期実現を目指す資本市場目標であり、2031年3月期の固定目標として扱っていないことを確認する。",
+      "expectedEvidencePdfPages": [1, 21, 22],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、改行・表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

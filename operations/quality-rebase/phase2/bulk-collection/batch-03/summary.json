@@ -1,0 +1,468 @@
+{
+  "schemaVersion": "phase2-bulk-collection-batch-v1",
+  "batch": 3,
+  "wavesExpected": 5,
+  "wavesCollected": 5,
+  "targetCompanies": 50,
+  "processedCompanies": 50,
+  "uniqueCompanies": 50,
+  "counts": {
+    "collection_failed": 12,
+    "collection_complete_primary_human_review_pending": 32,
+    "pdf_not_found": 6
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 101,
+      "code": "6323",
+      "name": "ローツェ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 102,
+      "code": "7182",
+      "name": "ゆうちょ銀行",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.jp-bank.japanpost.jp/aboutus/company/pdf/rev_managementplan2026.pdf",
+      "pageCount": 41,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 103,
+      "code": "7649",
+      "name": "スギホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.sugi-hd.co.jp/pdf/ir/briefing/1st_Quarter_Results_for_FY_Feb_2018.pdf",
+      "pageCount": 11,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 104,
+      "code": "9404",
+      "name": "日本テレビホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://lab.ntvhd.co.jp/uploads/ntv_impact_report_2025.pdf",
+      "pageCount": 43,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 105,
+      "code": "9684",
+      "name": "スクウェア・エニックス・ホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.hd.square-enix.com/jpn/ir/news/pdf/20260514_01.pdf",
+      "pageCount": 26,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 106,
+      "code": "9766",
+      "name": "コナミグループ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 107,
+      "code": "9962",
+      "name": "ミスミグループ本社",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.misumi.co.jp/sites/default/files/2026-07/news_260731_1.pdf",
+      "pageCount": 2,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 108,
+      "code": "3070",
+      "name": "ジェリービーンズグループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://ssl4.eir-parts.net/doc/3070/tdnet/2775877/00.pdf",
+      "pageCount": 14,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 109,
+      "code": "3659",
+      "name": "ネクソン",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "manual_classification_required"
+    },
+    {
+      "order": 110,
+      "code": "4004",
+      "name": "レゾナック・ホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 111,
+      "code": "4013",
+      "name": "勤次郎",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 112,
+      "code": "6196",
+      "name": "ストライクグループ",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "management_policy_or_strategy"
+    },
+    {
+      "order": 113,
+      "code": "6302",
+      "name": "住友重機械工業",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/2026management_plan.pdf",
+      "pageCount": 25,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 114,
+      "code": "7752",
+      "name": "リコー",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 115,
+      "code": "8591",
+      "name": "オリックス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 116,
+      "code": "8802",
+      "name": "三菱地所",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.mec.co.jp/assets/img/plan2030/plan200124.pdf",
+      "pageCount": 51,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 117,
+      "code": "9699",
+      "name": "ニシオホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 118,
+      "code": "8058",
+      "name": "三菱商事",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 119,
+      "code": "8876",
+      "name": "リログループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.relo.jp/ir/library/docs/20250509_J.pdf",
+      "pageCount": 38,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 120,
+      "code": "285A",
+      "name": "キオクシアホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 121,
+      "code": "5411",
+      "name": "JFEホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.jfe-holdings.co.jp/common/pdf/sustainability/sus/materiality/2025_kpi.pdf#page=5",
+      "pageCount": 6,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 122,
+      "code": "5713",
+      "name": "住友金属鉱山",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.smm.co.jp/ir/management/plan/pdf/070220setsumeikai.pdf",
+      "pageCount": 42,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 123,
+      "code": "8252",
+      "name": "丸井グループ",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 124,
+      "code": "9831",
+      "name": "ヤマダホールディングス",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 125,
+      "code": "9107",
+      "name": "川崎汽船",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2022_medium-term%20management%20plan_j.pdf",
+      "pageCount": 33,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 126,
+      "code": "6497",
+      "name": "ハマイ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 127,
+      "code": "545A",
+      "name": "トランヴィア",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.toranvia.co.jp/news/files/20260401_en_news.pdf",
+      "pageCount": 3,
+      "documentTypeCandidate": "manual_classification_required"
+    },
+    {
+      "order": 128,
+      "code": "4188",
+      "name": "三菱ケミカルグループ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 129,
+      "code": "544A",
+      "name": "GMSグループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.globalmolding-solutions.com/uploads/2026/03/1990776736ca90501d9dcb2407d1e194953423b7.pdf",
+      "pageCount": 1,
+      "documentTypeCandidate": "management_policy_or_strategy"
+    },
+    {
+      "order": 130,
+      "code": "6523",
+      "name": "PHCホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 131,
+      "code": "2433",
+      "name": "博報堂DYホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://ssl4.eir-parts.net/doc/2433/tdnet/2463007/00.pdf",
+      "pageCount": 38,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 132,
+      "code": "6594",
+      "name": "ニデック",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 133,
+      "code": "6544",
+      "name": "ジャパンエレベーターサービスホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.jes24.co.jp/ja/ir/strategy/main/03/teaserItems1/01/linkList/0/link/Vision2027_from2022_jp.pdf",
+      "pageCount": 9,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 134,
+      "code": "4523",
+      "name": "エーザイ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 135,
+      "code": "150A",
+      "name": "JSH",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/150A0/140120260710591578.pdf",
+      "pageCount": 95,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 136,
+      "code": "192A",
+      "name": "インテグループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/192A0/140120260629583898.pdf",
+      "pageCount": 47,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 137,
+      "code": "2303",
+      "name": "ドーン",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/23030/140120260707588905.pdf",
+      "pageCount": 56,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 138,
+      "code": "2937",
+      "name": "サンクゼール",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/29370/140120260624578921.pdf",
+      "pageCount": 65,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 139,
+      "code": "296A",
+      "name": "令和アカウンティング・ホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/296A0/140120260618573479.pdf",
+      "pageCount": 46,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 140,
+      "code": "302A",
+      "name": "ビースタイルホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/302A0/140120260623577003.pdf",
+      "pageCount": 76,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 141,
+      "code": "3224",
+      "name": "ゼネラル・オイスター",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/32240/140120260629582932.pdf",
+      "pageCount": 33,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 142,
+      "code": "341A",
+      "name": "トヨコー",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/341A0/140120260616572228.pdf",
+      "pageCount": 48,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 143,
+      "code": "3447",
+      "name": "信和",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/34470/140120260626581284.pdf",
+      "pageCount": 35,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 144,
+      "code": "368A",
+      "name": "北里コーポレーション",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/368A0/140120260624579242.pdf",
+      "pageCount": 38,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 145,
+      "code": "3773",
+      "name": "アドバンスト・メディア",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/37730/140120260629583163.pdf",
+      "pageCount": 40,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 146,
+      "code": "3936",
+      "name": "グローバルウェイ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/39360/140120260623577326.pdf",
+      "pageCount": 38,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 147,
+      "code": "3979",
+      "name": "うるる",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/39790/140120260624577817.pdf",
+      "pageCount": 76,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 148,
+      "code": "441A",
+      "name": "NE",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/441A0/140120260612569454.pdf",
+      "pageCount": 47,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 149,
+      "code": "520A",
+      "name": "ジェイファーマ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/520A0/140120260626582174.pdf",
+      "pageCount": 85,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 150,
+      "code": "6030",
+      "name": "アドベンチャー",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/60300/140120260623577244.pdf",
+      "pageCount": 8,
+      "documentTypeCandidate": "plan_revision_or_update"
+    }
+  ]
+}

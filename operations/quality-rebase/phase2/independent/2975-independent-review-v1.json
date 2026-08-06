@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "2975",
+    "name": "スター・マイカ・ホールディングス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2975-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画の見直しに関するお知らせ／Find the Value 2026",
+    "officialUrl": "https://www2.jpx.co.jp/disc/29750/140120250114550129.pdf",
+    "officialLandingPage": "https://www.starmica-holdings.co.jp/ir/",
+    "pdfSha256": "6a71ba0ab39c76d6fd4e1ea2e3d87444b697013db96811c4040abe55ebf68e98",
+    "pageCount": 42
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード2975、公表日2025年1月14日、公式PDF、ハッシュ、全42ページを独立に確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "plan_revision_boundary",
+      "description": "2024年1月公表の原計画と2025年1月の改定を区別し、戦略は維持・定量目標の一部を改定したことを確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2026年11月期の売上高700億円、営業利益70億円、当期純利益38億円、ROE12%以上、営業利益率10%以上を確認する。",
+      "expectedEvidencePdfPages": [1, 10, 11, 12, 13, 14, 15],
+      "status": "pending"
+    },
+    {
+      "id": "eps_and_actual_separation",
+      "description": "2024年11月期実績EPS92.98円・成長16.8%と、2026年11月期EPS成長14%以上の目標を区別する。",
+      "expectedEvidencePdfPages": [1, 10, 11, 12, 13, 14, 15],
+      "status": "pending"
+    },
+    {
+      "id": "inventory_targets",
+      "description": "販売事業期間1.5カ月短縮、OC回転期間18カ月短縮、販売用不動産残高1,000億円以上、自己資本比率25%以上を確認する。",
+      "expectedEvidencePdfPages": [1, 10, 11, 12, 13, 14, 15],
+      "status": "pending"
+    },
+    {
+      "id": "withdrawn_wacc",
+      "description": "原計画のWACC2.0%目標が取り下げられ、現行目標として残っていないことを確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "ROE・株主資本コスト、低コスト借入、成長投資優先、安定配当・増配、割安時自己株取得という5方針を確認する。",
+      "expectedEvidencePdfPages": [1, 2, 10, 11, 12, 13, 14, 15],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "総還元性向40%、PBR1倍以上、PBR1倍未満等での機動的自己株取得を確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "visual_attachment_review",
+      "description": "テキスト抽出品質が低い添付資料10～15ページを目視し、一次レビュー記録の数値・図表・注記を再確認する。",
+      "expectedEvidencePdfPages": [10, 11, 12, 13, 14, 15],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

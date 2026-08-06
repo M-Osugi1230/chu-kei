@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6675",
+    "name": "サクサ"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6675-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画（2026-2029）『変革から成長へ』",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/66750/140120260602559534.pdf",
+    "pdfSha256": "57d598531d0449a76630c68080114be3403a5a2394f71ffebe186a7776e98b01",
+    "pageCount": 30
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "サクサ株式会社、証券コード6675、公表日2026年6月5日、PDFハッシュ、30ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 3],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "候補の更新資料区分ではなく、前中計見直し後に新規策定された2026～2029年度の正式4カ年中計であることを確認する。",
+      "expectedEvidencePdfPages": [1, 6, 12],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "2024-2026前中計、2025年度実績、2026年度予想、2029年度最終目標を分離していることを確認する。",
+      "expectedEvidencePdfPages": [6, 8, 12, 13],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2026年度営業利益10億円・ROE41.4%と、2029年度営業利益50億円・ROE8%以上を再確認する。",
+      "expectedEvidencePdfPages": [1, 6, 13],
+      "status": "pending"
+    },
+    {
+      "id": "one_off_gain",
+      "description": "2026年度ROE41.4%に固定資産譲渡益が含まれ、2029年度ROE目標と単純比較できないことを確認する。",
+      "expectedEvidencePdfPage": 1,
+      "status": "pending"
+    },
+    {
+      "id": "undisclosed_annual_targets",
+      "description": "2027～2029年度の年度別損益数値は計画公表時点で未開示であり、補間されていないことを確認する。",
+      "expectedEvidencePdfPage": 6,
+      "status": "pending"
+    },
+    {
+      "id": "capital_in",
+      "description": "不動産売却260億円、資産有効活用70億円、有利子負債70～90億円がキャッシュイン400～420億円と一致することを再計算する。",
+      "expectedEvidencePdfPage": 26,
+      "status": "pending"
+    },
+    {
+      "id": "capital_out",
+      "description": "株主還元100億円、事業用不動産110～130億円、戦略的M&A100億円、構造変革20億円、BCP35億円、サプライチェーン15億円、IT基盤20億円が400～420億円と一致することを再計算する。",
+      "expectedEvidencePdfPage": 26,
+      "status": "pending"
+    },
+    {
+      "id": "capital_visual_hierarchy",
+      "description": "PDF26ページの図を目視し、事業投資・基盤強化投資等の大分類と各金額の紐づきを確認する。一次レビューは表示項目を統合していない。",
+      "expectedEvidencePdfPage": 26,
+      "status": "pending"
+    },
+    {
+      "id": "dividend_transition",
+      "description": "現行普通配当、特別配当、新方針の適用期間を確認し、DOE4%と調整後利益ベースの総還元性向100%の高い方という定義を確認する。",
+      "expectedEvidencePdfPages": [2, 6, 27],
+      "status": "pending"
+    },
+    {
+      "id": "stock_split",
+      "description": "2026年4月1日の1対3株式分割と、過年度1株配当の分割調整表示を確認する。",
+      "expectedEvidencePdfPage": 27,
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、単位、配当期間、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

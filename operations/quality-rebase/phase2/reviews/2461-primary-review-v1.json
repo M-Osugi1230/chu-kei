@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"2461","name":"ファンコミュニケーションズ","market":"Prime","industry":"サービス業","phase2Order":403},
+  "source": {
+    "title":"中期経営計画 FY25-27 一部見直し",
+    "publishedDate":"2026-02-09",
+    "officialUrl":"https://www2.jpx.co.jp/disc/24610/140120260206550877.pdf",
+    "pdfSha256":"6fc987ade765d3be3b78166c641dcc316098e1178f0ccc2904c9486141bd7eb2",
+    "pageCount":35,
+    "documentClassification":"official_current_management_plan_partial_revision",
+    "period":{"startFiscalYear":"2025年度","endFiscalYear":"2027年度","terminalFiscalYear":"2027年度"},
+    "formalPlanBoundary": {
+      "originalPlan":"2025年2月公表のFY25-27",
+      "currentRevision":"2026年度営業利益・ROE計画を下方修正し、AI投資とストック収益化を追加",
+      "unchangedTerminalTargets":"2027年度営業利益30億円、ROE10%以上",
+      "statement":"2025年度実績、2026年度旧目標・修正後目標、2027年度据置目標を分離する。"
+    }
+  },
+  "summary":"AI駆動型デジタルマーケティング支援へ転換し、A8.net、N-INE、FANCOMI AI、顧客データ、M&Aを強化する。2026年度は投資優先で営業利益を24億円から21.8億円、ROEを8.9%から8.2%へ修正するが、2027年度の営業利益30億円・ROE10%以上は維持する。",
+  "financialTargets":[
+    {"metric":"営業利益","target":21.8,"unit":"億円","targetFiscalYear":"2026年度・修正後","originalTarget":24,"evidencePdfPages":[1,4]},
+    {"metric":"ROE","target":8.2,"unit":"%","targetFiscalYear":"2026年度・修正後","originalTarget":8.9,"evidencePdfPage":1},
+    {"metric":"営業利益","target":30,"unit":"億円","targetFiscalYear":"2027年度・据置","evidencePdfPages":[1,4,5,8]},
+    {"metric":"ROE","target":10,"unit":"%以上","targetFiscalYear":"2027年度・据置","evidencePdfPages":[1,5,8]}
+  ],
+  "actualsSeparated":[
+    {"metric":"営業利益","actual":19.65,"unit":"億円","fiscalYear":"2025年度","originalTarget":18.1,"revisedDuringYear":19.5,"evidencePdfPages":[1,4]},
+    {"metric":"ROE","actual":7.4,"unit":"%","fiscalYear":"2025年度","evidencePdfPage":1}
+  ],
+  "supersededTargetsSeparated":[
+    {"metric":"2026年度営業利益","target":24,"unit":"億円","classification":"superseded_original_target","evidencePdfPages":[1,4]},
+    {"metric":"2026年度ROE","target":8.9,"unit":"%","classification":"superseded_original_target","evidencePdfPage":1}
+  ],
+  "strategyThemes":[
+    {"theme":"AI駆動型プロダクト","evidencePdfPages":[5,6,7],"evidence":"A8.net、N-INE、FANCOMI AIへAIを実装し、マッチング、価格、営業、運用を高度化する。"},
+    {"theme":"データ・オペレーション基盤","evidencePdfPages":[6,7],"evidence":"データパイプライン、AIエージェント、顧客管理、社内業務自動化を進める。"},
+    {"theme":"ストック収益化","evidencePdfPages":[1,4,7],"evidence":"戦略事業の収益基盤をストック型へ移行し、顧客IDと顧客単価を高める。"},
+    {"theme":"既存アセットを核とするM&A","evidencePdfPages":[8,9],"evidence":"既存顧客3,000社とのシナジーがあるデジタルマーケティング領域を対象とする。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_two_year_cash_allocation",
+    "period":"2025年度末～2027年度末",
+    "beginningCash":170,
+    "beginningCashUnit":"億円",
+    "operatingCashFlow":60,
+    "investingCashFlow":-70,
+    "financingCashFlow":-40,
+    "endingCash":120,
+    "cashFlowUnit":"億円",
+    "operatingFunds":40,
+    "operatingFundsUnit":"億円・支払サイクル約2カ月分",
+    "strategicReserve":80,
+    "strategicReserveUnit":"億円",
+    "aiAndInternalInvestment":10,
+    "aiAndInternalInvestmentUnit":"億円",
+    "maInvestment":60,
+    "maInvestmentUnit":"億円",
+    "maHurdleRate":15,
+    "maHurdleRateUnit":"IRR%・投資判断基準",
+    "policy":"財務流動性120億円を確保しつつ、AI・社内投資10億円とM&A60億円へ配分する。M&A未実行分は戦略的待機資金とする。",
+    "evidencePdfPages":[8,9]
+  },
+  "shareholderReturnPolicy": {
+    "status":"doe_based_dividend_and_flexible_buybacks",
+    "doeTarget":8,
+    "doeTargetUnit":"%程度・2027年度まで",
+    "buybackPolicy":"RS導入目的の自己株式取得および機動的な自己株式取得を検討",
+    "policy":"DOE8%程度をベースに安定還元し、資本効率に応じ自己株式取得を組み合わせる。",
+    "evidencePdfPage":8
+  },
+  "definitions":[
+    {"term":"2026年度修正","definition":"最終目標の下方修正ではなく、AI投資とストック化を優先する中間年度計画の修正。","evidencePdfPages":[1,4]},
+    {"term":"戦略的待機資金80億円","definition":"M&A機会と不測の事態に備える流動性資金。M&A投資60億円が未実行の場合もこの枠へ留保する。","evidencePdfPage":8},
+    {"term":"IRR15%","definition":"M&A投資判断の基準となるハードルレートで、案件・フェーズにより目標IRRは変動する。","evidencePdfPage":9},
+    {"term":"DOE8%程度","definition":"2027年度までの配当基準。配当性向ではない。","evidencePdfPage":8}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"actualOriginalRevisionAndTerminalSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"cashBridgeValidated":true,"shareholderReturnPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T07:42:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2026年度24→21.8億円、8.9→8.2%と2027年度据置目標を確認する","手元資金170→120億円のキャッシュブリッジを確認する","運転資金40・待機資金80・AI投資10・M&A60億円を確認する","DOE8%程度・IRR15%を確認する"]}
+}

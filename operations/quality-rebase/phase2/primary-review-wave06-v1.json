@@ -1,0 +1,353 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-04T05:48:00+00:00",
+  "updatedAt": "2026-08-04T06:03:12+00:00",
+  "wave": 6,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 188,
+      "code": "7460",
+      "name": "ヤギ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 37,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/7460/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7460-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7460-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 189,
+      "code": "7504",
+      "name": "高速",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 20,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/7504/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7504-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7504-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 190,
+      "code": "7743",
+      "name": "シード",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 32,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/7743/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7743-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7743-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 192,
+      "code": "8012",
+      "name": "長瀬産業",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 28,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-05/8012/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/8012-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/8012-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 195,
+      "code": "9007",
+      "name": "小田急電鉄",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 49,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-05/9007/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/9007-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/9007-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 200,
+      "code": "1719",
+      "name": "安藤・間",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 38,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-05/1719/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/1719-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/1719-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 204,
+      "code": "2764",
+      "name": "ひらまつ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 55,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-01/2764/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2764-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2764-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 205,
+      "code": "3159",
+      "name": "丸善CHIホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 27,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-01/3159/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3159-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3159-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 215,
+      "code": "4186",
+      "name": "東京応化工業",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 98,
+      "pageCount": 25,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-02/4186/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4186-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 216,
+      "code": "4691",
+      "name": "ワシントンホテル",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 41,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-02/4691/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4691-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4691-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 1,
+    "planRevisionOrUpdateCandidates": 9,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 10,
+    "independentReviewReady": 10,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

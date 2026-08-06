@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "8876",
+    "name": "リログループ"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8876-primary-review-v1.json",
+  "source": {
+    "title": "リログループ 第四次オリンピック作戦",
+    "officialLandingPage": "https://www.relo.jp/ir/library/presentation.html",
+    "officialUrl": "https://www.relo.jp/ir/library/docs/20250509_J.pdf",
+    "officialNoticePage": "https://www.relo.jp/ir/news/2025/index_2.html",
+    "pdfSha256": "6e9781413e87ac7e82895200f7b3fd5b5a473fe253173a4941c93776a54da0ad",
+    "pageCount": 38
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社公式IRサイト、会社名、計画名称、公表日2025年5月8日、公式PDF URL、ハッシュ、38ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 3],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "第四次オリンピック作戦が2026年3月期から2029年3月期までの4カ年計画であることを確認する。",
+      "expectedEvidencePdfPages": [2, 3],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2029年3月期の売上収益2,000億円、営業利益500億円、調整後ROIC15%、ROE25～30%、調整後ネットD/E1倍以内、自己資本比率30%以上を再確認する。",
+      "expectedEvidencePdfPages": [3, 4, 25],
+      "status": "pending"
+    },
+    {
+      "id": "business_kpis",
+      "description": "福利厚生会員3,500万人、借上社宅160万戸、海外赴任支援5万人、賃貸管理35万戸、観光利用者350万人の年度・単位・範囲を確認する。",
+      "expectedEvidencePdfPages": [8, 12, 15, 18, 21],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "福利厚生、借上社宅、海外赴任、賃貸管理、観光領域の各課題解決戦略とデジタル化・M&Aの関係を確認する。",
+      "expectedEvidencePdfPages": [7, 11, 14, 17, 20, 24],
+      "status": "pending"
+    },
+    {
+      "id": "adjusted_metric_definitions",
+      "description": "調整後ROICと調整後ネットD/Eレシオの会社定義、算式、調整項目を確認する。",
+      "expectedEvidencePdfPages": [25],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "成長投資・M&A・デジタル投資・株主還元を資本効率と財務健全性の目標範囲で実施する方針を確認し、非開示の固定投資総額を補完していないことを確認する。",
+      "expectedEvidencePdfPages": [24, 25, 26, 27, 28, 29],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向50%、総還元性向60%、累進配当、年2回配当の方針を確認する。",
+      "expectedEvidencePdfPages": [29, 30],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、グラフ・改行表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"3374","name":"内外テック","market":"Standard","industry":"卸売業","phase2Order":326},
+  "source": {
+    "title":"中期経営計画 MIRAI 2030（Naigai Frontier Gate）",
+    "publishedDate":"2026-05-15",
+    "officialUrl":"https://www2.jpx.co.jp/disc/33740/140120260515537110.pdf",
+    "pdfSha256":"23f9583e3f8f6a821956adde2e5a1e5eba46d5614790dc62db3ecde889cbe440",
+    "pageCount":16,
+    "documentClassification":"formal_management_plan_replacing_revised_mirai2026",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2031年3月期","terminalFiscalYear":"2031年3月期"},
+    "formalPlanBoundary":{"originalPlan":"MIRAI 2026・2024年5月策定","revisedPlan":"MIRAI 2026修正・2025年5月発表","currentPlan":"MIRAI 2030・2026年5月策定","disclosurePolicy":"2027年3月期予想と2030年度終期目標を開示し、中間年度数値は毎年度更新","statement":"旧計画600億円、修正計画448億円、2026年実績406億円、2027年予想326億円、2030年度目標500億円以上を分離する。"}
+  },
+  "summary":"半導体部品・受託組立企業から、フィジカルAI、AI/SCMシステム、AI人材育成を核とするサプライチェーンのハブへ転換する。2030年度に売上高500億円以上、うちAI関連100億円、営業利益率7%、ROE12.5%、PBR1倍以上を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":500,"unit":"億円以上","targetFiscalYear":"2030年度・2031年3月期","baseline":"2026年3月期実績406億円","evidencePdfPages":[1,4,7,8]},
+    {"metric":"AI関連売上高","target":100,"unit":"億円","targetFiscalYear":"2030年度・2031年3月期","evidencePdfPages":[1,4,7]},
+    {"metric":"営業利益率","target":7.0,"unit":"%","targetFiscalYear":"2030年度・2031年3月期","baseline":"2026年3月期実績4.3%","evidencePdfPages":[1,4,8]},
+    {"metric":"ROE","target":12.5,"unit":"%","targetFiscalYear":"2030年度・2031年3月期","baseline":"2026年3月期実績7.9%","evidencePdfPages":[1,4,8,9]},
+    {"metric":"PBR","target":1.0,"unit":"倍以上","targetFiscalYear":"2031年3月期","baseline":"2026年3月末0.63倍","evidencePdfPage":9}
+  ],
+  "annualForecastSeparated":[
+    {"metric":"売上高","target":326,"unit":"億円","targetFiscalYear":"2027年3月期","classification":"annual_forecast_not_midterm_terminal_target","evidencePdfPages":[2,8]},
+    {"metric":"営業利益率","target":3.7,"unit":"%","targetFiscalYear":"2027年3月期","evidencePdfPage":8},
+    {"metric":"ROE","target":7.6,"unit":"%","targetFiscalYear":"2027年3月期","evidencePdfPage":8}
+  ],
+  "strategyThemes":[
+    {"theme":"フィジカルAI","evidencePdfPages":[4,5,6,12],"evidence":"Physical Fabで組立自動化・予知保全を実証し、主要顧客の戦略パートナーへ進化する。"},
+    {"theme":"AI/SCMシステム","evidencePdfPages":[4,5,6],"evidence":"1,500社のサプライヤー網とAIエージェントで調達を最適化し、調達コスト30%削減を目指す。"},
+    {"theme":"AI人材育成","evidencePdfPages":[4,5,6,13],"evidence":"技術文書・現場ノウハウをAI資産化し、2030年にAI人材300名体制を構築する。"},
+    {"theme":"既存事業強化","evidencePdfPages":[4,5,7],"evidence":"生産キャパ、技術開発、保守メンテナンス、精密加工を拡大する。"},
+    {"theme":"M&A・ポートフォリオ","evidencePdfPages":[4,8,9,11,12],"evidence":"M&Aと高粗利事業へのシフトで事業基盤を多角化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"growth_investment_uses_and_leverage_policy_disclosed_no_total_amount",
+    "investmentUses":["M&A","フィジカルAI開発・実証","仙台第二工場新設","大衡工場増床・稼働","仙台開発センター","保守メンテナンス","AI/SCMシステム"],
+    "assetTurnoverTarget":"1.5倍以上・2026年3月期1.41倍から改善",
+    "financialLeveragePolicy":"2.08倍から適正水準を維持",
+    "roicWaccSpreadTarget":"5.0%以上・2026年3月期2.0%から拡大",
+    "growthInvestmentTotal":null,
+    "cashAllocationTotal":null,
+    "statement":"成長投資の用途と資本効率方針は開示されるが、投資総額・キャッシュアロケーション総額は未開示のため推計しない。",
+    "evidencePdfPages":[4,8,11,12]
+  },
+  "shareholderReturnPolicy": {
+    "status":"dual_floor_payout_and_doe_with_growth_investment_balance",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%以上",
+    "doeTarget":3,
+    "doeTargetUnit":"%以上",
+    "previousPayoutRatio":25,
+    "previousPayoutRatioUnit":"%",
+    "dividendPolicy":"安定配当とM&Aを含む成長投資の両立",
+    "otherReturnMethods":"市場環境を踏まえ多様な還元手段を検討",
+    "evidencePdfPages":[1,2,4,11,12]
+  },
+  "nonFinancialTargets":[
+    {"metric":"AI人材","target":300,"unit":"名","targetFiscalYear":"2030年","evidencePdfPages":[4,6,13]},
+    {"metric":"業務自動化率","target":80,"unit":"%","targetFiscalYear":"2030年","evidencePdfPage":6},
+    {"metric":"調達コスト削減","target":30,"unit":"%","targetFiscalYear":"2030年","evidencePdfPage":6},
+    {"metric":"CO2削減","target":70,"unit":"%削減","targetFiscalYear":"2030年","evidencePdfPage":10},
+    {"metric":"再生可能エネルギー比率","target":80,"unit":"%","targetFiscalYear":"2030年","evidencePdfPage":10}
+  ],
+  "definitions":[
+    {"term":"MIRAI 2026の600億円・448億円","definition":"600億円は旧計画目標、448億円は旧計画修正値であり、現計画2030年度500億円以上とは分離する。","evidencePdfPages":[2,8]},
+    {"term":"AI関連100億円","definition":"既存5事業に含まれるフィジカルAI、AI/SCM、予知保全、自社製品、統合ソリューションの合計領域。","evidencePdfPage":7},
+    {"term":"市場CAGR","definition":"半導体・製造装置・フィジカルAI市場の外部予測であり、会社売上CAGR目標ではない。","evidencePdfPage":3}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"originalRevisedActualForecastAndCurrentTargetSeparated":true,"marketForecastAndCompanyTargetsSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T07:20:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["旧600億円・修正448億円・実績406億円・予想326億円・現目標500億円を原寸確認する","AI関連100億円の事業別内訳を図表突合する","配当性向30%以上・DOE3%以上を確認する","成長投資総額が未開示であることを独立確認する","市場CAGRと会社目標を混在させていないことを確認する"]}
+}

@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-04T13:38:00+00:00",
+  "wave": 8,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave08-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "全文・数値・資本政策・項目別証跡の一次レビューは完了したが、図表原寸確認と独立再確認が未完了のため中間状態として記録する。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 68,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 382,
+    "primaryReviewWavesAssigned": 8,
+    "primaryReviewCompaniesAssignedTotal": 80
+  },
+  "companyCompletions": [
+    {
+      "order": 268,
+      "code": "4885",
+      "name": "室町ケミカル",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4885-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_revision_and_period_extension"
+    },
+    {
+      "order": 270,
+      "code": "5021",
+      "name": "コスモエネルギーホールディングス",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/5021-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2028_with_vision2035"
+    },
+    {
+      "order": 271,
+      "code": "5076",
+      "name": "インフロニア・ホールディングス",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/5076-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_revision_after_major_acquisition"
+    },
+    {
+      "order": 278,
+      "code": "6330",
+      "name": "東洋エンジニアリング",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6330-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
+    },
+    {
+      "order": 279,
+      "code": "6455",
+      "name": "モリタホールディングス",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6455-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
+    },
+    {
+      "order": 280,
+      "code": "6505",
+      "name": "東洋電機製造",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6505-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2027_to_2030"
+    },
+    {
+      "order": 285,
+      "code": "6666",
+      "name": "リバーエレテック",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6666-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_to_2028"
+    },
+    {
+      "order": 286,
+      "code": "6743",
+      "name": "大同信号",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6743-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "official_current_management_plan_progress_update"
+    },
+    {
+      "order": 287,
+      "code": "6905",
+      "name": "コーセル",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6905-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_fy2026_to_fy2028"
+    },
+    {
+      "order": 289,
+      "code": "7607",
+      "name": "進和",
+      "status": "primary_review_complete_independent_visual_review_pending",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7607-primary-review-v1.json",
+      "completedChecks": ["formalPlanConfirmation", "formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence", "yearUnitScopeValidation"],
+      "pendingChecks": ["visualFigureReview", "independentDoubleCheck"],
+      "sourceClassification": "formal_management_plan_current_2026_09_to_2029_08"
+    }
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 10,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 10,
+    "primaryReviewComplete": 78,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 372,
+    "deepVerificationApproved": 0
+  },
+  "nextWaveAssignment": {
+    "wave": 9,
+    "assigned": 10,
+    "completionCount": 0,
+    "remainingCount": 10,
+    "status": "in_progress",
+    "file": "operations/quality-rebase/phase2/primary-review-wave09-v1.json",
+    "effectiveWavesAssigned": 9,
+    "effectiveCompaniesAssignedTotal": 90
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

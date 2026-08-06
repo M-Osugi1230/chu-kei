@@ -1,0 +1,279 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-04T08:40:00+00:00",
+  "updatedAt": "2026-08-04T06:20:00+00:00",
+  "wave": 7,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 219,
+      "code": "5451",
+      "name": "ヨドコウ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 30,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-02/5451/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/5451-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/5451-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 221,
+      "code": "6036",
+      "name": "KeePer技研",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 42,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/6036/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6036-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 222,
+      "code": "6376",
+      "name": "日機装",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 32,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/6376/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 225,
+      "code": "7164",
+      "name": "全国保証",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 40,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/7164/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7164-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7164-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 229,
+      "code": "2734",
+      "name": "サーラコーポレーション",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 19,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/2734/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2734-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2734-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 232,
+      "code": "3475",
+      "name": "グッドコムアセット",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 98,
+      "pageCount": 41,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-04/3475/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 237,
+      "code": "463A",
+      "name": "インテリックスホールディングス",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 29,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-04/463A/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 238,
+      "code": "6050",
+      "name": "イー・ガーディアン",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 95,
+      "pageCount": 15,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-04/6050/primary-review-template.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6050-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6050-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "visualFigureReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
+    },
+    {
+      "order": 251,
+      "code": "3559",
+      "name": "ピーバンドットコム",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 34,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-01/3559/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 252,
+      "code": "3611",
+      "name": "マツオカコーポレーション",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 39,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-01/3611/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 6,
+    "planRevisionOrUpdateCandidates": 4,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 5,
+    "independentReviewReady": 5,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

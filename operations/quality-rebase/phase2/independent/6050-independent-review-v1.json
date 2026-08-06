@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {"code": "6050", "name": "イー・ガーディアン"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6050-primary-review-v1.json",
+  "source": {"title": "中期経営計画2026-2028", "officialUrl": "https://www2.jpx.co.jp/disc/60500/140120251217521239.pdf", "pdfSha256": "fdf12d73aeab688e0a0fead4653313bd52dba1c3ac06040f3e946fb9b6db46b8", "pageCount": 15},
+  "status": "independent_review_ready",
+  "checks": [
+    {"id": "source_identity", "description": "会社名、証券コード6050、公表日2025年12月17日、PDFハッシュ、全15ページを確認する。", "expectedEvidencePdfPages": [1,2,15], "status": "pending"},
+    {"id": "financial_targets", "description": "2026～2028年の売上高120・150・200億円、EBITDA17.5・20・25億円を確認する。", "expectedEvidencePdfPages": [7], "status": "pending"},
+    {"id": "business_model", "description": "中計期間プロダクト比率30%と5年後50%を分離する。", "expectedEvidencePdfPages": [10], "status": "pending"},
+    {"id": "strategy", "description": "AIシステム・プロダクト、AI人材、サイバーセキュリティ、M&A戦略を確認する。", "expectedEvidencePdfPages": [4,6,9,11,12,13], "status": "pending"},
+    {"id": "capital_policy", "description": "現預金約110億円・営業CF約40億円と、キャッシュアウト内訳額が伏字で未開示であることを確認する。", "expectedEvidencePdfPages": [14], "status": "pending"},
+    {"id": "shareholder_return", "description": "配当・株主優待を重要視する定性的方針で、定量額・配当性向・DOEが未開示であることを確認する。", "expectedEvidencePdfPages": [14], "status": "pending"}
+  ],
+  "review": {"minimumDistinctReviewers": 2, "primaryReviewerMustNotSelfApprove": true, "automaticApprovalAllowed": false, "deepVerificationApproved": false, "completedAt": null, "reviewer": null}
+}

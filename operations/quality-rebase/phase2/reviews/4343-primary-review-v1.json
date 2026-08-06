@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"4343","name":"イオンファンタジー","market":"Prime","industry":"サービス業","phase2Order":340},
+  "source": {
+    "title":"中期経営計画（2026年度～2030年度）",
+    "publishedDate":"2026-04-09",
+    "officialUrl":"https://www2.jpx.co.jp/disc/43430/140120260409500815.pdf",
+    "pdfSha256":"0367438f48f5160e3963c10cffab2d2c53e102a5e54141d78c049c3bd3c56507",
+    "pageCount":39,
+    "documentClassification":"formal_management_plan_current_2026_to_2030",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2030年度","terminalFiscalYear":"2030年度"},
+    "formalPlanBoundary":{"currentPlan":"中期経営計画・2026年度～2030年度","statement":"2025年度実績、2026年度以降の年度別計画、2030年度終期目標を分離する。"}
+  },
+  "summary":"国内の既存店投資と新業態拡大、海外事業の資本効率重視への転換、DX・人財・サステナビリティ施策を進める。2030年度に売上高1,500億円、営業利益150億円、営業利益率10%、ROE23%、D/Eレシオ1倍程度を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":150000,"unit":"百万円","targetFiscalYear":"2030年度","baseline":"2025年度実績93,200百万円","evidencePdfPages":[6,29]},
+    {"metric":"営業利益","target":15000,"unit":"百万円","targetFiscalYear":"2030年度","baseline":"2025年度実績6,100百万円","evidencePdfPages":[7,29]},
+    {"metric":"営業利益率","target":10.0,"unit":"%","targetFiscalYear":"2030年度","baseline":"2025年度実績6.6%","evidencePdfPages":[6,29]},
+    {"metric":"ROE","target":23,"unit":"%","targetFiscalYear":"2030年度","baseline":"2025年度実績31%","evidencePdfPages":[6,7]},
+    {"metric":"D/Eレシオ","target":1.0,"unit":"倍程度","targetFiscalYear":"2030年度","baseline":"2025年度実績4.5倍","evidencePdfPages":[6,33]},
+    {"metric":"配当性向","targetRange":[10,15],"unit":"%","targetFiscalYear":"中計期間・2030年度方針","evidencePdfPages":[6,33]}
+  ],
+  "strategyThemes":[
+    {"theme":"国内事業の成長路線回帰","evidencePdfPages":[4,10,14,27],"evidence":"クレーン横丁極、ちきゅうのにわ、のびっこ等へ重点投資し、既存店の資本効率も高める。"},
+    {"theme":"事業・業態間シナジー","evidencePdfPages":[4,11,12,13],"evidence":"人財・設備・送客・データを共有し、顧客LTVと収益性を高める。"},
+    {"theme":"海外事業の資本効率重視","evidencePdfPages":[21,23,24,25,28],"evidence":"国別の成熟度に応じ、新規出店、既存店活性化、不採算整理を選別する。"},
+    {"theme":"DX・共通顧客基盤","evidencePdfPage":35,"evidence":"共通ID、事業間送客、ESG・リスクKPI可視化、業務自動化を進める。"},
+    {"theme":"人財・組織戦略","evidencePdfPage":36,"evidence":"多角化と海外戦略を支える採用、育成、定着、ガバナンスを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_five_year_cash_allocation",
+    "operatingCashFlow":100600,
+    "operatingCashFlowUnit":"百万円・5年間累計",
+    "debtUtilization":17000,
+    "debtUtilizationUnit":"百万円",
+    "debtRepayment":34600,
+    "debtRepaymentUnit":"百万円",
+    "investment":79200,
+    "investmentUnit":"百万円",
+    "shareholderReturn":3900,
+    "shareholderReturnUnit":"百万円",
+    "priorityOrder":["財務健全化","既存店・成長投資","株主還元"],
+    "investmentDiscipline":"WACCを十分上回るハードルレート",
+    "evidencePdfPages":[31,32,33]
+  },
+  "shareholderReturnPolicy": {
+    "status":"low_payout_during_deleveraging_and_growth_investment",
+    "payoutRatioTargetRange":[10,15],
+    "payoutRatioTargetUnit":"%",
+    "policy":"D/Eレシオ1倍程度への財務健全化と投資を妨げない範囲で配当する。",
+    "evidencePdfPages":[6,33]
+  },
+  "nonFinancialTargets":[
+    {"metric":"CO2排出量削減","target":64,"unit":"%削減・2018年比","targetFiscalYear":"2030年度","evidencePdfPage":37},
+    {"metric":"省エネ比率","target":10,"unit":"%","targetFiscalYear":"2030年度","evidencePdfPage":37},
+    {"metric":"再エネ比率","target":60,"unit":"%","targetFiscalYear":"2030年度","evidencePdfPage":37},
+    {"metric":"店舗プラスチック使用削減","target":30,"unit":"%削減","targetFiscalYear":"2030年度","evidencePdfPage":37},
+    {"metric":"廃棄機械景品比率","target":10,"unit":"%未満","targetFiscalYear":"2030年度","evidencePdfPage":37},
+    {"metric":"こども教育対象者","target":500,"unit":"万人・2022～2030年度累計","targetFiscalYear":"2030年度","evidencePdfPage":37},
+    {"metric":"女性課長職以上比率","target":50,"unit":"%","targetFiscalYear":"2030年度","evidencePdfPage":37},
+    {"metric":"障がい者雇用率","target":5,"unit":"%","targetFiscalYear":"2030年度","evidencePdfPage":37},
+    {"metric":"男性育児休暇取得率","target":100,"unit":"%","targetFiscalYear":"2030年度","evidencePdfPage":37},
+    {"metric":"社員の働きがい肯定回答","target":75,"unit":"%","targetFiscalYear":"2030年度","evidencePdfPage":37}
+  ],
+  "definitions":[
+    {"term":"ROE23%","definition":"レバレッジ縮小後も純利益率と資産回転率の改善により維持する資本収益性目標。","evidencePdfPages":[6,7]},
+    {"term":"投資790億円程度とキャピタルアロケーション792億円","definition":"前者は概算表示、後者は5年間のキャッシュアウト計画。丸め差を分離して扱う。","evidencePdfPages":[31,33]},
+    {"term":"海外戦略","definition":"一律の店舗拡大ではなく、国別に利益率・ROICを重視した出店と構造改革を行う。","evidencePdfPages":[21,23,24,25]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T06:50:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2030年度の売上・利益・ROE・D/E・配当性向を原寸確認する","キャッシュイン1006・170億円とキャッシュアウト346・792・39億円を図表確認する","投資790億円程度と792億円の丸め差を確認する","サステナビリティKPIの対象年度・単位を確認する"]}
+}

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4651",
+    "name": "サニックスホールディングス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4651-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/46510/140120260515537243.pdf",
+    "pdfSha256": "a2a053ca7673f3457c003bd29f4334fd6f8cafb671ccdb153f5121fb23a4a417",
+    "pageCount": 69
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "サニックスホールディングス株式会社、証券コード4651、公表日2026年5月15日、PDFハッシュ、69ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "新中計が2027年3月期～2029年3月期の3年間で、2026年3月期は基準実績であることを確認する。",
+      "expectedEvidencePdfPages": [33, 34, 58],
+      "status": "pending"
+    },
+    {
+      "id": "annual_targets",
+      "description": "連結売上・営業利益・利益率の2027年473億円・18.3億円・3.9%、2028年486億円・20.3億円・4.2%、2029年499億円・28.9億円・5.8%を再確認する。",
+      "expectedEvidencePdfPage": 58,
+      "status": "pending"
+    },
+    {
+      "id": "segment_targets",
+      "description": "2029年の住環境158億円・21.5億円、エネルギー102億円・4.9億円、資源循環220億円・24.6億円、その他5億円・0.2億円を確認する。",
+      "expectedEvidencePdfPage": 58,
+      "status": "pending"
+    },
+    {
+      "id": "corporate_adjustment",
+      "description": "全社・調整▲22.4億円を営業利益調整項目として扱い、売上や独立事業として加算していないことを確認する。",
+      "expectedEvidencePdfPage": 58,
+      "status": "pending"
+    },
+    {
+      "id": "roic_definitions",
+      "description": "2029年ROIC8.8%は従来定義、割賦債務を有利子負債に含めた場合は7.3%であることを確認する。",
+      "expectedEvidencePdfPage": 60,
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "中計期間EBITDA135億円と、設備更新60億円、戦略投資49億円、有利子負債圧縮20億円、株主還元6億円の一致を再計算する。",
+      "expectedEvidencePdfPage": 61,
+      "status": "pending"
+    },
+    {
+      "id": "strategic_investment_scope",
+      "description": "戦略投資49億円がM&A・成長設備・研究開発を含み、設備更新60億円と別枠であることを確認する。",
+      "expectedEvidencePdfPage": 61,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "2027年3円・14%、2028年4円・12%、2029年5円・14%と、将来の配当性向25%目標を分離して確認する。",
+      "expectedEvidencePdfPage": 61,
+      "status": "pending"
+    },
+    {
+      "id": "equity_ratio",
+      "description": "自己資本比率を2026年3月期27.5%から2029年3月期35%へ改善する目標を確認する。",
+      "expectedEvidencePdfPage": 61,
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、億円・百万円換算、ROIC定義、配当表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

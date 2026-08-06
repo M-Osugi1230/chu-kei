@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-04T13:35:00+00:00",
+  "updatedAt": "2026-08-04T13:35:00+00:00",
+  "wave": 9,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 313,
+      "code": "2428",
+      "name": "ウェルネット",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 9,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-02/2428/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 315,
+      "code": "2733",
+      "name": "あらた",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 36,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-02/2733/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 317,
+      "code": "2872",
+      "name": "セイヒョー",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 20,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-02/2872/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 319,
+      "code": "2984",
+      "name": "ヤマイチエステート",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 88,
+      "pageCount": 28,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-02/2984/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 321,
+      "code": "3010",
+      "name": "ポラリス・ホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 45,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-03/3010/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 322,
+      "code": "3083",
+      "name": "スターシーズ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 50,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-03/3083/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 323,
+      "code": "3153",
+      "name": "八洲電機",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 31,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-03/3153/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 324,
+      "code": "3157",
+      "name": "ジオリーブグループ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 20,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-03/3157/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 325,
+      "code": "3284",
+      "name": "フージャースホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 34,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-03/3284/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 385,
+      "code": "8159",
+      "name": "立花エレテック",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 15,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-08/wave-04/8159/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 2,
+    "planRevisionOrUpdateCandidates": 8,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

@@ -28,7 +28,7 @@ const state = {
   currentCompany: '',
   currentDetail: null,
 };
-const stageLabels = { core: '本番', detailed_extracted: '詳細抽出済みβ', source_indexed: '一次確認β', jpx_indexed: 'カバレッジβ' };
+const stageLabels = { core: '資料登録済み（再監査中）', detailed_extracted: '詳細抽出済みβ', source_indexed: '一次確認β', jpx_indexed: 'カバレッジβ' };
 const sortLabels = { relevance: '検索との関連順', quality: '品質の高い順', verified: '最終確認日の新しい順', code: '証券コード順' };
 const strategies = [
   ['ma', 'M&A活用型', '買収・提携を成長手段として明示'],
@@ -369,13 +369,23 @@ function bindClose(dialog, onClose) {
   dialog.onclose = () => onClose?.();
 }
 
-function updateStats() {
+async function updateStats() {
   const companies = state.data.companies;
-  const actualRows = state.data.progress.filter(row => row.actualValue != null).length;
   $('#stat-total').textContent = `${companies.length}社`;
-  $('#stat-confirmed').textContent = `${companies.filter(c => c.stage !== 'jpx_indexed').length}社`;
-  $('#stat-structured').textContent = `${companies.filter(c => ['core', 'detailed_extracted'].includes(c.stage)).length}社`;
-  $('#stat-progress').textContent = `${state.data.progress.length}件（実績${actualRows}件）`;
+  try {
+    const quality = await fetch('./data/quality-rebase-v1.json', { cache: 'no-cache' }).then(response => {
+      if (!response.ok) throw new Error('quality-rebase-v1.json');
+      return response.json();
+    });
+    $('#stat-confirmed').textContent = `${quality.counts.reAuditPool}社`;
+    $('#stat-structured').textContent = `${quality.counts.deepVerified}社`;
+    $('#stat-progress').textContent = `${quality.counts.actualConnectedCompanies}社 / ${quality.counts.actualConnectedRecords}件`;
+  } catch {
+    const actualRows = state.data.progress.filter(row => row.actualValue != null).length;
+    $('#stat-confirmed').textContent = '再集計中';
+    $('#stat-structured').textContent = `${companies.filter(c => c.quality?.deepVerified).length}社`;
+    $('#stat-progress').textContent = `${actualRows}件`;
+  }
 }
 
 function restoreWorkspace(validCodes) {

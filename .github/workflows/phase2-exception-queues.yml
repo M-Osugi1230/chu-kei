@@ -1,0 +1,75 @@
+name: Phase 2 Exception Queues
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'scripts/build_phase2_exception_queues.py'
+      - 'operations/quality-rebase/phase2/source-relevance-v2/**'
+      - 'operations/quality-rebase/phase2/source-relevance-audit/**'
+      - '.github/workflows/phase2-exception-queues.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-exception-queues-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebase on latest branch
+        run: git pull --rebase origin agent/quality-rebase-phase0-2
+
+      - name: Build audited exception queues
+        run: python scripts/build_phase2_exception_queues.py
+
+      - name: Validate queue counts and approval safety
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('operations/quality-rebase/phase2/source-repairs/exception-recovery-queues-v1.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          counts = data['counts']
+          assert counts['sourceRecoveryRequired'] == 52
+          assert counts['pdfIdentificationRequired'] == 14
+          assert counts['humanRelevanceReviewRequired'] == 11
+          assert counts['recovered'] == 0
+          assert counts['primaryReviewComplete'] == 0
+          assert counts['deepVerificationApproved'] == 0
+          safety = data['approvalSafety']
+          assert safety['automaticFactCompletionAllowed'] is False
+          assert safety['automaticApprovalAllowed'] is False
+          assert safety['deepVerificationApproved'] is False
+          print('phase2 exception queues: ok')
+          PY
+
+      - name: Commit exception queues
+        run: |
+          path='operations/quality-rebase/phase2/source-repairs/exception-recovery-queues-v1.json'
+          if git diff --quiet -- "$path"; then
+            echo 'No exception queue changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$path"
+          git commit -m 'quality: Phase 2例外77社を実行キューへ分類'
+          git push origin HEAD:agent/quality-rebase-phase0-2

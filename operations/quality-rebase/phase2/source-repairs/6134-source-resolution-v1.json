@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "phase2-source-resolution-v1",
+  "company": {
+    "code": "6134",
+    "name": "FUJI"
+  },
+  "resolutionStatus": "formal_plan_baseline_and_latest_year2_update_identified_binary_hashes_pending",
+  "collectedCandidate": {
+    "url": "https://www.fuji.co.jp/ir/library/pdf/20250513_FinancialresultbriefingJ.pdf",
+    "pdfSha256": "973efc5b258897465457e5f43ba2630acef7c078df474c52b2e2a78ad2554899",
+    "pageCount": 31,
+    "title": "決算説明及び中期経営計画1年目振り返り",
+    "publishedDate": "2025-05-13",
+    "classification": "official_management_plan_year1_progress_update",
+    "mayEnterPrimaryReviewAsLatestSource": false,
+    "reason": "候補メタデータは2024年5月10日公表の正式中計を示す一方、収集器は2025年の1年目振り返りを選択していた。さらに公式ページには2026年5月14日の2年目振り返りが追加されているため、基礎中計・1年目更新・2年目更新を分離する。"
+  },
+  "currentOfficialSources": {
+    "landingPageUrl": "https://www.fuji.co.jp/ir/policy/plan.html",
+    "formalPlanPdf": {
+      "url": "https://www.fuji.co.jp/ir/policy/pdf/Notice_regarding_the_Formulation_of_Mid-term_Business_Plan_2026_J1.pdf",
+      "title": "中期経営計画2026",
+      "publishedDate": "2024-05-10",
+      "pageCount": 36,
+      "securityCode": "6134",
+      "pdfSha256": null,
+      "binaryHashStatus": "pending_retrieval_in_repository_execution_environment",
+      "sourceRole": "formal_plan_baseline"
+    },
+    "year1ProgressPdf": {
+      "url": "https://www.fuji.co.jp/ir/library/pdf/20250513_FinancialresultbriefingJ.pdf",
+      "title": "決算説明及び中期経営計画1年目振り返り",
+      "publishedDate": "2025-05-13",
+      "pageCount": 31,
+      "pdfSha256": "973efc5b258897465457e5f43ba2630acef7c078df474c52b2e2a78ad2554899",
+      "sourceRole": "year1_progress_update"
+    },
+    "latestProgressPdf": {
+      "url": "https://www.fuji.co.jp/ir/library/pdf/20260514_FinancialresultbriefingJ.pdf",
+      "title": "決算説明及び中期経営計画2年目振り返り",
+      "publishedDate": "2026-05-14",
+      "pageCount": 32,
+      "securityCode": "6134",
+      "pdfSha256": null,
+      "binaryHashStatus": "pending_retrieval_in_repository_execution_environment",
+      "sourceRole": "latest_official_plan_progress_update"
+    }
+  },
+  "documentClassification": "formal_management_plan_with_year1_and_year2_progress_updates",
+  "formalPlanBoundary": {
+    "planPeriod": "2024年度から2026年度",
+    "terminalFiscalYear": "2027年3月期",
+    "formalPlan": "2024年5月10日公表の中期経営計画2026",
+    "year1Update": "2025年5月13日公表の1年目振り返り",
+    "year2Update": "2026年5月14日公表の2年目振り返り",
+    "longTermVision": "FUJI2035",
+    "statement": "正式中計の当初目標、年次進捗、長期ビジョンを分離する。最新実績・見通し・目標改定は2年目振り返りを優先して確認し、当初値を現行値として残さない。"
+  },
+  "confirmedBasePlanFacts": {
+    "strategyThemes": [
+      "既存事業の拡大と収益力強化",
+      "次世代ビジネスの創出と事業化",
+      "ESGに基づく事業基盤の向上"
+    ],
+    "financialTargetsAtPublication": [
+      {
+        "metric": "売上高",
+        "target": 1800,
+        "unit": "億円",
+        "targetFiscalYear": "2027年3月期"
+      },
+      {
+        "metric": "営業利益",
+        "target": 330,
+        "unit": "億円",
+        "targetFiscalYear": "2027年3月期"
+      },
+      {
+        "metric": "ROE",
+        "target": 10,
+        "unit": "%",
+        "targetFiscalYear": "2027年3月期",
+        "status": "original_target_superseded_by_2026_update"
+      },
+      {
+        "metric": "PBR",
+        "target": 1.1,
+        "unit": "倍以上",
+        "targetFiscalYear": "2027年3月期"
+      }
+    ],
+    "shareholderReturnAtPublication": {
+      "dividendPayoutRatioMinimum": 50,
+      "dividendPayoutRatioUnit": "%以上",
+      "annualDividendFloor": 80,
+      "annualDividendFloorUnit": "円",
+      "shareRepurchaseThreeYearMinimum": 150,
+      "shareRepurchaseThreeYearMinimumUnit": "億円"
+    }
+  },
+  "confirmedCurrentUpdateFacts": {
+    "roeTarget": 11,
+    "roeTargetUnit": "%以上",
+    "updatedAt": "2026-05",
+    "classification": "year2_progress_update_revision",
+    "shareholderReturnPolicy": {
+      "dividendPayoutRatioMinimum": 50,
+      "dividendPayoutRatioUnit": "%以上",
+      "annualDividendFloor": 80,
+      "annualDividendFloorUnit": "円",
+      "shareRepurchasePlanPeriodRange": "150億円から200億円規模",
+      "additional2026ShareRepurchasePlan": "100億円規模を機動的に実施予定"
+    }
+  },
+  "validation": {
+    "formalPlanLandingPageConfirmed": true,
+    "formalPlanBaselineUrlConfirmed": true,
+    "formalPlanBaselinePageCountConfirmed": true,
+    "newerOfficialUpdateIdentified": true,
+    "collectedSourceMarkedStaleForLatestReview": true,
+    "basePlanAndProgressUpdatesSeparated": true,
+    "originalAndUpdatedRoeSeparated": true,
+    "longTermVisionSeparatedFromCurrentPlan": true,
+    "formalPlanPdfSha256Confirmed": false,
+    "latestPdfSha256Confirmed": false,
+    "formalPlanAndProgressUpdateReconciled": false,
+    "fullTextHumanReviewComplete": false,
+    "independentDoubleCheck": false
+  },
+  "requiredNextChecks": [
+    "公式中期経営計画2026の基準PDFを再取得しSHA-256を固定する",
+    "2026年5月14日公表の2年目振り返りPDFを再取得しSHA-256を固定する",
+    "正式中計の当初目標と1年目・2年目進捗を項目単位で分離する",
+    "ROE当初10%と2026年5月更新後11%以上の改定履歴を全文・図表で確認する",
+    "2027年3月期通期業績予想と中計最終年度目標を混在させない",
+    "資本政策、株主還元、事業ポートフォリオ施策の変更有無を確認する",
+    "独立確認者が最新資料選定、年度、単位、範囲を再確認する"
+  ],
+  "primaryReviewComplete": false,
+  "independentReviewReady": false,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

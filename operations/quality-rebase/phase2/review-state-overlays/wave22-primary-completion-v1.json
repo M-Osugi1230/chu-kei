@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-07T02:58:00+09:00",
+  "wave": 22,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave22-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
+  "reason": "Wave22の10社について、既存一次レビュー9社を再監査し、大氣社の10年プラン・現中計を追加正本化した。全社で資料区分、計画境界、主要数値、資本政策、株主還元、項目別証跡の一次レビューが完了している。独立レビューと残存図表確認は未完了のため、自動承認しない。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 208,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 242,
+    "primaryReviewWavesAssigned": 22,
+    "primaryReviewCompaniesAssignedTotal": 220
+  },
+  "companyCompletions": [
+    {"order":473,"code":"9517","name":"イーレックス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9517-primary-review-v1.json"},
+    {"order":474,"code":"9612","name":"ラックランド","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9612-primary-review-v1.json"},
+    {"order":475,"code":"1379","name":"ホクト","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/1379-primary-review-v1.json"},
+    {"order":476,"code":"1762","name":"高松コンストラクショングループ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/1762-primary-review-v1.json"},
+    {"order":477,"code":"1867","name":"植木組","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/1867-primary-review-v1.json"},
+    {"order":479,"code":"1979","name":"大氣社","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/1979-primary-review-v1.json"},
+    {"order":483,"code":"2750","name":"石光商事","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2750-primary-review-v1.json"},
+    {"order":484,"code":"2892","name":"日本食品化工","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2892-primary-review-v1.json"},
+    {"order":485,"code":"2908","name":"フジッコ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2908-primary-review-v1.json"},
+    {"order":486,"code":"3002","name":"グンゼ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3002-primary-review-v1.json"}
+  ],
+  "completedChecksForAll": [
+    "formalPlanConfirmation",
+    "formalPlanBoundary",
+    "planRevisionSeparation",
+    "fullTextReview",
+    "metricsValidation",
+    "capitalPolicyReview",
+    "shareholderReturnPolicyReview",
+    "fieldLevelEvidence",
+    "yearUnitScopeValidation"
+  ],
+  "pendingChecksForAll": [
+    "remainingVisualFigureReview",
+    "independentDoubleCheck"
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 10,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 10,
+    "primaryReviewComplete": 218,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 232,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

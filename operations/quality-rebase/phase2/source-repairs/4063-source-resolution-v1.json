@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "phase2-source-resolution-v1",
+  "company": {
+    "code": "4063",
+    "name": "信越化学工業"
+  },
+  "resolutionStatus": "incorrect_pdf_quarantined_official_strategy_sources_identified",
+  "incorrectCandidate": {
+    "classification": "non_ir_operational_notice",
+    "reason": "収集器が経営資料ではない休日案内PDFを候補として採用したため、一次レビュー対象から除外する。",
+    "mayEnterPrimaryReview": false
+  },
+  "officialSources": [
+    {
+      "url": "https://www.shinetsu.co.jp/jp/ir/policy/",
+      "sourceType": "official_management_policy_page",
+      "use": "経営方針、事業別の見通し、資本・還元方針の確認"
+    },
+    {
+      "url": "https://www.shinetsu.co.jp/jp/ir/ir-data/ir-annual/",
+      "sourceType": "official_integrated_report_library",
+      "use": "統合報告書および経営戦略セクションの正式PDF特定"
+    }
+  ],
+  "documentClassification": "management_policy_and_integrated_report_strategy_not_formal_midterm_plan",
+  "requiredNextChecks": [
+    "2026年版統合報告書の経営戦略PDF URLを公式資料室から固定する",
+    "経営方針ページと統合報告書の対象年度を確認する",
+    "数値目標を計画目標・実績・単年度予想に分離する",
+    "独立確認者が誤PDF除外と正式資料区分を再確認する"
+  ],
+  "primaryReviewComplete": false,
+  "independentReviewReady": false,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

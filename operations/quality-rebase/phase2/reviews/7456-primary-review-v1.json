@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"7456","name":"松田産業","market":"Prime","industry":"卸売業","phase2Order":371},
+  "source": {
+    "title":"中期経営計画2028（2026-2028年度）",
+    "publishedDate":"2026-05-13",
+    "officialUrl":"https://www2.jpx.co.jp/disc/74560/140120260512525985.pdf",
+    "pdfSha256":"02fa6218e10b53d1825200b6e8a3c8b586ff03e670c565d3036f49dcb86f56df",
+    "pageCount":23,
+    "documentClassification":"formal_management_plan_current_2026_to_2028",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2028年度","terminalFiscalYear":"2028年度・2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"中期経営計画・2022年度～2025年度",
+      "currentPlan":"中期経営計画2028・2026年度～2028年度",
+      "statement":"前中計目標・実績と、現行中計の営業利益・営業CF・資本効率目標を分離する。現行計画には売上高の終期目標が明示されていないため補完しない。"
+    }
+  },
+  "summary":"貴金属の資源循環バリューチェーンと食品のグローバル調達・高付加価値化を成長の牽引役とする。2028年度に営業利益280億円、3年間営業CF350億円、ROE11%以上、ROA10%以上を目指し、事業投資180億円、定常設備130億円、株主還元100～120億円程度へ配分する。",
+  "financialTargets":[
+    {"metric":"営業利益","target":280,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度実績224億円","evidencePdfPages":[1,12]},
+    {"metric":"営業キャッシュフロー","target":350,"unit":"億円・3年間累計","targetFiscalYear":"2026年度～2028年度","baseline":"2022～2025年度累計60億円","evidencePdfPages":[1,12,20]},
+    {"metric":"ROE","target":11.0,"unit":"%以上","targetFiscalYear":"2028年度","baseline":"2025年度実績15.4%","evidencePdfPages":[1,12]},
+    {"metric":"ROA","target":10.0,"unit":"%以上・総資産経常利益率","targetFiscalYear":"2028年度","baseline":"2025年度実績11.9%","evidencePdfPages":[1,12]},
+    {"metric":"食品関連事業営業利益","target":35,"unit":"億円","targetFiscalYear":"2028年度","evidencePdfPage":17}
+  ],
+  "strategyThemes":[
+    {"theme":"貴金属資源循環バリューチェーン","evidencePdfPages":[13,14,15],"evidence":"高機能電子材料、リサイクル地金、LIB・PTP回収、国内外インフラを拡大する。"},
+    {"theme":"食品調達網・高付加価値化","evidencePdfPages":[16,17],"evidence":"新産地、加工度、健康・医療介護食、中食・外食向け提案を強化する。"},
+    {"theme":"DX・セキュリティ","evidencePdfPage":18,"evidence":"データ統合、生成AI、市民開発、NIST CSFに基づく対策を進める。"},
+    {"theme":"人的資本","evidencePdfPage":19,"evidence":"経営・リーダー・グローバル人材、女性活躍、エンゲージメントを強化する。"},
+    {"theme":"環境・社会マテリアリティ","evidencePdfPages":[6,7],"evidence":"GHG、再資源化率、多様な人材、顧客・サプライヤーとの信頼を推進する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation",
+    "operatingCashFlow":350,
+    "operatingCashFlowUnit":"億円・3年間累計",
+    "businessInvestment":180,
+    "businessInvestmentUnit":"億円",
+    "ordinaryCapitalExpenditure":130,
+    "ordinaryCapitalExpenditureUnit":"億円",
+    "shareholderReturnRange":[100,120],
+    "shareholderReturnRangeUnit":"億円程度",
+    "otherSources":["現預金","有利子負債"],
+    "financialDiscipline":"自己資本比率を維持し借入返済も含め財務健全性を確保",
+    "evidencePdfPage":20
+  },
+  "shareholderReturnPolicy": {
+    "status":"doe_floor_and_flexible_buybacks",
+    "doeTarget":2.5,
+    "doeTargetUnit":"%以上",
+    "threeYearReturnRange":[100,120],
+    "threeYearReturnRangeUnit":"億円程度",
+    "buybackPolicy":"市場環境を勘案して機動的に実施",
+    "policy":"成長投資とのバランスを考慮し、安定かつ持続的な配当を行う。",
+    "evidencePdfPages":[20,21]
+  },
+  "nonFinancialTargets":[
+    {"metric":"GHG排出量 Scope1+2","target":42,"unit":"%削減","targetFiscalYear":"非財務目標","evidencePdfPage":7},
+    {"metric":"GHG排出量 Scope3","target":25,"unit":"%削減","targetFiscalYear":"非財務目標","evidencePdfPage":7},
+    {"metric":"再資源化率","target":90,"unit":"%以上","targetFiscalYear":"非財務目標","evidencePdfPage":7}
+  ],
+  "definitions":[
+    {"term":"売上高目標","definition":"現行中計の経営目標として終期売上高は明示されていないため、前中計実績や事業別値から推計しない。","evidencePdfPages":[1,12]},
+    {"term":"営業CF350億円","definition":"2026～2028年度の3年間累計であり、単年度目標ではない。","evidencePdfPages":[1,12,20]},
+    {"term":"設備投資130億円と事業投資180億円","definition":"定常設備投資と成長・新規収益源・IT・人材等の事業投資を別枠で示す。","evidencePdfPage":20}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousAndCurrentPlanSeparated":true,"undisclosedSalesTargetNotInferred":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T08:55:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["営業利益280億円・営業CF350億円・ROE・ROAを原寸確認する","売上高終期目標を推計していないことを確認する","事業投資180・定常設備130・還元100～120億円を確認する","DOE2.5%以上と非財務KPIの基準を確認する"]}
+}

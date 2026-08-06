@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 3,
+  "wave": 1,
+  "orders": "101-110",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "collection_failed": 3,
+    "collection_complete_primary_human_review_pending": 6,
+    "pdf_not_found": 1
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 101,
+      "code": "6323",
+      "name": "ローツェ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 102,
+      "code": "7182",
+      "name": "ゆうちょ銀行",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.jp-bank.japanpost.jp/aboutus/company/pdf/rev_managementplan2026.pdf",
+      "pageCount": 41,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 103,
+      "code": "7649",
+      "name": "スギホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.sugi-hd.co.jp/pdf/ir/briefing/1st_Quarter_Results_for_FY_Feb_2018.pdf",
+      "pageCount": 11,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 104,
+      "code": "9404",
+      "name": "日本テレビホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://lab.ntvhd.co.jp/uploads/ntv_impact_report_2025.pdf",
+      "pageCount": 43,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 105,
+      "code": "9684",
+      "name": "スクウェア・エニックス・ホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.hd.square-enix.com/jpn/ir/news/pdf/20260514_01.pdf",
+      "pageCount": 26,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 106,
+      "code": "9766",
+      "name": "コナミグループ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 107,
+      "code": "9962",
+      "name": "ミスミグループ本社",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.misumi.co.jp/sites/default/files/2026-07/news_260731_1.pdf",
+      "pageCount": 2,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 108,
+      "code": "3070",
+      "name": "ジェリービーンズグループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://ssl4.eir-parts.net/doc/3070/tdnet/2775877/00.pdf",
+      "pageCount": 14,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 109,
+      "code": "3659",
+      "name": "ネクソン",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "manual_classification_required"
+    },
+    {
+      "order": 110,
+      "code": "4004",
+      "name": "レゾナック・ホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    }
+  ]
+}

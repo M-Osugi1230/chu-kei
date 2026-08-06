@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "quality-rebase-phase1-batch-status-v1",
+  "batch": {
+    "id": "phase1-batch-01",
+    "orders": "1-10",
+    "targetCompanies": 10,
+    "updatedAt": "2026-08-01",
+    "automaticDeepApprovalAllowed": false
+  },
+  "counts": {
+    "primaryReviewComplete": 10,
+    "independentReviewReady": 9,
+    "additionalSourceMappingRequired": 1,
+    "sourceIdentityConflictBlocked": 0,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0,
+    "remainingPrimaryReview": 0
+  },
+  "companies": [
+    {
+      "order": 1,
+      "code": "5631",
+      "name": "日本製鋼所",
+      "market": "Prime",
+      "industry": "機械",
+      "document": "中期経営計画 JGP2028 Update",
+      "planPublishedDate": "2026-07-13",
+      "sourceUrl": "https://www.jsw.co.jp/ja/ir/library/presentation.html",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/5631-primary-review-v1.json"
+    },
+    {
+      "order": 2,
+      "code": "2181",
+      "name": "パーソルホールディングス",
+      "market": "Prime",
+      "industry": "サービス業",
+      "document": "パーソルグループ 中期経営計画FY2028",
+      "planPublishedDate": "2026-05-14",
+      "sourceUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/2181-primary-review-v1.json"
+    },
+    {
+      "order": 3,
+      "code": "4043",
+      "name": "トクヤマ",
+      "market": "Prime",
+      "industry": "化学",
+      "document": "トクヤマ 中期経営計画2030",
+      "planPublishedDate": "2026-05-29",
+      "sourceUrl": "https://www.tokuyama.co.jp/ir/pdf/2026mar_managementplan.pdf",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/4043-primary-review-v1.json"
+    },
+    {
+      "order": 4,
+      "code": "7911",
+      "name": "TOPPANホールディングス",
+      "market": "Prime",
+      "industry": "その他製品",
+      "document": "TOPPANグループ 中期経営計画2028",
+      "planPublishedDate": "2026-05-14",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/7911-primary-review-v1.json"
+    },
+    {
+      "order": 5,
+      "code": "4042",
+      "name": "東ソー",
+      "market": "Prime",
+      "industry": "化学",
+      "document": "中期経営計画 2025~2027年度",
+      "planPublishedDate": "2025-05-23",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/4042/tdnet/2623991/00.pdf",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/4042-primary-review-v1.json"
+    },
+    {
+      "order": 6,
+      "code": "3031",
+      "name": "ラクーンホールディングス",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "document": "中期経営計画(2027年4月期~2029年4月期)",
+      "planPublishedDate": "2026-06-11",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/30310/140120260611568271.pdf",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/3031-primary-review-v1.json"
+    },
+    {
+      "order": 7,
+      "code": "2327",
+      "name": "日鉄ソリューションズ",
+      "market": "Prime",
+      "industry": "情報・通信業",
+      "document": "日鉄ソリューションズ 2025-2027中期経営計画",
+      "planPublishedDate": "2025-02-28",
+      "sourceUrl": "https://www.nssol.nipponsteel.com/ir/management-plan/pdf/nssol_2025-2027_mtbp-j.pdf",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/2327-primary-review-v1.json"
+    },
+    {
+      "order": 8,
+      "code": "8308",
+      "name": "りそなホールディングス",
+      "market": "Prime",
+      "industry": "銀行業",
+      "document": "りそなグループ 中期経営計画2026~2028年度",
+      "planPublishedDate": "2026-03-31",
+      "sourceUrl": "https://www.resona-gr.co.jp/holdings/about/strategy/plan/index.html",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/8308-primary-review-v1.json"
+    },
+    {
+      "order": 9,
+      "code": "6113",
+      "name": "アマダ",
+      "market": "Prime",
+      "industry": "機械",
+      "document": "アマダ 中期経営計画2030 Transform to AMADA 2030",
+      "planPublishedDate": "2026-05-14",
+      "sourceUrl": "https://www.amada.co.jp/files/2026/05/NR_260514_01.pdf",
+      "status": "primary_review_complete_independent_review_and_detailed_deck_mapping_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/6113-primary-review-v1.json"
+    },
+    {
+      "order": 10,
+      "code": "6506",
+      "name": "安川電機",
+      "market": "Prime",
+      "industry": "電気機器",
+      "document": "中期経営計画 Dash 35(2026年度~2029年度)",
+      "planPublishedDate": "2026-05-22",
+      "sourceUrl": "https://www.yaskawa.co.jp/wp-content/uploads/2026/05/Dash35.pdf",
+      "status": "primary_review_complete_independent_review_pending",
+      "reviewFile": "operations/quality-rebase/phase1/reviews/6506-primary-review-v1.json"
+    }
+  ],
+  "approvalGate": {
+    "minimumIndependentReviewers": 2,
+    "requiredChecks": [
+      "formalPlanConfirmed",
+      "fullTextReviewed",
+      "strategyStructured",
+      "metricsValidated",
+      "evidenceLinked",
+      "independentDoubleCheck",
+      "postPublicationLinkAndRenderCheck"
+    ],
+    "rule": "一次レビュー完了だけでは最高品質へ昇格しない。独立再確認と公開後検査を含む全条件を満たした企業だけを承認する。"
+  }
+}

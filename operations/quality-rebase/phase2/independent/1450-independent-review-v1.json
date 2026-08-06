@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "1450",
+    "name": "TANAKEN"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/1450-primary-review-v1.json",
+  "source": {
+    "title": "TANAKEN Vision NEXT 10 Secondary Phase",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/14500/140120260508520337.pdf",
+    "pdfSha256": "4bcc77231e9c3ede05c4ac14de76ec94687261b54cc471425413d844a600be31",
+    "pageCount": 18
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "TANAKEN株式会社、証券コード1450、公表日2026年5月8日、PDFハッシュ、18ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "company_name",
+      "description": "原資料と収集テンプレートの現社名がTANAKENであり、旧社名田中建設工業を現社名として表示しないことを確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "候補の更新資料区分ではなく、新たに策定されたSecondary Phaseの正式3カ年中計であることを確認する。",
+      "expectedEvidencePdfPages": [1, 13],
+      "status": "pending"
+    },
+    {
+      "id": "phase_boundary",
+      "description": "10年長期ビジョン、Primary Phase、Secondary Phase、将来Final Phaseを分離していることを確認する。",
+      "expectedEvidencePdfPages": [1, 4, 5, 13],
+      "status": "pending"
+    },
+    {
+      "id": "previous_results",
+      "description": "2026年3月期の売上148億円・営業利益21億円・施工人員53名がPrimary Phase実績であることを確認する。",
+      "expectedEvidencePdfPage": 8,
+      "status": "pending"
+    },
+    {
+      "id": "current_targets",
+      "description": "2029年3月期の売上200億円、営業利益26億円、ROE15%以上、配当性向30%以上、施工人員80名を再確認する。",
+      "expectedEvidencePdfPage": 15,
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "持たざる経営と無形資本強化の方針はあるが、投資総額・M&A枠・キャッシュアロケーション額が未開示であることを確認する。",
+      "expectedEvidencePdfPages": [5, 13, 17],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向30%以上が2029年3月期の方針であり、1株配当額や自己株取得額が資料にないことを確認する。",
+      "expectedEvidencePdfPage": 15,
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に社名、検索、公式PDFリンク、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "quality-rebase-phase2-seed-request-v1",
+  "requestedAt": "2026-08-01T21:41:00+09:00",
+  "branch": "agent/quality-rebase-phase0-2",
+  "runRequested": true,
+  "preconditions": {
+    "phase1TargetCompanies": 50,
+    "phase1PrimaryReviewComplete": 50,
+    "automaticDeepApprovalAllowed": false,
+    "expectedDeepVerificationApprovedBeforeIndependentReview": 0
+  },
+  "actions": [
+    "validate_all_phase1_primary_review_files",
+    "validate_no_duplicate_company_codes",
+    "validate_no_premature_approval",
+    "validate_phase1_phase2_no_overlap",
+    "seed_phase2_first_50_company_batch"
+  ]
+}

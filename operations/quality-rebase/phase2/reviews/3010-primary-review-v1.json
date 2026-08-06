@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"3010","name":"ポラリス・ホールディングス","market":"Standard","industry":"サービス業","phase2Order":321},
+  "source": {
+    "title":"中期経営計画2030",
+    "publishedDate":"2026-05-13",
+    "officialUrl":"https://www2.jpx.co.jp/disc/30100/140120260513530308.pdf",
+    "pdfSha256":"461a1ef6bae8f6fa4b7e164658e8425ec66fc8ae51fe990f359606397a68863b",
+    "pageCount":45,
+    "documentClassification":"formal_management_plan_replacing_2025_revision",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2031年3月期","terminalFiscalYear":"2031年3月期"},
+    "formalPlanBoundary":{"originalPlan":"2025年3月期～2027年3月期中期経営計画","revisedPlan":"2025年1月公表の2026年3月期・2027年3月期改定版","currentPlan":"中期経営計画2030・2026年度～2030年度","replacementReason":"ミナシア統合後の目標前倒し達成と新規出店積み上がり","statement":"旧計画・改定版の最終年度を待たず、新計画2030へ置換する。"}
+  },
+  "summary":"ミナシア統合後の運営基盤を活用し、新規出店、既存ホテルの収益改善、ホテル投資、海外事業、AI・システム投資を進める。2031年3月期に150ホテル・20,000室、売上高1,000億円、のれん償却前営業利益100億円、配当性向30%以上、ROE10%以上を目指す。",
+  "financialTargets":[
+    {"metric":"運営ホテル数","target":150,"unit":"ホテル","targetFiscalYear":"2031年3月期","baseline":"2026年3月期実績93ホテル","evidencePdfPages":[2,25,28]},
+    {"metric":"運営客室数","target":20000,"unit":"室","targetFiscalYear":"2031年3月期","baseline":"2026年3月期実績14,241室","evidencePdfPages":[2,25,28]},
+    {"metric":"売上高","target":1000,"unit":"億円","targetFiscalYear":"2031年3月期","baseline":"2026年3月期実績485億円","evidencePdfPages":[2,23,28]},
+    {"metric":"営業利益","target":100,"unit":"億円・のれん償却前","targetFiscalYear":"2031年3月期","baseline":"2026年3月期実績53億円","evidencePdfPages":[2,24,28]},
+    {"metric":"ROE","target":10,"unit":"%以上","targetFiscalYear":"中計2030目標","baseline":"2026年3月期実績15.2%・税効果除外9.1%","evidencePdfPages":[2,27,28]}
+  ],
+  "strategyThemes":[
+    {"theme":"新規出店","evidencePdfPages":[13,14,25,26],"evidence":"新築・コンバージョン・多ブランド展開で150ホテル体制を構築する。"},
+    {"theme":"運営収益改善","evidencePdfPages":[15,16,17],"evidence":"マーケティング、レベニューマネジメント、ロイヤリティ、AI活用でRevPARと利益率を高める。"},
+    {"theme":"ホテル投資","evidencePdfPages":[20,21],"evidence":"運営可能なホテル不動産へ投資し、運営収益と売却益の両方を獲得する。"},
+    {"theme":"海外事業","evidencePdfPage":22,"evidence":"レッドプラネットを通じフィリピン等で成長機会を取り込む。"},
+    {"theme":"人材・PMI","evidencePdfPages":[6,18,19],"evidence":"統合組織、人事制度、ブランド、システムを一体化し、出店速度を支える基盤を整備する。"}
+  ],
+  "capitalPolicy": {
+    "status":"operating_cash_flow_total_and_allocation_uses_disclosed",
+    "operatingCashFlow":350,
+    "operatingCashFlowUnit":"億円・2030年度まで想定",
+    "allocationUses":["既存ホテル競争力強化","新規ホテル出店","ホテル投資","M&A","AI・システム投資","借入金弁済","株主還元"],
+    "specificUseAmounts":null,
+    "policy":"ホテル運営事業で創出する営業CF350億円を、成長投資と株主還元のバランスを見ながら配分する。用途別金額は未開示のため推計しない。",
+    "evidencePdfPage":29
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_floor_and_stable_dividend",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%以上",
+    "dividendPolicy":"業績連動かつ安定的な配当の維持・向上",
+    "tsrPolicy":"EPS成長と株価上昇を通じTSR向上を目指す",
+    "evidencePdfPages":[2,27,28]
+  },
+  "definitions":[
+    {"term":"営業利益100億円","definition":"ミナシア取得に伴う年間約13億円ののれん償却費を控除する前の指標。","evidencePdfPages":[2,24,28]},
+    {"term":"税効果除外数値","definition":"2026年3月期の配当性向42.7%・ROE9.1%は繰延税金資産計上の法人税等調整額を除外した参考値。","evidencePdfPages":[2,27,28]},
+    {"term":"営業CF350億円","definition":"2030年度までの想定キャッシュインであり、成長投資総額ではない。","evidencePdfPage":29}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"oldRevisedAndCurrentPlansSeparated":true,"goodwillAdjustedMetricValidated":true,"taxEffectAdjustedReferencesSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T06:39:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["営業利益100億円がのれん償却前であることを確認する","2026年実績の税効果込み・除外数値を分離確認する","旧計画・改定版・新計画2030の置換関係を独立確認する","営業CF350億円と用途別金額未開示を図表突合する","150ホテル・20,000室の年度を確認する"]}
+}

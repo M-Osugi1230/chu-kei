@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "phase2-source-binary-request-v1",
+  "company": {
+    "code": "5019",
+    "name": "出光興産"
+  },
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/5019-source-resolution-v1.json",
+  "outputEvidenceFile": "operations/quality-rebase/phase2/source-binary-evidence/5019-v1.json",
+  "officialPdf": {
+    "url": "https://www.idemitsu.com/jp/company/managementplan/2026_2030plan.pdf",
+    "title": "中期経営計画（2026-2030年度）",
+    "sourceRole": "formal_plan_current_corrected_version",
+    "pageCount": 53,
+    "pdfSha256": null
+  },
+  "purpose": "2026年5月26日訂正版の現行公式PDFを再取得し、SHA-256、バイト数、53ページを固定する。前中計PDFとは別証跡で管理する。",
+  "requestedAt": "2026-08-04T14:33:00+09:00",
+  "retryAfterWorkflowFix": true,
+  "retryReason": "イベントコミット基準の要求選択へ修正後、訂正版PDFを再取得する。",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

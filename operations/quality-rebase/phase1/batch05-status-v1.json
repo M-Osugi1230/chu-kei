@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "quality-rebase-phase1-batch-status-v1",
+  "batch": {
+    "id": "phase1-batch-05",
+    "orders": "41-50",
+    "targetCompanies": 10,
+    "updatedAt": "2026-08-01",
+    "automaticDeepApprovalAllowed": false
+  },
+  "counts": {
+    "primaryReviewComplete": 10,
+    "independentReviewReady": 9,
+    "additionalSourceMappingRequired": 1,
+    "sourceIdentityConflictBlocked": 0,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0,
+    "remainingPrimaryReview": 0
+  },
+  "companies": [
+    {"order":41,"code":"6493","name":"NITTAN","market":"Standard","industry":"輸送用機器","document":"2026年3月期決算および新中期経営計画説明会／訂正反映版","planPublishedDate":"2026-06-12","sourceUrl":"https://contents.xj-storage.jp/xcontents/AS05830/2034a7ff/3929/4d10/b01d/e987830b9b6f/20260615165351994s.pdf","status":"primary_review_complete_independent_corrected_deck_and_correction_mapping_pending","reviewFile":"operations/quality-rebase/phase1/reviews/6493-primary-review-v1.json"},
+    {"order":42,"code":"7343","name":"ブロードマインド","market":"Growth","industry":"保険業","document":"事業計画及び成長可能性に関する説明資料／2027-2030年3月期財務目標","planPublishedDate":"2026-06-30","sourceUrl":"https://www2.jpx.co.jp/disc/73430/140120260623577064.pdf","status":"primary_review_complete_independent_full_deck_and_dividend_figure_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/7343-primary-review-v1.json"},
+    {"order":43,"code":"5304","name":"SECカーボン","market":"Standard","industry":"ガラス・土石製品","document":"中長期経営方針 2030 Make Real／旧中計廃止","planPublishedDate":"2026-04-10","sourceUrl":"https://www2.jpx.co.jp/disc/53040/140120260410502020.pdf","status":"primary_review_complete_independent_plan_abolition_and_capital_policy_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/5304-primary-review-v1.json"},
+    {"order":44,"code":"7218","name":"田中精密工業","market":"Standard","industry":"輸送用機器","document":"長期経営計画 Next35","planPublishedDate":"2026-05-14","sourceUrl":"https://www2.jpx.co.jp/disc/72180/140120260514532168.pdf","status":"primary_review_complete_independent_long_term_stage_and_cash_allocation_figure_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/7218-primary-review-v1.json"},
+    {"order":45,"code":"7305","name":"新家工業","market":"Standard","industry":"鉄鋼","document":"中期経営計画2026 2025年度進捗報告／資本コスト対応","planPublishedDate":"2026-05-13","sourceUrl":"https://www2.jpx.co.jp/disc/73050/140120260513529341.pdf","status":"primary_review_complete_independent_original_plan_and_table_column_mapping_pending","reviewFile":"operations/quality-rebase/phase1/reviews/7305-primary-review-v1.json"},
+    {"order":46,"code":"7345","name":"アイ・パートナーズフィナンシャル","market":"Growth","industry":"その他金融業","document":"事業計画及び成長可能性に関する事項／3年後経営目標","planPublishedDate":"2026-05-15","sourceUrl":"https://www2.jpx.co.jp/disc/73450/140120260515536422.pdf","status":"primary_review_complete_independent_target_formula_and_figure_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/7345-primary-review-v1.json"},
+    {"order":47,"code":"8783","name":"abc株式会社","market":"Standard","industry":"その他金融業","document":"中期経営計画 進捗報告 PROOF OF PLATFORM","planPublishedDate":"2026-04-14","sourceUrl":"https://www2.jpx.co.jp/disc/87830/140120260414503990.pdf","status":"primary_review_complete_independent_company_identity_range_forecast_and_going_concern_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/8783-primary-review-v1.json"},
+    {"order":48,"code":"9049","name":"京福電気鉄道","market":"Standard","industry":"陸運業","document":"京福グループ中期経営計画2028","planPublishedDate":"2026-06-01","sourceUrl":"https://www2.jpx.co.jp/disc/90490/140120260601556727.pdf","status":"primary_review_complete_independent_annual_long_term_and_capital_policy_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/9049-primary-review-v1.json"},
+    {"order":49,"code":"5704","name":"JMC","market":"Growth","industry":"非鉄金属","document":"事業計画及び成長可能性に関する説明資料","planPublishedDate":"2026-03-27","sourceUrl":"https://www2.jpx.co.jp/disc/57040/140120260319585226.pdf","status":"primary_review_complete_independent_single_year_undated_guide_and_capital_policy_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/5704-primary-review-v1.json"},
+    {"order":50,"code":"5858","name":"STG","market":"Growth","industry":"非鉄金属","document":"事業計画及び成長可能性に関する事項／中期経営計画 Challenge 100","planPublishedDate":"2026-06-30","sourceUrl":"https://www2.jpx.co.jp/disc/58580/140120260630584569.pdf","status":"primary_review_complete_independent_actual_forecast_midterm_longterm_and_manda_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/5858-primary-review-v1.json"}
+  ],
+  "approvalGate": {
+    "minimumIndependentReviewers": 2,
+    "requiredChecks": ["companyIdentityConfirmed","formalPlanConfirmedOrClassified","fullTextReviewed","strategyStructured","metricsValidated","evidenceLinked","independentDoubleCheck","postPublicationLinkAndRenderCheck"],
+    "rule": "一次レビュー完了だけでは最高品質へ昇格しない。訂正版・進捗資料・長期方針・成長可能性資料の分類、独立再確認、公開後検査まで完了した企業だけを承認する。"
+  }
+}

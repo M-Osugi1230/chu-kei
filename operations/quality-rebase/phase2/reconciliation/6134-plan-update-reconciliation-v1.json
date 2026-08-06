@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "phase2-plan-update-reconciliation-v1",
+  "company": {"code": "6134", "name": "FUJI"},
+  "sources": {
+    "formalPlan": {
+      "title": "中期経営計画2026",
+      "publishedDate": "2024-05-10",
+      "officialUrl": "https://www.fuji.co.jp/ir/policy/pdf/Notice_regarding_the_Formulation_of_Mid-term_Business_Plan_2026_J1.pdf",
+      "pageCount": 36,
+      "pdfSha256": null,
+      "role": "formal_plan_baseline"
+    },
+    "year1Update": {
+      "title": "決算説明及び中期経営計画1年目振り返り",
+      "publishedDate": "2025-05-13",
+      "officialUrl": "https://www.fuji.co.jp/ir/library/pdf/20250513_FinancialresultbriefingJ.pdf",
+      "pageCount": 31,
+      "pdfSha256": "973efc5b258897465457e5f43ba2630acef7c078df474c52b2e2a78ad2554899",
+      "role": "year1_progress_update"
+    },
+    "year2Update": {
+      "title": "決算説明及び中期経営計画2年目振り返り",
+      "publishedDate": "2026-05-14",
+      "officialUrl": "https://www.fuji.co.jp/ir/library/pdf/20260514_FinancialresultbriefingJ.pdf",
+      "pageCount": 32,
+      "pdfSha256": null,
+      "role": "latest_official_progress_update"
+    }
+  },
+  "planBoundary": {
+    "planPeriod": "2024年度から2026年度",
+    "terminalFiscalYear": "2027年3月期",
+    "longTermVision": "FUJI2035",
+    "statement": "2024年公表の当初中計、2025年1年目更新、2026年2年目更新、2027年3月期単年度予想、FUJI2035を分離する。"
+  },
+  "reconciledTargets": [
+    {
+      "metric": "売上高",
+      "originalPlanTarget": 1800,
+      "originalPlanUnit": "億円",
+      "originalTargetFiscalYear": "2027年3月期",
+      "latestForecast": 2110,
+      "latestForecastUnit": "億円",
+      "latestForecastFiscalYear": "2027年3月期",
+      "classification": "original_plan_target_exceeded_by_latest_single_year_forecast",
+      "evidence": {"formalPlanPdfPage": 2, "year2UpdatePdfPage": 18}
+    },
+    {
+      "metric": "営業利益",
+      "originalPlanTarget": 330,
+      "originalPlanUnit": "億円",
+      "originalTargetFiscalYear": "2027年3月期",
+      "latestForecast": 436,
+      "latestForecastUnit": "億円",
+      "latestForecastFiscalYear": "2027年3月期",
+      "classification": "original_plan_target_exceeded_by_latest_single_year_forecast",
+      "evidence": {"formalPlanPdfPage": 2, "year2UpdatePdfPage": 18}
+    },
+    {
+      "metric": "ROE",
+      "originalPlanTarget": 10,
+      "originalPlanUnit": "%",
+      "updatedTarget": 11,
+      "updatedTargetUnit": "%以上",
+      "targetFiscalYear": "2027年3月期",
+      "classification": "formal_target_revision_in_year2_update",
+      "evidence": {"formalPlanPdfPage": 2, "year2UpdatePdfPage": 21}
+    },
+    {
+      "metric": "PBR",
+      "originalPlanTarget": 1.1,
+      "originalPlanUnit": "倍以上",
+      "targetFiscalYear": "2027年3月期",
+      "latestRevisionStatus": "no_revision_identified_in_year2_update",
+      "evidence": {"formalPlanPdfPage": 2}
+    }
+  ],
+  "capitalAllocationRevision": {
+    "originalPlan": {
+      "operatingCashFlowBeforeResearchAndDevelopment": 1000,
+      "balanceSheetManagement": 200,
+      "growthInvestment": 700,
+      "shareholderReturnMinimum": 390,
+      "unit": "億円・3年間"
+    },
+    "year2Update": {
+      "operatingCashFlowBeforeResearchAndDevelopment": 1150,
+      "balanceSheetManagement": 100,
+      "growthInvestmentMinimum": 700,
+      "shareholderReturn": 470,
+      "workingCapitalIncrease": 200,
+      "unit": "億円・中計期間",
+      "mAndALeveragePolicy": "必要に応じてレバレッジ活用を検討"
+    },
+    "shareholderReturnBreakdown": {
+      "dividend": 270,
+      "shareRepurchase": 200,
+      "unit": "億円・中計期間",
+      "year2UpdateEvidencePdfPage": 22
+    },
+    "classification": "capital_allocation_revised_in_year2_update",
+    "evidenceYear2UpdatePdfPage": 22
+  },
+  "currentShareholderReturn": {
+    "dividendPayoutRatioMinimum": 50,
+    "dividendPayoutRatioUnit": "%以上",
+    "annualDividendFloor": 80,
+    "annualDividendFloorUnit": "円",
+    "annualDividendForecast": 190,
+    "annualDividendForecastFiscalYear": "2027年3月期",
+    "additionalFlexibleShareRepurchase": 100,
+    "additionalFlexibleShareRepurchaseUnit": "億円規模・2026年度計画",
+    "evidenceYear2UpdatePdfPages": [16, 21, 22]
+  },
+  "latestStrategyUpdate": {
+    "mountingEquipment": "AIサーバー、SiP・モジュール部品、自動化ソリューションを重点化し、NXTRを軸に業種・地域横断で需要変動へ対応する。",
+    "semiconductorEquipment": "汎用メモリ・IC向けシェア拡大、高精度機投入、ハイブリッドボンダ市場参入を進める。",
+    "machineTools": "ターンキーソリューション、保守・改造へ注力し黒字化を目指す。",
+    "evidenceYear2UpdatePdfPages": [18, 19, 20]
+  },
+  "validation": {
+    "formalPlanAndYear2UpdateSeparated": true,
+    "originalAndUpdatedRoeSeparated": true,
+    "originalTargetsAndLatestForecastSeparated": true,
+    "capitalAllocationRevisionStructured": true,
+    "shareholderReturnRevisionStructured": true,
+    "longTermVisionSeparated": true,
+    "formalPlanPdfSha256Confirmed": false,
+    "year2UpdatePdfSha256Confirmed": false,
+    "visualFigureReviewComplete": false,
+    "primaryReviewComplete": false,
+    "independentReviewReady": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "remainingChecks": [
+    "基礎中計36ページと2年目更新32ページの主要図表を視覚確認する",
+    "基礎中計PDFと2年目更新PDFのSHA-256をリポジトリ実行環境で固定する",
+    "事業別目標、ESG・人的資本指標、資本政策の全文レビューを一次レビュー正本へ統合する"
+  ]
+}

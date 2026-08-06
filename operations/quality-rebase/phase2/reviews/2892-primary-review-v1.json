@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"2892","name":"日本食品化工","market":"Standard","industry":"食料品","phase2Order":484},
+  "source": {
+    "title":"中期経営計画 中経2027",
+    "publishedDate":"2025-04-30",
+    "officialUrl":"https://www2.jpx.co.jp/disc/28920/140120250430527142.pdf",
+    "pdfSha256":"ee7e06c5bed013b565313c8659d38575a67c91f0fe673132584758f679e33625",
+    "pageCount":12,
+    "documentClassification":"formal_management_plan_current_2025_to_2027",
+    "period":{"startFiscalYear":"2025年度","endFiscalYear":"2027年度","terminalFiscalYear":"2027年度"},
+    "formalPlanBoundary": {
+      "previousPlan":"中経2024・2022年度～2024年度・体制強化期",
+      "currentPlan":"中経2027・2025年度～2027年度・施策展開期",
+      "nextPhase":"中経2030・2028年度～2030年度・成長促進期",
+      "longTermGoal":"中経2033でROE8%以上",
+      "statement":"前中計実績、現中計のレンジ目標、2030・2033年の将来目標を分離する。"
+    }
+  },
+  "summary":"機能性素材、でん粉プラスチック、海外加工でん粉、新規事業を成長領域とし、収益安定化、設備最適化、DX、人材、環境価値を強化する。2025～2027年度は連結経常利益17～23億円、ROE5～6%を目指す。",
+  "financialTargets":[
+    {"metric":"連結経常利益","targetRange":"17～23","centralTarget":20,"unit":"億円・20±3億円","targetFiscalYear":"中経2027期間","baseline":"中経2024期間平均27.5億円、2024年度19.1億円","evidencePdfPages":[1,3,5,9]},
+    {"metric":"連結ROE","targetRange":"5～6","unit":"%","targetFiscalYear":"中経2027期間","baseline":"2024年5.4%","evidencePdfPages":[1,5,9]},
+    {"metric":"株主資本コスト","target":3,"unit":"%程度・CAPM概算","targetFiscalYear":"中計策定時認識","evidencePdfPage":9}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"ROE","targetRange":"6～7","unit":"%","targetFiscalYear":"中経2030・2028～2030年度","classification":"next_phase_target","evidencePdfPage":9},
+    {"metric":"ROE","target":8,"unit":"%以上","targetFiscalYear":"中経2033・あるべき姿","classification":"long_term_goal","evidencePdfPage":9}
+  ],
+  "previousPlanResultsSeparated":[
+    {"metric":"連結経常利益","targetRange":"13～21","centralTarget":17,"unit":"億円・17±4億円","actualAverage":27.5,"actual2024":19.1,"fiscalPeriod":"2022～2024年度","evidencePdfPage":3},
+    {"metric":"重点投資","target":30,"actual":27,"unit":"億円・約","fiscalPeriod":"2022～2024年度","evidencePdfPage":3}
+  ],
+  "strategyThemes":[
+    {"theme":"重点領域と新規事業","evidencePdfPage":6,"evidence":"機能性素材、未病、炭素循環、でん粉プラスチック、食物繊維、海外市場を拡大する。"},
+    {"theme":"収益構造・設備最適化","evidencePdfPage":7,"evidence":"工場稼働率、相場対応、更新・補修、2工場供給、原燃料、エネルギーを最適化する。"},
+    {"theme":"人材・組織・DX","evidencePdfPage":8,"evidence":"成長機会、DE&I、適材適所、組織風土、情報開示、生産・品質システムを強化する。"},
+    {"theme":"資本効率・最適資本構成","evidencePdfPages":[9,10,11],"evidence":"ROE・ROIC、B/S管理、成長投資、DOE、自社株取得で企業価値を高める。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_growth_investment_and_return_allocation",
+    "period":"2025年度～2027年度",
+    "growthInvestment":35,
+    "growthInvestmentUnit":"億円",
+    "growthInvestmentBreakdown":{"solutionAndNewBusiness":25,"humanCapitalAndDx":10,"unit":"億円"},
+    "shareholderReturn":30,
+    "shareholderReturnUnit":"億円",
+    "fundingSources":["営業キャッシュフロー","財務キャッシュフロー・有利子負債"],
+    "baseInvestment":"更新・基盤投資は実施方針を開示するが金額は資料で明示されていない",
+    "financialDiscipline":"財務健全性を維持しながら資本コスト低減と資本効率最大化を図る。NET DERの具体値はテキスト抽出が不明瞭なため原寸確認まで採用しない。",
+    "policy":"成長投資35億円と株主還元30億円を明示し、基盤投資と資金調達を組み合わせる。未開示の総キャッシュイン・総キャッシュアウトは推計しない。",
+    "evidencePdfPage":10
+  },
+  "shareholderReturnPolicy": {
+    "status":"doe_floor_with_planned_buybacks",
+    "doeFloor":2.5,
+    "doeFloorUnit":"%以上",
+    "threeYearReturn":30,
+    "threeYearReturnUnit":"億円",
+    "buybackPolicy":"株主価値の維持向上を目的に段階的・計画的に実施",
+    "previousPolicy":"単体配当性向35%ベース",
+    "policy":"利益変動の影響を抑えるためDOE2.5%以上へ移行し、配当と自社株取得を組み合わせる。",
+    "evidencePdfPages":[10,11]
+  },
+  "nonFinancialTargets":[
+    {"metric":"サステナビリティ重要課題","target":"環境、人材・組織、地域、社会価値の施策推進","unit":"施策目標","targetFiscalYear":"中経2027期間","evidencePdfPages":[5,8]},
+    {"metric":"カーボンマネジメント","target":"連結グループの温室効果ガス削減を強化","unit":"施策目標・数値未開示","targetFiscalYear":"中経2027期間","evidencePdfPage":8}
+  ],
+  "definitions":[
+    {"term":"20±3億円","definition":"連結経常利益の中心値20億円と変動レンジ17～23億円。固定単年度予想ではない。","evidencePdfPages":[1,5,9]},
+    {"term":"成長投資35億円","definition":"ソリューション・新規事業25億円と人材・DX10億円から構成する。","evidencePdfPage":10},
+    {"term":"DOE2.5%以上","definition":"中経2027で導入した株主資本配当率の下限目標。従来の単体配当性向35%ベースとは異なる。","evidencePdfPage":11},
+    {"term":"基盤投資","definition":"プライマリー事業の競争力強化・更新投資を指すが、金額は本資料で明示されていない。","evidencePdfPage":10}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentNextAndLongTermSeparated":true,"targetRangesPreserved":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"unclearNetDerNotInferred":true,"undisclosedTotalsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T09:20:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["経常利益17～23億円・ROE5～6%のレンジを原寸確認する","2030年ROE6～7%・2033年8%以上を確認する","成長投資35億円の25+10内訳と株主還元30億円を確認する","DOE2.5%以上と自社株取得方針を確認する","NET DER図表を原寸確認し、採用可否を決定する"]}
+}

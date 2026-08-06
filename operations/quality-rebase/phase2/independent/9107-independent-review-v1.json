@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "9107",
+    "name": "川崎汽船"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9107-primary-review-v1.json",
+  "source": {
+    "title": "2022年度 中期経営計画",
+    "officialLandingPage": "https://www.kline.co.jp/ja/ir/management/strategy.html",
+    "officialUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2022_medium-term%20management%20plan_j.pdf",
+    "pdfSha256": "0a993cb5f649a515733fb37a790a61866c7239a9267d178a18d8079b84599c5d",
+    "pageCount": 33
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード9107、公表日2022年5月9日、PDFハッシュ、33ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "current_plan_boundary",
+      "description": "2022年度から2026年度の5か年中計が現行計画であり、次期中計は未公表であることを公式ページと最新説明で確認する。",
+      "expectedEvidencePdfPages": [2, 7, 12, 32],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2026年度経常利益1,400億円、ROE10%以上、5か年投資5,200億円の年度・単位・範囲を確認する。",
+      "expectedEvidencePdfPages": [9, 26, 28, 32],
+      "status": "pending"
+    },
+    {
+      "id": "portfolio_strategy",
+      "description": "鉄鋼原料、自動車船、LNG輸送船への重点配分、ONEへの株主関与、その他事業区分を確認する。",
+      "expectedEvidencePdfPages": [10, 13, 14, 15, 16, 18, 19, 21],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "5か年投資5,200億円、環境投資3,100億円と内訳、事業投資の約8割を成長牽引事業へ配分する方針を確認する。",
+      "expectedEvidencePdfPages": [27, 28, 30],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "中計期間累計4,000〜5,000億円の還元、基礎配当、追加配当・自己株式取得の機動運用を確認する。",
+      "expectedEvidencePdfPages": [9, 27, 29, 32],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_targets",
+      "description": "2030年CO2排出効率50%改善、2050年GHGネットゼロへの挑戦、女性管理職比率15%を確認し、中計財務目標と分離する。",
+      "expectedEvidencePdfPages": [8, 23],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に公式PDFリンク、検索、計画期間、主要数値、長期目標の表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6030",
+    "name": "アドベンチャー"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6030-primary-review-v1.json",
+  "source": {
+    "title": "2026年7月-2029年6月 3ヵ年 中期経営計画",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/60300/140120260623577244.pdf",
+    "pdfSha256": "530875c5f394d99fd7eac501c51628c77d7ecb1c6d5d1057137416e4f88b8f82",
+    "pageCount": 8
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社アドベンチャー、証券コード6030、公表日2026年6月24日、PDFハッシュ、8ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "候補の更新資料区分ではなく、取締役会決議済みの新規3カ年中計であることを適時開示本文から確認する。",
+      "expectedEvidencePdfPage": 1,
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "計画期間が2026年7月から2029年6月までで、FY2027～FY2029に対応することを確認する。",
+      "expectedEvidencePdfPages": [1, 2, 5],
+      "status": "pending"
+    },
+    {
+      "id": "annual_financial_targets",
+      "description": "FY2027の収益260億円・営業利益20億円、FY2028の290億円・30億円、FY2029の320億円・40億円を再確認する。",
+      "expectedEvidencePdfPages": [4, 5],
+      "status": "pending"
+    },
+    {
+      "id": "final_targets",
+      "description": "FY2029の連結当期利益24億円とROE20%を再確認する。",
+      "expectedEvidencePdfPage": 4,
+      "status": "pending"
+    },
+    {
+      "id": "scope_separation",
+      "description": "連結収益と単体取扱高1,000億円、グローバル取扱高100億円の内数を混同していないことを確認する。",
+      "expectedEvidencePdfPages": [4, 5, 6],
+      "status": "pending"
+    },
+    {
+      "id": "application_kpi",
+      "description": "アプリ4,000万DLのうちグローバル1,000万DLという内数関係を確認する。",
+      "expectedEvidencePdfPage": 6,
+      "status": "pending"
+    },
+    {
+      "id": "group_strategy",
+      "description": "子会社整理、積極的M&A、複数子会社IPO準備と、最短FY2029中という条件表現を確認する。",
+      "expectedEvidencePdfPage": 6,
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "投資方針はあるが、中計期間のM&A総額やキャッシュアロケーション額が未開示であることを確認する。",
+      "expectedEvidencePdfPage": 6,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向30～40%と積極的な自社株買い方針を再確認する。",
+      "expectedEvidencePdfPage": 7,
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、単位、連結・単体表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

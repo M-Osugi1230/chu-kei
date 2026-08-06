@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "phase2-source-binary-request-v1",
+  "company": {
+    "code": "6134",
+    "name": "FUJI"
+  },
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/6134-source-resolution-v1.json",
+  "outputEvidenceFile": "operations/quality-rebase/phase2/source-binary-evidence/6134-formal-plan-v1.json",
+  "officialPdf": {
+    "url": "https://www.fuji.co.jp/ir/policy/pdf/Notice_regarding_the_Formulation_of_Mid-term_Business_Plan_2026_J1.pdf",
+    "title": "中期経営計画2026",
+    "sourceRole": "formal_plan_baseline",
+    "pageCount": 36,
+    "pdfSha256": null
+  },
+  "purpose": "2024年5月10日公表の基礎中計PDFを再取得し、SHA-256、バイト数、36ページを固定する。年次進捗資料とは別証跡で管理する。",
+  "requestedAt": "2026-08-04T14:30:00+09:00",
+  "retryAfterWorkflowFix": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"4041","name":"日本曹達","market":"Prime","industry":"化学","phase2Order":338},
+  "source": {
+    "title":"中期経営計画 かがくで、かがやく。Stage III",
+    "publishedDate":"2026-05-14",
+    "officialUrl":"https://www2.jpx.co.jp/disc/40410/140120260513531437.pdf",
+    "pdfSha256":"1762f5622071c561e17c626e3ad1d262e1d60f3981473057adb3ce640b76e05b",
+    "pageCount":31,
+    "documentClassification":"formal_management_plan_current_stage3_2026_to_2029",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2029年度","terminalFiscalYear":"2029年度"},
+    "formalPlanBoundary":{"previousPlan":"かがくで、かがやく。Stage II・2023年度～2025年度","currentPlan":"かがくで、かがやく。Stage III・2026年度～2029年度","longTermVision":"2020年度～2029年度長期ビジョンおよび2030年以降の次期長期ビジョン","statement":"Stage II実績、Stage IIIの2029年度KPI、2035年度の長期新規事業目標を分離する。"}
+  },
+  "summary":"高付加価値事業を拡大し、新規事業創出、資産効率改善、研究開発・DX投資を進める。2029年度に当期純利益200億円以上、ROS10%以上、ROA7%以上、ROE10%以上を目指し、総還元性向50%以上と累進配当を維持する。",
+  "financialTargets":[
+    {"metric":"当期純利益","target":20000,"unit":"百万円以上","targetFiscalYear":"2029年度","baseline":"2026年3月期実績18,270百万円","evidencePdfPages":[13,14]},
+    {"metric":"ROS","target":10.0,"unit":"%以上","targetFiscalYear":"2029年度","baseline":"2026年3月期実績9.8%","evidencePdfPages":[13,14]},
+    {"metric":"ROA","target":7.0,"unit":"%以上","targetFiscalYear":"2029年度","baseline":"2026年3月期実績5.0%","evidencePdfPages":[13,14]},
+    {"metric":"ROE","target":10.0,"unit":"%以上","targetFiscalYear":"2029年度","baseline":"2026年3月期実績9.3%","evidencePdfPages":[13,14]},
+    {"metric":"高付加価値事業売上高","target":50,"unit":"%増・2025年度対比","targetFiscalYear":"2029年度","evidencePdfPage":13},
+    {"metric":"新規事業売上高","target":10000,"unit":"百万円","targetFiscalYear":"2029年度","evidencePdfPage":13}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"新規事業売上高","target":50000,"unit":"百万円","targetFiscalYear":"2035年度","classification":"long_term_target_beyond_stage3","evidencePdfPage":13}
+  ],
+  "strategyThemes":[
+    {"theme":"高付加価値事業の拡大","evidencePdfPages":[13,18,19],"evidence":"医薬品添加剤NISSO HPC、樹脂添加剤NISSO-PB、VPポリマー等を拡販する。"},
+    {"theme":"新規事業創出","evidencePdfPages":[13,16],"evidence":"アニマルヘルス、TADF、次世代電子材料等を立ち上げる。"},
+    {"theme":"研究開発とオープンイノベーション","evidencePdfPages":[13,15,16],"evidence":"4年間で研究開発350億円を投じ、外部技術とAI・MI・PIを活用する。"},
+    {"theme":"資産効率・事業ポートフォリオ改革","evidencePdfPages":[14,15],"evidence":"不採算事業整理、棚卸資産縮減、政策保有株式整理、投資評価を進める。"},
+    {"theme":"DX・生産基盤強化","evidencePdfPages":[15,16],"evidence":"ERP刷新、スマートファクトリー、予防保全、業務標準化を進める。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_four_year_allocation",
+    "growthInvestment":30000,
+    "growthInvestmentUnit":"百万円・4年間累計",
+    "researchAndDevelopment":35000,
+    "researchAndDevelopmentUnit":"百万円・4年間累計",
+    "maintenanceInvestment":35000,
+    "maintenanceInvestmentUnit":"百万円・4年間累計",
+    "managementPlatformInvestment":8000,
+    "managementPlatformInvestmentUnit":"百万円・4年間累計",
+    "assetEfficiencyTargets":[
+      {"metric":"政策保有株式等の純資産比率","target":6,"unit":"%未満","targetFiscalYear":"2029年度"},
+      {"metric":"棚卸資産回転率","target":4.0,"unit":"回転","targetFiscalYear":"2029年度"}
+    ],
+    "policy":"営業CF、政策保有株式整理、棚卸資産縮減、有利子負債を活用し、成長投資、研究開発、維持更新、経営基盤、株主還元へ機動的に配分する。",
+    "evidencePdfPages":[14,15]
+  },
+  "shareholderReturnPolicy": {
+    "status":"total_payout_floor_and_progressive_dividend",
+    "totalPayoutRatioTarget":50,
+    "totalPayoutRatioTargetUnit":"%以上",
+    "progressiveDividend":true,
+    "buybackPolicy":"資本構成・株価等を考慮し機動的に実施",
+    "evidencePdfPages":[13,14,15]
+  },
+  "nonFinancialTargets":[
+    {"metric":"要員10%減少に対応可能な体制","target":10,"unit":"%減対応","targetFiscalYear":"2029年度","baseline":"2021年度末比","evidencePdfPages":[15,16]}
+  ],
+  "definitions":[
+    {"term":"2029年度新規事業売上高100億円と2035年度500億円","definition":"100億円はStage III終期目標、500億円はその後の長期目標。","evidencePdfPage":13},
+    {"term":"研究開発350億円","definition":"成長投資300億円とは別枠の4年間累計研究開発費。","evidencePdfPages":[13,15,16]},
+    {"term":"ROA","definition":"総資産営業利益率。現行会計基準ベースで7%以上を目標とする。","evidencePdfPage":14}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousStageAndCurrentStageSeparated":true,"terminalAndLongTermTargetsSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T06:50:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年度の当期純利益・ROS・ROA・ROEを原寸確認する","新規事業100億円と2035年度500億円を分離確認する","成長投資300億円・研究開発350億円・維持更新350億円・経営基盤80億円を確認する","総還元性向50%以上と累進配当方針を確認する"]}
+}

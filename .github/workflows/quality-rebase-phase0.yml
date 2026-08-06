@@ -1,0 +1,92 @@
+name: Quality Rebase Phase 0
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'scripts/audit_quality_rebase_phase0_v1.mjs'
+      - 'scripts/reconcile_phase0_definitions_v1.mjs'
+      - 'scripts/lib/quality_profile_v3.mjs'
+      - 'operations/quality-rebase/**'
+      - '.github/workflows/quality-rebase-phase0.yml'
+      - 'site/data/**'
+  pull_request:
+    paths:
+      - 'scripts/audit_quality_rebase_phase0_v1.mjs'
+      - 'scripts/reconcile_phase0_definitions_v1.mjs'
+      - 'scripts/lib/quality_profile_v3.mjs'
+      - 'operations/quality-rebase/**'
+      - '.github/workflows/quality-rebase-phase0.yml'
+      - 'site/data/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  phase0-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Phase 0 truth audit
+        run: node scripts/audit_quality_rebase_phase0_v1.mjs
+
+      - name: Reconcile Phase 0 definitions
+        run: node scripts/reconcile_phase0_definitions_v1.mjs
+
+      - name: Show generated queue sizes
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('operations/quality-rebase/phase0-audit-report-v1.json', 'utf8'));
+          const reconciliation = JSON.parse(fs.readFileSync('operations/quality-rebase/phase0-definition-reconciliation-v1.json', 'utf8'));
+          const phase1 = JSON.parse(fs.readFileSync('operations/quality-rebase/phase1-cohort-50-v1.json', 'utf8'));
+          const phase2 = JSON.parse(fs.readFileSync('operations/quality-rebase/phase2-queue-500-v1.json', 'utf8'));
+          console.log(JSON.stringify({
+            derived: report.derived,
+            reconciledCompanies: reconciliation.companies,
+            reconciledProgress: {
+              records: reconciliation.progress.records,
+              companiesWithAnyProgressRecord: reconciliation.progress.companiesWithAnyProgressRecord,
+              explicitlyConnectedRecords: reconciliation.progress.explicitlyConnectedRecords,
+              explicitlyConnectedCompanies: reconciliation.progress.explicitlyConnectedCompanies,
+            },
+            phase1Companies: phase1.companies.length,
+            phase2QueuedAdditional: phase2.queuedAdditional,
+            phase2Batches: phase2.batches.length,
+          }, null, 2));
+          NODE
+
+      - name: Create source snapshot
+        run: |
+          tar --exclude='.git' --exclude='node_modules' -czf /tmp/chu-kei-quality-rebase-source.tar.gz .
+          sha256sum /tmp/chu-kei-quality-rebase-source.tar.gz
+
+      - name: Upload Phase 0 audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-rebase-phase0
+          if-no-files-found: error
+          path: |
+            operations/quality-rebase/phase0-audit-report-v1.json
+            operations/quality-rebase/phase0-definition-reconciliation-v1.json
+            operations/quality-rebase/phase0-company-classification-v1.csv
+            operations/quality-rebase/phase1-cohort-50-v1.json
+            operations/quality-rebase/phase2-queue-500-v1.json
+
+      - name: Upload branch source snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-quality-rebase-source
+          if-no-files-found: error
+          compression-level: 0
+          path: /tmp/chu-kei-quality-rebase-source.tar.gz

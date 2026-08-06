@@ -1,0 +1,602 @@
+{
+  "schemaVersion": "quality-rebase-phase0-audit-v1",
+  "generatedAt": "2026-07-31T21:20:51.731Z",
+  "referenceDate": "2026-08-01",
+  "bundle": {
+    "sha256": "84cc99f1eefd5ef3b63d4334b5f1257fea102e61242388249947d160fec95bdd",
+    "companyCount": 3000,
+    "progressRecordCount": 353
+  },
+  "policy": {
+    "legacyFiveStarIsDeepVerification": false,
+    "deepVerifiedRequiresExplicitQualityRebaseApproval": true,
+    "automaticDeepVerificationAllowed": false,
+    "templateTextMayNotQualifyAsDeepVerified": true
+  },
+  "derived": {
+    "deepVerified": 0,
+    "provisionalCandidates": 110,
+    "templateLike": 2685,
+    "formalPlanCandidates": 1837,
+    "financialStatementReSearch": 987,
+    "unclassifiedForManualReview": 205,
+    "progressRecords": 353,
+    "progressCompanies": 100,
+    "metricNormalizedGroups": 46,
+    "metricOriginalVariants": 59
+  },
+  "roadmapBaseline": {
+    "totalCompanies": 3000,
+    "provisionalCompanies": 315,
+    "templateTypeCompanies": 2685,
+    "financialStatementCompanies": 610,
+    "evidenceCandidateCompanies": 116,
+    "progressRecords": 353,
+    "progressConnectedCompanies": 72,
+    "knownBrokenLinks": 6
+  },
+  "baselineVariance": {
+    "provisionalCandidates": -205,
+    "templateLike": 0,
+    "financialStatementReSearch": 377,
+    "progressRecords": 0,
+    "progressCompanies": 28
+  },
+  "templatePatternCounts": {
+    "generic_metric_confirmation": 2616,
+    "refer_to_original_for_definition": 2616,
+    "generic_period": 2685,
+    "generic_topics_statement": 2686,
+    "generic_page_evidence": 1449,
+    "automatic_extraction_not_comparable": 2536,
+    "generic_primary_evidence_count": 2685,
+    "generic_jpx_summary": 2685
+  },
+  "marketBreakdown": {
+    "Prime": 1473,
+    "Standard": 1175,
+    "Growth": 352,
+    "Other": 0
+  },
+  "phase1": {
+    "target": 50,
+    "selected": 50,
+    "marketQuota": {
+      "Prime": 25,
+      "Standard": 15,
+      "Growth": 10
+    },
+    "actualMarket": {
+      "Prime": 25,
+      "Standard": 15,
+      "Growth": 10
+    },
+    "industries": 27
+  },
+  "phase2": {
+    "targetIncludingPhase1": 500,
+    "additionalTarget": 450,
+    "queuedAdditional": 450,
+    "batchSize": 50,
+    "batchesIncludingPhase1": 10
+  },
+  "metricNormalization": [
+    {
+      "normalized": "ROE",
+      "total": 63,
+      "variants": [
+        {
+          "name": "roe",
+          "occurrences": 32
+        },
+        {
+          "name": "ROE",
+          "occurrences": 28
+        },
+        {
+          "name": "adjustedRoe",
+          "occurrences": 2
+        },
+        {
+          "name": "adjustedROE",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "operatingProfit",
+      "total": 59,
+      "variants": [
+        {
+          "name": "operatingProfit",
+          "occurrences": 59
+        }
+      ]
+    },
+    {
+      "normalized": "revenue",
+      "total": 55,
+      "variants": [
+        {
+          "name": "revenue",
+          "occurrences": 55
+        }
+      ]
+    },
+    {
+      "normalized": "ROIC",
+      "total": 36,
+      "variants": [
+        {
+          "name": "roic",
+          "occurrences": 21
+        },
+        {
+          "name": "ROIC",
+          "occurrences": 15
+        }
+      ]
+    },
+    {
+      "normalized": "margin",
+      "total": 29,
+      "variants": [
+        {
+          "name": "margin",
+          "occurrences": 29
+        }
+      ]
+    },
+    {
+      "normalized": "operatingMargin",
+      "total": 15,
+      "variants": [
+        {
+          "name": "operatingMargin",
+          "occurrences": 15
+        }
+      ]
+    },
+    {
+      "normalized": "EBITDA",
+      "total": 13,
+      "variants": [
+        {
+          "name": "ebitda",
+          "occurrences": 5
+        },
+        {
+          "name": "EBITDA",
+          "occurrences": 3
+        },
+        {
+          "name": "debtToEbitda",
+          "occurrences": 1
+        },
+        {
+          "name": "ebitdaMargin",
+          "occurrences": 1
+        },
+        {
+          "name": "ebitdaPlusS",
+          "occurrences": 1
+        },
+        {
+          "name": "interestBearingDebtToEbitda",
+          "occurrences": 1
+        },
+        {
+          "name": "tokyuEbitda",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "netProfit",
+      "total": 11,
+      "variants": [
+        {
+          "name": "netProfit",
+          "occurrences": 11
+        }
+      ]
+    },
+    {
+      "normalized": "netIncome",
+      "total": 9,
+      "variants": [
+        {
+          "name": "netIncome",
+          "occurrences": 9
+        }
+      ]
+    },
+    {
+      "normalized": "EPS",
+      "total": 8,
+      "variants": [
+        {
+          "name": "EPS",
+          "occurrences": 5
+        },
+        {
+          "name": "eps",
+          "occurrences": 2
+        },
+        {
+          "name": "adjustedEPSGrowthCAGR",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "ordinaryProfit",
+      "total": 6,
+      "variants": [
+        {
+          "name": "ordinaryProfit",
+          "occurrences": 6
+        }
+      ]
+    },
+    {
+      "normalized": "businessProfit",
+      "total": 5,
+      "variants": [
+        {
+          "name": "businessProfit",
+          "occurrences": 5
+        }
+      ]
+    },
+    {
+      "normalized": "ROA",
+      "total": 4,
+      "variants": [
+        {
+          "name": "ROA",
+          "occurrences": 3
+        },
+        {
+          "name": "roa",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "totalReturnRatio",
+      "total": 4,
+      "variants": [
+        {
+          "name": "totalReturnRatio",
+          "occurrences": 4
+        }
+      ]
+    },
+    {
+      "normalized": "adjustedOperatingMargin",
+      "total": 2,
+      "variants": [
+        {
+          "name": "adjustedOperatingMargin",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "normalized": "operatingProfitCagr",
+      "total": 2,
+      "variants": [
+        {
+          "name": "operatingProfitCagr",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "normalized": "overseasRevenueRatio",
+      "total": 2,
+      "variants": [
+        {
+          "name": "overseasRevenueRatio",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "normalized": "revenueCagr",
+      "total": 2,
+      "variants": [
+        {
+          "name": "revenueCagr",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "normalized": "adjustedConsolidatedProfit",
+      "total": 1,
+      "variants": [
+        {
+          "name": "adjustedConsolidatedProfit",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "adjustedNetProfitCagr",
+      "total": 1,
+      "variants": [
+        {
+          "name": "adjustedNetProfitCagr",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "bpoGrossMargin",
+      "total": 1,
+      "variants": [
+        {
+          "name": "bpoGrossMargin",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "bpoRevenue",
+      "total": 1,
+      "variants": [
+        {
+          "name": "bpoRevenue",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "capexToSales",
+      "total": 1,
+      "variants": [
+        {
+          "name": "capexToSales",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "consolidatedBusinessProfit",
+      "total": 1,
+      "variants": [
+        {
+          "name": "consolidatedBusinessProfit",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "coreOperatingProfit",
+      "total": 1,
+      "variants": [
+        {
+          "name": "coreOperatingProfit",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "deRatio",
+      "total": 1,
+      "variants": [
+        {
+          "name": "deRatio",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "dividendPayoutRatio",
+      "total": 1,
+      "variants": [
+        {
+          "name": "dividendPayoutRatio",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "DOE",
+      "total": 1,
+      "variants": [
+        {
+          "name": "doe",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "growthInvestment",
+      "total": 1,
+      "variants": [
+        {
+          "name": "growthInvestment",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "growthInvestmentCapacity",
+      "total": 1,
+      "variants": [
+        {
+          "name": "growthInvestmentCapacity",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "investmentTotal",
+      "total": 1,
+      "variants": [
+        {
+          "name": "investmentTotal",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "maInvestment",
+      "total": 1,
+      "variants": [
+        {
+          "name": "maInvestment",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "netDer",
+      "total": 1,
+      "variants": [
+        {
+          "name": "netDer",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "netMargin",
+      "total": 1,
+      "variants": [
+        {
+          "name": "netMargin",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "nonGaapOperatingMargin",
+      "total": 1,
+      "variants": [
+        {
+          "name": "nonGaapOperatingMargin",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "operatingCashFlow",
+      "total": 1,
+      "variants": [
+        {
+          "name": "operatingCashFlow",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "organicGrowthCagr",
+      "total": 1,
+      "variants": [
+        {
+          "name": "organicGrowthCagr",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "payoutRatio",
+      "total": 1,
+      "variants": [
+        {
+          "name": "payoutRatio",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "pretaxProfit",
+      "total": 1,
+      "variants": [
+        {
+          "name": "pretaxProfit",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "ramenRevenue",
+      "total": 1,
+      "variants": [
+        {
+          "name": "ramenRevenue",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "segmentProfit",
+      "total": 1,
+      "variants": [
+        {
+          "name": "segmentProfit",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "shareholderReturnRatioToOperatingCashFlow",
+      "total": 1,
+      "variants": [
+        {
+          "name": "shareholderReturnRatioToOperatingCashFlow",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "strategicBusinessOperatingProfit",
+      "total": 1,
+      "variants": [
+        {
+          "name": "strategicBusinessOperatingProfit",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "strategicInvestment",
+      "total": 1,
+      "variants": [
+        {
+          "name": "strategicInvestment",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "totalReturnRatioRolling3Years",
+      "total": 1,
+      "variants": [
+        {
+          "name": "totalReturnRatioRolling3Years",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "normalized": "underlyingBusinessProfit",
+      "total": 1,
+      "variants": [
+        {
+          "name": "underlyingBusinessProfit",
+          "occurrences": 1
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "URLのHTTP到達性はこの監査では検査しない。既知404は別キューで修復する。",
+    "テンプレート検出は意味上の精読完了を証明しない。深掘り済み判定には新しい二段階承認が必要。",
+    "Phase 1・2の候補選定は処理順を決めるものであり、公開承認ではない。"
+  ]
+}

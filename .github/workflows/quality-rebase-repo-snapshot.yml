@@ -1,0 +1,36 @@
+name: Quality Rebase Repository Snapshot
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - '.github/workflows/quality-rebase-repo-snapshot.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+
+      - name: Create repository snapshot
+        run: |
+          tar \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            -czf /tmp/chu-kei-quality-rebase-source.tar.gz .
+          sha256sum /tmp/chu-kei-quality-rebase-source.tar.gz
+
+      - name: Upload repository snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: chu-kei-quality-rebase-source
+          if-no-files-found: error
+          compression-level: 0
+          path: /tmp/chu-kei-quality-rebase-source.tar.gz

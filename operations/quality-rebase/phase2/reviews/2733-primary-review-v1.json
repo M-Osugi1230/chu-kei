@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"2733","name":"あらた","market":"Prime","industry":"卸売業","phase2Order":315},
+  "source": {
+    "title":"中期経営計画2030",
+    "publishedDate":"2026-05-14",
+    "officialUrl":"https://www2.jpx.co.jp/disc/27330/140120260513531518.pdf",
+    "pdfSha256":"68b102c81b63aec6c897aa21f2cb205a6bde49f6e9f59b905efd82913cb81bdd",
+    "pageCount":36,
+    "documentClassification":"formal_management_plan_current_final_phase_to_2030",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2030年3月期","terminalFiscalYear":"2030年3月期"},
+    "formalPlanBoundary":{"previousPlan":"中期経営計画2026","currentPlan":"中期経営計画2030","previousTargetRevision":"前中計の経常利益目標は200億円から130億円へ修正","statement":"前中計の当初目標・修正目標・実績と、新中計2030目標を分離する。"}
+  },
+  "summary":"長期ビジョン2030の最終フェーズを戦略的投資期間と位置づけ、独自商品・分析提案・M&A・物流センター投資でトップラインを拡大し、IT・DX・物流効率化・グループ再編で収益体質を強化する。2030年3月期に売上高1兆1,600億円、経常利益160億円、EBITDA240億円、ROE8%以上を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":11600,"unit":"億円","targetFiscalYear":"2030年3月期","baseline":"2026年3月期実績10,047億円","evidencePdfPages":[2,13,14]},
+    {"metric":"経常利益","target":160,"unit":"億円","targetFiscalYear":"2030年3月期","baseline":"2026年3月期実績135億円","evidencePdfPages":[2,13,14]},
+    {"metric":"EBITDA","target":240,"unit":"億円","targetFiscalYear":"2030年3月期","baseline":"2026年3月期実績180億円","evidencePdfPages":[2,13,14]},
+    {"metric":"ROE","target":8,"unit":"%以上","targetFiscalYear":"2030年3月期","baseline":"2026年3月期実績8.4%","evidencePdfPages":[2,13,14]}
+  ],
+  "strategyThemes":[
+    {"theme":"インストアシェア拡大","evidencePdfPages":[16,17],"evidence":"True DataのID-POSと商品情報を活用し、独自分析・提案・店頭実現力を高める。"},
+    {"theme":"新たな成長ドライバー","evidencePdfPages":[16,18],"evidence":"商品開発・化粧品卸機能のM&Aを通じて新カテゴリーと独自商品を拡大する。"},
+    {"theme":"物流・IT基盤","evidencePdfPages":[16,21,25],"evidence":"新物流センター、マテハン、IT・DX、ASN、共同配送で生産性を高める。"},
+    {"theme":"収益体質強化","evidencePdfPages":[20,21,22],"evidence":"専売・優先流通品、販管費抑制、グループ再編でボトムラインを改善する。"},
+    {"theme":"サステナビリティ","evidencePdfPages":[27,28,29,30],"evidence":"GHG、人材、BCM、ガバナンス、共同配送を企業価値向上へ接続する。"}
+  ],
+  "capitalPolicy": {
+    "status":"four_year_cash_allocation_disclosed",
+    "cashIn":{"operatingCashFlow":540,"unit":"億円","additionalFunding":"有利子負債を活用"},
+    "cashOut":[
+      {"category":"成長投資","amountRange":"500～600","unit":"億円"},
+      {"category":"設備投資","amount":190,"unit":"億円"},
+      {"category":"株主還元","amount":150,"unit":"億円・約"}
+    ],
+    "investmentDiscipline":"ROICを軸に投資判断し、EBITDAを収益性・キャッシュ創出力指標として活用",
+    "investmentUses":["新物流センター","システム","IT・DX","組織改革","人材育成","物流インフラ"],
+    "evidencePdfPage":25
+  },
+  "shareholderReturnPolicy": {
+    "status":"stable_and_progressive_dividend_with_flexible_buyback",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%を意識",
+    "fourYearReturnAmount":150,
+    "fourYearReturnAmountUnit":"億円以上",
+    "annualDividend2027":112,
+    "annualDividend2027Unit":"円/株",
+    "buybackPolicy":"資本効率を勘案して機動的に実施",
+    "evidencePdfPage":24
+  },
+  "nonFinancialTargets":[
+    {"metric":"GHG排出量削減","target":50,"unit":"%以上・2024年3月期比 Scope1・2","targetFiscalYear":"2030年3月期","evidencePdfPage":27},
+    {"metric":"女性管理職比率","target":10,"unit":"%","targetFiscalYear":"2030年3月期","baseline":"2026年3月期5.2%","evidencePdfPage":27},
+    {"metric":"専売・優先流通品売上構成比","target":9,"unit":"%","targetFiscalYear":"2030年3月期","baseline":"2026年3月期7.8%","evidencePdfPage":20}
+  ],
+  "definitions":[
+    {"term":"前中計経常利益130億円","definition":"当初200億円から修正された前中計目標であり、新中計160億円と分離する。","evidencePdfPages":[1,5]},
+    {"term":"キャッシュアウト","definition":"営業CF540億円だけでは投資・還元総額を賄わず、有利子負債の活用と運転資本を含む図示である。","evidencePdfPage":25},
+    {"term":"配当性向30%","definition":"下限ではなく『意識しながら』安定配当・増配を図る方針。","evidencePdfPage":24}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousInitialRevisedAndActualSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T06:35:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["前中計200億円・130億円・実績135億円と新中計160億円を原寸確認する","キャッシュアロケーション図の運転資本と有利子負債を独立確認する","成長投資500～600億円、設備190億円、還元約150億円の範囲を確認する","配当性向30%を保証下限として扱っていないことを確認する"]}
+}

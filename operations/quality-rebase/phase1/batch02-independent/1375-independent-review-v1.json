@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "deep-verification-independent-review-v1",
+  "company": {
+    "code": "1375",
+    "name": "ユキグニファクトリー",
+    "order": 20
+  },
+  "sourceRecord": {
+    "type": "primary_review_and_resolved_source_identity",
+    "primaryReviewFile": "operations/quality-rebase/phase1/reviews/1375-primary-review-v1.json",
+    "sourceResolutionFile": "operations/quality-rebase/phase1/source-resolution/1375-source-conflict-v1.json"
+  },
+  "sourceSet": {
+    "officialUrl": "https://www.yukiguni-factory.co.jp/ir/middleplan/",
+    "officialLibraryUrl": "https://www.yukiguni-factory.co.jp/ir/library/middleplan-data/",
+    "shareholderReturnUrl": "https://www.yukiguni-factory.co.jp/ir/dividend/",
+    "title": "中期経営計画（2024年3月期～2028年3月期）",
+    "publishedDate": null,
+    "externalReportExcluded": {
+      "date": "2025-11-14",
+      "publisher": "Sessa Investment Research",
+      "type": "FY2026/3 Q2フォローアップ"
+    }
+  },
+  "queue": {
+    "status": "ready_for_independent_review",
+    "blockedReasons": [],
+    "priority": 20
+  },
+  "requiredFocus": [
+    "会社公式の現行中計が2024年3月期～2028年3月期であること",
+    "2025年11月14日外部調査レポートを会社公式中計として扱っていないこと",
+    "2024年3月期実績・2025年3月期予想・2028年3月期計画・年度未特定アップサイドの分離",
+    "海外売上収益比率とコアEBITDAの定義",
+    "連結配当性向30%程度の別ソース接続",
+    "公式中期経営計画資料の直接ファイルURLと公表日の追補可否",
+    "公開ページの画像・リンク・表示"
+  ],
+  "reviewChecks": {
+    "companyIdentityConfirmed": false,
+    "formalPlanConfirmed": false,
+    "publicationDateConfirmedOrExplicitlyUnknown": false,
+    "fullTextReviewedIndependently": false,
+    "strategyMatchesSource": false,
+    "allTargetsMatchSource": false,
+    "yearUnitScopeValidated": false,
+    "capitalPolicyMatchesSource": false,
+    "fieldLevelEvidenceValidated": false,
+    "forecastActualSeparationValidated": false,
+    "externalResearchSeparated": false,
+    "templateTextAbsent": false,
+    "linkReachabilityChecked": false,
+    "renderChecked": false
+  },
+  "discrepancies": [],
+  "reviewer": {
+    "reviewerId": null,
+    "reviewerType": null,
+    "independentFromPrimaryReview": null,
+    "reviewedAt": null
+  },
+  "decision": {
+    "status": "pending",
+    "approved": false,
+    "changesRequested": false,
+    "reason": null
+  },
+  "policy": {
+    "automaticApprovalAllowed": false,
+    "approvalRequiresAllChecksTrue": true,
+    "minimumDistinctReviewersAcrossPrimaryAndIndependent": 2,
+    "deepVerificationApproved": false
+  }
+}

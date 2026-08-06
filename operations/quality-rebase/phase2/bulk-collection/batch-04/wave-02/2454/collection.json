@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 162,
+  "company": {
+    "code": "2454",
+    "name": "オールアバウト",
+    "market": "Standard",
+    "industry": "サービス業",
+    "document": "2026年3月期決算および3か年経営方針説明資料",
+    "planPublishedDate": "2026-05-13",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/24540/140120260513529662.pdf",
+    "phaseScore": 111,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.422,
+  "requiresManualSourceRecovery": true
+}

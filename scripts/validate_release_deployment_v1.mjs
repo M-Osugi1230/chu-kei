@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { QUALITY_PROFILE_VERSION } from './lib/quality_profile_v3.mjs';
+
 const ROOT=path.resolve('.'),SITE=path.join(ROOT,'site'),ART=path.join(ROOT,'artifacts'),checks=[],issues=[];
 const MILESTONE=path.join(ROOT,'operations','quality','coverage-milestone-v1.json');
 const milestone=fs.existsSync(MILESTONE)?JSON.parse(fs.readFileSync(MILESTONE,'utf8')):{companyTotal:570,progressRows:149};
@@ -18,7 +20,11 @@ check('bundle bytes match',compressed.length===bundle.compressedBytes,`actual=${
 check('bundle SHA-256 matches',digest===bundle.sha256,digest);
 check(`company count ${milestone.companyTotal}`,bundle.companyCount===milestone.companyTotal,`actual=${bundle.companyCount}`);
 check(`progress count ${milestone.progressRows}`,bundle.progressCount===milestone.progressRows,`actual=${bundle.progressCount}`);
-check('quality score v2 release',bundle.version==='v43-quality-score-v2',`actual=${bundle.version}`);
+check(
+  `quality profile ${QUALITY_PROFILE_VERSION} release`,
+  bundle.version===`v43-quality-score-v${QUALITY_PROFILE_VERSION.split('.')[0]}`,
+  `actual=${bundle.version}`,
+);
 const publicText=required.filter(file=>/\.(html|js|css|json|webmanifest|txt)$/.test(file)).map(file=>fs.readFileSync(path.join(SITE,file),'utf8')).join('\n');
 check('public files contain no obsolete v42 label',!/(Coverage 30% Beta v42|public_beta_v42|operations_v42)/i.test(publicText));
 check('public files contain no localhost dependency',!/(localhost|127\.0\.0\.1):\d+/.test(publicText));
@@ -31,4 +37,18 @@ check('release manifest company count',release.companyCount===milestone.companyT
 check('release manifest progress count',release.progressCount===milestone.progressRows,`actual=${release.progressCount}, expected=${milestone.progressRows}`);
 check('release manifest data hash',release.dataBundle?.sha256===bundle.sha256);
 check('release manifest file paths unique',new Set(release.files.map(file=>file.path)).size===release.files.length);
-fs.mkdirSync(ART,{recursive:true});const report={version:'release-deployment-gate-v1',checkedAt:new Date().toISOString(),milestone,passed:checks.filter(c=>c.ok).length,total:checks.length,allPassed:issues.length===0,checks,issues};fs.writeFileSync(path.join(ART,'release-deployment-report-v1.json'),JSON.stringify(report,null,2)+'\n');for(const c of checks)console.log(`${c.ok?'PASS':'FAIL'} ${c.name}${c.detail?`: ${c.detail}`:''}`);process.exit(report.allPassed?0:1);
+fs.mkdirSync(ART,{recursive:true});
+const report={
+  version:'release-deployment-gate-v1.1-quality-v3',
+  checkedAt:new Date().toISOString(),
+  qualityProfileVersion:QUALITY_PROFILE_VERSION,
+  milestone,
+  passed:checks.filter(c=>c.ok).length,
+  total:checks.length,
+  allPassed:issues.length===0,
+  checks,
+  issues,
+};
+fs.writeFileSync(path.join(ART,'release-deployment-report-v1.json'),JSON.stringify(report,null,2)+'\n');
+for(const c of checks)console.log(`${c.ok?'PASS':'FAIL'} ${c.name}${c.detail?`: ${c.detail}`:''}`);
+process.exit(report.allPassed?0:1);

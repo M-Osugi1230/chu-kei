@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {"code": "6294", "name": "オカダアイヨン"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6294-primary-review-v1.json",
+  "source": {
+    "title": "2026年3月期決算および新中期経営計画 Onyx FY2026-FY2028",
+    "officialLandingPage": "https://okadaaiyon.com/ir/plan",
+    "officialUrl": "https://media.okadaaiyon.com/cms/uploads/J_FinancialResultsforFY3-26_5.pdf",
+    "collectedPdfSha256": "64e6f20ab625f0c6d46b35daed1adbe7ed8d698e2c774596c1ab288d2339d2be",
+    "pageCount": 46
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {"id": "source_identity", "description": "会社名、証券コード6294、公表日、46ページ、収集PDFハッシュを独立確認する。", "expectedEvidencePdfPages": [1, 4, 46], "status": "pending"},
+    {"id": "plan_boundary", "description": "Onyx FY2026-FY2028と2031年3月期の新VISION30を分離する。", "expectedEvidencePdfPages": [20, 23, 24], "status": "pending"},
+    {"id": "financial_targets", "description": "2029年3月期の売上高340億円、営業利益34億円、営業利益率10.0%、ROE10.8%を確認する。", "expectedEvidencePdfPages": [24], "status": "pending"},
+    {"id": "capital_allocation", "description": "営業CF93億円、成長投資・資金返済50億円、設備投資22億円、株主還元18億円、現金増3億円の3年間配分を確認する。", "expectedEvidencePdfPages": [35, 36], "status": "pending"},
+    {"id": "capital_efficiency", "description": "2029年3月期ROIC6.64%、WACC5.45%、ROIC-WACC1.18ポイント、経済的付加価値4.1億円の会社試算を確認する。", "expectedEvidencePdfPages": [37, 38], "status": "pending"},
+    {"id": "shareholder_return", "description": "累進的配当、配当性向30%以上、2027年3月期年間76円予想を確認する。", "expectedEvidencePdfPages": [17, 36], "status": "pending"},
+    {"id": "strategy", "description": "国内QCD、顧客LTV、海外展開、M&A、在庫適正化の5領域を確認する。", "expectedEvidencePdfPages": [22, 25, 27, 28, 29, 30, 31], "status": "pending"},
+    {"id": "post_publication", "description": "公開反映後の公式リンク、期間、主要数値、長期目標分離を確認する。", "status": "pending"}
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

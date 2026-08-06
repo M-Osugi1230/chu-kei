@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "8308",
+    "name": "りそなホールディングス",
+    "market": "Prime",
+    "industry": "銀行業"
+  },
+  "document": {
+    "title": "中期経営計画（2026～2028年度） Shift to the Next Stage ―新たなカタチをつくる3年間―",
+    "publishedDate": "2026-04-20",
+    "period": "2026年度-2028年度",
+    "officialUrl": "https://www.resona-gr.co.jp/holdings/investors/ir/presentation/pdf/20260420_1a.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 23,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "企業価値最大化に向けた資本循環の加速を基盤に、コア事業の成長、次世代成長ドライバーの創出、経営基盤の構造改革を進める",
+    "strategyThemes": [
+      "日本の成長・地域活性化を支える資金循環の強化",
+      "多様化する顧客課題に対するソリューションの持続的増強",
+      "隣接領域・新領域への展開による次世代成長ドライバー創出",
+      "人的資本・生成AI・データを活用した経営基盤の構造改革",
+      "健全性・成長投資・株主還元を組み合わせた資本循環の加速"
+    ],
+    "groupTargets": [
+      {
+        "metric": "東証ROE",
+        "baseValue": 8.8,
+        "target": 12,
+        "unit": "%",
+        "baseYear": "2026年3月期目標",
+        "targetYear": "2029年3月期",
+        "scope": "連結・東証基準",
+        "evidence": "公式PDF p.3・p.16"
+      },
+      {
+        "metric": "業務粗利益",
+        "baseValue": 8000,
+        "target": 10000,
+        "unit": "億円",
+        "baseYear": "2026年3月期目標",
+        "targetYear": "2029年3月期",
+        "scope": "連結",
+        "evidence": "公式PDF p.3"
+      },
+      {
+        "metric": "親会社株主に帰属する当期純利益",
+        "baseValue": 2500,
+        "target": 3900,
+        "unit": "億円",
+        "baseYear": "2026年3月期目標",
+        "targetYear": "2029年3月期",
+        "scope": "連結",
+        "evidence": "公式PDF p.3-p.4"
+      },
+      {
+        "metric": "OHR",
+        "baseValue": 59,
+        "target": "40%台",
+        "unit": "%",
+        "baseYear": "2026年3月期目標",
+        "targetYear": "2029年3月期",
+        "scope": "連結経費率",
+        "evidence": "公式PDF p.3・p.15"
+      },
+      {
+        "metric": "総還元性向",
+        "baseValue": 52.3,
+        "target": 50,
+        "unit": "%以上",
+        "baseYear": "2026年3月期予想",
+        "targetYear": "中計期間",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.3・p.16"
+      },
+      {
+        "metric": "CET1比率",
+        "baseValue": 9.8,
+        "target": "10%台",
+        "unit": "%",
+        "baseYear": "2026年3月期目標",
+        "targetYear": "中計期間",
+        "scope": "国際統一基準・バーゼル3最終化完全実施・その他有価証券評価差額金除き",
+        "evidence": "公式PDF p.3・p.16"
+      },
+      {
+        "metric": "DOE",
+        "target": 3,
+        "unit": "%程度",
+        "targetYear": "2029年度",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.16"
+      }
+    ],
+    "capitalPolicy": {
+      "capitalFlow": "新中計では1兆円を超える資本フローを見込む",
+      "growthInvestment": "オーガニック投資とインオーガニック投資を戦略的に配分",
+      "capitalAdequacy": "CET1比率10%台で運営",
+      "shareholderReturn": "総還元性向50%以上を下限目標とし、DOE3%程度を目指す安定増配と機動的な自己株式取得を組み合わせる",
+      "evidence": "公式PDF p.16-p.17"
+    },
+    "importantDefinitions": [
+      "計画年度2026-2028年度の最終財務目標は2029年3月期として表示",
+      "東証ROEとCET1比率の算定基準を区別する",
+      "OHRは連結経費率",
+      "総還元性向50%以上は目標の下限水準"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "bankCapitalDefinitionsCaptured": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全23ページの独立した再確認",
+      "東証ROE・CET1・OHRの定義と対象年度の別確認者による原文突合",
+      "資本フロー・DOE・総還元性向の再確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

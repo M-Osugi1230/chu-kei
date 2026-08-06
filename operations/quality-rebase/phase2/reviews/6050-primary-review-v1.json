@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code": "6050", "name": "イー・ガーディアン", "market": "Prime", "industry": "サービス業"},
+  "source": {
+    "title": "中期経営計画2026-2028",
+    "publishedDate": "2025-12-17",
+    "officialUrl": "https://www2.jpx.co.jp/disc/60500/140120251217521239.pdf",
+    "pdfSha256": "fdf12d73aeab688e0a0fead4653313bd52dba1c3ac06040f3e946fb9b6db46b8",
+    "pageCount": 15,
+    "documentClassification": "formal_management_plan_current_2026_to_2028",
+    "period": {"startFiscalYear": "2026年9月期", "endFiscalYear": "2028年9月期"},
+    "formalPlanBoundary": {
+      "currentPlan": "2026年9月期から2028年9月期の3カ年計画",
+      "fiveYearReference": "計画後5年のプロダクト比率50%像",
+      "longTermVision": "AI×人で社会課題を解決する企業",
+      "statement": "3年間の定量目標、計画期間後5年の事業モデル像、長期ビジョンを分離する。キャッシュアロケーション図の●●百万円は未開示であり数値として採用しない。"
+    }
+  },
+  "summary": "労働集約型BPOから、蓄積したノウハウ・教師データを活用するAI×人のソーシャル・セーフティ総合プラットフォームへ転換する。システム・プロダクト開発、AI人材高度化、サイバーセキュリティ、新事業、M&Aを推進し、2028年9月期に売上高200億円、EBITDA25億円を目指す。",
+  "financialTargets": [
+    {"metric": "売上高", "target": 12000, "unit": "百万円", "targetFiscalYear": "2026年9月期", "evidencePdfPage": 7},
+    {"metric": "EBITDA", "target": 1750, "unit": "百万円", "targetFiscalYear": "2026年9月期", "evidencePdfPage": 7},
+    {"metric": "売上高", "target": 15000, "unit": "百万円", "targetFiscalYear": "2027年9月期", "evidencePdfPage": 7},
+    {"metric": "EBITDA", "target": 2000, "unit": "百万円", "targetFiscalYear": "2027年9月期", "evidencePdfPage": 7},
+    {"metric": "売上高", "target": 20000, "unit": "百万円", "targetFiscalYear": "2028年9月期", "evidencePdfPage": 7},
+    {"metric": "EBITDA", "target": 2500, "unit": "百万円", "targetFiscalYear": "2028年9月期", "evidencePdfPage": 7}
+  ],
+  "strategyThemes": [
+    {"theme": "AIシステム・プロダクト開発", "evidencePdfPages": [4,6,8,14], "evidence": "炎上検知、広告審査、CS、災害・障害検知、ディープフェイク、なりすまし、不正利用、eKYC等にノウハウ・教師データを展開する。"},
+    {"theme": "AI×人プロ集団", "evidencePdfPages": [4,9], "evidence": "最終判断、教師データ、AIチューニング、顧客課題起点のサービス開発を担う専門人材を育成する。"},
+    {"theme": "サイバーセキュリティ", "evidencePdfPages": [4,11,12], "evidence": "教育コンテンツ、簡易診断、サイリーグHD連携、新事業を自治体・中小企業・医療・個人へ広げる。"},
+    {"theme": "M&A", "evidencePdfPages": [4,13], "evidence": "BPO、セキュリティ、テスト、AI領域を対象に、AIノウハウ投入、収益性改善、シナジー創出を循環させる。"}
+  ],
+  "businessModelTargets": [
+    {"metric": "売上高に占めるプロダクト・システム販売比率", "target": 30, "unit": "%", "targetScope": "中期経営計画期間", "evidencePdfPage": 10},
+    {"metric": "売上高に占めるプロダクト・システム販売比率", "target": 50, "unit": "%", "targetScope": "5年後の姿", "classification": "post_plan_reference", "evidencePdfPage": 10},
+    {"metric": "新規サイバーセキュリティ事業", "target": "億単位規模を複数創出", "targetScope": "中期・その先", "evidencePdfPage": 12}
+  ],
+  "capitalPolicy": {
+    "status": "cash_in_scale_disclosed_outflow_breakdown_not_quantified",
+    "cashOnHand": 110,
+    "cashOnHandUnit": "億円・約",
+    "operatingCashFlow": 40,
+    "operatingCashFlowUnit": "億円・約",
+    "cashOutCategories": ["M&A", "AI開発・成長投資", "基盤投資", "株主還元"],
+    "mAndAAmount": null,
+    "growthInvestmentAmount": null,
+    "baseInvestmentAmount": null,
+    "shareholderReturnAmount": null,
+    "policy": "運転資金を除く現預金と営業CFを、BPO・サイバー・AIのM&A、自社・連携AI開発、基盤、還元へ積極的かつ機動的に配分する。",
+    "evidencePdfPage": 14
+  },
+  "shareholderReturnPolicy": {
+    "status": "qualitative_dividend_and_benefit_policy",
+    "policy": "株主優待や配当による株主還元を重要視する。",
+    "dividendPayoutRatio": null,
+    "doe": null,
+    "buybackAmount": null,
+    "returnAmount": null,
+    "evidencePdfPage": 14
+  },
+  "nonFinancialPolicy": {
+    "status": "human_capital_and_social_safety_strategy_reviewed_without_quantified_kpis",
+    "themes": ["AI専門人材", "教師データ", "サイバー人材", "社会課題解決", "ステークホルダー安全"],
+    "quantifiedTargetSetInSource": false,
+    "evidencePdfPages": [4,9,11,12]
+  },
+  "definitions": [
+    {"term": "売上高200億円・EBITDA25億円", "definition": "2028年9月期の中計最終目標。5年後プロダクト比率50%とは異なる時間軸。", "evidencePdfPages": [7,10]},
+    {"term": "キャッシュアウト●●百万円", "definition": "資料上の伏字・プレースホルダーであり未開示。数値として抽出・推計しない。", "evidencePdfPage": 14},
+    {"term": "プロダクト比率30%", "definition": "売上高に占めるシステム・プロダクト販売比率の中計期間目標。現在比率ではない。", "evidencePdfPage": 10}
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": true,
+    "formalPlanBoundaryValidated": true,
+    "planAndPostPlanVisionSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalPolicyReviewed": true,
+    "undisclosedAmountsNotInferred": true,
+    "shareholderReturnPolicyReviewed": true,
+    "nonFinancialDisclosureReviewed": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {"status": "primary_review_complete_independent_review_ready", "reviewedAt": "2026-08-04T18:12:00+09:00", "reviewRole": "primary_reviewer", "automaticFactCompletionAllowed": false, "automaticApprovalAllowed": false, "deepVerificationApproved": false}
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "5631",
+    "name": "日本製鋼所",
+    "market": "Prime",
+    "industry": "機械"
+  },
+  "document": {
+    "title": "中期経営計画 JGP2028 Update",
+    "publishedDate": "2026-07-13",
+    "period": "2025年3月期-2029年3月期",
+    "officialUrl": "https://www.jsw.co.jp/pdf/ir/library/presentation/2027/JGP2028_202607.pdf",
+    "verificationMirrorUrl": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260713/20260710591714.pdf",
+    "officialCompanyPdfFetchStatus": "official_url_identified_company_host_returned_403_to_review_tool",
+    "contentType": "application/pdf",
+    "pageCount": 40,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "JGP2028の基本方針を維持しつつ、市況変化に合わせて事業戦略と2029年3月期の財務目標を上方更新する",
+    "strategyThemes": [
+      "樹脂製造・加工機械で成長地域への重点配分とアフターサービス拡大",
+      "成形機のグローバル化とフィジカルAI向け需要の取り込み",
+      "防衛関連機器の供給能力増強",
+      "FPD・データセンター・次世代パッケージ向け電子デバイス設備の拡販",
+      "発電機器・原子力・データセンター向け素材材の供給能力強化",
+      "GaN・LN結晶等フォトニクス事業の早期事業化"
+    ],
+    "groupTargets": [
+      {
+        "metric": "売上高",
+        "target": 4000,
+        "unit": "億円",
+        "targetYear": "2029年3月期",
+        "scope": "連結",
+        "evidence": "公式PDF p.15"
+      },
+      {
+        "metric": "営業利益",
+        "target": 400,
+        "unit": "億円",
+        "targetYear": "2029年3月期",
+        "scope": "連結",
+        "evidence": "公式PDF p.15"
+      },
+      {
+        "metric": "営業利益率",
+        "target": 10.0,
+        "unit": "%",
+        "targetYear": "2029年3月期",
+        "scope": "連結",
+        "evidence": "公式PDF p.15"
+      },
+      {
+        "metric": "ROE",
+        "target": "10～11",
+        "unit": "%",
+        "targetYear": "2029年3月期",
+        "scope": "連結",
+        "evidence": "公式PDF p.15"
+      },
+      {
+        "metric": "エクイティスプレッド",
+        "target": "2～3",
+        "unit": "%",
+        "targetYear": "2029年3月期",
+        "scope": "連結",
+        "evidence": "公式PDF p.15"
+      },
+      {
+        "metric": "配当性向",
+        "target": 35,
+        "unit": "%",
+        "targetYear": "中計期間",
+        "scope": "連結株主還元方針",
+        "evidence": "公式PDF p.11・p.15"
+      },
+      {
+        "metric": "EBITDA",
+        "target": 550,
+        "unit": "億円",
+        "targetYear": "2029年3月期",
+        "scope": "連結・会社定義",
+        "evidence": "公式PDF p.15"
+      }
+    ],
+    "capitalPolicy": {
+      "shareholderReturn": "連結配当性向35%以上を目標とし、DOE2.5%を下限に配当を実施",
+      "forecastReference": "2027年3月期予想は売上高3,100億円、営業利益270億円、営業利益率8.7%、ROE8.7%、EBITDA391億円。実績として接続しない",
+      "evidence": "公式PDF p.10-p.11"
+    },
+    "importantDefinitions": [
+      "2027年3月期は会社予想であり実績ではない",
+      "2029年3月期がJGP2028最終年度の財務目標",
+      "2033年3月期の長期目標は中計最終目標と分離する",
+      "EBITDAは会社定義値として扱う"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "longTermAndMidTermTargetsSeparated": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全40ページの独立した再確認",
+      "2027年3月期予想と2029年3月期目標の別確認者による原文突合",
+      "会社公式URLの到達性再確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

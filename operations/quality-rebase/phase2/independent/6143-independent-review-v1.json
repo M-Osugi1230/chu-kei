@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6143",
+    "name": "ソディック"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6143-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画 Grow Forward 2029",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/61430/140120260615570413.pdf",
+    "pdfSha256": "99749a2072a7287fd0830e14f6c0bb0047af36ba4c93629024001bff99b201c5",
+    "pageCount": 30
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社ソディック、証券コード6143、公表日2026年6月16日、PDFハッシュ、30ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "Grow Forward 2029がFY2026～FY2029の4カ年計画で、FY2023～FY2025の旧計画と分離されていることを確認する。",
+      "expectedEvidencePdfPages": [7, 8, 9],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "FY2029売上1,000億円、営業利益100億円、営業利益率10%、ROE8%以上、EPS130円以上を再確認する。",
+      "expectedEvidencePdfPages": [7, 9, 26],
+      "status": "pending"
+    },
+    {
+      "id": "pbr_boundary",
+      "description": "PBR1倍以上が早期達成・維持向上を目指す指標であることを確認する。",
+      "expectedEvidencePdfPages": [9, 26],
+      "status": "pending"
+    },
+    {
+      "id": "segment_targets",
+      "description": "工作機械、産業機械、食品機械、その他事業のFY2029売上・利益・利益率と共通費を再確認する。",
+      "expectedEvidencePdfPages": [11, 13, 15, 17, 19],
+      "status": "pending"
+    },
+    {
+      "id": "capital_sources",
+      "description": "期首現預金410億円、政策保有株売却13億円、AP社調達100億円、営業CF500億円の合計1,023億円を再計算する。",
+      "expectedEvidencePdfPage": 27,
+      "status": "pending"
+    },
+    {
+      "id": "capital_uses",
+      "description": "戦略投資200億円、設備・R&D260億円、株主還元165億円、期末現預金398億円の合計1,023億円を再計算する。",
+      "expectedEvidencePdfPage": 27,
+      "status": "pending"
+    },
+    {
+      "id": "funding_double_count",
+      "description": "AP社調達100億円、戦略投資200億円、M&A枠100億円を重複計上していないことを確認する。",
+      "expectedEvidencePdfPages": [27, 28],
+      "status": "pending"
+    },
+    {
+      "id": "guideline_note",
+      "description": "キャピタルアロケーション数値は現時点の目安であり確定値ではないという注記を確認する。",
+      "expectedEvidencePdfPage": 27,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "累進配当、中計期間総還元性向70%以上、基本方針として毎期40%以上、配当65億円・自己株取得100億円を再確認する。",
+      "expectedEvidencePdfPages": [27, 29],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、FY・12月期表記、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

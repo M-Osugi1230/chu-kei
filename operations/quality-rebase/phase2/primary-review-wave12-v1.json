@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-05T08:20:00+09:00",
+  "updatedAt": "2026-08-05T08:20:00+09:00",
+  "wave": 12,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {"order":362,"code":"6807","name":"日本航空電子工業","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":18,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-02/6807/primary-review-template.json","status":"primary_review_assigned","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":363,"code":"6837","name":"京写","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":23,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-02/6837/primary-review-template.json","status":"primary_review_assigned","requiredChecks":["formalPlanBoundary","visionAndPlanSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":364,"code":"6894","name":"パルステック工業","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":15,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-02/6894/primary-review-template.json","status":"primary_review_assigned","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":367,"code":"7199","name":"プレミアグループ","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":34,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-02/7199/primary-review-template.json","status":"primary_review_assigned","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":368,"code":"7245","name":"大同メタル工業","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":29,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-02/7245/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","progressUpdateSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":369,"code":"7271","name":"安永","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":43,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-02/7271/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","previousAndCurrentPlanSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":370,"code":"7383","name":"ネットプロテクションズホールディングス","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":13,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-02/7383/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","rollingPlanSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":371,"code":"7456","name":"松田産業","documentTypeCandidate":"formal_management_plan","relevanceScore":100,"pageCount":23,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-03/7456/primary-review-template.json","status":"primary_review_assigned","requiredChecks":["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":374,"code":"7715","name":"長野計器","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":35,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-03/7715/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","previousAndCurrentPlanSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]},
+    {"order":375,"code":"7734","name":"理研計器","documentTypeCandidate":"plan_revision_or_update","relevanceScore":100,"pageCount":25,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-08/wave-03/7734/primary-review-template.json","status":"primary_review_assigned_formal_plan_boundary_required","requiredChecks":["formalPlanBoundary","previousAndCurrentPlanSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]}
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 5,
+    "planRevisionOrUpdateCandidates": 5,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"7383","name":"ネットプロテクションズホールディングス","market":"Prime","industry":"その他金融業","phase2Order":370},
+  "source": {
+    "title":"中期経営計画のローリングに関するお知らせ",
+    "publishedDate":"2026-05-15",
+    "officialUrl":"https://www2.jpx.co.jp/disc/73830/140120260515538411.pdf",
+    "pdfSha256":"4c64bb28fd0102620a7783cf77c6efc231f8799cd67804d3eb902982cf8f1a6a",
+    "pageCount":13,
+    "documentClassification":"formal_management_plan_annual_rolling_update",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2029年3月期","terminalFiscalYear":"2029年3月期"},
+    "formalPlanBoundary": {
+      "previousRollingPlan":"2026年3月期～2028年3月期・2025年5月15日公表",
+      "currentRollingPlan":"2027年3月期～2029年3月期・2026年5月15日決議",
+      "longerTermTargets":"GMV2兆円・営業利益100億円",
+      "statement":"前年ローリング計画、現行3カ年計画、中長期目標、3カ年計画に未織込みのデータ活用新規事業を分離する。"
+    }
+  },
+  "summary":"毎年ローリングする3カ年計画を2029年3月期まで更新。NP後払いの安定収益、atoneの非物販・提携拡大、NP掛け払いの外部営業資源活用を進め、2029年3月期にGMV1兆4,000億円、営業利益60億円を目指す。",
+  "financialTargets":[
+    {"metric":"GMV","target":14000,"unit":"億円","targetFiscalYear":"2029年3月期","evidencePdfPages":[1,3]},
+    {"metric":"営業利益","target":60,"unit":"億円","targetFiscalYear":"2029年3月期","evidencePdfPages":[1,3]},
+    {"metric":"GMV CAGR","target":22,"unit":"%・3カ年","targetFiscalYear":"2027年3月期～2029年3月期","evidencePdfPage":1},
+    {"metric":"営業利益 CAGR","target":28,"unit":"%・3カ年","targetFiscalYear":"2027年3月期～2029年3月期","evidencePdfPage":1}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"GMV","target":20000,"unit":"億円","targetFiscalYear":null,"classification":"medium_to_long_term_target_beyond_current_rolling_plan","evidencePdfPage":3},
+    {"metric":"営業利益","target":100,"unit":"億円","targetFiscalYear":null,"classification":"medium_to_long_term_target_beyond_current_rolling_plan","evidencePdfPage":3},
+    {"metric":"NP掛け払い・外部営業活用GMV","target":2000,"unit":"億円","targetFiscalYear":"中長期","classification":"service_level_long_term_aspiration","evidencePdfPage":8},
+    {"metric":"NP掛け払い・内部営業活用GMV","target":9000,"unit":"億円","targetFiscalYear":"中長期","classification":"service_level_long_term_aspiration","evidencePdfPage":8}
+  ],
+  "strategyThemes":[
+    {"theme":"NP後払いの安定収益・リプレイス獲得","evidencePdfPages":[5,6],"evidence":"通販・EC事業者の自社後払いからの切替を重点化する。"},
+    {"theme":"atoneの加盟店・会員基盤拡大","evidencePdfPages":[5,7],"evidence":"PSP・カート連携、非物販、atoneプラス、分割払いで成長と収益性を高める。"},
+    {"theme":"NP掛け払いの営業モデル転換","evidencePdfPages":[5,8],"evidence":"パートナー企業の顧客基盤を活用し、大型・中小加盟店の獲得を効率化する。"},
+    {"theme":"決済データ活用の新規事業","evidencePdfPage":9,"evidence":"与信スコアリング外販や買い手向けサービスを構想するが、3カ年数値には織り込まない。"}
+  ],
+  "capitalPolicy": {
+    "status":"funding_policy_disclosed_amounts_undisclosed",
+    "liquidityPolicy":"決済事業者として適切な現預金水準を維持",
+    "fundingPolicy":"事業成長に伴う必要資金は基本的に負債性調達で賄い、調達余力のため自己資本を適切に維持",
+    "investmentUses":["atoneプラスUX・収益化","分割払い機能","加盟店・会員獲得","与信精度・原価改善","新規データ事業"],
+    "amountsDisclosed":false,
+    "evidencePdfPage":10
+  },
+  "shareholderReturnPolicy": {
+    "status":"flexible_return_without_numeric_target",
+    "policy":"既存事業のFCF、成長資金需要、資金調達状況を見ながら機動的に実施する。配当性向、DOE、還元額は未開示のため推計しない。",
+    "evidencePdfPage":10
+  },
+  "nonFinancialTargets": [],
+  "definitions":[
+    {"term":"GMV CAGR 22%と全社GMV約20%","definition":"22%は適時開示本文の3カ年計画値。サービス別説明の約20%は丸めた説明値として区別する。","evidencePdfPages":[1,4]},
+    {"term":"3カ年計画に未織込みの新規事業","definition":"決済データを使う与信・買い手向けサービスは方向性であり、2029年目標数値には含まれない。","evidencePdfPage":9},
+    {"term":"ローリング計画","definition":"前年の2026～2028年計画を実績・環境変化に応じて2027～2029年へ更新した現行計画。","evidencePdfPages":[1,2]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousAndCurrentRollingPlansSeparated":true,"terminalAndLongTermTargetsSeparated":true,"unmodeledNewBusinessSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T08:35:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年GMV1.4兆円・営業利益60億円・CAGRを原寸確認する","前年ローリング計画との境界を確認する","中長期2兆円・100億円を現中計終期目標として扱っていないことを確認する","資本配分額・還元比率が未開示であることを確認する"]}
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "7164",
+    "name": "全国保証"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7164-primary-review-v1.json",
+  "source": {
+    "title": "新中期経営計画 Go for 50 保証の力で未来をひらく",
+    "officialUrl": "https://www2.jpx.co.jp/disc/71640/140120260316582351.pdf",
+    "pdfSha256": "2c4fb526061cc62066b1c606b92fb315507d791c8c03e6f7a5d423e11d2eec07",
+    "pageCount": 40
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード7164、公表日2026年3月16日、PDFハッシュ、全40ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 40],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "2023～2025年度の前中計、2026～2030年度のGo for 50、2035年長期ビジョンを分離する。",
+      "expectedEvidencePdfPages": [4, 5, 6, 33, 37],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2031年3月期の保証債務残高27.3兆円、EPS298円、ROE12～15%、従業員満足度4.9点以上を確認する。",
+      "expectedEvidencePdfPages": [1, 7, 8, 10, 15, 28],
+      "status": "pending"
+    },
+    {
+      "id": "guarantee_growth",
+      "description": "保証債務残高の純増6兆円がオーガニック2兆円・インオーガニック4兆円で構成されることを確認する。",
+      "expectedEvidencePdfPages": [10, 30],
+      "status": "pending"
+    },
+    {
+      "id": "strategy",
+      "description": "金融機関ソリューション、保証コスト管理、住生活グループ、資産運用、人事制度・グループガバナンスを確認する。",
+      "expectedEvidencePdfPages": [11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "2031年必要資本約3,000億円、活用可能資本約500億円、5年間利益約1,800億円・配当約900億円を確認する。",
+      "expectedEvidencePdfPages": [28, 29, 30],
+      "status": "pending"
+    },
+    {
+      "id": "required_capital_definition",
+      "description": "必要資本が保証債務残高×PD×LGD×平均完済期間で算出され、純資産総額と同義ではないことを確認する。",
+      "expectedEvidencePdfPages": [29, 30],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向50%の維持、5年間配当約900億円、機動的自己株式取得と、2030年度1株149円の資料表示を確認する。",
+      "expectedEvidencePdfPages": [29, 31],
+      "status": "pending"
+    },
+    {
+      "id": "previous_plan_boundary",
+      "description": "前中計の成長投資約40億円、総還元約560億円、総還元性向60%を新中計計画値と混在させていないことを確認する。",
+      "expectedEvidencePdfPages": [33, 37],
+      "status": "pending"
+    },
+    {
+      "id": "human_capital",
+      "description": "従業員満足度4.9点以上、人員構成の企画・営業25%・事務30%・審査債権45%、2028年人事制度改定を確認する。",
+      "expectedEvidencePdfPages": [8, 12, 24, 25],
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

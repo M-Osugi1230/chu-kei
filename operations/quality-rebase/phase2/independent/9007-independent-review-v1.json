@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "9007",
+    "name": "小田急電鉄"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9007-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画（2024～2026年度）のアップデート",
+    "officialUrl": "https://www2.jpx.co.jp/disc/90070/140120260507518914.pdf",
+    "pdfSha256": "8d2ce8b80983925887277aa081541acde0bda2017410238aaaa5d82f4823ce41",
+    "pageCount": 49
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード9007、公表日2026年5月13日、PDFハッシュ、全49ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 49],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "2024～2026年度中計、2030年度経営ビジョン、2032～2050年度の長期KPIを分離する。",
+      "expectedEvidencePdfPages": [1, 2, 12, 35, 36, 39, 40, 42],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2026年度ROE8%・営業利益540億円と、2030年度ROE10%以上・営業利益800億円以上・有利子負債EBITDA倍率7倍台を確認する。",
+      "expectedEvidencePdfPages": [2, 12, 35, 36, 37, 42],
+      "status": "pending"
+    },
+    {
+      "id": "tourism_and_hotel",
+      "description": "2030年度観光収益1,200億円・営業利益150億円、ホテル営業利益50億円・累計投資420億円を確認する。",
+      "expectedEvidencePdfPages": [3, 18, 22],
+      "status": "pending"
+    },
+    {
+      "id": "real_estate",
+      "description": "不動産営業利益320億円・ROA5%、投資5,100億円、長期保有1,450億円・短期回収3,650億円、新宿西口約1,300億円を確認する。",
+      "expectedEvidencePdfPages": [4, 23, 24, 26],
+      "status": "pending"
+    },
+    {
+      "id": "other_businesses",
+      "description": "ストア・小売営業利益30億円・投資50億円、その他生活サービス営業利益70億円・投資130億円を確認する。",
+      "expectedEvidencePdfPages": [4, 28, 29],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "2030年度自己資本比率30%、財務レバレッジ3.3倍程度、事業別投資額は開示されるがグループ全体投資総額は未開示であることを確認する。",
+      "expectedEvidencePdfPages": [2, 12, 22, 23, 28, 29, 36],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "2026～2030年度還元1,800億円、2025～2030年度2,000億円、2023～2026年度平均総還元性向56%、2026年配当60円・買戻し200億円を分離する。",
+      "expectedEvidencePdfPages": [2, 13, 14],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_targets",
+      "description": "CO2、人的資本、ガバナンス、安全、観光、ホームドア等の2030～2050年度KPIについて基準年・年度・対象範囲を確認する。",
+      "expectedEvidencePdfPages": [27, 31, 32, 40],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に公式リンク、計画境界、事業別投資、還元、非財務KPIの表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

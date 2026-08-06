@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "deep-verification-independent-review-v1",
+  "company": {
+    "code": "3197",
+    "name": "すかいらーくホールディングス",
+    "order": 16
+  },
+  "sourceRecord": {
+    "type": "primary_review",
+    "file": "operations/quality-rebase/phase1/reviews/3197-primary-review-v1.json",
+    "sha256": "2c5472a6cc6019a20b1ec40898fadb00200fba6bf5138c305c8c8f8966da5919"
+  },
+  "sourceSet": {
+    "officialUrl": "https://corp.skylark.co.jp/ir/strategy/growth/",
+    "supplementalOfficialUrl": null,
+    "pageCount": null,
+    "title": "中期事業計画 2025年～2027年",
+    "publishedDate": "2024-05-15"
+  },
+  "queue": {
+    "status": "blocked_additional_source_mapping",
+    "blockedReasons": [
+      "公式計画画像または正式提出PDFの原寸取得と売上高・利益目標表の固定",
+      "公式Web全関連ページと画像証跡の独立した再確認",
+      "公開ページの表示・リンク検査"
+    ],
+    "priority": 16
+  },
+  "reviewChecks": {
+    "companyIdentityConfirmed": false,
+    "formalPlanConfirmed": false,
+    "publicationDateConfirmed": false,
+    "fullTextReviewedIndependently": false,
+    "strategyMatchesSource": false,
+    "allTargetsMatchSource": false,
+    "yearUnitScopeValidated": false,
+    "capitalPolicyMatchesSource": false,
+    "fieldLevelEvidenceValidated": false,
+    "forecastActualSeparationValidated": false,
+    "templateTextAbsent": false,
+    "linkReachabilityChecked": false,
+    "renderChecked": false
+  },
+  "discrepancies": [],
+  "reviewer": {
+    "reviewerId": null,
+    "reviewerType": null,
+    "independentFromPrimaryReview": null,
+    "reviewedAt": null
+  },
+  "decision": {
+    "status": "pending",
+    "approved": false,
+    "changesRequested": false,
+    "reason": null
+  },
+  "policy": {
+    "automaticApprovalAllowed": false,
+    "approvalRequiresAllChecksTrue": true,
+    "minimumDistinctReviewersAcrossPrimaryAndIndependent": 2,
+    "deepVerificationApproved": false
+  }
+}

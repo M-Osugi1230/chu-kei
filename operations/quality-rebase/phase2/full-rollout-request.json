@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "phase2-full-rollout-request-v1",
+  "requestedAt": "2026-08-01T21:53:00+09:00",
+  "branch": "agent/quality-rebase-phase0-2",
+  "batches": [2,3,4,5,6,7,8,9,10],
+  "wavesPerBatch": 5,
+  "companiesPerWave": 10,
+  "targetAdditionalCompanies": 450,
+  "maxParallelBatches": 3,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "stopOnIndividualCompanyFailure": false,
+  "retainFailureReasons": true,
+  "requiredPerCompanyOutputs": [
+    "official source resolution",
+    "PDF or official page capture",
+    "page-level text extraction",
+    "metric candidates",
+    "strategy candidates",
+    "primary human review template",
+    "manual recovery reason when collection fails"
+  ],
+  "approvalBoundary": "Collection and candidate extraction do not constitute deep verification approval."
+}

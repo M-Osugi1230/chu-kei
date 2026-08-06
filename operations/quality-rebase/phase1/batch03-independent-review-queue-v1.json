@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "phase1-independent-review-queue-v1",
+  "generatedAt": "2026-08-01T20:18:00+09:00",
+  "batchId": "phase1-batch-03",
+  "automaticApprovalAllowed": false,
+  "counts": {
+    "total": 10,
+    "ready": 9,
+    "blockedAdditionalSourceMapping": 1,
+    "blockedSourceIdentityConflict": 0,
+    "approved": 0
+  },
+  "approvalRule": {
+    "allReviewChecksMustBeTrue": true,
+    "reviewerMustBeIndependent": true,
+    "minimumDistinctReviewers": 2,
+    "postPublicationLinkAndRenderCheckRequired": true
+  },
+  "packets": [
+    {
+      "order": 21,
+      "code": "1332",
+      "name": "ニッスイ",
+      "status": "ready_for_independent_review",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/1332-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/1332-independent-review-v1.json",
+      "blockedReasons": []
+    },
+    {
+      "order": 22,
+      "code": "1417",
+      "name": "ミライト・ワン",
+      "status": "ready_for_independent_review",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/1417-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/1417-independent-review-v1.json",
+      "blockedReasons": []
+    },
+    {
+      "order": 23,
+      "code": "3232",
+      "name": "三重交通グループホールディングス",
+      "status": "ready_for_independent_review",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/3232-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/3232-independent-review-v1.json",
+      "blockedReasons": []
+    },
+    {
+      "order": 24,
+      "code": "4503",
+      "name": "アステラス製薬",
+      "status": "ready_for_independent_review",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/4503-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/4503-independent-review-v1.json",
+      "blockedReasons": []
+    },
+    {
+      "order": 25,
+      "code": "5901",
+      "name": "東洋製罐グループホールディングス",
+      "status": "ready_for_independent_review",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/5901-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/5901-independent-review-v1.json",
+      "blockedReasons": []
+    },
+    {
+      "order": 26,
+      "code": "5929",
+      "name": "三和ホールディングス",
+      "status": "ready_for_independent_review",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/5929-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/5929-independent-review-v1.json",
+      "blockedReasons": []
+    },
+    {
+      "order": 27,
+      "code": "1447",
+      "name": "SAAFホールディングス",
+      "status": "ready_for_independent_review",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/1447-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/1447-independent-review-v1.json",
+      "blockedReasons": []
+    },
+    {
+      "order": 28,
+      "code": "2586",
+      "name": "フルッタフルッタ",
+      "status": "blocked_additional_source_mapping",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/2586-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/2586-independent-review-v1.json",
+      "blockedReasons": [
+        "事業計画及び成長可能性資料を正式中期経営計画と同一視しない分類の独立確認",
+        "PDF全62ページの独立した再確認",
+        "短期予想・5年後供給目標・長期構想・資金調達状況の境界確認",
+        "公開ページの表示・リンク検査"
+      ]
+    },
+    {
+      "order": 29,
+      "code": "3490",
+      "name": "アズ企画設計",
+      "status": "ready_for_independent_review",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/3490-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/3490-independent-review-v1.json",
+      "blockedReasons": []
+    },
+    {
+      "order": 30,
+      "code": "5210",
+      "name": "日本山村硝子",
+      "status": "ready_for_independent_review",
+      "primaryReviewFile": "operations/quality-rebase/phase1/reviews/5210-primary-review-v1.json",
+      "packetFile": "operations/quality-rebase/phase1/batch03-independent/5210-independent-review-v1.json",
+      "blockedReasons": []
+    }
+  ]
+}

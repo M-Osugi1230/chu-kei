@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 227,
+  "company": {
+    "code": "166A",
+    "name": "タスキホールディングス",
+    "market": "Prime",
+    "industry": "不動産業",
+    "document": "事業計画及び成長可能性に関する事項について",
+    "planPublishedDate": "2025-12-26",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/166A0/140120251226527334.pdf",
+    "phaseScore": 109,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "generic_page_evidence",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.386,
+  "requiresManualSourceRecovery": true
+}

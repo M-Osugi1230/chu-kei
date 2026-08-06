@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 468,
+  "company": {
+    "code": "8524",
+    "name": "北洋銀行",
+    "market": "Prime",
+    "industry": "銀行業",
+    "document": "新中期経営計画 「Make the HOKKAIDO Way 1ststage ~今はまだ無い“Way”を私たちがつくる~」 について",
+    "planPublishedDate": "2026-03-24",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/85240/140120260323586923.pdf",
+    "phaseScore": 106,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "generic_page_evidence",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.42,
+  "requiresManualSourceRecovery": true
+}

@@ -1,0 +1,88 @@
+name: Phase 2 Remediation Queue Gate
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'scripts/build_phase2_remediation_queues_v1.py'
+      - 'operations/quality-rebase/phase2/source-relevance-v2/summary.json'
+      - '.github/workflows/phase2-remediation-gate.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build remediation queues
+        run: python scripts/build_phase2_remediation_queues_v1.py
+
+      - name: Validate counts, identities, and approval safety
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path('operations/quality-rebase/phase2/remediation-v1')
+          expected = {
+              'human_relevance_review_required': 11,
+              'likely_wrong_document': 60,
+              'pdf_identification_required': 14,
+              'source_recovery_required': 52,
+          }
+
+          summary = json.loads((root / 'summary.json').read_text())
+          assert summary['targetCompanies'] == 137
+          assert summary['uniqueCompanies'] == 137
+          assert summary['counts'] == expected
+          assert summary['automaticFactCompletionAllowed'] is False
+          assert summary['automaticApprovalAllowed'] is False
+          assert summary['deepVerificationApproved'] == 0
+
+          codes = []
+          for queue, count in expected.items():
+              data = json.loads((root / f'{queue}.json').read_text())
+              assert data['targetCompanies'] == count
+              assert data['automaticFactCompletionAllowed'] is False
+              assert data['automaticApprovalAllowed'] is False
+              assert data['deepVerificationApproved'] == 0
+              assert len(data['companies']) == count
+              for company in data['companies']:
+                  assert company['status'] == 'queued'
+                  assert company['automaticFactCompletionAllowed'] is False
+                  assert company['automaticApprovalAllowed'] is False
+                  assert company['deepVerificationApproved'] is False
+                  assert company['completionCondition']
+                  assert company['retryStrategy']
+                  codes.append(str(company['code']))
+
+          assert len(codes) == 137
+          assert len(set(codes)) == 137
+          print('Phase 2 remediation queue gate passed: 137 unique companies, zero approvals.')
+          PY
+
+      - name: Commit generated queues
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/remediation-v1
+          if git diff --cached --quiet; then
+            echo 'No remediation queue changes.'
+          else
+            git commit -m 'quality: generate Phase 2 remediation queues for 137 exceptions'
+            git pull --rebase origin agent/quality-rebase-phase0-2
+            git push origin HEAD:agent/quality-rebase-phase0-2
+          fi

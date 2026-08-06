@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "3132",
+    "name": "マクニカホールディングス",
+    "market": "Prime",
+    "industry": "卸売業"
+  },
+  "document": {
+    "title": "中期経営計画（2025年～2027年度）",
+    "publishedDate": "2025-05-07",
+    "period": "2025年度-2027年度",
+    "officialUrl": "https://holdings.macnica.co.jp/content/dam/holdings/ja/company/plan/midterm/mid-term_plan_2025-2027_jp.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 17,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "Vision2030実現に向け、半導体・サイバーセキュリティの高付加価値化とCPSソリューション育成、AI関連ビジネス、成長投資を推進する",
+    "strategyThemes": [
+      "半導体事業で成長国・成長市場・AI関連ビジネスへ重点配分",
+      "サイバーセキュリティ事業で高付加価値ディストリビューションとサービス・ソリューションを拡大",
+      "CPSソリューションでスマートシティ、製造、サーキュラーエコノミー、ヘルスケア、アグリ領域を育成",
+      "インオーガニック成長を含むビジネスモデル変革",
+      "財務・人財・IR・ブランド・IT/DX・ガバナンスのグローバル経営基盤強化"
+    ],
+    "groupTargets": [
+      {
+        "metric": "連結売上高",
+        "baseValue": 10342,
+        "target": 14000,
+        "unit": "億円",
+        "baseYear": "FY2024実績",
+        "targetYear": "FY2027",
+        "scope": "連結",
+        "evidence": "公式PDF p.5"
+      },
+      {
+        "metric": "連結営業利益",
+        "baseValue": 396,
+        "target": 800,
+        "unit": "億円",
+        "baseYear": "FY2024実績",
+        "targetYear": "FY2027",
+        "scope": "連結",
+        "evidence": "公式PDF p.5"
+      },
+      {
+        "metric": "連結営業利益率",
+        "baseValue": 3.8,
+        "target": 5.7,
+        "unit": "%",
+        "baseYear": "FY2024実績",
+        "targetYear": "FY2027",
+        "scope": "連結",
+        "evidence": "公式PDF p.5"
+      },
+      {
+        "metric": "連結ROE",
+        "baseValue": 10.0,
+        "target": 15.0,
+        "unit": "%以上",
+        "baseYear": "FY2024実績",
+        "targetYear": "FY2027",
+        "scope": "連結・会社定義",
+        "evidence": "公式PDF p.5"
+      },
+      {
+        "metric": "成長投資",
+        "target": "500～800",
+        "unit": "億円・3年間累計",
+        "targetYear": "FY2025-FY2027",
+        "scope": "持続的成長・ビジネスモデル変革",
+        "evidence": "公式PDF p.9"
+      },
+      {
+        "metric": "総還元性向",
+        "target": "40～50",
+        "unit": "%",
+        "targetYear": "中計期間",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.9・p.16"
+      },
+      {
+        "metric": "DOE",
+        "target": 5,
+        "unit": "%",
+        "targetYear": "中計期間",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.16"
+      }
+    ],
+    "capitalPolicy": {
+      "growthInvestment": "FY2025-FY2027の3年間で500～800億円。高付加価値ディストリビューションの持続的成長とサービス・ソリューションへのビジネスモデル変革へ概ね50%ずつ配分",
+      "financialDiscipline": "Net DERの上限目安0.5倍として財務健全性を維持",
+      "shareholderReturn": "総還元性向40～50%、DOE5%を方針として配当・自己株式取得を実施",
+      "evidence": "公式PDF p.9・p.16"
+    },
+    "segmentEvidence": {
+      "evidence": "公式PDF p.6",
+      "notes": "FY2027目標として半導体売上1兆1,400億円・営業利益520億円、サイバーセキュリティ売上2,300億円・営業利益240億円、CPS売上300億円・営業利益40億円を確認"
+    },
+    "importantDefinitions": [
+      "FY2027が今回の中計最終年度、FY2030は長期構想として分離",
+      "ROEは期末連結自己資本を用いる会社定義",
+      "セグメント数値はCPSソリューション事業の重複を除いた表示で、別ページの旧セグメント実績と一致しない場合がある",
+      "FY2024・FY2025予想の1株当たり配当は株式分割前換算値を併記"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "midTermAndLongTermTargetsSeparated": true,
+    "segmentOverlapQualificationCaptured": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全17ページの独立した再確認",
+      "FY2027中計目標とFY2030長期構想の別確認者による原文突合",
+      "セグメント重複除外注記と資本政策の再確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

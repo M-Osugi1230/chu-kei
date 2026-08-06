@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4275",
+    "name": "カーリット"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4275-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画 Challenge2027 Rolling Plan 2026",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/42750/140120260515538295.pdf",
+    "pdfSha256": "e0298d8bff1a7025bd3266f46da1f8245ad996d0165e44960d6211839026a1fd",
+    "pageCount": 12
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社カーリット、証券コード4275、公表日2026年5月15日、PDFハッシュ、12ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "rolling_plan_boundary",
+      "description": "2025年3月公表Challenge2027の基本方針・数値目標を維持する正式ローリングプランであることを確認する。",
+      "expectedEvidencePdfPages": [1, 4],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2027年度営業利益42億円、ROE8.5%、PBR2倍以上を再確認する。",
+      "expectedEvidencePdfPages": [4, 10],
+      "status": "pending"
+    },
+    {
+      "id": "actual_forecast_target",
+      "description": "2025年度営業利益34.59億円、2026年度予想32億円、2027年度目標42億円を分離していることを確認する。",
+      "expectedEvidencePdfPage": 4,
+      "status": "pending"
+    },
+    {
+      "id": "capital_sources",
+      "description": "累計営業CF178億円、政策保有株縮減23億円、有利子負債70億円の合計271億円を再計算する。",
+      "expectedEvidencePdfPage": 5,
+      "status": "pending"
+    },
+    {
+      "id": "capital_uses",
+      "description": "設備210億円、研究開発15億円、人的資本10億円、株主還元36億円の合計271億円を再計算する。",
+      "expectedEvidencePdfPage": 5,
+      "status": "pending"
+    },
+    {
+      "id": "equipment_breakdown",
+      "description": "重点90億円、注力20億円、育成25億円、基盤75億円が設備投資210億円と一致することを確認する。",
+      "expectedEvidencePdfPage": 6,
+      "status": "pending"
+    },
+    {
+      "id": "defense_factory_period",
+      "description": "固体推進薬新工場80億円のうち約10億円が2025～2026年度計上で、期間外分を設備投資へ重複計上していないことを確認する。",
+      "expectedEvidencePdfPages": [6, 7],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "計画期間株主還元36億円、総還元性向40%以上、業績連動配当、機動的自己株取得を再確認する。",
+      "expectedEvidencePdfPage": 5,
+      "status": "pending"
+    },
+    {
+      "id": "long_term_growth_image",
+      "description": "宇宙防衛売上15億円・45億円・95億円は2026・2030・2035年度の成長イメージで、現行連結中計目標ではないことを確認する。",
+      "expectedEvidencePdfPages": [4, 8],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、億円・百万円換算、ローリング表記を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

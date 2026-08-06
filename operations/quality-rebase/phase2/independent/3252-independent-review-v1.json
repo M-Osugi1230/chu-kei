@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "3252",
+    "name": "地主"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3252-primary-review-v1.json",
+  "source": {
+    "documentTitle": "中期経営計画（2026-2028）策定に関するお知らせ",
+    "officialLandingPage": "https://www.jinushi-jp.com/ir/medium-term-plan.html",
+    "officialUrl": "https://www2.jpx.co.jp/disc/32520/140120260212556118.pdf",
+    "pdfSha256": "d8ff99fb8079863a3d02e2d55b68ee5ef976695e6c4ce3415bd74495a21fa5cb",
+    "pageCount": 21
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社名、証券コード3252、公表日2026年2月12日、PDFハッシュ、全21ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 3, 21],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "旧中計2022-2026、2025年実績、2026年予想、新中計2026-2028を分離する。",
+      "expectedEvidencePdfPages": [1, 2, 5, 6],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2028年当期純利益100億円以上、運用資産規模5,000億円以上、ROE15%程度、自己資本比率30%程度を確認する。",
+      "expectedEvidencePdfPages": [2, 4, 6],
+      "status": "pending"
+    },
+    {
+      "id": "asset_scope",
+      "description": "運用資産規模が地主リート、地主ファンド、地主倶楽部の合計であり、2025年2,935億円と地主リート2,911億円の範囲差を確認する。",
+      "expectedEvidencePdfPages": [2, 5, 6],
+      "status": "pending"
+    },
+    {
+      "id": "strategy",
+      "description": "新規開発とJINUSHIリースバックを両輪とする年間1,000億円以上の仕入、CRE市場拡大、売却先多様化を確認する。",
+      "expectedEvidencePdfPages": [2, 6, 7],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "ROE15%程度・自己資本比率30%程度は開示済みだが、3カ年キャッシュアロケーション総額は非開示であることを確認する。",
+      "expectedEvidencePdfPages": [2, 4, 6],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "利益成長とともに増配を目指す累進配当方針と、配当性向・DOE・自己株式取得額が本資料では非開示であることを確認する。",
+      "expectedEvidencePdfPages": [1, 2, 4, 6],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に公式リンク、計画期間、主要数値、運用資産範囲、累進配当表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

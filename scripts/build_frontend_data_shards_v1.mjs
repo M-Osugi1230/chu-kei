@@ -91,6 +91,10 @@ const indexPayload = {
     quality: company.quality ? {
       stars: company.quality.stars,
       score: company.quality.score,
+      label: company.quality.label,
+      templateLike: company.quality.templateLike === true,
+      deepVerificationStatus: company.quality.deepVerificationStatus || 'not_started',
+      deepVerified: company.quality.deepVerified === true,
     } : null,
     flags: company.flags ?? {},
     metricCount: metricCount(company),

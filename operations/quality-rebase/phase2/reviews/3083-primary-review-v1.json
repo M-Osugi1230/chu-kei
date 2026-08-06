@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"3083","name":"スターシーズ","market":"Standard","industry":"小売業","phase2Order":322},
+  "source": {
+    "title":"中期経営計画 FY2027.2-FY2029.2",
+    "publishedDate":"2026-04-17",
+    "officialUrl":"https://www2.jpx.co.jp/disc/30830/140120260417506293.pdf",
+    "pdfSha256":"5842f626f00578fc05e590a9cd74acb8c2397c2c97bf818f30babee774bfb50b",
+    "pageCount":50,
+    "documentClassification":"formal_management_plan_business_model_transformation",
+    "period":{"startFiscalYear":"2027年2月期","endFiscalYear":"2029年2月期","terminalFiscalYear":"2029年2月期"},
+    "formalPlanBoundary":{"currentPlan":"FY2027.2～FY2029.2中期経営計画","coreTransformation":"アパレル中心からGPU・データセンター・蓄電池中心へ転換","statement":"市場予測、セグメント目標、全社目標、株主還元検討事項を分離する。"}
+  },
+  "summary":"GPUサーバー、液冷データセンター、系統用蓄電池を成長軸とし、アパレルを縮小・黒字化する。MiTAC-SYNNEX等との調達、モジュラーDC、長期契約、ROIC・CCC管理により、2029年2月期に売上高631.7億円、営業利益36.7億円、営業利益率5.8%、ストック収益比率60%を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":631.7,"unit":"億円","targetFiscalYear":"2029年2月期","evidencePdfPage":31},
+    {"metric":"営業利益","target":36.7,"unit":"億円","targetFiscalYear":"2029年2月期","targetMargin":5.8,"targetMarginUnit":"%","evidencePdfPages":[14,31]},
+    {"metric":"ストック収益比率","target":60,"unit":"%","targetFiscalYear":"2029年2月期","evidencePdfPages":[2,30]},
+    {"metric":"GPUサーバー売上高","target":337.5,"unit":"億円","targetFiscalYear":"2029年2月期","evidencePdfPages":[5,11,35]},
+    {"metric":"データセンター売上高","target":180.0,"unit":"億円","targetFiscalYear":"2029年2月期","evidencePdfPages":[5,11,35]},
+    {"metric":"蓄電池売上高","target":101.4,"unit":"億円","targetFiscalYear":"2029年2月期","evidencePdfPages":[5,11,35]},
+    {"metric":"アパレル売上高","target":12.8,"unit":"億円","targetFiscalYear":"2029年2月期","evidencePdfPages":[11,35]}
+  ],
+  "strategyThemes":[
+    {"theme":"GPUサーバー","evidencePdfPages":[15,16,20,21],"evidence":"調達力と販売網を活用し、需要連動型でGPU世代を更新する。"},
+    {"theme":"液冷データセンター","evidencePdfPages":[15,16,22,23],"evidence":"PUE1.1未満、稼働率95%、3～5年契約、モジュラー設計で高収益ストックを構築する。"},
+    {"theme":"系統用蓄電池","evidencePdfPages":[24,25],"evidence":"受注残高と電力市場収益を基に、調達分散と長期保守契約を進める。"},
+    {"theme":"アパレル再構築","evidencePdfPages":[26,27,32],"evidence":"SKU・在庫・店舗を最適化し、新規投資を抑えながら黒字化する。"},
+    {"theme":"投資・運用規律","evidencePdfPages":[28,29,32],"evidence":"ROIC、CCC、在庫回転、稼働率を横断KPIとして投資と運用を管理する。"}
+  ],
+  "capitalPolicy": {
+    "status":"roic_based_allocation_without_total_amount",
+    "allocationPriority":["GPU需要連動型調達","データセンターのモジュラー段階拡張","蓄電池成長投資","アパレル撤退・縮小投資"],
+    "operatingKpis":["CCC30～45日","ハードウェア在庫回転45日未満","アパレル滞留在庫90日未満","GPU稼働率90%以上","DC稼働率95%"],
+    "totalGrowthInvestment":null,
+    "policy":"投資案件ごとにROICを厳格管理し、成長投資を最優先する。投資総額・キャッシュアロケーション金額は未開示のため推計しない。",
+    "evidencePdfPages":[28,29,32]
+  },
+  "shareholderReturnPolicy": {
+    "status":"under_consideration_not_numeric_commitment",
+    "implementedAction":"2026年1月の新規事業記念配当",
+    "futurePolicy":"業績連動型配当方針を検討し、成長投資とのバランスを維持",
+    "payoutRatioTarget":null,
+    "doeTarget":null,
+    "statement":"検討方針であり、配当性向やDOEの確定目標として扱わない。",
+    "evidencePdfPage":32
+  },
+  "definitions":[
+    {"term":"全社631.7億円とDigital517.5億円","definition":"631.7億円は全社売上、517.5億円はGPU＋DCの中核事業体売上であり混在させない。","evidencePdfPages":[15,31]},
+    {"term":"ストック収益60%","definition":"長期契約・GPUレンタル・DC・保守等による収益比率目標。","evidencePdfPages":[2,30]},
+    {"term":"株主還元方針","definition":"業績連動配当を検討する段階で、数値コミットメントはない。","evidencePdfPage":32}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"marketForecastAndCompanyTargetsSeparated":true,"segmentAndConsolidatedTargetsSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonBindingPolicyNotPromotedToTarget":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T06:43:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["全社売上631.7億円とセグメント合計を原寸確認する","営業利益36.7億円・利益率5.8%を図表突合する","ストック収益60%とARR表現を確認する","投資総額が未開示であることを確認する","業績連動配当が検討段階であることを独立確認する"]}
+}

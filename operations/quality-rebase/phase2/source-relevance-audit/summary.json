@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "phase2-source-relevance-audit-v1",
+  "collectionPacketsAudited": 450,
+  "uniqueCompanies": 450,
+  "counts": {
+    "manual_source_relevance_check": 19,
+    "pdf_identification_required": 14,
+    "primary_review_candidate": 357,
+    "probable_wrong_document": 8,
+    "source_recovery_required": 52
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "knownQualityFinding": {
+    "code": "4063",
+    "expectedClassification": "probable_wrong_document",
+    "reason": "holiday notice PDF must not enter primary review"
+  }
+}

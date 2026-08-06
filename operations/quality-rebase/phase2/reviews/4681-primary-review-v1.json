@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"4681","name":"リゾートトラスト","market":"Prime","industry":"サービス業","phase2Order":495},
+  "source": {
+    "title":"中期経営計画 Sustainable Connect ～to wellbeing～2.0",
+    "publishedDate":"2025-05-15",
+    "officialUrl":"https://www2.jpx.co.jp/disc/46810/140120250515554329.pdf",
+    "pdfSha256":"20a4f0f237a5c8264116a4c0ef81d9b78b6f3f23751bb577a96f2465db74686a",
+    "pageCount":21,
+    "documentClassification":"formal_management_plan_current_2025_to_2029_replacing_early_achieved_plan",
+    "period":{"startFiscalYear":"2025年度・2026年3月期","endFiscalYear":"2029年度・2030年3月期","terminalFiscalYear":"2029年度・2030年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"2023年度～2027年度の従来中計・2025年度営業利益目標を2024年度に前倒し達成",
+      "currentPlan":"Sustainable Connect ～to wellbeing～2.0・2025年度～2029年度",
+      "longTermGrowthImage":"2035年3月期までの会員制・ホテル運営・メディカルの利益構成イメージ",
+      "statement":"旧中計計画・2024年度実績、新5カ年計画、2035年長期イメージを分離する。"
+    }
+  },
+  "summary":"会員制ホテルとメディカルの会員基盤を拡大し、ホテル開発、ハイメディック、シニアレジデンス、CRM・生成AI、人的資本、価格設計を強化する。2029年度に連結営業利益500億円以上、ROE16.5%を目指す。",
+  "financialTargets":[
+    {"metric":"連結営業利益","target":500,"unit":"億円以上","targetFiscalYear":"2029年度・2030年3月期","baseline":"2024年度実績263億円","evidencePdfPages":[4,5]},
+    {"metric":"営業利益成長率","target":10,"unit":"年平均%超・2025～2028年度","targetFiscalYear":"2028年度まで","definition":"会計上の利益変動を考慮し、評価営業利益は毎期10%成長目安","evidencePdfPages":[4,5]},
+    {"metric":"ROE","target":16.5,"unit":"%・最終年度","targetFiscalYear":"2029年度・2030年3月期","longTermTargetReference":"中長期15%","evidencePdfPage":5},
+    {"metric":"ホテル会員権販売口数","target":25000,"unit":"口・5年間","targetFiscalYear":"2025～2029年度累計","evidencePdfPage":5},
+    {"metric":"メディカル会員権販売口数","target":15000,"unit":"口・5年間","targetFiscalYear":"2025～2029年度累計","evidencePdfPage":5}
+  ],
+  "previousPlanResultsSeparated":[
+    {"metric":"連結営業利益","actual":263,"unit":"億円","fiscalYear":"2024年度","note":"従来中計の2025年度目標を1年前倒しで達成","evidencePdfPages":[1,4]},
+    {"metric":"売上高営業利益率","actual":10.6,"unit":"%","fiscalYear":"2024年度","evidencePdfPage":1},
+    {"metric":"ROE","actual":14.7,"unit":"%・トラスティ売却特別利益影響を含む","fiscalYear":"2024年度","evidencePdfPage":1},
+    {"metric":"ホテル会員権契約高","actual":1000,"unit":"億円","fiscalYear":"2024年度","evidencePdfPage":2}
+  ],
+  "strategyThemes":[
+    {"theme":"会員制ホテル開発","evidencePdfPages":[2,6,7],"evidence":"地域別に複数物件を並行投入し、価格設計、共有口数、リモデル、建替えを高度化する。"},
+    {"theme":"メディカル・シニア事業","evidencePdfPages":[5,6,7,12],"evidence":"ハイメディック拠点、シニアレジデンス、先端医療等を拡大する。"},
+    {"theme":"会員LTV最大化","evidencePdfPages":[9,10,11],"evidence":"CRM、生成AI、利用頻度、単価、継続期間、クロスセルを強化する。"},
+    {"theme":"DX・人的資本・生産性","evidencePdfPages":[1,9],"evidence":"デジタルと人のハイブリッド営業、予約・チェックイン、採用・処遇・定着を改善する。"},
+    {"theme":"安定利益構成への転換","evidencePdfPage":12,"evidence":"ホテル運営とメディカルの利益比率を高め、不動産利益実現時期による変動を抑える。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_five_year_cash_allocation_and_gross_development_investment",
+    "period":"2025年度～2029年度・5年間",
+    "operatingCashFlow":1600,
+    "operatingCashFlowUnit":"億円",
+    "plannedBorrowingApprox":200,
+    "plannedBorrowingApproxUnit":"億円規模以上・図表値",
+    "normalCapitalInvestment":900,
+    "normalCapitalInvestmentUnit":"億円",
+    "strategicInvestmentFloor":500,
+    "strategicInvestmentFloorUnit":"億円規模以上",
+    "shareholderReturnFloor":400,
+    "shareholderReturnFloorUnit":"億円＋α",
+    "strategicInvestmentUses":["ホテル事業500億円","メディカル250億円","デジタル等150億円","メディカル新規・M&A","遠隔地ホテルモデル","リニューアル・建替え"],
+    "grossHotelDevelopmentInvestment":2500,
+    "grossHotelDevelopmentInvestmentUnit":"億円規模・分譲部分を含む",
+    "grossHotelDevelopmentBreakdown":{"inventoryAssets":2000,"fixedAssets":500,"unit":"億円"},
+    "additionalDebtCapacityApprox":800,
+    "additionalDebtCapacityApproxUnit":"億円規模",
+    "investmentHurdleRate":8,
+    "investmentHurdleRateUnit":"WACC%目安",
+    "policy":"営業CFと借入を通常設備、戦略投資、還元へ配分する。ホテル2,500億円は販売回収を伴うグロス開発投資であり、通常設備900億円・戦略投資500億円と単純加算しない。",
+    "evidencePdfPages":[6,7]
+  },
+  "shareholderReturnPolicy": {
+    "status":"progressive_doe_floor_target_and_three_year_total_payout_goal",
+    "doeFloor":4.5,
+    "doeFloorUnit":"%",
+    "doeTarget":5.0,
+    "doeTargetUnit":"%",
+    "totalPayoutRatioTarget":50,
+    "totalPayoutRatioTargetUnit":"%・2025～2027年度の3年間",
+    "fiveYearReturnFloor":400,
+    "fiveYearReturnFloorUnit":"億円＋α",
+    "additionalReturnPolicy":"評価営業利益が会計上営業利益を上回る期は追加還元を重点検討",
+    "policy":"DOE4.5%を下限、5%を目標として累進的な配当を行い、先3年間は総還元性向50%を目指す。",
+    "evidencePdfPages":[5,7,8]
+  },
+  "nonFinancialTargets":[
+    {"metric":"ホテル会員数","target":17.5,"unit":"万人・複数所有名寄せ後の成長イメージ","targetFiscalYear":"中長期イメージ","baseline":"現状14.5万人","evidencePdfPage":11},
+    {"metric":"ホテル新規候補地","target":9,"unit":"カ所以上・2025年度以降","targetFiscalYear":"中計期間","evidencePdfPage":6},
+    {"metric":"ハイメディック展開候補","target":6,"unit":"カ所・現状候補地","targetFiscalYear":"2030年度まで","evidencePdfPage":6}
+  ],
+  "definitions":[
+    {"term":"評価営業利益","definition":"会員権の不動産利益実現時期の影響を補正した営業上の実力値。会計上営業利益と分離する。","evidencePdfPages":[4,5,8]},
+    {"term":"ホテル事業投資2,500億円","definition":"棚卸資産2,000億円と固定資産500億円のグロス開発投資で、会員権販売により営業キャッシュを生む。","evidencePdfPages":[6,7]},
+    {"term":"還元400億円＋α","definition":"2025～2029年度5年間のキャッシュ配分枠。総還元性向50%目標は最初の3年間。","evidencePdfPages":[7,8]},
+    {"term":"ROE目標","definition":"中長期ターゲット15%に対し、最終年度計画値は16.5%。","evidencePdfPage":5}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndLongTermSeparated":true,"accountingAndAdjustedProfitSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"grossAndNetInvestmentNotDoubleCounted":true,"approximateAndFloorAmountsPreserved":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T11:56:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年度営業利益500億円以上・ROE16.5%を原寸確認する","営業CF1,600・借入200規模・設備900・戦略500規模以上・還元400+αを確認する","ホテル2,500億円の棚卸2,000・固定500とキャッシュ配分を二重計上していないことを確認する","DOE4.5%下限・5%目標・先3年総還元性向50%を確認する","評価営業利益と会計上営業利益の定義を確認する"]}
+}

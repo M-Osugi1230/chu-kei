@@ -1,0 +1,78 @@
+name: Generate Phase 1 Independent Review Packets
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase1/generate-independent-review-request.json'
+      - 'scripts/generate_phase1_independent_review_packets_v1.mjs'
+      - '.github/workflows/generate-phase1-independent-review-packets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-phase1-independent-review-packets
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout quality rebase branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Validate primary reviews
+        run: node scripts/validate_phase1_primary_reviews_v1.mjs
+
+      - name: Generate independent review packets
+        run: node scripts/generate_phase1_independent_review_packets_v1.mjs
+
+      - name: Validate packet safety
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const queue = JSON.parse(fs.readFileSync('operations/quality-rebase/phase1/independent-review-queue-v1.json', 'utf8'));
+          if (queue.counts.total !== 10 || queue.counts.ready !== 9 || queue.counts.blocked !== 1 || queue.counts.approved !== 0) process.exit(1);
+          for (const row of queue.packets) {
+            const packet = JSON.parse(fs.readFileSync(row.packetFile, 'utf8'));
+            if (packet.policy.automaticApprovalAllowed !== false) process.exit(1);
+            if (packet.policy.deepVerificationApproved !== false) process.exit(1);
+            if (packet.decision.approved !== false || packet.decision.status !== 'pending') process.exit(1);
+          }
+          console.log(JSON.stringify(queue.counts, null, 2));
+          NODE
+
+      - name: Commit independent review queue
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase1/independent operations/quality-rebase/phase1/independent-review-queue-v1.json artifacts/quality-rebase/phase1-primary-review-validation-v1.json
+          if git diff --cached --quiet; then
+            echo 'No packet changes to commit.'
+          else
+            git commit -m 'quality: generate Phase 1 independent review queue'
+            git push origin HEAD:agent/quality-rebase-phase0-2
+          fi
+
+      - name: Upload review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-independent-review-queue
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            operations/quality-rebase/phase1/independent-review-queue-v1.json
+            operations/quality-rebase/phase1/independent/*.json
+            artifacts/quality-rebase/phase1-primary-review-validation-v1.json

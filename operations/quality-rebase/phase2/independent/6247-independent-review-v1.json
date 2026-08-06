@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6247",
+    "name": "日阪製作所"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6247-primary-review-v1.json",
+  "source": {
+    "title": "2026年3月期決算 新中期経営計画 Challenge2028 説明会資料",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/62470/140120260529554991.pdf",
+    "pdfSha256": "f143ba84cce248a5b501a28f42d2423872a5ee240dd4f1d8ee577df371730ba2",
+    "pageCount": 56
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社日阪製作所、証券コード6247、公表日2026年5月29日、PDFハッシュ、56ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 22],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "決算説明資料内に2027年3月期～2029年3月期の新規正式中計Challenge2028が独立していることを確認する。",
+      "expectedEvidencePdfPages": [22, 32, 50],
+      "status": "pending"
+    },
+    {
+      "id": "period_boundary",
+      "description": "G-23の2026年実績、2027年単年度見通し、2029年中計目標、2031年長期資本目標を分離していることを確認する。",
+      "expectedEvidencePdfPages": [5, 16, 50, 51],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2029年3月期の受注540億円、売上550億円、営業利益50億円、営業利益率9.1%、純利益42億円、ROE7%、ROIC5.5%を再確認する。",
+      "expectedEvidencePdfPages": [50, 51],
+      "status": "pending"
+    },
+    {
+      "id": "post_plan_targets",
+      "description": "ROE8%以上と政策保有株式比率15%以下が2031年の中計後目標であることを確認する。",
+      "expectedEvidencePdfPages": [47, 50, 56],
+      "status": "pending"
+    },
+    {
+      "id": "segment_reconciliation",
+      "description": "熱交換器、PE、バルブ、その他の受注・売上・利益と調整額が全社目標へ整合することを再計算する。",
+      "expectedEvidencePdfPage": 52,
+      "status": "pending"
+    },
+    {
+      "id": "capital_sources",
+      "description": "期首現預金120億円、営業CF135億円以上、政策保有株式縮減40億円以上を確認する。",
+      "expectedEvidencePdfPage": 48,
+      "status": "pending"
+    },
+    {
+      "id": "capital_uses",
+      "description": "成長投資95～125億円、株主還元80～110億円、期末現預金90億円を確認する。",
+      "expectedEvidencePdfPage": 48,
+      "status": "pending"
+    },
+    {
+      "id": "range_handling",
+      "description": "資金源が下限、資金使途がレンジであり、上下限を無理に単一総額へ一致させていないことを確認する。",
+      "expectedEvidencePdfPage": 48,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "新中計3年間の配当・自己株式取得総額80～110億円を確認し、個別内訳や配当性向を推測していないことを確認する。",
+      "expectedEvidencePdfPages": [46, 48],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、億円・百万円換算、セグメント表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

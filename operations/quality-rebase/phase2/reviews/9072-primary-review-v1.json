@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"9072","name":"ニッコンホールディングス","market":"Prime","industry":"陸運業","phase2Order":471},
+  "source": {
+    "title":"第14次中期経営計画 Challenge 14",
+    "publishedDate":"2026-03-06",
+    "officialUrl":"https://www2.jpx.co.jp/disc/90720/140120260306577455.pdf",
+    "pdfSha256":"18fd744d95a50cd603c945c36e63a9a35dcee5ce6868c17012497626590db15e",
+    "pageCount":22,
+    "documentClassification":"formal_management_plan_current_2026_to_2028",
+    "period":{"startFiscalYear":"2026年度・2027年3月期","endFiscalYear":"2028年度・2029年3月期","terminalFiscalYear":"2028年度・2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"第13次中期経営計画・2023年3月期～2026年3月期",
+      "currentPlan":"第14次中期経営計画・2027年3月期～2029年3月期",
+      "nextPlan":"第15次中期経営計画・2030年3月期～2032年3月期",
+      "statement":"前中計計画・予想、新中計目標、不動産流動化の次期中計分を分離する。"
+    }
+  },
+  "summary":"成長産業、グループ連携、海外、一貫物流、DX、省人化、人的資本を強化し、不動産・政策株の流動化と負債活用で資本効率を改善する。2029年3月期に売上高3,500億円、営業利益330億円、ROE10%、ROIC5.6%を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":3500,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期予想2,690億円","evidencePdfPages":[1,9]},
+    {"metric":"M&A等売上寄与","target":300,"unit":"億円・売上高3,500億円に内包","targetFiscalYear":"2029年3月期","evidencePdfPage":9},
+    {"metric":"営業利益","target":330,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期予想237億円","evidencePdfPages":[1,9]},
+    {"metric":"営業利益率","target":9.4,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期予想8.8%","evidencePdfPages":[1,9]},
+    {"metric":"ROE","target":10,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期予想7.3%","evidencePdfPages":[1,9,11]},
+    {"metric":"ROIC","target":5.6,"unit":"%","targetFiscalYear":"2029年3月期","evidencePdfPage":9},
+    {"metric":"自己資本比率","target":50,"unit":"%未満","targetFiscalYear":"2029年3月期末","evidencePdfPages":[9,17]},
+    {"metric":"純有利子負債/EBITDA","target":2.5,"unit":"倍程度","targetFiscalYear":"2029年3月期","evidencePdfPage":9},
+    {"metric":"総資産回転率","target":0.76,"unit":"回程度","targetFiscalYear":"2029年3月期","baseline":"2026年3月期0.62回","evidencePdfPage":11},
+    {"metric":"財務レバレッジ","target":2.0,"unit":"倍程度","targetFiscalYear":"2029年3月期","baseline":"2026年3月期1.8倍","evidencePdfPage":11}
+  ],
+  "previousPlanResultsSeparated":[
+    {"metric":"売上高","target":2800,"forecast":2690,"unit":"億円","fiscalYear":"2026年3月期","evidencePdfPage":4},
+    {"metric":"営業利益","target":280,"forecast":237,"unit":"億円","fiscalYear":"2026年3月期","evidencePdfPage":4},
+    {"metric":"営業利益率","target":10.0,"forecast":8.8,"unit":"%","fiscalYear":"2026年3月期","evidencePdfPage":4},
+    {"metric":"ROE","target":8.0,"forecast":7.3,"unit":"%","fiscalYear":"2026年3月期","evidencePdfPage":4}
+  ],
+  "strategyThemes":[
+    {"theme":"成長産業顧客開拓","evidencePdfPages":[8,10],"evidence":"半導体、産業機械、航空宇宙・防衛、医療、情報通信、電力を重点開拓する。"},
+    {"theme":"グループ連携・物流戦略パートナー","evidencePdfPage":10,"evidence":"輸送、保管、加工、通関、SC最適化を一気通貫で提供する。"},
+    {"theme":"海外事業","evidencePdfPages":[5,10,15],"evidence":"米国・インドを中心にM&Aと高付加価値物流を拡大する。"},
+    {"theme":"資産効率・投資規律","evidencePdfPages":[11,12,13,14,16],"evidence":"不動産流動化、政策株縮減、ROIC>WACC、事後モニタリングを徹底する。"},
+    {"theme":"DX・人的資本・ESG","evidencePdfPages":[8,18,19,20],"evidence":"自動化、経営データ、人材育成、多様性、脱炭素、ガバナンスを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation_with_asset_rotation_and_debt",
+    "period":"2027年3月期～2029年3月期",
+    "cashIn":{"operatingCashFlow":1170,"realEstateMonetizationFloor":250,"policyShareSalesRange":"30～50","interestBearingDebt":250,"unit":"億円"},
+    "cashOut":{"ma":390,"growthInvestment":450,"maintenanceInvestment":150,"totalInvestment":990,"shareholderReturn":730,"unit":"億円"},
+    "shareholderReturnBreakdown":{"buybacks":350,"dividends":380,"unit":"億円"},
+    "laterRealEstateMonetization":90,
+    "laterRealEstateMonetizationUnit":"億円・2030～2031年度予定、現中計キャッシュインに含めない",
+    "investmentDiscipline":"ROICがWACCを上回る案件のみ実行し、計画未達時は改善・売却を検討する。",
+    "policy":"営業CF、資産流動化、政策株縮減、負債を原資に投資990億円と還元730億円へ配分する。不動産流動化額に応じ還元額は変動し得る。",
+    "evidencePdfPages":[12,13,14,15,16]
+  },
+  "shareholderReturnPolicy": {
+    "status":"progressive_dividend_doe_and_large_buyback_program",
+    "doeTarget":6,
+    "doeTargetUnit":"%・2027年3月期から、従来4%",
+    "progressiveDividend":true,
+    "threeYearDividends":380,
+    "threeYearDividendsUnit":"億円",
+    "threeYearBuybacks":350,
+    "threeYearBuybacksUnit":"億円",
+    "threeYearTotalReturn":730,
+    "threeYearTotalReturnUnit":"億円",
+    "totalPayoutRatio":"100%超・不動産流動化特別利益を除く実力利益ベース",
+    "policy":"累進配当を基本にDOEを6%へ引き上げ、年間100億円規模を目安とする自己株式取得を機動的に実施する。",
+    "evidencePdfPages":[15,17]
+  },
+  "nonFinancialTargets":[
+    {"metric":"女性従業員比率","target":23.1,"unit":"%・国内連結","targetFiscalYear":"2029年3月期","baseline":"2026年3月期19.3%","evidencePdfPages":[1,19]},
+    {"metric":"女性役職者比率","target":15.8,"unit":"%・国内連結","targetFiscalYear":"2029年3月期","baseline":"2026年3月期11.7%","evidencePdfPages":[1,19]},
+    {"metric":"女性管理職比率","target":10.7,"unit":"%・国内連結","targetFiscalYear":"2029年3月期","baseline":"2026年3月期4.3%","evidencePdfPages":[1,19]},
+    {"metric":"障がい者雇用","target":"対象全事業所で法定雇用率充足","unit":"達成状態","targetFiscalYear":"2029年3月期","evidencePdfPage":19},
+    {"metric":"Scope1・2排出量","target":161591,"unit":"t-CO2・基準年比12.7%削減","targetFiscalYear":"2028年度・2029年3月期","evidencePdfPages":[1,20]},
+    {"metric":"Scope1・2排出量","target":129539,"unit":"t-CO2・基準年比30%削減","targetFiscalYear":"2030年度","classification":"long_term_environment_goal","evidencePdfPages":[1,20]},
+    {"metric":"Scope1・2排出量","target":0,"unit":"t-CO2・実質ゼロ","targetFiscalYear":"2050年度","classification":"long_term_environment_goal","evidencePdfPages":[1,20]}
+  ],
+  "definitions":[
+    {"term":"投資990億円","definition":"M&A390億円、成長投資450億円、更新投資150億円の合計。","evidencePdfPage":15},
+    {"term":"株主還元730億円","definition":"配当380億円と自己株式取得350億円の3年間累計。","evidencePdfPages":[15,17]},
+    {"term":"不動産流動化","definition":"現中計で4物件約250億円、再開発3物件約90億円は2030～2031年度予定で期間を分離する。","evidencePdfPages":[12,13]},
+    {"term":"総還元性向100%超","definition":"不動産流動化による特別利益を除いた実力利益ベース。","evidencePdfPage":17}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndNextPlanSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"cashAllocationComponentsValidated":true,"futureAssetMonetizationSeparated":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T10:29:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年3月期3,500・330・9.4・ROE10・ROIC5.6を確認する","キャッシュイン1,170・250以上・30～50・250億円を確認する","投資390+450+150=990、還元350+380=730億円を確認する","DOE6%・累進配当・総還元性向100%超の定義を確認する","現中計250億円と次期中計90億円の不動産流動化を分離確認する"]}
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "9247",
+    "name": "TREホールディングス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
+  "source": {
+    "title": "TREホールディングス 第2次中期経営計画（2024年度〜2028年度）",
+    "officialUrl": "https://tre-hd.co.jp/download/assets/uploads/trehd_mtbp.pdf",
+    "pdfSha256": "a6ad11151db372b121c21ce3182a9fc442c5927a44590cbda6c33fc81510225e",
+    "pageCount": 48
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "公式ドメイン、会社名、証券コード、計画名称、公開日、PDFハッシュを独立に再確認する。",
+      "expectedEvidencePages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "表題の2024年度〜2028年度と収益計画の2025年3月期〜2029年3月期が同一5カ年であることを確認する。",
+      "expectedEvidencePages": [1, 18],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "3つの成長戦略と経営基盤強化の構造を図表と本文で再確認する。",
+      "expectedEvidencePages": [14, 15],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2029年3月期の売上高1,200億円、営業利益120億円、営業利益率10.0%、純利益75億円、EBITDA220億円を再確認する。",
+      "expectedEvidencePages": [18],
+      "status": "pending"
+    },
+    {
+      "id": "roe_target",
+      "description": "ROE目標10%以上への引き上げと実績値・旧目標を混同していないことを確認する。",
+      "expectedEvidencePages": [11],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "総還元性向35%〜40%が第2次中計の次期目標であることを確認する。",
+      "expectedEvidencePages": [11],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "財務戦略ページの成長投資、財務健全性、株主還元の関係と図表上の金額・期間を独立に確認する。",
+      "expectedEvidencePages": [31, 32, 33],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後にリンク、表示、検索、数値単位、改行崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

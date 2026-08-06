@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 126,
+  "company": {
+    "code": "6497",
+    "name": "ハマイ",
+    "market": "Standard",
+    "industry": "機械",
+    "document": "2226中期経営計画",
+    "planPublishedDate": "2022-02-14",
+    "sourceUrl": "https://www.hamai-net.com/corporation/ir/plan-2226/06.html",
+    "phaseScore": 140,
+    "templatePatternIds": []
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "ConnectTimeout",
+  "error": "HTTPSConnectionPool(host='www.hamai-net.com', port=443): Max retries exceeded with url: /corporation/ir/plan-2226/06.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hamai-net.com', port=443) at 0x7f1eab91a390>, 'Connection to www.hamai-net.com timed out. (connect timeout=45)'))",
+  "elapsedSeconds": 45.377,
+  "requiresManualSourceRecovery": true
+}

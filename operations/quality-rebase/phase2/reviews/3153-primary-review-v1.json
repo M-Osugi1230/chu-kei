@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {
+    "code": "3153",
+    "name": "八洲電機",
+    "market": "Prime",
+    "industry": "卸売業",
+    "phase2Order": 323
+  },
+  "source": {
+    "title": "Happiness2028 中期経営計画",
+    "publishedDate": "2026-04-28",
+    "officialUrl": "https://www2.jpx.co.jp/disc/31530/140120260427511525.pdf",
+    "pdfSha256": "508ab87514afbb18b9d7bd849a9d2ddc0f673773e382749f0d207858435d63b7",
+    "pageCount": 31,
+    "documentClassification": "formal_management_plan_current_2026_to_2028",
+    "period": {
+      "startFiscalYear": "2027年3月期",
+      "endFiscalYear": "2029年3月期",
+      "terminalFiscalYear": "2029年3月期"
+    },
+    "formalPlanBoundary": {
+      "currentPlan": "Happiness2028・2026年度～2028年度",
+      "previousPlanTerminalOutlook": "2025年度売上高750億円・経常利益72億円・経常利益率9.6%",
+      "statement": "前中計の最終年度見通しとHappiness2028の2028年度目標を分離する。"
+    }
+  },
+  "summary": "社員のハピネスを成長の起点とし、ウェルビーイング、DX、グループシナジーを3本柱に、プラント、公共・設備、交通の各事業でコア技術とデジタルを融合する。2028年度に売上高850億円、経常利益95億円、経常利益率11.2%を目指す。",
+  "financialTargets": [
+    {"metric":"売上高","target":850,"unit":"億円","targetFiscalYear":"2028年度（2029年3月期）","baseline":"2025年度見通し750億円","evidencePdfPages":[1,28]},
+    {"metric":"経常利益","target":95,"unit":"億円","targetFiscalYear":"2028年度（2029年3月期）","baseline":"2025年度見通し72億円","evidencePdfPages":[1,28]},
+    {"metric":"経常利益率","target":11.2,"unit":"%","targetFiscalYear":"2028年度（2029年3月期）","baseline":"2025年度見通し9.6%","evidencePdfPages":[1,28]}
+  ],
+  "strategyThemes": [
+    {"theme":"ウェルビーイング","evidencePdfPages":[15,16],"evidence":"エンゲージメント可視化、処遇改善、人的資本投資、福利厚生、管理系イノベーションを推進する。"},
+    {"theme":"DX戦略・コア技術2.0","evidencePdfPages":[17,18,26],"evidence":"基幹システム、AI、IT統合、DX教育、現場DXをコア技術へ融合する。"},
+    {"theme":"グループシナジー","evidencePdfPages":[19,20,27],"evidence":"事業・人材・ノウハウを接続し、設備投資・M&Aを含む戦略投資で提供価値を高める。"},
+    {"theme":"プラント事業","evidencePdfPage":23,"evidence":"電炉化、GXスチール、非鉄精錬、電力設備更新、コンビナート向け更新を強化する。"},
+    {"theme":"公共・設備事業","evidencePdfPage":24,"evidence":"上下水道、空港、データセンター冷却、ビルソリューション、電力分野を拡大する。"},
+    {"theme":"交通事業","evidencePdfPage":25,"evidence":"車両メンテナンス、予兆保全、非鉄道施設、受変電設備の提案力を強化する。"}
+  ],
+  "capitalPolicy": {
+    "status": "strategic_investment_uses_disclosed_amounts_undisclosed",
+    "investmentUses": ["グループ連携設備投資", "M&A", "基幹システム", "AI・ITインフラ", "DX教育", "人的資本"],
+    "growthInvestmentTotal": null,
+    "cashAllocationTotal": null,
+    "policy": "グループシナジー、DX、人的資本へ戦略投資するが、投資総額・資金原資・配分額は資料で開示されていないため推計しない。",
+    "evidencePdfPages": [16,18,20]
+  },
+  "shareholderReturnPolicy": {
+    "status": "not_disclosed_in_current_source",
+    "payoutRatioTarget": null,
+    "doeTarget": null,
+    "annualDividendTarget": null,
+    "statement": "本資料内に株主還元の定量方針は確認できない。別資料の情報を補完しない。"
+  },
+  "nonFinancialTargets": [
+    {"metric":"エンゲージメント・サーベイスコア","target":"年間1ポイント向上","unit":"ポイント/年","targetFiscalYear":"中計期間","baseline":"試験導入時は同規模企業平均と同等","evidencePdfPage":16}
+  ],
+  "definitions": [
+    {"term":"2025年度数値","definition":"前中計最終年度の見通しであり、Happiness2028の基準値としてのみ扱う。","evidencePdfPage":7},
+    {"term":"コア技術2.0","definition":"既存コア技術を深化させ、デジタル技術を付加した価値創出モデル。","evidencePdfPages":[18,26]},
+    {"term":"戦略投資","definition":"設備投資・M&A等の用途は示されるが金額は未開示である。","evidencePdfPage":20}
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": true,
+    "formalPlanBoundaryValidated": true,
+    "previousPlanAndCurrentTargetsSeparated": true,
+    "forecastActualSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalPolicyReviewed": true,
+    "undisclosedAmountsNotInferred": true,
+    "shareholderReturnPolicyReviewed": true,
+    "nonFinancialTargetsReviewed": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_visual_review_pending",
+    "reviewedAt": "2026-08-05T06:27:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "2028年度目標850・95・11.2を原寸確認する",
+      "前中計2025年度見通し750・72・9.6と混在していないことを確認する",
+      "設備投資・M&Aの金額が未開示であることを独立確認する",
+      "株主還元定量方針を本資料から補完していないことを確認する",
+      "エンゲージメント年間1ポイント向上の定義を図表突合する"
+    ]
+  }
+}

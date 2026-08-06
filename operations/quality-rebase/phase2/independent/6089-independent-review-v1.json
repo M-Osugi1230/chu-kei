@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6089",
+    "name": "ウィルグループ"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6089-primary-review-v1.json",
+  "source": {
+    "title": "2026年3月期 決算、中期経営計画説明会 新中期経営計画 WILL-being 2029",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/60890/140120260515536880.pdf",
+    "pdfSha256": "c64cb85c574dd69309697e381a6e9af17c91699c9c12e1d45f30a5bce2dd8cb6",
+    "pageCount": 50
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社ウィルグループ、証券コード6089、公表日2026年5月15日、PDFハッシュ、50ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 21, 22],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "決算説明資料内に2027年3月期～2029年3月期の新規正式中計WILL-being 2029が独立していることを確認する。",
+      "expectedEvidencePdfPages": [21, 22, 26],
+      "status": "pending"
+    },
+    {
+      "id": "normalized_metric",
+      "description": "2026年3月期の会計上営業利益32.7億円と、一過性損益を除くノーマライズド営業利益30億円を分離していることを確認する。",
+      "expectedEvidencePdfPages": [4, 26],
+      "status": "pending"
+    },
+    {
+      "id": "base_and_upside",
+      "description": "2029年3月期の基準目標47億円と、ストックオプション条件に関連するアップサイド55億円水準を分離していることを確認する。",
+      "expectedEvidencePdfPages": [26, 28],
+      "status": "pending"
+    },
+    {
+      "id": "roe_target",
+      "description": "2029年3月期ROE15%以上を再確認する。",
+      "expectedEvidencePdfPage": 47,
+      "status": "pending"
+    },
+    {
+      "id": "domestic_targets",
+      "description": "国内Working事業のセグメント利益54億円、売上総利益250億円以上、高粗利サービス構成比75%以上を確認する。",
+      "expectedEvidencePdfPages": [30, 35],
+      "status": "pending"
+    },
+    {
+      "id": "overseas_target",
+      "description": "海外Working事業が補助金を除く24億円水準の安定利益を目指すことを確認する。",
+      "expectedEvidencePdfPages": [37, 42],
+      "status": "pending"
+    },
+    {
+      "id": "kpi_non_targets",
+      "description": "正社員派遣在籍数、外国人支援人数、人材紹介入社人数は実績開示のみで、計画値を設定していないことを確認する。",
+      "expectedEvidencePdfPages": [32, 33, 34],
+      "status": "pending"
+    },
+    {
+      "id": "m_and_a_budget",
+      "description": "3年間のM&A予算100億円、戦略投資型と探索型の資金・評価基準を再確認する。",
+      "expectedEvidencePdfPages": [46, 48],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "新中計期間の累進配当、総還元性向30%以上、機動的自己株式取得を確認し、過年度44円を将来固定額としていないことを確認する。",
+      "expectedEvidencePdfPages": [46, 49],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、ノーマライズド表記、基準・アップサイド表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

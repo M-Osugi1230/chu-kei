@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "quality-rebase-phase2-source-resolution-v1",
+  "company": {
+    "code": "5713",
+    "name": "住友金属鉱山"
+  },
+  "resolutionStatus": "current_official_pdf_identity_confirmed_binary_hash_and_full_review_pending",
+  "incorrectCandidate": {
+    "url": "https://www.smm.co.jp/ir/management/plan/pdf/070220setsumeikai.pdf",
+    "pdfSha256": "ac51680059e80976d35b321fcf45a99124303d422f2e90c662e2e07cfb5d6851",
+    "pageCount": 42,
+    "actualTitle": "2006年中期経営計画 成長戦略の推進による企業価値のさらなる向上",
+    "actualPublishedDate": "2007-02-20",
+    "classification": "obsolete_2006_management_plan",
+    "reason": "候補メタデータは2025年公表の中期経営計画2027を示す一方、収集器は2007年公表の旧中計PDFを選択していた。年度、表題、計画期間が一致しないため隔離する。",
+    "mayEnterPrimaryReview": false
+  },
+  "currentOfficialDocument": {
+    "landingPageUrl": "https://www.smm.co.jp/ir/management/plan/",
+    "pdfUrl": "https://www.smm.co.jp/ir/management/plan/pdf/250512_setsumeikai.pdf",
+    "title": "中期経営計画2027",
+    "publishedDate": "2025-05-12",
+    "securityCode": "5713",
+    "pageCount": 73,
+    "pdfSha256": null,
+    "binaryHashStatus": "pending_retrieval_in_repository_execution_environment",
+    "identityEvidencePdfPages": [1, 2, 3, 4],
+    "identityConfirmed": true,
+    "pageCountConfirmed": true,
+    "publicationDateConfirmed": true,
+    "planPeriodConfirmed": true
+  },
+  "documentClassification": "formal_management_plan_2027_current_pdf_identity_confirmed_hash_pending",
+  "formalPlanBoundary": {
+    "previousPlan": "2021年中期経営計画",
+    "currentPlan": "2025年度から2027年度の中期経営計画2027",
+    "longTermVision": "世界の非鉄リーダー",
+    "statement": "2021年中計の振り返り、現行の中計27、2030年のありたい姿、長期ビジョンのターゲットを分離する。長期ビジョンの当期利益1,500億円/年等を2027年度中計目標へ混在させない。",
+    "evidencePdfPages": [2, 3, 4, 5, 8]
+  },
+  "confirmedCurrentPlanFacts": {
+    "period": {
+      "startFiscalYear": "2025年度",
+      "endFiscalYear": "2027年度"
+    },
+    "financialTargets": [
+      {
+        "metric": "税引前利益",
+        "target": 1400,
+        "unit": "億円",
+        "targetFiscalYear": "2027年度",
+        "evidencePdfPage": 4
+      }
+    ],
+    "capitalAllocation": {
+      "totalCapitalExpenditureAndInvestment": 4370,
+      "totalCapitalExpenditureAndInvestmentUnit": "億円・中計27累計",
+      "futureInvestment": 460,
+      "futureInvestmentUnit": "億円",
+      "growthInvestment": 1500,
+      "growthInvestmentUnit": "億円",
+      "maintenanceAndRenewalInvestment": 2410,
+      "maintenanceAndRenewalInvestmentUnit": "億円",
+      "evidencePdfPage": 4
+    },
+    "shareholderReturn": {
+      "dividendPayoutRatioMinimum": 35,
+      "dividendPayoutRatioUnit": "%以上",
+      "doeMinimum": 2.5,
+      "doeMinimumUnit": "%",
+      "shareRepurchasePolicy": "機動的に実施",
+      "evidencePdfPage": 4
+    },
+    "longTermTargetsSeparated": [
+      {
+        "metric": "当期利益（親会社の所有者に帰属）",
+        "target": 1500,
+        "unit": "億円/年",
+        "classification": "long_term_vision_not_current_plan_terminal_target",
+        "evidencePdfPages": [5, 8]
+      },
+      {
+        "metric": "材料セグメント税引前利益",
+        "target": 250,
+        "unit": "億円/年",
+        "classification": "long_term_vision_target",
+        "evidencePdfPages": [5, 8]
+      }
+    ]
+  },
+  "validation": {
+    "currentOfficialPdfUrlConfirmed": true,
+    "companyIdentityConfirmed": true,
+    "securityCodeConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanBoundaryConfirmed": true,
+    "previousAndCurrentPlanSeparated": true,
+    "longTermVisionSeparatedFromCurrentPlan": true,
+    "keyFinancialTargetLocated": true,
+    "capitalPolicyLocated": true,
+    "shareholderReturnPolicyLocated": true,
+    "pdfSha256Confirmed": false,
+    "fullTextRepositoryReviewComplete": false,
+    "independentDoubleCheck": false
+  },
+  "requiredNextChecks": [
+    "リポジトリ実行環境から現行公式PDFを再取得しSHA-256を固定する",
+    "取得バイナリが73ページで会社名、証券コード5713、公表日2025年5月12日と一致することを再確認する",
+    "現行PDF全73ページと図表を一次レビューし、資源・製錬・材料の戦略とROCE管理を構造化する",
+    "2027年度税引前利益1,400億円と長期ビジョン当期利益1,500億円/年を混在させない",
+    "設備投資・投融資4,370億円、配当性向35%以上、DOE2.5%の年度・単位・範囲を確認する",
+    "独立確認者が旧2006年中計の隔離、現行PDFハッシュ、年度、単位、範囲を再確認する"
+  ],
+  "primaryReviewComplete": false,
+  "independentReviewReady": false,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

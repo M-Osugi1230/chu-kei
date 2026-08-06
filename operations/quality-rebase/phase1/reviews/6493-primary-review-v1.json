@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {"code":"6493","name":"NITTAN","market":"Standard","industry":"輸送用機器"},
+  "document": {
+    "title": "2026年3月期決算および新中期経営計画説明会",
+    "publishedDate": "2026-06-09",
+    "correctedAt": "2026-06-12",
+    "period": "2027年3月期-2029年3月期",
+    "officialUrl": "https://contents.xj-storage.jp/xcontents/AS05830/2034a7ff/3929/4d10/b01d/e987830b9b6f/20260615165351994s.pdf",
+    "officialLandingPage": "https://www.niv.co.jp/ir/policy/plan.html",
+    "contentType": "application/pdf",
+    "pageCount": 59,
+    "formalPlanConfirmed": true,
+    "correctedVersionAdopted": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false,
+    "figureScreenshotsCaptured": ["p.35 財務KPI","p.40 キャピタルアロケーション","p.46 中計とNC10の境界","p.48 配当推移"]
+  },
+  "structuredAnalysis": {
+    "managementDirection": "既存内燃機関事業の収益性改善と営業キャッシュフロー創出を基盤に、インド・中空バルブ・新和精密・M&Aへ投資し、事業ポートフォリオ変革と株主還元を両立する",
+    "strategyThemes": [
+      "小型エンジンバルブ、舶用部品、精密鍛造歯車等の既存事業の収益性を改善する",
+      "インドの生産能力増強と中空バルブ拡販により成長市場を取り込む",
+      "新和精密の連結化とバルブリフター拡販を進める",
+      "自動車部品分野のM&Aで製品・技術・取引基盤を拡張する",
+      "更新投資、成長投資、M&A、株主還元を営業CFと外部調達で賄う",
+      "ROEと純利益率、PERを意識して企業価値向上を進める"
+    ],
+    "groupTargets": [
+      {"metric":"売上高","baseValue":516,"target":630,"unit":"億円","baseYear":"2026年3月期実績","targetYear":"2029年3月期","scope":"連結","evidence":"公式PDF p.35・p.46"},
+      {"metric":"営業利益","baseValue":39.9,"target":58,"unit":"億円","baseYear":"2026年3月期実績","targetYear":"2029年3月期","scope":"連結","evidence":"公式PDF p.35・p.46"},
+      {"metric":"営業利益率","baseValue":7.7,"target":9.2,"unit":"%","baseYear":"2026年3月期実績","targetYear":"2029年3月期","scope":"連結","evidence":"公式PDF p.35・p.46"},
+      {"metric":"ROE","baseValue":7.4,"target":8,"targetQualifier":"以上","unit":"%","baseYear":"2026年3月期実績","targetYear":"2029年3月期","scope":"連結","evidence":"公式PDF p.35・p.46"},
+      {"metric":"営業キャッシュフロー","target":232,"unit":"億円・3年間累計","targetYear":"2027年3月期-2029年3月期","scope":"連結・M&AのCF貢献未反映","evidence":"公式PDF p.35・p.40"},
+      {"metric":"キャッシュイン総額","target":333,"unit":"億円・3年間累計","targetYear":"2027年3月期-2029年3月期","scope":"営業CF232＋手元資金24＋資金調達77","evidence":"公式PDF p.40"},
+      {"metric":"更新投資","target":112,"unit":"億円・3年間累計","targetYear":"2027年3月期-2029年3月期","scope":"収益性改善等","evidence":"公式PDF p.40"},
+      {"metric":"成長投資","target":75,"unit":"億円・3年間累計","targetYear":"2027年3月期-2029年3月期","scope":"インド・中空バルブ・新和精密等","evidence":"公式PDF p.40"},
+      {"metric":"M&A投資","target":100,"unit":"億円・3年間累計","targetYear":"2027年3月期-2029年3月期","scope":"自動車部品分野・未実現分は還元配分も検討","evidence":"公式PDF p.40"},
+      {"metric":"非支配株主への還元","target":27,"unit":"億円・3年間累計","targetYear":"2027年3月期-2029年3月期","scope":"非支配株主","evidence":"公式PDF p.40"},
+      {"metric":"株主還元","target":19,"unit":"億円・3年間累計","targetYear":"2027年3月期-2029年3月期","scope":"親会社株主への配当等","evidence":"公式PDF p.40"},
+      {"metric":"配当性向","target":30,"targetQualifier":"以上","unit":"%","targetYear":"2027年3月期-2029年3月期","scope":"株主還元方針","evidence":"公式PDF p.40-p.41"},
+      {"metric":"年間配当","target":20,"unit":"円/株・予想","targetYear":"2027年3月期","scope":"中間10円＋期末10円","evidence":"公式PDF p.48"},
+      {"metric":"売上高","target":1000,"unit":"億円","targetYear":"2031年3月期・NC10","scope":"連結・長期ビジョン","evidence":"公式PDF p.35"},
+      {"metric":"営業利益","target":100,"targetQualifier":"以上","unit":"億円","targetYear":"2031年3月期・NC10","scope":"連結・長期ビジョン","evidence":"公式PDF p.35"},
+      {"metric":"営業利益率","target":10,"targetQualifier":"以上","unit":"%","targetYear":"2031年3月期・NC10","scope":"連結・長期ビジョン","evidence":"公式PDF p.35"},
+      {"metric":"ROE","target":10,"targetQualifier":"以上","unit":"%","targetYear":"2031年3月期・NC10","scope":"連結・長期ビジョン","evidence":"公式PDF p.35"}
+    ],
+    "capitalPolicy": {
+      "cashGeneration": "3年間の営業CF232億円、手元資金24億円、資金調達77億円の計333億円を原資とする",
+      "investment": "更新112億円、成長75億円、M&A100億円を計画する",
+      "shareholderReturn": "非支配株主27億円、親会社株主還元19億円を計画し、配当性向30%以上を目途とする。M&A未実現分の還元配分も検討する",
+      "financialDiscipline": "有利子負債調達と政策保有株式売却を検討し、過度な資金蓄積を避ける",
+      "evidence": "公式PDF p.40-p.41"
+    },
+    "importantDefinitions": [
+      "新中計は2027年3月期から2029年3月期までの3年間、NC10は2031年3月期の長期ビジョン",
+      "2026年3月期の売上516億円・営業利益39.9億円・利益率7.7%・ROE7.4%は実績",
+      "2029年3月期の630億円・58億円・9.2%・ROE8%以上が中計目標",
+      "2031年3月期の1,000億円・100億円以上・10%以上・ROE10%以上を中計目標と混同しない",
+      "営業CF232億円は3年間累計で、M&AのCF貢献を織り込んでいない",
+      "キャッシュIN333億円とOUT333億円の算術を保持する",
+      "配当性向30%以上は計画期間方針、年間20円は2027年3月期予想として分離する",
+      "訂正前資料ではなく会社公式ページがリンクする訂正反映版を正本とする",
+      "訂正内容のページ・項目対応は独立再確認で固定する"
+    ]
+  },
+  "validation": {
+    "strategyStructured":true,"metricsValidatedPrimaryPass":true,"evidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"actualMidtermAndLongTermSeparated":true,"cashAllocationArithmeticValidated":true,"payoutPolicyAndAnnualForecastSeparated":true,"correctedVersionAdopted":true,"correctionImpactFullyMapped":false,"templateTextRemaining":false,"independentDoubleCheck":false
+  },
+  "review": {
+    "status":"primary_review_complete_independent_corrected_deck_and_correction_mapping_pending",
+    "primaryReviewCompletedAt":"2026-08-01","automaticApprovalAllowed":false,"deepVerificationApproved":false,
+    "requiredBeforeApproval":["訂正反映版全59ページの独立した再確認","2026年6月12日訂正開示と訂正前後ページの差分固定","p.35・p.40・p.46・p.48の図表再確認","2026年3月期実績・2029年3月期中計・2031年3月期NC10の原文突合","キャッシュIN/OUT333億円の算術・範囲確認","配当性向30%以上・2027年3月期20円予想・優待条件の分離確認","公開ページの表示・公式PDFリンク検査"]
+  }
+}

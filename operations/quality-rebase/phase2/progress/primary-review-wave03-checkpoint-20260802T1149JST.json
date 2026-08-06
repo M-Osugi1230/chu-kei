@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "quality-rebase-phase2-progress-checkpoint-v1",
+  "generatedAt": "2026-08-02T11:49:44+09:00",
+  "phase": 2,
+  "wave": 3,
+  "sourceLedger": "operations/quality-rebase/phase2/primary-review-wave03-v1.json",
+  "scope": {
+    "assigned": 10,
+    "primaryReviewComplete": 1,
+    "independentReviewReady": 1,
+    "deepVerificationApproved": 0,
+    "remainingPrimaryReviews": 9,
+    "progressRate": 10.0
+  },
+  "completed": [
+    {
+      "code": "3447",
+      "name": "信和",
+      "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3447-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3447-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "deepVerificationApproved": false
+    }
+  ],
+  "remaining": [
+    {"code": "368A", "name": "北里コーポレーション", "requiredBoundary": "plan_revision_or_update"},
+    {"code": "3936", "name": "グローバルウェイ", "requiredBoundary": "growth_potential_document"},
+    {"code": "441A", "name": "NE", "requiredBoundary": "growth_potential_document"},
+    {"code": "6030", "name": "アドベンチャー", "requiredBoundary": "plan_revision_or_update"},
+    {"code": "6143", "name": "ソディック", "requiredBoundary": "formal_management_plan"},
+    {"code": "6675", "name": "サクサ", "requiredBoundary": "plan_revision_or_update"},
+    {"code": "1450", "name": "田中建設工業", "requiredBoundary": "plan_revision_or_update"},
+    {"code": "2323", "name": "fonfun", "requiredBoundary": "formal_management_plan"},
+    {"code": "2440", "name": "ぐるなび", "requiredBoundary": "plan_revision_or_update"}
+  ],
+  "qualityGate": {
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "primaryReviewerMustNotSelfApprove": true,
+    "completionRecordedOnlyForVerifiedWork": true
+  },
+  "nextPriority": {
+    "code": "368A",
+    "name": "北里コーポレーション",
+    "requiredChecks": [
+      "formalPlanBoundary",
+      "planRevisionSeparation",
+      "fullTextReview",
+      "metricsValidation",
+      "capitalPolicyReview",
+      "fieldLevelEvidence"
+    ]
+  }
+}

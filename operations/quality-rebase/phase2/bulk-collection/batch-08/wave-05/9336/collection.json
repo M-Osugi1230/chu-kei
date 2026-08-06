@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 395,
+  "company": {
+    "code": "9336",
+    "name": "大栄環境",
+    "market": "Prime",
+    "industry": "サービス業",
+    "document": "中期経営計画「D-Plan2028」の一部見直しに関するお知らせ",
+    "planPublishedDate": "2026-05-14",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/93360/140120260514531985.pdf",
+    "phaseScore": 107,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.351,
+  "requiresManualSourceRecovery": true
+}

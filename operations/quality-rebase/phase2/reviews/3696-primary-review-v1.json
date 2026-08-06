@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {
+    "code": "3696",
+    "name": "セレス",
+    "market": "Prime",
+    "industry": "情報・通信業",
+    "phase2Order": 424
+  },
+  "source": {
+    "title": "中期経営計画の取り下げ及び新中期経営計画策定に関するお知らせ／中期経営計画2030（5か年）",
+    "publishedDate": "2026-02-13",
+    "officialUrl": "https://www2.jpx.co.jp/disc/36960/140120260212558437.pdf",
+    "pdfSha256": "a6bc78e4966163bab889dc7302d9b3a60e85a4a6e139dcbc3ce9587443ce79ae",
+    "pageCount": 58,
+    "documentClassification": "formal_management_plan_replacement_2026_to_2030_after_withdrawal_of_plan2026",
+    "period": {
+      "startFiscalYear": "2026年12月期",
+      "endFiscalYear": "2030年12月期",
+      "duration": "5カ年"
+    },
+    "formalPlanBoundary": {
+      "withdrawnPlan": "中期経営計画2026（2021年12月公表）",
+      "currentPlan": "中期経営計画2030",
+      "withdrawalReasons": ["ゆめみ全株式譲渡によるDX事業の連結除外", "アルトコイン価格下落により旧計画前提と実績が乖離"],
+      "statement": "旧計画2026の目標、2025年実績、2026年予想、新計画2030目標を分離する。"
+    }
+  },
+  "summary": "ポイント事業を安定成長基盤、ブロックチェーンを次の成長エンジン、D2C・ファクタリングを積上げ型成長領域と位置づけ、垂直統合モデル、先行的なブロックチェーン投資、M&Aを含む事業開発力を活用する。2030年に売上高600億円、EBITDA120億円、ROE15%を目指す。",
+  "financialTargets": [
+    {"metric": "売上高", "target": 600, "unit": "億円", "targetFiscalYear": "2030年12月期", "cagr": 15.1, "cagrUnit": "%・2025-2030年", "evidencePdfPages": [2, 15, 16]},
+    {"metric": "EBITDA", "target": 120, "unit": "億円", "targetFiscalYear": "2030年12月期", "cagr": 17.4, "cagrUnit": "%・2025-2030年", "evidencePdfPages": [2, 15, 16]},
+    {"metric": "ROE", "target": 15.0, "unit": "%", "targetFiscalYear": "2030年12月期", "policy": "15%超を安定的に実現", "evidencePdfPages": [2, 15]}
+  ],
+  "actualsSeparated": [
+    {"metric": "売上高", "value": 296, "unit": "億円", "fiscalYear": "2025年12月期", "classification": "actual", "evidencePdfPages": [2, 7, 16]},
+    {"metric": "EBITDA", "value": 53, "unit": "億円", "fiscalYear": "2025年12月期", "classification": "actual", "evidencePdfPages": [2, 7, 16]},
+    {"metric": "ROE", "value": 20.4, "unit": "%", "fiscalYear": "2025年12月期", "classification": "actual", "evidencePdfPage": 2},
+    {"metric": "経常利益", "value": 21, "unit": "億円", "fiscalYear": "2025年12月期", "classification": "actual", "evidencePdfPages": [7, 13]}
+  ],
+  "withdrawnPlanTargetsSeparated": [
+    {"metric": "売上高", "target": 400, "unit": "億円", "targetFiscalYear": "2026年12月期", "classification": "withdrawn_plan_target", "evidencePdfPage": 13},
+    {"metric": "経常利益", "target": 35, "unit": "億円", "targetFiscalYear": "2026年12月期", "classification": "withdrawn_plan_target", "evidencePdfPage": 13},
+    {"metric": "DX事業売上高", "target": 70, "unit": "億円", "targetFiscalYear": "2026年12月期", "classification": "removed_from_target_after_yumemi_divestiture", "evidencePdfPages": [12, 13]},
+    {"metric": "DX事業経常利益", "target": 10, "unit": "億円", "targetFiscalYear": "2026年12月期", "classification": "removed_from_target_after_yumemi_divestiture", "evidencePdfPages": [12, 13]}
+  ],
+  "segmentTargets": [
+    {"segment": "ポイント", "salesTarget": 350, "ebitdaTarget": 60, "unit": "億円", "targetFiscalYear": "2030年12月期", "activeMembersTarget": 1000, "activeMembersUnit": "万人", "salesCagr": 11.8, "ebitdaCagr": 9.1, "cagrUnit": "%・2025-2030年", "evidencePdfPage": 29},
+    {"segment": "D2C", "salesTarget": 150, "ebitdaTarget": 20, "unit": "億円", "targetFiscalYear": "2030年12月期", "salesCagr": 25.2, "cagrUnit": "%・2025-2030年", "evidencePdfPage": 39},
+    {"segment": "フィナンシャルサービス", "salesTarget": 100, "ebitdaTarget": 40, "unit": "億円", "targetFiscalYear": "2030年12月期", "evidencePdfPage": 48}
+  ],
+  "strategyThemes": [
+    {"theme": "ポイント事業", "evidence": "モッピーの会員・利用率向上、Point IncomeのPMI、自社ASP AD.TRACK、新サービス、TikTok Shopへの投資を進める。", "evidencePdfPages": [2, 22, 29, 30, 31, 32, 33, 34, 35]},
+    {"theme": "D2C", "evidence": "商品開発、ブランド展開、M&AによるSKU拡充、アフィリエイト広告投資、EC・リテール・海外販路を拡大する。", "evidencePdfPages": [2, 18, 38, 39, 40]},
+    {"theme": "ブロックチェーン", "evidence": "マーキュリーとビットバンクで取引・運用サービスを強化し、ステーブルコイン、カストディ、IPOを目指す。", "evidencePdfPages": [2, 18, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]},
+    {"theme": "オンラインファクタリング", "evidence": "ラボルでAI与信、マーケティング、GMVを拡大し、国内初のファクタリング事業IPOを目指す。", "evidencePdfPages": [2, 48, 51, 52, 53]},
+    {"theme": "事業開発・M&A", "evidence": "垂直統合モデルとのシナジーを前提に、新規事業とM&Aで非連続成長を実現する。", "evidencePdfPages": [16, 19, 20]}
+  ],
+  "capitalPolicy": {
+    "status": "not_quantified_in_current_plan_source",
+    "policy": "ポイント、D2C、ブロックチェーン、ファクタリングへ広告・設備・M&A等の投資を行い、CVCも活用する。",
+    "cashAllocation": "本資料では5カ年の営業CF、借入、投資、株主還元を統合した定量キャッシュアロケーションを開示していない。",
+    "balanceSheetTargets": "自己資本比率、ネットD/E、投融資総額の正式目標は本資料で開示していない。",
+    "evidencePdfPages": [16, 18, 19, 42, 48]
+  },
+  "shareholderReturnPolicy": {
+    "status": "not_disclosed_in_current_plan_source",
+    "policy": "本資料では配当性向、DOE、累進配当、自己株式取得額等の正式な株主還元方針を開示していない。",
+    "evidence": "全文に株主還元・配当方針の定量記載を確認できず、推測補完しない。"
+  },
+  "nonFinancialTargets": [
+    {"metric": "モッピーアクティブ会員数", "target": 1000, "unit": "万人", "targetFiscalYear": "2030年12月期", "evidencePdfPage": 29},
+    {"metric": "プラチナくるみん", "target": "認定取得", "targetYear": 2030, "classification": "sustainability_certification_target", "evidencePdfPage": 56},
+    {"metric": "安全衛生優良企業", "target": "認定取得", "targetYear": 2030, "classification": "sustainability_certification_target", "evidencePdfPage": 56},
+    {"metric": "健康経営優良法人", "target": "認定取得", "targetYear": 2030, "classification": "sustainability_certification_target", "evidencePdfPage": 56},
+    {"metric": "プラチナえるぼし", "target": "認定取得", "targetYear": 2030, "classification": "sustainability_certification_target", "evidencePdfPage": 56}
+  ],
+  "conditionalGovernanceMetrics": [
+    {"metric": "独立社外取締役比率", "value": 50.0, "unit": "%", "effectiveTiming": "2026年4月以降予定", "classification": "planned_governance_composition_not_terminal_kpi", "evidencePdfPage": 57},
+    {"metric": "女性取締役比率", "value": 30.0, "unit": "%", "effectiveTiming": "2026年4月以降予定", "classification": "planned_governance_composition_not_terminal_kpi", "evidencePdfPage": 57}
+  ],
+  "importantDefinitions": [
+    {"term": "EBITDA・連結目標", "definition": "税金等調整前当期純利益＋支払利息＋減価償却費＋のれん償却費（持分法投資損益内相当額を含む）＋減損損失。", "evidencePdfPage": 2},
+    {"term": "セグメントEBITDA", "definition": "事業別ページでは営業利益に減価償却費を加算した値として記載され、連結定義と表示範囲が異なるため区別する。", "evidencePdfPages": [29, 39, 48]},
+    {"term": "旧計画取り下げ", "definition": "旧計画は更新ではなく正式に取り下げられ、新計画2030へ置換された。", "evidencePdfPages": [1, 12, 13]},
+    {"term": "ROE15%", "definition": "2025年実績20.4%より低いが、5カ年を通じて15%超を安定実現する目標。", "evidencePdfPages": [2, 15]}
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": true,
+    "formalPlanBoundaryValidated": true,
+    "withdrawnAndCurrentPlanSeparated": true,
+    "forecastActualSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "segmentMetricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalPolicyReviewed": true,
+    "shareholderReturnPolicyReviewed": true,
+    "nonFinancialTargetsReviewed": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_visual_review_pending",
+    "reviewedAt": "2026-08-06T22:15:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "連結売上高600億円、EBITDA120億円、ROE15%の図表を独立確認する",
+      "ポイント350/60、D2C150/20、フィナンシャル100/40億円の売上高・EBITDA対応を原寸確認する",
+      "連結EBITDAと事業別EBITDAの定義差を再確認する",
+      "株主還元・キャッシュアロケーション非開示判定を公式IR補足資料と照合する"
+    ]
+  }
+}

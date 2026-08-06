@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "deep-verification-independent-review-v1",
+  "company": {
+    "code": "9861",
+    "name": "吉野家ホールディングス",
+    "phase2Order": 70
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9861-primary-review-v1.json",
+  "source": {
+    "officialUrl": "https://www.yoshinoya-holdings.com/file/ir/dl/cp2026-21-32.pdf",
+    "pdfSha256": "35d0bcc5e089443d9e4fe39142a4be79d9ba79acc72cbccbd3f778d94329de05",
+    "pageCount": 6,
+    "classificationToVerify": "official_integrated_report_management_plan_section",
+    "boundaryToVerify": "統合報告書2026の冊子ページ21-32に掲載された2025-2029年度グループ中期経営計画であり、2025年5月の当初発表資料とは区別する。"
+  },
+  "status": "independent_review_ready",
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "requiredChecks": [
+    {
+      "check": "document_identity_and_boundary",
+      "expected": "会社公式PDF、統合報告書内の中計セクション、全6ページ",
+      "evidencePages": [1, 6],
+      "completed": false
+    },
+    {
+      "check": "group_targets",
+      "expected": "2029年度 売上高3,000億円、営業利益150億円、ROIC7.0%、D/Eレシオ0.9倍以内、ラーメン事業売上高400億円",
+      "evidencePages": [1, 6],
+      "completed": false
+    },
+    {
+      "check": "actual_plan_target_separation",
+      "expected": "2025年度実績、2027年度計画、2029年度目標を混同しない",
+      "evidencePages": [1, 4, 5],
+      "completed": false
+    },
+    {
+      "check": "cash_allocation_period_and_amounts",
+      "expected": "5年間のEBITDA1,000億円+α、CCC改善50億円、資金調達550億円、既存基盤投資100億円、既存成長投資800億円、インオーガニック投資400億円",
+      "evidencePages": [2, 6],
+      "completed": false
+    },
+    {
+      "check": "investment_total",
+      "expected": "5カ年投資計画1,300億円",
+      "evidencePages": [6],
+      "completed": false
+    },
+    {
+      "check": "shareholder_return_definition",
+      "expected": "方針は記載されるが、当該6ページに固定金額または還元性向の数値目標はない",
+      "evidencePages": [2, 6],
+      "completed": false
+    },
+    {
+      "check": "strategy_structure",
+      "expected": "国内を伸ばす、ラーメンで攻める、海外を広げるの3戦略基軸",
+      "evidencePages": [1, 4, 5],
+      "completed": false
+    },
+    {
+      "check": "public_render_and_link",
+      "expected": "公開反映後に企業ページ表示、検索、公式PDFリンクを確認する",
+      "completed": false
+    }
+  ],
+  "independenceRequirement": {
+    "reviewerMustDifferFromPrimaryReviewer": true,
+    "minimumDistinctReviewers": 2,
+    "reviewerRecorded": false
+  },
+  "completionRule": "全チェックを独立した確認者が原資料と突合し、確認者・日時・差分を記録するまで独立再確認完了または深掘り承認へ昇格しない。"
+}

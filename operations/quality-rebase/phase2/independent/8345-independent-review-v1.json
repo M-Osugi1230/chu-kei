@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {"code":"8345","name":"岩手銀行"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8345-primary-review-v1.json",
+  "source": {
+    "documentTitle": "第22次中期経営計画～地域価値共創プラン・The 2nd～",
+    "officialUrl": "https://www2.jpx.co.jp/disc/83450/140120260327590723.pdf",
+    "pdfSha256": "9c3ec05291a15cdd69d12274d7a14a303d31d51ed64f5633e7d38a9d5237b649",
+    "pageCount": 51
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {"id":"source_identity","description":"証券コード8345、公表日2026年3月30日、資料名、PDFハッシュ、全51ページを再確認する。","expectedEvidencePdfPages":[1,4,51],"status":"pending"},
+    {"id":"plan_boundary","description":"第21次中計2023～2025年度、第22次中計2026～2028年度、2032年度長期目標、2035年度ROE志向を分離する。","expectedEvidencePdfPages":[1,2,3,8,24],"status":"pending"},
+    {"id":"financial_targets","description":"2028年度の連結ROE6%以上、純利益130億円以上、単体OHR50%台半ば、2種類のROAを確認する。","expectedEvidencePdfPages":[3,24],"status":"pending"},
+    {"id":"capital_ratio_bridge","description":"2025年度末約11%、累積利益+1.9pt、配当-0.8pt、リスクアセット-1.2pt以上、バーゼル影響-0.3pt以上、2028年度末10～11%を確認する。","expectedEvidencePdfPages":[22,23],"status":"pending"},
+    {"id":"risk_assets","description":"3年間でリスクアセットを17,000億円から19,000億円へ2,000億円積み上げる範囲と対象を確認する。","expectedEvidencePdfPages":[22,23],"status":"pending"},
+    {"id":"business_kpis","description":"貸出平残2兆円、リース債権210億円、預金3兆800億円、M&A100件、預り資産8,500億円等の2028年度KPIを確認する。","expectedEvidencePdfPages":[26,27],"status":"pending"},
+    {"id":"shareholder_return","description":"累進的配当、配当性向40%、機動的自己株式取得、追加還元、政策保有株式縮減を確認する。","expectedEvidencePdfPages":[23,50],"status":"pending"},
+    {"id":"nonfinancial_targets","description":"2030年度Scope1+2ネットゼロ、2050年度Scope3ネットゼロ、人的資本目標と2028年度KPIを分離する。","expectedEvidencePdfPages":[24,26],"status":"pending"},
+    {"id":"post_publication","description":"公開反映後に公式リンク、期間、主要KGI、資本比率ブリッジ、株主還元表示を確認する。","status":"pending"}
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

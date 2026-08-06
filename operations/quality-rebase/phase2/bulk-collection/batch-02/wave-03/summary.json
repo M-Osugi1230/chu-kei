@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 2,
+  "wave": 3,
+  "orders": "71-80",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "collection_complete_primary_human_review_pending": 6,
+    "collection_failed": 2,
+    "pdf_not_found": 2
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 71,
+      "code": "2154",
+      "name": "オープンアップグループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf",
+      "pageCount": 27,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 72,
+      "code": "6501",
+      "name": "日立製作所",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 73,
+      "code": "9434",
+      "name": "ソフトバンク",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 74,
+      "code": "1377",
+      "name": "サカタのタネ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://corporate.sakataseed.co.jp/news/2026/lum8rp00000002qe-att/20260713_sakata_release.pdf",
+      "pageCount": 2,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 75,
+      "code": "2326",
+      "name": "デジタルアーツ",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 76,
+      "code": "2975",
+      "name": "スター・マイカ・ホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/29750/140120250114550129.pdf",
+      "pageCount": 42,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 77,
+      "code": "3107",
+      "name": "ダイワボウホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.daiwabo-holdings.com/ja/ir/strategy/main/01116/teaserItems1/00/linkList/0/link/20210513_mmp.pdf",
+      "pageCount": 26,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 78,
+      "code": "4452",
+      "name": "花王",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 79,
+      "code": "6134",
+      "name": "FUJI",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.fuji.co.jp/ir/library/pdf/20250513_FinancialresultbriefingJ.pdf",
+      "pageCount": 31,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 80,
+      "code": "4005",
+      "name": "住友化学",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.sumitomo-chem.co.jp/ir/event/files/docs/250304.pdf",
+      "pageCount": 63,
+      "documentTypeCandidate": "plan_revision_or_update"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-04T11:25:00+00:00",
+  "updatedAt": "2026-08-04T11:25:00+00:00",
+  "wave": 8,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 268,
+      "code": "4885",
+      "name": "室町ケミカル",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 16,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-02/4885/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 270,
+      "code": "5021",
+      "name": "コスモエネルギーホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 59,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-02/5021/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 271,
+      "code": "5076",
+      "name": "インフロニア・ホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 35,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-03/5076/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 278,
+      "code": "6330",
+      "name": "東洋エンジニアリング",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 45,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-03/6330/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 279,
+      "code": "6455",
+      "name": "モリタホールディングス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 42,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-03/6455/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 280,
+      "code": "6505",
+      "name": "東洋電機製造",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 16,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-03/6505/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 285,
+      "code": "6666",
+      "name": "リバーエレテック",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 29,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-04/6666/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 286,
+      "code": "6743",
+      "name": "大同信号",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 12,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-04/6743/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 287,
+      "code": "6905",
+      "name": "コーセル",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 30,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-04/6905/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    },
+    {
+      "order": 289,
+      "code": "7607",
+      "name": "進和",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 34,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-04/7607/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary", "planRevisionSeparation", "fullTextReview", "metricsValidation", "capitalPolicyReview", "fieldLevelEvidence"]
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 1,
+    "planRevisionOrUpdateCandidates": 9,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

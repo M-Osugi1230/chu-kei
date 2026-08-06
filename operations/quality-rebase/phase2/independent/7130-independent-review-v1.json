@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "7130",
+    "name": "ヤマエグループホールディングス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7130-primary-review-v1.json",
+  "source": {
+    "title": "新中期経営計画 Create ONE 28",
+    "officialLandingPage": "https://www.yamaegroup-hd.co.jp/ir/strategy/",
+    "officialUrl": "https://www.yamaegroup-hd.co.jp/wp/wp-content/themes/yamae2023/assets/pdf/ir/strategy/yghd_medium-term_management_plan.pdf",
+    "pdfSha256": "ee0ee952d437d0eb173929dae2be9982e80e22ca49911b0bca13b52e30c3665a",
+    "pageCount": 17
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "会社公式IRページ、会社名、証券コード7130、計画名称Create ONE 28、公表日2026年5月8日、PDFハッシュ、17ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "計画期間が2026年度から2028年度、最終目標が2029年3月期であることを確認する。",
+      "expectedEvidencePdfPages": [7, 12, 14, 16],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "M&A、エリア・物流、グローバル、新規事業の4基本戦略とヤマエWay・4つの責任を再確認する。",
+      "expectedEvidencePdfPages": [8, 11, 12, 13],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2029年3月期の売上高1兆5,000億円、経常利益330億円、経常利益率2.2%、ROE10%以上を図表で再確認する。",
+      "expectedEvidencePdfPages": [11, 14],
+      "status": "pending"
+    },
+    {
+      "id": "actual_target_separation",
+      "description": "2026年3月期実績の売上高1兆852億円、経常利益186億円、経常利益率1.7%、ROE11.3%を中計目標と混同していないことを確認する。",
+      "expectedEvidencePdfPages": [3, 4],
+      "status": "pending"
+    },
+    {
+      "id": "investment_allocation",
+      "description": "2026～2028年度の投資総額1,200億円と、M&A550億円、新規事業100億円、設備投資500億円、DX投資50億円の合計・区分を図表で確認する。",
+      "expectedEvidencePdfPages": [16],
+      "status": "pending"
+    },
+    {
+      "id": "previous_plan_investment_separation",
+      "description": "前中計の投資計画900億円・実績935億円と、Create ONE 28の1,200億円計画を混同していないことを確認する。",
+      "expectedEvidencePdfPages": [16],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "安定配当をベースとする機動的増配と株主優待拡充を確認し、過去の配当性向グラフを将来の固定目標として扱っていないことを確認する。",
+      "expectedEvidencePdfPages": [14],
+      "status": "pending"
+    },
+    {
+      "id": "nonfinancial_scope",
+      "description": "2030年度CO2排出量2013年度比50%削減目標の対象範囲・定義を公式資料または補足開示で確認する。",
+      "expectedEvidencePdfPages": [15],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、改行・表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

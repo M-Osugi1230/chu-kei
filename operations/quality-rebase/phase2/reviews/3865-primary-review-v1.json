@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"3865","name":"北越コーポレーション","market":"Prime","industry":"パルプ・紙","phase2Order":336},
+  "source": {
+    "title":"中期経営計画2030",
+    "publishedDate":"2026-05-15",
+    "officialUrl":"https://www2.jpx.co.jp/disc/38650/140120260514534148.pdf",
+    "pdfSha256":"ed5dfe55df6f8a809cf9b27065c0fdc1a25f23a6ff3509306a970ebb9dd12cd5",
+    "pageCount":32,
+    "documentClassification":"formal_management_plan_current_2026_to_2029",
+    "period":{"startDate":"2026-04-01","endDate":"2030-03-31","terminalFiscalYear":"2029年度"},
+    "formalPlanBoundary":{"previousPlan":"中期経営計画2026","currentPlan":"中期経営計画2030・2026年4月～2030年3月","longTermVision":"Vision 2030","statement":"前中計の目標・実績、長期ビジョン、現行中計の2029年度目標を分離する。"}
+  },
+  "summary":"事業ポートフォリオシフト、既存事業の競争力強化、環境事業の収益化を進める。2029年度に売上高3,500億円、営業利益240億円、当期純利益170億円、ROE8.0%、ネットD/Eレシオ0.7以下を目指し、4年間で総額1,500億円を投資する。",
+  "financialTargets":[
+    {"metric":"売上高","target":350000,"unit":"百万円","targetFiscalYear":"2029年度","baseline":"2026年3月期実績287,700百万円","evidencePdfPages":[1,11]},
+    {"metric":"営業利益","target":24000,"unit":"百万円以上","targetFiscalYear":"2029年度","baseline":"2026年3月期実績7,500百万円","evidencePdfPages":[1,11,13]},
+    {"metric":"親会社株主に帰属する当期純利益","target":17000,"unit":"百万円以上","targetFiscalYear":"2029年度","baseline":"2026年3月期実績7,200百万円","evidencePdfPages":[1,11]},
+    {"metric":"ROE","target":8.0,"unit":"%","targetFiscalYear":"2029年度","baseline":"2026年3月期実績2.8%","evidencePdfPages":[1,11]},
+    {"metric":"ネットD/Eレシオ","target":0.7,"unit":"以下","targetFiscalYear":"2029年度","evidencePdfPages":[1,11]}
+  ],
+  "strategyThemes":[
+    {"theme":"事業ポートフォリオシフトの加速","evidencePdfPages":[10,14,15],"evidence":"輸出、新商品、新規事業、国内外M&Aを通じて将来の中核事業を開拓する。"},
+    {"theme":"既存事業の競争力強化","evidencePdfPages":[16,17,18,19],"evidence":"最適生産、価格改定、コスト改善、物流効率化、戦略的提携で収益性を高める。"},
+    {"theme":"環境事業の収益化","evidencePdfPages":[20,21,22,24],"evidence":"CCS、CO2回収・活用、再生可能素材、バイオリファイナリー等を事業化する。"},
+    {"theme":"人的資本・ガバナンス","evidencePdfPages":[23,25],"evidence":"エンゲージメント、IT教育、働き方・福利厚生、経営と執行の分離を進める。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_four_year_cash_allocation",
+    "investmentTotal":150000,
+    "investmentTotalUnit":"百万円・4年間累計",
+    "investmentBreakdown":[
+      {"use":"成長・改善投資","amount":40000,"unit":"百万円"},
+      {"use":"維持更新投資","amount":60000,"unit":"百万円"},
+      {"use":"戦略投資","amount":50000,"unit":"百万円"}
+    ],
+    "cashIn":[
+      {"source":"営業CF","amount":100000,"unit":"百万円以上"},
+      {"source":"資産のスリム化","amount":20000,"unit":"百万円以上"},
+      {"source":"外部資金調達","amountRange":[50000,70000],"unit":"百万円"}
+    ],
+    "financialDiscipline":"ネットD/Eレシオ0.7以下",
+    "evidencePdfPages":[1,27,28,29]
+  },
+  "shareholderReturnPolicy": {
+    "status":"payout_ratio_floor_and_flexible_buybacks",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%以上",
+    "fourYearReturnAmount":20000,
+    "fourYearReturnAmountUnit":"百万円以上",
+    "policy":"安定配当と機動的な自己株式取得を行い、成長投資後の余力も株主還元へ配分する。",
+    "evidencePdfPages":[27,29]
+  },
+  "nonFinancialTargets": [],
+  "definitions":[
+    {"term":"投資総額1,500億円","definition":"成長・改善400億円、維持更新600億円、戦略投資500億円の4年間累計。","evidencePdfPages":[1,27,29]},
+    {"term":"外部資金調達500～700億円","definition":"株主資本とのバランスを踏まえた有利子調達であり、売上目標ではない。","evidencePdfPage":28},
+    {"term":"中期経営計画2026の数値","definition":"前計画の目標・実績であり、現行中計2030の終期目標と分離する。","evidencePdfPages":[4,8,11]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousPlanAndCurrentTargetsSeparated":true,"visionAndPlanSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T06:50:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年度の5指標を図表原寸で確認する","投資総額1,500億円と内訳400・600・500億円を再確認する","営業CF・資産圧縮・外部調達のキャッシュインを独立確認する","配当性向30%以上・株主還元200億円以上を確認する"]}
+}

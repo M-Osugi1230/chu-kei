@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"7271","name":"安永","market":"Standard","industry":"輸送用機器","phase2Order":369},
+  "source": {
+    "title":"第8次中期経営計画（2026年度～2028年度）",
+    "publishedDate":"2026-05-14",
+    "officialUrl":"https://www2.jpx.co.jp/disc/72710/140120260514534711.pdf",
+    "pdfSha256":"817e70ddb901185e1fe5bf3e7fc13c5361e80642fc33bcf5d9715b87c00650af",
+    "pageCount":43,
+    "documentClassification":"formal_management_plan_current_2026_to_2028",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2028年度","terminalFiscalYear":"2028年度・2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"第7次中期経営計画・2023年3月期～2026年3月期",
+      "currentPlan":"第8次中期経営計画・2026年度～2028年度",
+      "statement":"前中計実績、2027年3月期単年度予想、2029年3月期終期目標、投資・還元方針を分離する。"
+    }
+  },
+  "summary":"コンロッド、機械装置、環境機器のグローバルニッチ製品を拡大し、微細形状技術『微匠』による新事業を創造する。2029年3月期に売上高450億円、営業利益41億円、ROE15%、海外売上比率47%、自己資本比率40%を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":45000,"unit":"百万円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績33,951百万円","evidencePdfPages":[1,22]},
+    {"metric":"営業利益","target":4100,"unit":"百万円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績2,215百万円","evidencePdfPages":[1,22]},
+    {"metric":"ROE","target":15.0,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績14.4%","evidencePdfPages":[1,22]},
+    {"metric":"海外売上比率","target":47.0,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績40.2%","evidencePdfPage":22},
+    {"metric":"自己資本比率","target":40.0,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績34.8%","evidencePdfPages":[1,22]}
+  ],
+  "strategyThemes":[
+    {"theme":"グローバルニッチNo.1製品の拡大","evidencePdfPages":[21,24,25],"evidence":"国内外コンロッド、機械装置、環境機器の販売・生産能力・サービスを強化する。"},
+    {"theme":"微匠技術による新事業","evidencePdfPages":[21,26,27],"evidence":"ウィック、半導体工程、吸音、流体・熱マネジメント用途を開拓する。"},
+    {"theme":"人的資本・ブランド・職場環境","evidencePdfPage":28,"evidence":"採用・登用、働き方、健康、地域貢献、ブランディングを強化する。"},
+    {"theme":"財務バランスの適正化","evidencePdfPages":[20,29],"evidence":"成長投資と株主還元、内部留保、負債活用を組み合わせる。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation",
+    "operatingCashFlow":130,
+    "operatingCashFlowUnit":"億円",
+    "financialCashFlow":25,
+    "financialCashFlowUnit":"億円",
+    "strategicInvestment":110,
+    "strategicInvestmentUnit":"億円",
+    "shareholderReturn":16,
+    "shareholderReturnUnit":"億円",
+    "retainedEarnings":29,
+    "retainedEarningsUnit":"億円",
+    "investmentBreakdown":[
+      {"use":"メキシコ・エンジン部品新ライン","amount":40,"unit":"億円"},
+      {"use":"日本・エンジン部品新ライン","amount":20,"unit":"億円"},
+      {"use":"インドネシア・エンジン部品新ライン","amount":7,"unit":"億円"},
+      {"use":"その他","amount":28,"unit":"億円"},
+      {"use":"研究開発","amount":15,"unit":"億円"}
+    ],
+    "evidencePdfPage":29
+  },
+  "shareholderReturnPolicy": {
+    "status":"smoothed_dividend_with_payout_target",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%程度",
+    "threeYearReturnAmount":16,
+    "threeYearReturnAmountUnit":"億円",
+    "policy":"単年度利益に過度に左右されず、投資計画と財務状況を踏まえた平準的な配当を継続する。",
+    "evidencePdfPages":[1,29,31]
+  },
+  "nonFinancialTargets":[
+    {"metric":"コンロッド世界シェア","target":7,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期実績5%","evidencePdfPage":24},
+    {"metric":"安永メキシコ売上高","target":98,"unit":"億円","targetFiscalYear":"2028年度計画","baseline":"2025年度23億円","evidencePdfPage":24}
+  ],
+  "definitions":[
+    {"term":"営業CF130億円と財務CF25億円","definition":"3年間のキャッシュイン合計155億円。戦略投資110、還元16、内部留保29億円へ配分する。","evidencePdfPage":29},
+    {"term":"2027年3月期予想と2029年3月期目標","definition":"売上370億円・営業利益20億円等は初年度予想、450億円・41億円は中計終期目標。","evidencePdfPages":[10,22]},
+    {"term":"配当性向30%程度","definition":"平準的配当を行う中長期方針であり、単年度利益に機械的に連動させない。","evidencePdfPage":31}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousPlanForecastAndCurrentPlanSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T09:05:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年の売上・営業利益・ROE・海外比率・自己資本比率を原寸確認する","キャッシュイン130・25億円とアウト110・16・29億円を確認する","投資内訳40・20・7・28・15億円を再確認する","平準配当と配当性向30%程度の定義を確認する"]}
+}

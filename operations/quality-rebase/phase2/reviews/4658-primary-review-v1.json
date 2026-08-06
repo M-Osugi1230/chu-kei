@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"4658","name":"日本空調サービス","market":"Prime","industry":"サービス業","phase2Order":342},
+  "source": {
+    "title":"2026中期4ヵ年経営計画",
+    "publishedDate":"2026-05-13",
+    "officialUrl":"https://www2.jpx.co.jp/disc/46580/140120260513528861.pdf",
+    "pdfSha256":"9824376c61d1483003270cec3d696620e59ae4999cf7ad2b315d9789b653310c",
+    "pageCount":5,
+    "documentClassification":"formal_management_plan_replacing_2024_five_year_plan",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2030年3月期","terminalFiscalYear":"2030年3月期"},
+    "formalPlanBoundary":{"previousPlan":"2024中期5ヵ年経営計画・2025年3月期～2029年3月期","currentPlan":"2026中期4ヵ年経営計画・2027年3月期～2030年3月期","replacementReason":"2026年3月期に旧計画の利益目標を前倒し達成したため内容を見直し2030年3月期を追加","statement":"旧計画2029年3月期目標、2026年3月期実績、2027年3月期予想、現計画2030年3月期目標を分離する。"}
+  },
+  "summary":"人的資本を企業価値創出の源泉と位置づけ、総合技術力、海外事業、資本生産性を強化する。2030年3月期に売上高900億円、営業利益72億円、経常利益76億円、当期純利益53億円、営業利益率8%、ROE15%を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":90000,"unit":"百万円","targetFiscalYear":"2030年3月期","baseline":"2026年3月期実績69,245百万円","evidencePdfPage":4},
+    {"metric":"営業利益","target":7200,"unit":"百万円","targetFiscalYear":"2030年3月期","baseline":"2026年3月期実績4,758百万円","evidencePdfPage":4},
+    {"metric":"経常利益","target":7600,"unit":"百万円","targetFiscalYear":"2030年3月期","baseline":"2026年3月期実績5,108百万円","evidencePdfPage":4},
+    {"metric":"親会社株主に帰属する当期純利益","target":5300,"unit":"百万円","targetFiscalYear":"2030年3月期","baseline":"2026年3月期実績3,696百万円","evidencePdfPage":4},
+    {"metric":"営業利益率","target":8,"unit":"%","targetFiscalYear":"中計終期","baseline":"2026年3月期実績6.9%","evidencePdfPages":[3,4]},
+    {"metric":"ROE","target":15,"unit":"%","targetFiscalYear":"中計終期","baseline":"2026年3月期実績13.1%","evidencePdfPage":3}
+  ],
+  "annualForecastSeparated":[
+    {"metric":"売上高","target":74000,"unit":"百万円","targetFiscalYear":"2027年3月期","evidencePdfPage":4},
+    {"metric":"営業利益","target":5300,"unit":"百万円","targetFiscalYear":"2027年3月期","evidencePdfPage":4},
+    {"metric":"経常利益","target":5600,"unit":"百万円","targetFiscalYear":"2027年3月期","evidencePdfPage":4},
+    {"metric":"当期純利益","target":3900,"unit":"百万円","targetFiscalYear":"2027年3月期","evidencePdfPage":4}
+  ],
+  "strategyThemes":[
+    {"theme":"人的資本強化","evidencePdfPage":3,"evidence":"平均5%程度の給与水準引上げ、エンゲージメント75pt以上、従業員純増100名/年、女性社員比率17%を掲げる。"},
+    {"theme":"総合技術力再構築","evidencePdfPage":3,"evidence":"契約別粗利率改善、コア技術力指数CAGR3%以上、特殊施設売上比率7対3維持を目指す。"},
+    {"theme":"海外事業拡充","evidencePdfPage":3,"evidence":"海外売上45億円、海外営業利益2.25億円を目指す。"},
+    {"theme":"資本政策","evidencePdfPages":[3,5],"evidence":"投資有価証券圧縮、ROE向上、累進配当、自己株取得を通じ資本効率を高める。"}
+  ],
+  "capitalPolicy": {
+    "status":"balance_sheet_and_return_discipline_disclosed_no_cash_allocation_total",
+    "investmentSecuritiesToEquityTarget":15,
+    "investmentSecuritiesToEquityTargetUnit":"%以下",
+    "baseline":"2026年3月期32.2%・投資有価証券9,967百万円・純資産30,940百万円",
+    "equityRatioOperatingRange":"50～60%程度",
+    "buybackPolicy":"正のエクイティ・スプレッド拡大に寄与する成長投資がない場合は自己株式取得等で資本構成を適正化",
+    "cashAllocationTotal":null,
+    "statement":"投資有価証券縮減と資本構成方針は開示されるが、全社キャッシュアロケーション総額は開示されていないため推計しない。",
+    "evidencePdfPages":[3,5]
+  },
+  "shareholderReturnPolicy": {
+    "status":"progressive_dividend_with_payout_and_doe_targets",
+    "payoutRatioTarget":50,
+    "payoutRatioTargetUnit":"%",
+    "doeTarget":7.5,
+    "doeTargetUnit":"%",
+    "dividendPolicy":"累進的な配当",
+    "employeeShareholdingTarget":60,
+    "employeeShareholdingTargetUnit":"%加入率",
+    "capitalGainTreatment":"投資有価証券売却益を含むEPSを基に還元",
+    "evidencePdfPages":[3,5]
+  },
+  "nonFinancialTargets":[
+    {"metric":"平均給与水準引上げ","target":5,"unit":"%程度","targetFiscalYear":"継続","evidencePdfPage":3},
+    {"metric":"エンゲージメントスコア","target":75,"unit":"pt以上","targetFiscalYear":"中計期間","baseline":"72.6pt","evidencePdfPage":3},
+    {"metric":"従業員純増数","target":100,"unit":"名/年","targetFiscalYear":"中計期間","baseline":"+69名","evidencePdfPage":3},
+    {"metric":"女性社員比率","target":17,"unit":"%","targetFiscalYear":"中計期間","baseline":"12.6%","evidencePdfPage":3},
+    {"metric":"コア技術力指数","target":3,"unit":"CAGR%以上","targetFiscalYear":"中計期間","evidencePdfPage":3}
+  ],
+  "definitions":[
+    {"term":"旧計画目標","definition":"2029年3月期売上740億円・営業43億円等であり、現計画2030年目標とは分離する。","evidencePdfPage":1},
+    {"term":"2027年3月期数値","definition":"単年度予想であり、2030年3月期中計終期目標ではない。","evidencePdfPage":4},
+    {"term":"海外数値","definition":"海外子会社等の単純合算値。","evidencePdfPage":3}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousPlanActualForecastAndCurrentTargetSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T07:12:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["旧計画2029年目標と現計画2030年目標を原寸確認する","2027年単年度予想と2030年終期目標を独立突合する","配当性向50%・DOE7.5%・累進配当を確認する","投資有価証券比率15%以下と自己資本比率50～60%の定義を確認する","キャッシュアロケーション総額が未開示であることを確認する"]}
+}

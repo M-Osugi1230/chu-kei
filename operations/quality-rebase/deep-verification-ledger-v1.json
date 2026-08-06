@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "deep-verification-ledger-v1",
+  "updatedAt": "2026-08-01",
+  "policy": {
+    "automaticApprovalAllowed": false,
+    "minimumIndependentReviewers": 2,
+    "requiredChecks": [
+      "formalPlanConfirmed",
+      "fullTextReviewed",
+      "strategyStructured",
+      "metricsValidated",
+      "evidenceLinked",
+      "independentDoubleCheck"
+    ],
+    "approvalMeaning": "正式な中期経営計画の全文を確認し、戦略・数値・資本政策を構造化し、各項目の証跡ページ、年度、単位、連結範囲を検査したうえで、独立した別確認者が承認した状態。"
+  },
+  "counts": {
+    "approved": 0,
+    "inReview": 0,
+    "selected": 50,
+    "phase2Queued": 450
+  },
+  "records": [],
+  "notes": [
+    "旧quality.stars、stage=core、旧productionApprovalだけでは深掘り確認済みと判定しない。",
+    "Phase 1の50社はphase1-cohort-50-v1.json、Phase 2追加450社はphase2-queue-500-v1.jsonで管理する。",
+    "自動抽出結果は候補データであり、承認レコードを自動生成してはならない。"
+  ]
+}

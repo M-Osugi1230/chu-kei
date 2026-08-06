@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "phase2-source-resolution-v1",
+  "company": {"code": "3107", "name": "ダイワボウホールディングス"},
+  "resolutionStatus": "current_official_pdf_full_review_complete_binary_hash_pending",
+  "incorrectCandidate": {
+    "url": "https://www.daiwabo-holdings.com/ja/ir/strategy/main/01116/teaserItems1/00/linkList/0/link/20210513_mmp.pdf",
+    "pdfSha256": "a0fd36fe49991f1db84d98e66b029b23bff354aa5d01055f92677ed44c11e511",
+    "classification": "older_management_plan_pdf",
+    "reason": "候補メタデータは2025年3月期から2027年3月期を示す一方、収集器は2021年公開の旧中計PDFを選択していたため隔離する。",
+    "mayEnterPrimaryReview": false
+  },
+  "currentOfficialDocument": {
+    "landingPageUrl": "https://www.daiwabo-holdings.com/ja/ir/strategy.html",
+    "pdfUrl": "https://www.daiwabo-holdings.com/ja/ir/strategy/main/07/teaserItems1/01/link/Medium-Term%20Management%20Plan_FY0324-FY0327.pdf",
+    "title": "中期経営計画（2025/3～2027/3）",
+    "publishedDate": "2024-05-09",
+    "securityCode": "3107",
+    "pageCount": 29,
+    "pdfSha256": null,
+    "binaryHashStatus": "pending_retrieval_in_repository_execution_environment",
+    "identityEvidencePdfPages": [1, 2, 13, 25, 28],
+    "identityConfirmed": true,
+    "pageCountConfirmed": true,
+    "publicationDateConfirmed": true,
+    "planPeriodConfirmed": true
+  },
+  "documentClassification": "formal_management_plan_current_pdf_identity_confirmed_hash_pending",
+  "formalPlanBoundary": {
+    "previousPlan": "2022年3月期から2024年3月期",
+    "currentPlan": "2025年3月期から2027年3月期",
+    "longTermVision": "2030 VISION",
+    "statement": "前中計実績、現行3カ年計画、2030 VISION、Windows・GIGA特需と反動減を分離する。2027年3月期営業利益330億円と2030年3月期500億円を混在させない。",
+    "evidencePdfPages": [3, 8, 9, 10, 13, 14, 15]
+  },
+  "confirmedCurrentPlanFacts": {
+    "period": {"startFiscalYear": "2025年3月期", "endFiscalYear": "2027年3月期"},
+    "financialTargets": [
+      {"metric": "売上高", "target": 10000, "unit": "億円", "targetFiscalYear": "2027年3月期", "evidencePdfPage": 13},
+      {"metric": "営業利益", "target": 330, "unit": "億円", "targetFiscalYear": "2027年3月期", "evidencePdfPage": 13},
+      {"metric": "営業利益率", "target": 3.3, "unit": "%", "targetFiscalYear": "2027年3月期", "evidencePdfPage": 13},
+      {"metric": "ROE", "target": 14, "unit": "%以上", "targetScope": "計画期間を通じて維持", "evidencePdfPage": 13},
+      {"metric": "ROIC", "target": 12, "unit": "%以上", "targetScope": "計画期間を通じて維持", "evidencePdfPage": 13}
+    ],
+    "capitalAllocation": {
+      "cashMinimum": 500,
+      "cashMinimumUnit": "億円程度",
+      "capexAndResearchDevelopment": 150,
+      "capexAndResearchDevelopmentUnit": "億円・3カ年累計",
+      "systemInvestmentExpenseMinimum": 80,
+      "systemInvestmentExpenseMinimumUnit": "億円以上・3カ年累計",
+      "humanCapitalInvestmentExpenseMinimum": 100,
+      "humanCapitalInvestmentExpenseMinimumUnit": "億円以上・3カ年累計",
+      "externalBorrowing": "案件規模に応じて活用",
+      "evidencePdfPage": 25
+    },
+    "shareholderReturn": {
+      "dividendPayoutRatioMinimum": 30,
+      "dividendPayoutRatioUnit": "%以上",
+      "totalPayoutRatioGuide": 60,
+      "totalPayoutRatioUnit": "%以上を目安",
+      "policy": "安定配当と機動的な自己株式取得を組み合わせる",
+      "evidencePdfPage": 25
+    },
+    "longTermTargetSeparated": {"metric": "連結営業利益", "target": 500, "unit": "億円", "targetFiscalYear": "2030年3月期", "classification": "long_term_vision_not_current_plan_terminal_target", "evidencePdfPages": [9, 10, 15]}
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3107-primary-review-v1.json",
+  "validation": {
+    "currentOfficialPdfUrlConfirmed": true,
+    "companyIdentityConfirmed": true,
+    "securityCodeConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanBoundaryConfirmed": true,
+    "previousAndCurrentPlanSeparated": true,
+    "longTermVisionSeparatedFromCurrentPlan": true,
+    "financialTargetsLocated": true,
+    "capitalPolicyLocated": true,
+    "shareholderReturnPolicyLocated": true,
+    "strategyStructured": true,
+    "segmentTargetsStructured": true,
+    "nonFinancialDisclosureReviewed": true,
+    "visualFigureReviewComplete": true,
+    "pdfSha256Confirmed": false,
+    "fullTextRepositoryReviewComplete": true,
+    "independentDoubleCheck": false
+  },
+  "requiredNextChecks": [
+    "リポジトリ実行環境から現行公式PDFを再取得しSHA-256を固定する",
+    "取得バイナリが29ページで会社名、証券コード3107、公表日2024年5月9日と一致することを再確認する",
+    "独立確認者が旧PDF隔離、現行PDFハッシュ、年度、単位、範囲を再確認する"
+  ],
+  "primaryReviewComplete": true,
+  "independentReviewReady": false,
+  "independentReviewBlockingReason": "current_official_pdf_sha256_pending",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

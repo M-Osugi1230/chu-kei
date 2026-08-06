@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"5204","name":"石塚硝子","market":"Standard","industry":"ガラス・土石製品","phase2Order":497},
+  "source": {
+    "title":"2027年度中期経営計画『新たな領域への挑戦』アップデート",
+    "publishedDate":"2026-01-30",
+    "officialUrl":"https://www2.jpx.co.jp/disc/52040/140120260127538932.pdf",
+    "pdfSha256":"8747bebaadf009e3da12cc7ac10ae812bcecaeebae9377ce7b9e5463d76e7d6d",
+    "pageCount":11,
+    "documentClassification":"official_current_management_plan_target_timing_and_capital_policy_update",
+    "period":{"startFiscalYear":"2025年度","endFiscalYear":"2027年度・2028年3月期","terminalFiscalYear":"2027年度・2028年3月期"},
+    "formalPlanBoundary": {
+      "originalPlan":"2025年4月公表の2027年度中期経営計画『新たな領域への挑戦』",
+      "currentUpdate":"ROE達成時期、財務健全性、株主還元方針を2026年1月に更新",
+      "unchangedTarget":"2027年度連結営業利益50億円",
+      "statement":"変更前の2030年度ROE目標、変更後の2027年度目標、据置の営業利益目標を分離する。"
+    }
+  },
+  "summary":"包装容器、ハウスウェア、産業マテリアルの収益安定化と事業ポートフォリオ再構築を進め、ROE8%以上の達成時期を2030年度から2027年度へ前倒しした。自己資本比率40%程度を新設し、営業CF180～200億円を設備投資、負債圧縮、段階的増配等へ配分する。",
+  "financialTargets":[
+    {"metric":"連結営業利益","target":50,"unit":"億円","targetFiscalYear":"2027年度・据置","evidencePdfPages":[1,4]},
+    {"metric":"ROE","target":8,"unit":"%以上","targetFiscalYear":"2027年度・更新後","originalTarget":"2030年度までに8%以上","evidencePdfPages":[1,4]},
+    {"metric":"自己資本比率","target":40,"unit":"%程度","targetFiscalYear":"2027年度・新設","evidencePdfPages":[1,4,6]}
+  ],
+  "supersededTargetsSeparated":[
+    {"metric":"ROE","target":8,"unit":"%以上","targetFiscalYear":"2030年度まで","classification":"superseded_target_timing","evidencePdfPage":1}
+  ],
+  "strategyThemes":[
+    {"theme":"事業ポートフォリオ再構築","evidencePdfPages":[3,5],"evidence":"ガラスびん、紙容器、プラスチック容器、ハウスウェア、産業マテリアルを特性別に再構築する。"},
+    {"theme":"収益安定化と財務健全性","evidencePdfPages":[3,4,6],"evidence":"収益性の安定、自己資本比率向上、有利子負債圧縮を優先する。"},
+    {"theme":"設備・生産性投資","evidencePdfPage":6,"evidence":"プラスチック容器ライン、ガラスびん溶解炉、生産性向上設備へ投資する。"},
+    {"theme":"資産見直し・IR強化","evidencePdfPages":[7,8],"evidence":"政策保有株式・不動産を検証・縮減し、個人投資家向けIRを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation_with_ranges_and_approximate_amounts",
+    "period":"2025年度～2027年度",
+    "operatingCashFlowRange":"180～200億円",
+    "cashOut":{"debtReductionApprox":60,"growthInvestmentApprox":50,"maintenanceInvestmentApprox":70,"shareholderReturnFloor":10,"unit":"億円"},
+    "investmentUses":["プラスチック容器ライン更新","ガラスびん溶解炉更新","生産性向上設備","事業維持更新"],
+    "assetPolicy":"自己資本比率40%程度を目途に有利子負債を圧縮し、合理性の低い政策保有株式・不動産を売却する。",
+    "policy":"営業CFを財務健全性、成長投資、維持更新、還元へ配分する。各額は『程度』『以上』を含み、営業CFレンジと厳密に一致する固定予算として扱わない。",
+    "evidencePdfPages":[6,7,8]
+  },
+  "shareholderReturnPolicy": {
+    "status":"progressive_step_up_dividend_and_flexible_buybacks",
+    "threeYearReturnFloor":10,
+    "threeYearReturnFloorUnit":"億円以上",
+    "dividendPolicy":"段階的な増配",
+    "buybackPolicy":"機動的に自己株式取得を実施",
+    "originalPolicy":"安定的な配当の継続と機動的な自己株式取得",
+    "policy":"従来の安定配当から段階的増配へ強化し、機動的な自己株式取得を継続する。",
+    "evidencePdfPages":[1,4,6]
+  },
+  "nonFinancialTargets":[
+    {"metric":"Scope1・2 CO2排出量","target":30,"unit":"%削減・基準年は元計画定義に従う","targetFiscalYear":"2027年度","evidencePdfPage":1},
+    {"metric":"中堅若手人財","target":"躍動と視座高き人財の充実","unit":"施策目標","targetFiscalYear":"中計期間","evidencePdfPage":1},
+    {"metric":"ペーパーレス・アナログ作業脱却","target":"推進","unit":"施策目標","targetFiscalYear":"中計期間","evidencePdfPage":1}
+  ],
+  "definitions":[
+    {"term":"アップデート範囲","definition":"ROE達成時期、自己資本比率、株主還元方針を変更し、連結営業利益50億円や事業施策は維持する。","evidencePdfPage":1},
+    {"term":"キャッシュアロケーション","definition":"営業CF180～200億円に対し、負債圧縮60億円程度、成長投資50億円程度、維持更新70億円程度、還元10億円以上を示す。","evidencePdfPage":6},
+    {"term":"株主還元10億円以上","definition":"2025～2027年度の中計期間における還元枠で、配当と自己株式取得の確定内訳は未開示。","evidencePdfPage":6}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"originalAndUpdatedTargetTimingSeparated":true,"unchangedTargetsIdentified":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"rangesAndApproximateAmountsPreserved":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T09:10:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["ROE達成時期2030→2027年度と営業利益50億円据置を確認する","自己資本比率40%程度を確認する","営業CF180～200、負債60、成長50、維持70、還元10億円以上を原寸確認する","段階的増配・機動的自己株式取得を確認する"]}
+}

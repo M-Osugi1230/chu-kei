@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "7911",
+    "name": "TOPPANホールディングス",
+    "market": "Prime",
+    "industry": "その他製品"
+  },
+  "document": {
+    "title": "TOPPANグループ 中期経営計画2028",
+    "publishedDate": "2026-05-14",
+    "period": "2026年度-2028年度",
+    "officialUrl": "https://ssl4.eir-parts.net/doc/7911/ir_material_for_fiscal_ym3/202843/00.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 31,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "事業ポートフォリオ変革、コーポレート変革、バランスシート変革を通じて資本効率と成長性を高める",
+    "strategyThemes": [
+      "成長領域への経営資源集中と低収益事業の構造改革",
+      "デジタル・サステナブル領域を軸とした事業ポートフォリオ変革",
+      "コーポレート機能・人財・研究開発の変革",
+      "政策保有株式・遊休資産等の圧縮と株主還元強化"
+    ],
+    "groupTargets": [
+      {
+        "metric": "Non-GAAP営業利益",
+        "target": 1450,
+        "unit": "億円",
+        "targetYear": "2028年度",
+        "scope": "連結・Non-GAAP",
+        "evidence": "公式PDF p.8"
+      },
+      {
+        "metric": "GAAP営業利益",
+        "target": 1300,
+        "unit": "億円",
+        "targetYear": "2028年度",
+        "scope": "連結・GAAP",
+        "evidence": "公式PDF p.8"
+      },
+      {
+        "metric": "Non-GAAP ROE",
+        "target": 9,
+        "unit": "%",
+        "targetYear": "2028年度",
+        "scope": "連結・Non-GAAP",
+        "evidence": "公式PDF p.8"
+      },
+      {
+        "metric": "ROE",
+        "target": 8,
+        "unit": "%",
+        "targetYear": "2028年度",
+        "scope": "連結・GAAP",
+        "evidence": "公式PDF p.8・p.22"
+      },
+      {
+        "metric": "政策保有株式比率",
+        "target": 7,
+        "unit": "%未満（連結純資産比）",
+        "targetYear": "2028年度",
+        "scope": "バランスシート方針",
+        "evidence": "公式PDF p.22"
+      }
+    ],
+    "capitalPolicy": {
+      "operatingCashFlow": "2026-2028年度累計4,500億円以上",
+      "investmentCashFlow": "2026-2028年度累計約5,000億円",
+      "shareholderReturn": "総還元性向100%以上を目安に配当と自己株式取得を実施",
+      "balanceSheetReform": "資産圧縮20%を目安とし、政策保有株式を連結純資産比7%未満へ縮減",
+      "evidence": "公式PDF p.22-p.23"
+    },
+    "importantDefinitions": [
+      "Non-GAAP指標とGAAP指標を区分して表示",
+      "ROE目標はNon-GAAP 9%とGAAP 8%を混同しない",
+      "キャッシュフロー・投資・還元は2026-2028年度の累計値"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "gaapNonGaapSeparated": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全31ページの独立した再確認",
+      "GAAP・Non-GAAP指標と年度範囲の別確認者による原文突合",
+      "キャッシュアロケーションと政策保有株式目標の再確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 117,
+  "company": {
+    "code": "9699",
+    "name": "ニシオホールディングス",
+    "market": "Prime",
+    "industry": "サービス業",
+    "document": "中期経営計画・2026年9月期事業方針",
+    "planPublishedDate": "2025-11-13",
+    "sourceUrl": "https://www.nishio-holdings.co.jp/ir/",
+    "phaseScore": 146,
+    "templatePatternIds": []
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "ConnectionError",
+  "error": "HTTPSConnectionPool(host='www.nishio-holdings.co.jp', port=443): Max retries exceeded with url: /ir/ (Caused by NameResolutionError(\"HTTPSConnection(host='www.nishio-holdings.co.jp', port=443): Failed to resolve 'www.nishio-holdings.co.jp' ([Errno -2] Name or service not known)\"))",
+  "elapsedSeconds": 0.105,
+  "requiresManualSourceRecovery": true
+}

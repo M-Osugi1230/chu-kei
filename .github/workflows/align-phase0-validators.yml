@@ -1,0 +1,71 @@
+name: Align Phase 0 Validators
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/align-validators-request.json'
+      - 'scripts/align_phase0_validators_v1.mjs'
+      - '.github/workflows/align-phase0-validators.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: align-phase0-validators
+  cancel-in-progress: false
+
+jobs:
+  align:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout quality rebase branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Align legacy validators
+        run: node scripts/align_phase0_validators_v1.mjs
+
+      - name: Run complete local quality gate
+        env:
+          QUALITY_AS_OF_DATE: '2026-08-01'
+        run: npm run quality:local
+
+      - name: Commit validated alignment
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            scripts/validate_quality_debt_budget_v1.mjs \
+            operations/quality-debt-budget-v1.json \
+            scripts/validate_quality_dashboard_v1.mjs \
+            scripts/run_local_quality_gate.mjs \
+            artifacts
+          if git diff --cached --quiet; then
+            echo 'No validator alignment changes to commit.'
+          else
+            git commit -m 'quality: align legacy gates with Phase 0 truth'
+            git push origin HEAD:agent/quality-rebase-phase0-2
+          fi
+
+      - name: Upload local quality report
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase0-validator-alignment
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            artifacts/local-quality-gate-v1.json
+            artifacts/quality-debt-report-v1.json
+            artifacts/quality-debt-items-v1.csv
+            artifacts/quality-dashboard-report-v1.json

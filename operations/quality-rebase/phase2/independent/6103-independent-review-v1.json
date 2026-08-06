@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6103",
+    "name": "オークマ"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6103-primary-review-v1.json",
+  "source": {
+    "title": "オークマ 中期経営計画2028（2026～2028年度）",
+    "officialUrl": "https://contents.xj-storage.jp/xcontents/61030/ded33318/f5f2/42a9/abe2/7c5e167fcbf9/20260518161619236s.pdf",
+    "pdfSha256": "9db0ad00e5f09ad9554284cd4b2fe2e05199bc8b683b8bd6a257ecf635ba8a40",
+    "pageCount": 23
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "オークマ公式IRページ、会社名、公開日2026年5月19日、計画名称、PDFハッシュ、23ページを独立に再確認する。",
+      "expectedEvidencePages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period_boundary",
+      "description": "計画期間が2026年度から2028年度であり、2030年度ビジョンと混同していないことを確認する。",
+      "expectedEvidencePages": [5, 6],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2028年度の売上高2,700億円、営業利益率11%以上、ROE8%以上、営業利益300億円を2025年度実績と区別して再確認する。",
+      "expectedEvidencePages": [5, 6, 7],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "顧客起点の価値創造と事業基盤の改革の2方針、およびAI・自動化、地域別施策、バリューチェーン、人財戦略を確認する。",
+      "expectedEvidencePages": [8, 9, 11, 16, 17],
+      "status": "pending"
+    },
+    {
+      "id": "regional_sales",
+      "description": "2028年度の日本470億円、米州700億円、欧州700億円、アジア830億円と2025年度実績を図表で再確認する。",
+      "expectedEvidencePages": [10],
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocation",
+      "description": "3年間の投資総額約420億円、成長235億円、更新110億円、ESG75億円、営業CF900億円以上、配当220億円以上の期間・単位を確認する。",
+      "expectedEvidencePages": [19, 20],
+      "status": "pending"
+    },
+    {
+      "id": "asset_efficiency",
+      "description": "2028年度の現預金2～3カ月、棚卸資産5.0カ月、政策保有株式純資産比率10%未満を確認する。",
+      "expectedEvidencePages": [20],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "配当性向35%以上と、中計2025と同等水準の総還元という定義を確認し、固定総還元性向として誤記しない。",
+      "expectedEvidencePages": [21],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

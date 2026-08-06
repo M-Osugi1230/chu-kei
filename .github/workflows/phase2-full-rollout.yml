@@ -1,0 +1,178 @@
+name: Phase 2 Full 450 Rollout
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase2/full-rollout-request.json'
+      - 'scripts/phase2_bulk_collect_v1.py'
+      - '.github/workflows/phase2-full-rollout.yml'
+
+permissions:
+  contents: write
+
+env:
+  TARGET_BRANCH: agent/quality-rebase-phase0-2
+
+jobs:
+  validate-request:
+    runs-on: ubuntu-latest
+    outputs:
+      enabled: ${{ steps.request.outputs.enabled }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+      - id: request
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          value = json.load(open('operations/quality-rebase/phase2/full-rollout-request.json'))
+          assert value['targetAdditionalCompanies'] == 450
+          assert value['batches'] == list(range(2, 11))
+          assert value['automaticApprovalAllowed'] is False
+          print('enabled=true')
+          PY
+
+  collect-batches:
+    needs: validate-request
+    if: needs.validate-request.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        batch: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 pypdf
+      - name: Collect all five waves in batch
+        shell: bash
+        run: |
+          for wave in 1 2 3 4 5; do
+            echo "Collecting batch ${{ matrix.batch }} wave $wave"
+            python scripts/phase2_bulk_collect_v1.py --batch '${{ matrix.batch }}' --wave "$wave"
+          done
+      - name: Build batch summary and safety-check output
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          batch = int('${{ matrix.batch }}')
+          root = pathlib.Path(f'operations/quality-rebase/phase2/bulk-collection/batch-{batch:02d}')
+          summaries = [json.loads(path.read_text()) for path in sorted(root.glob('wave-*/summary.json'))]
+          if len(summaries) != 5:
+              raise SystemExit(f'expected 5 wave summaries, found {len(summaries)}')
+          companies = []
+          counts = {}
+          for summary in summaries:
+              companies.extend(summary['companies'])
+              for key, value in summary['counts'].items():
+                  counts[key] = counts.get(key, 0) + value
+          if len(companies) != 50 or len({str(row['code']) for row in companies}) != 50:
+              raise SystemExit('batch company completeness failure')
+          for path in root.rglob('*.json'):
+              text = path.read_text()
+              if '"automaticApprovalAllowed": true' in text or '"deepVerificationApproved": true' in text:
+                  raise SystemExit(f'unsafe approval flag in {path}')
+          report = {
+              'schemaVersion': 'phase2-bulk-collection-batch-v1',
+              'batch': batch,
+              'wavesExpected': 5,
+              'wavesCollected': 5,
+              'targetCompanies': 50,
+              'processedCompanies': 50,
+              'uniqueCompanies': 50,
+              'counts': counts,
+              'automaticApprovalAllowed': False,
+              'deepVerificationApproved': 0,
+              'companies': companies,
+          }
+          (root / 'summary.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase2-full-batch-${{ matrix.batch }}
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 6
+          path: operations/quality-rebase/phase2/bulk-collection/batch-*/
+
+  aggregate-rollout:
+    needs: [validate-request, collect-batches]
+    if: always() && needs.validate-request.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: phase2-full-batch-*
+          merge-multiple: false
+          path: /tmp/phase2-full
+      - name: Merge all completed batches
+        shell: bash
+        run: |
+          root="operations/quality-rebase/phase2/bulk-collection"
+          mkdir -p "$root"
+          for artifact in /tmp/phase2-full/phase2-full-batch-*; do
+            [ -d "$artifact" ] || continue
+            find "$artifact" -mindepth 1 -maxdepth 1 -type d -name 'batch-*' -exec cp -R {} "$root/" \;
+          done
+          python - <<'PY'
+          import json, pathlib
+          root = pathlib.Path('operations/quality-rebase/phase2/bulk-collection')
+          batches = []
+          all_companies = []
+          total_counts = {}
+          for batch_no in range(2, 11):
+              path = root / f'batch-{batch_no:02d}' / 'summary.json'
+              if not path.exists():
+                  batches.append({'batch': batch_no, 'status': 'artifact_missing'})
+                  continue
+              summary = json.loads(path.read_text())
+              batches.append({'batch': batch_no, 'status': 'collected', 'processedCompanies': summary['processedCompanies'], 'counts': summary['counts']})
+              all_companies.extend(summary['companies'])
+              for key, value in summary['counts'].items():
+                  total_counts[key] = total_counts.get(key, 0) + value
+          codes = [str(row['code']) for row in all_companies]
+          report = {
+              'schemaVersion': 'phase2-full-rollout-collection-v1',
+              'targetAdditionalCompanies': 450,
+              'collectedCompanies': len(all_companies),
+              'uniqueCompanies': len(set(codes)),
+              'batchesExpected': 9,
+              'batchesCollected': sum(1 for row in batches if row['status'] == 'collected'),
+              'counts': total_counts,
+              'automaticFactCompletionAllowed': False,
+              'automaticApprovalAllowed': False,
+              'deepVerificationApproved': 0,
+              'batches': batches,
+          }
+          (root / 'full-rollout-summary.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit all available collection outputs once
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/bulk-collection
+          if git diff --cached --quiet; then
+            echo 'No rollout changes.'
+          else
+            git commit -m 'quality: collect Phase 2 additional 450-company source packets'
+            git pull --rebase origin "$TARGET_BRANCH"
+            git push origin "HEAD:$TARGET_BRANCH"
+          fi

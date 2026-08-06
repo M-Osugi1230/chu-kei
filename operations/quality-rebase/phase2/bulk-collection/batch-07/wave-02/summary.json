@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 7,
+  "wave": 2,
+  "orders": "311-320",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "collection_failed": 2,
+    "collection_complete_primary_human_review_pending": 8
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 311,
+      "code": "2359",
+      "name": "コア",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 312,
+      "code": "2378",
+      "name": "ルネサンス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/23780/140120260508519969.pdf",
+      "pageCount": 36,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 313,
+      "code": "2428",
+      "name": "ウェルネット",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/24280/140120250808536622.pdf",
+      "pageCount": 9,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 314,
+      "code": "246A",
+      "name": "アスア",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/246A0/140120250829549608.pdf",
+      "pageCount": 38,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 315,
+      "code": "2733",
+      "name": "あらた",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/27330/140120260513531518.pdf",
+      "pageCount": 36,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 316,
+      "code": "2737",
+      "name": "トーメンデバイス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 317,
+      "code": "2872",
+      "name": "セイヒョー",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/28720/140120260417505994.pdf",
+      "pageCount": 20,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 318,
+      "code": "2934",
+      "name": "ジェイフロンティア",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/29340/140120250828549302.pdf",
+      "pageCount": 101,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 319,
+      "code": "2984",
+      "name": "ヤマイチエステート",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/29840/140120260528552526.pdf",
+      "pageCount": 28,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 320,
+      "code": "299A",
+      "name": "クラシル",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/299A0/140120260501516807.pdf",
+      "pageCount": 64,
+      "documentTypeCandidate": "growth_potential_document"
+    }
+  ]
+}

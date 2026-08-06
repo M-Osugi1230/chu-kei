@@ -1,0 +1,106 @@
+{
+  "version": "quality-score-v3",
+  "generatedAt": "2026-08-06T15:29:08.915Z",
+  "profileVersion": "3.0",
+  "storage": {
+    "format": "compact-bitmask",
+    "checkKeys": [
+      "officialSource",
+      "publicationDate",
+      "pageEvidence",
+      "structuredAnalysis",
+      "metricExtraction",
+      "progressConnected",
+      "humanReviewed",
+      "doubleChecked"
+    ],
+    "checkMaskBits": 8,
+    "verboseChecksStoredInBundle": false
+  },
+  "rule": {
+    "weights": {
+      "officialSource": 15,
+      "publicationDate": 10,
+      "pageEvidence": 15,
+      "structuredAnalysis": 15,
+      "metricExtraction": 15,
+      "progressConnected": 10,
+      "humanReviewed": 10,
+      "doubleChecked": 10
+    },
+    "extractionStages": [
+      "core",
+      "detailed_extracted"
+    ],
+    "fiveStars": "explicit deep verification approval plus all legacy machine checks",
+    "fourStars": "non-template company currently in explicit deep review",
+    "threeStars": "non-template structured company awaiting deep verification",
+    "twoStars": "official source confirmed but template-like or deep review not started",
+    "oneStar": "coverage only or insufficient evidence"
+  },
+  "before": {
+    "1": 0,
+    "2": 2685,
+    "3": 315,
+    "4": 0,
+    "5": 0
+  },
+  "after": {
+    "1": 0,
+    "2": 2685,
+    "3": 315,
+    "4": 0,
+    "5": 0
+  },
+  "byStage": {
+    "core": {
+      "companies": 3000,
+      "distribution": {
+        "1": 0,
+        "2": 2685,
+        "3": 315,
+        "4": 0,
+        "5": 0
+      },
+      "averageScore": 100
+    },
+    "detailed_extracted": {
+      "companies": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "averageScore": null
+    },
+    "source_indexed": {
+      "companies": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "averageScore": null
+    },
+    "jpx_indexed": {
+      "companies": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "averageScore": null
+    }
+  },
+  "bundle": {
+    "sha256": "d92e1d595aa31866da6a4d20fe9412283992acc2a0484049ba4f4ef379ef57c4",
+    "compressedBytes": 729488,
+    "parts": 43
+  }
+}

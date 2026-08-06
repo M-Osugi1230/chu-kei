@@ -1,0 +1,67 @@
+name: Phase 2 Review Ledger Reconcile
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase2/reviews/**'
+      - 'operations/quality-rebase/phase2/independent/**'
+      - 'operations/quality-rebase/phase2/primary-review-wave*-v1.json'
+      - 'scripts/reconcile_phase2_review_ledgers.py'
+      - '.github/workflows/phase2-review-ledger-reconcile.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-review-ledger-reconcile-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/quality-rebase-phase0-2
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebase on latest branch
+        run: git pull --rebase origin agent/quality-rebase-phase0-2
+
+      - name: Reconcile explicit review records
+        run: python scripts/reconcile_phase2_review_ledgers.py
+
+      - name: Validate all Phase 2 waves
+        run: |
+          for wave in operations/quality-rebase/phase2/primary-review-wave*-v1.json; do
+            python scripts/validate_phase2_primary_review_wave.py \
+              --wave "$wave" \
+              --status operations/quality-rebase/phase2/current-status-v1.json \
+              --repo-root .
+          done
+
+      - name: Commit reconciled ledgers
+        run: |
+          if git diff --quiet -- \
+            operations/quality-rebase/phase2/primary-review-wave*-v1.json \
+            operations/quality-rebase/phase2/current-status-v1.json; then
+            echo 'No ledger changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            operations/quality-rebase/phase2/primary-review-wave*-v1.json \
+            operations/quality-rebase/phase2/current-status-v1.json
+          git commit -m 'quality: explicit review recordsからPhase 2台帳を同期'
+          git push origin HEAD:agent/quality-rebase-phase0-2

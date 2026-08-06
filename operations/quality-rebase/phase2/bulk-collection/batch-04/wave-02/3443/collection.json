@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 169,
+  "company": {
+    "code": "3443",
+    "name": "川田テクノロジーズ",
+    "market": "Prime",
+    "industry": "金属製品",
+    "document": "「第4次中期経営計画」策定に関するお知らせ",
+    "planPublishedDate": "2026-05-12",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/34430/140120260512525457.pdf",
+    "phaseScore": 111,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.391,
+  "requiresManualSourceRecovery": true
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"3423","name":"エスイー","market":"Standard","industry":"金属製品","phase2Order":327},
+  "source": {
+    "title":"中期経営計画2030",
+    "publishedDate":"2026-06-01",
+    "officialUrl":"https://www2.jpx.co.jp/disc/34230/140120260528552195.pdf",
+    "pdfSha256":"7136f398be3350578096f80ec9ca4a6def10b84cbfc8b707d95b47809097e22d",
+    "pageCount":40,
+    "documentClassification":"formal_management_plan_current_2026_to_2030",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2030年度","terminalFiscalYear":"2030年度"},
+    "formalPlanBoundary":{"previousPlan":"中期経営計画2023-2025","currentPlan":"中期経営計画2030・2026年度～2030年度","statement":"前中計の2023～2025年度実績と課題、2025年度実績、現計画2030年度目標を分離する。"}
+  },
+  "summary":"既存事業の収益力回復、新規3事業の立ち上げ・収益化、AI等を活用した経営基盤強化を進める。2030年度に売上高370億円、営業利益28億円、ROE16%、新規事業売上高75億円を目指し、5年間累計120億円の基礎営業CFを成長投資、設備投資、株主還元へ配分する。",
+  "financialTargets":[
+    {"metric":"売上高","target":370,"unit":"億円","targetFiscalYear":"2030年度","baseline":"2025年度254億円","evidencePdfPages":[6,19]},
+    {"metric":"営業利益","target":28,"unit":"億円","targetFiscalYear":"2030年度","baseline":"2025年度5.9億円","evidencePdfPage":19},
+    {"metric":"ROE","target":16,"unit":"%","targetFiscalYear":"2030年度","baseline":"2025年度-4.0%","evidencePdfPage":19},
+    {"metric":"新規事業売上高","target":75,"unit":"億円","targetFiscalYear":"2030年度","baseline":"2025年度実績なし","evidencePdfPages":[6,23]}
+  ],
+  "strategyThemes":[
+    {"theme":"既存事業の収益力強化","evidencePdfPages":[19,22],"evidence":"建設用資機材・建築用資材を中心に受注確保、効率化、事業領域拡大、技術差別化を進める。"},
+    {"theme":"新規3事業の立ち上げ・収益化","evidencePdfPages":[18,23],"evidence":"製造業支援、道路レジリエンス統合プラットフォーム、ASEAN防災の3事業を新たな収益の柱へ育成する。"},
+    {"theme":"AI等を活用した経営基盤強化","evidencePdfPage":20,"evidence":"AI・デジタル活用を通じて経営基盤と収益性を向上させる。"},
+    {"theme":"事業ポートフォリオ変革","evidencePdfPages":[19,21,23],"evidence":"2030年度に新規事業売上比率20%、既存事業80%を目指し、資本コストを上回る資本収益性を実現する。"}
+  ],
+  "capitalPolicy": {
+    "status":"five_year_cash_allocation_disclosed",
+    "baseOperatingCashFlow":120,
+    "baseOperatingCashFlowUnit":"億円・5年間累計",
+    "growthInvestments":[
+      {"use":"ASEAN防災事業","amount":30,"unit":"億円"},
+      {"use":"製造業支援事業","amount":40,"unit":"億円"},
+      {"use":"道路レジリエンス統合プラットフォーム事業","amount":20,"unit":"億円"},
+      {"use":"発電事業・経営基盤強化・既存設備投資等","amount":25,"unit":"億円"}
+    ],
+    "shareholderReturnAllocation":"ベースCFの20%",
+    "policy":"既存事業の収益力強化によるキャッシュイン増を成長投資へ優先配分し、株主還元にはベースCFの20%を配分する。",
+    "evidencePdfPage":24
+  },
+  "shareholderReturnPolicy": {
+    "status":"long_term_stable_dividend_with_doe_floor",
+    "doeTarget":3.5,
+    "doeTargetUnit":"%以上",
+    "payoutRatioTarget":null,
+    "dividendPolicy":"長期安定配当",
+    "statement":"直接的な配当と成長投資による中長期的な株価上昇を組み合わせたトータルリターンを目指す。",
+    "evidencePdfPage":25
+  },
+  "nonFinancialTargets":[
+    {"metric":"新規事業売上構成比","target":20,"unit":"%","targetFiscalYear":"2030年度","evidencePdfPage":23},
+    {"metric":"既存事業売上構成比","target":80,"unit":"%","targetFiscalYear":"2030年度","evidencePdfPage":23}
+  ],
+  "definitions":[
+    {"term":"2025年度数値","definition":"前中計最終年度の実績であり、現計画2030年度目標の基準値として扱う。","evidencePdfPages":[10,19]},
+    {"term":"基礎営業CF","definition":"研究開発関連を除く営業キャッシュフロー。現計画では5年間累計120億円を想定する。","evidencePdfPages":[10,24]},
+    {"term":"株主還元配分","definition":"ベースCFの20%を株主還元へ配分し、DOE3.5%以上を目安とする。","evidencePdfPages":[24,25]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousPlanAndCurrentTargetsSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T16:31:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2030年度の売上高370億円・営業利益28億円・ROE16%を原寸確認する","新規事業売上高75億円・売上構成比20%を図表突合する","基礎営業CF120億円と投資配分30・40・20・25億円を独立確認する","ベースCFの20%を株主還元へ配分する定義を確認する","DOE3.5%以上と長期安定配当方針を確認する"]}
+}

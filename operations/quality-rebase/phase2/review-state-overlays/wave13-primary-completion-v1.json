@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-05T23:05:00+09:00",
+  "wave": 13,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave13-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "reason": "Wave13の10社は全文・数値・資本政策・項目別証跡の一次レビューを完了した。図表原寸確認と独立再確認は未完了のため、独立レビュー準備数には含めない。",
+  "expectedBase": {
+    "wavePrimaryReviewComplete": 0,
+    "waveIndependentReviewReady": 0,
+    "primaryReviewComplete": 118,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 332,
+    "primaryReviewWavesAssigned": 13,
+    "primaryReviewCompaniesAssignedTotal": 130
+  },
+  "companyCompletions": [
+    {"order":376,"code":"7811","name":"中本パックス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/7811-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2027_2_to_2029_2"},
+    {"order":377,"code":"7871","name":"フクビ化学工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/7871-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_current_management_plan_progress_update"},
+    {"order":379,"code":"8011","name":"三陽商会","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8011-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_revision_and_progress_update"},
+    {"order":380,"code":"8014","name":"蝶理","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8014-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028"},
+    {"order":381,"code":"8037","name":"カメイ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8037-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"official_long_term_management_policy_current_revision_with_three_year_capital_allocation"},
+    {"order":382,"code":"8078","name":"阪和興業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8078-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028"},
+    {"order":383,"code":"8081","name":"カナデン","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8081-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028"},
+    {"order":384,"code":"8130","name":"サンゲツ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8130-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2027_3_to_2030_3"},
+    {"order":386,"code":"8273","name":"イズミ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8273-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2030"},
+    {"order":388,"code":"8309","name":"三井住友トラストグループ","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/8309-primary-review-v1.json","completedChecks":["formalPlanConfirmation","formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],"pendingChecks":["visualFigureReview","independentDoubleCheck"],"sourceClassification":"formal_management_plan_current_2026_to_2028_with_2035_vision"}
+  ],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 10,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 10,
+    "primaryReviewComplete": 128,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 322,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

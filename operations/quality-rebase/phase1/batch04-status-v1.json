@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "quality-rebase-phase1-batch-status-v1",
+  "batch": {
+    "id": "phase1-batch-04",
+    "orders": "31-40",
+    "targetCompanies": 10,
+    "updatedAt": "2026-08-01",
+    "automaticDeepApprovalAllowed": false
+  },
+  "counts": {
+    "primaryReviewComplete": 10,
+    "independentReviewReady": 8,
+    "additionalSourceMappingRequired": 2,
+    "sourceIdentityConflictBlocked": 0,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0,
+    "remainingPrimaryReview": 0
+  },
+  "companies": [
+    {"order":31,"code":"5834","name":"SBIリーシングサービス","market":"Growth","industry":"証券、商品先物取引業","document":"事業計画及び成長可能性に関する事項","planPublishedDate":"2026-06-24","sourceUrl":"https://www2.jpx.co.jp/disc/58340/140120260624577849.pdf","status":"primary_review_complete_formal_plan_period_figure_and_shareholder_return_source_pending","reviewFile":"operations/quality-rebase/phase1/reviews/5834-primary-review-v1.json"},
+    {"order":32,"code":"7771","name":"日本精密","market":"Standard","industry":"精密機器","document":"中期経営計画 ASEAN Project III","planPublishedDate":"2026-06-29","sourceUrl":"https://www.nihon-s.co.jp/wp-content/uploads/2026/06/20260629_%E4%B8%AD%E6%9C%9F%E7%B5%8C%E5%96%B6%E8%A8%88%E7%94%BB%E3%80%8CASEAN-Project%E2%85%A2%E3%80%8D%E3%81%AE%E7%AD%96%E5%AE%9A%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B-002.pdf","status":"primary_review_complete_independent_corrected_deck_and_figure_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/7771-primary-review-v1.json"},
+    {"order":33,"code":"9204","name":"スカイマーク","market":"Growth","industry":"空運業","document":"事業計画及び成長可能性に関する資料／FY2026-FY2030更新中期目標","planPublishedDate":"2026-06-18","sourceUrl":"https://www2.jpx.co.jp/disc/92040/140120260611568685.pdf","status":"primary_review_complete_independent_figure_prior_plan_and_dividend_policy_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/9204-primary-review-v1.json"},
+    {"order":34,"code":"278A","name":"Terra Drone","market":"Growth","industry":"精密機器","document":"事業計画及び成長可能性に関する事項","planPublishedDate":"2026-04-30","sourceUrl":"https://www2.jpx.co.jp/disc/278A0/140120260428513214.pdf","status":"primary_review_complete_current_formal_midterm_plan_and_shareholder_return_source_pending","reviewFile":"operations/quality-rebase/phase1/reviews/278A-primary-review-v1.json"},
+    {"order":35,"code":"3598","name":"山喜","market":"Standard","industry":"繊維製品","document":"中期経営計画（2026～2028年度）","planPublishedDate":"2026-05-08","sourceUrl":"https://www2.jpx.co.jp/disc/35980/140120260508520026.pdf","status":"primary_review_complete_independent_full_deck_and_financial_figure_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/3598-primary-review-v1.json"},
+    {"order":36,"code":"9073","name":"京極運輸商事","market":"Standard","industry":"陸運業","document":"第3次中期経営計画（2026年度-2028年度）","planPublishedDate":"2026-05-18","sourceUrl":"https://www2.jpx.co.jp/disc/90730/140120260518539970.pdf","status":"primary_review_complete_independent_consolidated_scope_and_figure_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/9073-primary-review-v1.json"},
+    {"order":37,"code":"9366","name":"サンリツ","market":"Standard","industry":"倉庫・運輸関連業","document":"新中期経営計画","planPublishedDate":"2026-05-14","sourceUrl":"https://www2.jpx.co.jp/disc/93660/140120260514532100.pdf","status":"primary_review_complete_independent_investment_boundary_and_figure_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/9366-primary-review-v1.json"},
+    {"order":38,"code":"9367","name":"大東港運","market":"Standard","industry":"倉庫・運輸関連業","document":"大東港運グループ第9次中期経営計画 Stronger Together","planPublishedDate":"2026-05-13","sourceUrl":"https://www.daito-koun.co.jp/ir_cms/upload_file/tdnrelease/9367_20260513528865_P01_.pdf","status":"primary_review_complete_independent_kgi_and_capital_policy_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/9367-primary-review-v1.json"},
+    {"order":39,"code":"3204","name":"トーア紡コーポレーション","market":"Standard","industry":"繊維製品","document":"TOA FG2027 計画数値の修正について","planPublishedDate":"2026-02-13","sourceUrl":"https://www2.jpx.co.jp/disc/32040/140120260212558620.pdf","status":"primary_review_complete_independent_original_revision_and_capital_policy_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/3204-primary-review-v1.json"},
+    {"order":40,"code":"7957","name":"フジコピアン","market":"Standard","industry":"その他製品","document":"中期経営計画（2026～2030）FCX80","planPublishedDate":"2026-03-05","sourceUrl":"https://www2.jpx.co.jp/disc/79570/140120260305576489.pdf","status":"primary_review_complete_independent_rolling_plan_special_gain_and_figure_check_pending","reviewFile":"operations/quality-rebase/phase1/reviews/7957-primary-review-v1.json"}
+  ],
+  "approvalGate": {
+    "minimumIndependentReviewers": 2,
+    "requiredChecks": ["formalPlanConfirmed","fullTextReviewed","strategyStructured","metricsValidated","evidenceLinked","independentDoubleCheck","postPublicationLinkAndRenderCheck"],
+    "rule": "一次レビュー完了だけでは最高品質へ昇格しない。別確認者による全文・図表・定義の再確認と公開後検査が完了した企業のみ承認する。"
+  }
+}

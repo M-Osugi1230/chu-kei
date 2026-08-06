@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "quality-rebase-phase0-apply-request-v1",
+  "requestedAt": "2026-08-01",
+  "requestedBy": "project-owner",
+  "branch": "agent/quality-rebase-phase0-2",
+  "runRequested": true,
+  "scope": [
+    "replace_legacy_five_star_with_explicit_deep_verification",
+    "publish_truthful_phase0_counts",
+    "rebuild_quality_distribution",
+    "generate_phase1_cohort_50",
+    "generate_phase2_queue_450",
+    "validate_public_quality_status"
+  ],
+  "guardrails": {
+    "automaticDeepApprovalAllowed": false,
+    "minimumIndependentReviewers": 2,
+    "expectedDeepVerifiedAfterPhase0": 0,
+    "expectedPhase2Target": 500
+  }
+}

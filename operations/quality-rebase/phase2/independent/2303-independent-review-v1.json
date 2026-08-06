@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "2303",
+    "name": "ドーン"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2303-primary-review-v1.json",
+  "source": {
+    "title": "2026年5月期 決算説明・中期経営計画進捗説明資料",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/23030/140120260707588905.pdf",
+    "pdfSha256": "fc71df704ec7ffd8d027a2af881a622617f210c38e7e2071046f50b017591fe8",
+    "pageCount": 56
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社ドーン、証券コード2303、2026年7月公表、PDFハッシュ、56ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "document_classification",
+      "description": "初回策定資料ではなく、決算説明と第2次中期経営計画の進捗・目標更新資料であることを確認する。",
+      "expectedEvidencePdfPages": [1, 2, 23, 26, 31],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "第2次中計が2026年5月期～2028年5月期の3年間であることを確認する。",
+      "expectedEvidencePdfPages": [30, 31],
+      "status": "pending"
+    },
+    {
+      "id": "actual_forecast_target_separation",
+      "description": "2026年実績、2027年単年度予想、2028年中計目標を混同していないことを確認する。",
+      "expectedEvidencePdfPages": [3, 24, 31, 32],
+      "status": "pending"
+    },
+    {
+      "id": "updated_targets",
+      "description": "2028年売上1,880百万円、営業利益670百万円＋α、経常利益687百万円＋α、純利益485百万円＋αを図表で再確認する。",
+      "expectedEvidencePdfPages": [31, 32],
+      "status": "pending"
+    },
+    {
+      "id": "superseded_target",
+      "description": "旧2028年純利益目標477百万円と更新後485百万円＋αを分離し、旧目標を現行値として表示していないことを確認する。",
+      "expectedEvidencePdfPage": 31,
+      "status": "pending"
+    },
+    {
+      "id": "plus_alpha",
+      "description": "＋α表記を落とさず、基礎値のみの固定目標へ変換していないことを確認する。",
+      "expectedEvidencePdfPage": 31,
+      "status": "pending"
+    },
+    {
+      "id": "growth_image_boundary",
+      "description": "tiwaki社を含む21.5億円等の増収イメージと正式な2028年連結予想を分離していることを確認する。",
+      "expectedEvidencePdfPage": 33,
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "高い自己資本比率と厳選成長投資の方針は確認できる一方、中計期間の投資総額は未開示であることを確認する。",
+      "expectedEvidencePdfPages": [38, 39, 42, 48],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "累進配当、総還元性向を意識した自己株式取得、株式分割後の表示を再確認する。",
+      "expectedEvidencePdfPages": [37, 38, 40],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、単位、＋α、株式分割後配当表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

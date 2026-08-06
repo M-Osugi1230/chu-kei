@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase1-review-packets-request-v1",
+  "requestedAt": "2026-08-01T19:04:00+09:00",
+  "requestRevision": 4,
+  "cohortPath": "operations/quality-rebase/phase1-cohort-50-v1.json",
+  "targetCompanies": 50,
+  "batchSize": 10,
+  "runRequested": true,
+  "processingOrder": "strict_sequential_batches",
+  "currentBatch": {
+    "startOrder": 21,
+    "endOrder": 30,
+    "status": "collection_and_review_packet_generation"
+  },
+  "policy": {
+    "officialSourcesOnly": true,
+    "fullTextExtractionRequired": true,
+    "fieldLevelEvidenceRequired": true,
+    "yearUnitScopeValidationRequired": true,
+    "documentTypeSeparationRequired": true,
+    "automaticFactCompletionAllowed": false,
+    "automaticDeepApprovalAllowed": false,
+    "humanFullTextReviewRequired": true,
+    "minimumIndependentReviewers": 2,
+    "humanReviewValidator": "scripts/validate_phase1_human_reviews_v1.py"
+  },
+  "completionRule": "企業ごとに全必須チェックを満たした場合のみ最高品質へ昇格し、不足企業は差戻しまたは資料同一性解消キューへ固定する。"
+}

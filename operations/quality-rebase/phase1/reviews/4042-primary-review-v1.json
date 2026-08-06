@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "4042",
+    "name": "東ソー",
+    "market": "Prime",
+    "industry": "化学"
+  },
+  "document": {
+    "title": "中期経営計画 2025～2027年度",
+    "publishedDate": "2025-05-23",
+    "period": "2025年度-2027年度",
+    "officialUrl": "https://ssl4.eir-parts.net/doc/4042/tdnet/2623991/00.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 55,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "スペシャリティ事業の成長とコモディティ事業の競争力強化を両立し、安定的な収益成長と資本効率向上を目指す",
+    "strategyThemes": [
+      "成長分野・スペシャリティ事業への重点投資",
+      "チェーン事業の競争力維持と設備の信頼性向上",
+      "研究開発・人材・GX対応への投資",
+      "資本効率を意識した事業ポートフォリオ運営",
+      "安定配当と自己株式取得を組み合わせた株主還元"
+    ],
+    "groupTargets": [
+      {
+        "metric": "売上高",
+        "target": 11830,
+        "unit": "億円",
+        "targetYear": "2027年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.24（資料内ページ23）"
+      },
+      {
+        "metric": "営業利益",
+        "target": 1400,
+        "unit": "億円",
+        "targetYear": "2027年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.24（資料内ページ23）"
+      },
+      {
+        "metric": "ROE",
+        "target": 10,
+        "unit": "%以上",
+        "targetYear": "2027年度",
+        "scope": "連結",
+        "evidence": "公式PDF p.24（資料内ページ23）"
+      },
+      {
+        "metric": "総還元性向",
+        "target": 50,
+        "unit": "%",
+        "targetYear": "中計期間",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.44（資料内ページ43）"
+      },
+      {
+        "metric": "年間配当下限",
+        "target": 100,
+        "unit": "円/株",
+        "targetYear": "中計期間",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.44（資料内ページ43）"
+      }
+    ],
+    "capitalPolicy": {
+      "operatingCashFlow": "2025-2027年度累計3,500～3,800億円",
+      "capitalInvestment": "設備投資2,500億円規模を計画し、成長・競争力強化と維持更新へ配分",
+      "investmentCashFlow": "2025-2027年度累計2,200～2,500億円",
+      "shareholderReturn": "総還元性向50%を基本とし、年間配当100円/株を下限、3年間で自己株式取得500億円を計画",
+      "evidence": "公式PDF p.43-p.45"
+    },
+    "segmentEvidence": {
+      "evidence": "公式PDF p.24-p.25",
+      "notes": "クロル・アルカリ、石油化学、機能商品等の事業別方針と収益目標を確認"
+    },
+    "importantDefinitions": [
+      "売上高・営業利益は2027年度の連結目標",
+      "キャッシュフローと設備投資は2025-2027年度累計",
+      "還元目標は配当下限・総還元性向・自己株式取得を分けて表示"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "shareholderReturnComponentsSeparated": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全55ページの独立した再確認",
+      "2027年度財務目標と3カ年累計キャッシュフローの別確認者による原文突合",
+      "総還元性向・配当下限・自己株式取得額の再確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

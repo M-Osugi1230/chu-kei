@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"9468","name":"KADOKAWA","market":"Prime","industry":"情報・通信業","phase2Order":396},
+  "source": {
+    "title":"中期経営計画 2027年3月期－2032年3月期 改革、成長、そして拡大へ",
+    "publishedDate":"2026-05-14",
+    "officialUrl":"https://www2.jpx.co.jp/disc/94680/140120260511523401.pdf",
+    "pdfSha256":"e505a9b28b6738363131f0be02dcfd32715958e292260bdb39d79500705a2a7b",
+    "pageCount":49,
+    "documentClassification":"formal_management_plan_current_2027_3_to_2032_3_replacing_prior_plan",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2032年3月期","terminalFiscalYear":"2032年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"2024年3月期～2028年3月期の現中計・売上3,400億円、営業利益340億円等",
+      "replacementPlan":"2027年3月期～2032年3月期の新6カ年計画",
+      "phase1":"構造改革期・2027年3月期～2028年3月期",
+      "phase2":"利益成長期・2029年3月期～2030年3月期",
+      "phase3":"利益拡大期・2031年3月期～2032年3月期",
+      "statement":"旧中計目標・予測、新計画の中間目標、終期目標を分離する。"
+    }
+  },
+  "summary":"国内出版とアニメの構造改革を断行し、出版IP、アニメ制作・ライツ、ゲーム、Web、教育、海外流通を段階的に成長させる。2032年3月期に売上高4,000億円、海外売上高1,000億円、営業利益380億円、ROE9.4%を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":4000,"unit":"億円","targetFiscalYear":"2032年3月期","evidencePdfPages":[10,11]},
+    {"metric":"海外売上高","target":1000,"unit":"億円","targetFiscalYear":"2032年3月期","evidencePdfPage":11},
+    {"metric":"営業利益","target":380,"unit":"億円","targetFiscalYear":"2032年3月期","evidencePdfPages":[10,11]},
+    {"metric":"営業利益率","target":9.5,"unit":"%","targetFiscalYear":"2032年3月期","evidencePdfPage":11},
+    {"metric":"ROE","target":9.4,"unit":"%","targetFiscalYear":"2032年3月期","longTermReference":"中長期的に12%以上","evidencePdfPages":[11,28,30]},
+    {"metric":"EPS","target":180,"unit":"円","targetFiscalYear":"2032年3月期","evidencePdfPages":[11,28]},
+    {"metric":"海外売上比率","target":25,"unit":"%","targetFiscalYear":"2032年3月期","baseline":"2026年3月期19.8%","evidencePdfPage":28}
+  ],
+  "intermediateTargetsSeparated":[
+    {"metric":"売上高","target":3500,"unit":"億円","targetFiscalYear":"2030年3月期","classification":"intermediate_target","evidencePdfPage":11},
+    {"metric":"海外売上高","target":790,"unit":"億円","targetFiscalYear":"2030年3月期","classification":"intermediate_target","evidencePdfPage":11},
+    {"metric":"営業利益","target":200,"unit":"億円","targetFiscalYear":"2030年3月期","classification":"intermediate_target","evidencePdfPages":[10,11]},
+    {"metric":"営業利益率","target":5.7,"unit":"%","targetFiscalYear":"2030年3月期","classification":"intermediate_target","evidencePdfPage":11},
+    {"metric":"ROE","target":5.8,"unit":"%","targetFiscalYear":"2030年3月期","classification":"intermediate_target","evidencePdfPage":11},
+    {"metric":"EPS","target":100,"unit":"円","targetFiscalYear":"2030年3月期","classification":"intermediate_target","evidencePdfPage":11}
+  ],
+  "supersededTargetsSeparated":[
+    {"metric":"売上高","target":3400,"unit":"億円","targetFiscalYear":"2028年3月期","classification":"superseded_prior_plan_target","latestForecast":3250,"evidencePdfPages":[4,5,10]},
+    {"metric":"営業利益","target":340,"unit":"億円","targetFiscalYear":"2028年3月期","classification":"superseded_prior_plan_target","latestForecast":130,"evidencePdfPages":[4,5,10]},
+    {"metric":"海外売上高","target":700,"unit":"億円","targetFiscalYear":"2028年3月期","classification":"superseded_prior_plan_target","latestForecast":640,"evidencePdfPages":[4,5]},
+    {"metric":"営業利益率","target":10,"unit":"%","targetFiscalYear":"2028年3月期","classification":"superseded_prior_plan_target","latestForecast":4.0,"evidencePdfPages":[4,5]}
+  ],
+  "strategyThemes":[
+    {"theme":"国内出版構造改革","evidencePdfPages":[13,14,15,16],"evidence":"刊行点数、作品ポートフォリオ、価格・部数、製造物流、宣伝販促を選択と集中で再設計する。"},
+    {"theme":"アニメ企画・制作・二次展開","evidencePdfPages":[19,20,21,22,23,24,25],"evidence":"シリーズIP、内製制作、スタジオ、人材、海外・国内ライツ、映画配給を強化する。"},
+    {"theme":"グローバル・メディアミックス","evidencePdfPages":[27,29,40],"evidence":"海外出版拠点と流通網、アニメ、ゲーム、MD、イベントを連携しIPのLTVを最大化する。"},
+    {"theme":"ゲーム・Web・教育","evidencePdfPages":[27,41,45],"evidence":"ゲームパイプライン、ニコニコ・クリエイター経済、カクヨム、教育事業を拡大する。"},
+    {"theme":"組織・投資規律・ガバナンス","evidencePdfPages":[7,30,31,32,35,36],"evidence":"責任体制、固定費改革、投資入口・撤退基準、人的資本、セキュリティを強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_funding_base_with_dynamic_allocation",
+    "period":"2027年3月期～2032年3月期",
+    "beginningCash":1200,
+    "beginningCashUnit":"億円・2026年3月期末",
+    "cumulativeOperatingCashFlow":1400,
+    "cumulativeOperatingCashFlowUnit":"億円・中計期間",
+    "growthInvestmentPolicy":"主要事業・作品開発・システム・海外拠点・M&Aを最優先し、営業CFの100%以上の投入も想定",
+    "baseCashPolicy":"運転資金と将来の資金需要に基づき必要現預金を保持",
+    "investmentDiscipline":"株主資本コスト超過を入口審査基準とし、撤退基準と定期モニタリングを厳格運用",
+    "exactGrowthInvestmentAmount":null,
+    "policy":"現預金と営業CFを成長投資・株主還元・基礎資金へ段階に応じ配分する。用途別の確定金額は開示されていないため推計しない。",
+    "evidencePdfPages":[30,31,32]
+  },
+  "shareholderReturnPolicy": {
+    "status":"dividend_floor_payout_ratio_and_total_payout_goal",
+    "payoutRatioFloor":30,
+    "payoutRatioFloorUnit":"%以上",
+    "annualDividendFloor":30,
+    "annualDividendFloorUnit":"円/株",
+    "totalPayoutRatioGoal":50,
+    "totalPayoutRatioGoalUnit":"%以上・中長期",
+    "buybackPolicy":"投資余力、株価水準、利益回復を勘案して機動的に実施",
+    "policy":"年間30円を下限に配当性向30%以上を目標とし、中長期的に総還元性向50%以上を目指す。",
+    "evidencePdfPages":[30,31]
+  },
+  "nonFinancialTargets":[
+    {"metric":"国内出版返品率","target":25,"unit":"%","targetFiscalYear":"2032年3月期","baseline":"2026年3月期29.2%","evidencePdfPages":[16,28,34,37]},
+    {"metric":"アニメ内製率","target":50,"unit":"%","targetFiscalYear":"2032年3月期","baseline":"2026年3月期16.2%","evidencePdfPages":[23,28]},
+    {"metric":"アニメ二次展開売上高","target":1.9,"unit":"倍・2026年3月期比","targetFiscalYear":"2032年3月期","evidencePdfPage":28},
+    {"metric":"女性管理職比率","target":30,"unit":"%","targetFiscalYear":"2031年3月期","evidencePdfPages":[34,35]},
+    {"metric":"資格取得制度利用率","target":15,"unit":"%・言語資格以外、KADOKAWA単体","targetFiscalYear":"2031年3月期","evidencePdfPages":[34,35]},
+    {"metric":"FA制度利用率","target":70,"unit":"%・KADOKAWA単体","targetFiscalYear":"2031年3月期","evidencePdfPage":35},
+    {"metric":"GHG排出量Scope1・2","target":50,"unit":"%削減・2021年3月期比","targetFiscalYear":"2031年3月期","evidencePdfPages":[34,37]},
+    {"metric":"GHG排出量Scope1・2","target":"実質ゼロ","unit":"グループ全体","targetFiscalYear":"2051年3月期","evidencePdfPages":[34,37]},
+    {"metric":"コンプライアンステスト受講率","target":100,"unit":"%","targetFiscalYear":"継続目標","evidencePdfPage":34}
+  ],
+  "definitions":[
+    {"term":"新中計の3フェーズ","definition":"構造改革2年、利益成長2年、利益拡大2年の6カ年構成。","evidencePdfPages":[10,11]},
+    {"term":"旧中計目標","definition":"2028年3月期売上3,400億円・営業利益340億円等は達成困難と判断され、新6カ年計画へ置換された。","evidencePdfPages":[4,5,6,10]},
+    {"term":"中長期ROE12%以上","definition":"2032年3月期の計画値9.4%とは別の中長期財務目標。","evidencePdfPages":[28,30]},
+    {"term":"キャピタルアロケーション","definition":"現預金1,200億円と中計営業CF1,400億円を原資とするが、用途別確定額は開示されていない。","evidencePdfPage":31}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"supersededIntermediateTerminalAndLongTermSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAllocationAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T08:20:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["旧中計目標と28年3月期予測を原寸比較する","2030年中間目標と2032年終期目標を確認する","現預金1,200億円・営業CF1,400億円と用途別金額未開示を確認する","配当性向30%以上・年間30円下限・総還元性向50%以上を確認する","返品率25%・アニメ内製率50%・海外比率25%を確認する"]}
+}

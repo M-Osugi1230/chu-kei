@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "phase2-source-resolution-v1",
+  "company": {
+    "code": "5019",
+    "name": "出光興産"
+  },
+  "resolutionStatus": "current_official_pdf_identity_plan_boundary_and_key_metrics_confirmed_binary_hash_pending",
+  "incorrectCandidate": {
+    "url": "https://www.idemitsu.com/jp/company/managementplan/2023_2025plan.pdf",
+    "pdfSha256": "063c190148ef82b8aaf38ebf8f301e3577821f698508c39f5b2ef21389a330f9",
+    "pageCount": 64,
+    "classification": "previous_management_plan_2023_2025",
+    "reason": "候補メタデータは2026年5月12日公表の中期経営計画2026-2030年度を示す一方、収集器は前回中計2023-2025年度のPDFを選択していた。計画期間と資料実体が一致しないため現行一次レビュー入力として隔離する。",
+    "mayEnterPrimaryReview": false
+  },
+  "currentOfficialDocument": {
+    "landingPageUrl": "https://www.idemitsu.com/jp/company/managementplan/index.html",
+    "pdfUrl": "https://www.idemitsu.com/jp/company/managementplan/2026_2030plan.pdf",
+    "title": "中期経営計画（2026-2030年度）",
+    "publishedDate": "2026-05-12",
+    "updatedDate": "2026-05-26",
+    "securityCode": "5019",
+    "pageCount": 53,
+    "pdfSha256": null,
+    "binaryHashStatus": "pending_retrieval_in_repository_execution_environment",
+    "identityEvidencePdfPages": [1, 3, 12, 39],
+    "identityConfirmed": true,
+    "pageCountConfirmed": true,
+    "publicationDateConfirmed": true,
+    "updateDateConfirmed": true,
+    "planPeriodConfirmed": true
+  },
+  "documentClassification": "formal_management_plan_current_corrected_version_hash_pending",
+  "formalPlanBoundary": {
+    "previousPlan": "2023年度から2025年度の前中期経営計画",
+    "currentPlan": "2026年度から2030年度の中期経営計画",
+    "statement": "前中計の実績・振り返りと、2026-2030年度の現行目標を分離する。2026年5月26日訂正版を現行正本候補とし、旧版や前中計の数値を現行目標へ持ち越さない。",
+    "evidencePdfPages": [1, 4, 5, 12]
+  },
+  "confirmedCurrentPlanFacts": {
+    "period": {
+      "startFiscalYear": "2026年度",
+      "endFiscalYear": "2030年度"
+    },
+    "strategyThemes": [
+      {
+        "theme": "GRIT",
+        "description": "既存事業の深化"
+      },
+      {
+        "theme": "GROWTH",
+        "description": "成長事業の創出"
+      },
+      {
+        "theme": "CNX",
+        "description": "低・脱炭素事業への挑戦"
+      }
+    ],
+    "financialTargets": [
+      {
+        "metric": "税前利益（金融費用除き）",
+        "target": 3600,
+        "unit": "億円",
+        "targetFiscalYear": "2030年度",
+        "evidencePdfPages": [3, 12, 45]
+      },
+      {
+        "metric": "ROE",
+        "target": 12,
+        "unit": "%",
+        "targetScope": "2027年度から2028年度",
+        "evidencePdfPages": [3, 12]
+      },
+      {
+        "metric": "ROE",
+        "target": 13,
+        "unit": "%以上",
+        "targetFiscalYear": "2030年度",
+        "evidencePdfPages": [3, 12]
+      },
+      {
+        "metric": "ROIC",
+        "target": 7,
+        "unit": "%以上",
+        "targetFiscalYear": "2030年度",
+        "evidencePdfPages": [3, 12, 46]
+      }
+    ],
+    "capitalAllocation": {
+      "cumulativeInvestment": 18000,
+      "cumulativeInvestmentUnit": "億円・2026年度から2030年度累計",
+      "evidencePdfPages": [3, 12]
+    },
+    "shareholderReturn": {
+      "totalPayoutRatioMinimum": 50,
+      "totalPayoutRatioUnit": "%以上・2026年度から2030年度期間平均",
+      "progressiveDividendIntroduced": true,
+      "annualDividendFloor": 36,
+      "annualDividendFloorUnit": "円",
+      "policy": "総還元性向50%以上を継続し、配当への配分を高め、年間配当36円を下限とする累進配当を導入する。",
+      "evidencePdfPages": [3, 12, 39]
+    },
+    "nonFinancialTargets": [
+      {
+        "metric": "CO2削減",
+        "targetRange": "2013年比30%から46%削減",
+        "targetFiscalYear": "2030年度",
+        "evidencePdfPage": 12
+      },
+      {
+        "metric": "出光エンゲージメントインデックス",
+        "target": 80,
+        "unit": "%",
+        "targetFiscalYear": "2030年度",
+        "evidencePdfPage": 12
+      }
+    ]
+  },
+  "correctionNotice": {
+    "correctedSlide": 5,
+    "corrections": [
+      "男性育休取得率を94%から98%へ訂正",
+      "教育投資額を67千円から69千円へ訂正",
+      "女性役職比率へ注釈を追加"
+    ],
+    "currentVersionMustUseCorrection": true
+  },
+  "validation": {
+    "currentOfficialPdfUrlConfirmed": true,
+    "companyIdentityConfirmed": true,
+    "securityCodeConfirmed": true,
+    "publicationDateConfirmed": true,
+    "correctedVersionConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanBoundaryConfirmed": true,
+    "previousAndCurrentPlanSeparated": true,
+    "financialTargetsLocated": true,
+    "capitalPolicyLocated": true,
+    "shareholderReturnPolicyLocated": true,
+    "nonFinancialTargetsLocated": true,
+    "pdfSha256Confirmed": false,
+    "fullTextRepositoryReviewComplete": false,
+    "independentDoubleCheck": false
+  },
+  "requiredNextChecks": [
+    "リポジトリ実行環境から現行訂正版PDFを再取得しSHA-256を固定する",
+    "取得バイナリが53ページで会社名、証券コード5019、公表日2026年5月12日、更新版表示と一致することを再確認する",
+    "現行PDF全53ページと図表を一次レビューし、5セグメント、財務戦略、人財戦略、非財務KPIを項目単位で構造化する",
+    "前中計実績と2026-2030年度現行目標を混在させない",
+    "独立確認者が訂正版採用、年度、単位、範囲、株主還元定義を再確認する"
+  ],
+  "primaryReviewComplete": false,
+  "independentReviewReady": false,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

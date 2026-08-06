@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 4,
+  "wave": 2,
+  "orders": "161-170",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "collection_complete_primary_human_review_pending": 6,
+    "collection_failed": 4
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 161,
+      "code": "2440",
+      "name": "ぐるなび",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/24400/140120260512526671.pdf",
+      "pageCount": 50,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 162,
+      "code": "2454",
+      "name": "オールアバウト",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 163,
+      "code": "2469",
+      "name": "ヒビノ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 164,
+      "code": "2884",
+      "name": "ヨシムラ・フード・ホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/28840/140120260415504509.pdf",
+      "pageCount": 64,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 165,
+      "code": "2983",
+      "name": "アールプランナー",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/29830/140120260429514138.pdf",
+      "pageCount": 46,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 166,
+      "code": "304A",
+      "name": "フォルシア",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/304A0/140120260527550757.pdf",
+      "pageCount": 43,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 167,
+      "code": "3175",
+      "name": "エー・ピーホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/31750/140120260529555629.pdf",
+      "pageCount": 34,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 168,
+      "code": "3401",
+      "name": "帝人",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 169,
+      "code": "3443",
+      "name": "川田テクノロジーズ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 170,
+      "code": "3479",
+      "name": "TKP",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/34790/140120260529554927.pdf",
+      "pageCount": 51,
+      "documentTypeCandidate": "growth_potential_document"
+    }
+  ]
+}

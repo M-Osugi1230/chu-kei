@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "6302",
+    "name": "住友重機械工業"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6302-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画2026／2025年2月14日目標見直し",
+    "officialLandingPage": "https://www.shi.co.jp/ir/policy/plan/index.html",
+    "originalOfficialUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/mtp2026.pdf",
+    "revisionLandingPage": "https://www.shi.co.jp/info/2025/6kgpsq000000nry1.html",
+    "revisionOfficialUrl": "https://www.shi.co.jp/info/2025/6kgpsq000000nry1-att/6kgpsq000000nryo.pdf",
+    "originalPdfSha256": "68fb88a798471c8c3e574cb1ebf3a2979938a2abd204e9dc1ade227b1ef73e89",
+    "revisionPdfSha256": null,
+    "originalPageCount": 25,
+    "revisionPageCount": 1,
+    "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/6302-source-correction-v1.json"
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity_and_mismatch",
+      "description": "2024年元計画と2025年目標見直しの公式掲載ページ・PDFを確認し、候補メタデータと収集PDFの不一致が正しく修復されていることを確認する。",
+      "expectedEvidenceOriginalPdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "revision_pdf_hash",
+      "description": "2025年2月14日の目標見直しPDFを再取得し、SHA-256と1ページであることを記録する。",
+      "status": "pending"
+    },
+    {
+      "id": "revised_financial_targets",
+      "description": "2026年12月期の改定後目標が受注高1兆2,000億円、売上高1兆1,730億円、営業利益800億円、営業利益率6.8%、ROIC7%、ROE7.8%参考であることを確認する。",
+      "expectedEvidenceRevisionPdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "previous_target_exclusion",
+      "description": "元計画の受注高1兆2,800億円、売上高1兆2,500億円、営業利益1,000億円、営業利益率8%、ROIC8%、ROE10%を現行目標として表示していないことを確認する。",
+      "expectedEvidenceOriginalPdfPages": [7],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "収益力改善、資本効率向上、新事業探索、重点投資、人的資本・DX・サステナビリティの戦略構造を元計画で確認する。",
+      "expectedEvidenceOriginalPdfPages": [3, 4, 5, 9, 11, 12, 14],
+      "status": "pending"
+    },
+    {
+      "id": "investment_policy",
+      "description": "設備投資1,900億円、研究開発投資900億円が2024～2026年度の3カ年累計であり、現行公式経営計画ページでも維持されていることを確認する。",
+      "expectedEvidenceOriginalPdfPages": [3, 20],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "中計最終年度DOE3.5%以上、最低配当125円、総還元性向40%以上、機動的な自己株式取得の最新公式方針を確認する。",
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に元計画・改定通知の両リンク、企業ページ、検索、年度、単位、改定前後表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

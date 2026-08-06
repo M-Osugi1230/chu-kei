@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"3284","name":"フージャースホールディングス","market":"Prime","industry":"不動産業","phase2Order":325},
+  "source": {
+    "title":"第3次中期経営計画 2027年3月期-2031年3月期",
+    "publishedDate":"2026-05-13",
+    "officialUrl":"https://www2.jpx.co.jp/disc/32840/140120260513529883.pdf",
+    "pdfSha256":"7def53cef3c91e408233ece3e3aa62e0bf25ec95545517cb8469b550720d6228",
+    "pageCount":34,
+    "documentClassification":"formal_management_plan_current_third_plan",
+    "period":{"startFiscalYear":"2027年3月期","endFiscalYear":"2031年3月期","terminalFiscalYear":"2031年3月期"},
+    "formalPlanBoundary":{"previousPlan":"第2次中期経営計画 2022年3月期～2026年3月期","currentPlan":"第3次中期経営計画 2027年3月期～2031年3月期","statement":"前中計実績・再掲資料と第3次中計の目標を分離する。"}
+  },
+  "summary":"資本効率を伴う成長への転換を掲げ、ROICに基づく事業ポートフォリオ管理、シニアマンションの成長ドライバー化、人的資本とDXによる再現性向上を進める。2031年3月期に売上高1,760億円、営業利益210億円超、当期純利益100億円超、ROIC7%＋α、ROE14%以上を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":1760,"unit":"億円","targetFiscalYear":"2031年3月期","baseline":"2026年3月期実績1,385億円","evidencePdfPage":12},
+    {"metric":"営業利益","target":210,"unit":"億円以上","targetFiscalYear":"2031年3月期","baseline":"2026年3月期実績138億円","evidencePdfPages":[8,12]},
+    {"metric":"当期純利益","target":100,"unit":"億円以上","targetFiscalYear":"2031年3月期","baseline":"2026年3月期実績71億円","evidencePdfPage":8},
+    {"metric":"EPS","target":245,"unit":"円以上","targetFiscalYear":"2031年3月期","baseline":"2026年3月期実績184円","evidencePdfPage":8},
+    {"metric":"ROIC","target":"7%＋α","unit":"%","targetFiscalYear":"2031年3月期","baseline":"2026年3月期実績6%","evidencePdfPages":[8,13]},
+    {"metric":"ROE","target":14,"unit":"%以上を目安","targetFiscalYear":"中計期間維持・向上","baseline":"2026年3月期実績15%","evidencePdfPages":[8,13]},
+    {"metric":"営業利益率","target":"9～10","unit":"%","targetFiscalYear":"2031年3月期","evidencePdfPage":13},
+    {"metric":"D/Eレシオ","target":2.0,"unit":"倍水準","targetFiscalYear":"中計期間","baseline":"2026年3月期実績1.9倍","evidencePdfPages":[8,13]},
+    {"metric":"自己資本比率","target":30,"unit":"%水準","targetFiscalYear":"2031年3月期","evidencePdfPage":13}
+  ],
+  "strategyThemes":[
+    {"theme":"事業ポートフォリオ転換","evidencePdfPages":[5,8,11,12],"evidence":"マンションを収益基盤、シニアを成長、投資事業を資本効率、不動産サービスをストック収益と位置づける。"},
+    {"theme":"シニアマンション成長","evidencePdfPages":[18,19],"evidence":"年3～4棟・毎年400～500戸、売上400億円、粗利率25%、ROIC6%以上を目指す。"},
+    {"theme":"不動産投資の資本回転","evidencePdfPages":[11,20,21],"evidence":"外部資本活用、保有期間短縮、開発・売却回転でROICを高める。"},
+    {"theme":"マンション選別投資","evidencePdfPages":[16,17],"evidence":"立地・商品・回転・粗利を重視し、戸数拡大より資本効率を優先する。"},
+    {"theme":"人的資本×DX","evidencePdfPages":[8,22,23],"evidence":"顧客一次情報と実務知見を組織知化し、商品・販売・運営の再現性を高める。"}
+  ],
+  "capitalPolicy": {
+    "status":"priority_and_financial_discipline_disclosed_no_total_cash_amount",
+    "priorityOrder":["シニアマンション・人的資本・DXへの成長投資","健全な自己資本水準と成長余力の確保","株主還元"],
+    "discipline":{"roic":"7%＋α","deRatio":"2.0倍水準","equityRatio":"30%水準","wacc":"4.2%程度・上昇可能性を意識"},
+    "totalCashAllocation":null,
+    "policy":"ROIC差に基づき高回転・高収益事業から成長領域へ資本を再配分する。キャッシュアロケーション総額は未開示のため推計しない。",
+    "evidencePdfPages":[5,11,13,14]
+  },
+  "shareholderReturnPolicy": {
+    "status":"dual_floor_payout_and_doe",
+    "payoutRatioTarget":40,
+    "payoutRatioTargetUnit":"%以上",
+    "doeTarget":4,
+    "doeTargetUnit":"%以上",
+    "dividendPolicy":"利益成長に応じた持続的増配",
+    "buybackPolicy":"資本効率・株価水準・財務状況を踏まえ機動的に検討",
+    "evidencePdfPage":14
+  },
+  "nonFinancialTargets":[
+    {"metric":"シニアマンション累計供給戸数","target":4500,"unit":"戸以上","targetFiscalYear":"2031年","evidencePdfPage":19},
+    {"metric":"シニアマンション分譲粗利率","target":25,"unit":"%以上・安定水準","targetFiscalYear":"中計期間","evidencePdfPage":19},
+    {"metric":"新築分譲マンションZEH-M Oriented以上","target":"標準化","unit":"方針","targetFiscalYear":"2030年度まで","evidencePdfPage":32}
+  ],
+  "definitions":[
+    {"term":"ROIC7%＋α","definition":"連結ROIC目標。事業別ROICとは算定対象・配賦方法が異なる。","evidencePdfPages":[12,13]},
+    {"term":"配当性向40%・DOE4%","definition":"両方を基準として安定還元の下方耐性と利益成長による上方拡大を両立する。","evidencePdfPage":14},
+    {"term":"第2次中計数値","definition":"Appendixの再掲・実績であり、第3次中計目標として扱わない。","evidencePdfPages":[29,30,31,32]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousAndCurrentPlanSeparated":true,"consolidatedAndSegmentRoicSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T06:47:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2031年の全社目標とセグメント別目標を原寸確認する","連結ROICと事業別ROICの算定範囲を独立確認する","配当性向40%以上・DOE4%以上の二重基準を図表突合する","第2次中計再掲数値を第3次目標へ混入していないことを確認する","キャッシュアロケーション総額が未開示であることを確認する"]}
+}

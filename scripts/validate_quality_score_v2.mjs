@@ -8,7 +8,8 @@ import {
   buildQualityChecks,
   buildQualityProfile,
   checksToMask,
-} from './lib/quality_profile_v2.mjs';
+  hasDeepVerificationApproval,
+} from './lib/quality_profile_v3.mjs';
 
 const ROOT = path.resolve('.');
 const DATA_DIR = path.join(ROOT, 'site', 'data');
@@ -38,7 +39,7 @@ try {
 }
 
 const companies = data.companies || [];
-check('quality score manifest version', manifest.version === 'v43-quality-score-v2', `actual=${manifest.version}`);
+check('quality score manifest version', manifest.version === 'v43-quality-score-v3', `actual=${manifest.version}`);
 check(
   `quality profile version ${QUALITY_PROFILE_VERSION}`,
   companies.every(company => company.quality?.version === QUALITY_PROFILE_VERSION),
@@ -87,10 +88,11 @@ check(
   companies.every(company => company.quality.label === buildQualityProfile(company).label),
 );
 check(
-  'five stars require every evidence and review check',
+  'five stars require every legacy check and explicit deep verification approval',
   companies
     .filter(company => company.quality.stars === 5)
-    .every(company => company.quality.checkMask === (1 << QUALITY_CHECK_KEYS.length) - 1),
+    .every(company => company.quality.checkMask === (1 << QUALITY_CHECK_KEYS.length) - 1
+      && hasDeepVerificationApproval(company)),
 );
 const fiveStarCore = companies.filter(company => company.stage === 'core' && company.quality.stars === 5);
 check(
@@ -107,8 +109,14 @@ check(
   companies.filter(company => company.stage !== 'core').every(company => !Object.hasOwn(company, 'productionApproval')),
 );
 check(
-  'source-indexed remains two stars',
-  companies.filter(company => company.stage === 'source_indexed').every(company => company.quality.stars === 2),
+  'template-like companies cannot be three stars or higher without explicit review',
+  companies
+    .filter(company => company.quality?.templateLike && !hasDeepVerificationApproval(company))
+    .every(company => company.quality.stars <= 2),
+);
+check(
+  'no legacy five-star carryover',
+  companies.every(company => company.quality.stars !== 5 || hasDeepVerificationApproval(company)),
 );
 
 const distribution = Object.fromEntries(

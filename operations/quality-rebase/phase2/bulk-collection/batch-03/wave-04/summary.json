@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 3,
+  "wave": 4,
+  "orders": "131-140",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "collection_complete_primary_human_review_pending": 8,
+    "pdf_not_found": 1,
+    "collection_failed": 1
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 131,
+      "code": "2433",
+      "name": "博報堂DYホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://ssl4.eir-parts.net/doc/2433/tdnet/2463007/00.pdf",
+      "pageCount": 38,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 132,
+      "code": "6594",
+      "name": "ニデック",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 133,
+      "code": "6544",
+      "name": "ジャパンエレベーターサービスホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.jes24.co.jp/ja/ir/strategy/main/03/teaserItems1/01/linkList/0/link/Vision2027_from2022_jp.pdf",
+      "pageCount": 9,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 134,
+      "code": "4523",
+      "name": "エーザイ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 135,
+      "code": "150A",
+      "name": "JSH",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/150A0/140120260710591578.pdf",
+      "pageCount": 95,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 136,
+      "code": "192A",
+      "name": "インテグループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/192A0/140120260629583898.pdf",
+      "pageCount": 47,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 137,
+      "code": "2303",
+      "name": "ドーン",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/23030/140120260707588905.pdf",
+      "pageCount": 56,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 138,
+      "code": "2937",
+      "name": "サンクゼール",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/29370/140120260624578921.pdf",
+      "pageCount": 65,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 139,
+      "code": "296A",
+      "name": "令和アカウンティング・ホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/296A0/140120260618573479.pdf",
+      "pageCount": 46,
+      "documentTypeCandidate": "growth_potential_document"
+    },
+    {
+      "order": 140,
+      "code": "302A",
+      "name": "ビースタイルホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/302A0/140120260623577003.pdf",
+      "pageCount": 76,
+      "documentTypeCandidate": "growth_potential_document"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "3175",
+    "name": "エー・ピーホールディングス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3175-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画 FOOD CREATIVE FIRM ～食の総合プロデュースカンパニーへ～",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/31750/140120260529555629.pdf",
+    "pdfSha256": "8473130a48d6cb1de3f0460ff135ba95247772e3736935f7e3ee7eac18bbe381",
+    "pageCount": 34
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社エー・ピーホールディングス、証券コード3175、公表日2026年5月29日、PDFハッシュ、34ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "正式対象期間が2027年3月期～2031年3月期の5年間で、2026年3月期は基準年度であることを確認する。",
+      "expectedEvidencePdfPages": [1, 3, 6],
+      "status": "pending"
+    },
+    {
+      "id": "gross_and_net_sales",
+      "description": "2031年のグループ流通総額約460億円と連結純売上約430億円を別指標として再確認する。",
+      "expectedEvidencePdfPages": [3, 7, 8],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2031年営業利益30～45億円、ROE20%以上、ROIC15%以上を確認し、レンジを単一値にしていないことを確認する。",
+      "expectedEvidencePdfPages": [3, 20, 21],
+      "status": "pending"
+    },
+    {
+      "id": "business_composition",
+      "description": "国内外食215億円、海外外食50億円、中食70億円、生産流通50億円、ライセンス15億円、M&A・新規60億円の範囲を確認する。",
+      "expectedEvidencePdfPages": [8, 9, 13, 15, 16, 17],
+      "status": "pending"
+    },
+    {
+      "id": "m_and_a_boundary",
+      "description": "グループ流通総額のM&A・新規事業60億円と、国内外食目標に対する計画外上乗せ50～100億円規模の説明を単純加算していないことを確認する。",
+      "expectedEvidencePdfPages": [8, 9, 20],
+      "status": "pending"
+    },
+    {
+      "id": "investment_guidelines",
+      "description": "直営出店40.5億円、中食工場4.8億円、生産流通5～8億円、M&A案件5～30億円と各回収基準を確認する。",
+      "expectedEvidencePdfPage": 20,
+      "status": "pending"
+    },
+    {
+      "id": "preferred_shares",
+      "description": "A種10億円、B種3億円、C種予定1.5億円の元本、優先配当、償還期限を再確認する。",
+      "expectedEvidencePdfPage": 19,
+      "status": "pending"
+    },
+    {
+      "id": "leverage",
+      "description": "ネット有利子負債/EBITDAがFY2026約2.8倍、FY2031は3～4倍を上限として成長投資を継続する方針を確認する。",
+      "expectedEvidencePdfPage": 19,
+      "status": "pending"
+    },
+    {
+      "id": "common_shareholder_return",
+      "description": "現時点では普通株配当を実施せず、優先株償還完了後に配当方針を明文化・実施する予定で、確定配当額ではないことを確認する。",
+      "expectedEvidencePdfPages": [19, 22],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、流通総額・純売上・レンジ・配当ロードマップの表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

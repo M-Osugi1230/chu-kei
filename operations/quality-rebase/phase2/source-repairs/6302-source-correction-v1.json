@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "quality-rebase-phase2-source-correction-v1",
+  "company": {
+    "code": "6302",
+    "name": "住友重機械工業"
+  },
+  "collectorFinding": {
+    "candidateTitle": "住友重機械工業 中期経営計画2026 目標見直し",
+    "candidatePublishedDate": "2025-02-14",
+    "collectedPdfTitle": "中期経営計画2026",
+    "collectedPdfPublishedDate": "2024-02-14",
+    "collectedPdfUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/mtp2026.pdf",
+    "collectedPdfSha256": "68fb88a798471c8c3e574cb1ebf3a2979938a2abd204e9dc1ade227b1ef73e89",
+    "collectedPdfPageCount": 25,
+    "finding": "candidate_revision_but_collector_saved_original_plan"
+  },
+  "officialCorrection": {
+    "title": "中期経営計画の目標見直しに関するお知らせ",
+    "publishedDate": "2025-02-14",
+    "officialLandingPage": "https://www.shi.co.jp/info/2025/6kgpsq000000nry1.html",
+    "officialPdfUrl": "https://www.shi.co.jp/info/2025/6kgpsq000000nry1-att/6kgpsq000000nryo.pdf",
+    "pageCount": 1,
+    "pdfSha256": null,
+    "hashIndependentCheckRequired": true,
+    "revisedTargets": [
+      {"metric":"受注高","previous":1280000,"revised":1200000,"unit":"百万円","targetFiscalYear":"2026年12月期"},
+      {"metric":"売上高","previous":1250000,"revised":1173000,"unit":"百万円","targetFiscalYear":"2026年12月期"},
+      {"metric":"営業利益","previous":100000,"revised":80000,"unit":"百万円","targetFiscalYear":"2026年12月期"},
+      {"metric":"営業利益率","previous":8.0,"revised":6.8,"unit":"%","targetFiscalYear":"2026年12月期"},
+      {"metric":"ROIC","previous":8.0,"revised":7.0,"unit":"%","targetFiscalYear":"2026年12月期"},
+      {"metric":"ROE","previous":10.0,"revised":7.8,"unit":"%・参考","targetFiscalYear":"2026年12月期"}
+    ]
+  },
+  "reviewApplication": {
+    "status": "original_plan_plus_official_target_revision",
+    "currentFinancialTargetsSource": "2025-02-14 official correction",
+    "strategyAndInvestmentSource": "2024-02-14 original formal plan and current official management-plan page",
+    "previousTargetsExcludedFromCurrentDisplay": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

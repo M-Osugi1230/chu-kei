@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "9252",
+    "name": "ラストワンマイル",
+    "market": "Growth",
+    "industry": "サービス業"
+  },
+  "document": {
+    "title": "中期経営計画（事業計画及び成長可能性に関する説明資料）",
+    "publishedDate": "2025-11-26",
+    "period": "2026年4月期-2027年4月期",
+    "officialUrl": "https://www2.jpx.co.jp/disc/92520/140120251126509183.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 47,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "アライアンス網・ストック収益・クロスセルを拡大し、M&Aを組み合わせて事業規模とEPSの成長を進める",
+    "strategyThemes": [
+      "提携先・顧客接点を拡大するアライアンス戦略",
+      "サブスクリプション・継続課金型サービスによるストック収益拡大",
+      "既存顧客基盤への商品・サービスのクロスセル",
+      "ホテル・メディア・生活関連サービスを含む周辺領域への展開",
+      "EPS最大化を基準とするM&Aの継続"
+    ],
+    "groupTargets": [
+      {
+        "metric": "売上収益",
+        "baseValue": 15510,
+        "target": 18800,
+        "unit": "百万円",
+        "baseYear": "2025年4月期実績",
+        "targetYear": "2026年4月期予想",
+        "scope": "連結・IFRS",
+        "evidence": "公式PDF p.11"
+      },
+      {
+        "metric": "営業利益",
+        "baseValue": 1150,
+        "target": 1807,
+        "unit": "百万円",
+        "baseYear": "2025年4月期実績",
+        "targetYear": "2026年4月期予想",
+        "scope": "連結・IFRS",
+        "evidence": "公式PDF p.11"
+      },
+      {
+        "metric": "売上収益",
+        "target": 22000,
+        "unit": "百万円",
+        "targetYear": "2027年4月期計画",
+        "scope": "連結・IFRS",
+        "evidence": "公式PDF p.11"
+      },
+      {
+        "metric": "営業利益",
+        "target": 2208,
+        "unit": "百万円",
+        "targetYear": "2027年4月期計画",
+        "scope": "連結・IFRS",
+        "evidence": "公式PDF p.11"
+      }
+    ],
+    "capitalPolicy": {
+      "maPolicy": "EPS最大化を基本方針とし、営業利益1億円程度以上の事業を目安に、投資回収期間おおむね5年を基準としてM&Aを検討",
+      "shareholderReturn": "本資料では具体的な配当性向、DOE、総還元性向、配当下限等の数値方針を確認できず、未開示として扱う",
+      "evidence": "公式PDF p.32"
+    },
+    "importantDefinitions": [
+      "2026年4月期は会社予想、2027年4月期は中期計画値であり実績として接続しない",
+      "2022年8月期は日本基準の営業利益、2023年8月期以降はIFRSであり時系列比較時に会計基準差を明示する",
+      "事業別・子会社別数値には内部取引を含み監査対象外のものがあるため、連結数値と直接合算しない",
+      "売上収益目標は従来計画から上方修正されている一方、営業利益目標は据え置き",
+      "具体的な株主還元数値は本資料では未開示"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastPlanActualSeparated": true,
+    "accountingStandardDifferenceCaptured": true,
+    "unauditedSegmentQualificationCaptured": true,
+    "undisclosedShareholderReturnPreserved": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全47ページの独立した再確認",
+      "2026年4月期予想と2027年4月期計画の別確認者による原文突合",
+      "日本基準・IFRS差と監査対象外数値の注記再確認",
+      "株主還元数値が未開示であることの再確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

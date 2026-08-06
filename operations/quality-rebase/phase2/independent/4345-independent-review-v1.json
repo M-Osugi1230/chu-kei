@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4345",
+    "name": "シーティーエス"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4345-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画 2027年3月期～2029年3月期",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/43450/140120260428512684.pdf",
+    "pdfSha256": "3105342def26bb3687bf7af9d296ef0afb544f0b5009745604d13dbef6c7fa92",
+    "pageCount": 11
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社シーティーエス、証券コード4345、公表日2026年4月28日、PDFハッシュ、11ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "新中計の期間が2027年3月期～2029年3月期の3年間であることを確認する。",
+      "expectedEvidencePdfPages": [1, 2],
+      "status": "pending"
+    },
+    {
+      "id": "previous_current_boundary",
+      "description": "2024～2026年3月期の前中計、2026年3月期実績、2029年3月期新中計目標を分離していることを確認する。",
+      "expectedEvidencePdfPages": [3, 8, 9],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2029年3月期の売上160億円、営業利益44億円、営業利益率27.5%、ROE20%超を再確認する。",
+      "expectedEvidencePdfPages": [8, 9],
+      "status": "pending"
+    },
+    {
+      "id": "margin_threshold",
+      "description": "見出しの営業利益率25%超と、表の具体目標27.5%を分離して保存していることを確認する。",
+      "expectedEvidencePdfPages": [8, 9],
+      "status": "pending"
+    },
+    {
+      "id": "segment_reconciliation",
+      "description": "DDS106億円、SMS40億円、その他14億円が全社売上160億円と一致することを再計算する。",
+      "expectedEvidencePdfPage": 10,
+      "status": "pending"
+    },
+    {
+      "id": "sap_reconciliation",
+      "description": "SAP55億円とDDS内その他51億円がDDS売上106億円と一致することを再計算する。",
+      "expectedEvidencePdfPage": 11,
+      "status": "pending"
+    },
+    {
+      "id": "annual_target_disclosure",
+      "description": "2027年・2028年の年度別目標を資料にないまま補間していないことを確認する。",
+      "expectedEvidencePdfPages": [8, 9, 10, 11],
+      "status": "pending"
+    },
+    {
+      "id": "capital_policy",
+      "description": "財務基盤とSAPへの戦略投資方針はあるが、投資総額・キャッシュアロケーション額が未開示であることを確認する。",
+      "expectedEvidencePdfPage": 7,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "累進配当方針は確認できるが、1株配当額・配当性向・自己株式取得額が未開示であることを確認する。",
+      "expectedEvidencePdfPage": 7,
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、単位、セグメント表示、改行崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

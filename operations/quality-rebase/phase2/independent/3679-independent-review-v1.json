@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "3679",
+    "name": "じげん"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3679-primary-review-v1.json",
+  "source": {
+    "title": "株式会社じげん 第3次中期経営計画 ZIGExN Matching Agent",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/36790/140120260512526072.pdf",
+    "pdfSha256": "8375a89da640d72f87c3c5412b1187b0b9ca8a50a232e838be2a099349eaffbb",
+    "pageCount": 24
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "株式会社じげん、証券コード3679、2026年5月公表、PDFハッシュ、24ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 3],
+      "status": "pending"
+    },
+    {
+      "id": "classification_correction",
+      "description": "候補の更新資料区分ではなく、FY2027/3～FY2031/3の新規第3次中期経営計画であることを確認する。",
+      "expectedEvidencePdfPages": [1, 3, 7],
+      "status": "pending"
+    },
+    {
+      "id": "plan_boundary",
+      "description": "第1次Protostar、第2次Z COREの実績、第3次ZMAの目標を分離していることを確認する。",
+      "expectedEvidencePdfPages": [4, 7],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "FY2031/3の売上収益500億円超、EBITDA120億円超、ROE20%程度を再確認する。",
+      "expectedEvidencePdfPages": [3, 4, 7],
+      "status": "pending"
+    },
+    {
+      "id": "m_and_a_history_boundary",
+      "description": "上場来M&A35件・累計投資約230億円・回収率170%・回収期間3～5年が過去実績であり、第3次中計目標ではないことを確認する。",
+      "expectedEvidencePdfPage": 14,
+      "status": "pending"
+    },
+    {
+      "id": "operating_cash_flow",
+      "description": "計画期間の調整後営業CF約400億円が預り金増減を調整した累計値であることを確認する。",
+      "expectedEvidencePdfPage": 18,
+      "status": "pending"
+    },
+    {
+      "id": "allocation_reconciliation",
+      "description": "事業投資約40%、戦略投資約40%、株主還元約20%が営業CF約400億円の100%と整合することを再計算する。",
+      "expectedEvidencePdfPage": 18,
+      "status": "pending"
+    },
+    {
+      "id": "strategic_investment_double_count",
+      "description": "M&A戦略投資枠約160億円以上と、営業CFの戦略投資約40%を重複加算していないことを確認する。",
+      "expectedEvidencePdfPages": [14, 15, 18],
+      "status": "pending"
+    },
+    {
+      "id": "financial_discipline",
+      "description": "Net D/E約1倍、Net Debt/EBITDA約2倍、のれん対資本約1倍、親会社持分比率30%以上を確認する。",
+      "expectedEvidencePdfPage": 19,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "普通配当性向30%以上、機動的特別配当、追加自己株式取得の計算式、自己株消却方針を再確認する。",
+      "expectedEvidencePdfPages": [18, 19],
+      "status": "pending"
+    },
+    {
+      "id": "denominator_separation",
+      "description": "営業CFの株主還元約20%と、利益に対する普通配当性向30%以上の分母が異なることを確認する。",
+      "expectedEvidencePdfPages": [18, 19],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、年度、超・程度表記、CF配分と還元方針の表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

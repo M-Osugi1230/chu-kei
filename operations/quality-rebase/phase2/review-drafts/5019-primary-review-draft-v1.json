@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-draft-v1",
+  "company": {
+    "code": "5019",
+    "name": "出光興産",
+    "market": "Prime",
+    "industry": "石油・石炭製品"
+  },
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/5019-source-resolution-v1.json",
+  "source": {
+    "title": "中期経営計画（2026-2030年度）",
+    "publishedDate": "2026-05-12",
+    "updatedDate": "2026-05-26",
+    "officialLandingPage": "https://www.idemitsu.com/jp/company/managementplan/index.html",
+    "officialUrl": "https://www.idemitsu.com/jp/company/managementplan/2026_2030plan.pdf",
+    "pageCount": 53,
+    "pdfSha256": null,
+    "documentClassification": "formal_management_plan_current_corrected_version_hash_pending",
+    "previousSourceQuarantined": "2023年度から2025年度の前中期経営計画PDF"
+  },
+  "planBoundary": {
+    "previousPlan": "2023年度から2025年度",
+    "currentPlan": "2026年度から2030年度",
+    "correctedVersionRequired": true,
+    "statement": "2026年5月26日訂正版のみを現行正本候補とし、前中計実績、訂正前表示、2030年度目標を混在させない。"
+  },
+  "structuredFactsForReview": {
+    "strategyThemes": [
+      {"theme": "GRIT", "definition": "既存事業の深化"},
+      {"theme": "GROWTH", "definition": "成長事業の創出"},
+      {"theme": "CNX", "definition": "低・脱炭素事業への挑戦"}
+    ],
+    "financialTargets": [
+      {"metric": "税前利益（金融費用除き）", "target": 3600, "unit": "億円", "targetFiscalYear": "2030年度"},
+      {"metric": "ROE", "target": 12, "unit": "%", "targetScope": "2027年度から2028年度"},
+      {"metric": "ROE", "target": 13, "unit": "%以上", "targetFiscalYear": "2030年度"},
+      {"metric": "ROIC", "target": 7, "unit": "%以上", "targetFiscalYear": "2030年度"}
+    ],
+    "capitalAllocation": {
+      "cumulativeInvestment": 18000,
+      "unit": "億円・2026年度から2030年度累計"
+    },
+    "shareholderReturn": {
+      "totalPayoutRatioMinimum": 50,
+      "totalPayoutRatioUnit": "%以上・計画期間平均",
+      "progressiveDividend": true,
+      "annualDividendFloor": 36,
+      "annualDividendFloorUnit": "円"
+    },
+    "nonFinancialTargets": [
+      {"metric": "CO2削減", "target": "2013年比30%から46%削減", "targetFiscalYear": "2030年度"},
+      {"metric": "出光エンゲージメントインデックス", "target": 80, "unit": "%", "targetFiscalYear": "2030年度"}
+    ],
+    "correctionNotice": [
+      "男性育休取得率を94%から98%へ訂正",
+      "教育投資額を67千円から69千円へ訂正",
+      "女性役職比率へ注釈を追加"
+    ]
+  },
+  "requiredPrimaryReviewChecks": [
+    "現行訂正版PDFのSHA-256と53ページを固定する",
+    "全53ページと主要図表を確認する",
+    "GRIT・GROWTH・CNXおよび5セグメントの施策を項目単位で構造化する",
+    "税前利益、ROE、ROICの年度・単位・定義を確認する",
+    "投資1.8兆円の内訳と期間を確認する",
+    "期間平均総還元性向50%以上、年間配当36円下限の定義を確認する",
+    "訂正対象3項目が訂正版表示へ反映されていることを図表で確認する",
+    "前中計実績と現行計画目標を分離する"
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationAndUpdateDatesConfirmed": true,
+    "formalPlanBoundaryConfirmed": true,
+    "keyMetricsLocated": true,
+    "correctionNoticeMapped": true,
+    "pdfSha256Confirmed": false,
+    "fullTextHumanReviewComplete": false,
+    "visualFigureReviewComplete": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_draft_binary_and_full_text_review_pending",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "primaryReviewComplete": false,
+    "independentReviewReady": false,
+    "deepVerificationApproved": false
+  }
+}

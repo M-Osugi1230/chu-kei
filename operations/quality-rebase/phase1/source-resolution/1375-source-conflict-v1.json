@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "phase1-source-identity-conflict-v1",
+  "company": {
+    "code": "1375",
+    "name": "ユキグニファクトリー",
+    "market": "Prime",
+    "industry": "水産・農林業"
+  },
+  "cohortCandidate": {
+    "document": "中期経営計画2030／2025年11月アップデート",
+    "planPublishedDate": "2025-11-14",
+    "sourceUrl": "https://www.yukiguni-factory.co.jp/ir/middleplan/"
+  },
+  "officialSourceObserved": {
+    "planPage": "https://www.yukiguni-factory.co.jp/ir/middleplan/",
+    "planLibrary": "https://www.yukiguni-factory.co.jp/ir/library/middleplan-data/",
+    "displayedPlanPeriod": "2024年3月期～2028年3月期",
+    "displayedTitle": "中期経営計画",
+    "displayedTargets": [
+      {
+        "metric": "売上収益",
+        "baseValue": 334.4,
+        "forecastValue": 367.7,
+        "target": "420超",
+        "upside": "600前後",
+        "unit": "億円",
+        "baseYear": "2024年3月期実績",
+        "forecastYear": "2025年3月期予想",
+        "targetYear": "2028年3月期計画"
+      },
+      {
+        "metric": "海外売上収益比率",
+        "target": "6～7前後",
+        "upside": "30前後",
+        "unit": "%",
+        "targetYear": "2028年3月期計画"
+      },
+      {
+        "metric": "コアEBITDAマージン",
+        "baseValue": 14.4,
+        "forecastValue": 14.1,
+        "target": "18前後",
+        "unit": "%",
+        "baseYear": "2024年3月期実績",
+        "forecastYear": "2025年3月期予想",
+        "targetYear": "2028年3月期計画"
+      },
+      {
+        "metric": "ROIC",
+        "baseValue": 6.4,
+        "target": "10前後",
+        "unit": "%",
+        "baseYear": "2024年3月期実績",
+        "targetYear": "2028年3月期計画"
+      }
+    ],
+    "strategyThemes": [
+      "国内の事業基盤強化",
+      "全社横断BPRによる事業プロセス合理化",
+      "海外企業のPMIと追加買収候補の探索"
+    ]
+  },
+  "externalSourceIdentity": {
+    "date": "2025-11-14",
+    "publisher": "Sessa Investment Research",
+    "documentType": "FY2026/3 Q2フォローアップ調査レポート",
+    "companyOfficialPlan": false,
+    "finding": "候補日付は外部調査レポートの日付に由来し、会社公式の中期経営計画2030公表日ではない"
+  },
+  "conflicts": [
+    {
+      "field": "documentTitle",
+      "candidate": "中期経営計画2030／2025年11月アップデート",
+      "officialObserved": "中期経営計画（2024年3月期～2028年3月期）",
+      "status": "resolved_candidate_corrected"
+    },
+    {
+      "field": "planPublishedDate",
+      "candidate": "2025-11-14",
+      "officialObserved": "同日は外部調査会社のFY2026/3 Q2フォローアップ日",
+      "status": "resolved_external_report_date_removed"
+    },
+    {
+      "field": "planPeriod",
+      "candidate": "2030年度を含む計画",
+      "officialObserved": "2024年3月期～2028年3月期",
+      "status": "resolved_official_period_adopted"
+    }
+  ],
+  "decision": {
+    "status": "resolved_official_plan_adopted",
+    "primaryReviewComplete": true,
+    "independentReviewReady": true,
+    "deepVerificationApproved": false,
+    "automaticApprovalAllowed": false,
+    "canonicalDocument": "中期経営計画（2024年3月期～2028年3月期）",
+    "canonicalSourceUrl": "https://www.yukiguni-factory.co.jp/ir/middleplan/",
+    "primaryReviewFile": "operations/quality-rebase/phase1/reviews/1375-primary-review-v1.json",
+    "reason": "会社公式IRの現行中計を正本とし、外部調査レポート由来の誤った資料名・日付を除外した"
+  },
+  "requiredBeforeApproval": [
+    "公式中計ページ本文と画像の独立した再確認",
+    "公式中期経営計画資料の直接ファイルURL・公表日の追補可否確認",
+    "実績・予想・2028年計画・年度未特定アップサイドの原文突合",
+    "公開ページの表示・画像・リンク検査"
+  ],
+  "checkedAt": "2026-08-01",
+  "resolvedAt": "2026-08-01"
+}

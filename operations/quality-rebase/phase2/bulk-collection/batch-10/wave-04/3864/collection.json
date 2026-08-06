@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2-bulk-collection-company-v1",
+  "order": 490,
+  "company": {
+    "code": "3864",
+    "name": "三菱製紙",
+    "market": "Prime",
+    "industry": "パルプ・紙",
+    "document": "中期経営計画(2025年度-2027年度)の策定について",
+    "planPublishedDate": "2025-05-14",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/38640/140120250513548062.pdf",
+    "phaseScore": 105,
+    "templatePatternIds": [
+      "generic_metric_confirmation",
+      "refer_to_original_for_definition",
+      "generic_period",
+      "generic_topics_statement",
+      "generic_page_evidence",
+      "automatic_extraction_not_comparable",
+      "generic_primary_evidence_count",
+      "generic_jpx_summary"
+    ]
+  },
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "status": "collection_failed",
+  "errorType": "DependencyError",
+  "error": "cryptography>=3.1 is required for AES algorithm",
+  "elapsedSeconds": 0.217,
+  "requiresManualSourceRecovery": true
+}

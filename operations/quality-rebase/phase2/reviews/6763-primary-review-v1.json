@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"6763","name":"帝国通信工業","market":"Prime","industry":"電気機器","phase2Order":361},
+  "source": {
+    "title":"中期経営計画2030",
+    "publishedDate":"2026-05-12",
+    "officialUrl":"https://www2.jpx.co.jp/disc/67630/140120260512524077.pdf",
+    "pdfSha256":"8e2b656f5a894f718500731ea8c2ff0f617aaead66c59b735963f957cba72b79",
+    "pageCount":32,
+    "documentClassification":"formal_management_plan_current_fy2026_to_fy2030",
+    "period":{"startFiscalYear":"FY2026","endFiscalYear":"FY2030","terminalFiscalYear":"FY2030"},
+    "formalPlanBoundary":{"previousPlan":"前中期経営計画・FY2021～FY2025","currentPlan":"中期経営計画2030・FY2026～FY2030","longTermTarget":"中長期的ROE8%超の早期実現","statement":"前中計実績、FY2030目標、中長期ROE目標を分離する。"}
+  },
+  "summary":"抵抗器・ICB等の既存領域を深掘りし、新製品、電気化学・IoTセンサ等の新領域、海外、生産自動化、人材・DX・法務基盤を強化する。FY2030に売上高220億円、営業利益22億円、営業利益率10%、ROE6%以上を目指し、設備投資等128億円と株主還元75億円を行う。",
+  "financialTargets":[
+    {"metric":"売上高","target":22000,"unit":"百万円","targetFiscalYear":"FY2030","baseline":"FY2025実績17,300百万円","evidencePdfPages":[15,17]},
+    {"metric":"営業利益","target":2200,"unit":"百万円","targetFiscalYear":"FY2030","baseline":"FY2025実績1,200百万円","evidencePdfPages":[15,17]},
+    {"metric":"営業利益率","target":10.0,"unit":"%","targetFiscalYear":"FY2030","baseline":"FY2025実績6.7%","evidencePdfPage":17},
+    {"metric":"ROE","target":6.0,"unit":"%以上","targetFiscalYear":"FY2030","baseline":"FY2025実績4.5%","evidencePdfPages":[15,17]},
+    {"metric":"自己資本比率","target":70,"unit":"%前後","targetFiscalYear":"FY2030","baseline":"FY2025実績82.5%","evidencePdfPages":[17,22]},
+    {"metric":"手元現預金水準","targetRange":[3.5,4.5],"unit":"月商分","targetFiscalYear":"FY2030","baseline":"FY2025実績7～8カ月程度","evidencePdfPages":[17,22]}
+  ],
+  "longerTermTargetsSeparated":[
+    {"metric":"ROE","target":8.0,"unit":"%超","targetFiscalYear":null,"classification":"medium_to_long_term_target_beyond_fy2030_plan_target","evidencePdfPages":[15,17]}
+  ],
+  "strategyThemes":[
+    {"theme":"既存領域の拡大","evidencePdfPages":[16,18],"evidence":"抵抗式センサ、高付加価値化、車載HVAC、産業・医療、海外売上を拡大する。"},
+    {"theme":"新製品展開","evidencePdfPages":[16,19],"evidence":"車載・二輪・家電・電子楽器向け製品を開発・量産する。"},
+    {"theme":"新領域の確立","evidencePdfPages":[16,20],"evidence":"ナトカリセンサ、RFID、漏水センサ、時刻同期等を社会実装する。"},
+    {"theme":"組織力・DX・戦略法務","evidencePdfPages":[16,21,25],"evidence":"IT基盤、技術伝承、人材育成、知財・契約管理を強化する。"},
+    {"theme":"環境対応","evidencePdfPage":26,"evidence":"再エネ、ZEB、環境適合材料を推進する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_five_year_cash_allocation",
+    "operatingCashFlow":10000,
+    "operatingCashFlowUnit":"百万円",
+    "assetSales":3000,
+    "assetSalesUnit":"百万円",
+    "fundingAndCashUse":7300,
+    "fundingAndCashUseUnit":"百万円・有利子負債・現預金活用",
+    "equipmentAndOtherInvestment":12800,
+    "equipmentAndOtherInvestmentUnit":"百万円",
+    "shareholderReturn":7500,
+    "shareholderReturnUnit":"百万円",
+    "investmentBreakdown":[
+      {"use":"新本社・研究開発棟","amount":5000,"unit":"百万円"},
+      {"use":"赤穂工場等高度生産インフラ","amount":3600,"unit":"百万円"},
+      {"use":"最新生産設備","amount":3200,"unit":"百万円"},
+      {"use":"システム投資等","amount":1000,"unit":"百万円"}
+    ],
+    "policy":"非事業用資産圧縮と借入活用で資産効率を高め、現預金水準を増やさず事業用資産へ入れ替える。",
+    "evidencePdfPages":[22,24]
+  },
+  "shareholderReturnPolicy": {
+    "status":"doe_target_and_committed_buyback",
+    "doeTarget":5.0,
+    "doeTargetUnit":"%程度",
+    "buybackAmount":1500,
+    "buybackAmountUnit":"百万円・中計当初3カ年",
+    "fiveYearReturnAmount":7500,
+    "fiveYearReturnAmountUnit":"百万円",
+    "previousPolicy":"連結配当性向50%程度",
+    "policy":"純資産の過度な増加を抑えるためDOEを導入し、自己株式取得を実施する。",
+    "evidencePdfPages":[17,23,24]
+  },
+  "nonFinancialTargets":[
+    {"metric":"政策保有株式の純資産比率","target":10,"unit":"%以下","targetFiscalYear":"FY2027","baseline":"FY2025実績19.9%・みなし保有含む","evidencePdfPage":22},
+    {"metric":"海外売上高","target":10,"unit":"%以上増・FY2025比","targetFiscalYear":"FY2030","evidencePdfPage":18},
+    {"metric":"車載HVAC市場シェア","target":12,"unit":"%程度","targetFiscalYear":"FY2030","baseline":"現状8～9%程度","evidencePdfPage":18},
+    {"metric":"Scope1・2排出量","target":55,"unit":"%以上削減・FY2024比","targetFiscalYear":"FY2030","evidencePdfPage":26},
+    {"metric":"再生可能エネルギー電力導入比率","target":100,"unit":"%","targetFiscalYear":"FY2030","baseline":"FY2024実績22%","evidencePdfPage":26},
+    {"metric":"Scope3排出量","target":25,"unit":"%削減・FY2024比","targetFiscalYear":"FY2030","evidencePdfPage":26}
+  ],
+  "definitions":[
+    {"term":"ROE6%以上と8%超","definition":"6%以上はFY2030中計目標、8%超は中長期的に早期実現を目指す水準。","evidencePdfPages":[15,17]},
+    {"term":"株主還元方針の変更","definition":"旧配当性向50%程度からDOE5%目安と当初3カ年15億円の自己株取得へ変更。","evidencePdfPages":[17,23]},
+    {"term":"設備投資等128億円","definition":"本社・研究開発棟50、工場36、設備32、システム10億円の5年間合計。","evidencePdfPage":24}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousAndCurrentPlanSeparated":true,"terminalAndLongTermTargetsSeparated":true,"oldAndNewReturnPoliciesSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T08:05:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["FY2030の売上・利益・利益率・ROE・資本構成を原寸確認する","ROE6%以上と中長期8%超を分離確認する","キャッシュイン100・30・73億円と投資128・還元75億円を確認する","DOE5%・自己株取得15億円と旧配当性向方針を分離確認する"]}
+}

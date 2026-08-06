@@ -1,0 +1,34 @@
+{
+  "schemaVersion":"deep-verification-primary-review-v1",
+  "company":{"code":"5304","name":"SECカーボン","market":"Standard","industry":"ガラス・土石製品"},
+  "document":{"title":"中長期経営方針 2030 Make Real ～中期経営計画の見直し～","publishedDate":"2026-04-10","period":"2031年3月期までの中長期方針・固定3カ年計画廃止","officialUrl":"https://www2.jpx.co.jp/disc/53040/140120260410502020.pdf","contentType":"application/pdf","pageCount":21,"documentClassification":"long_term_management_policy_after_formal_plan_abolition","formalPlanConfirmed":false,"previousFormalPlanAbolished":true,"fullTextExtractionComplete":true,"fullTextHumanReviewComplete":false,"figureScreenshotAttempted":true,"figureScreenshotStatus":"web_cache_miss"},
+  "structuredAnalysis": {
+    "managementDirection":"市況変動に固定3カ年数値で対応する方式をやめ、成長戦略・資本政策・経営体質強化を一体で進め、2031年3月期ROE12%とPBR1倍超の早期実現を目指す",
+    "strategyThemes":["特殊炭素製品・ファインパウダーを拡大する","半導体材料関連・CO2資源化等の新領域を育成する","高品質・高付加価値製品と用途開発・販路拡大を進める","M&Aを含む成長投資と事業ポートフォリオ改革を進める","政策保有株式縮減・自己株式取得・配当で自己資本を最適化する","ガバナンス・ものづくり・人材・IT基盤を強化する"],
+    "groupTargets":[
+      {"metric":"ROE","baseValue":4.5,"target":12,"unit":"%","baseYear":"2026年3月期見通し","targetYear":"2031年3月期","scope":"連結","evidence":"公式PDF p.9-p.11"},
+      {"metric":"売上高利益率","targetMin":15,"targetMax":20,"unit":"%","targetYear":"2031年3月期","scope":"ROE分解目標","evidence":"公式PDF p.9・p.15"},
+      {"metric":"総資産回転率","targetMin":0.5,"targetMax":0.7,"unit":"回","targetYear":"2031年3月期","scope":"ROE分解目標","evidence":"公式PDF p.9・p.15"},
+      {"metric":"財務レバレッジ","targetMin":1.2,"targetMax":1.4,"unit":"倍","targetYear":"2031年3月期","scope":"ROE分解目標","evidence":"公式PDF p.9・p.15"},
+      {"metric":"政策保有株式","target":20,"targetQualifier":"未満","unit":"純資産比%","targetYear":"中長期方針期間","scope":"政策保有株式","evidence":"公式PDF p.15"},
+      {"metric":"自己株式取得","target":70,"unit":"億円目安・3年間","targetYear":"2026年4月以降3年間","scope":"株主還元・自己資本最適化","evidence":"公式PDF p.1・p.15"},
+      {"metric":"年間配当下限","target":100,"unit":"円/株","targetYear":"当面の配当方針","scope":"普通株式配当・配当性向30%との高い方","evidence":"公式PDF p.1・p.15"},
+      {"metric":"配当性向","target":30,"unit":"%","targetYear":"当面の配当方針","scope":"100円配当との高い方","evidence":"公式PDF p.1・p.15"},
+      {"metric":"流通株式比率","target":35,"targetQualifier":"以上","unit":"%","targetYear":"中長期方針期間","scope":"株式流動性","evidence":"公式PDF p.15"},
+      {"metric":"社外取締役比率","target":33.333,"targetQualifier":"速やかに超過","unit":"%","targetYear":"短期","scope":"取締役会構成","evidence":"公式PDF p.1・p.16"},
+      {"metric":"社外取締役比率","target":50,"unit":"%","targetYear":"将来目標","scope":"取締役会構成","evidence":"公式PDF p.1・p.16"}
+    ],
+    "retiredTargets":[
+      {"metric":"売上高","target":440,"unit":"億円","targetYear":"2027年3月期","source":"第9次中期経営計画","status":"abolished"},
+      {"metric":"営業利益","target":80,"unit":"億円","targetYear":"2027年3月期","source":"第9次中期経営計画","status":"abolished"},
+      {"metric":"ROE","target":8,"unit":"%","targetYear":"2027年3月期","source":"第9次中期経営計画","status":"abolished"},
+      {"metric":"売上高","target":540,"unit":"億円","targetYear":"2030年3月期","source":"旧中期経営目標","status":"abolished"},
+      {"metric":"営業利益","target":100,"unit":"億円","targetYear":"2030年3月期","source":"旧中期経営目標","status":"abolished"},
+      {"metric":"ROE","targetMin":8,"targetMax":10,"unit":"%","targetYear":"2030年3月期","source":"旧中期経営目標","status":"abolished"}
+    ],
+    "capitalPolicy":{"assetOptimization":"政策保有株式を純資産比20%未満へ縮減し、遊休資産・運転資金を圧縮する","shareholderReturn":"向こう3年間で70億円を目安に自己株式を取得し、年間100円または配当性向30%の高い方を配当基準とする","leverage":"成長投資案件があれば財務健全性を保てる範囲で負債も活用する","investmentDiscipline":"ROE12%達成に資する投資判断基準・審議体制を整備する","evidence":"公式PDF p.15-p.16"},
+    "importantDefinitions":["2023年の中長期経営目標と2024年の第9次中期経営計画は2026年4月10日付で見直し・廃止された","現行正本は固定3カ年中計ではなく2030 Make Realという中長期経営方針","旧売上高・営業利益目標を現行企業ページへ接続しない","ROE12%の目標年度は2031年3月期","資料本文の『2030年度まで』と会計年度表記2031年3月期を対応づける","年間100円と配当性向30%は高い方を適用する二条件","70億円は3年間の自己株式取得目安で配当を含む総還元額ではない","ROE分解の利益率は売上高利益率で営業利益率とは限らない","設備投資総額・売上高・営業利益の現行固定目標は未開示として保持する"]
+  },
+  "validation":{"strategyStructured":true,"metricsValidatedPrimaryPass":true,"evidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"abolishedPlansRemovedFromCurrentTargets":true,"longTermPolicyClassified":true,"roeComponentsCaptured":true,"dividendDualConditionCaptured":true,"buybackAndDividendSeparated":true,"undisclosedCurrentRevenueProfitTargetsPreserved":true,"figureScreenshotAttempted":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review":{"status":"primary_review_complete_independent_plan_abolition_and_capital_policy_check_pending","primaryReviewCompletedAt":"2026-08-01","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["PDF全21ページの独立した再確認","旧第9次中計・旧2030目標の廃止を原文確認","2031年3月期ROE12%と構成要素レンジの再確認","政策保有株式20%未満・自己株式取得70億円・配当100円/30%高い方の再確認","売上高・営業利益の現行固定目標が未開示であることの確認","図表スクリーンショット再取得","公開ページの表示・PDFリンク検査"]}
+}

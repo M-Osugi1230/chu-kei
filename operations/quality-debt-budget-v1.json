@@ -1,8 +1,8 @@
 {
   "schemaVersion": "quality-debt-budget-v1",
-  "recordedAt": "2026-07-20",
+  "recordedAt": "2026-08-01",
   "policy": {
-    "asOfDate": "2026-07-20",
+    "asOfDate": "2026-08-01",
     "staleAfterDays": {
       "core": 90,
       "detailed_extracted": 180,
@@ -13,7 +13,6 @@
   "maximumCounts": {
     "core.missingPageEvidence": 14,
     "core.missingPublicationDate": 1,
-    "core.notFiveStar": 14,
     "detailed.missingPageEvidence": 2,
     "core.missingMetricExtraction": 0,
     "core.missingProgressConnection": 0,
@@ -45,7 +44,8 @@
     "emptyEvidenceRef": 0,
     "duplicateEvidenceRef": 0,
     "duplicateSourceUrlGroup": 0,
-    "duplicateStructuredSummaryGroup": 0
+    "duplicateStructuredSummaryGroup": 0,
+    "deepVerification.notApproved": 3000
   },
   "minimumCounts": {
     "structured.reviewableCompanies": 305
@@ -55,6 +55,7 @@
     "coverageRegressionPolicy": "core plus detailed_extracted companies must remain greater than or equal to the configured structured reviewable-company minimum",
     "improvementPolicy": "when actual debt count falls below maximum, lower the maximum in the same or next quality PR",
     "automaticFactCompletion": false,
-    "automaticPromotion": false
+    "automaticPromotion": false,
+    "deepVerificationPolicy": "未承認件数はPhase 0基準値3,000社から単調減少させ、承認済み企業を自動で増やさない"
   }
 }

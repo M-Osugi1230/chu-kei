@@ -13,7 +13,7 @@ const REPORT_PATH = path.join(ARTIFACT_DIR, 'quality-debt-report-v1.json');
 const CSV_PATH = path.join(ARTIFACT_DIR, 'quality-debt-items-v1.csv');
 
 const DEFAULT_POLICY = {
-  asOfDate: '2026-07-11',
+  asOfDate: '2026-08-01',
   staleAfterDays: {
     core: 90,
     detailed_extracted: 180,
@@ -199,7 +199,7 @@ for (const company of companies) {
     if (!company.flags?.progress) addDebt(company, 'core.missingProgressConnection', 'flags.progress is false');
     if (isPlaceholder(company.summary)) addDebt(company, 'core.placeholderSummary', String(company.summary ?? ''));
     if (!evidenceRefs.length) addDebt(company, 'core.noEvidenceRefs', 'evidenceRefs is empty');
-    if ((company.quality?.stars ?? 0) < 5) addDebt(company, 'core.notFiveStar', `stars=${company.quality?.stars ?? null}`);
+    if (company.quality?.deepVerified !== true) addDebt(company, 'deepVerification.notApproved', `status=${company.quality?.deepVerificationStatus ?? 'not_started'}, stars=${company.quality?.stars ?? null}`);
   }
 
   if (company.stage === 'detailed_extracted') {

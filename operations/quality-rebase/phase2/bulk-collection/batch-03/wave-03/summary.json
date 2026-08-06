@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "phase2-bulk-collection-wave-v1",
+  "batch": 3,
+  "wave": 3,
+  "orders": "121-130",
+  "targetCompanies": 10,
+  "processedCompanies": 10,
+  "counts": {
+    "collection_complete_primary_human_review_pending": 5,
+    "pdf_not_found": 2,
+    "collection_failed": 3
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "companies": [
+    {
+      "order": 121,
+      "code": "5411",
+      "name": "JFEホールディングス",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.jfe-holdings.co.jp/common/pdf/sustainability/sus/materiality/2025_kpi.pdf#page=5",
+      "pageCount": 6,
+      "documentTypeCandidate": "plan_revision_or_update"
+    },
+    {
+      "order": 122,
+      "code": "5713",
+      "name": "住友金属鉱山",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.smm.co.jp/ir/management/plan/pdf/070220setsumeikai.pdf",
+      "pageCount": 42,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 123,
+      "code": "8252",
+      "name": "丸井グループ",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 124,
+      "code": "9831",
+      "name": "ヤマダホールディングス",
+      "status": "pdf_not_found",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 125,
+      "code": "9107",
+      "name": "川崎汽船",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2022_medium-term%20management%20plan_j.pdf",
+      "pageCount": 33,
+      "documentTypeCandidate": "formal_management_plan"
+    },
+    {
+      "order": 126,
+      "code": "6497",
+      "name": "ハマイ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 127,
+      "code": "545A",
+      "name": "トランヴィア",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.toranvia.co.jp/news/files/20260401_en_news.pdf",
+      "pageCount": 3,
+      "documentTypeCandidate": "manual_classification_required"
+    },
+    {
+      "order": 128,
+      "code": "4188",
+      "name": "三菱ケミカルグループ",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    },
+    {
+      "order": 129,
+      "code": "544A",
+      "name": "GMSグループ",
+      "status": "collection_complete_primary_human_review_pending",
+      "resolvedPdfUrl": "https://www.globalmolding-solutions.com/uploads/2026/03/1990776736ca90501d9dcb2407d1e194953423b7.pdf",
+      "pageCount": 1,
+      "documentTypeCandidate": "management_policy_or_strategy"
+    },
+    {
+      "order": 130,
+      "code": "6523",
+      "name": "PHCホールディングス",
+      "status": "collection_failed",
+      "resolvedPdfUrl": null,
+      "pageCount": null,
+      "documentTypeCandidate": null
+    }
+  ]
+}

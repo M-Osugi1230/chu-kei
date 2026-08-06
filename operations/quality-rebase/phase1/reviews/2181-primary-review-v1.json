@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "2181",
+    "name": "パーソルホールディングス",
+    "market": "Prime",
+    "industry": "サービス業"
+  },
+  "document": {
+    "title": "中期経営計画FY2028",
+    "publishedDate": "2026-05-14",
+    "period": "FY2026-FY2028",
+    "officialUrl": "https://www.persol-group.co.jp/ir/upload_file/m002-m002_02/MidtermmanagementplanFY2028.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 40,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "テクノロジードリブンの人材サービス企業へ",
+    "basicPolicy": "AIを起点とした収益性向上と事業モデル転換",
+    "strategyThemes": [
+      "人による介在価値・独自データ・AIを融合したマッチング高度化",
+      "Staffing、BPO、Technology、CareerのAIモデル実装と生産性向上",
+      "Frontline Worker領域への注力",
+      "Asia Pacific事業ポートフォリオの最適化"
+    ],
+    "groupTargets": [
+      {
+        "metric": "調整後EBITDA成長率",
+        "target": 10,
+        "unit": "% CAGR",
+        "targetYear": "FY2028",
+        "scope": "連結",
+        "evidence": "公式PDF p.12"
+      },
+      {
+        "metric": "ROIC",
+        "target": 18,
+        "unit": "%以上",
+        "targetYear": "FY2028",
+        "scope": "連結",
+        "evidence": "公式PDF p.12・p.18"
+      },
+      {
+        "metric": "ROE",
+        "target": 20,
+        "unit": "%以上",
+        "targetYear": "FY2028",
+        "scope": "連結",
+        "evidence": "公式PDF p.12・p.18"
+      },
+      {
+        "metric": "配当性向",
+        "target": 50,
+        "unit": "%以上（対調整後EPS）",
+        "targetYear": "FY2028",
+        "scope": "株主還元方針",
+        "evidence": "公式PDF p.12・p.18"
+      }
+    ],
+    "capitalPolicy": {
+      "allocation": "税引後の調整後EBITDAから既存IT投資を除いた約1,800億円（3カ年合計）を、成長投資と株主還元へ原則50対50で配分",
+      "financialDiscipline": [
+        "Net Debt/Equity 1倍以下",
+        "Net Debt/EBITDA 2倍以下",
+        "事業ポートフォリオ判断ではROICが資本コストを上回ることを意識"
+      ],
+      "shareholderReturn": "配当を基本とし、持続的利益成長を前提に原則減配しない。自己株式取得は機動的に検討",
+      "evidence": "公式PDF p.18"
+    },
+    "segmentEvidence": {
+      "evidence": "公式PDF p.16",
+      "notes": "Staffing、BPO、Technology、Career等のFY2028成長率・調整後EBITDAマージン目標を確認"
+    }
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全40ページの独立した再確認",
+      "主要4指標とセグメント目標の別確認者による原文突合",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

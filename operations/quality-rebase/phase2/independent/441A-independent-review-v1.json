@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "441A",
+    "name": "NE"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/441A-primary-review-v1.json",
+  "source": {
+    "title": "中期経営計画2029 事業計画及び成長可能性に関する事項",
+    "officialLandingPage": null,
+    "officialUrl": "https://www2.jpx.co.jp/disc/441A0/140120260612569454.pdf",
+    "pdfSha256": "ebe7a34174636f11ded76aa65570ca2b5115e1eb0b87b26cefe53e142ce95214",
+    "pageCount": 47
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "NE株式会社、証券コード441A、公表月2026年6月、PDFハッシュ、47ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1, 2, 21],
+      "status": "pending"
+    },
+    {
+      "id": "formal_plan_boundary",
+      "description": "成長可能性資料全体とPDF3～19ページの中期経営計画2029を分離していることを確認する。",
+      "expectedEvidencePdfPages": [1, 2, 3, 19],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period",
+      "description": "FY2027～FY2029が2027年4月期～2029年4月期の3カ年計画で、FY2026は実績基準年であることを確認する。",
+      "expectedEvidencePdfPages": [16, 17, 18],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "FY2029の売上72億円、営業利益16.5億円、営業利益率22.9%、純利益11.9億円を再確認する。",
+      "expectedEvidencePdfPages": [9, 15, 17, 19],
+      "status": "pending"
+    },
+    {
+      "id": "business_targets",
+      "description": "ネクストエンジン56.5億円、コンサルティング8.9億円、コマーステック6.4億円のFY2029売上目標を確認する。",
+      "expectedEvidencePdfPage": 17,
+      "status": "pending"
+    },
+    {
+      "id": "revenue_model_targets",
+      "description": "海外売上比率15%が挑戦目標、GMV連動18%、成果報酬8%、既存収益74%であることを確認する。",
+      "expectedEvidencePdfPages": [13, 14, 19],
+      "status": "pending"
+    },
+    {
+      "id": "capital_sources",
+      "description": "総原資73.2億円が累計営業CF36.9億円と期首現預金36.3億円で構成されることを再計算する。",
+      "expectedEvidencePdfPage": 18,
+      "status": "pending"
+    },
+    {
+      "id": "capital_allocations",
+      "description": "成長投資63.8億円、株主優待0.2億円、運転資金・基盤9.2億円が総原資73.2億円と一致することを再計算する。",
+      "expectedEvidencePdfPage": 18,
+      "status": "pending"
+    },
+    {
+      "id": "credit_facility",
+      "description": "別途融資枠20億円を総原資へ重複加算していないことを確認する。",
+      "expectedEvidencePdfPage": 18,
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "中計期間の株主優待2,000万円と、中計達成後の配当・安定還元方針を分離していることを確認する。",
+      "expectedEvidencePdfPage": 18,
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に検索、公式PDFリンク、4月期表記、年度、単位、表示崩れを確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

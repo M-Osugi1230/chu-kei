@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"8364","name":"清水銀行","market":"Prime","industry":"銀行業","phase2Order":466},
+  "source": {
+    "title":"第29次中期経営計画 加速-KASOKU- Acceleration ～たすきを繋ぐ～",
+    "publishedDate":"2026-03-30",
+    "officialUrl":"https://www2.jpx.co.jp/disc/83640/140120260330592139.pdf",
+    "pdfSha256":"21c851f8ba909b777de2fdc19a808661f4079be902fbf5ee8afcc75c158e03e8",
+    "pageCount":30,
+    "documentClassification":"formal_management_plan_current_2026_to_2028_final_phase_before_centenary",
+    "period":{"startFiscalYear":"2026年度・2027年3月期","endFiscalYear":"2028年度・2029年3月期","terminalFiscalYear":"2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"第28次中期経営計画 SHINKA・2023年4月～2026年3月",
+      "currentPlan":"第29次中期経営計画 KASOKU・2026年4月～2029年3月",
+      "nextPlanReference":"第30次中期経営計画期間中にROE7%水準、連結自己資本比率9%以上を目指す",
+      "statement":"第28次中計実績、第29次中計目標、第30次中計の参考目標を分離する。"
+    }
+  },
+  "summary":"人的資本、ソリューション営業、経営基盤を加速ドライバーとし、地域のコンサルティングカンパニーを目指す。預金・貸出・役務・市場運用の収益性を高め、2029年3月期に当期純利益40億円以上、ROE5%以上、連結自己資本比率8.5%以上を目指す。",
+  "financialTargets":[
+    {"metric":"ROE","target":5,"unit":"%以上","targetFiscalYear":"2029年3月期","baseline":"2025年3月期実績2.56%、2026年3月期予想2.81%","evidencePdfPages":[1,18]},
+    {"metric":"当期純利益","target":40,"unit":"億円以上","targetFiscalYear":"2029年3月期","baseline":"2026年3月期予想19億円","evidencePdfPages":[1,18]},
+    {"metric":"連結自己資本比率","target":8.5,"unit":"%以上","targetFiscalYear":"2029年3月期","baseline":"2026年3月期第3四半期8.75%・別図25年9月期8.74%","evidencePdfPages":[1,21]},
+    {"metric":"政策保有株式","target":20,"unit":"%程度削減・簿価ベース、2025年3月末比","targetFiscalYear":"2030年3月末","evidencePdfPage":21}
+  ],
+  "previousPlanResultsSeparated":[
+    {"metric":"コア業務純益","actual":36,"unit":"億円・第3四半期実績","fiscalYear":"2026年3月期","previousPlanTarget":40,"previousPlanTargetUnit":"億円以上","evidencePdfPage":1},
+    {"metric":"当期純利益","actual":24,"unit":"億円・第3四半期実績","fiscalYear":"2026年3月期","previousPlanTarget":25,"previousPlanTargetUnit":"億円以上","evidencePdfPage":1},
+    {"metric":"県内中小企業等向け貸出金残高","actual":9542,"unit":"億円・第3四半期実績","fiscalYear":"2026年3月期","previousPlanTarget":10000,"previousPlanTargetUnit":"億円以上","evidencePdfPage":1}
+  ],
+  "strategyThemes":[
+    {"theme":"人的資本","evidencePdfPages":[7,9,10,11,12],"evidence":"人財育成、配置、エンゲージメント、専門人材、働き方を強化する。"},
+    {"theme":"ソリューション営業","evidencePdfPages":[13,14,15,16,17],"evidence":"法人・個人、預金、事業承継・M&A、DX、資産形成をグループ一体で提供する。"},
+    {"theme":"収益性・事業ポートフォリオ","evidencePdfPages":[18,19,20],"evidence":"RORAを用いて県内営業、消費者ローン、本部ファイナンス、市場運用の採算性を高める。"},
+    {"theme":"資本政策と政策株縮減","evidencePdfPage":21,"evidence":"自己資本比率を維持し、政策保有株式を縮減しながら株主還元・人的資本・DXへ配分する。"},
+    {"theme":"サステナビリティ・生産性・地域共創","evidencePdfPages":[22,23,24,25],"evidence":"カーボンニュートラル、AI業務改革、金融教育、地域商社・グループ機能を強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"capital_ratio_and_policy_stock_reduction_with_qualitative_allocation",
+    "period":"2026年度～2028年度",
+    "targetConsolidatedCapitalRatio":8.5,
+    "targetConsolidatedCapitalRatioUnit":"%以上",
+    "policyStockReductionTarget":20,
+    "policyStockReductionTargetUnit":"%程度・簿価ベース、2025年3月末比、2030年3月末まで",
+    "allocationUses":["リスクアセット増加","株主還元","人的資本投資","DX投資"],
+    "cashInAmountDisclosed":false,
+    "cashOutAmountsDisclosed":false,
+    "policy":"利益蓄積を基礎に健全性を維持しつつ、リスクアセット、還元、人的資本、DXへ配分する。金額ベースのキャッシュアロケーションは開示していない。",
+    "evidencePdfPage":21
+  },
+  "shareholderReturnPolicy": {
+    "status":"stable_progressive_dividend_with_payout_target",
+    "annualDividendBase":60,
+    "annualDividendBaseUnit":"円・安定配当の基本",
+    "payoutRatioTarget":30,
+    "payoutRatioTargetUnit":"%程度・累進的",
+    "policy":"内部留保と円滑な資金供給に必要な健全性を確保しつつ、安定配当60円を基本として累進的に配当性向30%程度を目指す。",
+    "evidencePdfPage":21
+  },
+  "nonFinancialTargets":[
+    {"metric":"法人IBセット率","target":30,"unit":"%","targetFiscalYear":"計画最終年度","evidencePdfPage":16},
+    {"metric":"給与振込者純増数","target":1200,"unit":"名・計画期間累計","evidencePdfPage":16},
+    {"metric":"職域セミナー開催数","target":100,"unit":"回・計画期間累計","evidencePdfPage":16},
+    {"metric":"年金新規獲得数","target":3600,"unit":"名・計画期間累計","evidencePdfPage":16},
+    {"metric":"清水銀行SBIマネープラザ顧客数","target":1800,"unit":"名","targetFiscalYear":"計画最終年度","evidencePdfPage":17},
+    {"metric":"SBIグループとの連携効果","target":12,"unit":"億円・計画期間累計","evidencePdfPage":17},
+    {"metric":"業務削減時間","target":126000,"unit":"時間・計画期間累計","evidencePdfPage":23},
+    {"metric":"行員1人当たりコア業務純益","target":1.5,"unit":"倍・2026年3月期比","targetFiscalYear":"計画最終年度","evidencePdfPage":23},
+    {"metric":"金融経済教育受講者数","target":600,"unit":"名・計画期間累計","evidencePdfPage":24},
+    {"metric":"地域価値共創事業","target":10,"unit":"件・計画期間累計","evidencePdfPage":24},
+    {"metric":"Scope1・2カーボンニュートラル","target":"達成","unit":"自社","targetFiscalYear":"2030年度","evidencePdfPage":22}
+  ],
+  "longTermTargetsSeparated":[
+    {"metric":"ROE","target":7,"unit":"%水準","targetFiscalYear":"第30次中期経営計画期間中・2032年3月期頃","evidencePdfPage":18},
+    {"metric":"連結自己資本比率","target":9,"unit":"%以上","targetFiscalYear":"第30次中期経営計画期間中","evidencePdfPage":21}
+  ],
+  "definitions":[
+    {"term":"加速ドライバー","definition":"企業の方向性や成果を左右する主要推進要因として、人的資本、ソリューション営業、経営基盤を設定。","evidencePdfPages":[1,7,9]},
+    {"term":"ROE5%以上と7%水準","definition":"5%以上は第29次中計、7%水準は第30次中計期間中の参考目標。","evidencePdfPage":18},
+    {"term":"自己資本比率8.5%以上と9%以上","definition":"8.5%以上は現中計、9%以上は次期中計の参考水準。","evidencePdfPage":21}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndNextPlanSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedCashAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T09:18:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年3月期ROE5%以上・当期純利益40億円以上・自己資本比率8.5%以上を原寸確認する","第30次中計のROE7%・自己資本比率9%以上を現中計目標と混同していないことを確認する","政策保有株式20%程度削減と配当60円・配当性向30%程度を確認する","業務削減126,000時間と1人当たりコア業務純益1.5倍を確認する","各営業KPIの期間累計・最終年度区分を確認する"]}
+}

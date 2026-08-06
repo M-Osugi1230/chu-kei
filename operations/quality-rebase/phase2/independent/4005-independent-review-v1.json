@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+  "company": {
+    "code": "4005",
+    "name": "住友化学"
+  },
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4005-primary-review-v1.json",
+  "source": {
+    "title": "住友化学 2025～2027年度 中期経営計画 Leap Beyond ～成長軌道へ回帰～",
+    "officialLandingPage": "https://www.sumitomo-chem.co.jp/news/detail/20250304.html",
+    "officialUrl": "https://www.sumitomo-chem.co.jp/ir/event/files/docs/250304.pdf",
+    "pdfSha256": "03623ca99aad906e39c597a6b486616cfaedd28556afad85f60a7a3e08bd5bfc",
+    "pageCount": 63
+  },
+  "status": "independent_review_ready",
+  "checks": [
+    {
+      "id": "source_identity",
+      "description": "住友化学公式サイト、会社名、資料名、公表日2025年3月4日、公式PDF、ハッシュ、全63ページを独立に再確認する。",
+      "expectedEvidencePdfPages": [1],
+      "status": "pending"
+    },
+    {
+      "id": "plan_period_and_boundary",
+      "description": "2025～2027年度の新中計、2024年度予想・前中計実績、2035年度長期目標を区別して確認する。",
+      "expectedEvidencePdfPages": [2, 3, 4, 5],
+      "status": "pending"
+    },
+    {
+      "id": "financial_targets",
+      "description": "2027年度のコア営業利益2,000億円、ROE8%、ROIC6%を再確認し、2035年度目標と混同していないことを確認する。",
+      "expectedEvidencePdfPages": [3],
+      "status": "pending"
+    },
+    {
+      "id": "long_term_targets",
+      "description": "2035年度のコア営業利益3,500億円、ROE12%、ROIC10%以上を長期目標として確認する。",
+      "expectedEvidencePdfPages": [3],
+      "status": "pending"
+    },
+    {
+      "id": "strategy_structure",
+      "description": "事業ポートフォリオ高度化、構造改革、財務・資本効率改善、GX・BX・DXのR&D、経営基盤強化の5方針を再確認する。",
+      "expectedEvidencePdfPages": [28, 29, 32, 36, 44, 49],
+      "status": "pending"
+    },
+    {
+      "id": "segment_roic",
+      "description": "2027年度のアグロ＆ライフ8%、ICT＆モビリティ7%、アドバンストメディカル11%、エッセンシャル＆グリーン4%のROICを図表で再確認する。",
+      "expectedEvidencePdfPages": [36],
+      "status": "pending"
+    },
+    {
+      "id": "investment_policy",
+      "description": "設備投資・投融資4,500億円、戦略投資2,300億円、維持基盤投資2,200億円、成長ドライバーへの約1,800億円・78%配分を確認する。",
+      "expectedEvidencePdfPages": [30, 31],
+      "status": "pending"
+    },
+    {
+      "id": "cash_allocation",
+      "description": "3年間累計の営業CF等9,300億円、キャッシュ創出策2,000億円、総額約1兆1,300億円と、事業投資9,200億円・財務政策2,100億円の内訳を再確認する。",
+      "expectedEvidencePdfPages": [40, 41],
+      "status": "pending"
+    },
+    {
+      "id": "shareholder_return",
+      "description": "2025～2027年度の配当性向30%超と、早期に年間24円／株以上を目指す方針を確認し、過去実績と区別する。",
+      "expectedEvidencePdfPages": [43],
+      "status": "pending"
+    },
+    {
+      "id": "post_publication",
+      "description": "公開反映後に企業ページ、検索、公式PDFリンク、年度、単位、改行、図表表示を確認する。",
+      "status": "pending"
+    }
+  ],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "primaryReviewerMustNotSelfApprove": true,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "completedAt": null,
+    "reviewer": null
+  }
+}

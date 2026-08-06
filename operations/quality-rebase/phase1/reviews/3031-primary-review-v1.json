@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "3031",
+    "name": "ラクーンホールディングス",
+    "market": "Prime",
+    "industry": "情報・通信業"
+  },
+  "document": {
+    "title": "中期経営計画（2027年4月期～2029年4月期）",
+    "publishedDate": "2026-06-11",
+    "period": "2027年4月期-2029年4月期",
+    "officialUrl": "https://www2.jpx.co.jp/disc/30310/140120260611568271.pdf",
+    "contentType": "application/pdf",
+    "pageCount": 55,
+    "formalPlanConfirmed": true,
+    "fullTextExtractionComplete": true,
+    "fullTextHumanReviewComplete": false
+  },
+  "structuredAnalysis": {
+    "managementDirection": "ラクーンBtoBネットワーク構想の実現に向け、既存サービスの成長加速とM&A・アライアンスによる新規サービス創出を進める",
+    "strategyThemes": [
+      "営業・マーケティング強化とKPI管理厳格化",
+      "グループ共通顧客化とクロスセルによる顧客単価・LTV向上",
+      "M&A・アライアンスを通じた新規サービス創出",
+      "顧客データベース統合とサービス間連携",
+      "初年度の先行投資による中計期間後半の成長加速"
+    ],
+    "groupTargets": [
+      {
+        "metric": "売上高",
+        "baseValue": 6574,
+        "target": 10300,
+        "unit": "百万円",
+        "baseYear": "2026年4月期実績",
+        "targetYear": "2029年4月期",
+        "scope": "連結",
+        "growth": "CAGR 16.1%",
+        "evidence": "公式PDF p.4"
+      },
+      {
+        "metric": "営業利益",
+        "baseValue": 1320,
+        "target": 2000,
+        "unit": "百万円",
+        "baseYear": "2026年4月期実績",
+        "targetYear": "2029年4月期",
+        "scope": "連結",
+        "growth": "CAGR 14.8%",
+        "evidence": "公式PDF p.4"
+      },
+      {
+        "metric": "営業利益率",
+        "baseValue": 20.1,
+        "target": 19.4,
+        "unit": "%",
+        "baseYear": "2026年4月期実績",
+        "targetYear": "2029年4月期",
+        "scope": "連結",
+        "evidence": "公式PDF p.4"
+      },
+      {
+        "metric": "調整後EBITDA",
+        "baseValue": 1592,
+        "target": 2450,
+        "unit": "百万円",
+        "baseYear": "2026年4月期実績",
+        "targetYear": "2029年4月期",
+        "scope": "連結・調整後",
+        "growth": "CAGR 15.4%",
+        "evidence": "公式PDF p.4"
+      },
+      {
+        "metric": "調整後EBITDA利益率",
+        "baseValue": 24.2,
+        "target": 23.8,
+        "unit": "%",
+        "baseYear": "2026年4月期実績",
+        "targetYear": "2029年4月期",
+        "scope": "連結・調整後",
+        "evidence": "公式PDF p.4"
+      }
+    ],
+    "capitalPolicy": {
+      "maInvestment": "M&A等出資30億円を中計期間の枠として設定",
+      "growthInvestment": "マーケティング14億円、BtoBネットワーク基盤2億円、人件費・開発費4億円など合計20億円",
+      "shareholderReturn": "連結配当性向45～50%を基本に累進配当と利益連動型加算配当を併用し、自己株式取得は機動的に実施",
+      "dividendFloor": "適用期間中は1株当たり22円を下限",
+      "tieredPayout": "当期純利益12億円まで45～50%、12億円超15億円以下60%、15億円超70%で加算配当を算定",
+      "evidence": "公式PDF p.43-p.45"
+    },
+    "importantDefinitions": [
+      "2027年4月期は先行投資で一時的な減益・利益率低下を計画している",
+      "調整後EBITDAと営業利益を区別する",
+      "配当方針の適用期間は2026年4月期から2029年4月期までの4事業年度"
+    ]
+  },
+  "validation": {
+    "strategyStructured": true,
+    "metricsValidatedPrimaryPass": true,
+    "evidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "adjustedMetricsSeparated": true,
+    "temporaryMarginDeclineCaptured": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_pending",
+    "primaryReviewCompletedAt": "2026-08-01",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "PDF全55ページの独立した再確認",
+      "2027年4月期の先行投資と2029年4月期目標の別確認者による原文突合",
+      "累進配当・段階的加算配当の算定条件の再確認",
+      "公開ページの表示・リンク検査"
+    ]
+  }
+}

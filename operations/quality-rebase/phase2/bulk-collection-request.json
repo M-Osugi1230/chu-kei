@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "phase2-bulk-collection-request-v1",
+  "requestedAt": "2026-08-01T21:53:00+09:00",
+  "branch": "agent/quality-rebase-phase0-2",
+  "batch": 2,
+  "waves": [1, 2, 3, 4, 5],
+  "targetCompanies": 50,
+  "maxParallelWaves": 5,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "expectedOutputs": [
+    "resolved official page and PDF URLs",
+    "PDF SHA-256 and page count",
+    "page-level extracted text",
+    "metric candidates with page evidence",
+    "strategy candidate pages",
+    "primary human review templates",
+    "failure and manual recovery reasons"
+  ]
+}

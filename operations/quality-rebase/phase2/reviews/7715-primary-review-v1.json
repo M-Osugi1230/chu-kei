@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"7715","name":"長野計器","market":"Prime","industry":"精密機器","phase2Order":374},
+  "source": {
+    "title":"新中期経営計画2028",
+    "publishedDate":"2026-05-26",
+    "officialUrl":"https://www2.jpx.co.jp/disc/77150/140120260526548624.pdf",
+    "pdfSha256":"3acb76cc996d4236acf9abbe628840d63903520f65ccf8c290ef114973566d19",
+    "pageCount":35,
+    "documentClassification":"formal_management_plan_current_2026_to_2028",
+    "period":{"startFiscalYear":"2026年度","endFiscalYear":"2028年度","terminalFiscalYear":"2028年度・2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"第2次中期経営計画2023-2025",
+      "currentPlan":"新中期経営計画2028・2026年度～2028年度",
+      "postPlanPolicy":"2029年度以降の新棟建設・資本効率向上",
+      "statement":"前中計計画・実績、現行2028年度目標、2029年度以降の投資構想を分離する。"
+    }
+  },
+  "summary":"圧力計・圧力センサ・計測制御・ダイカストの既存基盤を強化し、半導体、新エネルギー、医療、インフラ、モビリティ等の新領域へ展開する。2028年度に売上高755億円、営業利益率12%、ROE12%を目指し、3年間営業CF150億円と政策保有株式売却等40億円を成長・維持投資と還元へ配分する。",
+  "financialTargets":[
+    {"metric":"売上高","target":755,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度実績676億円・前中計目標753億円","evidencePdfPage":29},
+    {"metric":"営業利益率","target":12.0,"unit":"%","targetFiscalYear":"2028年度","baseline":"2025年度実績10%・前中計目標13%","evidencePdfPage":29},
+    {"metric":"ROE","target":12.0,"unit":"%","targetFiscalYear":"2028年度","baseline":"2025年度実績11%・前中計目標10%以上","evidencePdfPage":29},
+    {"metric":"株主資本コスト","targetRange":[9,11],"unit":"%・会社認識","targetFiscalYear":"資本効率判断前提","evidencePdfPage":29}
+  ],
+  "strategyThemes":[
+    {"theme":"既存事業の収益性維持・強化","evidencePdfPages":[10,11,12,13],"evidence":"圧力計、圧力センサ、計測制御、ダイカストの採算・製品・地域展開を強化する。"},
+    {"theme":"未来成長分野への挑戦","evidencePdfPages":[15,16,17,18],"evidence":"半導体、新エネルギー、医療、インフラ、モビリティの新製品を拡大する。"},
+    {"theme":"新工場・生産改革","evidencePdfPages":[20,28,30],"evidence":"丸子工場の新生産棟と自動化・生産性向上へ投資する。"},
+    {"theme":"グローバル・DX・人材","evidencePdfPages":[21,22,23,24],"evidence":"海外展開、デジタル化、開発・技能・女性リーダー育成を進める。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation_with_ranges",
+    "operatingCashFlow":150,
+    "operatingCashFlowUnit":"億円・2026年度～2028年度累計",
+    "assetSales":40,
+    "assetSalesUnit":"億円・政策保有株式売却等",
+    "growthInvestment":50,
+    "growthInvestmentUnit":"億円・丸子工場新生産棟等",
+    "ordinaryInvestment":80,
+    "ordinaryInvestmentUnit":"億円・事業基盤強化・維持更新",
+    "flexibleInvestmentRange":[20,25],
+    "flexibleInvestmentRangeUnit":"億円・企業価値向上投資、自己株取得を含み得る",
+    "shareholderReturnRange":[35,40],
+    "shareholderReturnRangeUnit":"億円・累進配当",
+    "policy":"営業CFと政策保有株式縮減を原資に、成長投資と財務健全性を両立する。2029年度以降の新棟構想に備え財源も確保する。",
+    "evidencePdfPage":30
+  },
+  "shareholderReturnPolicy": {
+    "status":"progressive_dividend_and_flexible_buybacks",
+    "progressiveDividend":true,
+    "threeYearReturnRange":[35,40],
+    "threeYearReturnRangeUnit":"億円",
+    "buybackPolicy":"資本構成・財源を踏まえ機動的に検討",
+    "policy":"累進配当を基本方針とし、自己株式取得を含む機動的な資本配分も検討する。配当性向・DOEの数値目標は本資料では開示されていない。",
+    "evidencePdfPages":[28,30]
+  },
+  "nonFinancialTargets":[
+    {"metric":"Scope1・2排出量","target":4900,"unit":"t・長野計器単体","targetFiscalYear":"2028年度末","evidencePdfPage":32},
+    {"metric":"女性管理職割合","target":8,"unit":"%","targetFiscalYear":"中計期間","evidencePdfPage":32},
+    {"metric":"CDPスコア","target":"Bレベル維持","unit":"評価","targetFiscalYear":"中計期間","evidencePdfPage":32}
+  ],
+  "definitions":[
+    {"term":"2025年度目標・実績・2028年度目標","definition":"前中計目標753億円・13%・ROE10%以上、実績676億円・10%・11%、現中計目標755億円・12%・12%を列ごとに分離する。","evidencePdfPage":29},
+    {"term":"キャッシュイン190億円","definition":"営業CF150億円と資産見直し40億円の合計。","evidencePdfPage":30},
+    {"term":"キャッシュアウトのレンジ","definition":"成長50、経常80、機動20～25、還元35～40億円で、機動投資と還元のレンジにより合計が変動する。","evidencePdfPage":30},
+    {"term":"2029年度以降の新棟建設","definition":"現中計後の投資構想であり、2026～2028年度成長投資50億円と混在させない。","evidencePdfPages":[29,30]}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndPostPlanSeparated":true,"targetActualSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedAmountsNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-05T09:05:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["前中計目標・実績・2028年度目標の3列を原寸確認する","営業CF150億円・資産売却40億円と投資・還元内訳を確認する","機動投資20～25億円と還元35～40億円のレンジを確認する","配当性向・DOEを未開示として扱っていることを確認する"]}
+}

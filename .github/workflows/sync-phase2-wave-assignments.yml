@@ -1,0 +1,75 @@
+name: Sync Phase 2 Wave Assignments
+
+on:
+  push:
+    branches:
+      - agent/quality-rebase-phase0-2
+    paths:
+      - 'operations/quality-rebase/phase2/primary-review-wave*-v1.json'
+      - 'scripts/sync_phase2_wave_assignments.py'
+      - '.github/workflows/sync-phase2-wave-assignments.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-phase2-wave-assignments-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate synchronization in memory
+        run: python scripts/sync_phase2_wave_assignments.py --repo-root . --check
+
+      - name: Synchronize canonical assignment metadata
+        run: python scripts/sync_phase2_wave_assignments.py --repo-root .
+
+      - name: Confirm only canonical status changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHANGED="$(git status --short)"
+          echo "$CHANGED"
+          if [[ -z "$CHANGED" ]]; then
+            echo 'Canonical assignment metadata is already synchronized.'
+            exit 0
+          fi
+          if [[ "$(git status --short | wc -l | tr -d ' ')" != '1' ]]; then
+            echo 'Unexpected number of changed files.' >&2
+            exit 1
+          fi
+          if ! git status --short | grep -Eq '^ M operations/quality-rebase/phase2/current-status-v1.json$'; then
+            echo 'Synchronization changed an unexpected file.' >&2
+            exit 1
+          fi
+
+      - name: Commit canonical assignment synchronization
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet && [[ -z "$(git status --porcelain)" ]]; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/current-status-v1.json
+          git commit -m 'quality: Phase 2ウェーブ割当を正本台帳へ同期'
+          git push origin "HEAD:${{ github.ref_name }}"
+
+# The workflow is intentionally idempotent: repeated runs must not alter review completion or approval state.

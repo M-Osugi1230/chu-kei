@@ -1,0 +1,1049 @@
+{
+  "schemaVersion": "quality-rebase-phase2-current-status-v3",
+  "updatedAt": "2026-08-06T15:32:22+00:00",
+  "phase2TargetIncludingPhase1": 500,
+  "phase1PrimaryReviewComplete": 50,
+  "phase1DeepVerificationApproved": 0,
+  "additionalCompaniesTarget": 450,
+  "additionalCompaniesQueued": 450,
+  "automaticDeepApprovalAllowed": false,
+  "collection": {
+    "status": "complete",
+    "batchesExpected": 9,
+    "batchesCollected": 9,
+    "companiesCollected": 450,
+    "uniqueCompaniesCollected": 450,
+    "deepVerificationApproved": 0,
+    "sourceFile": "operations/quality-rebase/phase2/bulk-collection/full-rollout-summary.json"
+  },
+  "sourceRelevanceAudit": {
+    "status": "complete",
+    "auditedCompanies": 450,
+    "uniqueCompanies": 450,
+    "primaryReviewCandidates": 313,
+    "humanRelevanceReviewRequired": 11,
+    "likelyWrongDocument": 60,
+    "pdfIdentificationRequired": 14,
+    "sourceRecoveryRequired": 52,
+    "knownFalsePositiveRegressionCodes": [
+      "4063"
+    ],
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": 0,
+    "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
+  },
+  "review": {
+    "sourceIdentityConfirmed": 65,
+    "formalPlanConfirmed": 65,
+    "primaryReviewComplete": 65,
+    "primaryReviewCandidatesAvailable": 313,
+    "primaryReviewWaveAssigned": 10,
+    "primaryReviewWavesAssigned": 21,
+    "primaryReviewCompaniesAssignedTotal": 210,
+    "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave21-v1.json",
+    "primaryReviewWaveFiles": [
+      "operations/quality-rebase/phase2/primary-review-wave01-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave02-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave03-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave04-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave05-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave06-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave07-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave08-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave09-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave10-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave11-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave12-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave13-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave14-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave15-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave16-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave17-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave18-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave19-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave20-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave21-v1.json"
+    ],
+    "independentReviewReady": 63,
+    "additionalSourceMappingRequired": 2,
+    "independentReviewComplete": 0,
+    "deepVerificationApproved": 0,
+    "remainingPrimaryReviews": 385
+  },
+  "completedPrimaryReviews": [
+    {
+      "order": 51,
+      "code": "4061",
+      "name": "デンカ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4061-primary-review-v1.json",
+      "status": "primary_review_complete_independent_visual_and_full_text_review_pending",
+      "sourceCorrectionRequired": true
+    },
+    {
+      "order": 52,
+      "code": "8113",
+      "name": "ユニ・チャーム",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/8113-primary-review-v1.json",
+      "status": "primary_review_complete_independent_full_text_review_pending",
+      "sourceCorrectionRequired": false
+    },
+    {
+      "order": 53,
+      "code": "4114",
+      "name": "日本触媒",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4114-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4114-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 54,
+      "code": "4203",
+      "name": "住友ベークライト",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4203-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4203-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 55,
+      "code": "4401",
+      "name": "ADEKA",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4401-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4401-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 57,
+      "code": "3646",
+      "name": "駅探",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3646-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3646-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_growth_potential_document_with_formal_management_plan"
+    },
+    {
+      "order": 58,
+      "code": "3050",
+      "name": "DCMホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3050-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3050-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 59,
+      "code": "9247",
+      "name": "TREホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/9247-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 60,
+      "code": "2146",
+      "name": "UTグループ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2146-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": true,
+      "sourceClassification": "official_formal_management_plan_annual_rolling_update",
+      "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/2146-source-resolution-v1.json"
+    },
+    {
+      "order": 62,
+      "code": "6103",
+      "name": "オークマ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6103-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6103-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 63,
+      "code": "175A",
+      "name": "Will Smart",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/175A-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/175A-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_growth_potential_document_with_formal_management_plan"
+    },
+    {
+      "order": 65,
+      "code": "421A",
+      "name": "ムービン・ストラテジック・キャリア",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/421A-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/421A-independent-review-v1.json",
+      "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": true,
+      "sourceClassification": "official_growth_potential_document_with_formal_management_plan_and_official_correction"
+    },
+    {
+      "order": 66,
+      "code": "4612",
+      "name": "日本ペイントホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4612-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4612-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_management_policy_update"
+    },
+    {
+      "order": 68,
+      "code": "7130",
+      "name": "ヤマエグループホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7130-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7130-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 70,
+      "code": "9861",
+      "name": "吉野家ホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/9861-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/9861-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_integrated_report_management_plan_section"
+    },
+    {
+      "order": 71,
+      "code": "2154",
+      "name": "オープンアップグループ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2154-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2154-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_policy_update"
+    },
+    {
+      "order": 76,
+      "code": "2975",
+      "name": "スター・マイカ・ホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2975-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2975-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_revision"
+    },
+    {
+      "order": 80,
+      "code": "4005",
+      "name": "住友化学",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4005-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4005-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 83,
+      "code": "8316",
+      "name": "三井住友フィナンシャルグループ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/8316-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/8316-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_investor_presentation_containing_current_formal_management_plan_section"
+    },
+    {
+      "order": 102,
+      "code": "7182",
+      "name": "ゆうちょ銀行",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7182-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7182-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 105,
+      "code": "9684",
+      "name": "スクウェア・エニックス・ホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/9684-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/9684-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan_progress_update"
+    },
+    {
+      "order": 113,
+      "code": "6302",
+      "name": "住友重機械工業",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6302-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6302-independent-review-v1.json",
+      "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/6302-source-correction-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": true,
+      "sourceClassification": "official_formal_management_plan_with_official_target_revision"
+    },
+    {
+      "order": 119,
+      "code": "8876",
+      "name": "リログループ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/8876-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/8876-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 125,
+      "code": "9107",
+      "name": "川崎汽船",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/9107-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/9107-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_through_fy2026_next_plan_not_yet_published"
+    },
+    {
+      "order": 131,
+      "code": "2433",
+      "name": "博報堂DYホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2433-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2433-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_results_presentation_containing_current_formal_management_plan"
+    },
+    {
+      "order": 137,
+      "code": "2303",
+      "name": "ドーン",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2303-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2303-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan_progress_and_target_update"
+    },
+    {
+      "order": 143,
+      "code": "3447",
+      "name": "信和",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3447-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3447-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 144,
+      "code": "368A",
+      "name": "北里コーポレーション",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/368A-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/368A-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 148,
+      "code": "441A",
+      "name": "NE",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/441A-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/441A-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_growth_potential_document_with_formal_management_plan"
+    },
+    {
+      "order": 150,
+      "code": "6030",
+      "name": "アドベンチャー",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6030-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6030-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 152,
+      "code": "6143",
+      "name": "ソディック",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6143-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6143-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 156,
+      "code": "6675",
+      "name": "サクサ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6675-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6675-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 158,
+      "code": "1450",
+      "name": "田中建設工業",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/1450-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/1450-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 160,
+      "code": "2323",
+      "name": "fonfun",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2323-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2323-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 161,
+      "code": "2440",
+      "name": "ぐるなび",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2440-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2440-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 164,
+      "code": "2884",
+      "name": "ヨシムラ・フード・ホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2884-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2884-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan_update_with_quantitative_targets_under_review"
+    },
+    {
+      "order": 167,
+      "code": "3175",
+      "name": "エー・ピーホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3175-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3175-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 172,
+      "code": "3679",
+      "name": "じげん",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3679-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3679-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 174,
+      "code": "4345",
+      "name": "シーティーエス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4345-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4345-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 176,
+      "code": "4651",
+      "name": "サニックスホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4651-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4651-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 177,
+      "code": "4902",
+      "name": "コニカミノルタ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4902-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4902-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan"
+    },
+    {
+      "order": 180,
+      "code": "5703",
+      "name": "日本軽金属ホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/5703-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/5703-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_with_long_term_vision"
+    },
+    {
+      "order": 181,
+      "code": "5988",
+      "name": "パイオラックス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/5988-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/5988-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_revision"
+    },
+    {
+      "order": 182,
+      "code": "6089",
+      "name": "ウィルグループ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6089-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6089-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_results_and_formal_management_plan"
+    },
+    {
+      "order": 183,
+      "code": "6140",
+      "name": "旭ダイヤモンド工業",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6140-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6140-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
+    },
+    {
+      "order": 184,
+      "code": "6247",
+      "name": "日阪製作所",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6247-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6247-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_results_and_formal_management_plan"
+    },
+    {
+      "order": 185,
+      "code": "6294",
+      "name": "オカダアイヨン",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6294-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6294-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_results_presentation_containing_current_formal_management_plan"
+    },
+    {
+      "order": 187,
+      "code": "6822",
+      "name": "大井電気",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6822-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6822-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2026_to_2028"
+    },
+    {
+      "order": 188,
+      "code": "7460",
+      "name": "ヤギ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7460-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7460-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2027_to_2029"
+    },
+    {
+      "order": 189,
+      "code": "7504",
+      "name": "高速",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7504-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7504-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_long_term_management_plan_current_2026_to_2035"
+    },
+    {
+      "order": 190,
+      "code": "7743",
+      "name": "シード",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7743-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7743-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan_progress_update_with_target_revision"
+    },
+    {
+      "order": 192,
+      "code": "8012",
+      "name": "長瀬産業",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/8012-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/8012-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_corrected_version"
+    },
+    {
+      "order": 195,
+      "code": "9007",
+      "name": "小田急電鉄",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/9007-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/9007-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan_update_with_2030_vision_targets"
+    },
+    {
+      "order": 200,
+      "code": "1719",
+      "name": "安藤・間",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/1719-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/1719-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2027_to_2029"
+    },
+    {
+      "order": 204,
+      "code": "2764",
+      "name": "ひらまつ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2764-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2764-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_six_year_management_plan_with_three_year_target_revision"
+    },
+    {
+      "order": 205,
+      "code": "3159",
+      "name": "丸善CHIホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3159-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3159-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan_quantitative_revision"
+    },
+    {
+      "order": 215,
+      "code": "4186",
+      "name": "東京応化工業",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4186-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "official_formal_management_plan_with_quantitative_target_revision"
+    },
+    {
+      "order": 216,
+      "code": "4691",
+      "name": "ワシントンホテル",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/4691-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/4691-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2027_to_2031"
+    },
+    {
+      "order": 219,
+      "code": "5451",
+      "name": "ヨドコウ",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/5451-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/5451-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_with_long_term_vision"
+    },
+    {
+      "order": 221,
+      "code": "6036",
+      "name": "KeePer技研",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6036-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_six_year_management_plan_current_2026_to_2031"
+    },
+    {
+      "order": 225,
+      "code": "7164",
+      "name": "全国保証",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/7164-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/7164-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
+    },
+    {
+      "order": 229,
+      "code": "2734",
+      "name": "サーラコーポレーション",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/2734-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/2734-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2026_to_2030"
+    },
+    {
+      "order": 238,
+      "code": "6050",
+      "name": "イー・ガーディアン",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/6050-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/6050-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2026_to_2028"
+    },
+    {
+      "order": 415,
+      "code": "3252",
+      "name": "地主",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3252-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3252-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2026_to_2028_replacing_2022_to_2026_plan_after_early_achievement"
+    },
+    {
+      "order": 419,
+      "code": "3521",
+      "name": "テルマー湯ホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3521-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3521-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2025_04_to_2028_03_published_under_pre_rename_issuer_name"
+    }
+  ],
+  "qualityFindings": [
+    {
+      "code": "4063",
+      "name": "信越化学工業",
+      "finding": "collector_selected_irrelevant_pdf",
+      "selectedPdf": "休日のお知らせ.pdf",
+      "resolutionFile": "operations/quality-rebase/phase2/source-repairs/4063-source-resolution-v1.json",
+      "status": "wrong_document_isolated_replacement_source_human_review_pending"
+    },
+    {
+      "code": "421A",
+      "name": "ムービン・ストラテジック・キャリア",
+      "finding": "official_same_day_correction_deleted_page",
+      "originalPageCount": 37,
+      "correctedExpectedPageCount": 36,
+      "deletedPrintedPage": 14,
+      "resolutionFile": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json",
+      "status": "official_correction_applied_corrected_pdf_direct_url_and_hash_independent_check_pending"
+    },
+    {
+      "code": "6302",
+      "name": "住友重機械工業",
+      "finding": "collector_saved_original_plan_while_candidate_was_target_revision",
+      "originalPublishedDate": "2024-02-14",
+      "revisionPublishedDate": "2025-02-14",
+      "resolutionFile": "operations/quality-rebase/phase2/source-repairs/6302-source-correction-v1.json",
+      "status": "original_plan_and_official_revision_connected_revision_pdf_hash_independent_check_pending"
+    }
+  ],
+  "activeWork": [
+    {
+      "workstream": "primary_review_wave01",
+      "companies": 10,
+      "status": "complete",
+      "completionCount": 10,
+      "remainingCount": 0,
+      "file": "operations/quality-rebase/phase2/primary-review-wave01-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave02",
+      "companies": 10,
+      "status": "complete",
+      "completionCount": 10,
+      "remainingCount": 0,
+      "file": "operations/quality-rebase/phase2/primary-review-wave02-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave03",
+      "companies": 10,
+      "status": "complete",
+      "completionCount": 10,
+      "remainingCount": 0,
+      "file": "operations/quality-rebase/phase2/primary-review-wave03-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave04",
+      "companies": 10,
+      "status": "complete",
+      "completionCount": 10,
+      "remainingCount": 0,
+      "file": "operations/quality-rebase/phase2/primary-review-wave04-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave05",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 6,
+      "remainingCount": 4,
+      "file": "operations/quality-rebase/phase2/primary-review-wave05-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave06",
+      "companies": 10,
+      "status": "complete",
+      "completionCount": 10,
+      "remainingCount": 0,
+      "file": "operations/quality-rebase/phase2/primary-review-wave06-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave07",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 5,
+      "remainingCount": 5,
+      "file": "operations/quality-rebase/phase2/primary-review-wave07-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave08",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave08-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave09",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave09-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave10",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave10-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave11",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave11-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave12",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave12-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave13",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave13-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave14",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave14-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave15",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave15-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave16",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave16-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave17",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave17-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave18",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave18-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave19",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave19-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave20",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 2,
+      "remainingCount": 8,
+      "file": "operations/quality-rebase/phase2/primary-review-wave20-v1.json"
+    },
+    {
+      "workstream": "primary_review_wave21",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave21-v1.json"
+    },
+    {
+      "workstream": "independent_review_ready_queue",
+      "companies": 63,
+      "status": "ready",
+      "completionCount": 0,
+      "files": [
+        "operations/quality-rebase/phase2/independent/4114-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4203-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4401-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3646-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3050-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/9247-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2146-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6103-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/175A-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/421A-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4612-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/7130-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/9861-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2154-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2975-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4005-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/8316-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/7182-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/9684-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6302-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/8876-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/9107-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2433-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2303-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3447-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/368A-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/441A-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6030-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6143-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6675-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/1450-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2323-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2440-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2884-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3175-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3679-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4345-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4651-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4902-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/5703-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/5988-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6089-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6140-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6247-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6294-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6822-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/7460-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/7504-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/7743-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/8012-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/9007-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/1719-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2764-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3159-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/4691-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/5451-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/7164-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/2734-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/6050-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3252-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3521-independent-review-v1.json"
+      ]
+    },
+    {
+      "workstream": "corrected_source_resolution_421A",
+      "companies": 1,
+      "status": "independent_resolution_pending",
+      "completionCount": 0,
+      "file": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json"
+    },
+    {
+      "workstream": "corrected_source_resolution_6302",
+      "companies": 1,
+      "status": "independent_hash_check_pending",
+      "completionCount": 0,
+      "file": "operations/quality-rebase/phase2/source-repairs/6302-source-correction-v1.json"
+    },
+    {
+      "workstream": "likely_wrong_document_repair",
+      "companies": 60,
+      "status": "queued"
+    },
+    {
+      "workstream": "source_recovery",
+      "companies": 52,
+      "status": "queued"
+    },
+    {
+      "workstream": "pdf_identification",
+      "companies": 14,
+      "status": "queued"
+    },
+    {
+      "workstream": "human_relevance_review",
+      "companies": 11,
+      "status": "queued"
+    }
+  ],
+  "nextProcessingOrder": [
+    "第2ウェーブ残り3社の資料区分・全文・主要数値・資本政策・項目別証跡を確認する",
+    "次にリログループの中期経営計画進捗報告を一次レビューする",
+    "住友重機械工業の2025年目標見直しPDFハッシュを独立確認者が取得する",
+    "ムービン・ストラテジック・キャリアの訂正後36ページ版PDF直接URL・ハッシュを独立確認者が特定する",
+    "独立再確認可能17社を別確認者へ引き渡し、原資料・図表・年度・単位・範囲を再確認する",
+    "60社の誤資料候補を負のシグナル別に分解し、公式IRページから代替資料を再特定する",
+    "52社の収集失敗をHTTP種別・アクセス拒否・容量超過・解析失敗に分解して再取得する",
+    "14社のPDF未特定について公式HTMLを一次証跡として確認し、正式PDFまたは公式ページを再探索する"
+  ],
+  "approvalRule": {
+    "primaryReviewDoesNotEqualApproval": true,
+    "collectionDoesNotEqualReview": true,
+    "sourceCandidateDoesNotEqualFormalPlanConfirmation": true,
+    "minimumDistinctReviewers": 2,
+    "fieldLevelEvidenceRequired": true,
+    "yearUnitScopeValidationRequired": true,
+    "postPublicationLinkAndRenderCheckRequired": true,
+    "approvedOnlyAfterAllChecks": true
+  }
+}

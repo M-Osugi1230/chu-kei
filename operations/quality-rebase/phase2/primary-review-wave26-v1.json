@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "phase2-growth-document-review-wave-v1",
+  "generatedAt": "2026-08-07T07:31:00+09:00",
+  "updatedAt": "2026-08-07T07:31:00+09:00",
+  "wave": 26,
+  "targetCompanies": 10,
+  "queue": "growth_potential_document",
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "excludeCompletedPrimaryReviews": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "formalManagementPlanStatusAtAssignment": "unconfirmed",
+    "allowClassificationAsFormalPlanEmbeddedInGrowthDocument": true,
+    "allowClassificationAsQuantifiedGrowthRoadmapNotFormalPlan": true,
+    "allowSourceRemapOrExclusion": true,
+    "countAsFormalManagementPlanWithoutExplicitEvidence": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "selectionAudit": {
+    "existingReviewCheckComplete": true,
+    "duplicatesExcluded": 0,
+    "collectionFailedExcluded": ["6306"],
+    "nonGrowthDocumentTypesExcluded": true
+  },
+  "companies": [
+    {"order":151,"code":"6069","name":"トレンダーズ","pageCount":45,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/6069/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":154,"code":"6562","name":"ジーニー","pageCount":67,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/6562/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":155,"code":"6577","name":"ベストワンドットコム","pageCount":44,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/6577/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":157,"code":"7133","name":"HYUGA PRIMARY CARE","pageCount":67,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/7133/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":159,"code":"177A","name":"コージンバイオ","pageCount":55,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/177A/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":165,"code":"2983","name":"アールプランナー","pageCount":46,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/2983/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":166,"code":"304A","name":"フォルシア","pageCount":43,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/304A/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":170,"code":"3479","name":"TKP","pageCount":51,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/3479/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":171,"code":"3628","name":"データホライゾン","pageCount":50,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-03/3628/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":175,"code":"4570","name":"免疫生物研究所","pageCount":53,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-03/4570/primary-review-template.json","status":"growth_document_classification_assigned"}
+  ],
+  "requiredChecksForAll": ["sourceDocumentClassification","explicitFormalPlanEvidence","formalPlanBoundaryOrNotFormalPlanStatement","forecastActualAndTargetSeparation","financialMetricScopeAndDefinitions","capitalPolicyAndShareholderReturnReview","fieldLevelEvidence","noAutomaticPromotionToFormalPlan","postPublicationDisplayClassification"],
+  "counts": {"assigned":10,"formalPlanEmbeddedConfirmed":0,"growthRoadmapNotFormalPlan":0,"sourceRemapOrExclusionRequired":0,"primaryGrowthDocumentReviewComplete":0,"remaining":10,"independentVisualReviewPending":0,"deepVerificationApproved":0},
+  "completionRule": "成長可能性資料の一次レビューは、正式中計か否かを明示し、期間・予想・目標・資本政策を項目別証跡付きで確認した場合のみ完了とする。正式中計でない資料を中期経営計画として自動昇格しない。"
+}

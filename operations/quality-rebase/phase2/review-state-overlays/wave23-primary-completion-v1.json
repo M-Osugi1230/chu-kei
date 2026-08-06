@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-07T03:38:00+09:00",
+  "wave": 23,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave23-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
+  "reason": "Wave23では非growth_potential_documentの残存候補8社を全件処理した。既存一次レビュー6社を再監査し、森六と三井金属を追加正本化した。独立レビューと残存図表確認は未完了のため自動承認しない。",
+  "expectedBase": {
+    "primaryReviewComplete": 218,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 232,
+    "primaryReviewWavesAssigned": 22,
+    "primaryReviewCompaniesAssignedTotal": 220
+  },
+  "companyCompletions": [
+    {"order":488,"code":"3583","name":"オーベクス","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3583-primary-review-v1.json"},
+    {"order":492,"code":"4249","name":"森六","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4249-primary-review-v1.json"},
+    {"order":494,"code":"4619","name":"日本特殊塗料","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4619-primary-review-v1.json"},
+    {"order":495,"code":"4681","name":"リゾートトラスト","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4681-primary-review-v1.json"},
+    {"order":497,"code":"5204","name":"石塚硝子","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5204-primary-review-v1.json"},
+    {"order":498,"code":"5706","name":"三井金属","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5706-primary-review-v1.json"},
+    {"order":499,"code":"6309","name":"巴工業","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6309-primary-review-v1.json"},
+    {"order":500,"code":"6381","name":"アネスト岩田","status":"primary_review_complete_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6381-primary-review-v1.json"}
+  ],
+  "completedChecksForAll": [
+    "formalPlanConfirmation",
+    "formalPlanBoundary",
+    "planRevisionSeparation",
+    "fullTextReview",
+    "metricsValidation",
+    "capitalPolicyReview",
+    "shareholderReturnPolicyReview",
+    "fieldLevelEvidence",
+    "yearUnitScopeValidation"
+  ],
+  "pendingChecksForAll": ["remainingVisualFigureReview","independentDoubleCheck"],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 8,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 8,
+    "primaryReviewComplete": 226,
+    "independentReviewReady": 61,
+    "remainingPrimaryReviews": 224,
+    "deepVerificationApproved": 0
+  },
+  "queueState": {
+    "nonGrowthPrimaryReviewCandidatesRemaining": 0,
+    "nextQueue": "growth_potential_document",
+    "growthDocumentsRequireFormalPlanBoundaryCheck": true
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "phase2-growth-document-review-wave-v1",
+  "generatedAt": "2026-08-07T07:31:00+09:00",
+  "updatedAt": "2026-08-07T07:31:00+09:00",
+  "wave": 25,
+  "targetCompanies": 10,
+  "queue": "growth_potential_document",
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "excludeCompletedPrimaryReviews": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "formalManagementPlanStatusAtAssignment": "unconfirmed",
+    "allowClassificationAsFormalPlanEmbeddedInGrowthDocument": true,
+    "allowClassificationAsQuantifiedGrowthRoadmapNotFormalPlan": true,
+    "allowSourceRemapOrExclusion": true,
+    "countAsFormalManagementPlanWithoutExplicitEvidence": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {"order":135,"code":"150A","name":"JSH","pageCount":95,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/150A/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":136,"code":"192A","name":"インテグループ","pageCount":47,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/192A/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":138,"code":"2937","name":"サンクゼール","pageCount":65,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/2937/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":139,"code":"296A","name":"令和アカウンティング・ホールディングス","pageCount":46,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/296A/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":140,"code":"302A","name":"ビースタイルホールディングス","pageCount":76,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/302A/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":141,"code":"3224","name":"ゼネラル・オイスター","pageCount":33,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/3224/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":142,"code":"341A","name":"トヨコー","pageCount":48,"relevanceScore":90,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/341A/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":146,"code":"3936","name":"グローバルウェイ","pageCount":38,"relevanceScore":100,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/3936/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":147,"code":"3979","name":"うるる","pageCount":76,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/3979/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":148,"code":"441A","name":"NE","pageCount":47,"relevanceScore":100,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/441A/primary-review-template.json","status":"growth_document_classification_assigned"}
+  ],
+  "requiredChecksForAll": [
+    "sourceDocumentClassification",
+    "explicitFormalPlanEvidence",
+    "formalPlanBoundaryOrNotFormalPlanStatement",
+    "forecastActualAndTargetSeparation",
+    "financialMetricScopeAndDefinitions",
+    "capitalPolicyAndShareholderReturnReview",
+    "fieldLevelEvidence",
+    "noAutomaticPromotionToFormalPlan",
+    "postPublicationDisplayClassification"
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalPlanEmbeddedConfirmed": 0,
+    "growthRoadmapNotFormalPlan": 0,
+    "sourceRemapOrExclusionRequired": 0,
+    "primaryGrowthDocumentReviewComplete": 0,
+    "remaining": 10,
+    "independentVisualReviewPending": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "成長可能性資料の一次レビューは、正式中計か否かを明示し、期間・予想・目標・資本政策を項目別証跡付きで確認した場合のみ完了とする。正式中計でない資料を中期経営計画として自動昇格しない。"
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-independent-review-status-v1",
-  "updatedAt": "2026-08-07T08:40:00+09:00",
+  "updatedAt": "2026-08-07T08:47:00+09:00",
   "basis": {
     "effectiveStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
     "primaryReviewComplete": 236,
@@ -8,7 +8,8 @@
   },
   "counts": {
     "independentReviewComplete": 1,
-    "independentReviewPending": 60,
+    "independentReviewPending": 58,
+    "independentReviewBlockedSourceIdentity": 2,
     "deepVerificationApproved": 0
   },
   "completionRecords": [
@@ -19,9 +20,26 @@
       "status": "independent_review_complete"
     }
   ],
+  "blockedRecords": [
+    {
+      "code": "6036",
+      "name": "KeePer技研",
+      "reason": "source_identity_mismatch",
+      "repairFile": "operations/quality-rebase/phase2/source-repairs/6036-source-identity-resolution-v1.json",
+      "status": "source_identity_repair_required"
+    },
+    {
+      "code": "7164",
+      "name": "全国保証",
+      "reason": "source_identity_mismatch",
+      "repairFile": "operations/quality-rebase/phase2/source-repairs/7164-source-identity-resolution-v1.json",
+      "status": "source_identity_repair_required"
+    }
+  ],
   "policy": {
     "appendOnlyCompletionRecords": true,
     "preserveOriginalPendingPackets": true,
+    "blockCompletionWhenSourceIdentityDiffersFromCanonicalCollection": true,
     "primaryReviewerMaySelfApprove": false,
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,

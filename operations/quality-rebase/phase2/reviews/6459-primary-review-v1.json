@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"6459","name":"大和冷機工業","market":"Prime","industry":"機械","phase2Order":448},
+  "source": {
+    "title":"中期経営計画 2026-2028",
+    "publishedDate":"2026-02-10",
+    "officialUrl":"https://www2.jpx.co.jp/disc/64590/140120260210553277.pdf",
+    "pdfSha256":"239d8f92b995b79110509e82a6ba6ac60fb497b555603bfc9838eecce218d4e4",
+    "pageCount":21,
+    "documentClassification":"formal_management_plan_current_2026_to_2028_first_public_medium_term_plan",
+    "period":{"startFiscalYear":"2026年度・2026年12月期","endFiscalYear":"2028年度・2028年12月期","terminalFiscalYear":"2028年度・2028年12月期"},
+    "formalPlanBoundary": {
+      "historicalActual":"2025年度実績",
+      "currentPlan":"当社初の公表中期経営計画・2026年度～2028年度",
+      "longTermDirection":"M&Aも活用し売上高1,000億円を目指す中長期方針",
+      "unitAnomaly":"冒頭通知は財務目標を544百万円・95百万円・93百万円と記載するが、添付詳細資料は544億円・95億円・93億円で一貫し、2025年度実績469億円との連続性もあるため詳細資料を正本とする。",
+      "statement":"2025年度実績、2028年度中計目標、売上1,000億円の長期方針を分離する。"
+    }
+  },
+  "summary":"地域密着型の直販と法人向け冷熱機器事業を基盤に、提案力、特注対応、メンテナンス、自然冷媒・省エネ製品、新市場、アジア展開を強化する。人材と研究開発、M&Aへ投資し、2028年度に売上高544億円、営業利益95億円、ROE8%以上を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":544,"unit":"億円","targetFiscalYear":"2028年度・2028年12月期","baseline":"2025年度実績469億円","sourceChoice":"添付詳細資料を正本","evidencePdfPages":[3,8,10]},
+    {"metric":"売上総利益","target":307,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度263億円","evidencePdfPage":10},
+    {"metric":"営業利益","target":95,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度75億円","sourceChoice":"添付詳細資料を正本","evidencePdfPages":[3,8,10]},
+    {"metric":"経常利益","target":93,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度74億円","sourceChoice":"添付詳細資料を正本","evidencePdfPage":10},
+    {"metric":"ROE","target":8,"unit":"%以上・安定的","targetFiscalYear":"2028年度および中計期間","baseline":"2025年度7.31%","evidencePdfPages":[10,18]},
+    {"metric":"PBR","target":1.0,"unit":"倍以上","targetFiscalYear":"2028年度","baseline":"2025年度1.11倍","evidencePdfPage":10},
+    {"metric":"配当性向","target":45,"unit":"%以上","targetFiscalYear":"2028年度・中計期間方針","baseline":"2025年度48.62%","evidencePdfPages":[10,17]},
+    {"metric":"直販売上高","target":454,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度390億円","evidencePdfPages":[10,12]},
+    {"metric":"法人売上高","target":90,"unit":"億円","targetFiscalYear":"2028年度","baseline":"2025年度79億円","evidencePdfPages":[10,14]}
+  ],
+  "strategyThemes":[
+    {"theme":"直販営業の深耕","evidencePdfPages":[11,12],"evidence":"提案ノウハウ、商品パッケージ、高付加価値情報、他社製品メンテナンス、データ活用、業務自動化を強化する。"},
+    {"theme":"法人・新市場・海外","evidencePdfPages":[13,14],"evidence":"外食、物流、医療、食のサプライチェーン、新製品、現地企業とのM&A・アライアンスを拡大する。"},
+    {"theme":"生産・開発","evidencePdfPage":15,"evidence":"3工場連携、標準化、自動化、IoT・自然冷媒・省エネ、開発機能集約、研究基盤を強化する。"},
+    {"theme":"人的資本","evidencePdfPage":16,"evidence":"採用、育成、定着、技能継承、女性活躍、キャリアパス、従業員還元を進める。"},
+    {"theme":"資本コスト・対話","evidencePdfPage":18,"evidence":"ROE8%以上、PBR向上、投資家対話、情報開示、内部統制を強化する。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_three_year_cash_allocation_with_plus_alpha_funding",
+    "period":"2026年度～2028年度・3年間",
+    "cashIn":[
+      {"source":"営業CF","amount":200,"unit":"億円・約"},
+      {"source":"現預金残高・財務CF","amount":"α","unit":"億円・追加原資"}
+    ],
+    "cashOut":[
+      {"use":"基盤投資","amount":55,"unit":"億円・約","breakdown":[{"use":"設備投資","amount":45,"unit":"億円・デジタル投資含む"},{"use":"研究開発","amount":10,"unit":"億円"}]},
+      {"use":"成長戦略投資","amount":"70+α","unit":"億円・約","uses":["海外進出","M&A"],"funding":"自己資金に加え有利子負債も検討"},
+      {"use":"人的資本投資","amount":5,"unit":"億円・約、営業費用計上","baseline":"2023～2025年度実績1億円"},
+      {"use":"株主還元","amount":75,"unit":"億円・約","baseline":"2023～2025年度実績60億円"}
+    ],
+    "reconciliationNote":"営業CF約200億円に対し基盤55、成長70+α、還元75で200+αとなる。人的資本5億円は営業費用計上で営業CF創出過程に含まれるため、キャッシュアウトの単純加算による二重計上を避ける。",
+    "policy":"創出キャッシュを成長投資と還元へ均衡配分し、M&A等では有利子負債も活用する。",
+    "evidencePdfPage":17
+  },
+  "shareholderReturnPolicy": {
+    "status":"stable_dividend_plus_performance_linked_payout_floor",
+    "payoutRatioFloor":45,
+    "payoutRatioFloorUnit":"%以上",
+    "threeYearReturnApprox":75,
+    "threeYearReturnApproxUnit":"億円",
+    "policy":"安定配当を維持し、配当性向45%以上の業績連動分を上乗せする。自己株式取得の具体額は開示していない。",
+    "evidencePdfPages":[10,17]
+  },
+  "nonFinancialTargets":[],
+  "longTermTargetsSeparated":[
+    {"metric":"売上高","target":1000,"unit":"億円","targetFiscalYear":"中長期・年度明示なし","means":"M&Aも活用","evidencePdfPage":8}
+  ],
+  "definitions":[
+    {"term":"通知本文の544百万円","definition":"添付詳細資料の544億円、2025年度469億円実績、事業別454億円+90億円と整合しない単位表記。詳細資料の億円を正本とする。","evidencePdfPages":[1,3,8,10]},
+    {"term":"人的資本投資5億円","definition":"営業費用で計上されるため、営業CF200億円からの投資配分55+70+75億円へ単純加算しない。","evidencePdfPage":17},
+    {"term":"成長戦略投資70+α億円","definition":"海外進出・M&A向け。追加αは現預金・財務CFおよび有利子負債の活用を含む。","evidencePdfPage":17},
+    {"term":"PBR1倍以上","definition":"2025年度実績は1.11倍だが、中計KPIとして1倍以上を維持・確保する目標。","evidencePdfPage":10}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"actualCurrentAndLongTermSeparated":true,"announcementUnitAnomalyDetected":true,"detailedPlanChosenAsSourceOfTruth":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"humanCapitalExpenseNotDoubleCounted":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T09:38:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["通知本文の百万円表記と詳細資料の億円表記を原寸で確認する","2028年度売上544億円・営業利益95億円・経常利益93億円・ROE8%以上を確認する","営業CF200・基盤55・成長70+α・還元75億円の配分を確認する","人的資本5億円を営業CF配分へ二重計上していないことを確認する","配当性向45%以上、直販454億円、法人90億円を確認する"]}
+}

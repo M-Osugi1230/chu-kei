@@ -1,7 +1,7 @@
 {
   "schemaVersion": "phase2-growth-document-review-wave-v1",
   "generatedAt": "2026-08-07T03:48:00+09:00",
-  "updatedAt": "2026-08-07T03:48:00+09:00",
+  "updatedAt": "2026-08-07T04:40:00+09:00",
   "wave": 24,
   "targetCompanies": 10,
   "queue": "growth_potential_document",
@@ -20,11 +20,11 @@
     "deepVerificationApproved": false
   },
   "companies": [
-    {"order":446,"code":"6232","name":"ACSL","pageCount":56,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-09/wave-05/6232/primary-review-template.json","status":"growth_document_classification_assigned"},
-    {"order":449,"code":"6537","name":"WASHハウス","pageCount":58,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-09/wave-05/6537/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":446,"code":"6232","name":"ACSL","pageCount":56,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-09/wave-05/6232/primary-review-template.json","reviewFile":"operations/quality-rebase/phase2/reviews/6232-primary-review-v1.json","classification":"growth_potential_disclosure_containing_quantified_medium_term_management_policy_not_standalone_formal_management_plan","status":"primary_growth_document_review_complete_not_standalone_formal_management_plan_independent_visual_review_pending"},
+    {"order":449,"code":"6537","name":"WASHハウス","pageCount":58,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-09/wave-05/6537/primary-review-template.json","reviewFile":"operations/quality-rebase/phase2/reviews/6537-primary-review-v1.json","classification":"growth_potential_disclosure_with_single_year_forecast_not_formal_management_plan","status":"primary_growth_document_review_complete_not_formal_management_plan_independent_visual_review_pending"},
     {"order":451,"code":"6573","name":"CRAVIA","pageCount":64,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-01/6573/primary-review-template.json","status":"growth_document_classification_assigned"},
-    {"order":455,"code":"7112","name":"キューブ","pageCount":45,"relevanceScore":100,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-01/7112/primary-review-template.json","status":"growth_document_classification_assigned"},
-    {"order":456,"code":"7157","name":"ライフネット生命保険","pageCount":57,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-01/7157/primary-review-template.json","status":"growth_document_classification_assigned"},
+    {"order":455,"code":"7112","name":"キューブ","pageCount":45,"relevanceScore":100,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-01/7112/primary-review-template.json","reviewFile":"operations/quality-rebase/phase2/reviews/7112-primary-review-v1.json","classification":"quantified_growth_potential_disclosure_with_medium_term_vision_not_formal_management_plan","status":"primary_growth_document_review_complete_not_formal_management_plan_independent_visual_review_pending"},
+    {"order":456,"code":"7157","name":"ライフネット生命保険","pageCount":57,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-01/7157/primary-review-template.json","reviewFile":"operations/quality-rebase/phase2/reviews/7157-primary-review-v1.json","classification":"growth_potential_disclosure_containing_explicit_formal_medium_term_plan_2024_to_2028","status":"primary_review_complete_formal_plan_embedded_in_growth_document_independent_visual_review_pending"},
     {"order":470,"code":"8938","name":"グローム・ホールディングス","pageCount":56,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-02/8938/primary-review-template.json","status":"growth_document_classification_assigned"},
     {"order":480,"code":"206A","name":"PRISM BioLab","pageCount":53,"relevanceScore":98,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-03/206A/primary-review-template.json","status":"growth_document_classification_assigned"},
     {"order":482,"code":"269A","name":"Sapeet","pageCount":53,"relevanceScore":93,"reviewInput":"operations/quality-rebase/phase2/bulk-collection/batch-10/wave-03/269A/primary-review-template.json","status":"growth_document_classification_assigned"},
@@ -44,10 +44,12 @@
   ],
   "counts": {
     "assigned": 10,
-    "formalPlanEmbeddedConfirmed": 0,
-    "growthRoadmapNotFormalPlan": 0,
+    "formalPlanEmbeddedConfirmed": 1,
+    "growthRoadmapNotFormalPlan": 3,
     "sourceRemapOrExclusionRequired": 0,
-    "primaryGrowthDocumentReviewComplete": 0,
+    "primaryGrowthDocumentReviewComplete": 4,
+    "remaining": 6,
+    "independentVisualReviewPending": 4,
     "deepVerificationApproved": 0
   },
   "completionRule": "成長可能性資料の一次レビューは、正式中計か否かを明示し、期間・予想・目標・資本政策を項目別証跡付きで確認した場合のみ完了とする。正式中計でない資料を中期経営計画として自動昇格しない。"

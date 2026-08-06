@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-07T07:31:00+09:00",
+  "wave": 24,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave24-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
+  "reason": "Wave24のgrowth_potential_document 10社を全件分類した。ライフネット生命保険とクラスターテクノロジーは正式中期経営計画を資料内に明示しているため中計内包型、残る8社は中期方針・事業計画・単年度計画・R&Dロードマップ等であり正式中計には昇格しない。既に4社が有効進捗に反映済みであり、今回の追加完了は6社。独立レビューと残存図表確認は未完了のため自動承認しない。",
+  "expectedBase": {
+    "phase2PrimaryReviewComplete": 230,
+    "primaryReviewCompleteIncludingPhase1": 280,
+    "independentReviewReady": 61,
+    "remainingPhase2PrimaryReviews": 220,
+    "wavePrimaryReviewCompleteAlreadyReflected": 4,
+    "primaryReviewWavesAssigned": 24,
+    "phase2CompaniesAssignedTotal": 238
+  },
+  "companyCompletions": [
+    {"order":446,"code":"6232","name":"ACSL","classification":"growth_potential_disclosure_containing_quantified_medium_term_management_policy_not_standalone_formal_management_plan","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/6232-primary-review-v1.json"},
+    {"order":449,"code":"6537","name":"WASHハウス","classification":"growth_potential_disclosure_with_single_year_forecast_not_formal_management_plan","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/6537-primary-review-v1.json"},
+    {"order":451,"code":"6573","name":"CRAVIA","classification":"growth_potential_disclosure_containing_quantified_three_year_consolidated_business_plan_not_formal_management_plan","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/6573-primary-review-v1.json"},
+    {"order":455,"code":"7112","name":"キューブ","classification":"quantified_growth_potential_disclosure_with_medium_term_vision_not_formal_management_plan","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/7112-primary-review-v1.json"},
+    {"order":456,"code":"7157","name":"ライフネット生命保険","classification":"growth_potential_disclosure_containing_explicit_formal_medium_term_plan_2024_to_2028","formalManagementPlanConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/7157-primary-review-v1.json"},
+    {"order":470,"code":"8938","name":"グローム・ホールディングス","classification":"growth_potential_disclosure_containing_explicit_quantified_medium_term_business_plan_fy2026_to_fy2030_not_formal_management_plan","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/8938-primary-review-v1.json"},
+    {"order":480,"code":"206A","name":"PRISM BioLab","classification":"growth_potential_disclosure_with_r_and_d_milestones_and_ipo_fund_use_not_formal_management_plan","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/206A-primary-review-v1.json"},
+    {"order":482,"code":"269A","name":"Sapeet","classification":"growth_potential_disclosure_with_2030_directional_strategy_and_single_year_forecast_not_formal_management_plan","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/269A-primary-review-v1.json"},
+    {"order":489,"code":"3674","name":"オークファン","classification":"growth_potential_disclosure_with_single_year_turnaround_plan_not_formal_management_plan","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/3674-primary-review-v1.json"},
+    {"order":491,"code":"4240","name":"クラスターテクノロジー","classification":"growth_potential_disclosure_containing_explicit_formal_medium_term_management_plan_fy2024_to_fy2026","formalManagementPlanConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/4240-primary-review-v1.json"}
+  ],
+  "classificationCounts": {
+    "formalPlanEmbeddedConfirmed": 2,
+    "growthDocumentNotFormalManagementPlan": 8,
+    "sourceRemapOrExclusionRequired": 0
+  },
+  "completedChecksForAll": [
+    "sourceDocumentClassification",
+    "explicitFormalPlanEvidence",
+    "formalPlanBoundaryOrNotFormalPlanStatement",
+    "forecastActualAndTargetSeparation",
+    "financialMetricScopeAndDefinitions",
+    "capitalPolicyAndShareholderReturnReview",
+    "fieldLevelEvidence",
+    "noAutomaticPromotionToFormalPlan"
+  ],
+  "pendingChecksForAll": ["remainingVisualFigureReview","independentDoubleCheck","postPublicationDisplayClassification"],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 10,
+    "wavePrimaryReviewCompleteAlreadyReflectedInBase": 4,
+    "wavePrimaryReviewNewlyCompleted": 6,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 10,
+    "phase2PrimaryReviewComplete": 236,
+    "primaryReviewCompleteIncludingPhase1": 286,
+    "independentReviewReady": 61,
+    "remainingPhase2PrimaryReviews": 214,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"7208","name":"カネミツ","market":"Standard","industry":"輸送用機器","phase2Order":457},
+  "source": {
+    "title":"第10次中期経営計画",
+    "publishedDate":"2026-03-24",
+    "officialUrl":"https://www2.jpx.co.jp/disc/72080/140120260324587106.pdf",
+    "pdfSha256":"49c52aacaa64a0679245cbf3e49fa23977ecc060a3e63cecf1647b1c10e58b89",
+    "pageCount":25,
+    "documentClassification":"formal_management_plan_current_2026_to_2028_with_2035_long_term_vision",
+    "period":{"startFiscalYear":"2026年度・2027年3月期","endFiscalYear":"2028年度・2029年3月期","terminalFiscalYear":"2028年度・2029年3月期"},
+    "formalPlanBoundary": {
+      "previousPlan":"第9次中期経営計画・2023年4月～2026年3月",
+      "currentPlan":"第10次中期経営計画・2026年4月～2029年3月",
+      "longTermVision":"ありたい姿2035・第11次、第12次中計を経て2035年3月期へ",
+      "statement":"第9次中計の実績見込み、第10次中計の2029年3月期目標、2035年長期目標を分離する。"
+    }
+  },
+  "summary":"ロボット用部品を成長の要に据え、プーリ、トランスミッション、xEV、モーターコアと合わせた5本柱を構築する。ネットシェイプ技術、スマート工場、人材育成・AI活用を進め、2029年3月期に売上高130億円、営業利益11億円、ROE7%、DOE2.5%を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":130,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期見込み110億円","evidencePdfPage":21},
+    {"metric":"営業利益","target":11,"unit":"億円","targetFiscalYear":"2029年3月期","baseline":"2026年3月期見込み9.2億円","evidencePdfPage":21},
+    {"metric":"ROE","target":7,"unit":"%","targetFiscalYear":"2029年3月期","baseline":"2026年3月期見込み6.5%","evidencePdfPage":22},
+    {"metric":"ICE用部品以外の売上比率","target":35,"unit":"%以上","targetFiscalYear":"中計最終年度まで","baseline":"現行25%","evidencePdfPage":17}
+  ],
+  "previousPlanResultsSeparated":[
+    {"metric":"売上高","actual":110,"unit":"億円・見込み","fiscalYear":"2026年3月期","previousPlanTarget":115,"previousPlanTargetUnit":"億円","evidencePdfPage":8},
+    {"metric":"営業利益","actual":9.2,"unit":"億円・見込み","fiscalYear":"2026年3月期","previousPlanTarget":5,"previousPlanTargetUnit":"億円","evidencePdfPage":8},
+    {"metric":"ROE","actual":6.5,"unit":"%・見込み","fiscalYear":"2026年3月期","previousPlanTarget":4.4,"previousPlanTargetUnit":"%","evidencePdfPage":8},
+    {"metric":"Scope1・2 CO2排出量原単位削減率","actual":47,"unit":"%・2014年3月期比見込み","fiscalYear":"2026年3月期","note":"目標未達と記載","evidencePdfPage":9}
+  ],
+  "strategyThemes":[
+    {"theme":"5本柱の事業ポートフォリオ","evidencePdfPages":[13,14,17],"evidence":"プーリ、トランスミッション、xEV、モーターコア、ロボット部品を主力領域とする。"},
+    {"theme":"ネットシェイプ技術と周辺技術","evidencePdfPage":17,"evidence":"シミュレーション、知財、熱処理・鍛造、M&A・アライアンスを強化する。"},
+    {"theme":"スマート工場化","evidencePdfPage":17,"evidence":"AIと自動化を用いて製造効率を高める。"},
+    {"theme":"人的資本とAI活用","evidencePdfPage":18,"evidence":"必要人材の定義、能力統合管理、リスキリング、AIによる業務工数低減を進める。"},
+    {"theme":"情報セキュリティと新事業組織","evidencePdfPage":19,"evidence":"復旧短期化、教育強化、新事業エキスパート集団の形成を進める。"}
+  ],
+  "capitalPolicy": {
+    "status":"quantified_growth_investment_uses_without_disclosed_total_cash_bridge",
+    "period":"2026年4月～2029年3月",
+    "disclosedUseAmounts":[
+      {"use":"成長拡大","amount":34,"unit":"億円"},
+      {"use":"研究開発","amount":4,"unit":"億円"},
+      {"use":"M&A・アライアンス","amount":5,"unit":"億円"},
+      {"use":"人的資本投資","amount":5,"unit":"億円","definition":"職場環境整備・人材育成等"}
+    ],
+    "cashInAmountDisclosed":false,
+    "aggregateInvestmentAmountNotInferred":true,
+    "policy":"営業CFの拡大と、成長事業投資・株主還元・保有現金のバランスを図る。図表に示された用途別金額は記録するが、総額や資金源は推計しない。",
+    "evidencePdfPage":20
+  },
+  "shareholderReturnPolicy": {
+    "status":"doe_target_and_stable_dividend_policy",
+    "doeTarget":2.5,
+    "doeTargetUnit":"%・2029年3月期",
+    "longTermDoeReference":3.5,
+    "longTermDoeReferenceUnit":"%・2035年3月期",
+    "policy":"安定配当を目指しDOEを配当指標とする。自己株式取得額や配当総額は開示していない。",
+    "evidencePdfPage":22
+  },
+  "nonFinancialTargets":[
+    {"metric":"Scope1・2 CO2排出量原単位","target":10,"unit":"%低減・2026年3月期比","targetFiscalYear":"中計期間","evidencePdfPage":23},
+    {"metric":"有給休暇取得率","target":80,"unit":"%以上","targetFiscalYear":"中計期間","evidencePdfPage":23},
+    {"metric":"男性社員育児休暇取得率","target":50,"unit":"%以上","targetFiscalYear":"中計期間","evidencePdfPage":23}
+  ],
+  "longTermTargetsSeparated":[
+    {"metric":"売上高","target":150,"unit":"億円","targetFiscalYear":"2035年3月期","evidencePdfPage":21},
+    {"metric":"営業利益","target":18,"unit":"億円","targetFiscalYear":"2035年3月期","evidencePdfPage":21},
+    {"metric":"ROE","target":8,"unit":"%","targetFiscalYear":"2035年3月期","evidencePdfPage":22},
+    {"metric":"ICE車向け売上依存度","target":50,"unit":"%","targetFiscalYear":"2035年頃","baseline":"現在75%","evidencePdfPage":13}
+  ],
+  "definitions":[
+    {"term":"ICE用部品以外の売上比率35%以上","definition":"第10次中計の主要施策。2035年のICE車向け売上依存度50%とは時間軸と表現が異なるため分離する。","evidencePdfPages":[13,17]},
+    {"term":"人的資本投資5億円","definition":"職場環境整備・人材育成等を含む。","evidencePdfPage":20},
+    {"term":"DOE","definition":"安定配当のため採用する配当指標。2029年3月期2.5%、2035年3月期3.5%を図示。","evidencePdfPage":22}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":true,"formalPlanBoundaryValidated":true,"previousCurrentAndLongTermSeparated":true,"forecastActualSeparated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"undisclosedCashInNotInferred":true,"shareholderReturnPolicyReviewed":true,"nonFinancialTargetsReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false},
+  "review": {"status":"primary_review_complete_independent_visual_review_pending","reviewedAt":"2026-08-06T09:12:00+09:00","reviewRole":"primary_reviewer","automaticApprovalAllowed":false,"deepVerificationApproved":false,"requiredBeforeApproval":["2029年3月期の売上130億円・営業利益11億円を原寸確認する","ROE7%・DOE2.5%と2035年参考値を分離確認する","成長拡大34・研究開発4・M&A5・人的資本5億円の用途対応を確認する","ICE用部品以外35%以上と2035年ICE依存度50%を混同していないことを確認する","CO2原単位、有休、男性育休の非財務目標を確認する"]}
+}

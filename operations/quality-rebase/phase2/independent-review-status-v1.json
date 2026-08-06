@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-review-status-v1",
+  "updatedAt": "2026-08-07T08:40:00+09:00",
+  "basis": {
+    "effectiveStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
+    "primaryReviewComplete": 236,
+    "independentReviewEligible": 61
+  },
+  "counts": {
+    "independentReviewComplete": 1,
+    "independentReviewPending": 60,
+    "deepVerificationApproved": 0
+  },
+  "completionRecords": [
+    {
+      "code": "5451",
+      "name": "ヨドコウ",
+      "file": "operations/quality-rebase/phase2/independent-completions/5451-independent-completion-v1.json",
+      "status": "independent_review_complete"
+    }
+  ],
+  "policy": {
+    "appendOnlyCompletionRecords": true,
+    "preserveOriginalPendingPackets": true,
+    "primaryReviewerMaySelfApprove": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationRequiresSeparateFinalGate": true,
+    "deepVerificationApproved": false
+  }
+}

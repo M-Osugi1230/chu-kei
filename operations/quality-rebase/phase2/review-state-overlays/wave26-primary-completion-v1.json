@@ -1,0 +1,27 @@
+{
+  "schemaVersion":"phase2-review-state-overlay-v1",
+  "createdAt":"2026-08-07T07:31:00+09:00",
+  "wave":26,
+  "baseWaveFile":"operations/quality-rebase/phase2/primary-review-wave26-v1.json",
+  "baseStatusFile":"operations/quality-rebase/phase2/effective-status-v1.json",
+  "reason":"Wave26のgrowth_potential_document 10社を全件一次レビューした。ベストワンドットコム、コージンバイオ、データホライゾン、免疫生物研究所は正式中計内包型。残る6社は中期目標セクション、単年度計画、終了済み中計後の見通し、長期ビジョン等であり正式中計へ自動昇格しない。トレンダーズの図形主体中期チャートは推測転記せず独立ビジュアル確認へ残す。",
+  "expectedBase":{"phase2PrimaryReviewComplete":246,"primaryReviewCompleteIncludingPhase1":296,"independentReviewReady":61,"remainingPhase2PrimaryReviews":204,"primaryReviewWavesAssigned":26,"phase2CompaniesAssignedTotal":258},
+  "classificationCounts":{"formalPlanEmbeddedConfirmed":4,"growthObjectivesOrRoadmapNotFormalPlan":6,"sourceRemapOrExclusionRequired":0},
+  "companyCompletions":[
+    {"code":"6069","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/6069-primary-review-v1.json"},
+    {"code":"6562","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/6562-primary-review-v1.json"},
+    {"code":"6577","formalManagementPlanConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/6577-primary-review-v1.json"},
+    {"code":"7133","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/7133-primary-review-v1.json"},
+    {"code":"177A","formalManagementPlanConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/177A-primary-review-v1.json"},
+    {"code":"2983","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/2983-primary-review-v1.json"},
+    {"code":"304A","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/304A-primary-review-v1.json"},
+    {"code":"3479","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/3479-primary-review-v1.json"},
+    {"code":"3628","formalManagementPlanConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/3628-primary-review-v1.json"},
+    {"code":"4570","formalManagementPlanConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/4570-primary-review-v1.json"}
+  ],
+  "pendingChecksForAll":["remainingVisualFigureReview","independentDoubleCheck","postPublicationDisplayClassification"],
+  "effectiveCounts":{"wavePrimaryReviewComplete":10,"wavePrimaryReviewNewlyCompleted":10,"waveIndependentReviewReady":0,"waveIndependentVisualReviewPending":10,"phase2PrimaryReviewComplete":256,"primaryReviewCompleteIncludingPhase1":306,"independentReviewReady":61,"remainingPhase2PrimaryReviews":194,"deepVerificationApproved":0},
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":false
+}

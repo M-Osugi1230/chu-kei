@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-06T11:30:13+00:00",
+  "updatedAt": "2026-08-06T11:30:13+00:00",
+  "wave": 19,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 305,
+      "code": "1982",
+      "name": "日比谷総合設備",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 25,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-01/1982/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    },
+    {
+      "order": 307,
+      "code": "2112",
+      "name": "塩水港精糖",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 28,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-01/2112/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    },
+    {
+      "order": 308,
+      "code": "2117",
+      "name": "ウェルネオシュガー",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 100,
+      "pageCount": 30,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-01/2117/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": ["formalPlanBoundary","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    },
+    {
+      "order": 309,
+      "code": "2286",
+      "name": "林兼産業",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 24,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-01/2286/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    },
+    {
+      "order": 310,
+      "code": "2331",
+      "name": "ALSOK",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 23,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-01/2331/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    },
+    {
+      "order": 312,
+      "code": "2378",
+      "name": "ルネサンス",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 36,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-02/2378/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    },
+    {
+      "order": 332,
+      "code": "3708",
+      "name": "特種東海製紙",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 41,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-04/3708/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    },
+    {
+      "order": 335,
+      "code": "3863",
+      "name": "日本製紙",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 53,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-07/wave-04/3863/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    },
+    {
+      "order": 408,
+      "code": "2813",
+      "name": "和弘食品",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 20,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-01/2813/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    },
+    {
+      "order": 410,
+      "code": "3040",
+      "name": "ソリトンシステムズ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 100,
+      "pageCount": 23,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-01/3040/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": ["formalPlanBoundary","planRevisionSeparation","fullTextReview","metricsValidation","capitalPolicyReview","fieldLevelEvidence"]
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 1,
+    "planRevisionOrUpdateCandidates": 9,
+    "growthPotentialDocumentCandidates": 0,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

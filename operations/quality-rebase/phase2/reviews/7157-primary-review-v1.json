@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "quality-rebase-phase2-growth-document-review-v1",
+  "company": {
+    "code": "7157",
+    "name": "ライフネット生命保険",
+    "market": "Prime",
+    "marketAtSourcePublication": "Growth",
+    "industry": "保険業",
+    "phase2Order": 456
+  },
+  "source": {
+    "title": "事業計画及び成長可能性に関する説明資料",
+    "publishedDate": "2025-06-27",
+    "officialUrl": "https://www2.jpx.co.jp/disc/71570/140120250627502808.pdf",
+    "pdfSha256": "c44aa5fe51431e798fef19d4ffc153d9a21ccd088f4a610e88f2c67c89230541",
+    "pageCount": 57,
+    "documentClassification": "growth_potential_disclosure_containing_explicit_formal_medium_term_plan_2024_to_2028",
+    "formalManagementPlanConfirmed": true,
+    "formalPlanBoundary": {
+      "status": "formal_plan_embedded_in_growth_document",
+      "currentPlan": "2024年度～2028年度中期計画",
+      "startFiscalYear": "2024年度",
+      "endFiscalYear": "2028年度",
+      "duration": "5カ年",
+      "statement": "2023年度実績、2024年度実績、2025年度単年度業績予想、2028年度中期計画目標を分離する。"
+    }
+  },
+  "summary": "オンライン生保No.1のポジションを基盤に、Rebranding、Embedded、Tech & Servicesの3重点領域と人材戦略を進める。経営指標をEEVから包括資本へ移し、2028年度に包括資本2,000～2,400億円、一株当たり包括資本成長率10%程度、株価3,000円以上を目指す。成長基盤への投資とキャピタルゲインを優先し、配当時期は未定とする。",
+  "financialTargets": [
+    {"metric": "包括資本・CE", "targetRange": [2000, 2400], "unit": "億円", "targetFiscalYear": "2028年度・2029年3月末", "evidencePdfPages": [29, 30, 38, 43, 44]},
+    {"metric": "一株当たり包括資本成長率", "target": 10, "unit": "%程度", "targetFiscalYear": "2028年度", "evidencePdfPages": [29, 30, 43, 44]},
+    {"metric": "株価", "targetMin": 3000, "unit": "円", "targetFiscalYear": "2028年度・2029年3月末", "classification": "capital_market_target", "evidencePdfPages": [29, 30, 43]}
+  ],
+  "actualsSeparated": [
+    {"metric": "包括資本・CE", "value": 1598, "unit": "億円", "fiscalYear": "2023年度", "classification": "actual", "evidencePdfPages": [30, 43]},
+    {"metric": "包括資本・CE", "value": 1670, "unit": "億円", "fiscalYear": "2024年度", "classification": "actual", "evidencePdfPages": [30, 40, 43]},
+    {"metric": "一株当たり包括資本成長率", "value": 3.8, "unit": "%", "fiscalYear": "2023年度", "classification": "actual", "evidencePdfPage": 30},
+    {"metric": "一株当たり包括資本成長率", "value": 4.5, "unit": "%", "fiscalYear": "2024年度", "classification": "actual", "evidencePdfPage": 30},
+    {"metric": "株価", "value": 1512, "unit": "円・3月末終値", "fiscalYear": "2023年度", "classification": "actual", "evidencePdfPage": 30},
+    {"metric": "株価", "value": 1742, "unit": "円・3月末終値", "fiscalYear": "2024年度", "classification": "actual", "evidencePdfPages": [30, 40]}
+  ],
+  "singleYearForecast": [
+    {"metric": "保有契約年換算保険料", "actual": 34518, "forecast": 37500, "unit": "百万円", "actualDate": "2025年3月末", "forecastDate": "2026年3月末", "evidencePdfPage": 45},
+    {"metric": "保険収益", "actual": 30081, "forecast": 33000, "unit": "百万円", "actualFiscalYear": "2024年度", "forecastFiscalYear": "2025年度", "evidencePdfPage": 45},
+    {"metric": "保険サービス損益", "actual": 9576, "forecast": 9800, "unit": "百万円", "actualFiscalYear": "2024年度", "forecastFiscalYear": "2025年度", "evidencePdfPage": 45},
+    {"metric": "親会社の所有者に帰属する当期利益", "actual": 5993, "forecast": 6900, "unit": "百万円", "actualFiscalYear": "2024年度", "forecastFiscalYear": "2025年度", "evidencePdfPage": 45}
+  ],
+  "nonFinancialTargets": [
+    {"metric": "エンゲージメントスコア・総合", "target": "継続的に向上", "targetFiscalYear": "2028年度", "actual2023": 70, "actual2024": 72, "evidencePdfPages": [29, 30]},
+    {"metric": "意思決定者に占める女性割合", "targetMin": 30, "unit": "%", "targetFiscalYear": "2028年度", "actual2023": 23.5, "actual2024": 28.6, "evidencePdfPages": [29, 30]},
+    {"metric": "意思決定者に占める30代以下割合", "targetMin": 15, "unit": "%", "targetFiscalYear": "2028年度", "actual2023": 2.9, "actual2024": 5.7, "evidencePdfPages": [29, 30]},
+    {"metric": "エンゲージメントスコア・成長", "target": "継続的に向上", "targetFiscalYear": "2028年度", "actual2023": 66, "actual2024": 69, "evidencePdfPages": [29, 30]}
+  ],
+  "strategyThemes": [
+    {"theme": "Rebranding", "evidence": "時代・顧客価値観に合わせてブランドを再構築し、ダイレクトビジネスを質的に変化させる。", "evidencePdfPages": [29, 32, 33, 34, 44]},
+    {"theme": "Embedded", "evidence": "銀行、決済、証券等のパートナー経済圏へ保険を組み込み、団信・パートナービジネスを深化・拡充する。", "evidencePdfPages": [11, 12, 29, 32, 33, 44]},
+    {"theme": "Tech & Services", "evidence": "AI、マイナンバー、UI/UX、オンライン手続きを活用し、生命保険の提供価値・利便性を強化する。", "evidencePdfPages": [8, 29, 32, 33, 44]},
+    {"theme": "人材戦略", "evidence": "重点領域別の組織体制、従業員成長、株式報酬、対面コミュニケーション、マニフェストに基づく組織風土を強化する。", "evidencePdfPages": [29, 36, 37]},
+    {"theme": "市場評価向上", "evidence": "包括資本成長、P/CE倍率、プライム市場移行、投資家との対話を通じて株価目標へ接続する。", "evidencePdfPages": [40, 41, 42, 43]}
+  ],
+  "capitalPolicy": {
+    "status": "economic_value_capital_management_with_historical_equity_funding_allocations",
+    "coreMetric": "包括資本・CE",
+    "capitalAdequacy": {"metric": "内部ESR", "value": 364, "unit": "%", "classification": "actual_reference", "evidencePdfPage": 42},
+    "growthInvestmentPolicy": "重点領域への成長投資を優先し、包括資本と一株当たりCEを成長させる。",
+    "historicalFundingAllocations": [
+      {"fundingDate": "2021年9月", "totalUseItems": [{"category": "新契約獲得営業費用", "amount": 6800, "unit": "百万円"}, {"category": "システム開発", "amount": 1372, "unit": "百万円"}, {"category": "パートナー・新規事業", "amount": 1500, "unit": "百万円"}], "spendingPeriod": "2021年度～2025年度"},
+      {"fundingDate": "2023年9月", "totalUseItems": [{"category": "ダイレクトビジネス拡大", "amount": 5770, "unit": "百万円"}, {"category": "パートナービジネス拡大", "amount": 3000, "unit": "百万円"}, {"category": "新規事業", "amount": 1000, "unit": "百万円"}], "spendingPeriod": "2023年度～2027年度"}
+    ],
+    "currentPlanCashAllocation": "2024～2028年度を通じた統合キャッシュイン・アウト総額は開示していない",
+    "evidencePdfPages": [42, 54, 55]
+  },
+  "shareholderReturnPolicy": {
+    "status": "capital_gain_priority_dividend_timing_undecided",
+    "policy": "中長期の収益性向上に向けた成長基盤強化を優先し、キャピタルゲインによるTSR向上を目指す。",
+    "dividendTiming": "剰余金配当の具体的な実施時期等は未定",
+    "payoutRatioTarget": "非開示",
+    "doeTarget": "非開示",
+    "buybackPolicy": "本資料では具体的な自己株式取得方針を開示していない",
+    "evidencePdfPage": 56
+  },
+  "importantDefinitions": [
+    {"term": "包括資本・CE", "definition": "IFRS資本、税調整後CSM、団信契約価値を合算した経営指標。旧EEVから変更する。", "evidencePdfPage": 38},
+    {"term": "団信契約価値", "definition": "評価日時点の団信保有契約に対する将来の更新分も含めた将来IFRS損益の価値。", "evidencePdfPage": 38},
+    {"term": "包括資本2,000～2,400億円", "definition": "下限2,000億円は現行個人保険・auじぶん銀行との取組み、上限2,400億円は協業拡大等を追加して目指す。", "evidencePdfPage": 44},
+    {"term": "株価3,000円以上", "definition": "会計利益目標ではなく2028年度の市場評価目標。", "evidencePdfPages": [29, 30, 43]}
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalManagementPlanConfirmed": true,
+    "formalPlanEmbeddedInGrowthDocument": true,
+    "formalPlanBoundaryValidated": true,
+    "forecastActualSeparated": true,
+    "capitalMarketTargetSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "capitalPolicyReviewed": true,
+    "shareholderReturnPolicyReviewed": true,
+    "automaticPromotionWithoutEvidenceBlocked": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_formal_plan_embedded_in_growth_document_independent_visual_review_pending",
+    "reviewedAt": "2026-08-07T04:36:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "requiredBeforeApproval": [
+      "2024～2028年度の計画期間と2028年度目標の図表を独立確認する",
+      "包括資本の構成要素と2,000～2,400億円レンジを確認する",
+      "一株当たりCE成長率10%程度と株価3,000円以上を会計目標と分離確認する",
+      "増資資金使途は過去調達分であり現中計キャッシュアロケーション総額ではないことを確認する",
+      "配当実施時期未定・キャピタルゲイン優先方針を確認する"
+    ]
+  }
+}

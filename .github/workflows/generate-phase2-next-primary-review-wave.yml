@@ -20,7 +20,7 @@ on:
         type: boolean
   push:
     branches:
-      - agent/quality-rebase-phase0-2
+      - 'agent/phase2-*'
     paths:
       - 'operations/quality-rebase/phase2/generate-next-wave-request.json'
 
@@ -202,9 +202,9 @@ jobs:
 
           serialized = json.dumps(wave, ensure_ascii=False)
           for forbidden in (
-              '"automaticFactCompletionAllowed": true',
-              '"automaticApprovalAllowed": true',
-              '"deepVerificationApproved": true',
+              '\"automaticFactCompletionAllowed\": true',
+              '\"automaticApprovalAllowed\": true',
+              '\"deepVerificationApproved\": true',
           ):
               if forbidden in serialized:
                   raise SystemExit(f'forbidden flag found: {forbidden}')

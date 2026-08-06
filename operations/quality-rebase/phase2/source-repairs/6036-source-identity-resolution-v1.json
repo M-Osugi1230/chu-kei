@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "phase2-source-identity-resolution-v1",
+  "company": {"code": "6036", "name": "KeePer技研"},
+  "detectedAt": "2026-08-07T08:46:00+09:00",
+  "resolutionStatus": "source_identity_mismatch_detected_canonical_collection_source_confirmed",
+  "existingReviewReference": {
+    "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6036-primary-review-v1.json",
+    "independentReviewPacket": "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json",
+    "officialUrl": "https://www2.jpx.co.jp/disc/60360/140120260318583945.pdf",
+    "pdfSha256": "584aba27e00ceb9f01fddd5f30d50f7c470cb65d0280cc247a37b4dff7a6f885",
+    "pageCount": 42,
+    "issue": "一次レビューと独立レビューパケットのsource metadataがPhase 2収集正本と一致しない。"
+  },
+  "canonicalSource": {
+    "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/6036/collection.json",
+    "title": "中期経営計画（2031年6月期）",
+    "publishedDate": "2026-03-19",
+    "officialUrl": "https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf",
+    "pdfSha256": "967cca44b934477af9b9991f6dc84685b71994b3f43b4c404f5460ba766daa24",
+    "pageCount": 42,
+    "independentlyConfirmed": true,
+    "confirmationNote": "会社公式TOPICSおよび取引所系開示一覧でも2026年3月19日16:00の『中期経営計画（2031年6月期）』を確認した。"
+  },
+  "contentDisposition": {
+    "preserveExistingPrimaryAnalysis": true,
+    "reason": "一次レビューの構造化内容は中計2031の内容と整合するため破棄せず、source metadata正規化後にcanonical PDFでページ証跡を再確認する。"
+  },
+  "requiredNextChecks": [
+    "一次レビューのURL・PDF SHA-256をcanonicalSourceへ正規化する",
+    "独立レビューパケットのURL・PDF SHA-256をcanonicalSourceへ正規化する",
+    "主要数値・図表ページをcanonical PDFで再確認する",
+    "source identity正規化後に独立レビューを再開する"
+  ],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

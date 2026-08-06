@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "phase2-source-identity-resolution-v1",
+  "company": {"code": "7164", "name": "全国保証"},
+  "detectedAt": "2026-08-07T08:46:00+09:00",
+  "resolutionStatus": "source_identity_mismatch_detected_canonical_collection_source_confirmed",
+  "existingReviewReference": {
+    "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7164-primary-review-v1.json",
+    "independentReviewPacket": "operations/quality-rebase/phase2/independent/7164-independent-review-v1.json",
+    "officialUrl": "https://www2.jpx.co.jp/disc/71640/140120260316582351.pdf",
+    "pdfSha256": "2c4fb526061cc62066b1c606b92fb315507d791c8c03e6f7a5d423e11d2eec07",
+    "pageCount": 40,
+    "issue": "一次レビューと独立レビューパケットのsource metadataがPhase 2収集正本と一致しない。"
+  },
+  "canonicalSource": {
+    "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/7164/collection.json",
+    "title": "全国保証株式会社 次期中期経営計画について / 新中期経営計画 2026-2030 Go for 50",
+    "publishedDate": "2026-03-16",
+    "officialUrl": "https://www2.jpx.co.jp/disc/71640/140120260316582395.pdf",
+    "pdfSha256": "d3e51a924e0c0fa7f4b813fc276afb858b769d17df535ac33417f0bdb7f8ab9b",
+    "pageCount": 40,
+    "independentlyConfirmed": true,
+    "confirmationNote": "JPXの40ページ公式開示でGo for 50、2026～2030年度、保証債務残高27.3兆円、EPS298円、ROE12～15%等を確認した。"
+  },
+  "contentDisposition": {
+    "preserveExistingPrimaryAnalysis": true,
+    "reason": "一次レビューの構造化内容はcanonical 40ページ資料の内容と整合するため破棄せず、source metadata正規化後にページ証跡を再確認する。"
+  },
+  "requiredNextChecks": [
+    "一次レビューのURL・PDF SHA-256をcanonicalSourceへ正規化する",
+    "独立レビューパケットのURL・PDF SHA-256をcanonicalSourceへ正規化する",
+    "資本政策・株主還元を含む主要図表ページをcanonical PDFで再確認する",
+    "source identity正規化後に独立レビューを再開する"
+  ],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

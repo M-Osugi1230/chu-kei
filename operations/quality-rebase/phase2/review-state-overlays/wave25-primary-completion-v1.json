@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "phase2-review-state-overlay-v1",
+  "createdAt": "2026-08-07T07:31:00+09:00",
+  "wave": 25,
+  "baseWaveFile": "operations/quality-rebase/phase2/primary-review-wave25-v1.json",
+  "baseStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
+  "reason": "Wave25のgrowth_potential_document 10社を全件分類した。JSHとビースタイルホールディングスは正式中計内包型、うるるは正式な中長期経営方針と中期財務ターゲットを持つが独立した正式中計ではない。残る7社は単年度予想・事業別計画・長期戦略・臨床マイルストーン等であり会社全体の正式中計へ昇格しない。独立レビューと図表確認は未完了のため自動承認しない。",
+  "expectedBase": {
+    "phase2PrimaryReviewComplete": 236,
+    "primaryReviewCompleteIncludingPhase1": 286,
+    "independentReviewReady": 61,
+    "remainingPhase2PrimaryReviews": 214,
+    "wavePrimaryReviewCompleteAlreadyReflected": 0,
+    "primaryReviewWavesAssigned": 25,
+    "phase2CompaniesAssignedTotal": 248
+  },
+  "classificationCounts": {
+    "formalPlanEmbeddedConfirmed": 2,
+    "formalManagementPolicyNotStandalonePlan": 1,
+    "growthDocumentNotFormalManagementPlan": 7,
+    "sourceRemapOrExclusionRequired": 0
+  },
+  "companyCompletions": [
+    {"order":135,"code":"150A","name":"JSH","formalManagementPlanConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/150A-primary-review-v1.json"},
+    {"order":136,"code":"192A","name":"インテグループ","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/192A-primary-review-v1.json"},
+    {"order":138,"code":"2937","name":"サンクゼール","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/2937-primary-review-v1.json"},
+    {"order":139,"code":"296A","name":"令和アカウンティング・ホールディングス","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/296A-primary-review-v1.json"},
+    {"order":140,"code":"302A","name":"ビースタイルホールディングス","formalManagementPlanConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/302A-primary-review-v1.json"},
+    {"order":141,"code":"3224","name":"ゼネラル・オイスター","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/3224-primary-review-v1.json"},
+    {"order":142,"code":"341A","name":"トヨコー","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/341A-primary-review-v1.json"},
+    {"order":146,"code":"3936","name":"グローバルウェイ","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/3936-primary-review-v1.json"},
+    {"order":147,"code":"3979","name":"うるる","formalManagementPlanConfirmed":false,"formalManagementPolicyConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/3979-primary-review-v1.json"},
+    {"order":149,"code":"520A","name":"ジェイファーマ","formalManagementPlanConfirmed":false,"reviewFile":"operations/quality-rebase/phase2/reviews/520A-primary-review-v1.json"}
+  ],
+  "completedChecksForAll": ["sourceDocumentClassification","explicitFormalPlanEvidence","formalPlanBoundaryOrNotFormalPlanStatement","forecastActualAndTargetSeparation","financialMetricScopeAndDefinitions","capitalPolicyAndShareholderReturnReview","fieldLevelEvidence","noAutomaticPromotionToFormalPlan"],
+  "pendingChecksForAll": ["remainingVisualFigureReview","independentDoubleCheck","postPublicationDisplayClassification"],
+  "effectiveCounts": {
+    "wavePrimaryReviewComplete": 10,
+    "wavePrimaryReviewCompleteAlreadyReflectedInBase": 0,
+    "wavePrimaryReviewNewlyCompleted": 10,
+    "waveIndependentReviewReady": 0,
+    "waveIndependentVisualReviewPending": 10,
+    "phase2PrimaryReviewComplete": 246,
+    "primaryReviewCompleteIncludingPhase1": 296,
+    "independentReviewReady": 61,
+    "remainingPhase2PrimaryReviews": 204,
+    "deepVerificationApproved": 0
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

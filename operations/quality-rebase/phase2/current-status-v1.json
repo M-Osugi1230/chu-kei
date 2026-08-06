@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-current-status-v3",
-  "updatedAt": "2026-08-06T12:15:48+00:00",
+  "updatedAt": "2026-08-06T15:32:22+00:00",
   "phase2TargetIncludingPhase1": 500,
   "phase1PrimaryReviewComplete": 50,
   "phase1DeepVerificationApproved": 0,
@@ -34,14 +34,14 @@
     "sourceFile": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
   },
   "review": {
-    "sourceIdentityConfirmed": 63,
-    "formalPlanConfirmed": 63,
-    "primaryReviewComplete": 63,
+    "sourceIdentityConfirmed": 65,
+    "formalPlanConfirmed": 65,
+    "primaryReviewComplete": 65,
     "primaryReviewCandidatesAvailable": 313,
     "primaryReviewWaveAssigned": 10,
-    "primaryReviewWavesAssigned": 20,
-    "primaryReviewCompaniesAssignedTotal": 200,
-    "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave20-v1.json",
+    "primaryReviewWavesAssigned": 21,
+    "primaryReviewCompaniesAssignedTotal": 210,
+    "primaryReviewWaveFile": "operations/quality-rebase/phase2/primary-review-wave21-v1.json",
     "primaryReviewWaveFiles": [
       "operations/quality-rebase/phase2/primary-review-wave01-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave02-v1.json",
@@ -62,13 +62,14 @@
       "operations/quality-rebase/phase2/primary-review-wave17-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave18-v1.json",
       "operations/quality-rebase/phase2/primary-review-wave19-v1.json",
-      "operations/quality-rebase/phase2/primary-review-wave20-v1.json"
+      "operations/quality-rebase/phase2/primary-review-wave20-v1.json",
+      "operations/quality-rebase/phase2/primary-review-wave21-v1.json"
     ],
-    "independentReviewReady": 61,
+    "independentReviewReady": 63,
     "additionalSourceMappingRequired": 2,
     "independentReviewComplete": 0,
     "deepVerificationApproved": 0,
-    "remainingPrimaryReviews": 387
+    "remainingPrimaryReviews": 385
   },
   "completedPrimaryReviews": [
     {
@@ -699,6 +700,26 @@
       "status": "primary_review_complete_independent_review_ready",
       "sourceCorrectionRequired": false,
       "sourceClassification": "formal_management_plan_current_2026_to_2028"
+    },
+    {
+      "order": 415,
+      "code": "3252",
+      "name": "地主",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3252-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3252-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2026_to_2028_replacing_2022_to_2026_plan_after_early_achievement"
+    },
+    {
+      "order": 419,
+      "code": "3521",
+      "name": "テルマー湯ホールディングス",
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3521-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3521-independent-review-v1.json",
+      "status": "primary_review_complete_independent_review_ready",
+      "sourceCorrectionRequired": false,
+      "sourceClassification": "formal_management_plan_current_2025_04_to_2028_03_published_under_pre_rename_issuer_name"
     }
   ],
   "qualityFindings": [
@@ -887,13 +908,21 @@
       "workstream": "primary_review_wave20",
       "companies": 10,
       "status": "in_progress",
-      "completionCount": 0,
-      "remainingCount": 10,
+      "completionCount": 2,
+      "remainingCount": 8,
       "file": "operations/quality-rebase/phase2/primary-review-wave20-v1.json"
     },
     {
+      "workstream": "primary_review_wave21",
+      "companies": 10,
+      "status": "in_progress",
+      "completionCount": 0,
+      "remainingCount": 10,
+      "file": "operations/quality-rebase/phase2/primary-review-wave21-v1.json"
+    },
+    {
       "workstream": "independent_review_ready_queue",
-      "companies": 61,
+      "companies": 63,
       "status": "ready",
       "completionCount": 0,
       "files": [
@@ -957,7 +986,9 @@
         "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/7164-independent-review-v1.json",
         "operations/quality-rebase/phase2/independent/2734-independent-review-v1.json",
-        "operations/quality-rebase/phase2/independent/6050-independent-review-v1.json"
+        "operations/quality-rebase/phase2/independent/6050-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3252-independent-review-v1.json",
+        "operations/quality-rebase/phase2/independent/3521-independent-review-v1.json"
       ]
     },
     {

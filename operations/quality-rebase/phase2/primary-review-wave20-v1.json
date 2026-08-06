@@ -1,7 +1,7 @@
 {
   "schemaVersion": "phase2-primary-review-wave-v1",
   "generatedAt": "2026-08-06T12:15:06+00:00",
-  "updatedAt": "2026-08-06T12:15:06+00:00",
+  "updatedAt": "2026-08-06T15:32:22+00:00",
   "wave": 20,
   "targetCompanies": 10,
   "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
@@ -46,7 +46,7 @@
       "relevanceScore": 100,
       "pageCount": 21,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-02/3252/primary-review-template.json",
-      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "status": "primary_review_complete_independent_review_ready",
       "requiredChecks": [
         "formalPlanBoundary",
         "planRevisionSeparation",
@@ -54,7 +54,20 @@
         "metricsValidation",
         "capitalPolicyReview",
         "fieldLevelEvidence"
-      ]
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3252-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3252-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
     },
     {
       "order": 418,
@@ -82,7 +95,7 @@
       "relevanceScore": 100,
       "pageCount": 19,
       "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-02/3521/primary-review-template.json",
-      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "status": "primary_review_complete_independent_review_ready",
       "requiredChecks": [
         "formalPlanBoundary",
         "planRevisionSeparation",
@@ -90,7 +103,20 @@
         "metricsValidation",
         "capitalPolicyReview",
         "fieldLevelEvidence"
-      ]
+      ],
+      "reviewFile": "operations/quality-rebase/phase2/reviews/3521-primary-review-v1.json",
+      "independentReviewFile": "operations/quality-rebase/phase2/independent/3521-independent-review-v1.json",
+      "completedChecks": [
+        "formalPlanConfirmation",
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence",
+        "yearUnitScopeValidation"
+      ],
+      "automaticApprovalAllowed": false,
+      "deepVerificationApproved": false
     },
     {
       "order": 422,
@@ -205,8 +231,8 @@
     "formalManagementPlanCandidates": 1,
     "planRevisionOrUpdateCandidates": 9,
     "growthPotentialDocumentCandidates": 0,
-    "primaryReviewComplete": 0,
-    "independentReviewReady": 0,
+    "primaryReviewComplete": 2,
+    "independentReviewReady": 2,
     "deepVerificationApproved": 0
   },
   "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"

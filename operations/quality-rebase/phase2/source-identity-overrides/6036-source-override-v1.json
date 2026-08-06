@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "phase2-source-identity-override-v1",
+  "company": {"code": "6036", "name": "KeePer技研"},
+  "createdAt": "2026-08-07T09:02:00+09:00",
+  "supersedesSourceMetadataIn": [
+    "operations/quality-rebase/phase2/reviews/6036-primary-review-v1.json",
+    "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json"
+  ],
+  "preserveSupersededFilesForAudit": true,
+  "canonicalSource": {
+    "title": "中期経営計画（2031年6月期）",
+    "publishedDate": "2026-03-19",
+    "officialUrl": "https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf",
+    "pdfSha256": "967cca44b934477af9b9991f6dc84685b71994b3f43b4c404f5460ba766daa24",
+    "pageCount": 42,
+    "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/6036/collection.json"
+  },
+  "validation": {
+    "collectionIdentityMatched": true,
+    "officialExchangeMirrorConfirmed": true,
+    "planTitleConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pageCountConfirmed": true,
+    "primaryAnalysisContentConsistentWithCanonicalSource": true
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

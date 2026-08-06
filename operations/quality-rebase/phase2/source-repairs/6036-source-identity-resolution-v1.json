@@ -2,14 +2,16 @@
   "schemaVersion": "phase2-source-identity-resolution-v1",
   "company": {"code": "6036", "name": "KeePer技研"},
   "detectedAt": "2026-08-07T08:46:00+09:00",
-  "resolutionStatus": "source_identity_mismatch_detected_canonical_collection_source_confirmed",
+  "resolvedAt": "2026-08-07T09:06:00+09:00",
+  "resolutionStatus": "canonical_source_override_applied_independent_recheck_complete",
   "existingReviewReference": {
     "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6036-primary-review-v1.json",
     "independentReviewPacket": "operations/quality-rebase/phase2/independent/6036-independent-review-v1.json",
     "officialUrl": "https://www2.jpx.co.jp/disc/60360/140120260318583945.pdf",
     "pdfSha256": "584aba27e00ceb9f01fddd5f30d50f7c470cb65d0280cc247a37b4dff7a6f885",
     "pageCount": 42,
-    "issue": "一次レビューと独立レビューパケットのsource metadataがPhase 2収集正本と一致しない。"
+    "issue": "一次レビューと独立レビューパケットのsource metadataがPhase 2収集正本と一致しない。",
+    "preservedForAudit": true
   },
   "canonicalSource": {
     "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/6036/collection.json",
@@ -21,17 +23,21 @@
     "independentlyConfirmed": true,
     "confirmationNote": "会社公式TOPICSおよび取引所系開示一覧でも2026年3月19日16:00の『中期経営計画（2031年6月期）』を確認した。"
   },
+  "sourceOverrideFile": "operations/quality-rebase/phase2/source-identity-overrides/6036-source-override-v1.json",
   "contentDisposition": {
     "preserveExistingPrimaryAnalysis": true,
-    "reason": "一次レビューの構造化内容は中計2031の内容と整合するため破棄せず、source metadata正規化後にcanonical PDFでページ証跡を再確認する。"
+    "reason": "一次レビューの構造化内容はcanonical中計2031の内容と整合するため保持し、source metadataのみoverrideで正規化した。"
   },
-  "requiredNextChecks": [
-    "一次レビューのURL・PDF SHA-256をcanonicalSourceへ正規化する",
-    "独立レビューパケットのURL・PDF SHA-256をcanonicalSourceへ正規化する",
-    "主要数値・図表ページをcanonical PDFで再確認する",
-    "source identity正規化後に独立レビューを再開する"
+  "completedChecks": [
+    "canonical source URL・PDF SHA-256・pageCountを収集正本と再照合",
+    "2031年財務目標とセグメント目標をcanonical資料で再確認",
+    "国内500店舗・海外15店舗・直営店投資約110億円を再確認",
+    "配当性向40%以上への引上げ方針を再確認"
   ],
-  "independentReviewCompletionBlocked": true,
+  "remainingFinalDeepVerificationChecks": [
+    "canonical PDFの独立レンダリングで主要図表を再確認する"
+  ],
+  "independentReviewCompletionBlocked": false,
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false

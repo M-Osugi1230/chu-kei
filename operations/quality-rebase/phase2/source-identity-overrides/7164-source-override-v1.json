@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "phase2-source-identity-override-v1",
+  "company": {"code": "7164", "name": "全国保証"},
+  "createdAt": "2026-08-07T09:02:00+09:00",
+  "supersedesSourceMetadataIn": [
+    "operations/quality-rebase/phase2/reviews/7164-primary-review-v1.json",
+    "operations/quality-rebase/phase2/independent/7164-independent-review-v1.json"
+  ],
+  "preserveSupersededFilesForAudit": true,
+  "canonicalSource": {
+    "title": "新中期経営計画 2026-2030 Go for 50",
+    "publishedDate": "2026-03-16",
+    "officialUrl": "https://www2.jpx.co.jp/disc/71640/140120260316582395.pdf",
+    "pdfSha256": "d3e51a924e0c0fa7f4b813fc276afb858b769d17df535ac33417f0bdb7f8ab9b",
+    "pageCount": 40,
+    "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/7164/collection.json"
+  },
+  "validation": {
+    "collectionIdentityMatched": true,
+    "jpxOfficialPdfConfirmed": true,
+    "planTitleConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pageCountConfirmed": true,
+    "primaryAnalysisContentConsistentWithCanonicalSource": true,
+    "independentVisualKpiPageConfirmed": true,
+    "independentVisualCapitalPolicyPageConfirmed": true,
+    "independentVisualShareholderReturnPageConfirmed": true
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

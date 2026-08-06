@@ -3,7 +3,7 @@ name: Phase 2 Review Ledger Reconcile
 on:
   push:
     branches:
-      - agent/quality-rebase-phase0-2
+      - 'agent/phase2-*'
     paths:
       - 'operations/quality-rebase/phase2/reviews/**'
       - 'operations/quality-rebase/phase2/independent/**'
@@ -24,10 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Checkout branch
+      - name: Checkout current working branch
         uses: actions/checkout@v4
         with:
-          ref: agent/quality-rebase-phase0-2
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -35,14 +35,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Rebase on latest branch
-        run: git pull --rebase origin agent/quality-rebase-phase0-2
+      - name: Rebase on latest remote branch
+        run: git pull --rebase origin "${{ github.ref_name }}"
 
       - name: Reconcile explicit review records
         run: python scripts/reconcile_phase2_review_ledgers.py
 
       - name: Validate all Phase 2 waves
+        shell: bash
         run: |
+          set -euo pipefail
           for wave in operations/quality-rebase/phase2/primary-review-wave*-v1.json; do
             python scripts/validate_phase2_primary_review_wave.py \
               --wave "$wave" \
@@ -52,6 +54,7 @@ jobs:
 
       - name: Commit reconciled ledgers
         run: |
+          set -euo pipefail
           if git diff --quiet -- \
             operations/quality-rebase/phase2/primary-review-wave*-v1.json \
             operations/quality-rebase/phase2/current-status-v1.json; then
@@ -64,4 +67,4 @@ jobs:
             operations/quality-rebase/phase2/primary-review-wave*-v1.json \
             operations/quality-rebase/phase2/current-status-v1.json
           git commit -m 'quality: explicit review recordsからPhase 2台帳を同期'
-          git push origin HEAD:agent/quality-rebase-phase0-2
+          git push origin "HEAD:${{ github.ref_name }}"

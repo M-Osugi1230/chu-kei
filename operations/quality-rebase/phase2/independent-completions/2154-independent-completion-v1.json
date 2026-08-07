@@ -16,7 +16,7 @@
     {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[5],"result":"配当性向50%以上、累進配当、自己株式取得を還元指標として再確認した。過去の連続増配年数は将来目標へ変換しない。"},
     {"id":"later_update_boundary","status":"confirmed","result":"後続の法定開示で2028年6月期の売上高2,000億円・営業利益200億円という次期成長ステージ目標が示されているが、2024年8月中期経営方針の原資料フィールドへ遡及混入させず、別更新として扱う。"}
   ],
-  "crossChecks": {"officialWeb":{"midtermPlanListingConfirmed":true,"sustainabilityPeriodConfirmed":true,"statutoryDisclosureTargetsConfirmed":true},"visualReview":{"officialPdfDirectRenderComplete":false,"note":"会社公式PDFはアクセス制約で独立再レンダリングできなかったため、公式IR・サステナビリティ・法定開示を三点突合し、PDFのbinary/hashおよび全ページ視覚再確認のみ最終Deep Verificationへ残す。"}},
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-03/2154/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"officialWeb":{"midtermPlanListingConfirmed":true,"sustainabilityPeriodConfirmed":true,"statutoryDisclosureTargetsConfirmed":true},"visualReview":{"officialPdfDirectRenderComplete":false,"note":"会社公式PDFはアクセス制約で独立再レンダリングできなかったため、公式IR・サステナビリティ・法定開示を三点突合し、PDFのbinary/hashおよび全ページ視覚再確認のみ最終Deep Verificationへ残す。"}},
   "finalDeepVerificationBlockers": ["official_pdf_binary_hash_and_visual_render_recheck"],
   "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:32:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_repair_with_visual_recheck_blocker"}
 }

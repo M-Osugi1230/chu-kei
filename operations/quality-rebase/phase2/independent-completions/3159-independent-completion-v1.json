@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"3159","name":"丸善CHIホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3159-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/3159-independent-review-v1.json",
+  "source": {"title":"中期経営計画の見直しに関するお知らせ","officialUrl":"https://www2.jpx.co.jp/disc/31590/140120260313581744.pdf","pdfSha256":"d49c16735c9190de5e16b32df39e18e0c87abcb23249ab2fa712523330bdc80f","pageCount":27},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"2026年3月13日公表の27ページ見直し資料であり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。丸善CHI公式IRニュースにも同日付の同一資料が掲載されている。"},
+    {"id":"plan_revision_boundary","status":"confirmed","evidencePdfPages":[2,11,18],"result":"当初中計と2026年3月の見直し後計画を分離し、2029年1月期の現行目標を採用した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[11,18],"result":"2029年1月期の売上高1,850億円、営業利益55億円、営業利益率3.0%、純利益34億円、純資産620億円、ROE5.8%以上を会社公式図表で再確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[17,18],"result":"2027年1月期～2029年1月期の営業CF約200億円を基礎に、新規事業投資約60億円、M&A投資約70億円、既存事業投資・設備更新等約35億円、株主還元へ配分する図表を確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[17,18],"result":"2029年1月期の配当性向目標30%以上を再確認した。株主還元枠を固定金額へ補完しない。"},
+    {"id":"pbr_boundary","status":"confirmed","evidencePdfPages":[18],"result":"PBR1倍の早期実現を目指す方針は資本市場上の目標として、2029年1月期の財務数値目標とは分離した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-05/wave-01/3159/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPdfReviewed":true,"financialTargetsConfirmed":true,"capitalAllocationConfirmed":true,"shareholderReturnConfirmed":true,"note":"丸善CHI公式IRニュースから27ページ資料を独立に開き、業績目標とキャッシュアロケーション図を目視確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:50:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

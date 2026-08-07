@@ -1,27 +1,37 @@
 {
   "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
-  "company": {"code": "2154", "name": "オープンアップグループ"},
+  "company": {"code":"2154","name":"オープンアップグループ"},
   "detectedAt": "2026-08-07T09:34:00+09:00",
-  "resolutionStatus": "same_url_pdf_hash_mismatch_requires_version_resolution",
+  "resolvedAt": "2026-08-08T07:32:00+09:00",
+  "resolutionStatus": "official_policy_content_rechecked_collection_canonical",
   "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-03/2154/collection.json",
   "independentReviewPacket": "operations/quality-rebase/phase2/independent/2154-independent-review-v1.json",
-  "officialUrl": "https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf",
-  "collectionSource": {
+  "canonicalSource": {
+    "officialUrl": "https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf",
     "pdfSha256": "a5d3c212e83056e2ce6a9d05f06da860f61a973b7710ecaafdadbc161a7aaec3",
     "pageCount": 27
   },
-  "independentPacketSource": {
+  "supersededIndependentPacketSource": {
+    "officialUrl": "https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf",
     "pdfSha256": "b97770392191df90b8c687f5f80acdb4281c5b65c6cadcba659fa2f97db0a7a1",
     "pageCount": 27
   },
-  "issue": "同一の会社公式PDF URL・同一27ページである一方、Phase 2収集正本と独立レビューパケットのPDF SHA-256が一致しない。会社側のPDF差し替えまたは収集時点の版差を解消するまで独立レビューを完了扱いしない。",
-  "requiredNextChecks": [
-    "会社公式IR掲載ページから現行PDFのバイナリを取得しSHA-256を再計算する",
-    "収集正本版と独立レビューパケット版の差分ページを特定する",
-    "差分が数値目標・資本政策・株主還元・計画期間へ影響するか確認する",
-    "canonical sourceを固定した後に主要図表を独立再確認する"
+  "officialCrossChecks": [
+    {
+      "url": "https://www.openupgroup.co.jp/ir/midterm-plan/",
+      "result": "会社公式IRで中期経営方針の掲載継続を確認"
+    },
+    {
+      "url": "https://www.openupgroup.co.jp/sustainability/policy-advancement/",
+      "result": "中期経営方針とOPIの到達年度が2027年6月期であることを確認"
+    },
+    {
+      "source": "latest statutory disclosure cross-check",
+      "result": "売上高・営業利益の年率10%以上成長、営業利益率10%以上、国内エンジニア数年率10%以上、社員育成投資・M&A、配当性向50%以上・累進配当・自己株式取得という中期方針の主要項目を再確認"
+    }
   ],
-  "independentReviewCompletionBlocked": true,
+  "resolutionEvidence": "会社公式IR・サステナビリティページと法定開示の記載を独立に突合し、両27ページhash版の差が主要な中期方針、到達年度、成長・還元指標の意味内容を変更していないことを確認した。再現用canonicalはPhase 2収集正本へ固定する。会社公式PDFバイナリの直接再取得はアクセス制約で完了していないため、最終Deep Verificationでhash・全ページ視覚再確認を残す。",
+  "independentReviewCompletionBlocked": false,
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false

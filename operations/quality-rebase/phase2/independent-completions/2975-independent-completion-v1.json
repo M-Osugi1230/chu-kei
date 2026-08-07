@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"2975","name":"スター・マイカ・ホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2975-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2975-independent-review-v1.json",
+  "source": {"title":"中期経営計画の見直しに関するお知らせ／Find the Value 2026","officialUrl":"https://www2.jpx.co.jp/disc/29750/140120250114550129.pdf","pdfSha256":"6a71ba0ab39c76d6fd4e1ea2e3d87444b697013db96811c4040abe55ebf68e98","pageCount":42},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"2025年1月14日公表の42ページ適時開示について、Phase 2収集正本とURL・SHA-256・ページ数が一致する。会社公式IRには同日付の見直し通知とFind the Value 2026説明資料が掲載されている。"},
+    {"id":"plan_revision_boundary","status":"confirmed","evidencePdfPages":[1,2],"result":"2024年1月の原計画と2025年1月の改定を分離し、事業戦略は維持、定量目標の一部を追加・修正した改定計画として確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[1,11],"result":"2026年11月期の売上高700億円、営業利益70億円、当期純利益38億円、ROE12%以上、営業利益率10%以上、EPS成長14%以上を会社公式図表で再確認した。"},
+    {"id":"operating_and_bs_targets","status":"confirmed","evidencePdfPages":[1,11,13],"result":"販売事業期間1.5カ月短縮、OC回転期間18カ月短縮、販売用不動産残高1,000億円以上、自己資本比率25%以上を確認した。"},
+    {"id":"withdrawn_wacc","status":"confirmed","evidencePdfPages":[1,11,15],"result":"原計画のWACC2.0%目標は取り下げられ、現行目標として残っていない。FY24実績参考値としてWACC2.4%が示されるが目標値へ置換しない。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[12,14,15],"result":"ROEと株主資本コストを意識し、成長投資を優先しつつ低コスト借入を活用する方針を図表で再確認した。販売用不動産への投資額500～550億円程度/年は事業投資の参考レンジであり、中計全体の固定キャッシュアロケーション総額として扱わない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[1,14],"result":"総還元性向40%、安定配当・増配継続、PBR1倍未満等で割安と判断する場合の機動的自己株式取得を再確認した。"},
+    {"id":"visual_attachment_review","status":"confirmed","evidencePdfPages":[10,11,12,13,14,15],"result":"会社公式Find the Value 2026資料の画像主体10～15ページを独立に目視し、一次レビューの財務・回転期間・資本政策・還元・資本コスト記録と整合することを確認した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-03/2975/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPlanPdfReviewed":true,"targetPagesConfirmed":true,"capitalPolicyPagesConfirmed":true,"shareholderReturnConfirmed":true,"note":"会社公式の見直し通知とFind the Value 2026説明資料を独立に開き、画像主体10～15ページを実際に目視確認した。canonical sourceはPhase 2収集正本の42ページJPX版を維持する。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:10:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

@@ -5,10 +5,10 @@
   "independentReviewPacket":"operations/quality-rebase/phase2/independent/4651-independent-review-v1.json",
   "sourceResolutionFile":"operations/quality-rebase/phase2/source-repairs/4651-independent-source-resolution-v1.json",
   "evidenceCorrectionFile":"operations/quality-rebase/phase2/source-repairs/4651-independent-evidence-correction-v1.json",
-  "source":{"title":"中期経営計画（2027年3月期～2029年3月期）","officialUrl":"https://www2.jpx.co.jp/disc/46510/140120260515537243.pdf","pdfSha256":"eefb97cd16d2052c85e0ee679b785a85d4cec61f2865bcff0e122767574a9b56","pageCount":69},
+  "source":{"title":"中期経営計画（2027年3月期～2029年3月期）","officialUrl":"https://www2.jpx.co.jp/disc/46510/140120260515537243.pdf","pdfSha256":"eefb97eaba71a712cb9d57c48bc5af1932d2a1047e96e71a8d61339aad68112e","pageCount":69},
   "status":"independent_review_complete",
   "checks":[
-    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"Phase 2収集正本JPX69ページをcanonicalに固定し、会社公式68ページ計画本体が適時開示表紙を除く同内容資料であることを独立再確認した。旧独立パケットhashは取得時点の版差として保持する。"},
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"Phase 2収集正本JPX69ページをcanonicalに固定し、会社公式68ページ計画本体が適時開示表紙を除く同内容資料であることを独立再確認した。旧独立パケットhashは取得時点の版差として保持する。canonical SHA-256はcollection.jsonから再照合した。"},
     {"id":"financial_targets","status":"confirmed","evidencePdfPages":[58],"result":"2029年3月期の連結売上高499億円、営業利益28.9億円、営業利益率5.8%を現行会社公式資料で再確認した。"},
     {"id":"segment_targets","status":"confirmed","evidencePdfPages":[58],"result":"2029年3月期は住環境158億円/21.5億円、エネルギー102億円/4.9億円、資源循環220億円/24.6億円、その他5億円/0.2億円、全社調整▲22.4億円として現行区分を確認した。"},
     {"id":"capital_efficiency","status":"confirmed","evidencePdfPages":[60],"result":"2029年3月期ROIC8.8%。未払金に含まれる割賦債務を有利子負債へ含めた場合7.3%であることと、自己資本比率35%を目指す方針を確認した。"},

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"8316","name":"三井住友フィナンシャルグループ"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8316-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/8316-independent-review-v1.json",
+  "source": {"title":"2025年度決算 投資家説明会／新中期経営計画","officialUrl":"https://www.smfg.co.jp/investor/financial/latest_statement/2026_3/2026_fy_setumei.pdf","pdfSha256":"e42f8d0d46e7bab45ecc68243c8a6fea96745a4873e54e21b0b7f8b2a5ee6260","pageCount":83},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,3,83],"result":"SMBCグループ公式の2025年度決算投資家説明会83ページであり、収集正本とURL・SHA-256・ページ数が一致する。新中計は同資料内の正式セクションとして掲載されている。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[25,33,43,54],"result":"前中計2023～2025年度、現行2026～2028年度、2026年度単年度見通し、中長期目標を分離して確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[43,54],"result":"2028年度ROTE13%、親会社株主純利益2兆円、2028年度末CET1比率10.5%程度を公式図表で再確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[47,54,55,58],"result":"3年間のIT投資1兆円、オーガニックRWA約5.5兆円、配当への配分約2.2兆円等を再確認し、CET1約10.5%を維持しながら成長投資・還元を行う構造として分離した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[54,58],"result":"配当性向40%、毎年度増配を基本とする方針、機動的な自己株式取得を確認した。"},
+    {"id":"nonfinancial_targets","status":"confirmed","evidencePdfPages":[47,51,52],"result":"クラウド利用比率50%、AI・クラウド人材1,000人、エンゲージメント70以上、女性取締役比率30%以上等を計画KPIとして確認した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-04/8316/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"financialTargetPagesConfirmed":true,"capitalAllocationPagesConfirmed":true,"shareholderReturnPagesConfirmed":true,"note":"SMFG公式PDFの新中計セクション主要図表を独立に目視確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

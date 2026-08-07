@@ -5,6 +5,7 @@ on:
     paths:
       - 'operations/quality-rebase/phase2/primary-review-wave*-v1.json'
       - 'operations/quality-rebase/phase2/current-status-v1.json'
+      - 'operations/quality-rebase/phase2/effective-status-v1.json'
       - 'operations/quality-rebase/phase2/review-state-overlays/*.json'
       - 'operations/quality-rebase/phase2/reviews/*-primary-review-v1.json'
       - 'operations/quality-rebase/phase2/independent/*-independent-review-v*.json'
@@ -22,6 +23,7 @@ on:
     paths:
       - 'operations/quality-rebase/phase2/primary-review-wave*-v1.json'
       - 'operations/quality-rebase/phase2/current-status-v1.json'
+      - 'operations/quality-rebase/phase2/effective-status-v1.json'
       - 'operations/quality-rebase/phase2/review-state-overlays/*.json'
       - 'operations/quality-rebase/phase2/reviews/*-primary-review-v1.json'
       - 'operations/quality-rebase/phase2/independent/*-independent-review-v*.json'
@@ -50,38 +52,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate every existing wave and overlay
-        shell: bash
+      - name: Validate waves, overlays and effective status
         run: |
-          set -euo pipefail
-
-          mapfile -t WAVES < <(find operations/quality-rebase/phase2 \
-            -maxdepth 1 \
-            -type f \
-            -name 'primary-review-wave*-v1.json' \
-            | sort)
-          mapfile -t OVERLAYS < <(find operations/quality-rebase/phase2/review-state-overlays \
-            -maxdepth 1 \
-            -type f \
-            -name 'wave*-primary-completion-v1.json' \
-            | sort)
-
-          if [[ ${#WAVES[@]} -eq 0 ]]; then
-            echo 'No Phase 2 primary review waves found.' >&2
-            exit 1
-          fi
-
-          OVERLAY_ARGS=()
-          for overlay in "${OVERLAYS[@]}"; do
-            OVERLAY_ARGS+=(--overlay "$overlay")
-          done
-
-          echo "Validating ${#WAVES[@]} waves with ${#OVERLAYS[@]} completion overlays."
-          for wave in "${WAVES[@]}"; do
-            echo "Validating $wave"
-            python scripts/validate_phase2_primary_review_wave_v5.py \
-              --wave "$wave" \
-              --status operations/quality-rebase/phase2/current-status-v1.json \
-              "${OVERLAY_ARGS[@]}" \
-              --repo-root .
-          done
+          python scripts/validate_phase2_primary_review_wave_v5.py \
+            --effective-status operations/quality-rebase/phase2/effective-status-v1.json \
+            --repo-root .

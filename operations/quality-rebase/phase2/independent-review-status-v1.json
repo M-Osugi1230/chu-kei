@@ -1,15 +1,15 @@
 {
   "schemaVersion": "quality-rebase-phase2-independent-review-status-v1",
-  "updatedAt": "2026-08-07T09:20:00+09:00",
+  "updatedAt": "2026-08-07T09:25:00+09:00",
   "basis": {
     "effectiveStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
     "primaryReviewComplete": 236,
     "independentReviewEligible": 61
   },
   "counts": {
-    "independentReviewComplete": 10,
-    "independentReviewPending": 51,
-    "independentReviewBlockedSourceIdentity": 0,
+    "independentReviewComplete": 14,
+    "independentReviewPending": 46,
+    "independentReviewBlockedSourceIdentity": 1,
     "deepVerificationApproved": 0
   },
   "completionRecords": [
@@ -22,9 +22,15 @@
     {"code":"3050","name":"DCMホールディングス","file":"operations/quality-rebase/phase2/independent-completions/3050-independent-completion-v1.json","status":"independent_review_complete"},
     {"code":"4203","name":"住友ベークライト","file":"operations/quality-rebase/phase2/independent-completions/4203-independent-completion-v1.json","status":"independent_review_complete"},
     {"code":"4401","name":"ADEKA","file":"operations/quality-rebase/phase2/independent-completions/4401-independent-completion-v1.json","status":"independent_review_complete"},
-    {"code":"9247","name":"TREホールディングス","file":"operations/quality-rebase/phase2/independent-completions/9247-independent-completion-v1.json","status":"independent_review_complete"}
+    {"code":"9247","name":"TREホールディングス","file":"operations/quality-rebase/phase2/independent-completions/9247-independent-completion-v1.json","status":"independent_review_complete"},
+    {"code":"175A","name":"Will Smart","file":"operations/quality-rebase/phase2/independent-completions/175A-independent-completion-v1.json","status":"independent_review_complete","finalDeepVerificationBlocker":"public_eir_render_recheck"},
+    {"code":"9861","name":"吉野家ホールディングス","file":"operations/quality-rebase/phase2/independent-completions/9861-independent-completion-v1.json","status":"independent_review_complete"},
+    {"code":"6103","name":"オークマ","file":"operations/quality-rebase/phase2/independent-completions/6103-independent-completion-v1.json","status":"independent_review_complete"},
+    {"code":"4612","name":"日本ペイントホールディングス","file":"operations/quality-rebase/phase2/independent-completions/4612-independent-completion-v1.json","status":"independent_review_complete","finalDeepVerificationBlocker":"regional_nonfinancial_visual_render_recheck"}
   ],
-  "blockedRecords": [],
+  "blockedRecords": [
+    {"code":"421A","name":"ムービン・ストラテジック・キャリア","reason":"corrected_pdf_direct_source_unresolved","repairFile":"operations/quality-rebase/phase2/source-repairs/421A-independent-source-resolution-v1.json","status":"source_identity_repair_required"}
+  ],
   "resolvedSourceIdentityRecords": [
     {"code":"6036","name":"KeePer技研","repairFile":"operations/quality-rebase/phase2/source-repairs/6036-source-identity-resolution-v1.json","overrideFile":"operations/quality-rebase/phase2/source-identity-overrides/6036-source-override-v1.json","status":"resolved"},
     {"code":"7164","name":"全国保証","repairFile":"operations/quality-rebase/phase2/source-repairs/7164-source-identity-resolution-v1.json","overrideFile":"operations/quality-rebase/phase2/source-identity-overrides/7164-source-override-v1.json","status":"resolved"}

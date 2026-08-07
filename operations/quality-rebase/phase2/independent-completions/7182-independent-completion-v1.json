@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "7182", "name": "ゆうちょ銀行"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7182-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/7182-independent-review-v1.json",
+  "source": {
+    "title": "ゆうちょ銀行 中期経営計画（2026～2028年度）",
+    "officialUrl": "https://www.jp-bank.japanpost.jp/aboutus/company/pdf/rev_managementplan2026.pdf",
+    "pdfSha256": "5023c76f2c3b073b61216bfe0c83a71343c5ab82699d41b830d9bcce27fd1e18",
+    "pageCount": 41
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,3],"result":"ゆうちょ銀行公式PDF、Phase 2収集正本、一次レビュー、独立レビューパケットで資料名、公表日、URL、PDF SHA-256、全41ページが一致する。"},
+    {"id":"plan_period_and_vision_boundary","status":"confirmed","evidencePdfPages":[2,5,6],"result":"2026～2028年度の3カ年中計と、2040年を見据えた2つの中長期ビジョンを分離して確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[3,11,13,16],"result":"2028年度の当期純利益1兆円超、株主資本ベースROE10%程度、OHR40%程度、CET1比率平時目標11～13%を図表で再確認した。"},
+    {"id":"growth_strategy_kpis","status":"confirmed","evidencePdfPages":[3,17,20,23,27],"result":"2028年度末の通帳アプリ登録2,500万口座、長期資産形成制度110万人、資金収支等2.3兆円超、子会社GP投資60件・600億円程度等を対象範囲付きで確認した。"},
+    {"id":"it_investment","status":"confirmed","evidencePdfPages":[14],"result":"新中計期間のIT投資総額5,000億円程度で、AI等新技術を含む戦略IT投資約1,250億円と安定運営投資約3,750億円の構成を確認した。"},
+    {"id":"capital_definition_and_allocation","status":"confirmed","evidencePdfPages":[16],"result":"CET1比率11～13%はバーゼルIII最終化完全適用・その他有価証券評価益除く内部管理ベースの平時目標レンジであり、図表を固定金額のキャピタルアロケーションへ変換していない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[3,15,16],"result":"配当性向50%程度、累進的配当を基本とし、中間配当復活・自己株取得・特別配当等を市場環境等を踏まえ検討する方針を確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-01/7182/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"strategyAndTargetPageConfirmed":true,"itInvestmentPageConfirmed":true,"capitalAllocationPageConfirmed":true,"note":"会社公式PDFの主要戦略・財務目標・IT投資・資本運営図表を独立に視覚確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:34:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"3175","name":"エー・ピーホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3175-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/3175-independent-review-v1.json",
+  "source": {"title":"中期経営計画 FOOD CREATIVE FIRM ～食の総合プロデュースカンパニーへ～","officialUrl":"https://www2.jpx.co.jp/disc/31750/140120260529555629.pdf","pdfSha256":"8473130a48d6cb1de3f0460ff135ba95247772e3736935f7e3ee7eac18bbe381","pageCount":34},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"2026年5月29日公表の34ページ中計で、収集正本・独立レビューパケットのURL・SHA-256・ページ数が一致する。会社公式IRにも当該時期の開示・IR情報が掲載されている。"},
+    {"id":"plan_period","status":"confirmed","evidencePdfPages":[1,3],"result":"正式対象期間は2027年3月期～2031年3月期。2026年3月期は基準実績として分離する。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[3,20,21],"result":"2031年3月期のグループ流通総額約460億円、連結純売上約430億円、営業利益30～45億円、ROE20%以上、ROIC15%以上をcanonical sourceの保存本文・ページデータで再確認した。流通総額と純売上は合算しない。"},
+    {"id":"business_targets","status":"confirmed","evidencePdfPages":[8,9,13,15,16,17,20],"result":"国内外食215億円、海外外食50億円、中食70億円、生産流通50億円、ライセンス15億円、M&A・新規事業60億円等の構成を確認した。M&A・新規60億円を別の投資額レンジへ重複加算しない。"},
+    {"id":"investment_guidelines","status":"confirmed","evidencePdfPages":[19,20],"result":"出店40.5億円、中食工場4.8億円、生産流通5～8億円、M&A1件5～30億円の投資目安を確認した。M&A5～30億円は案件規模であり5年間の総投資額ではない。"},
+    {"id":"preferred_shares_and_leverage","status":"confirmed","evidencePdfPages":[20,21],"result":"A種10億円、B種3億円、C種予定1.5億円の優先株償還と、Net有利子負債/EBITDAの2031年上限3～4倍を確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[19,22],"result":"現時点で普通株配当はなく、成長投資と優先株償還を優先し、償還完了が見える段階で普通株の配当方針・配当性向・具体額を明文化する方針を確認した。将来配当を固定値として補完しない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/3175/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"renderComplete":false,"savedCanonicalPageDataReviewed":true,"note":"JPX PDFの独立レンダリング取得が環境制約で完了しなかったため、canonical hashで保存済みの全文・ページ分割データを再読した。会社公式IR掲載もクロスチェック済み。視覚再確認は最終Deep Verificationブロッカーとして残す。"}},
+  "finalDeepVerificationBlockers": ["independent_visual_render_recheck"],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:05:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_with_visual_recheck_blocker"}
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-evidence-correction-v1",
+  "company": {"code":"3646","name":"駅探"},
+  "detectedAt": "2026-08-08T07:32:00+09:00",
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3646-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/3646-independent-review-v1.json",
+  "canonicalSource": {
+    "officialUrl": "https://www2.jpx.co.jp/disc/36460/140120260130543384.pdf",
+    "pdfSha256": "20b913b5d6a61f62e510b8af26d80e4dd9dbb1c2a6fb59f58b741abe4cd61dc8",
+    "pageCount": 35,
+    "publishedDate": "2026-01-30"
+  },
+  "reason": "現行35ページPDFを独立再確認した結果、一次レビュー・独立レビューパケットには2026年1月30日付新中計ではない旧版/別版由来の財務目標、事業区分、投資枠、還元方針が混入していた。以下を現行正本で置換し、旧値を検証済み事実として使用しない。",
+  "supersededClaims": [
+    {"claim":"2029年3月期 売上高2,521百万円、EBITDA550百万円、営業利益350百万円、親会社株主に帰属する当期純利益272百万円","replacement":"2029年3月期 売上高3,370百万円、営業利益110百万円。現行新中計ではEBITDA・当期純利益の最終年度固定目標を開示本文に設定していない"},
+    {"claim":"広告メディア・ヘルスケア・法人サービスの2029年セグメント目標","replacement":"現行計画の戦略軸は国内メディア基盤、BtoBソリューション、インバウンドメディア、CGM型プラットフォーム、Eポイント、M&A。旧セグメント目標は失効"},
+    {"claim":"3年間の設備・事業投資5.8～9.8億円","replacement":"現行35ページ新中計に当該固定投資レンジは確認できない。M&Aは事業の延長線上の業態を中心に推進する方針のみを保持"},
+    {"claim":"累進配当、DOE率は未開示","replacement":"現行計画はDOE3%以上を明示し、単年度利益変動に左右されない安定的・持続的配当を方針とする。累進配当の明示は確認できない"},
+    {"claim":"2026年3月期予想 売上高1,817百万円・営業利益55百万円","replacement":"現行新中計の開示本文では新中計初年度FY2027以降の財務目標を示し、旧レビューのFY2026基準値を新中計目標の根拠として使用しない"}
+  ],
+  "confirmedCurrentFacts": [
+    "2027年3月期 売上高3,040百万円・営業損失110百万円",
+    "2028年3月期 売上高3,160百万円・営業利益10百万円",
+    "2029年3月期 売上高3,370百万円・営業利益110百万円",
+    "財務目標はM&Aを含まない",
+    "国内メディア基盤の強化、BtoB提案・開発、インバウンドメディア、CGM型プラットフォーム、Eポイントを成長施策とする",
+    "事業の延長線上にある業態を中心にM&Aを推進",
+    "DOE3%以上を基準に安定的かつ持続的な配当を実施",
+    "株主優待制度を新設"
+  ],
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

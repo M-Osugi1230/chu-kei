@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "3447", "name": "信和"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3447-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/3447-independent-review-v1.json",
+  "source": {
+    "title": "2027年3月期～2031年3月期 中期経営計画 さらなる深化と新領域への挑戦",
+    "officialUrl": "https://www2.jpx.co.jp/disc/34470/140120260626581284.pdf",
+    "pdfSha256": "40a4eb69bf6666d4cce347cf4ddc6f9faffb75d63660c71c3690becc7977c56a",
+    "pageCount": 35
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1],"result":"JPX適時開示の会社名、証券コード3447、公表日2026年6月26日、計画名、35ページを確認し、Phase 2収集正本とURL・SHA-256・ページ数が一致する。"},
+    {"id":"plan_period_and_boundary","status":"confirmed","evidencePdfPages":[1,12,15],"result":"新中計は2027年3月期～2031年3月期の5年間。2029年3月期を最終年度とした前中計は3年前倒し達成済みであり、新中計と分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[1,15,25],"result":"2031年3月期の売上高350億円、営業利益35億円以上、営業利益率10%以上、ROE12%以上を会社公式図表で再確認した。営業利益35億円と利益率10%は下限設定として保持する。"},
+    {"id":"segment_targets","status":"confirmed","evidencePdfPages":[8,16,17,18],"result":"2031年3月期の仮設資材130億円、レンタル・施工120億円、物流機器100億円の目標を確認し、新規分野は中計定量目標に含まれないことも確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[26],"result":"5年間の営業CF約125億円、成長投資60～90億円を確認した。内訳はM&A40～60億円、レンタル資産12億円、設備・更新5～10億円、DX/研究開発/人的資本5～10億円で、各項目合計が営業CF総額と一致しない注記も保持する。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[26,27],"result":"年間配当32円を下限とする累進配当、2027年3月期36円予定、成長投資とのバランスを踏まえた柔軟な自己株式取得を確認した。"},
+    {"id":"pbr_and_roe_boundary","status":"confirmed","evidencePdfPages":[22,23],"result":"PBR1倍以上は早期実現を目指す資本市場上の方針であり、2031年3月期の固定KPIとして誤変換しない。ROE12%以上は2031年3月期の定量目標である。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/3447/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"financialTargetPageConfirmed":true,"cashAllocationPageConfirmed":true,"shareholderReturnPageConfirmed":true,"note":"JPX開示本文に加え、会社公式IRライブラリの同一中計説明資料で主要図表を独立に目視確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T05:41:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

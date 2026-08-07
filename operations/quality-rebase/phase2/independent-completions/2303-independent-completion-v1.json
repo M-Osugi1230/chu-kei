@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "2303", "name": "ドーン"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2303-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2303-independent-review-v1.json",
+  "source": {
+    "title": "2026年5月期 決算説明・中期経営計画進捗説明資料",
+    "officialUrl": "https://www2.jpx.co.jp/disc/23030/140120260707588905.pdf",
+    "pdfSha256": "fc71df704ec7ffd8d027a2af881a622617f210c38e7e2071046f50b017591fe8",
+    "pageCount": 56
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"JPX公式PDF、会社名・証券コード2303、56ページ、URL・SHA-256がPhase 2収集正本と一致する。"},
+    {"id":"document_and_plan_boundary","status":"confirmed","evidencePdfPages":[23,30,31],"result":"初回中計策定資料ではなく、2026年5月期決算説明と第2次中期経営計画の進捗・目標更新資料。計画期間は2026年5月期～2028年5月期として分離した。"},
+    {"id":"actual_forecast_target_separation","status":"confirmed","evidencePdfPages":[3,31],"result":"2026年5月期実績、2027年5月期単年度予想、2028年5月期中計目標を分離した。2028年は売上1,880百万円、営業利益670百万円＋α、経常利益687百万円＋α、当期純利益485百万円＋α。"},
+    {"id":"superseded_target_and_plus_alpha","status":"confirmed","evidencePdfPages":[31],"result":"旧2028年当期純利益477百万円から485百万円＋αへ更新されていることを確認し、旧目標を現行値にしない。営業・経常・純利益の＋α表記を落とさない。"},
+    {"id":"growth_image_boundary","status":"confirmed","evidencePdfPages":[33],"result":"tiwaki社を含む21.5億円等は第2次中計全体の増収イメージであり、正式な2028年連結売上目標1,880百万円へ置換しない。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[38,39],"result":"高い自己資本比率を維持しながら厳選した成長投資を行う方針を確認したが、中計期間の投資総額は開示されていないため補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[37,38],"result":"累進配当による継続的増配と、総還元性向を意識した継続的な自己株式取得方針を原資料で再確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/2303/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"updatedTargetTableConfirmed":true,"plusAlphaNotationConfirmed":true,"growthImageBoundaryConfirmed":true,"note":"JPX公式PDFの2028年目標更新表を独立に目視し、＋αと旧→新目標の差分を確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T05:41:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

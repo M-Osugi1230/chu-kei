@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "441A", "name": "NE"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/441A-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/441A-independent-review-v1.json",
+  "source": {
+    "title": "中期経営計画2029 事業計画及び成長可能性に関する事項",
+    "officialUrl": "https://www2.jpx.co.jp/disc/441A0/140120260612569454.pdf",
+    "pdfSha256": "ebe7a34174636f11ded76aa65570ca2b5115e1eb0b87b26cefe53e142ce95214",
+    "pageCount": 47
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,21],"result":"NE株式会社、証券コード441A、2026年6月公表、47ページのJPX公式PDFであり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。"},
+    {"id":"formal_plan_boundary","status":"confirmed","evidencePdfPages":[1,3,19],"result":"資料全体は事業計画及び成長可能性に関する事項だが、その中にFY2027～FY2029の正式な中期経営計画2029が明示されている。FY2026は実績基準年として分離する。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[17,19],"result":"FY2029の売上72億円、営業利益16.5億円、営業利益率22.9%、当期純利益11.9億円を図表で再確認した。"},
+    {"id":"business_targets","status":"confirmed","evidencePdfPages":[17],"result":"FY2029売上目標はネクストエンジン56.5億円、コンサルティング8.9億円、コマーステック6.4億円として確認した。"},
+    {"id":"revenue_model_targets","status":"confirmed","evidencePdfPages":[19],"result":"GMV連動収益比率18%を中計目標として確認した。海外売上比率15%は挑戦目標として通常の確定目標と区別する。"},
+    {"id":"capital_sources_and_allocations","status":"confirmed","evidencePdfPages":[18],"result":"総原資73.2億円は累計営業CF36.9億円＋2026年4月期首現預金36.3億円。キャッシュアウトは成長投資63.8億円、株主優待0.2億円、運転資金・経営基盤9.2億円で73.2億円と一致する。"},
+    {"id":"credit_facility_boundary","status":"confirmed","evidencePdfPages":[18],"result":"別途20億円の融資枠を確保しているが、73.2億円の総原資へ重複加算しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[18],"result":"中計期間は株主優待20百万円を計上し、中計達成後の配当実施と安定的な株主還元を方針として示す。将来配当額を補完しない。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/441A/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"financialTargetsConfirmed":true,"capitalAllocationConfirmed":true,"creditFacilitySeparationConfirmed":true,"note":"JPX公式PDFの業績・財務目標とキャピタルアロケーション図を独立に目視確認し、73.2億円の資金源・配分と別枠20億円融資枠を分離した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T05:41:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

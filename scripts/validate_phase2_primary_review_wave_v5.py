@@ -6,6 +6,11 @@ those completions are incorporated into current-status, replaying the same
 historical overlays is invalid. This wrapper keeps v4's wave transformation and
 strict base validation, but uses the canonical current-status directly when all
 overlay completion records are already materialized there.
+
+Historical overlay files may repeat a company after an earlier partial-completion
+snapshot. That repetition is permitted only for materialization detection; wave
+assignment uniqueness remains enforced by the base validator and each overlay is
+applied only to its own wave.
 """
 
 from __future__ import annotations
@@ -28,14 +33,18 @@ def overlay_codes(overlays: list[dict[str, Any]]) -> set[str]:
         completions = overlay.get("companyCompletions")
         if not isinstance(completions, list) or not completions:
             raise SystemExit("overlay companyCompletions must be a non-empty array")
+        local_codes: set[str] = set()
         for completion in completions:
             if not isinstance(completion, dict):
                 raise SystemExit("overlay completion must be an object")
             code = str(completion.get("code", "")).strip()
             if not code:
                 raise SystemExit("overlay completion lacks code")
-            if code in result:
-                raise SystemExit(f"duplicate completion across overlays: {code}")
+            if code in local_codes:
+                raise SystemExit(
+                    f"duplicate completion inside overlay wave {overlay.get('wave')}: {code}"
+                )
+            local_codes.add(code)
             result.add(code)
     return result
 

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"6294","name":"オカダアイヨン"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6294-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6294-independent-review-v1.json",
+  "source": {"title":"2026年3月期決算および新中期経営計画 Onyx FY2026-FY2028","officialUrl":"https://www2.jpx.co.jp/disc/62940/140120260518539424.pdf","pdfSha256":"64e6f20ab625f0c6d46b35daed1adbe7ed8d698e2c774596c1ab288d2339d2be","pageCount":46},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,4,46],"result":"収集正本のJPX版46ページと会社公式IR掲載PDFが同一SHA-256であり、会社名・証券コード6294・公表時期・資料内容が一致する。completionでは収集正本JPX URLをcanonicalとして使用する。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[20,23,24],"result":"Onyx FY2026～FY2028と2031年3月期の新VISION30を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[24],"result":"2029年3月期の売上340億円、営業利益34億円、営業利益率10.0%、ROE10.8%を会社公式図表で再確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[35,36],"result":"3年間の営業CF93億円に対し、成長投資・資金返済50億円、設備投資22億円、株主還元18億円、現金増3億円の配分を確認し、合計93億円と整合する。"},
+    {"id":"capital_efficiency","status":"confirmed","evidencePdfPages":[37,38],"result":"2029年3月期ROIC6.64%、WACC5.45%、ROIC-WACCスプレッド1.18ポイント、経済的付加価値4.1億円という会社試算を再確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[17,36],"result":"累進的配当、配当性向30%以上、2027年3月期年間76円予想を確認し、単年度予想と中計還元方針を分離した。"},
+    {"id":"strategy","status":"confirmed","evidencePdfPages":[22,25,27,28,29,30,31],"result":"国内QCD、顧客LTV、海外展開、M&A、在庫適正化の主要戦略を原資料で再確認した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6294/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPdfReviewed":true,"financialTargetPageConfirmed":true,"capitalAllocationConfirmed":true,"capitalEfficiencyConfirmed":true,"note":"会社公式IR掲載の同一hash PDFで主要図表を独立に目視確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

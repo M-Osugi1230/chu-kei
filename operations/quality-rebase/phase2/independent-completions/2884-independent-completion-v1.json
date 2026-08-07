@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"2884","name":"ヨシムラ・フード・ホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2884-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2884-independent-review-v1.json",
+  "source": {"title":"2026年2月期決算説明及び中期経営計画","officialUrl":"https://www2.jpx.co.jp/disc/28840/140120260415504509.pdf","pdfSha256":"f6d5136363430f7a7d62c20f13d63dbefef0dd2b3dac10b15a9e8364e12ddf51","pageCount":64},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,36],"result":"会社名・証券コード2884・2026年4月15日公表・64ページを確認し、収集正本とURL・SHA-256・ページ数が一致する。"},
+    {"id":"quantitative_target_status","status":"confirmed","evidencePdfPages":[36],"result":"2030年2月期へ向けた中計は継続する一方、定量目標は『足元の状況を勘案し、再度検討中』と明記される。過年度の売上・利益・EBITDA目標を現行目標へ持ち越さない。"},
+    {"id":"single_year_forecast_separation","status":"confirmed","evidencePdfPages":[34,36],"result":"2027年2月期の売上575億円、営業利益20億円等は単年度業績見通しであり、2030年2月期の現行中計目標ではない。"},
+    {"id":"strategy_structure","status":"confirmed","evidencePdfPages":[37,38,39,41,44,45],"result":"ロールアップ、ニッチM&A、オーガニック成長、海外展開、経営基盤強化を現行の戦略骨子として再確認した。"},
+    {"id":"ma_selection_criteria","status":"confirmed","evidencePdfPages":[43],"result":"M&A選定基準として核となる企業の営業利益5億円以上、株式過半数以上取得、過半数未満出資は原則行わないことを確認した。これは連結財務目標ではない。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[48],"result":"事業CFは引き続きM&A等の成長投資へ優先配分する方針を確認した。固定キャッシュアロケーション額は開示されていない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[48,49],"result":"株主優待を活用したファン株主創出と、成長ステージに応じた自社株買い・配当検討を確認した。優待拡充を配当性向目標へ変換しない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/2884/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"quantitativeTargetStatusConfirmed":true,"shareholderReturnPageConfirmed":true,"note":"JPX公式PDFの中計サマリーと株主還元ページを独立に目視し、M&A選定基準は同一canonical PDF本文でも再確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:05:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

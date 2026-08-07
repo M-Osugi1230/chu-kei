@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"4345","name":"シーティーエス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4345-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4345-independent-review-v1.json",
+  "source": {"title":"中期経営計画 2027年3月期～2029年3月期","officialUrl":"https://www2.jpx.co.jp/disc/43450/140120260428512684.pdf","pdfSha256":"3105342def26bb3687bf7af9d296ef0afb544f0b5009745604d13dbef6c7fa92","pageCount":11},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"株式会社シーティーエス、証券コード4345、2026年4月28日公表の11ページ開示であり、収集正本とURL・SHA-256・ページ数が一致する。会社公式中計ページには適時開示表紙を除いた同一10ページ資料が掲載されている。"},
+    {"id":"formal_plan_boundary","status":"confirmed","evidencePdfPages":[2,3],"result":"2027年3月期～2029年3月期の新規3カ年中計。2026年3月期は前中計最終年度実績として分離し、2027・2028年度の未開示年次目標を補間しない。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[8,9],"result":"2029年3月期の売上160億円、営業利益44億円、営業利益率27.5%、ROE20%超を会社公式図表で再確認した。見出しの営業利益率25%超は閾値、27.5%は具体計画値として分離する。"},
+    {"id":"segment_targets","status":"confirmed","evidencePdfPages":[8,10,11],"result":"DDS106億円、SMS40億円、その他14億円で全社160億円。DDS内はSAP55億円＋その他51億円で106億円となることを図表で確認した。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[7],"result":"強固な財務基盤、SAP進化への戦略投資、累進配当継続という財務活動方針を確認した。3年間の投資総額・キャッシュアロケーション額は開示されていないため補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[7],"result":"持続的な利益成長に応じた累進配当を継続する方針を確認した。中計本体には固定配当額・配当性向・自己株取得額は示されない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-03/4345/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPdfReviewed":true,"financialTargetsConfirmed":true,"segmentTargetsConfirmed":true,"sapBreakdownConfirmed":true,"financialPolicyConfirmed":true,"note":"会社公式中期経営計画ページ掲載の10ページ本体を独立に目視確認。canonical sourceは適時開示表紙を含む11ページJPX版を維持する。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:05:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"4186","name":"東京応化工業"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4186-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4186-independent-review-v1.json",
+  "source": {"title":"TOKグループ中期経営計画『tok 中期計画 2027』の見直し","officialUrl":"https://www2.jpx.co.jp/disc/41860/140120260209551576.pdf","pdfSha256":"93dd727515b1d502860977d306b3aa0061ceb3b83a538caa980fc605bf9e9350","pageCount":25},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"Phase 2収集正本のJPX 25ページについてURL・SHA-256・ページ数が一致する。東京応化公式の中期計画ページには適時開示表紙を除く24ページの同内容見直し資料が掲載されている。"},
+    {"id":"revision_boundary","status":"confirmed","evidencePdfPages":[2,10],"result":"2025年1月の当初tok中期計画2027と、2026年2月の見直し後目標を分離し、定性目標・重点戦略は変更なし、定量目標のみ上方修正されたことを確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[2,10],"result":"2027年12月期の売上高2,950億円、営業利益580億円、EBITDA720億円、ROE14.0%を会社公式図表で再確認した。当初目標2,700億円・480億円・600億円・13.0%を現行値として残さない。"},
+    {"id":"nonfinancial_targets","status":"confirmed","evidencePdfPages":[10,17,18],"result":"2027年12月期の従業員エンゲージメント2024年比+5.4ポイント、Scope1+2 CO2排出量2019年比27%削減/3.5万t-CO2e以下を確認した。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[20],"result":"EBITDAによる事業戦略モニタリング、財務KPIによる資産効率追求、資金調達力強化・多様化というBSマネジメント方針を確認した。中計期間の固定投資総額は資料に示されていないため補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[21],"result":"DOE4.0%を目処とする配当方針と、自己株式取得を弾力的に実施する方針を会社公式図表で再確認した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-05/wave-02/4186/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialMirrorReviewed":true,"revisedFinancialTargetsConfirmed":true,"nonfinancialTargetsConfirmed":true,"shareholderReturnConfirmed":true,"note":"東京応化公式中期計画ページの24ページ本体で見直し後目標・非財務KPI・株主還元を独立に目視確認した。canonical sourceは適時開示表紙を含むJPX25ページ版を維持する。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:50:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"3679","name":"じげん"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3679-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/3679-independent-review-v1.json",
+  "source": {"title":"第3次中期経営計画 ZIGExN Matching Agent","officialUrl":"https://www2.jpx.co.jp/disc/36790/140120260512526072.pdf","pdfSha256":"8375a89da640d72f87c3c5412b1187b0b9ca8a50a232e838be2a099349eaffbb","pageCount":24},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,3],"result":"2026年5月12日公表の第3次中期経営計画24ページであり、収集正本とURL・SHA-256・ページ数が一致する。会社公式IRライブラリから同一計画PDFへ到達できる。"},
+    {"id":"formal_plan_boundary","status":"confirmed","evidencePdfPages":[1,3,4],"result":"FY2027/3～FY2031/3の新規第3次中計であり、第2次中計の実績・課題とは分離する。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[3,4,7],"result":"FY2031/3の売上収益500億円超、EBITDA120億円超、ROE20%程度を会社公式図表で再確認した。"},
+    {"id":"historical_ma_separation","status":"confirmed","evidencePdfPages":[14],"result":"上場来M&A35件・累計投資約230億円・累計EBITDA/投資時EV約170%・回収3～5年は過去実績であり、第3次中計の投資目標ではない。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[18],"result":"調整後営業CF約400億円を基礎に事業投資約40%、戦略投資約40%、株主還元約20%とする方針を図表で確認した。戦略投資枠約160億円以上は同じ戦略投資原資の目安であり別枠加算しない。"},
+    {"id":"financial_discipline","status":"confirmed","evidencePdfPages":[19],"result":"Net D/E約1.0倍、Net Debt/EBITDA約2.0倍、のれん/資本約1.0倍、親会社所有者帰属持分比率30%以上を財務規律として再確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[18,19],"result":"普通配当性向30%以上に加え、余剰資金に応じた特別配当・追加自己株式取得を行う方針を確認した。営業CF20%配分と利益ベース配当性向30%は分母が異なるため混同しない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-03/3679/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPdfReviewed":true,"executiveSummaryConfirmed":true,"maRecordConfirmed":true,"capitalAllocationConfirmed":true,"financialDisciplineConfirmed":true,"note":"会社公式IRから取得した同一第3次中計PDFで主要図表を独立に目視確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:05:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

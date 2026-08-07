@@ -10,6 +10,7 @@ on:
       - 'scripts/validate_phase2_source_repairs.py'
       - 'scripts/validate_phase2_source_repairs_v2.py'
       - 'scripts/validate_phase2_source_repairs_v3.py'
+      - 'scripts/validate_phase2_source_repairs_v4.py'
       - '.github/workflows/phase2-source-repair-gate.yml'
   push:
     branches:
@@ -23,6 +24,7 @@ on:
       - 'scripts/validate_phase2_source_repairs.py'
       - 'scripts/validate_phase2_source_repairs_v2.py'
       - 'scripts/validate_phase2_source_repairs_v3.py'
+      - 'scripts/validate_phase2_source_repairs_v4.py'
       - '.github/workflows/phase2-source-repair-gate.yml'
   workflow_dispatch:
 
@@ -44,6 +46,6 @@ jobs:
 
       - name: Validate source quarantine and approval safety
         run: |
-          python scripts/validate_phase2_source_repairs_v3.py \
+          python scripts/validate_phase2_source_repairs_v4.py \
             --repo-root . \
             --status operations/quality-rebase/phase2/current-status-v1.json

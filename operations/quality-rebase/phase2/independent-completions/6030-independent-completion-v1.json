@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "6030", "name": "アドベンチャー"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6030-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6030-independent-review-v1.json",
+  "source": {
+    "title": "2026年7月-2029年6月 3ヵ年 中期経営計画",
+    "officialUrl": "https://www2.jpx.co.jp/disc/60300/140120260623577244.pdf",
+    "pdfSha256": "530875c5f394d99fd7eac501c51628c77d7ecb1c6d5d1057137416e4f88b8f82",
+    "pageCount": 8
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"株式会社アドベンチャー、証券コード6030、公表日2026年6月24日、8ページのJPX公式PDFであり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。"},
+    {"id":"classification_and_plan_period","status":"confirmed","evidencePdfPages":[1,2],"result":"取締役会で新たに決議された2026年7月～2029年6月の3カ年中計であり、単なる更新資料ではない。"},
+    {"id":"annual_financial_targets","status":"confirmed","evidencePdfPages":[4,5],"result":"FY2027は連結収益260億円・営業利益20億円、FY2028は290億円・30億円、FY2029は320億円・40億円を原資料で再確認した。"},
+    {"id":"final_targets","status":"confirmed","evidencePdfPages":[4],"result":"FY2029の連結当期利益24億円、ROE20%を図表で確認した。"},
+    {"id":"scope_separation","status":"confirmed","evidencePdfPages":[6],"result":"単体取扱高1,000億円のうちグローバル100億円という内数関係を確認し、連結収益320億円と混同しない。"},
+    {"id":"application_kpi","status":"confirmed","evidencePdfPages":[6],"result":"アプリ4,000万DLのうちグローバル1,000万DLという内数関係を確認した。"},
+    {"id":"group_strategy_and_capital_policy","status":"confirmed","evidencePdfPages":[6],"result":"子会社整理、積極的M&A、複数子会社のIPO準備（最短FY2029中）を確認した。中計期間のM&A総額・固定キャッシュアロケーション額は開示されていないため補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[7],"result":"配当性向30～40%と積極的な自己株式取得の方針を原資料で確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/6030/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"finalTargetPageConfirmed":true,"annualTargetPageConfirmed":true,"scopeAndKpiPageConfirmed":true,"note":"JPX公式PDFのFY2029目標図表と3カ年目標を目視し、連結収益・単体取扱高・グローバル内数を分離した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T05:41:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

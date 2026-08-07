@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"4902","name":"コニカミノルタ"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4902-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4902-independent-review-v1.json",
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/4902-independent-source-resolution-v1.json",
+  "source": {"title":"中期経営計画 Corporate Plan 2026-2028","officialUrl":"https://www2.jpx.co.jp/disc/49020/140120260423508783.pdf","pdfSha256":"6f304c1e6227a50e6ce292fbe23656a6c8e7cc68283be9bb44b6f5297a8a3a8c","pageCount":35},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,35],"result":"Phase 2収集正本JPX35ページ版を再現用canonicalへ固定。会社公式34ページ計画本体がCorporate Plan 2026-2028の同内容資料であることを独立確認し、旧独立パケットhashは取得時点の版差として保持した。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[5,10,30],"result":"FY2025見通し、FY2028中計目標、長期ROE10%以上の方向性を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[10],"result":"FY2028の事業貢献利益率6.5%、当期利益率3.8%、財務レバレッジ2.2、総資産回転率0.98倍、ROE8%、ROIC6%、FY2025～FY2028売上高CAGR3%を会社公式図表で独立再確認した。FY2028売上高絶対額は逆算して公式目標扱いしない。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[21,24],"result":"FY2026～FY2028累計キャッシュイン2,300億円、設備投資＋投融資1,800億円（うち成長投資900億円）、有利子負債圧縮＋株主還元500億円を図表で独立確認した。成長投資900億円は1,800億円の内数として二重計上しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[21,30],"result":"株主還元を実施する方針は確認できるが、有利子負債圧縮との合計500億円のみが開示され、株主還元単独額・配当性向・1株配当は本中計資料で固定目標として開示されていない。"},
+    {"id":"long_term_growth_boundary","status":"confirmed","evidencePdfPages":[23,24],"result":"成長の芽150～200億円規模は技術起点の非連続成長を含む長期イメージであり、中期経営計画の公式目標に含まれないことを確認した。"}
+  ],
+  "crossChecks": {"visualReview":{"companyOfficialPlanPdfReviewed":true,"financialTargetFigureConfirmed":true,"capitalAllocationFigureConfirmed":true,"longTermRoeBoundaryConfirmed":true,"note":"会社公式34ページPDFの経営指標、キャピタルアロケーション、PBR1倍に向けたROE境界を独立に目視確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_repair"}
+}

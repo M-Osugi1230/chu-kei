@@ -1,20 +1,24 @@
 #!/usr/bin/env python3
-"""Extend the Phase 2 source-repair gate for append-only repair history.
+"""Validate Phase 2 source-repair history without weakening legacy rules.
 
-Legacy and corrected source-repair schemas remain subject to their original
-validator. Independent-review source resolutions are validated here as an
-additional strict schema.
+This wrapper keeps the original source-repair validator authoritative for its
+legacy/corrected schemas and adds explicit handling for two append-only states
+that now exist in the repository:
 
-A historical quarantine may coexist with a later human-reviewed completion only
-when the later completion proves a new canonical collection identity and passes
-all review-safety checks. In that case the old quarantine is retained as audit
-history and reported as superseded; it is never silently ignored.
+* independent-review source resolutions;
+* a primary review completed by a human while source binary identity is still
+  pending, so independent review remains blocked.
+
+Historical quarantines may coexist with a later human-reviewed completion only
+when the later completion proves canonical collection identity and passes all
+review-safety checks. The old quarantine remains audit history.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -22,6 +26,7 @@ import validate_phase2_source_repairs as legacy
 
 INDEPENDENT_SCHEMA = "quality-rebase-phase2-independent-source-resolution-v1"
 INDEPENDENT_COMPLETION_SCHEMA = "quality-rebase-phase2-independent-completion-v1"
+SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
 
 
 def require_string(value: Any, location: str) -> str:
@@ -50,6 +55,7 @@ def load_completion(repo_root: Path, code: str) -> tuple[Path, dict[str, Any]] |
 
 
 def validate_completion_safety(completion: dict[str, Any], code: str) -> None:
+    legacy.assert_no_automatic_approval(completion, f"independentCompletion[{code}]")
     review = completion.get("review")
     if not isinstance(review, dict):
         raise SystemExit(f"independent completion review section missing: {code}")
@@ -66,7 +72,6 @@ def validate_completion_safety(completion: dict[str, Any], code: str) -> None:
     blockers = completion.get("finalDeepVerificationBlockers")
     if blockers is not None and not isinstance(blockers, list):
         raise SystemExit(f"finalDeepVerificationBlockers must be an array: {code}")
-    legacy.assert_no_automatic_approval(completion, f"independentCompletion[{code}]")
 
 
 def validate_collection_integrity(
@@ -86,12 +91,8 @@ def validate_collection_integrity(
             raise SystemExit(f"completion[{code}].collectionIntegrity.{key} must be true")
 
     collection = legacy.load_json(repo_root / collection_file)
-    collection_company = collection.get("company")
-    if isinstance(collection_company, dict):
-        collection_code = str(collection_company.get("code", ""))
-    else:
-        collection_code = str(collection.get("company", {}).get("code", "")) if isinstance(collection.get("company"), dict) else ""
-    if collection_code != code:
+    company = collection.get("company")
+    if not isinstance(company, dict) or str(company.get("code", "")) != code:
         raise SystemExit(f"collection company mismatch for completion: {code}")
 
     source = completion.get("source")
@@ -112,15 +113,13 @@ def validate_collection_integrity(
     primary_company = primary.get("company")
     if not isinstance(primary_company, dict) or str(primary_company.get("code", "")) != code:
         raise SystemExit(f"primary review company mismatch for completion: {code}")
-    primary_review = primary.get("review")
-    primary_status = ""
-    if isinstance(primary_review, dict):
-        primary_status = str(primary_review.get("status", ""))
-    if not primary_status.startswith("primary_review_complete"):
-        raise SystemExit(f"primary review is not complete for superseded quarantine: {code}")
+    review = primary.get("review")
+    status = str(review.get("status", "")) if isinstance(review, dict) else ""
+    if not status.startswith("primary_review_complete"):
+        raise SystemExit(f"primary review is not complete for completion: {code}")
 
 
-def validate_completion(
+def validate_independent_completion(
     repair: dict[str, Any], repair_path: Path, repo_root: Path, code: str
 ) -> None:
     loaded = load_completion(repo_root, code)
@@ -129,27 +128,24 @@ def validate_completion(
     _, completion = loaded
     validate_completion_safety(completion, code)
 
-    source = completion.get("source")
     canonical = repair.get("canonicalSource")
-    if not isinstance(source, dict) or not isinstance(canonical, dict):
+    source = completion.get("source")
+    if not isinstance(canonical, dict) or not isinstance(source, dict):
         raise SystemExit(f"resolved source metadata missing for {code}")
     legacy.validate_pdf_identity(canonical, f"{repair_path}.canonicalSource")
     for key in ("officialUrl", "pdfSha256", "pageCount"):
         if source.get(key) != canonical.get(key):
             raise SystemExit(f"completion/canonical source mismatch for {code}: {key}")
-
     validate_collection_integrity(completion, repo_root, code)
 
-    evidence_correction = repair.get("evidenceCorrectionFile")
-    if evidence_correction is not None:
+    correction_file = repair.get("evidenceCorrectionFile")
+    if correction_file is not None:
         correction_path = repo_root / require_string(
-            evidence_correction, f"{repair_path}.evidenceCorrectionFile"
+            correction_file, f"{repair_path}.evidenceCorrectionFile"
         )
         correction = legacy.load_json(correction_path)
-        correction_company = correction.get("company")
-        if not isinstance(correction_company, dict) or str(
-            correction_company.get("code", "")
-        ) != code:
+        company = correction.get("company")
+        if not isinstance(company, dict) or str(company.get("code", "")) != code:
             raise SystemExit(f"evidence correction company mismatch: {code}")
         legacy.assert_no_automatic_approval(correction, str(correction_path))
 
@@ -160,7 +156,6 @@ def validate_independent_resolution(
     legacy.assert_no_automatic_approval(repair, str(repair_path))
     code = legacy.company_code(repair, repair_path)
     require_string(repair.get("resolutionStatus"), f"{repair_path}.resolutionStatus")
-
     for key in (
         "automaticFactCompletionAllowed",
         "automaticApprovalAllowed",
@@ -170,16 +165,14 @@ def validate_independent_resolution(
 
     blocked = repair.get("independentReviewCompletionBlocked")
     if not isinstance(blocked, bool):
-        raise SystemExit(
-            f"independentReviewCompletionBlocked must be boolean: {repair_path}"
-        )
+        raise SystemExit(f"independentReviewCompletionBlocked must be boolean: {repair_path}")
 
-    loaded_completion = load_completion(repo_root, code)
+    completion = load_completion(repo_root, code)
     if blocked:
         checks = repair.get("requiredNextChecks")
         if not isinstance(checks, list) or not checks:
             raise SystemExit(f"blocked source resolution lacks requiredNextChecks: {code}")
-        if loaded_completion is not None:
+        if completion is not None:
             raise SystemExit(f"blocked source already has independent completion: {code}")
         return {
             "code": code,
@@ -194,8 +187,7 @@ def validate_independent_resolution(
     if not isinstance(canonical, dict):
         raise SystemExit(f"resolved record lacks canonicalSource: {code}")
     legacy.validate_pdf_identity(canonical, f"{repair_path}.canonicalSource")
-    validate_completion(repair, repair_path, repo_root, code)
-
+    validate_independent_completion(repair, repair_path, repo_root, code)
     return {
         "code": code,
         "mode": "independent_source_resolved",
@@ -205,9 +197,101 @@ def validate_independent_resolution(
     }
 
 
+def validate_primary_complete_source_identity_pending(
+    repair: dict[str, Any], repair_path: Path, repo_root: Path
+) -> dict[str, Any]:
+    """Validate a human-complete primary review still blocked on source identity."""
+    legacy.assert_no_automatic_approval(repair, str(repair_path))
+    code = legacy.company_code(repair, repair_path)
+    legacy.require_true(repair, "primaryReviewComplete", str(repair_path))
+    legacy.require_false(repair, "independentReviewReady", str(repair_path))
+    for key in (
+        "automaticFactCompletionAllowed",
+        "automaticApprovalAllowed",
+        "deepVerificationApproved",
+    ):
+        legacy.require_false(repair, key, str(repair_path))
+    if load_completion(repo_root, code) is not None:
+        raise SystemExit(f"source-identity-pending company already has completion: {code}")
+
+    document = repair.get("currentOfficialDocument")
+    if not isinstance(document, dict):
+        raise SystemExit(f"currentOfficialDocument missing: {repair_path}")
+    pdf_url = document.get("pdfUrl", document.get("officialUrl"))
+    legacy.validate_https_url(pdf_url, f"{repair_path}.currentOfficialDocument.pdfUrl")
+    page_count = document.get("pageCount")
+    if not isinstance(page_count, int) or page_count <= 0:
+        raise SystemExit(f"currentOfficialDocument.pageCount invalid: {code}")
+    for key in (
+        "identityConfirmed",
+        "pageCountConfirmed",
+        "publicationDateConfirmed",
+        "planPeriodConfirmed",
+    ):
+        legacy.require_true(document, key, f"{repair_path}.currentOfficialDocument")
+    digest = document.get("pdfSha256")
+    if digest is not None and not (
+        isinstance(digest, str) and SHA256_PATTERN.fullmatch(digest)
+    ):
+        raise SystemExit(f"invalid pending source SHA-256 field: {code}")
+    if digest is None:
+        require_string(
+            document.get("binaryHashStatus"),
+            f"{repair_path}.currentOfficialDocument.binaryHashStatus",
+        )
+
+    validation = repair.get("validation")
+    if not isinstance(validation, dict):
+        raise SystemExit(f"validation section missing: {repair_path}")
+    for key in (
+        "companyIdentityConfirmed",
+        "publicationDateConfirmed",
+        "pageCountConfirmed",
+        "formalPlanBoundaryConfirmed",
+        "fullTextRepositoryReviewComplete",
+        "visualFigureReviewComplete",
+    ):
+        legacy.require_true(validation, key, f"{repair_path}.validation")
+    if validation.get("pdfSha256Confirmed") is not False:
+        raise SystemExit(f"pending identity must keep pdfSha256Confirmed=false: {code}")
+    legacy.require_false(validation, "independentDoubleCheck", f"{repair_path}.validation")
+
+    primary_file = require_string(
+        repair.get("primaryReviewFile"), f"{repair_path}.primaryReviewFile"
+    )
+    primary = legacy.load_json(repo_root / primary_file)
+    company = primary.get("company")
+    if not isinstance(company, dict) or str(company.get("code", "")) != code:
+        raise SystemExit(f"primary review company mismatch: {code}")
+    primary_review = primary.get("review")
+    primary_status = (
+        str(primary_review.get("status", "")) if isinstance(primary_review, dict) else ""
+    )
+    if not primary_status.startswith("primary_review_complete"):
+        raise SystemExit(f"primary review is not complete: {code}")
+
+    required = repair.get("requiredNextChecks")
+    if not isinstance(required, list) or not required:
+        raise SystemExit(f"source-identity-pending record lacks requiredNextChecks: {code}")
+    require_string(
+        repair.get("independentReviewBlockingReason"),
+        f"{repair_path}.independentReviewBlockingReason",
+    )
+
+    return {
+        "code": code,
+        "mode": "primary_review_complete_source_identity_pending",
+        "quarantined": True,
+        "resolutionStatus": repair.get("resolutionStatus"),
+        "file": repair_path.name,
+    }
+
+
 def quarantine_kind(repair: dict[str, Any]) -> str | None:
     schema = repair.get("schemaVersion")
     if schema == legacy.LEGACY_SCHEMA:
+        if repair.get("primaryReviewComplete") is True:
+            return None
         incorrect = repair.get("incorrectCandidate")
         if isinstance(incorrect, dict) and incorrect.get("mayEnterPrimaryReview") is False:
             return "legacy_quarantine"
@@ -233,10 +317,8 @@ def validate_superseded_quarantine(
     _, completion = loaded
     validate_completion_safety(completion, code)
     validate_collection_integrity(completion, repo_root, code)
-
-    # Re-run the quarantine's original structural rules except the historical
-    # prohibition on a later completion.
     legacy.assert_no_automatic_approval(repair, str(repair_path))
+
     if kind == "legacy_quarantine":
         for key in (
             "primaryReviewComplete",
@@ -324,6 +406,21 @@ def main() -> None:
         schema = repair.get("schemaVersion")
         if schema == INDEPENDENT_SCHEMA:
             result = validate_independent_resolution(repair, repair_path, repo_root)
+        elif (
+            schema == legacy.LEGACY_SCHEMA
+            and repair.get("primaryReviewComplete") is True
+            and repair.get("independentReviewReady") is False
+        ):
+            result = validate_primary_complete_source_identity_pending(
+                repair, repair_path, repo_root
+            )
+        elif schema == legacy.LEGACY_SCHEMA and repair.get("primaryReviewComplete") is True:
+            # Bypass the legacy function's older quarantine-first dispatch and
+            # validate the current completed state directly.
+            result = legacy.validate_completed_legacy_resolution(
+                repair, repair_path, repo_root, completed_records
+            )
+            result = {**result, "file": repair_path.name}
         else:
             kind = quarantine_kind(repair)
             code = legacy.company_code(repair, repair_path)
@@ -345,21 +442,18 @@ def main() -> None:
                 "sourceResolutionRecords": len(results),
                 "companiesRepresented": len({str(result["code"]) for result in results}),
                 "quarantinedCompanies": len(
-                    {
-                        str(result["code"])
-                        for result in results
-                        if result["quarantined"]
-                    }
+                    {str(result["code"]) for result in results if result["quarantined"]}
                 ),
                 "independentSourceBlocked": sum(
-                    1
-                    for result in results
-                    if result["mode"] == "independent_source_blocked"
+                    1 for result in results if result["mode"] == "independent_source_blocked"
                 ),
                 "independentSourceResolved": sum(
+                    1 for result in results if result["mode"] == "independent_source_resolved"
+                ),
+                "primaryReviewCompleteSourceIdentityPending": sum(
                     1
                     for result in results
-                    if result["mode"] == "independent_source_resolved"
+                    if result["mode"] == "primary_review_complete_source_identity_pending"
                 ),
                 "historicalQuarantinesSuperseded": sum(
                     1

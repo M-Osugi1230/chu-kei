@@ -5,6 +5,11 @@ The original validator remains authoritative for its legacy/corrected schemas.
 This wrapper adds strict validation for the append-only
 quality-rebase-phase2-independent-source-resolution-v1 records introduced by
 independent review, without weakening any existing checks.
+
+Multiple resolution records for one company are allowed because source repair is
+append-only: an earlier primary-review source-resolution and a later independent-
+review source-resolution may legitimately coexist. Every file is still validated
+independently and resolved records must point to a coherent completion artifact.
 """
 
 from __future__ import annotations
@@ -116,6 +121,7 @@ def validate_independent_resolution(
             "mode": "independent_source_blocked",
             "quarantined": True,
             "resolutionStatus": repair.get("resolutionStatus"),
+            "file": repair_path.name,
         }
 
     require_string(repair.get("resolvedAt"), f"{repair_path}.resolvedAt")
@@ -130,6 +136,7 @@ def validate_independent_resolution(
         "mode": "independent_source_resolved",
         "quarantined": False,
         "resolutionStatus": repair.get("resolutionStatus"),
+        "file": repair_path.name,
     }
 
 
@@ -155,7 +162,6 @@ def main() -> None:
         raise SystemExit("no source-resolution records found")
 
     results: list[dict[str, Any]] = []
-    seen_codes: set[str] = set()
     for repair_path in repair_paths:
         repair = legacy.load_json(repair_path)
         schema = repair.get("schemaVersion")
@@ -165,10 +171,7 @@ def main() -> None:
             result = legacy.validate_repair(
                 repair_path, repo_root, completed_records
             )
-        code = str(result["code"])
-        if code in seen_codes:
-            raise SystemExit(f"duplicate source-resolution company code: {code}")
-        seen_codes.add(code)
+            result = {**result, "file": repair_path.name}
         results.append(result)
 
     print(
@@ -176,8 +179,13 @@ def main() -> None:
             {
                 "status": "ok",
                 "sourceResolutionRecords": len(results),
-                "quarantinedCompanies": sum(
-                    1 for result in results if result["quarantined"]
+                "companiesRepresented": len({str(result["code"]) for result in results}),
+                "quarantinedCompanies": len(
+                    {
+                        str(result["code"])
+                        for result in results
+                        if result["quarantined"]
+                    }
                 ),
                 "independentSourceBlocked": sum(
                     1

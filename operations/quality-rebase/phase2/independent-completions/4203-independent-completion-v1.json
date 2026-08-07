@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "4203", "name": "住友ベークライト"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4203-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4203-independent-review-v1.json",
+  "source": {
+    "title": "住友ベークライト 中期経営計画2024-26",
+    "officialUrl": "https://www.sumibe.co.jp/ir/library/presentation/files/2024/p_001-2.pdf",
+    "pdfSha256": "a9bbfacf19c60a14ebd866221a21f376d32c8d9b4c4a38e9e67feabab8a3716d",
+    "pageCount": 31
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1],"result":"会社公式PDF・Phase 2収集正本・一次レビューでURL、PDF SHA-256、全31ページ、計画名称が一致する。"},
+    {"id":"plan_period_boundary","status":"confirmed","evidencePdfPages":[1,8,19],"result":"中期経営計画2024-26を2024～2026年度の計画として確認し、2030年度のありたい姿および次期計画期間と分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[19],"result":"2026年度の売上収益3,450億円、事業利益400億円、事業利益率11.5%、ROE9.0%を図表で再確認し、2030年度売上4,200億円・事業利益550億円等と分離した。"},
+    {"id":"segment_targets","status":"confirmed","evidencePdfPages":[20],"result":"2026年度の半導体事業利益230億円・利益率20.5%、高機能90億円・7.5%、QOL130億円・11.5%を確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[30],"result":"2024～2026年度の設備投資500億円、成長投資200億円、戦略的投資500億円、株主還元300億円を用途別資金使途として図表確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[30],"result":"安定的・継続的な利益還元を基本とし、配当性向40%程度を目指す方針へ従来30%以上から変更したことを確認した。"},
+    {"id":"nonfinancial_targets","status":"confirmed","evidencePdfPages":[12,13],"result":"2026年度SDGs貢献製品売上収益比率65%と2030年度70%を分離し、GHG削減の中長期目標も別時間軸として確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/4203/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"financialTargetPageConfirmed":true,"capitalAllocationPageConfirmed":true,"note":"会社公式PDFの財務目標と投資・株主還元ページを独立に視覚確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:18:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

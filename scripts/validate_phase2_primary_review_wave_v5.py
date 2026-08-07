@@ -6,6 +6,10 @@ advanced beyond the state captured by its overlay, so validation must be
 monotonic: apply an overlay only to still-assigned companies and never downgrade
 a company that has subsequently reached independent-review-ready.
 
+If a raw wave already carries the visual-pending status but is missing audit
+fields that exist in its historical overlay, only those missing fields are
+hydrated. Existing values must agree with the overlay.
+
 The validator strictly checks every wave/review artifact, cross-wave uniqueness,
 and aggregate reconciliation with effective-status-v1.json. It never infers an
 approval or deep-verification state.
@@ -33,6 +37,17 @@ def require_int(value: Any, location: str) -> int:
     if not isinstance(value, int):
         raise SystemExit(f"{location} must be an integer")
     return value
+
+
+def hydrate_overlay_field(
+    company: dict[str, Any], completion: dict[str, Any], field: str, code: str
+) -> None:
+    overlay_value = completion.get(field)
+    current_value = company.get(field)
+    if current_value is None:
+        company[field] = copy.deepcopy(overlay_value)
+    elif overlay_value is not None and current_value != overlay_value:
+        raise SystemExit(f"materialized overlay {field} mismatch for {code}")
 
 
 def materialize_wave_overlay(
@@ -82,8 +97,15 @@ def materialize_wave_overlay(
                 }
             )
         elif current_status == v2.PENDING_VISUAL_STATUS:
-            if company.get("reviewFile") != completion.get("reviewFile"):
-                raise SystemExit(f"materialized overlay reviewFile mismatch for {code}")
+            hydrate_overlay_field(company, completion, "reviewFile", code)
+            hydrate_overlay_field(company, completion, "completedChecks", code)
+            hydrate_overlay_field(company, completion, "pendingChecks", code)
+            if company.get("automaticApprovalAllowed") not in (None, False):
+                raise SystemExit(f"visual-pending automatic approval enabled for {code}")
+            if company.get("deepVerificationApproved") not in (None, False):
+                raise SystemExit(f"visual-pending deep verification enabled for {code}")
+            company["automaticApprovalAllowed"] = False
+            company["deepVerificationApproved"] = False
         elif current_status == base.COMPLETED_STATUS:
             # The raw wave progressed after this historical visual-pending overlay.
             # Never downgrade it, but require the same primary-review artifact.

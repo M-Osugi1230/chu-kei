@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "4005", "name": "住友化学"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4005-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4005-independent-review-v1.json",
+  "source": {
+    "title": "住友化学 2025～2027年度 中期経営計画 Leap Beyond ～成長軌道へ回帰～",
+    "officialUrl": "https://www.sumitomo-chem.co.jp/ir/event/files/docs/250304.pdf",
+    "pdfSha256": "03623ca99aad906e39c597a6b486616cfaedd28556afad85f60a7a3e08bd5bfc",
+    "pageCount": 63
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1],"result":"住友化学公式PDF、Phase 2収集正本、一次レビュー、独立レビューパケットで資料名、公表日、URL、PDF SHA-256、全63ページが一致する。"},
+    {"id":"plan_period_and_boundary","status":"confirmed","evidencePdfPages":[2,3,4,5],"result":"新中計は2025～2027年度であり、2024年度予想・前中計実績および2035年度長期目標と分離して確認した。"},
+    {"id":"financial_and_long_term_targets","status":"confirmed","evidencePdfPages":[3],"result":"2027年度コア営業利益2,000億円、ROE8%、ROIC6%と、2035年度コア営業利益3,500億円、ROE12%、ROIC10%以上を別の時間軸として図表確認した。"},
+    {"id":"investment_policy","status":"confirmed","evidencePdfPages":[30,31],"result":"2025～2027年度の設備投資・投融資計画4,500億円、うち戦略投資2,300億円・維持基盤投資2,200億円、成長ドライバーへの約1,800億円・78%配分を確認した。"},
+    {"id":"cash_allocation","status":"confirmed","evidencePdfPages":[40,41],"result":"3年間累計の営業CF等9,300億円とキャッシュ創出策2,000億円の総額約1兆1,300億円を、事業投資約9,200億円と財務政策約2,100億円へ配分する構造を確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[43],"result":"2025～2027年度の配当性向30%超と、早期に年間24円/株以上を目指す方針を図表で確認した。過去配当実績とは分離した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-03/4005/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"financialTargetPageConfirmed":true,"investmentPageConfirmed":true,"cashAllocationPageConfirmed":true,"shareholderReturnPageConfirmed":true,"note":"会社公式PDFの主要財務・投資・キャッシュアロケーション・還元図表を独立に視覚確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:34:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

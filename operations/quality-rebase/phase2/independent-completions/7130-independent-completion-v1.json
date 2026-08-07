@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "7130", "name": "ヤマエグループホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7130-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/7130-independent-review-v1.json",
+  "source": {
+    "title": "新中期経営計画 Create ONE 28",
+    "officialUrl": "https://www.yamaegroup-hd.co.jp/wp/wp-content/themes/yamae2023/assets/pdf/ir/strategy/yghd_medium-term_management_plan.pdf",
+    "pdfSha256": "ee0ee952d437d0eb173929dae2be9982e80e22ca49911b0bca13b52e30c3665a",
+    "pageCount": 17
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1],"result":"会社公式PDF、Phase 2収集正本、一次レビュー、独立レビューパケットで会社名、証券コード7130、計画名、公表日、URL、PDF SHA-256、全17ページが一致する。"},
+    {"id":"plan_period","status":"confirmed","evidencePdfPages":[7,14,16],"result":"Create ONE 28は2026～2028年度の3カ年計画で、最終財務目標は2029年3月期であることを確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[14],"result":"2029年3月期の売上高1兆5,000億円、経常利益330億円、経常利益率2.2%、ROE10%以上を図表で再確認した。"},
+    {"id":"actual_target_separation","status":"confirmed","evidencePdfPages":[3,4],"result":"2026年3月期実績の売上高1兆852億円、経常利益186億円、利益率1.7%、ROE11.3%を現中計目標と分離して確認した。"},
+    {"id":"investment_allocation","status":"confirmed","evidencePdfPages":[16],"result":"2026～2028年度の投資総額1,200億円を、M&A550億円、新規事業50億円、設備投資500億円、AX・DX投資100億円として図表で確認した。前中計900億円計画・935億円実績とは分離した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[14],"result":"継続的かつ安定的な配当をベースに業績に応じて機動的に増配し、株主優待を拡充する方針を確認した。過去の配当性向実績を将来の固定目標として扱わない。"},
+    {"id":"nonfinancial_scope","status":"confirmed","evidencePdfPages":[4,15],"result":"2030年度CO2排出量2013年度比50%削減目標はScope1・2の対象範囲として確認し、中計財務目標とは別の時間軸として保持した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/7130/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"financialTargetPageConfirmed":true,"investmentAllocationPageConfirmed":true,"shareholderReturnPageConfirmed":true,"note":"会社公式PDFの主要財務・投資・還元図表を独立に視覚確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:34:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

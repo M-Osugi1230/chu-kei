@@ -107,7 +107,7 @@
       },
       {
         "category": "新規事業",
-        "amount": 10000,
+        "amount": 5000,
         "unit": "百万円"
       },
       {
@@ -116,12 +116,12 @@
         "unit": "百万円"
       },
       {
-        "category": "DX投資",
-        "amount": 5000,
+        "category": "AX・DX投資",
+        "amount": 10000,
         "unit": "百万円"
       }
     ],
-    "statement": "成長投資650億円と効率化投資550億円を合わせて1,200億円を計画する。前中計の計画900億円・実績935億円と混同しない。"
+    "statement": "成長投資600億円（M&A550億円・新規事業50億円）と効率化投資600億円（設備投資500億円・AX・DX投資100億円）を合わせて1,200億円を計画する。前中計の計画900億円・実績935億円と混同しない。"
   },
   "shareholderReturnPolicy": {
     "evidencePdfPage": 14,
@@ -137,8 +137,8 @@
       "unit": "%削減",
       "targetFiscalYear": "2030年度",
       "baselineFiscalYear": "2013年度",
-      "scope": "資料上の新中計ページでは対象範囲の明記が限定的なため、独立再確認でScope定義を確認する。",
-      "evidencePdfPage": 15
+      "scope": "Scope1・2。資料の前中計振り返りページの注記で対象範囲を確認し、新中計の2030年度目標として分離する。",
+      "evidencePdfPages": [4, 15]
     }
   ],
   "definitions": [
@@ -149,7 +149,7 @@
     },
     {
       "term": "投資計画",
-      "definition": "2026年度から2028年度の3カ年で1,200億円。前中計の900億円計画・935億円実績と区別する。",
+      "definition": "2026年度から2028年度の3カ年で1,200億円。M&A550億円、新規事業50億円、設備投資500億円、AX・DX投資100億円。前中計の900億円計画・935億円実績と区別する。",
       "evidencePdfPage": 16
     },
     {
@@ -173,6 +173,7 @@
     "forecastActualSeparated": true,
     "previousAndCurrentPlanSeparated": true,
     "investmentPeriodValidated": true,
+    "investmentAllocationCorrectedByIndependentReview": true,
     "shareholderReturnDefinitionValidated": true,
     "undisclosedPayoutTargetNotInferred": true,
     "templateTextRemaining": false,

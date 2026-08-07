@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"9107","name":"川崎汽船"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9107-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/9107-independent-review-v1.json",
+  "source": {"title":"2022年度 中期経営計画","officialUrl":"https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2022_medium-term%20management%20plan_j.pdf","pdfSha256":"0a993cb5f649a515733fb37a790a61866c7239a9267d178a18d8079b84599c5d","pageCount":33},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"川崎汽船公式の2022年度中期経営計画33ページであり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。"},
+    {"id":"current_plan_boundary","status":"confirmed","evidencePdfPages":[2,7,12,32],"result":"2022年度～2026年度の5カ年中計を対象とし、長期環境目標や将来計画と分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[9,26,28,32],"result":"2026年度経常利益1,400億円、ROE10%以上、5カ年投資5,200億円を原資料で再確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[27,28,30],"result":"5カ年投資約5,200億円、環境投資3,100億円、事業投資の約8割を成長牽引事業へ配分する方針を確認した。環境投資は投資総額と別枠で機械加算しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[9,27,29,32],"result":"中計期間累計4,000～5,000億円の株主還元方針、基礎配当、追加配当・自己株式取得の機動運用を再確認した。"},
+    {"id":"nonfinancial_targets","status":"confirmed","evidencePdfPages":[8,23],"result":"2030年CO2排出効率50%改善、2050年GHGネットゼロへの挑戦、女性管理職比率15%等を長期・非財務目標として中計財務目標と分離した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-03/9107/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"financialTargetsConfirmed":true,"investmentAllocationConfirmed":true,"shareholderReturnConfirmed":true,"note":"川崎汽船公式PDFの財務目標・投資配分・株主還元図表を独立に目視確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

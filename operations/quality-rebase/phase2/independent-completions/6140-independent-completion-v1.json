@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"6140","name":"旭ダイヤモンド工業"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6140-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6140-independent-review-v1.json",
+  "visualEvidenceFile": "operations/quality-rebase/phase2/visual-evidence/6140-partial-v1.json",
+  "source": {"title":"中期経営計画2030説明会資料","officialUrl":"https://www2.jpx.co.jp/disc/61400/140120260526547587.pdf","pdfSha256":"74c7c10f9fc6b6f9b7307bef5ecc9c25f9a3251a9e09d7101ab2203e14224dad","pageCount":24},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,24],"result":"Phase 2収集正本と独立レビューパケットでJPX URL・SHA-256・24ページが一致し、旭ダイヤモンド工業公式IRにも2026年5月26日付『中期経営計画2030説明会資料』が掲載されていることを再確認した。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[4,5,7,10,17,18],"result":"中計2025の実績、2026～2030年度の中計2030、VISION2030、2027年3月期単年度予想を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[17,18],"result":"2031年3月期の売上高530億円、営業利益53億円、営業利益率10%以上、ROE8%以上を既存の独立視覚証跡と原資料本文で再確認した。"},
+    {"id":"reference_figures","status":"confirmed","evidencePdfPages":[17,18],"result":"括弧内の営業利益・営業利益率は退職給付費用影響控除後の参考値であり、正式目標値と混在させないことを確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[19],"result":"2027年3月期～2031年3月期累計で営業CF300億円、資産売却10～50億円、借入25～50億円、成長投資150～300億円、株主還元100～200億円を独立視覚証跡で確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[19,20],"result":"1株34円以上の累進配当、機動的自己株式取得・消却、5年累計総還元性向100%以上を独立視覚証跡で確認した。"},
+    {"id":"capital_efficiency","status":"confirmed","evidencePdfPages":[20,21],"result":"2031年ROE8%以上、株主資本コスト7～8%水準の認識、自己資本比率を約80%から75%目安へ改善する方針を確認した。"},
+    {"id":"nonfinancial_targets","status":"confirmed","evidencePdfPages":[16],"result":"離職率2%以下、採用者女性比率30%以上、男性育休取得率80%以上を中計非財務目標として確認した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6140/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"visualEvidenceFile":"operations/quality-rebase/phase2/visual-evidence/6140-partial-v1.json","financialTargetsConfirmed":true,"capitalAllocationConfirmed":true,"shareholderReturnConfirmed":true,"capitalEfficiencyConfirmed":true,"note":"既存の独立視覚証跡は主要指標p17-18、キャッシュアロケーションp19、資本政策p20、資本効率p21を確認済みで、remainingVisualChecksは空、overallVisualFigureReviewComplete=true。今回公式IR掲載とcanonical source identityを再確認してcompletion台帳へ接続した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:00:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

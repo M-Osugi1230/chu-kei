@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"7460","name":"ヤギ"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7460-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/7460-independent-review-v1.json",
+  "source": {"title":"中期経営計画2029策定に関するお知らせ・中期経営計画2029","officialUrl":"https://www2.jpx.co.jp/disc/74600/140120260421507681.pdf","pdfSha256":"0ea036a2faa99732c7871c9bfabad7155a0390fcbfadb4a23acc14842fbf4b13","pageCount":37},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,37],"result":"Phase 2収集正本のJPX 37ページについてURL・SHA-256・ページ数が一致する。ヤギ公式IRの2026年5月11日中期経営計画2029 PDFでも会社名・計画内容を独立に確認した。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[4,5,9,14],"result":"中計2026の実績、2027～2029年の中期経営計画2029、2034年長期像を分離して確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[9,14,26],"result":"2029年の売上高960億円、経常利益60億円、純利益47億円、ROE10%以上、PBR1倍超を会社公式計画で再確認した。"},
+    {"id":"portfolio","status":"confirmed","evidencePdfPages":[10,13,16,19,22,23],"result":"ブランド・リテールを成長事業、マテリアル・アパレルを収益事業とするポートフォリオ方針を確認した。"},
+    {"id":"retail_definition","status":"confirmed","evidencePdfPages":[19,20],"result":"リテールは持分法適用会社主体で連結売上高を表示せず、GMV195億円と店舗数3倍をKPIとして扱うことを確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[18,23,27,28],"result":"3年間で150～200億円規模の投資を行い、ブランド・リテール拡大、グローバル販売、新事業、M&A、人材、DX・ITへ配分する方針を図表で確認した。TATRAS46億円、アパレル物流10億円・人的投資8億円、政策保有株式売却20～30億円の個別記載も再確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[26,27,29],"result":"配当性向40%以上、総還元性向70%目途、配当50億円・自己株式取得40億円規模の3年間還元方針を図表で確認した。2027年配当180円は単年度予想として分離する。"},
+    {"id":"long_term_boundary","status":"confirmed","evidencePdfPages":[9,10,14,28],"result":"2029年ROE10%以上と2034年ROE12%以上、政策保有株式純資産比率10%以下の長期目標を分離した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/7460/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPdfReviewed":true,"capitalAllocationConfirmed":true,"shareholderReturnConfirmed":true,"capitalEfficiencyConfirmed":true,"note":"ヤギ公式PDFの中計全体像、財務戦略、キャッシュアロケーション図を独立に目視確認した。canonical sourceはPhase 2収集正本のJPX URLを維持する。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:00:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

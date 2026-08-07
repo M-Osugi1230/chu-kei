@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
+  "company": {"code": "2154", "name": "オープンアップグループ"},
+  "detectedAt": "2026-08-07T09:34:00+09:00",
+  "resolutionStatus": "same_url_pdf_hash_mismatch_requires_version_resolution",
+  "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-03/2154/collection.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2154-independent-review-v1.json",
+  "officialUrl": "https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf",
+  "collectionSource": {
+    "pdfSha256": "a5d3c212e83056e2ce6a9d05f06da860f61a973b7710ecaafdadbc161a7aaec3",
+    "pageCount": 27
+  },
+  "independentPacketSource": {
+    "pdfSha256": "b97770392191df90b8c687f5f80acdb4281c5b65c6cadcba659fa2f97db0a7a1",
+    "pageCount": 27
+  },
+  "issue": "同一の会社公式PDF URL・同一27ページである一方、Phase 2収集正本と独立レビューパケットのPDF SHA-256が一致しない。会社側のPDF差し替えまたは収集時点の版差を解消するまで独立レビューを完了扱いしない。",
+  "requiredNextChecks": [
+    "会社公式IR掲載ページから現行PDFのバイナリを取得しSHA-256を再計算する",
+    "収集正本版と独立レビューパケット版の差分ページを特定する",
+    "差分が数値目標・資本政策・株主還元・計画期間へ影響するか確認する",
+    "canonical sourceを固定した後に主要図表を独立再確認する"
+  ],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

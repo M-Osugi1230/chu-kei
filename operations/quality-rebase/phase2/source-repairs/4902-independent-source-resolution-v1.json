@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
+  "company": {"code":"4902","name":"コニカミノルタ"},
+  "detectedAt": "2026-08-08T06:15:00+09:00",
+  "resolutionStatus": "same_url_pdf_hash_mismatch_requires_version_resolution",
+  "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-03/4902/collection.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4902-independent-review-v1.json",
+  "officialUrl": "https://www2.jpx.co.jp/disc/49020/140120260423508783.pdf",
+  "collectionSource": {"pdfSha256":"6f304c1e6227a50e6ce292fbe23656a6c8e7cc68283be9bb44b6f5297a8a3a8c","pageCount":35},
+  "independentPacketSource": {"pdfSha256":"70aacb636a9be464db5b6a7d9264f7c55113286485e86ba6547b8e11e762b930","pageCount":35},
+  "issue": "同一JPX URL・同一35ページである一方、Phase 2収集正本と独立レビューパケットのPDF SHA-256が一致しない。版差を解消するまで独立レビューを完了扱いしない。",
+  "requiredNextChecks": ["会社公式IR掲載PDFまたはJPX PDFを再取得しcanonical SHA-256を固定する","35ページ版同士の差分を特定する","FY2028財務目標、キャッシュアロケーション、株主還元への影響を確認する","canonical source固定後に主要図表を再確認する"],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

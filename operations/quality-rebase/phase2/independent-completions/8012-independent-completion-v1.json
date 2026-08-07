@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"8012","name":"長瀬産業"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8012-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/8012-independent-review-v1.json",
+  "source": {"title":"（訂正）中期経営計画 Walk the Talk 2028","officialUrl":"https://www2.jpx.co.jp/disc/80120/140120260508520793.pdf","pdfSha256":"17e71a9133832600dee7876efaee8e2a8de79af298935d805007079efdf8e17c","pageCount":28},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity_and_correction","status":"confirmed","evidencePdfPages":[1,2],"result":"2026年5月12日訂正版28ページを正本として確認し、収集正本とSHA-256・ページ数が一致する。会社公式IRの訂正版PDFでも訂正通知と現行資料を独立に確認した。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[13,14,20,26],"result":"ACE 2.0の2025年度実績、Walk the Talk 2028の2026～2028年度目標、その先の飛躍的成長・ROE10%以上・時価総額1兆円志向を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[14,26],"result":"2028年度の営業利益500億円以上、ROE9.0%以上を訂正版の会社公式図表で再確認した。3年間EPS成長30%も株主価値向上の目標として確認した。"},
+    {"id":"segment_targets","status":"confirmed","evidencePdfPages":[16],"result":"2028年度のマテリアルEBITDA235億円・営業利益220億円、エレクトロニクス216億円・170億円、ライフサイエンス200億円・110億円を訂正版で再確認した。"},
+    {"id":"growth_investment","status":"confirmed","evidencePdfPages":[17],"result":"2026～2028年度の投資予定1,000億円を、フォーカス700億円・グロース100億円・チャレンジ200億円として確認した。"},
+    {"id":"cash_allocation","status":"confirmed","evidencePdfPages":[23],"result":"2026～2028年度はキャッシュイン・アウトとも約2,000億円規模で、営業CF、政策保有株式売却、有利子負債を原資に投資・配当・自己株取得・M&Aへ配分する構造を確認した。投資1,000億円以外のカテゴリ金額は図表から推計しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[25],"result":"継続増配を基本とし、自己株式取得も機動的に実施する方針と、3年間EPS成長30%を意識する方針を再確認した。ACE 2.0の総還元性向100%を現中計の目標へ転記しない。"},
+    {"id":"nonfinancial_target","status":"confirmed","evidencePdfPages":[26],"result":"2028年度Scope1+2排出量を2021年度比32.7%削減する目標を確認し、SBT認定済み2030年目標との整合注記を保持する。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-05/8012/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialCorrectedPdfReviewed":true,"financialTargetPageConfirmed":true,"segmentTargetPageConfirmed":true,"shareholderReturnPageConfirmed":true,"correctionNoticeConfirmed":true,"note":"長瀬産業公式の2026年5月12日訂正版28ページを独立に目視確認し、旧5月7日版へ戻さない。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:35:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

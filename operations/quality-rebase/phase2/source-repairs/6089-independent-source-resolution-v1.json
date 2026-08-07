@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
+  "company": {"code":"6089","name":"ウィルグループ"},
+  "detectedAt": "2026-08-08T06:15:00+09:00",
+  "resolutionStatus": "same_url_pdf_hash_mismatch_requires_version_resolution",
+  "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6089/collection.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6089-independent-review-v1.json",
+  "officialUrl": "https://www2.jpx.co.jp/disc/60890/140120260515536880.pdf",
+  "collectionSource": {"pdfSha256":"d2305b49872578ba44439ee4031cb0cbf26d7ea6fe78daccdad03c781938488e","pageCount":50},
+  "independentPacketSource": {"pdfSha256":"c64cb85c574dd69309697e381a6e9af17c91699c9c12e1d45f30a5bce2dd8cb6","pageCount":50},
+  "issue": "同一JPX URL・同一50ページである一方、Phase 2収集正本と独立レビューパケットのPDF SHA-256が一致しない。版差を解消するまで独立レビューを完了扱いしない。",
+  "requiredNextChecks": ["会社公式IR掲載PDFまたはJPX PDFを再取得しcanonical SHA-256を固定する","50ページ版同士の差分を特定する","ノーマライズド営業利益、2029年基準目標/アップサイド、M&A予算100億円、株主還元への影響を確認する","canonical source固定後に主要図表を再確認する"],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -1,178 +1,235 @@
 #!/usr/bin/env python3
-"""Validate Phase 2 waves when historical overlays are already materialized.
+"""Validate all Phase 2 primary-review waves against the effective status.
 
-v4 composes append-only overlays on top of an older current-status snapshot. Once
-those completions are incorporated into current-status, replaying the same
-historical overlays is invalid. This wrapper keeps v4's wave transformation and
-strict base validation, but uses the canonical current-status directly when all
-overlay completion records are already materialized there.
+Historical review overlays are append-only snapshots and current-status-v1.json is
+not rewritten after every overlay. Replaying the entire overlay chain onto that
+hybrid historical file is therefore ambiguous. This validator instead performs
+three strict checks:
 
-Historical overlay files may repeat a company after an earlier partial-completion
-snapshot. That repetition is permitted only for materialization detection; wave
-assignment uniqueness remains enforced by the base validator and each overlay is
-applied only to its own wave.
+1. validate every raw wave and its own overlay, if any;
+2. validate cross-wave assignment uniqueness;
+3. reconcile aggregate results with effective-status-v1.json, the explicit
+   materialized summary of all applied overlays.
+
+No completion, approval, or deep-verification state is inferred.
 """
 
 from __future__ import annotations
 
 import argparse
-import copy
 import json
 from pathlib import Path
 from typing import Any
 
 import validate_phase2_primary_review_wave as base
 import validate_phase2_primary_review_wave_v2 as v2
-import validate_phase2_primary_review_wave_v3 as v3
-import validate_phase2_primary_review_wave_v4 as v4
+
+EFFECTIVE_SCHEMA = "quality-rebase-phase2-effective-status-v1"
 
 
-def overlay_codes(overlays: list[dict[str, Any]]) -> set[str]:
-    result: set[str] = set()
-    for overlay in overlays:
-        completions = overlay.get("companyCompletions")
-        if not isinstance(completions, list) or not completions:
-            raise SystemExit("overlay companyCompletions must be a non-empty array")
-        local_codes: set[str] = set()
-        for completion in completions:
-            if not isinstance(completion, dict):
-                raise SystemExit("overlay completion must be an object")
-            code = str(completion.get("code", "")).strip()
-            if not code:
-                raise SystemExit("overlay completion lacks code")
-            if code in local_codes:
-                raise SystemExit(
-                    f"duplicate completion inside overlay wave {overlay.get('wave')}: {code}"
-                )
-            local_codes.add(code)
-            result.add(code)
-    return result
+def rel(path: Path, repo_root: Path) -> str:
+    return path.relative_to(repo_root).as_posix()
 
 
-def canonical_completed_codes(status: dict[str, Any]) -> set[str]:
-    records = status.get("completedPrimaryReviews")
-    if not isinstance(records, list):
-        raise SystemExit("completedPrimaryReviews must be an array")
-    result: set[str] = set()
-    for record in records:
-        if not isinstance(record, dict):
-            raise SystemExit("completedPrimaryReviews entries must be objects")
-        code = str(record.get("code", "")).strip()
-        if not code:
-            raise SystemExit("canonical completed record lacks code")
-        if code in result:
-            raise SystemExit(f"duplicate canonical completed code: {code}")
-        result.add(code)
-    return result
-
-
-def overlays_are_materialized(
-    status: dict[str, Any], overlays: list[dict[str, Any]]
-) -> bool:
-    required = overlay_codes(overlays)
-    completed = canonical_completed_codes(status)
-    if not required.issubset(completed):
-        return False
-
-    review = status.get("review")
-    if not isinstance(review, dict):
-        raise SystemExit("status.review must be an object")
-    primary_complete = review.get("primaryReviewComplete")
-    if not isinstance(primary_complete, int):
-        raise SystemExit("status.review.primaryReviewComplete must be integer")
-    if primary_complete != len(completed):
-        raise SystemExit(
-            "status.review.primaryReviewComplete does not match materialized records"
-        )
-    return True
-
-
-def replay_overlays(
-    status: dict[str, Any], overlays: list[dict[str, Any]]
-) -> dict[str, Any]:
-    first_overlay, *remaining_overlays = overlays
-    effective_status = v2.merge_status_overlay(status, first_overlay)
-    if first_overlay.get("nextWaveAssignment") is not None:
-        effective_status = v3.apply_next_wave_assignment(
-            effective_status, first_overlay
-        )
-
-    for overlay in remaining_overlays:
-        effective_status = v4.merge_partial_completion_overlay(
-            effective_status, overlay
-        )
-        if overlay.get("nextWaveAssignment") is not None:
-            effective_status = v3.apply_next_wave_assignment(
-                effective_status, overlay
-            )
-    return effective_status
+def require_int(value: Any, location: str) -> int:
+    if not isinstance(value, int):
+        raise SystemExit(f"{location} must be an integer")
+    return value
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--wave", required=True)
-    parser.add_argument("--status", required=True)
-    parser.add_argument("--overlay", action="append", required=True)
+    parser.add_argument(
+        "--effective-status",
+        default="operations/quality-rebase/phase2/effective-status-v1.json",
+    )
     parser.add_argument("--repo-root", default=".")
     args = parser.parse_args()
 
     repo_root = Path(args.repo_root).resolve()
-    wave = base.load_json(repo_root / args.wave)
-    status = base.load_json(repo_root / args.status)
-    overlays = [v2.load_overlay(repo_root / path) for path in args.overlay]
-    overlays.sort(key=lambda item: int(item["wave"]))
-
-    overlay_waves = [int(item["wave"]) for item in overlays]
-    expected_waves = list(range(7, 7 + len(overlays)))
-    if overlay_waves != expected_waves:
-        raise SystemExit(
-            f"expected consecutive overlays {expected_waves}, got {overlay_waves}"
+    phase2_root = repo_root / "operations/quality-rebase/phase2"
+    wave_paths = sorted(phase2_root.glob("primary-review-wave*-v1.json"))
+    overlay_paths = sorted(
+        (phase2_root / "review-state-overlays").glob(
+            "wave*-primary-completion-v1.json"
         )
-
-    effective_wave = copy.deepcopy(wave)
-    for overlay in overlays:
-        effective_wave = v2.apply_wave_overlay(effective_wave, overlay)
-
-    materialized = overlays_are_materialized(status, overlays)
-    effective_status = copy.deepcopy(status) if materialized else replay_overlays(
-        status, overlays
     )
+    if not wave_paths:
+        raise SystemExit("no Phase 2 primary-review wave files found")
 
-    wave_counts = v2.validate_effective_wave(effective_wave, repo_root)
-    cross_wave_counts = base.validate_cross_wave_uniqueness(repo_root)
-    base.validate_status(
-        effective_status,
-        v2.status_wave_for_base_validator(effective_wave),
-        wave_counts,
-        cross_wave_counts,
-        repo_root,
-    )
+    overlays: dict[int, dict[str, Any]] = {}
+    for path in overlay_paths:
+        overlay = v2.load_overlay(path)
+        wave_no = require_int(overlay.get("wave"), f"{path}.wave")
+        if wave_no in overlays:
+            raise SystemExit(f"duplicate overlay for wave {wave_no}")
+        expected_base_wave = (
+            f"operations/quality-rebase/phase2/primary-review-wave{wave_no:02d}-v1.json"
+        )
+        if overlay.get("baseWaveFile") != expected_base_wave:
+            raise SystemExit(f"overlay baseWaveFile mismatch for wave {wave_no}")
+        overlays[wave_no] = overlay
+
+    aggregate = {
+        "assigned": 0,
+        "primaryReviewComplete": 0,
+        "independentReviewReady": 0,
+        "independentVisualReviewPending": 0,
+        "additionalSourceMappingRequired": 0,
+    }
+    followup_counts: dict[int, dict[str, int]] = {}
+    latest_wave: dict[str, Any] | None = None
+    latest_counts: dict[str, int] | None = None
+
+    for path in wave_paths:
+        wave = base.load_json(path)
+        wave_no = require_int(wave.get("wave"), f"{path}.wave")
+        overlay = overlays.get(wave_no)
+        effective_wave = v2.apply_wave_overlay(wave, overlay) if overlay else wave
+        counts = v2.validate_effective_wave(effective_wave, repo_root)
+
+        aggregate["assigned"] += counts["assigned"]
+        aggregate["primaryReviewComplete"] += counts["primaryReviewComplete"]
+        aggregate["independentReviewReady"] += counts["independentReviewReady"]
+        aggregate["independentVisualReviewPending"] += counts[
+            "independentVisualReviewPending"
+        ]
+        source_mapping = (
+            counts["primaryReviewComplete"]
+            - counts["independentReviewReady"]
+            - counts["independentVisualReviewPending"]
+        )
+        if source_mapping < 0:
+            raise SystemExit(f"negative source-mapping count in wave {wave_no}")
+        aggregate["additionalSourceMappingRequired"] += source_mapping
+
+        if counts["independentVisualReviewPending"] > 0:
+            followup_counts[wave_no] = {
+                "primaryReviewComplete": counts["primaryReviewComplete"],
+                "independentReviewReady": counts["independentReviewReady"],
+                "independentVisualReviewPending": counts[
+                    "independentVisualReviewPending"
+                ],
+            }
+        latest_wave = effective_wave
+        latest_counts = counts
+
+    cross = base.validate_cross_wave_uniqueness(repo_root)
+    if cross["waveCount"] != len(wave_paths):
+        raise SystemExit("cross-wave wave count mismatch")
+    if cross["assignedCompaniesTotal"] != aggregate["assigned"]:
+        raise SystemExit("cross-wave assigned-company total mismatch")
+
+    summary = base.load_json(repo_root / args.effective_status)
+    if summary.get("schemaVersion") != EFFECTIVE_SCHEMA:
+        raise SystemExit("unexpected effective-status schema")
+    base.assert_no_forbidden_true(summary, "effectiveStatusSummary")
+
+    expected_applied = [rel(path, repo_root) for path in overlay_paths]
+    if summary.get("appliedOverlays") != expected_applied:
+        raise SystemExit("effective-status appliedOverlays does not match overlay files")
+
+    targets = summary.get("targets")
+    if not isinstance(targets, dict) or targets.get("phase2Additional") != 450:
+        raise SystemExit("effective-status phase2Additional target must be 450")
+
+    assignment = summary.get("assignment")
+    if not isinstance(assignment, dict):
+        raise SystemExit("effective-status assignment must be an object")
+    if assignment.get("primaryReviewWavesAssigned") != len(wave_paths):
+        raise SystemExit("effective-status wave count mismatch")
+    if assignment.get("phase2CompaniesAssignedTotal") != aggregate["assigned"]:
+        raise SystemExit("effective-status assigned-company total mismatch")
+    if assignment.get("currentWaveFile") != rel(wave_paths[-1], repo_root):
+        raise SystemExit("effective-status currentWaveFile is not the latest wave")
+
+    review = summary.get("review")
+    if not isinstance(review, dict):
+        raise SystemExit("effective-status review must be an object")
+    expected_review = {
+        "phase2PrimaryReviewComplete": aggregate["primaryReviewComplete"],
+        "independentReviewReady": aggregate["independentReviewReady"],
+        "independentVisualReviewPending": aggregate["independentVisualReviewPending"],
+        "additionalSourceMappingRequired": aggregate["additionalSourceMappingRequired"],
+        "remainingPhase2PrimaryReviews": 450 - aggregate["primaryReviewComplete"],
+        "deepVerificationApproved": 0,
+    }
+    for key, expected in expected_review.items():
+        if review.get(key) != expected:
+            raise SystemExit(
+                f"effective-status review mismatch for {key}: "
+                f"expected {expected}, got {review.get(key)}"
+            )
+    if review.get("independentReviewComplete") != 0:
+        raise SystemExit("effective-status independentReviewComplete must remain zero")
+
+    if latest_wave is None or latest_counts is None:
+        raise SystemExit("latest wave was not resolved")
+    active = summary.get("activeWave")
+    if not isinstance(active, dict):
+        raise SystemExit("effective-status activeWave must be an object")
+    expected_active = {
+        "wave": latest_wave.get("wave"),
+        "assigned": latest_counts["assigned"],
+        "primaryReviewComplete": latest_counts["primaryReviewComplete"],
+        "independentReviewReady": latest_counts["independentReviewReady"],
+        "independentVisualReviewPending": latest_counts[
+            "independentVisualReviewPending"
+        ],
+        "remaining": latest_counts["assigned"] - latest_counts["primaryReviewComplete"],
+    }
+    for key, expected in expected_active.items():
+        if active.get(key) != expected:
+            raise SystemExit(
+                f"effective-status activeWave mismatch for {key}: "
+                f"expected {expected}, got {active.get(key)}"
+            )
+
+    declared_followups = summary.get("openVisualFollowups")
+    if not isinstance(declared_followups, list):
+        raise SystemExit("effective-status openVisualFollowups must be an array")
+    declared_map: dict[int, dict[str, int]] = {}
+    for item in declared_followups:
+        if not isinstance(item, dict):
+            raise SystemExit("invalid openVisualFollowups entry")
+        wave_no = require_int(item.get("wave"), "openVisualFollowups.wave")
+        if wave_no in declared_map:
+            raise SystemExit(f"duplicate openVisualFollowups wave: {wave_no}")
+        declared_map[wave_no] = {
+            "primaryReviewComplete": require_int(
+                item.get("primaryReviewComplete"), "followup.primaryReviewComplete"
+            ),
+            "independentReviewReady": require_int(
+                item.get("independentReviewReady"), "followup.independentReviewReady"
+            ),
+            "independentVisualReviewPending": require_int(
+                item.get("independentVisualReviewPending"),
+                "followup.independentVisualReviewPending",
+            ),
+        }
+    if declared_map != followup_counts:
+        raise SystemExit("effective-status openVisualFollowups does not match wave overlays")
+
+    safety = summary.get("approvalSafety")
+    if not isinstance(safety, dict):
+        raise SystemExit("effective-status approvalSafety must be an object")
+    for key in (
+        "automaticFactCompletionAllowed",
+        "automaticApprovalAllowed",
+        "primaryReviewerMaySelfApprove",
+        "growthDocumentMayBePromotedWithoutFormalPlanEvidence",
+        "deepVerificationApproved",
+    ):
+        if safety.get(key) is not False:
+            raise SystemExit(f"effective-status approvalSafety.{key} must be false")
 
     print(
         json.dumps(
             {
                 "status": "ok",
-                "wave": effective_wave["wave"],
-                "assignedCompanies": wave_counts["assigned"],
-                "wavePrimaryReviewComplete": wave_counts["primaryReviewComplete"],
-                "waveIndependentReviewReady": wave_counts["independentReviewReady"],
-                "waveIndependentVisualReviewPending": wave_counts.get(
-                    "independentVisualReviewPending", 0
-                ),
-                "allWaveCount": cross_wave_counts["waveCount"],
-                "allWaveAssignedCompanies": cross_wave_counts[
-                    "assignedCompaniesTotal"
-                ],
-                "primaryReviewComplete": effective_status["review"][
-                    "primaryReviewComplete"
-                ],
-                "independentReviewReady": effective_status["review"][
-                    "independentReviewReady"
-                ],
-                "remainingPrimaryReviews": effective_status["review"][
-                    "remainingPrimaryReviews"
-                ],
-                "historicalOverlaysMaterialized": materialized,
+                "waveCount": len(wave_paths),
+                "overlayCount": len(overlay_paths),
+                **aggregate,
                 "deepVerificationApproved": 0,
             },
             ensure_ascii=False,

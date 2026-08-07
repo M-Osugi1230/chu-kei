@@ -1,15 +1,15 @@
 {
   "schemaVersion": "quality-rebase-phase2-independent-review-status-v1",
-  "updatedAt": "2026-08-08T06:05:00+09:00",
+  "updatedAt": "2026-08-08T06:15:00+09:00",
   "basis": {
     "effectiveStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
     "primaryReviewComplete": 236,
     "independentReviewEligible": 61
   },
   "counts": {
-    "independentReviewComplete": 32,
-    "independentReviewPending": 22,
-    "independentReviewBlockedSourceIdentity": 7,
+    "independentReviewComplete": 34,
+    "independentReviewPending": 17,
+    "independentReviewBlockedSourceIdentity": 10,
     "deepVerificationApproved": 0
   },
   "completionRecords": [
@@ -44,7 +44,9 @@
     {"code":"2884","name":"ヨシムラ・フード・ホールディングス","file":"operations/quality-rebase/phase2/independent-completions/2884-independent-completion-v1.json","status":"independent_review_complete"},
     {"code":"3175","name":"エー・ピーホールディングス","file":"operations/quality-rebase/phase2/independent-completions/3175-independent-completion-v1.json","status":"independent_review_complete","finalDeepVerificationBlocker":"independent_visual_render_recheck"},
     {"code":"3679","name":"じげん","file":"operations/quality-rebase/phase2/independent-completions/3679-independent-completion-v1.json","status":"independent_review_complete"},
-    {"code":"4345","name":"シーティーエス","file":"operations/quality-rebase/phase2/independent-completions/4345-independent-completion-v1.json","status":"independent_review_complete"}
+    {"code":"4345","name":"シーティーエス","file":"operations/quality-rebase/phase2/independent-completions/4345-independent-completion-v1.json","status":"independent_review_complete"},
+    {"code":"5703","name":"日本軽金属ホールディングス","file":"operations/quality-rebase/phase2/independent-completions/5703-independent-completion-v1.json","status":"independent_review_complete"},
+    {"code":"5988","name":"パイオラックス","file":"operations/quality-rebase/phase2/independent-completions/5988-independent-completion-v1.json","status":"independent_review_complete"}
   ],
   "blockedRecords": [
     {"code":"421A","name":"ムービン・ストラテジック・キャリア","reason":"corrected_pdf_direct_source_unresolved","repairFile":"operations/quality-rebase/phase2/source-repairs/421A-independent-source-resolution-v1.json","status":"source_identity_repair_required"},
@@ -53,7 +55,10 @@
     {"code":"8876","name":"リログループ","reason":"same_url_pdf_hash_mismatch_requires_version_resolution","repairFile":"operations/quality-rebase/phase2/source-repairs/8876-independent-source-resolution-v1.json","status":"source_identity_repair_required"},
     {"code":"2146","name":"UTグループ","reason":"collection_resolved_to_long_term_vision_not_review_packet_source","repairFile":"operations/quality-rebase/phase2/source-repairs/2146-independent-source-resolution-v1.json","status":"source_identity_repair_required"},
     {"code":"3646","name":"駅探","reason":"same_url_pdf_hash_mismatch_requires_version_resolution","repairFile":"operations/quality-rebase/phase2/source-repairs/3646-independent-source-resolution-v1.json","status":"source_identity_repair_required"},
-    {"code":"4651","name":"サニックスホールディングス","reason":"same_url_pdf_hash_mismatch_requires_version_resolution","repairFile":"operations/quality-rebase/phase2/source-repairs/4651-independent-source-resolution-v1.json","status":"source_identity_repair_required"}
+    {"code":"4651","name":"サニックスホールディングス","reason":"same_url_pdf_hash_mismatch_requires_version_resolution","repairFile":"operations/quality-rebase/phase2/source-repairs/4651-independent-source-resolution-v1.json","status":"source_identity_repair_required"},
+    {"code":"4902","name":"コニカミノルタ","reason":"same_url_pdf_hash_mismatch_requires_version_resolution","repairFile":"operations/quality-rebase/phase2/source-repairs/4902-independent-source-resolution-v1.json","status":"source_identity_repair_required"},
+    {"code":"6089","name":"ウィルグループ","reason":"same_url_pdf_hash_mismatch_requires_version_resolution","repairFile":"operations/quality-rebase/phase2/source-repairs/6089-independent-source-resolution-v1.json","status":"source_identity_repair_required"},
+    {"code":"6247","name":"日阪製作所","reason":"same_url_pdf_hash_mismatch_requires_version_resolution","repairFile":"operations/quality-rebase/phase2/source-repairs/6247-independent-source-resolution-v1.json","status":"source_identity_repair_required"}
   ],
   "resolvedSourceIdentityRecords": [
     {"code":"6036","name":"KeePer技研","repairFile":"operations/quality-rebase/phase2/source-repairs/6036-source-identity-resolution-v1.json","overrideFile":"operations/quality-rebase/phase2/source-identity-overrides/6036-source-override-v1.json","status":"resolved"},

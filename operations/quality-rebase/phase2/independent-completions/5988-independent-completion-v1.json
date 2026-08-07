@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"5988","name":"パイオラックス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/5988-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/5988-independent-review-v1.json",
+  "source": {"title":"中期経営計画の見直し","officialUrl":"https://www2.jpx.co.jp/disc/59880/140120260511521916.pdf","pdfSha256":"233cd696ba0596d549e3437840e66550f492746dc5af304cebd6fb20a19f7e6a","pageCount":20},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"株式会社パイオラックス、証券コード5988、2026年5月12日公表、JPX版20ページであり、収集正本とURL・SHA-256・ページ数が一致する。会社公式IRには適時開示表紙を除く19ページ本体が掲載されている。"},
+    {"id":"revision_boundary","status":"confirmed","evidencePdfPages":[1,9,10],"result":"2025年公表の修正前計画、FY2025実績、2026年5月の改定後FY2027目標を分離した。"},
+    {"id":"revised_targets","status":"confirmed","evidencePdfPages":[9,10],"result":"FY2027改定後の売上650億円、営業利益25億円、営業利益率3.8%、当期純利益16億円、ROE2.7%を会社公式図表で再確認した。修正前の売上690億円・営業利益63億円・ROE8%以上を現行目標として扱わない。"},
+    {"id":"fy2030_reference","status":"confirmed","evidencePdfPages":[8,9],"result":"FY2030の売上700億円、営業利益45億円、営業利益率6.4%、ROE5%以上は現行FY2025～FY2027中計の期間外に置く長期参考目標として分離する。"},
+    {"id":"business_target_periods","status":"confirmed","evidencePdfPages":[10,11,13,16],"result":"FY2027グローバル拡販120億円・医療売上64億円と、FY2030のCASE100億円・医療75億円を期間別に分離して確認した。"},
+    {"id":"share_repurchase","status":"confirmed","evidencePdfPages":[17],"result":"FY2024から3年累計300億円の自己株取得を実施中で、FY2025約23億円、過去取得分と合計約265億円取得済み、追加取得も機動的に検討することを会社公式図表で確認した。"},
+    {"id":"dividend_policy","status":"confirmed","evidencePdfPages":[17],"result":"FY2026までは連結配当性向100%・下限配当92円、以降は安定的・継続的な配当を行うよう努める方針を確認した。FY2027以降の固定配当性向として100%を持ち越さない。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[13,14,15,16,17],"result":"医療等への成長投資方針は確認できるが、中計期間の投資総額・全体キャッシュアロケーション額は開示されていないため補完しない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/5988/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPdfReviewed":true,"revisedTargetsConfirmed":true,"shareRepurchaseConfirmed":true,"dividendPolicyConfirmed":true,"note":"会社公式19ページ中計本体で改定前後の目標、長期参考目標、自己株取得・配当方針を独立に目視確認した。canonical sourceは適時開示表紙を含む20ページJPX版を維持する。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:15:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

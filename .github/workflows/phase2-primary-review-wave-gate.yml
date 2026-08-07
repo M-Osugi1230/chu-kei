@@ -15,6 +15,7 @@ on:
       - 'scripts/validate_phase2_primary_review_wave_v3.py'
       - 'scripts/validate_phase2_primary_review_wave_v4.py'
       - 'scripts/validate_phase2_primary_review_wave_v5.py'
+      - 'scripts/validate_phase2_primary_review_wave_v6.py'
       - '.github/workflows/phase2-primary-review-wave-gate.yml'
   push:
     branches:
@@ -33,6 +34,7 @@ on:
       - 'scripts/validate_phase2_primary_review_wave_v3.py'
       - 'scripts/validate_phase2_primary_review_wave_v4.py'
       - 'scripts/validate_phase2_primary_review_wave_v5.py'
+      - 'scripts/validate_phase2_primary_review_wave_v6.py'
       - '.github/workflows/phase2-primary-review-wave-gate.yml'
   workflow_dispatch:
 
@@ -54,6 +56,6 @@ jobs:
 
       - name: Validate waves, overlays and effective status
         run: |
-          python scripts/validate_phase2_primary_review_wave_v5.py \
+          python scripts/validate_phase2_primary_review_wave_v6.py \
             --effective-status operations/quality-rebase/phase2/effective-status-v1.json \
             --repo-root .

@@ -1,0 +1,49 @@
+name: Phase 2 Independent Completion Gate
+
+on:
+  pull_request:
+    paths:
+      - 'operations/quality-rebase/phase2/independent-review-status-v1.json'
+      - 'operations/quality-rebase/phase2/independent-completions/*.json'
+      - 'operations/quality-rebase/phase2/independent/*.json'
+      - 'operations/quality-rebase/phase2/source-repairs/*.json'
+      - 'operations/quality-rebase/phase2/source-identity-overrides/*.json'
+      - 'operations/quality-rebase/phase2/bulk-collection/**/collection.json'
+      - 'scripts/validate_phase2_independent_completions.py'
+      - '.github/workflows/phase2-independent-completion-gate.yml'
+  push:
+    branches:
+      - main
+      - 'agent/phase2-*'
+    paths:
+      - 'operations/quality-rebase/phase2/independent-review-status-v1.json'
+      - 'operations/quality-rebase/phase2/independent-completions/*.json'
+      - 'operations/quality-rebase/phase2/independent/*.json'
+      - 'operations/quality-rebase/phase2/source-repairs/*.json'
+      - 'operations/quality-rebase/phase2/source-identity-overrides/*.json'
+      - 'operations/quality-rebase/phase2/bulk-collection/**/collection.json'
+      - 'scripts/validate_phase2_independent_completions.py'
+      - '.github/workflows/phase2-independent-completion-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-independent-completions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check validator syntax
+        run: python -m py_compile scripts/validate_phase2_independent_completions.py
+
+      - name: Validate independent completion ledger
+        run: python scripts/validate_phase2_independent_completions.py --repo-root .

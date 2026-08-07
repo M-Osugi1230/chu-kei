@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "6143", "name": "ソディック"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6143-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6143-independent-review-v1.json",
+  "source": {
+    "title": "中期経営計画 Grow Forward 2029",
+    "officialUrl": "https://www2.jpx.co.jp/disc/61430/140120260615570413.pdf",
+    "pdfSha256": "99749a2072a7287fd0830e14f6c0bb0047af36ba4c93629024001bff99b201c5",
+    "pageCount": 30
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"株式会社ソディック、証券コード6143、公表日2026年6月16日、30ページであり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。会社公式IRにも同一計画が掲載されている。"},
+    {"id":"plan_period","status":"confirmed","evidencePdfPages":[7,8,9],"result":"Grow Forward 2029はFY2026～FY2029の4カ年計画で、FY2023～FY2025の構造改革期間と分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[7,9,26],"result":"FY2029売上1,000億円、営業利益100億円、営業利益率10%、ROE8%以上、EPS130円以上を会社公式図表で再確認した。PBR1倍以上は早期達成を目指す指標として区別する。"},
+    {"id":"segment_targets","status":"confirmed","evidencePdfPages":[11,13,15,17,19],"result":"FY2029の事業別売上・利益・利益率と共通費を再確認し、全社営業利益100億円との関係を保持する。"},
+    {"id":"capital_sources","status":"confirmed","evidencePdfPages":[27],"result":"2025年末現預金410億円、政策保有株式売却13億円、AP社からの資金調達100億円、営業CF500億円で総原資1,023億円となることを再計算した。"},
+    {"id":"capital_uses","status":"confirmed","evidencePdfPages":[27,28],"result":"戦略投資200億円、設備投資・R&D260億円、株主還元165億円、2029年末現預金398億円で1,023億円と一致する。戦略投資200億円にはAP社調達100億円を含み、M&A100億円はその内訳なので重複加算しない。"},
+    {"id":"capital_guideline","status":"confirmed","evidencePdfPages":[27],"result":"キャピタルアロケーション数値は現時点の目安であり確定値ではないという注記を保持する。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[27,29],"result":"累進配当、中計FY2026～FY2029の総還元性向70%以上、毎期40%以上を基本方針とし、配当65億円・自己株取得100億円の配分イメージを再確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/6143/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"companyOfficialPdfReviewed":true,"financialTargetsConfirmed":true,"capitalAllocationConfirmed":true,"shareholderReturnConfirmed":true,"note":"会社公式IR掲載の同一30ページ計画で主要図表を独立に目視確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T05:55:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

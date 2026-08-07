@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "1450", "name": "TANAKEN"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/1450-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/1450-independent-review-v1.json",
+  "source": {
+    "title": "TANAKEN Vision NEXT 10 Secondary Phase",
+    "officialUrl": "https://www2.jpx.co.jp/disc/14500/140120260508520337.pdf",
+    "pdfSha256": "4bcc77231e9c3ede05c4ac14de76ec94687261b54cc471425413d844a600be31",
+    "pageCount": 18
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"TANAKEN株式会社、証券コード1450、公表日2026年5月8日、18ページであり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。会社公式IRにもSecondary Phase本体が掲載されている。"},
+    {"id":"company_name","status":"confirmed","evidencePdfPages":[1,2],"result":"原資料の現社名はTANAKEN株式会社であり、旧社名田中建設工業を現社名として表示しない。"},
+    {"id":"classification_correction","status":"confirmed","evidencePdfPages":[1,13],"result":"10年ビジョン内のSecondary Phaseとして新たに策定された正式3カ年中計であり、単なる更新資料ではない。"},
+    {"id":"phase_boundary","status":"confirmed","evidencePdfPages":[1,4,5,13],"result":"Vision NEXT 10の長期枠組み、Primary Phase、Secondary Phase、将来Final Phaseを分離した。"},
+    {"id":"previous_results","status":"confirmed","evidencePdfPages":[8],"result":"2026年3月期の売上148億円、営業利益21億円、施工人員53名はPrimary Phaseの実績であり現行目標ではない。"},
+    {"id":"current_targets","status":"confirmed","evidencePdfPages":[15],"result":"2029年3月期の売上200億円、営業利益26億円、ROE15%以上、配当性向30%以上、施工人員80名を会社公式図表で再確認した。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[5,13,17],"result":"持たざる経営、人的・無形資本強化、生産性向上を進める方針は確認できるが、中計期間の投資総額、M&A枠、固定キャッシュアロケーション額は開示されていないため補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[15],"result":"2029年3月期の配当性向30%以上を方針として確認した。1株配当額や自己株式取得額は本資料にないため推測しない。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/1450/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"companyOfficialPdfReviewed":true,"currentTargetPageConfirmed":true,"strategyPageConfirmed":true,"note":"会社公式IRのSecondary Phase本体で2029年目標と主要施策を独立に目視確認した。会社公式PDFは適時開示表紙を除く17ページ本体で、canonical sourceは18ページのJPX収集正本を維持する。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T05:55:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

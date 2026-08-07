@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "6675", "name": "サクサ"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6675-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6675-independent-review-v1.json",
+  "source": {
+    "title": "中期経営計画（2026-2029）『変革から成長へ』",
+    "officialUrl": "https://www2.jpx.co.jp/disc/66750/140120260602559534.pdf",
+    "pdfSha256": "57d598531d0449a76630c68080114be3403a5a2394f71ffebe186a7776e98b01",
+    "pageCount": 30
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,3],"result":"サクサ株式会社、証券コード6675、公表日2026年6月5日、30ページであり、収集正本とURL・SHA-256・ページ数が一致する。会社公式IRにも同一30ページ資料が掲載されている。"},
+    {"id":"classification_correction","status":"confirmed","evidencePdfPages":[1,6,12],"result":"2024-2026前中計の見直しを踏まえて新たに策定した2026～2029年度4カ年の正式中期経営計画であり、単なる更新資料として扱わない。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[1,6,13],"result":"2026年度予想の営業利益10億円・ROE41.4%と、2029年度目標の営業利益50億円・ROE8%以上を分離した。2026年度ROEには固定資産譲渡益を含む注記を保持する。"},
+    {"id":"undisclosed_annual_targets","status":"confirmed","evidencePdfPages":[6],"result":"2027～2029年度の年度別損益数値は計画公表時点で未開示であり、補間しない。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[26],"result":"キャッシュインは不動産売却約260億円、資産有効活用約70億円、有利子負債約70～90億円で約400～420億円。キャッシュアウトは株主還元約100億円、事業用不動産約110～130億円、戦略的M&A約100億円、構造変革約20億円、BCP約35億円、サプライチェーン強靭化約15億円、IT基盤約20億円で約400～420億円となることを図表で再確認した。"},
+    {"id":"capital_visual_hierarchy","status":"confirmed","evidencePdfPages":[26],"result":"事業投資と基盤強化投資の階層を図表で確認し、個別項目を重複して別枠加算しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[2,6,27],"result":"2027～2029年度はDOE4.0%または調整後利益ベース総還元性向100%のいずれか高い方を採用する新方針を確認した。普通配当・特別配当の適用期間を新方針と混同しない。"},
+    {"id":"stock_split","status":"confirmed","evidencePdfPages":[27],"result":"2026年4月1日の1対3株式分割を踏まえ、資料の1株配当推移が分割調整後表示であることを確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/6675/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"companyOfficialPdfReviewed":true,"capitalAllocationConfirmed":true,"shareholderReturnConfirmed":true,"oneOffRoeNoteConfirmed":true,"note":"会社公式IR掲載PDFでエグゼクティブサマリー、キャピタルアロケーション、株主還元方針を独立に目視確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T05:55:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "2323", "name": "fonfun"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2323-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2323-independent-review-v1.json",
+  "source": {
+    "title": "第二次中期経営計画 プロジェクトフェニックスⅡ",
+    "officialUrl": "https://www2.jpx.co.jp/disc/23230/140120260525546407.pdf",
+    "pdfSha256": "c7b43493363e80b1db0198ec82db49be2c9f2d9ee3b3b5f528768c72b00fd85d",
+    "pageCount": 40
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,4],"result":"株式会社fonfun、証券コード2323、公表日2026年5月25日、40ページであり、収集正本と独立レビューパケットのURL・SHA-256・ページ数が一致する。会社公式IRにも同一40ページ計画が掲載されている。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[6,7],"result":"第一次FY24～FY26、第二次FY27～FY29、将来第三次FY30～FY32を明確に分離した。"},
+    {"id":"previous_results","status":"confirmed","evidencePdfPages":[6,34],"result":"第一次計画の時価総額100億円、売上21億円、EBITDA4.5億円、エンジニア220名は達成実績であり、第二次計画の目標ではない。"},
+    {"id":"baseline_and_final_targets","status":"confirmed","evidencePdfPages":[6,16],"result":"FY27業績予想は売上約36億円・EBITDA7.2億円、FY29目標は売上100億円・EBITDA20億円。細かな丸め差を作らず、原資料の表示を優先する。"},
+    {"id":"capital_market_target","status":"confirmed","evidencePdfPages":[4,6,25,37],"result":"時価総額300億円および参考目標株価約1,400円、PER30～50倍、PBR8～10倍は市場評価・IR上の目標であり、業績予想や資金調達額と混同しない。"},
+    {"id":"ma_policy_and_financing","status":"confirmed","evidencePdfPages":[12,13,14,18],"result":"黒字、回収5年、EBITDA倍率5倍以内を基本とするM&A方針を確認した。第二次計画のM&A買収資金50億円はデット中心、D/Eレシオ1.0～1.5倍以内を管理目標とする。"},
+    {"id":"ebitda_contribution","status":"confirmed","evidencePdfPages":[9,18],"result":"M&Aにより獲得するEBITDA13億円はオーガニック成長を除く必要収益想定で、最終EBITDA20億円へ別途上乗せして二重計上しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[19],"result":"自社株買い、配当、株主優待は検討方針であり、中計期間の確定額や固定配当性向は開示されていないため補完しない。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/2323/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"companyOfficialPdfReviewed":true,"planComparisonPageConfirmed":true,"financingPageConfirmed":true,"shareholderPolicyPageConfirmed":true,"valuationPageConfirmed":true,"note":"会社公式IRの40ページPDFで第一次/第二次計画、買収資金50億円・獲得EBITDA13億円、株主向け方針、市場評価目標を独立に目視確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T05:55:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

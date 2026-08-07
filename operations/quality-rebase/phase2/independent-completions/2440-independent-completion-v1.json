@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "2440", "name": "ぐるなび"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2440-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2440-independent-review-v1.json",
+  "source": {
+    "title": "中期経営計画2028 ～指数関数的成長への『始動』～",
+    "officialUrl": "https://www2.jpx.co.jp/disc/24400/140120260512526671.pdf",
+    "pdfSha256": "3201fa0223f78e78989a1e1b1ef2730b1158b1be6b708f79594cd04ac586898d",
+    "pageCount": 50
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"株式会社ぐるなび、証券コード2440、公表日2026年5月13日、50ページであり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。会社公式中計ページから同一資料へ到達できる。"},
+    {"id":"classification_correction","status":"confirmed","evidencePdfPages":[1,16],"result":"2027年3月期～2029年3月期を対象に新規策定された正式3カ年中計であり、候補区分の単なる更新資料として扱わない。"},
+    {"id":"fiscal_year_mapping","status":"confirmed","evidencePdfPages":[1,5,16,20,21],"result":"資料内FY2026～FY2028は2027年3月期～2029年3月期に対応する。前中期事業方針FY2023～FY2025および2029年度以降の次期構想と分離する。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[16,21,44,46],"result":"FY2028の売上189億円、営業利益13億円、営業利益率7%、ROE21%、ROIC16%を会社公式図表で再確認した。"},
+    {"id":"store_targets","status":"confirmed","evidencePdfPages":[16,22,48],"result":"FY2028 4Qの総有料加盟60,000店舗、総加盟100,000店舗を確認した。外部市場予測は会社目標として混入しない。"},
+    {"id":"capital_sources_and_uses","status":"confirmed","evidencePdfPages":[47],"result":"基本原資は期首現預金33億円、営業CF40億円、資産圧縮2億円の計75億円。分配は投資30億円、借入返済6億円、株主還元2億円＋α、期末現預金37億円で、＋αを落とさず扱う。"},
+    {"id":"balance_sheet_guidelines","status":"confirmed","evidencePdfPages":[44,47],"result":"D/Eレシオ0.5倍程度、自己資本比率45%以上、手元流動性2か月分以上を目線として確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[44,47],"result":"FY2028での復配を計画し、株主還元2億円＋αをキャッシュアロケーションに置く。1株配当額や固定配当性向へ変換しない。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/2440/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"companyOfficialPdfReviewed":true,"financialTargetsConfirmed":true,"capitalAllocationConfirmed":true,"returnPolicyConfirmed":true,"note":"会社公式中計ページ経由の50ページPDFで全体数値目標とキャッシュアロケーション図を独立に目視確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T05:55:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

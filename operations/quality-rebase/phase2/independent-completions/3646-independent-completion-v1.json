@@ -16,7 +16,7 @@
     {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[2,29],"result":"DOE3%以上を基準に、単年度利益変動に左右されない安定的かつ持続的な配当を行う方針と株主優待制度新設を確認した。現行資料に累進配当の明示は確認できないため、旧レビューの累進配当記録を失効させる。"},
     {"id":"stale_evidence_isolation","status":"confirmed","result":"旧レビューにあった2029年売上2,521百万円・EBITDA550百万円・営業利益350百万円・純利益272百万円、旧セグメント目標、投資5.8～9.8億円をevidence correctionへ隔離し、サイト公開用の検証済み事実として使用しない。"}
   ],
-  "crossChecks": {"visualReview":{"financialTargetDisclosurePageConfirmed":true,"shareholderReturnTextConfirmed":true,"fullStrategyFigureRenderComplete":false,"note":"適時開示本文2ページ目の新中計財務目標表を独立スクリーンショット確認。株主還元ページはPDF抽出本文でDOE3%以上を再確認したが、後半図表の独立スクリーンショット再取得はキャッシュ制約で完了しなかった。"}},
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/3646/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"financialTargetDisclosurePageConfirmed":true,"shareholderReturnTextConfirmed":true,"fullStrategyFigureRenderComplete":false,"note":"適時開示本文2ページ目の新中計財務目標表を独立スクリーンショット確認。株主還元ページはPDF抽出本文でDOE3%以上を再確認したが、後半図表の独立スクリーンショット再取得はキャッシュ制約で完了しなかった。"}},
   "finalDeepVerificationBlockers": ["strategy_and_shareholder_return_full_visual_render_recheck"],
   "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:32:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_and_stale_evidence_repair_with_visual_recheck_blocker"}
 }

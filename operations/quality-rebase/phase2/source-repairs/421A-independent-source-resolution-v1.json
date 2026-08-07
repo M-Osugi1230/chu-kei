@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
+  "company": {"code": "421A", "name": "ムービン・ストラテジック・キャリア"},
+  "detectedAt": "2026-08-07T09:25:00+09:00",
+  "resolutionStatus": "corrected_pdf_direct_source_unresolved",
+  "originalCollectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/421A/collection.json",
+  "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/421A-independent-review-v2.json",
+  "originalSource": {
+    "officialUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
+    "pdfSha256": "26c39be7814ced99a399fcb55de226267a08c9a34182ef7ddf71e879288a79f5",
+    "pageCount": 37
+  },
+  "officialCorrection": {
+    "noticeUrl": "https://www2.jpx.co.jp/disc/421A0/140120260324588022.pdf",
+    "officialListingUrl": "https://corp.movin.co.jp/ir/disclosure.html",
+    "correctionScope": "訂正前資料の印字14頁（PDF15頁）『市場環境：人材紹介市場は安定拡大』を削除する。",
+    "correctedExpectedPageCount": 36,
+    "correctedDirectPdfUrl": null,
+    "correctedPdfSha256": null
+  },
+  "reviewDisposition": {
+    "preserveExistingPrimaryAnalysis": true,
+    "deletedPageUsedAsEvidence": false,
+    "financialTargetsAffected": false,
+    "strategyTargetsAffected": false,
+    "capitalPolicyAffected": false,
+    "shareholderReturnPolicyAffected": false,
+    "statement": "訂正内容は主要分析を変更しないが、独立レビュー完了には訂正後36ページ版の直接PDF URL・SHA-256を正本として固定する必要がある。"
+  },
+  "requiredNextChecks": [
+    "会社公式IRページから訂正後36ページ版の直接PDF URLを確定する",
+    "訂正後PDFのSHA-256とページ数36を確認する",
+    "削除ページが一次レビューの項目別証跡に使われていないことを訂正版で再確認する",
+    "訂正後正本でFY26～FY28計画、主要KPI、資本政策を独立再確認する"
+  ],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

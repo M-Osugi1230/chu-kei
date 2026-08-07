@@ -4,9 +4,10 @@
 current-status-v1.json is a hybrid historical ledger; some source-repair records
 have a later human-complete primary-review artifact while their source binary hash
 is still unresolved and therefore they intentionally remain excluded from
-independent-review completion. v5 already validates this state once a canonical
-completed-record entry exists. This layer recognizes the same state directly from
-the completed primary-review artifact and still keeps it quarantined.
+independent-review completion. v5 already validates the explicit current repair
+state where ``primaryReviewComplete`` is true. This layer only recognizes older
+repair records that still say false but have a later completed primary-review
+artifact.
 """
 
 from __future__ import annotations
@@ -28,6 +29,11 @@ def is_hash_pending_primary_supersession(
     completed_records: dict[str, dict[str, Any]],
 ) -> bool:
     if repair.get("schemaVersion") != legacy.LEGACY_SCHEMA:
+        return False
+    # Current repair records that already declare primary-review completion have
+    # their own strict v2 validator. This compatibility path is only for older
+    # historical repair files whose booleans were never rewritten.
+    if repair.get("primaryReviewComplete") is not False:
         return False
     if v5.v2.load_completion(repo_root, code) is not None:
         return False

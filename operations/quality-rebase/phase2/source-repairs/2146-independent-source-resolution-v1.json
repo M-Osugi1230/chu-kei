@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
+  "company": {"code": "2146", "name": "UTグループ"},
+  "detectedAt": "2026-08-08T05:41:00+09:00",
+  "resolutionStatus": "collection_resolved_to_long_term_vision_not_review_packet_source",
+  "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/2146/collection.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2146-independent-review-v1.json",
+  "collectionSource": {
+    "documentLabel": "第5次中期経営計画の見直し",
+    "resolvedPdfUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/04/ut_2030.pdf",
+    "pdfSha256": "a7e4245cd260a483cea21c76939ca176f91d24997aa3772cc434789387def4c4",
+    "pageCount": 11
+  },
+  "independentPacketSource": {
+    "documentLabel": "第4次中期経営計画ローリングプラン（2026年5月更新）",
+    "officialUrl": "https://www.ut-g.co.jp/hubfs/ir/library/plan/UTG_rollingplan_2026_ja.pdf",
+    "pdfSha256": "ae89935ed53f5b1e4a687eb98e5a4891924970b8405a65d5dd7ba9539312b894",
+    "pageCount": 11
+  },
+  "issue": "Phase 2収集正本は中計見直しを対象とするメタデータである一方、resolved PDFが長期経営ビジョン資料ut_2030.pdfを指しており、独立レビューパケットは別の2026年ローリングプランを指している。資料境界が一致しないため独立レビューを完了扱いしない。",
+  "requiredNextChecks": [
+    "会社公式中期経営計画ページから現行ローリングプランの直接PDFを解決する",
+    "第4次・第5次・2025年見直し・2026年更新・2030長期ビジョンの資料境界を整理する",
+    "Phase 2収集正本のresolvedPdfUrlを正しい現行中計資料へ再接続する",
+    "現行目標・株主還元・資本政策をcanonical sourceで再確認する"
+  ],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -13,6 +13,7 @@ on:
       - 'scripts/validate_phase2_primary_review_wave_v2.py'
       - 'scripts/validate_phase2_primary_review_wave_v3.py'
       - 'scripts/validate_phase2_primary_review_wave_v4.py'
+      - 'scripts/validate_phase2_primary_review_wave_v5.py'
       - '.github/workflows/phase2-primary-review-wave-gate.yml'
   push:
     branches:
@@ -29,6 +30,7 @@ on:
       - 'scripts/validate_phase2_primary_review_wave_v2.py'
       - 'scripts/validate_phase2_primary_review_wave_v3.py'
       - 'scripts/validate_phase2_primary_review_wave_v4.py'
+      - 'scripts/validate_phase2_primary_review_wave_v5.py'
       - '.github/workflows/phase2-primary-review-wave-gate.yml'
   workflow_dispatch:
 
@@ -77,7 +79,7 @@ jobs:
           echo "Validating ${#WAVES[@]} waves with ${#OVERLAYS[@]} completion overlays."
           for wave in "${WAVES[@]}"; do
             echo "Validating $wave"
-            python scripts/validate_phase2_primary_review_wave_v4.py \
+            python scripts/validate_phase2_primary_review_wave_v5.py \
               --wave "$wave" \
               --status operations/quality-rebase/phase2/current-status-v1.json \
               "${OVERLAY_ARGS[@]}" \

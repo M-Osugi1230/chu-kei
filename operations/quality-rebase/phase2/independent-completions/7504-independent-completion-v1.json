@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"7504","name":"高速"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7504-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/7504-independent-review-v1.json",
+  "source": {"title":"中長期経営計画 2026-2035","officialUrl":"https://www2.jpx.co.jp/disc/75040/140120260503517113.pdf","pdfSha256":"4d250c10689580bcee0d510b1255e9096ec8736222d8cd422aedd799f70334c9","pageCount":20},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"2026年5月8日公表の20ページ中長期経営計画で、Phase 2収集正本とURL・SHA-256・ページ数が一致する。会社公式中長期経営計画ページから同一資料へ到達できる。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[3,4,16],"result":"2018～2025年度の前計画、2026年度単年度予想、2026～2035年度の現中長期計画を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[3,4],"result":"2035年度の売上高2,000億円＋α、営業利益80億円＋α、32期連続増配を会社公式図表で再確認した。"},
+    {"id":"dividend_total_definition","status":"confirmed","evidencePdfPages":[4,17],"result":"2026～2035年度の1株当たり10年間配当総額1,380円＋αは、2026年度120円を起点に毎年4円増配した場合の試算。毎年4円増配の固定コミットや単年度配当額として扱わない。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[3,6,18],"result":"財務健全性を維持しつつ必要に応じて負債を活用し、成長投資と株主還元を両立する方針を確認した。10年間の投資総額・借入上限は開示されていないため補完しない。"},
+    {"id":"single_year_forecast","status":"confirmed","evidencePdfPages":[14,16],"result":"2026年度売上高1,350億円、営業利益51億円等は単年度予想であり、2035年度中長期目標と分離した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/7504/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialLinkedPdfReviewed":true,"longTermTargetsConfirmed":true,"shareholderReturnConfirmed":true,"note":"会社公式中長期経営計画ページからリンクされた同一20ページPDFで定量目標・株主還元図表を独立に目視確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:35:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

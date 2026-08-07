@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"7743","name":"シード"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7743-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/7743-independent-review-v1.json",
+  "source": {"title":"中期経営計画の進捗状況と今後の重点課題更新","officialUrl":"https://www2.jpx.co.jp/disc/77430/140120260511522606.pdf","pdfSha256":"f05558101c8a511b463d4123775b80cf8a16c99c74db49e83b14da5aa1f49786","pageCount":32},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"2026年5月11日公表の32ページ更新資料で、収集正本とURL・SHA-256・ページ数が一致する。会社公式中計ページにも同日付の更新資料が掲載されている。"},
+    {"id":"revision_boundary","status":"confirmed","evidencePdfPages":[1,14,16],"result":"2024年1月当初計画、2025年5月更新、2026年5月の現行更新を分離し、2027年3月期の修正後目標を採用した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[1,14],"result":"2027年3月期の連結売上高370億円、連結営業利益22億円、EBITDA69.5億円、EBITDAマージン18.8%、親会社株主帰属純利益13.5億円、ROE6.9%を会社公式図表で再確認した。"},
+    {"id":"original_revised_separation","status":"confirmed","evidencePdfPages":[1,14],"result":"当初の連結売上410億円・営業利益28億円から、現行370億円・22億円へ下方修正されていることを確認し、旧目標を現行値として使用しない。"},
+    {"id":"long_term_scale_boundary","status":"confirmed","evidencePdfPages":[8,14],"result":"連結売上高500億円は2027年3月期の中計終点ではなく、その先の事業規模目標。2027年3月期370億円と分離した。"},
+    {"id":"production_and_investment","status":"confirmed","evidencePdfPages":[19,20],"result":"生産能力増強・省人化・多品種少量生産等への積極投資方針を確認したが、中計期間の投資総額・資金配分額は開示されていないため補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[9,18],"result":"安定した株主還元、適切な配当施策、株主優待制度適正化を方針として確認した。固定配当性向・DOE・自己株取得額は資料にないため補完しない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/7743/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPlanPdfReviewed":true,"financialTargetPageConfirmed":true,"productionStrategyPageConfirmed":true,"note":"会社公式中計ページ掲載の計画本体で2027年3月期財務目標と生産力強化施策を独立に目視確認した。会社版は適時開示表紙を除く31ページ、canonical sourceは32ページJPX版を維持する。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:35:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

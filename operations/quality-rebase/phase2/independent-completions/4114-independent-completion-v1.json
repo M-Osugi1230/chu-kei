@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "4114", "name": "日本触媒"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4114-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4114-independent-review-v1.json",
+  "source": {
+    "title": "日本触媒グループ 中期経営計画2027",
+    "officialUrl": "https://www.shokubai.co.jp/ja/ir/assets/pdf/management/vision/mid-term_managementplan.pdf",
+    "pdfSha256": "4a9c704ebab26f509c1218ab6d3798be4eb513faeb5b810d5d19d1375da672c5",
+    "pageCount": 34
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,4],"result":"会社公式PDF・Phase 2収集正本・一次レビューでURL、PDF SHA-256、全34ページ、計画名、公表日が一致する。"},
+    {"id":"plan_period_and_boundary","status":"confirmed","evidencePdfPages":[3,7,13],"result":"新中計は2025～2027年度であり、2024年度見通しと2030年度長期目標を別の時間軸として確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[13,14],"result":"2027年度の営業利益＋持分法投資損益350億円、ソリューションズ185億円、ROE7%以上、ROA6%以上、ROIC6%以上を図表で再確認した。350億円を営業利益単独として扱わない。"},
+    {"id":"segment_targets","status":"confirmed","evidencePdfPages":[14],"result":"AA・SAP90億円、EO他70億円、スペシャリティ70億円、エレクトロニクス65億円、その他50億円、全社共通5億円の構成を確認し、合計350億円と整合する。"},
+    {"id":"cash_allocation","status":"confirmed","evidencePdfPages":[29],"result":"2025～2027年度累計の営業CF1,500億円、借入600億円、政策保有株式売却150億円、投資1,550億円、株主還元700億円を図表で再確認した。"},
+    {"id":"investment_period_separation","status":"confirmed","evidencePdfPages":[13,29],"result":"2,450億円は2022～2027年度累計の成長・競争力維持投資であり、新中計3年間の投資1,550億円とは期間が異なることを確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[30],"result":"2027年度まで配当性向100%またはDOE2.0%の大きい方を配当し、政策保有株式縮減等の資金で自己株取得する方針を確認した。"},
+    {"id":"nonfinancial_targets","status":"confirmed","evidencePdfPages":[34],"result":"2027年度の環境貢献製品売上収益550億円、女性採用比率30%以上、女性基幹職比率8%以上、男性育休15日以上取得率100%等を確認し、2030年度目標と分離した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/4114/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"financialTargetPageConfirmed":true,"segmentTargetPageConfirmed":true,"cashAllocationPageConfirmed":true,"note":"会社公式PDFの主要図表ページを独立に視覚確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:16:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

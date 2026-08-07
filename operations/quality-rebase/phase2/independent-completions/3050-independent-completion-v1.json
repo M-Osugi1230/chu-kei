@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "3050", "name": "DCMホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3050-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/3050-independent-review-v1.json",
+  "source": {
+    "title": "DCMホールディングス 第4次中期経営計画（2026年度-2028年度）",
+    "officialUrl": "https://www2.jpx.co.jp/disc/30500/140120260414503724.pdf",
+    "pdfSha256": "d9fb2a477cf373adfe2ae909080297f731573c27e25e2e4e60fccf4816939c04",
+    "pageCount": 31
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"JPX公式PDF・Phase 2収集正本・一次レビューでURL、PDF SHA-256、全31ページ、2026年4月14日公表、第4次中計の表題が一致する。"},
+    {"id":"plan_period_and_boundary","status":"confirmed","evidencePdfPages":[9,27],"result":"2026～2028年度の3カ年計画を、2030年長期事業構想および2026年度単年度予想と分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[9,27],"result":"2028年度売上高6,500億円、営業利益423億円、営業利益率6.5%、経常利益405億円、当期純利益265億円、ROE8.0%以上を公式資料で再確認した。"},
+    {"id":"business_kpis","status":"confirmed","evidencePdfPages":[11,12,13,14],"result":"アプリ会員600万人、PB比率40%、既存店客数2025年度比+4.0%、リフォーム売上高500億円の対象年度と範囲を確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[17],"result":"キャッシュイン・アウト各約1,500億円、営業CF3カ年1,200億円、新店・改装390億円、システム・物流150億円、配当210億円を図表で確認した。未来投資（M&A等）と自己株式取得は合算で最大900億円の共通可変枠として表示されている。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[18],"result":"総還元性向70%目標、年間配当は配当性向40%目安、機動的自己株取得、保有自己株5%程度・超過分償却の方針を図表で確認した。"},
+    {"id":"capital_efficiency","status":"confirmed","evidencePdfPages":[19],"result":"PBR1.0倍以上、ROE8.0%以上、PER10～15倍の目標を2025年度実績と分離して確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/3050/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"planPositioningPageConfirmed":true,"cashAllocationPageConfirmed":true,"shareholderReturnPageConfirmed":true,"note":"JPX公式PDFの位置づけ、キャッシュアロケーション、株主還元の主要図表を独立に視覚確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:17:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "9247", "name": "TREホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/9247-independent-review-v1.json",
+  "source": {
+    "title": "TREホールディングス 第2次中期経営計画（2024年度〜2028年度）",
+    "officialUrl": "https://tre-hd.co.jp/download/assets/uploads/trehd_mtbp.pdf",
+    "pdfSha256": "a6ad11151db372b121c21ce3182a9fc442c5927a44590cbda6c33fc81510225e",
+    "pageCount": 48
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1],"result":"会社公式PDF・Phase 2収集正本・一次レビューでURL、PDF SHA-256、全48ページ、計画名称が一致する。"},
+    {"id":"plan_period","status":"confirmed","evidencePdfPages":[1,18],"result":"表題の2024年度～2028年度と収益計画の2025年3月期～2029年3月期が同一5カ年であることを確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[18,19],"result":"2029年3月期の売上高1,200億円、営業利益120億円、営業利益率10.0%、親会社株主帰属純利益75億円、EBITDA220億円を図表で再確認した。"},
+    {"id":"roe_and_balance_sheet","status":"confirmed","evidencePdfPages":[11,32,33],"result":"ROEを2029年3月期までに10%以上へ引き上げ、自己資本比率40%以上を中計期間中の下限とする方針を確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[11,36],"result":"第2次中計の総還元性向目標35～40%を確認。配当を原則としつつ株価水準に応じて自己株式取得も検討する。"},
+    {"id":"investment_policy","status":"confirmed","evidencePdfPages":[33,34,35],"result":"主要・新規投資計画480億円と個別プロジェクトの投資予定額を確認。大型投資の必要資金はデット調達を基本とし財務安定性を維持する方針を確認した。"},
+    {"id":"strategy_structure","status":"confirmed","evidencePdfPages":[14,15,33],"result":"既存事業強靭化、新規事業・高度循環型リサイクルへの成長投資、稼ぐ力の底上げ、財務安定性を一体で進める構造を確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/9247/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"financialPlanPageConfirmed":true,"financialKpiPageConfirmed":true,"shareholderReturnPageConfirmed":true,"note":"会社公式PDFの収益計画、財務KPI、株主還元の主要図表を独立に視覚確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:20:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

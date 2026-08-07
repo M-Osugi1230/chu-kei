@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "4401", "name": "ADEKA"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4401-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4401-independent-review-v1.json",
+  "source": {
+    "title": "ADEKAグループ 中期経営計画『ADX 2026』（2024-2026年度）",
+    "officialUrl": "https://www.adeka.co.jp/ir/library/pdf/240530_ADX2026.pdf",
+    "pdfSha256": "ba88eca7dc6b6399ebe7cac51b4fa867cd20fb0d33d1ab4899b8139cef012cf3",
+    "pageCount": 42
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1],"result":"会社公式PDF・Phase 2収集正本・一次レビューでURL、PDF SHA-256、全42ページ、証券コード4401、計画名称ADX 2026が一致する。"},
+    {"id":"plan_period","status":"confirmed","evidencePdfPages":[1,8],"result":"ADX 2026は2024～2026年度の3カ年計画であり、ADEKA VISION 2030のセカンドステージとして位置付けられていることを確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[10],"result":"2026年度の売上高5,000億円、営業利益530億円、ROE11.0%、ROIC10.5%を公式図表で再確認した。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[10,14],"result":"3カ年設備投資750億円を確認。半導体材料領域の158億円＋久喜新研究棟約100億円等は個別案件であり、750億円と単純加算して別枠総額を作らない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[10],"result":"配当性向40%以上を方針とし、適切な還元を総合的に勘案しつつ安定配当維持を基本とする注記を確認した。"},
+    {"id":"nonfinancial_targets","status":"confirmed","evidencePdfPages":[10],"result":"2026年度の環境貢献製品売上高1,150億円、GHG排出量199千t-CO2e、女性管理職比率6%以上（単体）を対象範囲・基準とともに確認した。"},
+    {"id":"strategy_structure","status":"confirmed","evidencePdfPages":[9,14,21],"result":"稼ぐ力の強化・高収益構造への転換、サステナビリティ推進、経営基盤強靭化を基本軸とし、半導体材料等の重点領域へ資源配分する構造を確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/4401/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"coverIdentityConfirmed":true,"managementKpiPageConfirmed":true,"semiconductorInvestmentPageConfirmed":true,"note":"会社公式PDFの表紙、経営指標、半導体材料投資ページを独立に視覚確認した。"}
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:19:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

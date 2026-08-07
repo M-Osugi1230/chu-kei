@@ -1,0 +1,21 @@
+{
+  "schemaVersion":"quality-rebase-phase2-independent-completion-v1",
+  "company":{"code":"4651","name":"サニックスホールディングス"},
+  "primaryReviewFile":"operations/quality-rebase/phase2/reviews/4651-primary-review-v1.json",
+  "independentReviewPacket":"operations/quality-rebase/phase2/independent/4651-independent-review-v1.json",
+  "sourceResolutionFile":"operations/quality-rebase/phase2/source-repairs/4651-independent-source-resolution-v1.json",
+  "evidenceCorrectionFile":"operations/quality-rebase/phase2/source-repairs/4651-independent-evidence-correction-v1.json",
+  "source":{"title":"中期経営計画（2027年3月期～2029年3月期）","officialUrl":"https://www2.jpx.co.jp/disc/46510/140120260515537243.pdf","pdfSha256":"eefb97cd16d2052c85e0ee679b785a85d4cec61f2865bcff0e122767574a9b56","pageCount":69},
+  "status":"independent_review_complete",
+  "checks":[
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"Phase 2収集正本JPX69ページをcanonicalに固定し、会社公式68ページ計画本体が適時開示表紙を除く同内容資料であることを独立再確認した。旧独立パケットhashは取得時点の版差として保持する。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[58],"result":"2029年3月期の連結売上高499億円、営業利益28.9億円、営業利益率5.8%を現行会社公式資料で再確認した。"},
+    {"id":"segment_targets","status":"confirmed","evidencePdfPages":[58],"result":"2029年3月期は住環境158億円/21.5億円、エネルギー102億円/4.9億円、資源循環220億円/24.6億円、その他5億円/0.2億円、全社調整▲22.4億円として現行区分を確認した。"},
+    {"id":"capital_efficiency","status":"confirmed","evidencePdfPages":[60],"result":"2029年3月期ROIC8.8%。未払金に含まれる割賦債務を有利子負債へ含めた場合7.3%であることと、自己資本比率35%を目指す方針を確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[61],"result":"中計期間のキャッシュインEBITDA135億円に対し、設備投資(更新)60億円、戦略投資49億円、有利子負債圧縮20億円、株主還元6億円の合計135億円へ配分する現行図表を確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[61],"result":"2027年3月期3円、2028年3月期4円、2029年3月期5円を目指し、2029年3月期配当性向14%、将来的に25%を目指す方針を再確認した。"}
+  ],
+  "crossChecks":{"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-03/4651/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialMirrorReviewed":true,"segmentTargetPageConfirmed":true,"capitalEfficiencyPageConfirmed":true,"capitalAllocationPageConfirmed":true,"note":"会社公式68ページ本体で現行の事業区分・ROIC・キャッシュアロケーション・配当方針を独立に再確認した。"}},
+  "finalDeepVerificationBlockers":[],
+  "review":{"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:20:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_and_evidence_repair"}
+}

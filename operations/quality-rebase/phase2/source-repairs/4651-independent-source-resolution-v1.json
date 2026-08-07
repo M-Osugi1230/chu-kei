@@ -1,22 +1,17 @@
 {
-  "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
-  "company": {"code":"4651","name":"サニックスホールディングス"},
-  "detectedAt": "2026-08-08T06:05:00+09:00",
-  "resolutionStatus": "same_url_pdf_hash_mismatch_requires_version_resolution",
-  "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-03/4651/collection.json",
-  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4651-independent-review-v1.json",
-  "officialUrl": "https://www2.jpx.co.jp/disc/46510/140120260515537243.pdf",
-  "collectionSource": {"pdfSha256":"eefb97cd16d2052c85e0ee679b785a85d4cec61f2865bcff0e122767574a9b56","pageCount":69},
-  "independentPacketSource": {"pdfSha256":"a2a053ca7673f3457c003bd29f4334fd6f8cafb671ccdb153f5121fb23a4a417","pageCount":69},
-  "issue": "同一JPX URL・同一69ページである一方、Phase 2収集正本と独立レビューパケットのPDF SHA-256が一致しない。会社側差し替えまたは取得時点の版差を解消するまで独立レビューを完了扱いしない。",
-  "requiredNextChecks": [
-    "JPX公式PDFまたは会社公式IR掲載PDFを再取得し現行SHA-256を固定する",
-    "2つの69ページ版の差分ページを特定する",
-    "2029年3月期財務目標、セグメント目標、ROIC定義、キャピタルアロケーション、配当方針への影響を確認する",
-    "canonical source固定後に主要図表を独立再確認する"
-  ],
-  "independentReviewCompletionBlocked": true,
-  "automaticFactCompletionAllowed": false,
-  "automaticApprovalAllowed": false,
-  "deepVerificationApproved": false
+  "schemaVersion":"quality-rebase-phase2-independent-source-resolution-v1",
+  "company":{"code":"4651","name":"サニックスホールディングス"},
+  "detectedAt":"2026-08-08T06:05:00+09:00",
+  "resolvedAt":"2026-08-08T07:20:00+09:00",
+  "resolutionStatus":"company_official_body_matches_collection_canonical",
+  "collectionFile":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-03/4651/collection.json",
+  "independentReviewPacket":"operations/quality-rebase/phase2/independent/4651-independent-review-v1.json",
+  "canonicalSource":{"officialUrl":"https://www2.jpx.co.jp/disc/46510/140120260515537243.pdf","pdfSha256":"eefb97cd16d2052c85e0ee679b785a85d4cec61f2865bcff0e122767574a9b56","pageCount":69},
+  "supersededIndependentPacketSource":{"officialUrl":"https://www2.jpx.co.jp/disc/46510/140120260515537243.pdf","pdfSha256":"a2a053ca7673f3457c003bd29f4334fd6f8cafb671ccdb153f5121fb23a4a417","pageCount":69},
+  "companyOfficialMirror":{"officialUrl":"https://hd.sanix.jp/files/cu_custom_field/blog/2/blog_posts/2026/06/00000049_file_03.pdf","pageCount":68,"relationship":"JPX69ページ版から適時開示表紙を除いた計画本体として内容を独立確認"},
+  "resolutionEvidence":"会社公式68ページ中計本体を独立に再読し、FY2029財務・セグメント目標、ROIC定義、キャッシュアロケーション、配当方針が一次レビューの意味内容と整合することを確認した。再現用canonicalはPhase 2収集正本JPX69ページ版へ固定する。",
+  "independentReviewCompletionBlocked":false,
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":false
 }

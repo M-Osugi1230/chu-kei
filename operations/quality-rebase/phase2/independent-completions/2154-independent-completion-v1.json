@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"2154","name":"オープンアップグループ"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2154-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2154-independent-review-v1.json",
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/2154-independent-source-resolution-v1.json",
+  "source": {"title":"中期経営方針","officialUrl":"https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf","pdfSha256":"a5d3c212e83056e2ce6a9d05f06da860f61a973b7710ecaafdadbc161a7aaec3","pageCount":27},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed_with_binary_recheck_blocker","evidencePdfPages":[1],"result":"会社公式IRで中期経営方針の掲載が継続していること、同一公式PDF URL・27ページであることを確認した。取得時点のhash差は監査履歴として保持し、Phase 2収集正本を再現用canonicalとする。公式PDFバイナリの直接再取得はアクセス制約により最終ゲートへ残す。"},
+    {"id":"plan_period","status":"confirmed","result":"会社公式サステナビリティページで、中期経営方針とOPIの到達年度を2027年6月期として再確認した。"},
+    {"id":"previous_current_boundary","status":"confirmed","evidencePdfPages":[3,5],"result":"BY25の営業利益160億円・営業利益率8%という旧計画コミットメントと、更新後の率ベース中期経営方針を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[5],"result":"売上高・営業利益の年率10%以上成長、営業利益率10%以上を中期経営方針の収益指標として法定開示と公式ページで再確認した。単一年度の絶対額へ変換しない。"},
+    {"id":"growth_kpis","status":"confirmed","evidencePdfPages":[5,16],"result":"国内エンジニア数の年率10%以上拡大、社員育成投資、M&Aを成長指標・成長手段として再確認した。OPIは就業体験満足度、キャリア自信度、サポート満足度、在籍期間、ステップアップ数、給与上昇率等へ刷新されている。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[5,25],"result":"社員育成とM&Aを明示的な成長手段とする一方、当該中期方針に固定投資総額・区分別金額は開示されていないため補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[5],"result":"配当性向50%以上、累進配当、自己株式取得を還元指標として再確認した。過去の連続増配年数は将来目標へ変換しない。"},
+    {"id":"later_update_boundary","status":"confirmed","result":"後続の法定開示で2028年6月期の売上高2,000億円・営業利益200億円という次期成長ステージ目標が示されているが、2024年8月中期経営方針の原資料フィールドへ遡及混入させず、別更新として扱う。"}
+  ],
+  "crossChecks": {"officialWeb":{"midtermPlanListingConfirmed":true,"sustainabilityPeriodConfirmed":true,"statutoryDisclosureTargetsConfirmed":true},"visualReview":{"officialPdfDirectRenderComplete":false,"note":"会社公式PDFはアクセス制約で独立再レンダリングできなかったため、公式IR・サステナビリティ・法定開示を三点突合し、PDFのbinary/hashおよび全ページ視覚再確認のみ最終Deep Verificationへ残す。"}},
+  "finalDeepVerificationBlockers": ["official_pdf_binary_hash_and_visual_render_recheck"],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:32:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_repair_with_visual_recheck_blocker"}
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"3646","name":"駅探"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3646-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/3646-independent-review-v1.json",
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/3646-independent-source-resolution-v1.json",
+  "evidenceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/3646-independent-evidence-correction-v1.json",
+  "source": {"title":"新中期経営計画の策定について（事業計画及び成長可能性に関する事項）","officialUrl":"https://www2.jpx.co.jp/disc/36460/140120260130543384.pdf","pdfSha256":"20b913b5d6a61f62e510b8af26d80e4dd9dbb1c2a6fb59f58b741abe4cd61dc8","pageCount":35,"publishedDate":"2026-01-30"},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"2026年1月30日付の35ページ新中期経営計画を独立に再取得し、会社名、証券コード3646、公表日、旧中計取り止め、新計画の2026年度～2028年度3カ年という境界を確認した。再現用canonicalはPhase 2収集正本へ固定する。"},
+    {"id":"formal_plan_boundary","status":"confirmed","evidencePdfPages":[1,2],"result":"2024年6月27日公表の旧中計を取り止め、2026年度を初年度とする新たな3カ年計画であることを確認した。旧RMP構想・旧数値を現行目標として使用しない。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[2],"result":"M&Aを含まない財務目標として、2027年3月期売上3,040百万円・営業損失110百万円、2028年3月期売上3,160百万円・営業利益10百万円、2029年3月期売上3,370百万円・営業利益110百万円を原PDF表で独立に目視確認した。"},
+    {"id":"strategy_structure","status":"confirmed","evidencePdfPages":[2,15,21,22,23,24],"result":"国内メディア基盤の強化、交通・旅行業界向けBtoB提案、インバウンドメディア、CGM型プラットフォーム、Eポイントプログラムを基盤強化・次世代成長戦略として確認した。旧レビューのヘルスケアデータ等の区分を現行計画へ持ち込まない。"},
+    {"id":"ma_policy","status":"confirmed","evidencePdfPages":[2,15],"result":"ポートフォリオ戦略として自社事業の延長線上にある業態を中心にM&Aを推進する方針を確認した。現行35ページ資料に旧レビューの3年投資5.8～9.8億円という固定レンジは確認できず、現行値として使用しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[2,29],"result":"DOE3%以上を基準に、単年度利益変動に左右されない安定的かつ持続的な配当を行う方針と株主優待制度新設を確認した。現行資料に累進配当の明示は確認できないため、旧レビューの累進配当記録を失効させる。"},
+    {"id":"stale_evidence_isolation","status":"confirmed","result":"旧レビューにあった2029年売上2,521百万円・EBITDA550百万円・営業利益350百万円・純利益272百万円、旧セグメント目標、投資5.8～9.8億円をevidence correctionへ隔離し、サイト公開用の検証済み事実として使用しない。"}
+  ],
+  "crossChecks": {"visualReview":{"financialTargetDisclosurePageConfirmed":true,"shareholderReturnTextConfirmed":true,"fullStrategyFigureRenderComplete":false,"note":"適時開示本文2ページ目の新中計財務目標表を独立スクリーンショット確認。株主還元ページはPDF抽出本文でDOE3%以上を再確認したが、後半図表の独立スクリーンショット再取得はキャッシュ制約で完了しなかった。"}},
+  "finalDeepVerificationBlockers": ["strategy_and_shareholder_return_full_visual_render_recheck"],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:32:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_and_stale_evidence_repair_with_visual_recheck_blocker"}
+}

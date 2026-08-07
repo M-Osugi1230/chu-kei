@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
+  "company": {"code":"6247","name":"日阪製作所"},
+  "detectedAt": "2026-08-08T06:15:00+09:00",
+  "resolutionStatus": "same_url_pdf_hash_mismatch_requires_version_resolution",
+  "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6247/collection.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6247-independent-review-v1.json",
+  "officialUrl": "https://www2.jpx.co.jp/disc/62470/140120260529554991.pdf",
+  "collectionSource": {"pdfSha256":"064bb96e3d1f245caccd5ecade6255f91819f8e0e710c8b2e1d242cb4b112913","pageCount":56},
+  "independentPacketSource": {"pdfSha256":"f143ba84cce248a5b501a28f42d2423872a5ee240dd4f1d8ee577df371730ba2","pageCount":56},
+  "issue": "同一JPX URL・同一56ページである一方、Phase 2収集正本と独立レビューパケットのPDF SHA-256が一致しない。版差を解消するまで独立レビューを完了扱いしない。",
+  "requiredNextChecks": ["会社公式IR掲載PDFまたはJPX PDFを再取得しcanonical SHA-256を固定する","56ページ版同士の差分を特定する","2029年財務目標、セグメント調整、資金源/使途レンジ、株主還元への影響を確認する","canonical source固定後に主要図表を再確認する"],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "9684", "name": "スクウェア・エニックス・ホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9684-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/9684-independent-review-v1.json",
+  "evidenceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/9684-independent-evidence-correction-v1.json",
+  "source": {
+    "title": "中期経営計画 進捗報告（2025年3月期～2027年3月期）",
+    "officialUrl": "https://www.hd.square-enix.com/jpn/ir/news/pdf/20260514_01.pdf",
+    "pdfSha256": "2ada93a2f9fcc2e1ca9be73e099c850d5ea92749d8310e146a478fde8b6e4273",
+    "pageCount": 26
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id": "source_identity", "status": "confirmed", "evidencePdfPages": [1], "result": "会社公式IR掲載、2026年5月14日公表、中期経営計画進捗報告、26ページであることを再確認し、Phase 2収集正本とURL・SHA-256・ページ数が一致する。"},
+    {"id": "formal_plan_boundary", "status": "confirmed", "evidencePdfPages": [4, 23], "result": "2024年5月13日公表の元中計に対する2026年5月14日の進捗報告であり、新規中計として二重計上しない。"},
+    {"id": "financial_targets", "status": "confirmed", "evidencePdfPages": [23], "result": "2027年3月期の連結営業利益率15%、ROE10%以上、戦略投資枠800～1,000億円を公式図表で再確認した。"},
+    {"id": "progress_target_separation", "status": "confirmed", "evidencePdfPages": [7, 25], "result": "2026年3月期の営業利益547億円・営業利益率18.4%は進捗実績、2027年3月期業績予想の営業利益490億円・利益率16.4%は単年度予想であり、中計財務目標15%とは区別する。"},
+    {"id": "cost_reduction", "status": "confirmed", "evidencePdfPages": [13], "result": "海外パブリッシング構造改革により2027年3月期から年間30億円以上の費用削減を実現する記載を再確認した。"},
+    {"id": "shareholder_return", "status": "confirmed", "evidencePdfPages": [21, 22], "result": "年間配当額約155億円、2025・2026年3月期の配当合計310億円予定、2026年3月期総還元性向52.3%、2027年3月期50.0%想定を再確認した。"},
+    {"id": "strategic_investment_evidence_correction", "status": "confirmed", "evidencePdfPages": [22, 23], "result": "公式資料で確認できるのは戦略投資枠800～1,000億円と投資方針までであり、一次レビューにあった実行済み約316億円・残存484～684億円は裏付けを確認できないため、検証済み事実として使用しない。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {
+      "file": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-01/9684/collection.json",
+      "sourceUrlMatched": true,
+      "pdfSha256Matched": true,
+      "pageCountMatched": true
+    },
+    "visualReview": {
+      "capitalAllocationPagesConfirmed": true,
+      "shareholderReturnPagesConfirmed": true,
+      "financialTargetPageConfirmed": true,
+      "note": "会社公式PDFの主要図表ページを独立再確認し、unsupportedな投資実行済み数値を除外した。"
+    }
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "reviewRole": "independent_reviewer",
+    "primaryReviewerMustNotSelfApprove": true,
+    "completedAt": "2026-08-08T05:41:00+09:00",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "result": "confirmed_with_evidence_correction"
+  }
+}

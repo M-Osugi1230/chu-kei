@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
+  "company": {"code": "3646", "name": "駅探"},
+  "detectedAt": "2026-08-08T05:41:00+09:00",
+  "resolutionStatus": "same_url_pdf_hash_mismatch_requires_version_resolution",
+  "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/3646/collection.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/3646-independent-review-v1.json",
+  "officialUrl": "https://www2.jpx.co.jp/disc/36460/140120260130543384.pdf",
+  "collectionSource": {
+    "pdfSha256": "20b913b5d6a61f62e510b8af26d80e4dd9dbb1c2a6fb59f58b741abe4cd61dc8",
+    "pageCount": 35
+  },
+  "independentPacketSource": {
+    "pdfSha256": "6f5ba80f0aee5648307fc0b7144454791edd068eecdaa8dc013e78d858023de8",
+    "pageCount": 35
+  },
+  "issue": "同一JPX URL・同一35ページである一方、収集正本と独立レビューパケットのPDF SHA-256が一致しない。数値目標・投資レンジ・配当方針を含む資料の版差影響を確認するまで独立レビューを完了扱いしない。",
+  "requiredNextChecks": [
+    "JPX公式PDFを再取得し現行SHA-256を固定する",
+    "2つの35ページ版の差分ページを特定する",
+    "2029年3月期財務目標、3年間投資5.8～9.8億円、累進配当方針への影響を確認する",
+    "canonical source固定後に図表ページを独立再確認する"
+  ],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-evidence-correction-v1",
+  "company": {"code": "9684", "name": "スクウェア・エニックス・ホールディングス"},
+  "detectedAt": "2026-08-08T05:41:00+09:00",
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9684-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/9684-independent-review-v1.json",
+  "canonicalSource": {
+    "officialUrl": "https://www.hd.square-enix.com/jpn/ir/news/pdf/20260514_01.pdf",
+    "pdfSha256": "2ada93a2f9fcc2e1ca9be73e099c850d5ea92749d8310e146a478fde8b6e4273",
+    "pageCount": 26
+  },
+  "issue": "一次レビューと独立レビューパケットに記録された『戦略投資実行済み約316億円／残存約484～684億円』は、canonical PDFの本文・主要図表を独立再確認しても裏付けを確認できない。PDF p22には戦略投資枠800～1,000億円、AI・データマーケティング等の戦略投資実施分、M&A・投資方針は示されるが、316億円および残存484～684億円の数値は示されない。",
+  "supersededPrimaryClaims": [
+    {"path": "capitalPolicy.executedReference", "action": "do_not_publish_or_use_as_verified_fact"},
+    {"path": "definitions[戦略投資枠].definition", "action": "remove_316_and_484_684_reference"}
+  ],
+  "confirmedCanonicalFacts": [
+    "2027年3月期 連結営業利益率15%",
+    "ROE10%以上",
+    "中計期間の戦略投資枠800～1,000億円",
+    "2025年3月期・2026年3月期の配当合計310億円予定",
+    "2026年3月期 総還元性向52.3%",
+    "2027年3月期 総還元性向50.0%想定",
+    "年間配当額は過去最高益の2022年3月期水準を目安に約155億円"
+  ],
+  "evidencePdfPages": [21, 22, 23],
+  "independentReviewCompletionBlocked": false,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

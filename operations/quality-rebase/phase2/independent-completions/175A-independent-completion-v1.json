@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code": "175A", "name": "Will Smart"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/175A-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/175A-independent-review-v1.json",
+  "source": {
+    "title": "中期経営計画2030 Beyond 100（事業計画及び成長可能性に関する事項）",
+    "officialUrl": "https://ssl4.eir-parts.net/doc/175A/ir_material_for_fiscal_ym1/200999/00.pdf",
+    "pdfSha256": "4cbcf3e1f0f9b2a72f6307c4670a631d5d3f89c2c389f4b5927331cda03a66e3",
+    "pageCount": 40
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1],"result":"Phase 2収集正本・一次レビュー・独立レビューパケットで会社名、資料名、公開日、URL、PDF SHA-256、全40ページが一致する。TDnet同一資料も独立に確認した。"},
+    {"id":"formal_plan_boundary","status":"confirmed","evidencePdfPages":[1,4,5],"result":"外形は成長可能性資料だが、資料内で過去戦略を踏襲し今回初めて2030年数値計画を策定した正式中期経営計画であることを確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[5,27],"result":"2030年12月期の売上高30億円、営業利益3.5億円、営業利益率12%、売上CAGR30%と2025年実績を分離して図表で確認した。"},
+    {"id":"intermediate_and_business_kpis","status":"confirmed","evidencePdfPages":[27,28,29],"result":"2028年度営業利益率6%、自社PF比率50%超を中間目標、2030年度取引社数300社以上・自社PF比率70%以上を最終KPIとして確認した。"},
+    {"id":"market_and_valuation_separation","status":"confirmed","evidencePdfPages":[10,27],"result":"外部市場予測を会社売上目標へ混入せず、時価総額100億円以上も税率・PER仮定を伴う参考指標として業績目標と分離した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[31],"result":"営業CF・有利子負債・エクイティを原資に自社PF、人材、販売網、M&Aを優先する方針を確認した。固定投資額や固定配当性向は資料にないため補完しない。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/175A/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {"financialTargetPageConfirmed":true,"kpiPageConfirmed":true,"capitalAllocationTextConfirmed":true,"note":"TDnet上の同一40ページ資料を独立に確認。EIR正本とURL・SHA・ページ数の整合は収集正本で確認した。"}
+  },
+  "finalDeepVerificationBlockers": ["public_eir_render_recheck"],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

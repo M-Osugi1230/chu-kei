@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"4691","name":"ワシントンホテル"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4691-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/4691-independent-review-v1.json",
+  "source": {"title":"中期経営計画2031","officialUrl":"https://www2.jpx.co.jp/disc/46910/140120260203546423.pdf","pdfSha256":"cefe28f85922b6dd5c1428d84fbd7b7a208f190cce30e13a3f3fc76be5519921","pageCount":41},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,41],"result":"2026年2月12日公表の41ページ中期経営計画2031であり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。会社公式IRにも同計画PDFが掲載されている。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[1,6,7,10,11,18],"result":"前中計実績、2026年3月期見込、2029年3月期中間目標、2031年3月期最終目標を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[1,18,35],"result":"2031年3月期の売上高400億円、営業利益87億円、営業利益率21%、EBITDA115億円、ROIC10%以上、ROE20%以上を会社公式PDFの図表で独立に再確認した。"},
+    {"id":"operating_kpis","status":"confirmed","evidencePdfPages":[7,8,20,26,28,34],"result":"2031年3月期の保有室数11,000室、会員120万人、ADR11,000円、RevPAR9,000円、販売室数320万室、5年間16ホテル改修を再確認した。"},
+    {"id":"strategy","status":"confirmed","evidencePdfPages":[8,16,19,21,22,23,24,25,26,27,28],"result":"既存店リニューアル、藤田観光との提携、ブランド・会員基盤強化、M&A・運営受託・海外・新業態を含む拠点拡大の戦略構造を確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[33,34,36],"result":"5年間の投資総額201億円＝成長投資188億円＋維持投資13億円。成長投資188億円は新規拠点114億円、大規模改修69億円、システム・DX5億円で構成されることを会社公式図表で再確認した。"},
+    {"id":"financial_discipline","status":"confirmed","evidencePdfPages":[33,35,36],"result":"D/Eレシオ1倍目安、想定WACC6～7.5%、株主資本コスト7～9%、ROIC10%以上、ROE20%以上を資本効率・財務規律として確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[33,36,37],"result":"配当性向25%以上の早期実現を目指し、株価・財務状況・成長投資機会等を踏まえ機動的自己株式取得を検討する方針を確認した。"},
+    {"id":"nonfinancial_boundary","status":"confirmed","evidencePdfPages":[39,40],"result":"環境・地域・人材・ガバナンス施策を確認し、2025年3月期の定量値は過去実績として将来目標と混在させない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-05/wave-02/4691/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPdfReviewed":true,"financialTargetPageConfirmed":true,"capitalAllocationPageConfirmed":true,"capitalEfficiencyPageConfirmed":true,"shareholderReturnConfirmed":true,"note":"会社公式中期経営計画2031 PDFの財務目標、資本政策、キャッシュアロケーション図を独立に目視確認した。canonical sourceはPhase 2収集正本のJPX URLを維持する。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:52:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

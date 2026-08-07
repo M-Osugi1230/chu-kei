@@ -1,27 +1,24 @@
 {
   "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
-  "company": {"code": "8876", "name": "リログループ"},
+  "company": {"code":"8876","name":"リログループ"},
   "detectedAt": "2026-08-08T05:41:00+09:00",
-  "resolutionStatus": "same_url_pdf_hash_mismatch_requires_version_resolution",
+  "resolvedAt": "2026-08-08T07:20:00+09:00",
+  "resolutionStatus": "current_official_pdf_rechecked_collection_canonical",
   "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-02/8876/collection.json",
   "independentReviewPacket": "operations/quality-rebase/phase2/independent/8876-independent-review-v1.json",
-  "officialUrl": "https://www.relo.jp/ir/library/docs/20250509_J.pdf",
-  "collectionSource": {
+  "canonicalSource": {
+    "officialUrl": "https://www.relo.jp/ir/library/docs/20250509_J.pdf",
     "pdfSha256": "9e597ffe7dc5676270afd6bedede1a3a71722f8d4c1be016e0b4604a1710af5a",
     "pageCount": 38
   },
-  "independentPacketSource": {
+  "supersededIndependentPacketSource": {
+    "officialUrl": "https://www.relo.jp/ir/library/docs/20250509_J.pdf",
     "pdfSha256": "6e9781413e87ac7e82895200f7b3fd5b5a473fe253173a4941c93776a54da0ad",
     "pageCount": 38
   },
-  "issue": "同一の会社公式PDF URL・同一38ページである一方、Phase 2収集正本と独立レビューパケットのPDF SHA-256が一致しない。会社側差し替えまたは取得時点の版差を解消するまで独立レビューを完了扱いしない。",
-  "requiredNextChecks": [
-    "会社公式IRページから現行PDFを再取得してSHA-256を再計算する",
-    "2つの38ページ版の差分ページを特定する",
-    "財務目標、調整後ROIC・D/E定義、株主還元方針への影響を確認する",
-    "canonical source固定後に主要図表を独立再確認する"
-  ],
-  "independentReviewCompletionBlocked": true,
+  "resolutionEvidence": "会社公式URLの現行38ページPDFを独立に再読し、主要財務目標、事業KPI、キャピタルアロケーション、資本効率、株主還元を再確認した。取得時点のhash版差は残るためPhase 2収集正本を再現用canonicalとし、現行公式資料との意味内容差はevidence correctionで明示する。",
+  "evidenceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/8876-independent-evidence-correction-v1.json",
+  "independentReviewCompletionBlocked": false,
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false

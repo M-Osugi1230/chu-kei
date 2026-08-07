@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"9007","name":"小田急電鉄"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9007-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/9007-independent-review-v1.json",
+  "source": {"title":"中期経営計画（2024～2026年度）のアップデート","officialUrl":"https://www2.jpx.co.jp/disc/90070/140120260507518914.pdf","pdfSha256":"8d2ce8b80983925887277aa081541acde0bda2017410238aaaa5d82f4823ce41","pageCount":49},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,8],"result":"Phase 2収集正本のJPX 49ページについてURL・SHA-256・ページ数が一致する。小田急電鉄公式IRにも同内容・同49ページの2026年5月13日アップデート資料が掲載されていることを独立に確認した。"},
+    {"id":"plan_and_long_term_boundary","status":"confirmed","evidencePdfPages":[2,8,12],"result":"2024～2026年度の現中計アップデートと2030年度の連結財務目標を分離して確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[2,8,12],"result":"2026年度ROE8.0%・営業利益540億円と、2030年度ROE10%以上・営業利益800億円以上・有利子負債/EBITDA倍率7倍台を会社公式図表で再確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[8,9],"result":"2025～2030年度のキャッシュイン/アウト各1兆800億円、営業CF6,500億円、資金調達3,900億円、政策保有株式売却400億円以上、成長投資・M&A4,500億円、設備更新・環境関連投資4,300億円、株主還元2,000億円を再確認した。"},
+    {"id":"investment_boundary","status":"confirmed","evidencePdfPages":[8],"result":"成長投資4,000億円は2026～2030年度の重点投資で、不動産2,350億円、交通1,050億円、生活サービス600億円。観光800億円はこれらの内数であり別枠加算しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[2,8,9],"result":"2026～2030年度株主還元1,800億円（2025～2030年度累計2,000億円）、2025年度55円・2026年度60円、2030年度まで累進配当を目指す方針、2026年度自己株式取得200億円を確認した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-05/9007/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialMirrorReviewed":true,"financialTargetsConfirmed":true,"capitalAllocationConfirmed":true,"shareholderReturnConfirmed":true,"note":"小田急公式IR掲載の同内容49ページPDFでエグゼクティブサマリー、キャピタルアロケーション、財務目標を独立に目視確認した。canonical sourceはPhase 2収集正本のJPX URLを維持する。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:50:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"1719","name":"安藤・間"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/1719-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/1719-independent-review-v1.json",
+  "source": {"title":"安藤ハザマグループ 中期経営計画2028","officialUrl":"https://www2.jpx.co.jp/disc/17190/140120260330592593.pdf","pdfSha256":"9de9f4b6bc537ac9ab8017ce9768b864ffe17146c83c34e95b815a012870db9f","pageCount":38},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"Phase 2収集正本のJPX 38ページについてURL・SHA-256・ページ数が一致する。安藤ハザマ公式IRには適時開示表紙を除く同一中計本体37ページが掲載されている。"},
+    {"id":"plan_period_and_boundary","status":"confirmed","evidencePdfPages":[3,10,13],"result":"中期経営計画2028は2026～2028年度の3カ年であり、中計2025の実績・2030年代の長期施策と分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[10,13],"result":"2028年度の売上高5,000億円、営業利益300億円、営業利益率6.0%、ROE12%以上を会社公式計画の主要図表で再確認した。"},
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[27],"result":"2026～2028年度の営業CF760億円以上、借入金100億円、政策保有株式圧縮240億円を原資とし、人財投資200億円、成長投資500億円以上、株主還元400億円以上へ配分する構造を確認した。"},
+    {"id":"growth_investment_breakdown","status":"confirmed","evidencePdfPages":[27],"result":"成長投資500億円以上の図表内に技術開発・イノベーション250億円、エネルギー事業等200億円、その他設備投資50億円が示されることを確認した。M&Aは別枠で機動調達として表示され、固定額を補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[27],"result":"株主還元400億円以上、累進配当（下限80円/年）、機動的自己株式取得を再確認した。"},
+    {"id":"bs_management","status":"confirmed","evidencePdfPages":[28],"result":"2028年度末自己資本比率40%台、ROE12%以上、政策保有株式の連結純資産比率10%未満を目指す方向性を図表で確認した。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-05/1719/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialMirrorReviewed":true,"financialTargetsConfirmed":true,"capitalAllocationConfirmed":true,"bsManagementConfirmed":true,"note":"安藤ハザマ公式37ページ中計本体の主要図表を独立に目視確認した。canonical sourceは適時開示表紙を含むJPX 38ページ版を維持する。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:50:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

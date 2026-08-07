@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"2433","name":"博報堂DYホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2433-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2433-independent-review-v1.json",
+  "source": {"title":"2024年3月期 通期 決算説明会資料＜解説つき＞／博報堂DYグループ 新中期経営計画","officialUrl":"https://ssl4.eir-parts.net/doc/2433/tdnet/2463007/00.pdf","pdfSha256":"f9e75ba2a4fddba831c5cdf2ed685e501286474adcae74f62cff5696d74655cb","pageCount":38},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,6,38],"result":"会社公式中期経営計画ページからリンクされる38ページ決算説明資料であり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。"},
+    {"id":"document_classification","status":"confirmed","evidencePdfPages":[6,17],"result":"決算説明会資料内に2025年3月期～2027年3月期の正式な新中期経営計画セクションが掲載されていることを確認した。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[3,17,33,35],"result":"2022～2024年3月期の前中計、2025～2027年3月期の現行中計、2032年3月期の将来像を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[33],"result":"2027年3月期までの3年間で、調整後のれん償却前営業利益CAGR10%以上、調整後売上総利益CAGR5%以上、調整後のれん償却前オペレーティング・マージン13%以上、のれん償却前ROE10%以上を公式図表で再確認した。"},
+    {"id":"business_targets","status":"confirmed","evidencePdfPages":[34],"result":"国内マーケティング売上総利益CAGR4%程度・マージン15%以上、成長4領域売上総利益CAGR10%以上、グローバル売上総利益CAGR5%程度・マージン10%程度等のモニタリング指標を図表で確認した。"},
+    {"id":"adjustment_definition","status":"confirmed","evidencePdfPages":[33],"result":"『調整後』はメルカリ株式売却益を除く定義であることを再確認し、未調整実績と混在させない。"},
+    {"id":"capital_and_return_absence","status":"confirmed","result":"公式38ページ全体を再検索・再読し、定量的な投資総額、キャッシュアロケーション、配当性向、総還元性向、自己株式取得目標は開示されていないことを確認した。成長4領域への必要投資という定性方針のみを保持し、未開示数値を補完しない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/2433/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"financialTargetPageConfirmed":true,"monitoringTargetPageConfirmed":true,"note":"会社公式38ページPDFの中期経営目標33ページとモニタリング指標34ページを独立にスクリーンショット確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:10:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

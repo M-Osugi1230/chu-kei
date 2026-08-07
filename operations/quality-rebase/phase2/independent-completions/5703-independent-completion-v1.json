@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"5703","name":"日本軽金属ホールディングス"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/5703-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/5703-independent-review-v1.json",
+  "source": {"title":"長期ビジョン『2035ビジョン』、中期経営計画『26中計』","officialUrl":"https://www2.jpx.co.jp/disc/57030/140120260514533287.pdf","pdfSha256":"2fef0091b5fc084a0c594b2df111f1b93116048a13b441b9b141a6b9ad5d2141","pageCount":17},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"日本軽金属ホールディングス、証券コード5703、2026年5月15日公表、17ページであり、収集正本とURL・SHA-256・ページ数が一致する。会社公式中計ページにも同一17ページ資料が掲載されている。"},
+    {"id":"classification_and_boundary","status":"confirmed","evidencePdfPages":[1,5,6],"result":"2035ビジョンと2026～2028年度の新規3カ年『26中計』を同時策定した資料であり、23中計実績・26中計・2035長期目標を分離する。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[11,12],"result":"26中計期間内の早期に経常利益300億円超の安定収益基盤、ROIC8%以上を目指すことを会社公式図表で再確認した。2035ビジョンのROIC10%とは分離する。"},
+    {"id":"capital_sources_and_uses","status":"confirmed","evidencePdfPages":[14],"result":"26～28年度の営業CF1,500億円に対し、投資CF1,100億円、研究開発200億円、株主還元200億円程度という構造を図表で確認した。減価償却費720億円は営業CF構成上の表示であり追加キャッシュアウトとして二重計上しない。"},
+    {"id":"investment_breakdown","status":"confirmed","evidencePdfPages":[14],"result":"投資CF1,100億円は成長・新商品250億円、省力化・安全450億円、維持更新300億円、共創投資・M&A100億円で整合することを確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[14,15],"result":"26中計では自己株式取得を含む総還元性向40%程度を方針として確認した。2026年度年間配当100円は単年度予想であり、中計期間の固定配当額として扱わない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-03/5703/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"companyOfficialPdfReviewed":true,"financialTargetsConfirmed":true,"capitalAllocationConfirmed":true,"note":"会社公式中期経営計画PDFで財務目標とキャッシュアロケーション図を独立に目視確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:15:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+}

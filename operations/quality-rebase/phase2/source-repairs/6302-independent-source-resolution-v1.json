@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
+  "company": {"code": "6302", "name": "住友重機械工業"},
+  "detectedAt": "2026-08-08T05:41:00+09:00",
+  "resolutionStatus": "base_plan_source_and_revision_hash_require_resolution",
+  "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-02/6302/collection.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6302-independent-review-v1.json",
+  "collectionSource": {
+    "officialUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/2026management_plan.pdf",
+    "pdfSha256": "c7d81a5d04b6cee3753078d5208183b0f63ed117234b9cd0875ce786a16be375",
+    "pageCount": 25
+  },
+  "independentPacketSource": {
+    "originalOfficialUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/mtp2026.pdf",
+    "originalPdfSha256": "68fb88a798471c8c3e574cb1ebf3a2979938a2abd204e9dc1ade227b1ef73e89",
+    "originalPageCount": 25,
+    "revisionOfficialUrl": "https://www.shi.co.jp/info/2025/6kgpsq000000nry1-att/6kgpsq000000nryo.pdf",
+    "revisionPdfSha256": null,
+    "revisionPageCount": 1
+  },
+  "issue": "収集正本の元計画PDF URL・SHA-256と独立レビューパケットの元計画PDF URL・SHA-256が一致せず、さらに2025年2月14日目標見直しPDFのSHA-256が未記録である。改定前後のsource identityを固定するまで独立レビューを完了扱いしない。",
+  "requiredNextChecks": [
+    "会社公式経営計画ページから現行の元計画PDFを再取得しcanonical URL・SHA-256を固定する",
+    "2025年2月14日目標見直しPDFのSHA-256・1ページを再取得して記録する",
+    "元計画と改定後目標の差分を再確認する",
+    "改定後目標・投資方針・株主還元の証跡をcanonical sourceへ再接続する"
+  ],
+  "independentReviewCompletionBlocked": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

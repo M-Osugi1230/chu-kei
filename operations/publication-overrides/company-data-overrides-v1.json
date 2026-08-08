@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "company-publication-overrides-v1",
+  "generatedAt": "2026-08-08T18:45:00+09:00",
+  "purpose": "Apply audited publication-only corrections after loading the immutable historical source bundle. Overrides must include exact expectedBefore values so stale or mismatched source data fails closed.",
+  "overrides": [
+    {
+      "code": "421A",
+      "name": "ムービン・ストラテジック・キャリア",
+      "reason": "2026年3月24日の公式訂正で印字14頁（PDF15頁）が削除された訂正版36ページを公開正本へ反映し、独立レビューで確認した資本政策・株主還元方針へ更新する。",
+      "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json",
+      "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/421A-independent-completion-v1.json",
+      "expectedBefore": {
+        "sourceUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
+        "sourceTitle": "中期経営計画(事業計画及び成長可能性に関する事項)pdf",
+        "correctionDetected": false,
+        "capital": "未開示",
+        "returnPolicy": "現時点では配当を想定していない。\n中期計画期間中は成長投資を優先"
+      },
+      "updates": {
+        "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf",
+        "sourceTitle": "中期経営計画（事業計画及び成長可能性に関する事項）・訂正版",
+        "correctionDetected": true,
+        "capital": "キャリアアドバイザー採用、M&A、生涯キャリアハブ構想、AIシステム等の利益成長投資を優先。固定投資総額は未開示。",
+        "returnPolicy": "利益成長に寄与する成長投資を優先し、適切な投資機会がなくなった段階で、余剰資金の自己株式取得・配当・デジタルギフト等による直接還元を検討する。固定配当性向は未開示。",
+        "sourceAuditedAt": "2026-08-08",
+        "sourceAuditedBy": "quality-rebase-source-correction-v1",
+        "reviewNote": "2026年3月24日19時の公式訂正により、訂正前資料の印字14頁（PDF15頁）『市場環境：人材紹介市場は安定拡大』を削除。会社公式IRが配信する訂正版36ページを公開正本として使用し、後半証跡ページを1ページ前倒しで再マッピングした。",
+        "warnings": [
+          "2026年3月24日の訂正で『市場環境：人材紹介市場は安定拡大』ページが削除された訂正版36ページを正本として使用。",
+          "FY2025実績は前年実績との整合を追加確認。",
+          "売上CAGRは会社説明資料の定義を確認。",
+          "月次生産性は人員計画との前提差を確認。",
+          "CA数・生産性目標は会社説明資料の定義を確認。"
+        ],
+        "evidenceRefs": [
+          {"field":"summary","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.2）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":2},
+          {"field":"period","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.3）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":3},
+          {"field":"themes","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.3）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":3},
+          {"field":"revenue","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.3）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":3},
+          {"field":"profit","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.3）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":3},
+          {"field":"highlights","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.4）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":4},
+          {"field":"highlights","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.6）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":6},
+          {"field":"capital","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.10）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":10},
+          {"field":"returnPolicy","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.10）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":10},
+          {"field":"highlights","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.15）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":15},
+          {"field":"highlights","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.16）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":16},
+          {"field":"themes","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.27）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":27},
+          {"field":"themes","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.28）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":28},
+          {"field":"themes","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.29）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":29},
+          {"field":"themes","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.31）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":31},
+          {"field":"themes","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.32）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":32},
+          {"field":"themes","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.33）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":33},
+          {"field":"themes","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.34）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":34},
+          {"field":"themes","title":"中期経営計画(事業計画及び成長可能性に関する事項)pdf（訂正版 p.36）","url":"https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf","sourceType":"company-ir","page":36}
+        ]
+      }
+    }
+  ]
+}

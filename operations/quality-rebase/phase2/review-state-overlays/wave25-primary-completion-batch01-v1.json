@@ -1,0 +1,23 @@
+{
+  "schemaVersion":"phase2-review-state-overlay-v1",
+  "createdAt":"2026-08-08T21:32:00+09:00",
+  "wave":25,
+  "batch":1,
+  "baseWaveFile":"operations/quality-rebase/phase2/primary-review-wave25-v1.json",
+  "baseStatusFile":"operations/quality-rebase/phase2/effective-status-v1.json",
+  "reason":"Wave25前半5社のGrowth開示を全文レビューし、現行正式中計の内包有無を明示的に分類する。ベストワンドットコム、免疫生物研究所、博展は正式中計内包、グローバルウェイとノイルイミューン・バイオテックは現行正式中計ではない。独立図表確認と独立再確認は未完了のため自動承認しない。",
+  "expectedBase":{"primaryReviewComplete":236,"independentReviewReady":61,"remainingPrimaryReviews":214},
+  "companyCompletions":[
+    {"order":146,"code":"3936","name":"グローバルウェイ","formalManagementPlanConfirmed":false,"status":"primary_growth_document_review_complete_expired_plan_and_directional_2030_targets_not_current_formal_management_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3936-primary-review-v1.json"},
+    {"order":155,"code":"6577","name":"ベストワンドットコム","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6577-primary-review-v1.json"},
+    {"order":175,"code":"4570","name":"免疫生物研究所","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4570-primary-review-v1.json"},
+    {"order":203,"code":"2173","name":"博展","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2173-primary-review-v1.json"},
+    {"order":218,"code":"4893","name":"ノイルイミューン・バイオテック","formalManagementPlanConfirmed":false,"status":"primary_growth_document_review_complete_r_and_d_pipeline_milestones_not_formal_management_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4893-primary-review-v1.json"}
+  ],
+  "completedChecksForAll":["sourceDocumentClassification","formalPlanBoundary","formalPlanExistenceWithinGrowthDocument","forecastActualAndTargetSeparation","fullTextReview","metricsValidation","capitalPolicyReview","shareholderReturnPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],
+  "pendingChecksForAll":["remainingVisualFigureReview","independentDoubleCheck"],
+  "effectiveCounts":{"wavePrimaryReviewComplete":5,"wavePrimaryReviewRemaining":5,"formalPlanEmbedded":3,"notCurrentFormalManagementPlan":2,"waveIndependentVisualReviewPending":5,"primaryReviewComplete":241,"independentReviewReady":61,"remainingPrimaryReviews":209,"deepVerificationApproved":0},
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":false
+}

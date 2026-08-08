@@ -129,13 +129,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git status --short
-          CHANGED_COUNT="$(git status --short | wc -l | tr -d ' ')"
+          git status --short --untracked-files=all
+          CHANGED_COUNT="$(git status --short --untracked-files=all | wc -l | tr -d ' ')"
           if [[ "$CHANGED_COUNT" != '1' ]]; then
             echo "Expected exactly one generated evidence file, got $CHANGED_COUNT." >&2
             exit 1
           fi
-          if ! git status --short | grep -Fq "?? ${{ steps.parsed.outputs.output_evidence }}"; then
+          if ! git status --short --untracked-files=all | grep -Fq "?? ${{ steps.parsed.outputs.output_evidence }}"; then
             echo 'Unexpected changed file.' >&2
             exit 1
           fi

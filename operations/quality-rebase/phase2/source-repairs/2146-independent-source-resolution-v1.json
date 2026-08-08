@@ -1,30 +1,48 @@
 {
   "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
-  "company": {"code": "2146", "name": "UTグループ"},
+  "company": {"code":"2146","name":"UTグループ"},
   "detectedAt": "2026-08-08T05:41:00+09:00",
-  "resolutionStatus": "collection_resolved_to_long_term_vision_not_review_packet_source",
+  "resolvedAt": "2026-08-08T19:15:00+09:00",
+  "resolutionStatus": "collection_reconnected_to_fifth_plan_revision_old_fourth_plan_review_superseded",
   "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/2146/collection.json",
   "independentReviewPacket": "operations/quality-rebase/phase2/independent/2146-independent-review-v1.json",
-  "collectionSource": {
+  "canonicalSource": {
     "documentLabel": "第5次中期経営計画の見直し",
-    "resolvedPdfUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/04/ut_2030.pdf",
+    "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/11/release_20251113_05.pdf",
+    "pdfSha256": "0b7affcb94983159ba2131dd232aff43f93a83a97d650117e14d7131351c7a79",
+    "pdfBytes": 1469521,
+    "pageCount": 10,
+    "publishedDate": "2025-11-13"
+  },
+  "basePlanSource": {
+    "documentLabel": "第5次中期経営計画",
+    "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/05/release_20250519_01.pdf",
+    "pdfSha256": "ce1864b730d54fe68db3cd7e52b974fe21e0ca1c49743bc25d4da198d57f91f5",
+    "pdfBytes": 2707576,
+    "pageCount": 43,
+    "publishedDate": "2025-05-14",
+    "role": "見直し通知で変更なしとされた経営ビジョン・事業戦略の基礎正本"
+  },
+  "supersededCollectionSource": {
+    "documentLabel": "長期経営ビジョン資料（誤選択）",
+    "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/04/ut_2030.pdf",
     "pdfSha256": "a7e4245cd260a483cea21c76939ca176f91d24997aa3772cc434789387def4c4",
     "pageCount": 11
   },
-  "independentPacketSource": {
-    "documentLabel": "第4次中期経営計画ローリングプラン（2026年5月更新）",
+  "supersededIndependentPacketSource": {
+    "documentLabel": "第4次中期経営計画ローリングプラン（旧レビュー）",
     "officialUrl": "https://www.ut-g.co.jp/hubfs/ir/library/plan/UTG_rollingplan_2026_ja.pdf",
     "pdfSha256": "ae89935ed53f5b1e4a687eb98e5a4891924970b8405a65d5dd7ba9539312b894",
     "pageCount": 11
   },
-  "issue": "Phase 2収集正本は中計見直しを対象とするメタデータである一方、resolved PDFが長期経営ビジョン資料ut_2030.pdfを指しており、独立レビューパケットは別の2026年ローリングプランを指している。資料境界が一致しないため独立レビューを完了扱いしない。",
-  "requiredNextChecks": [
-    "会社公式中期経営計画ページから現行ローリングプランの直接PDFを解決する",
-    "第4次・第5次・2025年見直し・2026年更新・2030長期ビジョンの資料境界を整理する",
-    "Phase 2収集正本のresolvedPdfUrlを正しい現行中計資料へ再接続する",
-    "現行目標・株主還元・資本政策をcanonical sourceで再確認する"
-  ],
-  "independentReviewCompletionBlocked": true,
+  "resolutionEvidence": "会社公式IRニュースから2025年5月14日の第5次中期経営計画43ページと、2025年11月13日の見直し10ページを直接解決した。見直し通知は数値目標を更新し最終年度を2029年3月期へ延長する一方、経営ビジョン・方針は変更しないと明記する。GitHub Actions runnerで両PDFを公式URLから直接取得してSHA-256とbyte数を確定し、主要数値・財務戦略ページを独立画像確認した。",
+  "identityProbe": {
+    "workflowRunId": 31252140104,
+    "basePlanSha256": "ce1864b730d54fe68db3cd7e52b974fe21e0ca1c49743bc25d4da198d57f91f5",
+    "revisionSha256": "0b7affcb94983159ba2131dd232aff43f93a83a97d650117e14d7131351c7a79"
+  },
+  "evidenceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/2146-independent-evidence-correction-v1.json",
+  "independentReviewCompletionBlocked": false,
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false

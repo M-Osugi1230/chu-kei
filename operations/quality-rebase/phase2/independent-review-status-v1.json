@@ -1,15 +1,15 @@
 {
   "schemaVersion": "quality-rebase-phase2-independent-review-status-v1",
-  "updatedAt": "2026-08-08T19:05:00+09:00",
+  "updatedAt": "2026-08-08T19:15:00+09:00",
   "basis": {
     "effectiveStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
     "primaryReviewComplete": 236,
     "independentReviewEligible": 61
   },
   "counts": {
-    "independentReviewComplete": 59,
+    "independentReviewComplete": 60,
     "independentReviewPending": 0,
-    "independentReviewBlockedSourceIdentity": 2,
+    "independentReviewBlockedSourceIdentity": 1,
     "deepVerificationApproved": 0
   },
   "completionRecords": [
@@ -71,11 +71,11 @@
     {"code":"2154","name":"オープンアップグループ","file":"operations/quality-rebase/phase2/independent-completions/2154-independent-completion-v1.json","status":"independent_review_complete"},
     {"code":"6247","name":"日阪製作所","file":"operations/quality-rebase/phase2/independent-completions/6247-independent-completion-v1.json","status":"independent_review_complete"},
     {"code":"3646","name":"駅探","file":"operations/quality-rebase/phase2/independent-completions/3646-independent-completion-v1.json","status":"independent_review_complete"},
-    {"code":"6302","name":"住友重機械工業","file":"operations/quality-rebase/phase2/independent-completions/6302-independent-completion-v1.json","status":"independent_review_complete"}
+    {"code":"6302","name":"住友重機械工業","file":"operations/quality-rebase/phase2/independent-completions/6302-independent-completion-v1.json","status":"independent_review_complete"},
+    {"code":"2146","name":"UTグループ","file":"operations/quality-rebase/phase2/independent-completions/2146-independent-completion-v1.json","status":"independent_review_complete","finalDeepVerificationBlocker":"full_base_and_revision_visual_sequence_recheck"}
   ],
   "blockedRecords": [
-    {"code":"421A","name":"ムービン・ストラテジック・キャリア","reason":"corrected_pdf_direct_source_unresolved","repairFile":"operations/quality-rebase/phase2/source-repairs/421A-independent-source-resolution-v1.json","status":"source_identity_repair_required"},
-    {"code":"2146","name":"UTグループ","reason":"collection_resolved_to_long_term_vision_not_review_packet_source","repairFile":"operations/quality-rebase/phase2/source-repairs/2146-independent-source-resolution-v1.json","status":"source_identity_repair_required"}
+    {"code":"421A","name":"ムービン・ストラテジック・キャリア","reason":"corrected_pdf_direct_source_unresolved","repairFile":"operations/quality-rebase/phase2/source-repairs/421A-independent-source-resolution-v1.json","status":"source_identity_repair_required"}
   ],
   "resolvedSourceIdentityRecords": [
     {"code":"6036","name":"KeePer技研","repairFile":"operations/quality-rebase/phase2/source-repairs/6036-source-identity-resolution-v1.json","overrideFile":"operations/quality-rebase/phase2/source-identity-overrides/6036-source-override-v1.json","status":"resolved"},

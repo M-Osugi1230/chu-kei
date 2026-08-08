@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-evidence-correction-v1",
+  "company": {"code":"2146","name":"UTグループ"},
+  "detectedAt": "2026-08-08T19:15:00+09:00",
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2146-independent-review-v1.json",
+  "canonicalSource": {
+    "title": "第5次中期経営計画の見直し",
+    "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/11/release_20251113_05.pdf",
+    "pdfSha256": "0b7affcb94983159ba2131dd232aff43f93a83a97d650117e14d7131351c7a79",
+    "pageCount": 10,
+    "publishedDate": "2025-11-13"
+  },
+  "basePlanSource": {
+    "title": "第5次中期経営計画",
+    "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/05/release_20250519_01.pdf",
+    "pdfSha256": "ce1864b730d54fe68db3cd7e52b974fe21e0ca1c49743bc25d4da198d57f91f5",
+    "pageCount": 43,
+    "publishedDate": "2025-05-14"
+  },
+  "reason": "Phase 2収集器は第5次中期経営計画見直しのメタデータに対して長期経営ビジョンPDFを誤接続し、一次レビュー・独立レビューパケットはさらに旧第4次中期経営計画ローリングプランを参照していた。2025年5月の第5次中計と2025年11月の公式見直しを再取得・独立確認し、旧第4次ローリングおよび誤選択された長期ビジョンの数値を現行中計の検証済み事実として使用しない。",
+  "supersededClaims": [
+    {"claim":"2030年3月期 技術職社員数50,000人、売上高3,000億円、EBITDA450億円、EBITDAマージン15%、当期純利益250億円を現行中計最終目標として扱う","replacement":"現行第5次中計見直しの最終年度は2029年3月期。2029年3月期売上高1,850億円、営業利益150億円、親会社株主帰属当期純利益91億円、技術職社員数38,000人を現行目標として扱う。"},
+    {"claim":"2027年3月期 技術職社員数39,281人、売上高1,960億円、EBITDA190億円、当期純利益125億円を現行計画として扱う","replacement":"2025年11月見直し後は2027年3月期売上高1,700億円、営業利益100億円、親会社株主帰属当期純利益61億円。旧第4次ローリング値を現行第5次中計へ持ち込まない。"},
+    {"claim":"総還元性向60%以上を現行第5次中計の株主還元方針として扱う","replacement":"見直し後の第5次中計期間は配当性向100%を基本方針とし、株式分割後ベースで1株当たり最低配当10円を設定する。"},
+    {"claim":"2027年3月期最低配当168.19円を現行方針として扱う","replacement":"見直し後は2026～2029年3月期の最低配当を株式分割後ベースで10円とする。"},
+    {"claim":"Phase 2収集正本としてut_2030.pdfを使用する","replacement":"ut_2030.pdfは長期経営ビジョン資料であり中計見直しの正本ではない。2025年11月13日の第5次中計見直し10ページPDFへcanonicalを修正する。"}
+  ],
+  "confirmedCurrentFacts": [
+    "2026年3月期 売上高1,680億円・営業利益95億円・親会社株主帰属当期純利益61億円",
+    "2027年3月期 売上高1,700億円・営業利益100億円・親会社株主帰属当期純利益61億円",
+    "2028年3月期 売上高1,800億円・営業利益120億円・親会社株主帰属当期純利益74億円",
+    "2029年3月期 売上高1,850億円・営業利益150億円・親会社株主帰属当期純利益91億円",
+    "2029年3月期 技術職社員数38,000人",
+    "第5次中計の経営ビジョン・方針は2025年11月見直しでも変更しない",
+    "中計期間の人的資本への株式報酬付与は最大約100億円",
+    "ROE20%の維持・向上を目指す",
+    "Net D/Eレシオ0.5倍以下を維持する",
+    "配当性向100%を基本方針とする",
+    "株式分割後ベースの最低配当10円"
+  ],
+  "identityProbe": {
+    "method": "GitHub Actions runner direct official-PDF fetch plus sha256sum",
+    "workflowRunId": 31252140104,
+    "basePlanSha256": "ce1864b730d54fe68db3cd7e52b974fe21e0ca1c49743bc25d4da198d57f91f5",
+    "revisionSha256": "0b7affcb94983159ba2131dd232aff43f93a83a97d650117e14d7131351c7a79"
+  },
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

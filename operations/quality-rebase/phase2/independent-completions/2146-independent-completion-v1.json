@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"2146","name":"UTグループ"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/2146-independent-review-v1.json",
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/2146-independent-source-resolution-v1.json",
+  "evidenceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/2146-independent-evidence-correction-v1.json",
+  "source": {
+    "title": "第5次中期経営計画の見直し",
+    "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/11/release_20251113_05.pdf",
+    "pdfSha256": "0b7affcb94983159ba2131dd232aff43f93a83a97d650117e14d7131351c7a79",
+    "pageCount": 10
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,10],"result":"2025年11月13日公表の第5次中期経営計画見直し10ページPDFを会社公式URLから再取得し、GitHub Actions runnerでSHA-256 0b7affcb94983159ba2131dd232aff43f93a83a97d650117e14d7131351c7a79、1,469,521 bytesを確定した。誤接続されていた長期経営ビジョンPDFをcanonicalから外した。"},
+    {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[1,2],"result":"2025年5月14日の第5次中期経営計画43ページを基礎計画、2025年11月13日の10ページ見直しを現行数値目標の正本として分離した。見直しでは経営ビジョン・方針を変更せず、数値計画を更新し最終年度を2029年3月期へ延長する。旧第4次ローリングプランと2026年4月長期ビジョンを現行中計として使用しない。"},
+    {"id":"revised_financial_targets","status":"confirmed","evidencePdfPages":[1,3,4],"result":"見直し後の年度別目標として、2026年3月期 売上1,680億円・営業利益95億円・純利益61億円、2027年3月期1,700億円・100億円・61億円、2028年3月期1,800億円・120億円・74億円、2029年3月期1,850億円・150億円・91億円を確認した。"},
+    {"id":"human_capital_targets","status":"confirmed","evidencePdfPages":[4,9],"result":"2029年3月期の技術職社員数38,000人を確認し、中計期間に人的資本への株式報酬を最大約100億円付与する方針を確認した。旧第4次ローリングの50,000人等を現行目標として扱わない。"},
+    {"id":"strategy_continuity","status":"confirmed","result":"2025年5月の第5次中計本体を独立に確認し、製造派遣を中核とする事業成長、人材採用・育成・定着、キャリア形成、周辺領域拡大を含む経営ビジョン・事業戦略が11月見直しで変更されていないことを確認した。"},
+    {"id":"capital_efficiency","status":"confirmed","evidencePdfPages":[9],"result":"財務戦略としてROE20%の維持・向上とNet D/Eレシオ0.5倍以下の維持を確認した。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[9,10],"result":"第5次中計見直し後は配当性向100%を基本方針とし、株式分割後ベースで1株当たり最低配当10円を設定することを確認した。旧第4次ローリングの総還元性向60%以上・最低配当168.19円を現行方針として使用しない。"},
+    {"id":"stale_evidence_isolation","status":"confirmed","result":"旧一次レビューに記録された第4次中計ローリングの2030年目標・2027年ローリング値・株主還元指標と、収集器が誤選択した長期経営ビジョン資料をevidence correctionへ隔離し、現行第5次中計の検証済み事実から除外した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {
+      "file": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/2146/collection.json",
+      "sourceUrlMatched": true,
+      "pdfSha256Matched": true,
+      "pageCountMatched": true
+    },
+    "identityProbe": {
+      "workflowRunId": 31252140104,
+      "basePlanOfficialPdfFetched": true,
+      "revisionOfficialPdfFetched": true,
+      "basePlanSha256Confirmed": true,
+      "revisionSha256Confirmed": true
+    },
+    "visualReview": {
+      "basePlanKeyTargetPageConfirmed": true,
+      "revisionTargetTableConfirmed": true,
+      "revisionCapitalEfficiencyPageConfirmed": true,
+      "revisionShareholderReturnPageConfirmed": true,
+      "fullBaseAndRevisionVisualSequenceComplete": false
+    }
+  },
+  "finalDeepVerificationBlockers": ["full_base_and_revision_visual_sequence_recheck"],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "reviewRole": "independent_reviewer",
+    "primaryReviewerMustNotSelfApprove": true,
+    "completedAt": "2026-08-08T19:15:00+09:00",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "result": "confirmed_after_fifth_plan_source_repair_and_stale_review_isolation"
+  }
+}

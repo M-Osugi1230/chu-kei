@@ -14,83 +14,52 @@
   },
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false,
-  "status": "collection_complete_primary_human_review_pending",
-  "resolvedPageUrl": "https://www.ut-g.co.jp/ir/management/strategy/",
-  "resolvedPdfUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/04/ut_2030.pdf",
-  "htmlTitle": "中期経営計画 | ＵＴグループ株式会社",
+  "status": "collection_source_identity_corrected_primary_review_superseded",
+  "resolvedPageUrl": "https://www.ut-g.co.jp/news/168997/",
+  "resolvedPdfUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/11/release_20251113_05.pdf",
+  "htmlTitle": "第５次中期経営計画の見直しに関するお知らせ | ＵＴグループ株式会社",
   "pdfCandidates": [
     {
-      "url": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/04/ut_2030.pdf",
-      "text": "長期経営ビジョン資料",
-      "score": 55
+      "url": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/11/release_20251113_05.pdf",
+      "text": "第５次中期経営計画の見直し",
+      "score": 100
     },
     {
-      "url": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/04/ut_vision_2030_web.pdf",
-      "text": "ビジョンブック",
-      "score": 55
-    },
-    {
-      "url": "https://www.ut-g.co.jp/ir/management/strategy",
-      "text": "中期経営計画",
-      "score": 45
-    },
-    {
-      "url": "https://www.ut-g.co.jp/ir/management/strategy/",
-      "text": "中期経営計画",
-      "score": 45
-    },
-    {
-      "url": "https://www.ut-g.co.jp/ir/management/strategy/",
-      "text": "中期経営計画",
-      "score": 45
-    },
-    {
-      "url": "https://www.ut-g.co.jp/ir/management/strategy/",
-      "text": "中期経営計画",
-      "score": 45
-    },
-    {
-      "url": "https://www.ut-g.co.jp/rollingplan2025_20251118/",
-      "text": "第５次中期経営計画の見直し（動画）",
-      "score": 45
-    },
-    {
-      "url": "https://www.ut-g.co.jp/",
-      "text": "JP",
-      "score": 15
-    },
-    {
-      "url": "https://www.ut-g.co.jp/",
-      "text": "",
-      "score": 15
-    },
-    {
-      "url": "https://www.ut-g.co.jp/",
-      "text": "TOP",
-      "score": 15
-    },
-    {
-      "url": "https://www.ut-g.co.jp/",
-      "text": "JP",
-      "score": 15
-    },
-    {
-      "url": "https://www.ut-g.co.jp/",
-      "text": "TOP",
-      "score": 15
+      "url": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/05/release_20250519_01.pdf",
+      "text": "第５次中期経営計画の策定に関するお知らせ・計画本体",
+      "score": 95
     }
   ],
   "candidateErrors": [],
-  "pdfSha256": "a7e4245cd260a483cea21c76939ca176f91d24997aa3772cc434789387def4c4",
-  "pdfBytes": 1460859,
-  "pageCount": 11,
+  "pdfSha256": "0b7affcb94983159ba2131dd232aff43f93a83a97d650117e14d7131351c7a79",
+  "pdfBytes": 1469521,
+  "pageCount": 10,
   "documentTypeCandidate": "plan_revision_or_update",
-  "textCharacters": 1593,
-  "textExtractionErrors": [],
-  "metricCandidateCount": 0,
-  "strategyCandidateCount": 1,
   "requiresVisualReview": true,
   "requiresPrimaryHumanReview": true,
   "requiresIndependentReview": true,
-  "elapsedSeconds": 2.348
+  "contentMetadataStatus": "source_identity_corrected_automated_text_metrics_not_recomputed",
+  "sourceCorrection": {
+    "correctedAt": "2026-08-08T19:15:00+09:00",
+    "reason": "中期経営計画ページの自動候補選択が長期経営ビジョン資料を誤ってresolvedPdfUrlへ採用していたため、2025年11月13日公表の第5次中期経営計画見直しPDFへ再接続した。",
+    "supersededResolvedSource": {
+      "resolvedPdfUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/04/ut_2030.pdf",
+      "pdfSha256": "a7e4245cd260a483cea21c76939ca176f91d24997aa3772cc434789387def4c4",
+      "pdfBytes": 1460859,
+      "pageCount": 11,
+      "classification": "long_term_vision_wrongly_selected_as_management_plan"
+    },
+    "baseFifthPlan": {
+      "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/05/release_20250519_01.pdf",
+      "pdfSha256": "ce1864b730d54fe68db3cd7e52b974fe21e0ca1c49743bc25d4da198d57f91f5",
+      "pdfBytes": 2707576,
+      "pageCount": 43,
+      "publishedDate": "2025-05-14"
+    },
+    "identityProbe": {
+      "method": "GitHub Actions runner direct official-PDF fetch plus sha256sum",
+      "workflowRunId": 31252140104,
+      "verifiedAt": "2026-08-08T19:08:56+09:00"
+    }
+  }
 }

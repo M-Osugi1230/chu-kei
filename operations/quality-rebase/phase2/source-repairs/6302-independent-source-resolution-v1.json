@@ -1,31 +1,45 @@
 {
   "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
-  "company": {"code": "6302", "name": "住友重機械工業"},
+  "company": {"code":"6302","name":"住友重機械工業"},
   "detectedAt": "2026-08-08T05:41:00+09:00",
-  "resolutionStatus": "base_plan_source_and_revision_hash_require_resolution",
+  "resolvedAt": "2026-08-08T19:05:00+09:00",
+  "resolutionStatus": "base_plan_collection_canonical_revision_officially_reconnected",
   "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-02/6302/collection.json",
   "independentReviewPacket": "operations/quality-rebase/phase2/independent/6302-independent-review-v1.json",
-  "collectionSource": {
+  "canonicalSource": {
     "officialUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/2026management_plan.pdf",
     "pdfSha256": "c7d81a5d04b6cee3753078d5208183b0f63ed117234b9cd0875ce786a16be375",
+    "pageCount": 25,
+    "publishedDate": "2024-02-14"
+  },
+  "supersededIndependentPacketBaseSource": {
+    "officialUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/mtp2026.pdf",
+    "pdfSha256": "68fb88a798471c8c3e574cb1ebf3a2979938a2abd204e9dc1ade227b1ef73e89",
     "pageCount": 25
   },
-  "independentPacketSource": {
-    "originalOfficialUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/mtp2026.pdf",
-    "originalPdfSha256": "68fb88a798471c8c3e574cb1ebf3a2979938a2abd204e9dc1ade227b1ef73e89",
-    "originalPageCount": 25,
-    "revisionOfficialUrl": "https://www.shi.co.jp/info/2025/6kgpsq000000nry1-att/6kgpsq000000nryo.pdf",
-    "revisionPdfSha256": null,
-    "revisionPageCount": 1
+  "officialRevision": {
+    "landingPage": "https://www.shi.co.jp/info/2025/6kgpsq000000nry1.html",
+    "officialUrl": "https://www.shi.co.jp/info/2025/6kgpsq000000nry1-att/6kgpsq000000nryo.pdf",
+    "publishedDate": "2025-02-14",
+    "pageCount": 1,
+    "pdfSha256": null,
+    "role": "2026年12月期の現行財務目標を上書きする公式補足正本"
   },
-  "issue": "収集正本の元計画PDF URL・SHA-256と独立レビューパケットの元計画PDF URL・SHA-256が一致せず、さらに2025年2月14日目標見直しPDFのSHA-256が未記録である。改定前後のsource identityを固定するまで独立レビューを完了扱いしない。",
-  "requiredNextChecks": [
-    "会社公式経営計画ページから現行の元計画PDFを再取得しcanonical URL・SHA-256を固定する",
-    "2025年2月14日目標見直しPDFのSHA-256・1ページを再取得して記録する",
-    "元計画と改定後目標の差分を再確認する",
-    "改定後目標・投資方針・株主還元の証跡をcanonical sourceへ再接続する"
-  ],
-  "independentReviewCompletionBlocked": true,
+  "resolutionEvidence": "会社公式経営計画ページが現行の中期経営計画2026として25ページ元計画を掲載し、2025年2月に目標を見直したことを明示している。元計画の主要目標図表と、2025年2月14日の1ページ公式見直し通知を独立に画像確認した。戦略・3カ年投資方針は元計画、現行財務目標は公式見直し通知へ接続する。改定通知PDFのbinary SHA-256再計算だけを最終Deep Verificationへ残す。",
+  "confirmedCurrentFinancialTargets": {
+    "orders": "12,000億円",
+    "sales": "11,730億円",
+    "operatingProfit": "800億円",
+    "operatingMargin": "6.8%",
+    "roic": "7.0%",
+    "roeReference": "7.8%"
+  },
+  "confirmedInvestmentPolicy": {
+    "capitalExpenditureThreeYears": "1,900億円",
+    "researchAndDevelopmentThreeYears": "900億円"
+  },
+  "independentReviewCompletionBlocked": false,
+  "finalDeepVerificationBlockers": ["revision_pdf_sha256_recalculation"],
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false

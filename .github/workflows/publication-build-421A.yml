@@ -23,7 +23,7 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import gzip, json, pathlib, sys
+          import gzip, json, pathlib
           root=pathlib.Path('site/data/frontend')
           manifest=json.loads((root/'manifest.json').read_text())
           overrides=manifest.get('publicationOverrides') or {}
@@ -36,16 +36,18 @@ jobs:
           detail=next(c for c in detail_payload['companies'] if str(c['code'])=='421A')
           expected_url='https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf'
           assert detail['sourceUrl']==expected_url, detail['sourceUrl']
+          assert detail['document'].endswith('・訂正版'), detail['document']
           assert '固定投資総額は未開示' in detail['capital'], detail['capital']
           assert '適切な投資機会がなくなった段階' in detail['returnPolicy'], detail['returnPolicy']
           assert detail['evidenceRefs'], 'missing evidenceRefs'
           assert all(ref.get('url')==expected_url for ref in detail['evidenceRefs']), detail['evidenceRefs']
           assert max(ref.get('page',0) for ref in detail['evidenceRefs']) <= 36, detail['evidenceRefs']
-          assert any('訂正版36ページ' in warning for warning in detail['warnings']), detail['warnings']
+          assert any(('訂正版' in warning and '36ページ' in warning) for warning in detail['warnings']), detail['warnings']
           print(json.dumps({
             'manifestGeneratedAt': manifest['generatedAt'],
             'publicationOverrides': overrides,
             'detailFile': row['detailFile'],
+            'document': detail['document'],
             'sourceUrl': detail['sourceUrl'],
             'capital': detail['capital'],
             'returnPolicy': detail['returnPolicy'],

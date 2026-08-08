@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "phase2-source-binary-request-v1",
+  "company": {"code":"3646","name":"駅探"},
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/3646-independent-source-resolution-v1.json",
+  "outputEvidenceFile": "operations/quality-rebase/phase2/source-binary-evidence/3646-final-v1.json",
+  "officialPdf": {
+    "url": "https://www2.jpx.co.jp/disc/36460/140120260130543384.pdf",
+    "pageCount": 35,
+    "sourceRole": "current_official_jpx_management_plan"
+  },
+  "purpose": "現行JPX公式PDFをrunnerから直接再取得し、SHA-256、バイト数、ページ数を固定して同一URL版差を解消する。レビュー承認は行わない。",
+  "requestedAt": "2026-08-08T21:19:00+09:00",
+  "retrySequence": 2,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

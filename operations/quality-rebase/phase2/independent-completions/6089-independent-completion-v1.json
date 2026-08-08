@@ -11,10 +11,10 @@
     {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[21,22,26,28],"result":"2026年3月期実績、2029年3月期基準計画47億円、ストックオプション行使条件に紐づくアップサイド55億円を分離した。"},
     {"id":"financial_targets","status":"confirmed","evidencePdfPages":[26,27,28,47],"result":"2029年3月期ノーマライズド連結営業利益47億円（2026年3月期起点CAGR16.1%）とROE15%以上を会社公式資料で再確認した。55億円は基準目標ではなくアップサイドとして保持する。"},
     {"id":"segment_targets","status":"confirmed","evidencePdfPages":[27,30,35,37,42],"result":"国内Working事業セグメント利益54億円、売上総利益250億円以上・高粗利サービス構成比75%以上、海外Working事業セグメント利益24億円水準を再確認した。"},
-    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[46,48],"result":"営業CF・負債調達余力・手許現預金を原資とし、既存事業成長投資、M&A等、株主還元、有利子負債削減、手許現預金へ配分する方針と、3年間M&A予算100億円を再確認した。総営業CF額や配分総額は未開示のため補完しない。"},
-    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[46,49],"result":"新中計期間も累進配当を継続し、総還元性向30%以上、業績に応じた機動的自己株式取得を検討する方針を再確認した。過年度44円を将来固定配当として扱わない。"}
+    {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[46,48],"result":"公式PDFのキャッシュアロケーション方針とM&A規律ページを独立レンダリングし、営業CF・負債調達余力・手許現預金を原資とし、既存事業成長投資、M&A等、株主還元、有利子負債削減、手許現預金へ配分する方針、戦略投資型M&Aの3年間予算100億円を画像で確認した。総営業CF額や配分総額は未開示のため補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[46,49],"result":"公式PDFの株主還元ページを独立レンダリングし、新中計期間も累進配当を継続、総還元性向30%以上、業績に応じた機動的自己株式取得を検討する方針を画像で確認した。過年度44円を将来固定配当として扱わない。"}
   ],
-  "crossChecks": {"visualReview":{"companyOfficialCurrentPlanReviewed":true,"roeFigureConfirmed":true,"capitalAllocationTextAndOfficialHtmlConfirmed":true,"shareholderReturnTextAndOfficialHtmlConfirmed":true,"note":"会社公式47ページ資料のROE図表は独立に目視確認。キャッシュアロケーション・株主還元ページはPDF本文と会社公式HTMLで内容をクロスチェックしたが、スクリーンショット再取得がキャッシュ制約で完了しなかった。"}},
-  "finalDeepVerificationBlockers": ["capital_allocation_and_shareholder_return_visual_render_recheck"],
-  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_repair_with_visual_recheck_blocker"}
+  "crossChecks": {"visualReview":{"companyOfficialCurrentPlanReviewed":true,"roeFigureConfirmed":true,"capitalAllocationFigureConfirmed":true,"maBudgetFigureConfirmed":true,"shareholderReturnFigureConfirmed":true,"renderWorkflowRunId":31253283774,"renderArtifactId":9020658256,"renderedPdfPages":[46,48,49],"note":"GitHub Actions runnerでcanonical公式PDFを取得し、PDF46・48・49ページをPNG化。キャッシュアロケーション、M&A100億円、累進配当、総還元性向30%以上、機動的自己株式取得を独立画像確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T07:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_repair_and_capital_return_visual_recheck"}
 }

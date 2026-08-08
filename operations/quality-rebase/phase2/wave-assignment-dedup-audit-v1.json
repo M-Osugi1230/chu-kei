@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "phase2-wave-assignment-dedup-audit-v1",
+  "auditedAt": "2026-08-08T21:10:00+09:00",
+  "scope": "operations/quality-rebase/phase2/primary-review-wave*-v1.json",
+  "rule": "同一company code/orderの割当は最初に記録されたWaveをcanonicalとし、後発の重複割当だけを除去する。レビュー本体・証跡・source repairは削除しない。",
+  "duplicateCompanyCount": 15,
+  "removedFromLaterWaves": [
+    {"code":"9517","name":"イーレックス","order":473,"canonicalWave":17,"removedDuplicateWave":22},
+    {"code":"9612","name":"ラックランド","order":474,"canonicalWave":16,"removedDuplicateWave":22},
+    {"code":"1379","name":"ホクト","order":475,"canonicalWave":15,"removedDuplicateWave":22},
+    {"code":"1762","name":"高松コンストラクショングループ","order":476,"canonicalWave":17,"removedDuplicateWave":22},
+    {"code":"1867","name":"植木組","order":477,"canonicalWave":15,"removedDuplicateWave":22},
+    {"code":"2750","name":"石光商事","order":483,"canonicalWave":15,"removedDuplicateWave":22},
+    {"code":"2892","name":"日本食品化工","order":484,"canonicalWave":15,"removedDuplicateWave":22},
+    {"code":"2908","name":"フジッコ","order":485,"canonicalWave":15,"removedDuplicateWave":22},
+    {"code":"3002","name":"グンゼ","order":486,"canonicalWave":17,"removedDuplicateWave":22},
+    {"code":"3583","name":"オーベクス","order":488,"canonicalWave":16,"removedDuplicateWave":23},
+    {"code":"4619","name":"日本特殊塗料","order":494,"canonicalWave":17,"removedDuplicateWave":23},
+    {"code":"4681","name":"リゾートトラスト","order":495,"canonicalWave":16,"removedDuplicateWave":23},
+    {"code":"5204","name":"石塚硝子","order":497,"canonicalWave":15,"removedDuplicateWave":23},
+    {"code":"6309","name":"巴工業","order":499,"canonicalWave":16,"removedDuplicateWave":23},
+    {"code":"6381","name":"アネスト岩田","order":500,"canonicalWave":16,"removedDuplicateWave":23}
+  ],
+  "laterWaveUniqueAssignmentsPreserved": [
+    {"wave":22,"order":479,"code":"1979","name":"大氣社"},
+    {"wave":23,"order":492,"code":"4249","name":"森六"},
+    {"wave":23,"order":498,"code":"5706","name":"三井金属"}
+  ],
+  "auditPreservation": {
+    "reviewFilesDeleted": false,
+    "sourceEvidenceDeleted": false,
+    "sourceRepairsDeleted": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

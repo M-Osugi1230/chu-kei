@@ -12,96 +12,44 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Discover corrected Movin PDF and immutable identity
+      - name: Verify corrected Movin PDF identity and deletion scope
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m pip install --quiet requests beautifulsoup4 pypdf
+          python3 -m pip install --quiet requests pypdf
           cat > /tmp/probe.py <<'PY'
-          import hashlib, io, json, re
-          from urllib.parse import urljoin, urlparse
+          import hashlib, io
           import requests
-          from bs4 import BeautifulSoup
           from pypdf import PdfReader
 
-          s = requests.Session()
-          s.headers['User-Agent'] = 'Mozilla/5.0'
-          start = 'https://corp.movin.co.jp/ir/disclosure.html'
-          r = s.get(start, timeout=30); r.raise_for_status()
-          html = r.text
-          print('HTML_STATUS', r.status_code, 'BYTES', len(r.content), 'FINAL', r.url)
-          soup = BeautifulSoup(html, 'html.parser')
-          print('=== INLINE SCRIPTS ===')
-          for i, tag in enumerate(soup.find_all('script')):
-              if not tag.get('src') and tag.string:
-                  print('INLINE', i, tag.string[:10000])
-
-          resources = set()
-          for tag in soup.find_all(['a','script','link']):
-              for attr in ('href','src'):
-                  v = tag.get(attr)
-                  if v:
-                      resources.add(urljoin(r.url, v))
-          texts = [(r.url, html)]
-          for u in sorted(resources):
-              p = urlparse(u)
-              if p.netloc not in ('corp.movin.co.jp','www.xj-storage.jp'):
-                  continue
-              if not re.search(r'\.(?:js|json)(?:\?|$)', p.path, re.I):
-                  continue
-              try:
-                  rr = s.get(u, timeout=30)
-                  if rr.ok and len(rr.content) < 10_000_000:
-                      texts.append((u, rr.text))
-                      print('FETCHED_RESOURCE', u, rr.status_code, len(rr.content))
-                      print('=== RESOURCE MATCHES', u, '===')
-                      for line in rr.text.splitlines():
-                          if re.search(r'(GetList|public-list|AS09259|pdf|ajax|json|api)', line, re.I):
-                              print(line[:4000])
-              except Exception as e:
-                  print('RESOURCE_ERROR', u, repr(e))
-
-          # Probe common XJ-Storage list endpoints. Print successful response excerpts.
-          endpoints = [
-              'https://www.xj-storage.jp/public-list/GetList.aspx?company=AS09259&lang=ja&output=json',
-              'https://www.xj-storage.jp/public-list/GetList.aspx?company=AS09259&lang=ja',
-              'https://www.xj-storage.jp/public-list/GetList.aspx?company=AS09259',
-              'https://www.xj-storage.jp/public-list/AS09259/'
-          ]
-          for u in endpoints:
-              try:
-                  rr=s.get(u,timeout=30)
-                  print('ENDPOINT', rr.status_code, len(rr.content), rr.headers.get('content-type'), u)
-                  print(rr.text[:12000])
-                  if rr.ok:
-                      texts.append((u,rr.text))
-              except Exception as e:
-                  print('ENDPOINT_ERROR', u, repr(e))
-
-          candidates=set()
-          patterns=[
-              r'https?://[^\"\'<>\\\s]+?\.pdf(?:\?[^\"\'<>\\\s]*)?',
-              r'(?:(?:\.\.?/)|/)[^\"\'<>\\\s]+?\.pdf(?:\?[^\"\'<>\\\s]*)?'
-          ]
-          for base,text in texts:
-              for pat in patterns:
-                  for m in re.findall(pat,text,flags=re.I):
-                      candidates.add(urljoin(base,m.replace('&amp;','&').replace('\\/','/')))
-          for u in resources:
-              if '.pdf' in u.lower(): candidates.add(u)
-
-          print('=== PDF CANDIDATES ===')
-          for u in sorted(candidates): print(u)
-          print('=== PDF IDENTITIES ===')
-          for u in sorted(candidates):
-              try:
-                  rr=s.get(u,timeout=30)
-                  if not rr.ok or not rr.content.startswith(b'%PDF'):
-                      print('NOT_PDF',u,rr.status_code,rr.headers.get('content-type'),len(rr.content)); continue
-                  sha=hashlib.sha256(rr.content).hexdigest()
-                  try: pages=len(PdfReader(io.BytesIO(rr.content)).pages)
-                  except Exception as e: pages=f'ERR:{e}'
-                  print('PDF','PAGES',pages,'BYTES',len(rr.content),'SHA256',sha,'URL',u)
-              except Exception as e: print('PDF_ERROR',u,repr(e))
+          s=requests.Session(); s.headers['User-Agent']='Mozilla/5.0'
+          urls={
+            'corrected':'https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf',
+            'original':'https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf',
+            'correction_notice':'https://www2.jpx.co.jp/disc/421A0/140120260324588022.pdf'
+          }
+          docs={}
+          for name,u in urls.items():
+              r=s.get(u,timeout=45); r.raise_for_status()
+              assert r.content.startswith(b'%PDF'), (name,r.headers.get('content-type'),len(r.content))
+              sha=hashlib.sha256(r.content).hexdigest(); reader=PdfReader(io.BytesIO(r.content))
+              docs[name]=(r.content,reader)
+              print('PDF',name,'PAGES',len(reader.pages),'BYTES',len(r.content),'SHA256',sha,'URL',u)
+          original=docs['original'][1]; corrected=docs['corrected'][1]
+          print('=== PAGE TEXT HASH COMPARISON ===')
+          def norm(page):
+              return ''.join((page.extract_text() or '').split())
+          oh=[hashlib.sha256(norm(p).encode()).hexdigest() for p in original.pages]
+          ch=[hashlib.sha256(norm(p).encode()).hexdigest() for p in corrected.pages]
+          # Find exact text-hash alignment allowing one deleted page in original.
+          mismatches=[]
+          for ci,h in enumerate(ch):
+              oi=ci if ci<14 else ci+1
+              if oi>=len(oh) or h!=oh[oi]: mismatches.append((ci+1,oi+1 if oi<len(oh) else None))
+          print('EXPECTED_DELETE_ORIGINAL_PDF_PAGE',15)
+          print('ALIGNED_MISMATCHES',mismatches)
+          print('ORIGINAL_PAGE15_TEXT', (original.pages[14].extract_text() or '')[:2000].replace('\n',' | '))
+          print('CORRECTED_PAGE15_TEXT', (corrected.pages[14].extract_text() or '')[:1200].replace('\n',' | '))
+          print('NOTICE_TEXT', (docs['correction_notice'][1].pages[0].extract_text() or '')[:3000].replace('\n',' | '))
           PY
           python3 /tmp/probe.py

@@ -23,35 +23,23 @@
     {"id":"stale_evidence_isolation","status":"confirmed","result":"旧一次レビューに記録された第4次中計ローリングの2030年目標・2027年ローリング値・株主還元指標と、収集器が誤選択した長期経営ビジョン資料をevidence correctionへ隔離し、現行第5次中計の検証済み事実から除外した。"}
   ],
   "crossChecks": {
-    "collectionIntegrity": {
-      "file": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/2146/collection.json",
-      "sourceUrlMatched": true,
-      "pdfSha256Matched": true,
-      "pageCountMatched": true
-    },
-    "identityProbe": {
-      "workflowRunId": 31252140104,
-      "basePlanOfficialPdfFetched": true,
-      "revisionOfficialPdfFetched": true,
-      "basePlanSha256Confirmed": true,
-      "revisionSha256Confirmed": true
-    },
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/2146/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "identityProbe": {"workflowRunId":31252140104,"basePlanOfficialPdfFetched":true,"revisionOfficialPdfFetched":true,"basePlanSha256Confirmed":true,"revisionSha256Confirmed":true},
     "visualReview": {
-      "basePlanKeyTargetPageConfirmed": true,
+      "basePlanFullSequenceRendered": true,
+      "basePlanRenderedPageCount": 43,
+      "revisionFullSequenceRendered": true,
+      "revisionRenderedPageCount": 10,
+      "basePlanKeyTargetPagesConfirmed": true,
       "revisionTargetTableConfirmed": true,
       "revisionCapitalEfficiencyPageConfirmed": true,
       "revisionShareholderReturnPageConfirmed": true,
-      "fullBaseAndRevisionVisualSequenceComplete": false
+      "renderWorkflowRunId": 31253620625,
+      "renderArtifactId": 9020752641,
+      "renderArtifactDigest": "sha256:525a34d52e465d99089cb5d0aa52f9df55c8a9bd997afe1a1d204501a58e4a22",
+      "note": "第5次中計本体43ページと見直し10ページを全ページコンタクトシートで連続確認し、基礎戦略から見直し後年度別目標、技術職38,000人、ROE20%、Net D/E0.5倍以下、配当性向100%・最低配当10円まで高解像度ページで再確認した。"
     }
   },
-  "finalDeepVerificationBlockers": ["full_base_and_revision_visual_sequence_recheck"],
-  "review": {
-    "minimumDistinctReviewers": 2,
-    "reviewRole": "independent_reviewer",
-    "primaryReviewerMustNotSelfApprove": true,
-    "completedAt": "2026-08-08T19:15:00+09:00",
-    "automaticApprovalAllowed": false,
-    "deepVerificationApproved": false,
-    "result": "confirmed_after_fifth_plan_source_repair_and_stale_review_isolation"
-  }
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T19:15:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_fifth_plan_source_repair_and_full_visual_sequence_recheck"}
 }

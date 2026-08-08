@@ -8,15 +8,30 @@
   "checks": [
     {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,55],"result":"2026年2月26日公表の55ページ数値目標更新資料であり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。会社公式IRでも中期経営計画2030初年度の進捗、数値目標上方修正、2027年3月期の復配予定を独立に確認した。"},
     {"id":"revision_boundary","status":"confirmed","evidencePdfPages":[1,2,46,50],"result":"2025年度見通し、2026～2028年度の当初・修正計画、今回見直し対象外の2029～2030年度を分離した。"},
-    {"id":"revised_targets","status":"confirmed","evidencePdfPages":[1,46,50],"result":"2026年度売上105.91億円・営業利益3.41億円、2027年度116.98億円・4.37億円、2028年度132.03億円・6.24億円への上方修正をcanonical PDFの保存本文・一次レビュー証跡で再確認した。"},
+    {"id":"revised_targets","status":"confirmed","evidencePdfPages":[1,46,50],"result":"2026年度売上105.91億円・営業利益3.41億円、2027年度116.98億円・4.37億円、2028年度132.03億円・6.24億円への上方修正をcanonical PDFの図表で再確認した。"},
     {"id":"terminal_targets","status":"confirmed","evidencePdfPages":[49,50],"result":"2030年度売上133.3億円、営業利益率10%、EBITDA18.5億円、ROE16.1%、ROA11.0%を確認し、Appendix計算値ROE16.0%・ROA10.9%との0.1ポイント差は丸め差として保持する。"},
     {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[40,42,43,44],"result":"2025～2030年度の事業投資約45.6億円＝新店24.6億円＋既存店18億円＋インフラ・システム約3億円を確認し、別枠のM&A30億円規模を二重加算しない。"},
-    {"id":"cash_flow","status":"confirmed","evidencePdfPages":[51],"result":"2026～2028年度の修正後営業CF・投資CF・財務CF・FCF・期末現預金の年度別計画を一次レビュー正本とcanonical PDF保存本文で再確認した。"},
+    {"id":"cash_flow","status":"confirmed","evidencePdfPages":[51],"result":"2026～2028年度の修正後営業CF・投資CF・財務CF・FCF・期末現預金の年度別計画を図表で確認した。"},
     {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[47],"result":"連結配当性向30%程度、復配を2028年度から2026年度へ前倒しし1円以上とする方針、株主優待改善を確認した。会社公式IRでも2027年3月期復配予定を再確認した。"},
     {"id":"nonfinancial_targets","status":"confirmed","evidencePdfPages":[45,49],"result":"2030年度平均給与500万円、国内店舗36店、女性管理職比率50%、生産性向上後の社員純増約110人を計画上の非財務目標として確認した。"},
     {"id":"accounting_boundary","status":"confirmed","evidencePdfPages":[4],"result":"MC契約移行後のホテル売上総額表示という会計・比較上の境界を保持し、従来表示と混在させない。"}
   ],
-  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-05/wave-01/2764/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"independentPdfRenderComplete":false,"companyOfficialCurrentPlanStatusConfirmed":true,"note":"canonical PDFの独立レンダリング取得は環境制約で完了しなかった。URL/hash/pageCount、保存済み全文・ページ証跡、一次視覚レビュー、会社公式IRの現行計画進捗・上方修正・復配方針をクロスチェックし、独立レンダリングのみ最終Deep Verificationゲートへ残す。"}},
-  "finalDeepVerificationBlockers": ["independent_visual_render_recheck"],
-  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:52:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_with_visual_recheck_blocker"}
+  "crossChecks": {
+    "collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-05/wave-01/2764/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {
+      "independentPdfRenderComplete": true,
+      "renderedPageCount": 55,
+      "revisionTargetsConfirmed": true,
+      "investmentPagesConfirmed": true,
+      "shareholderReturnConfirmed": true,
+      "terminalAndRoundingPagesConfirmed": true,
+      "cashFlowPageConfirmed": true,
+      "renderWorkflowRunId": 31253620625,
+      "renderArtifactId": 9020752641,
+      "renderArtifactDigest": "sha256:525a34d52e465d99089cb5d0aa52f9df55c8a9bd997afe1a1d204501a58e4a22",
+      "note":"canonical55ページPDFを全ページコンタクトシートで確認し、投資計画、3カ年上方修正、復配、2030年終端目標、Appendix丸め差、キャッシュフローを重要ページで再確認した。"
+    }
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:52:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_full_independent_visual_recheck"}
 }

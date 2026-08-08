@@ -11,7 +11,7 @@
   },
   "status": "independent_review_complete",
   "checks": [
-    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1],"result":"Phase 2収集正本・一次レビュー・独立レビューパケットで会社名、資料名、公開日、URL、PDF SHA-256、全40ページが一致する。TDnet同一資料も独立に確認した。"},
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1],"result":"Phase 2収集正本・一次レビュー・独立レビューパケットで会社名、資料名、公開日、URL、PDF SHA-256、全40ページを確認した。最終視覚確認では同一EIR URLから現行40ページ再配信版を取得し、全ページ構成と主要内容の連続性を確認した。"},
     {"id":"formal_plan_boundary","status":"confirmed","evidencePdfPages":[1,4,5],"result":"外形は成長可能性資料だが、資料内で過去戦略を踏襲し今回初めて2030年数値計画を策定した正式中期経営計画であることを確認した。"},
     {"id":"financial_targets","status":"confirmed","evidencePdfPages":[5,27],"result":"2030年12月期の売上高30億円、営業利益3.5億円、営業利益率12%、売上CAGR30%と2025年実績を分離して図表で確認した。"},
     {"id":"intermediate_and_business_kpis","status":"confirmed","evidencePdfPages":[27,28,29],"result":"2028年度営業利益率6%、自社PF比率50%超を中間目標、2030年度取引社数300社以上・自社PF比率70%以上を最終KPIとして確認した。"},
@@ -20,8 +20,19 @@
   ],
   "crossChecks": {
     "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/175A/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
-    "visualReview": {"financialTargetPageConfirmed":true,"kpiPageConfirmed":true,"capitalAllocationTextConfirmed":true,"note":"TDnet上の同一40ページ資料を独立に確認。EIR正本とURL・SHA・ページ数の整合は収集正本で確認した。"}
+    "visualReview": {
+      "fullPublicEirSequenceRendered": true,
+      "renderedPageCount": 40,
+      "financialTargetPageConfirmed": true,
+      "kpiPagesConfirmed": true,
+      "capitalAllocationFigureConfirmed": true,
+      "renderWorkflowRunId": 31253620625,
+      "renderArtifactId": 9020752641,
+      "renderArtifactDigest": "sha256:525a34d52e465d99089cb5d0aa52f9df55c8a9bd997afe1a1d204501a58e4a22",
+      "currentOfficialRenditionSha256": "4cb80c4dfd8be3ea3372be00bcb122892d89a1bf6af1048048dc739dcbd525a8",
+      "note": "同一EIR URLの現行40ページ版を全ページコンタクトシート化し、p27の2030年売上30億円・営業利益3.5億円・営業利益率12%、p28-29のKPI、p31のキャピタルアロケーションを高解像度画像で確認した。現行配信byte hashは収集時と異なるが、ページ数・全体構成・主要事実の意味内容一致を視覚確認した。"
+    }
   },
-  "finalDeepVerificationBlockers": ["public_eir_render_recheck"],
-  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_public_eir_full_visual_recheck"}
 }

@@ -11,19 +11,30 @@
   },
   "status": "independent_review_complete",
   "checks": [
-    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"会社公式IR資料、Phase 2収集正本、一次レビュー、独立レビューパケットで資料名、2026年2月13日、公表URL、PDF SHA-256、全26ページが一致する。"},
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"会社公式IR資料、Phase 2収集正本、一次レビュー、独立レビューパケットで2026年2月13日公表・26ページの中期経営方針アップデートを確認した。最終視覚確認では同一会社公式URLの現行26ページ版を再取得した。"},
     {"id":"formal_plan_boundary","status":"confirmed","evidencePdfPages":[1,5],"result":"本資料は2024年4月策定の中期経営方針を2026年に更新した公式資料であり、新規の固定3カ年計画ではないことを確認した。"},
     {"id":"medium_term_growth_targets","status":"confirmed","evidencePdfPages":[3,6,14],"result":"2025年事業ポートフォリオを前提に売上収益CAGR MSD、調整後営業利益CAGR HSD、調整後EPS CAGR HSDであることを確認し、単一年度の絶対額目標へ変換していない。"},
     {"id":"baseline_actuals","status":"confirmed","evidencePdfPages":[4],"result":"2025年通期実績の売上収益1兆7,742億円、調整後営業利益2,749億円、利益率15.5%、調整後EPS86.0円を目標値と分離して確認した。"},
     {"id":"ma_criteria","status":"confirmed","evidencePdfPages":[3,9],"result":"買収初年度からEPSへ貢献し、買収後3年以内にROICがWACCを上回ることをM&A基準として確認した。"},
     {"id":"capital_allocation_and_leverage","status":"confirmed","evidencePdfPages":[13],"result":"既存事業設備投資は売上収益の約3%、M&Aを優先し、M&Aがない場合は借入返済、2026年末Net Debt/EBITDA予想2.3～2.5倍という方針・参考値を確認した。"},
     {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[13],"result":"累進配当方針を確認し、資料にない固定配当性向・総還元性向を補完していない。"},
-    {"id":"nonfinancial_scope","status":"confirmed","evidencePdfPages":[24,25],"result":"環境目標はDuluxGroup、日本グループ等で対象範囲・基準年が異なるため、連結一律の2030年目標へ誤変換しないことを再確認した。"}
+    {"id":"nonfinancial_scope","status":"confirmed","evidencePdfPages":[24,25],"result":"地域・アセット別サステナビリティロードマップを独立レンダリングし、DuluxGroup・太平洋の2030年再生可能電力使用率50%、2020年比Scope1・2排出量50%削減、日本グループの2019年比37%削減、2050～2060年ネットゼロ、DuluxGroupの2030年最上位水準サステナブル製品売上比率20%・包装材平均再生材含有率30%を対象範囲・基準年付きで画像確認した。連結一律目標へ誤変換しない。"}
   ],
   "crossChecks": {
     "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/4612/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
-    "visualReview": {"baselinePageConfirmed":true,"mediumTermTargetPageConfirmed":true,"maCriteriaPageConfirmed":true,"capitalAllocationPageConfirmed":true,"note":"会社公式PDFの主要財務・M&A・資本政策図表を独立に確認。地域別非財務目標は原文範囲を維持して記録した。"}
+    "visualReview": {
+      "fullCurrentOfficialSequenceRendered": true,
+      "renderedPageCount": 26,
+      "regionalNonfinancialPagesConfirmed": true,
+      "environmentAndSafetyPageConfirmed": true,
+      "innovationAndSustainableProductPageConfirmed": true,
+      "renderWorkflowRunId": 31253620625,
+      "renderArtifactId": 9020752641,
+      "renderArtifactDigest": "sha256:525a34d52e465d99089cb5d0aa52f9df55c8a9bd997afe1a1d204501a58e4a22",
+      "currentOfficialRenditionSha256": "947761583fbdb7bfab651f2b2cc4b7cb7325a4ef231e27fc2b7bb74fb15377b6",
+      "note":"同一会社公式URLの現行26ページ版を全ページレンダリングし、PDF24・25ページの地域別非財務ロードマップを高解像度画像で確認した。現行配信byte hashは収集時と異なるが、26ページ構成と主要内容の意味一致を確認した。"
+    }
   },
-  "finalDeepVerificationBlockers": ["regional_nonfinancial_visual_render_recheck"],
-  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed"}
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T09:25:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_regional_nonfinancial_visual_recheck"}
 }

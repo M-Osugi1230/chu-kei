@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - agent/quality-rebase-phase0-2
+      - agent/phase2-source-repair-final3
     paths:
       - 'operations/quality-rebase/phase2/source-binary-requests/*.json'
       - 'scripts/resolve_phase2_source_binary.py'

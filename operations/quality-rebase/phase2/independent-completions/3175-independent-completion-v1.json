@@ -6,15 +6,30 @@
   "source": {"title":"中期経営計画 FOOD CREATIVE FIRM ～食の総合プロデュースカンパニーへ～","officialUrl":"https://www2.jpx.co.jp/disc/31750/140120260529555629.pdf","pdfSha256":"8473130a48d6cb1de3f0460ff135ba95247772e3736935f7e3ee7eac18bbe381","pageCount":34},
   "status": "independent_review_complete",
   "checks": [
-    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"2026年5月29日公表の34ページ中計で、収集正本・独立レビューパケットのURL・SHA-256・ページ数が一致する。会社公式IRにも当該時期の開示・IR情報が掲載されている。"},
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2],"result":"2026年5月29日公表の34ページ中計として収集正本を固定し、最終視覚確認では同一JPX URLの現行34ページ再配信版を全ページ確認した。"},
     {"id":"plan_period","status":"confirmed","evidencePdfPages":[1,3],"result":"正式対象期間は2027年3月期～2031年3月期。2026年3月期は基準実績として分離する。"},
-    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[3,20,21],"result":"2031年3月期のグループ流通総額約460億円、連結純売上約430億円、営業利益30～45億円、ROE20%以上、ROIC15%以上をcanonical sourceの保存本文・ページデータで再確認した。流通総額と純売上は合算しない。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[3,20,21],"result":"2031年3月期のグループ流通総額約460億円、連結純売上約430億円、営業利益30～45億円、ROE20%以上、ROIC15%以上を図表で再確認した。流通総額と純売上は合算しない。"},
     {"id":"business_targets","status":"confirmed","evidencePdfPages":[8,9,13,15,16,17,20],"result":"国内外食215億円、海外外食50億円、中食70億円、生産流通50億円、ライセンス15億円、M&A・新規事業60億円等の構成を確認した。M&A・新規60億円を別の投資額レンジへ重複加算しない。"},
     {"id":"investment_guidelines","status":"confirmed","evidencePdfPages":[19,20],"result":"出店40.5億円、中食工場4.8億円、生産流通5～8億円、M&A1件5～30億円の投資目安を確認した。M&A5～30億円は案件規模であり5年間の総投資額ではない。"},
     {"id":"preferred_shares_and_leverage","status":"confirmed","evidencePdfPages":[20,21],"result":"A種10億円、B種3億円、C種予定1.5億円の優先株償還と、Net有利子負債/EBITDAの2031年上限3～4倍を確認した。"},
-    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[19,22],"result":"現時点で普通株配当はなく、成長投資と優先株償還を優先し、償還完了が見える段階で普通株の配当方針・配当性向・具体額を明文化する方針を確認した。将来配当を固定値として補完しない。"}
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[19,22],"result":"現時点で普通株配当はなく、成長投資と優先株償還を優先し、償還完了が見える段階で普通株の配当方針・配当性向・具体額を明文化する方針を図表で再確認した。将来配当を固定値として補完しない。"}
   ],
-  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/3175/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"renderComplete":false,"savedCanonicalPageDataReviewed":true,"note":"JPX PDFの独立レンダリング取得が環境制約で完了しなかったため、canonical hashで保存済みの全文・ページ分割データを再読した。会社公式IR掲載もクロスチェック済み。視覚再確認は最終Deep Verificationブロッカーとして残す。"}},
-  "finalDeepVerificationBlockers": ["independent_visual_render_recheck"],
-  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:05:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_with_visual_recheck_blocker"}
+  "crossChecks": {
+    "collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/3175/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "visualReview": {
+      "renderComplete": true,
+      "renderedPageCount": 34,
+      "financialTargetsConfirmed": true,
+      "investmentGuidelinesConfirmed": true,
+      "leverageAndPreferredShareRepaymentConfirmed": true,
+      "shareholderReturnPolicyConfirmed": true,
+      "renderWorkflowRunId": 31253620625,
+      "renderArtifactId": 9020752641,
+      "renderArtifactDigest": "sha256:525a34d52e465d99089cb5d0aa52f9df55c8a9bd997afe1a1d204501a58e4a22",
+      "currentOfficialRenditionSha256": "8473fce42ca42af5736fc4f5fbb9b695749211e33368d233dbbca3a030c3cf46",
+      "note":"同一JPX URLの現行34ページ版を全ページコンタクトシート化し、営業利益・投資・優先株償還・Net Debt/EBITDA・将来配当方針を画像確認した。現行配信byte hashは収集時と異なるが、ページ数・全体構成・主要事実の意味内容一致を確認した。"
+    }
+  },
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:05:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_full_independent_visual_recheck"}
 }

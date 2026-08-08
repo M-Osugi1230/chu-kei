@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"421A","name":"ムービン・ストラテジック・キャリア"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/421A-primary-review-v2.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/421A-independent-review-v2.json",
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/421A-independent-source-resolution-v1.json",
+  "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json",
+  "source": {
+    "title": "中期経営計画（事業計画及び成長可能性に関する事項）・訂正版",
+    "officialUrl": "https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf",
+    "pdfSha256": "54a253644651e2e29918ff8101e7a4e3b41551eb844a7ef4c5f83b4e33f6f469",
+    "pageCount": 36
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,36],"result":"会社公式IRが配信するXJ-Storage上の訂正後36ページPDFを特定し、GitHub Actions runnerから直接取得してSHA-256 54a253644651e2e29918ff8101e7a4e3b41551eb844a7ef4c5f83b4e33f6f469、2,816,539 bytes、36ページを確定した。Phase 2 collectionをこの訂正版へ更新した。"},
+    {"id":"correction_notice_and_deleted_page","status":"confirmed","result":"2026年3月24日19時の公式訂正通知を独立確認し、訂正前資料の印字14頁（PDF15頁）『市場環境：人材紹介市場は安定拡大』を削除する訂正であることを確認した。訂正通知PDFのSHA-256は1b80a824116ba9ad2625fcc9fe955e2c86434b933c05caac6744e824793f4e7c。削除ページは一次レビューの財務・KPI・戦略・資本政策・還元の証跡に使用されていない。"},
+    {"id":"formal_plan_boundary","status":"confirmed","evidencePdfPages":[1,2,3,4],"result":"『事業計画及び成長可能性に関する事項』の中にFY26～FY28の正式中期経営計画が掲載されていることを確認し、会社計画と外部市場統計を分離した。訂正で削除された市場規模ページを会社目標として使用しない。"},
+    {"id":"financial_plan","status":"confirmed","evidencePdfPages":[3,4],"result":"FY24実績 売上24億円・営業利益9億円、FY25実績38億円・18億円、FY26計画50億円・23億円、FY27計画70億円・32億円、FY28計画100億円・46億円を訂正版で再確認した。"},
+    {"id":"organic_growth_and_ma_separation","status":"confirmed","evidencePdfPages":[3,4],"result":"FY28売上高100億円とFY25～FY28売上CAGR約38%はオーガニック成長のみの目標で、M&Aはプラスアルファの上積みであることを確認した。"},
+    {"id":"advisor_kpis","status":"confirmed","evidencePdfPages":[3,6],"result":"キャリアアドバイザー数はFY26期末150人、FY27期末200人超、FY28期末260人超、一人当たり売上高はFY26～FY28各357万円/月を維持する計画であることを訂正版で再確認した。"},
+    {"id":"strategy_structure","status":"confirmed","evidencePdfPages":[3,6,7,10,27,28],"result":"クライアントシフト、求職者集客・DB活用、AIによる早期戦力化、人員拡大、生涯キャリアハブ、M&Aの戦略構造を確認した。訂正前PDF16頁以降は訂正版で1ページ前倒しになるため、後半証跡は訂正版ページへ再マッピングした。"},
+    {"id":"capital_and_shareholder_return","status":"confirmed","evidencePdfPages":[10],"result":"キャリアアドバイザー採用、M&A、生涯キャリアハブ構想、AIシステム等の利益成長投資を優先し、適切な投資機会がなくなった段階で余剰資金の自己株式取得・配当等を検討する方針を確認した。固定投資額・固定配当性向は開示されていないため補完しない。"},
+    {"id":"page_mapping","status":"confirmed","result":"訂正前PDF1～14頁は訂正版1～14頁に対応し、訂正前PDF15頁を削除、訂正前PDF16～37頁は訂正版15～36頁へ1ページ前倒しする監査マッピングをsource correctionへ保存した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {
+      "file": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/421A/collection.json",
+      "sourceUrlMatched": true,
+      "pdfSha256Matched": true,
+      "pageCountMatched": true
+    },
+    "identityProbe": {
+      "workflowRunId": 31252560350,
+      "correctedPdfFetched": true,
+      "correctedPdfSha256Confirmed": true,
+      "correctionNoticeFetched": true,
+      "correctionNoticeSha256Confirmed": true,
+      "originalPdfFetched": true
+    },
+    "visualReview": {
+      "correctedExecutiveSummaryConfirmed": true,
+      "correctedAdvisorKpiPageConfirmed": true,
+      "financialTargetPageTextAndFigureConfirmed": true,
+      "shareholderReturnTextConfirmed": true,
+      "shareholderReturnIndependentScreenshotComplete": false
+    }
+  },
+  "finalDeepVerificationBlockers": ["shareholder_return_independent_screenshot_recheck","post_publication_link_and_render_check"],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "reviewRole": "independent_reviewer",
+    "primaryReviewerMustNotSelfApprove": true,
+    "completedAt": "2026-08-08T19:22:00+09:00",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "result": "confirmed_after_corrected_36_page_source_resolution"
+  }
+}

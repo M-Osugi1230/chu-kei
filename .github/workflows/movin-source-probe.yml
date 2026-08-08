@@ -1,0 +1,101 @@
+name: Movin source probe
+
+on:
+  push:
+    branches:
+      - agent/movin-source-probe
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Discover corrected Movin PDF and immutable identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet requests beautifulsoup4 pypdf
+          cat > /tmp/probe.py <<'PY'
+          import hashlib, io, re, sys
+          from urllib.parse import urljoin, urlparse
+          import requests
+          from bs4 import BeautifulSoup
+          from pypdf import PdfReader
+
+          session = requests.Session()
+          session.headers['User-Agent'] = 'Mozilla/5.0'
+          start = 'https://corp.movin.co.jp/ir/disclosure.html'
+          r = session.get(start, timeout=30)
+          r.raise_for_status()
+          print('HTML_STATUS', r.status_code, 'BYTES', len(r.content), 'FINAL', r.url)
+          html = r.text
+          print('=== MATCHING HTML LINES ===')
+          for line in html.splitlines():
+              if re.search(r'(pdf|421A|中期経営|事業計画|2026|202603|2026/03|3月24)', line, re.I):
+                  print(line[:2000])
+
+          soup = BeautifulSoup(html, 'html.parser')
+          resources = set()
+          for tag in soup.find_all(['a','script','link']):
+              for attr in ('href','src'):
+                  value = tag.get(attr)
+                  if value:
+                      resources.add(urljoin(r.url, value))
+          print('=== PAGE RESOURCES ===')
+          for u in sorted(resources):
+              print(u)
+
+          texts = [(r.url, html)]
+          # Scan same-origin scripts and JSON-like resources referenced by the IR page.
+          for u in sorted(resources):
+              p = urlparse(u)
+              if p.netloc != 'corp.movin.co.jp':
+                  continue
+              if not re.search(r'\.(?:js|json)(?:\?|$)', p.path, re.I):
+                  continue
+              try:
+                  rr = session.get(u, timeout=20)
+                  if rr.ok and len(rr.content) < 8_000_000:
+                      texts.append((u, rr.text))
+                      print('FETCHED_RESOURCE', u, rr.status_code, len(rr.content))
+              except Exception as e:
+                  print('RESOURCE_ERROR', u, repr(e))
+
+          candidates = set()
+          patterns = [
+              r'https?://[^\"\'<>\s]+?\.pdf(?:\?[^\"\'<>\s]*)?',
+              r'(?:(?:\.\.?/)|/)[^\"\'<>\s]+?\.pdf(?:\?[^\"\'<>\s]*)?'
+          ]
+          for base, text in texts:
+              for pattern in patterns:
+                  for m in re.findall(pattern, text, flags=re.I):
+                      candidates.add(urljoin(base, m.replace('&amp;','&')))
+          # Include all anchor links that resolve to PDFs.
+          for u in resources:
+              if '.pdf' in u.lower():
+                  candidates.add(u)
+
+          print('=== PDF CANDIDATES ===')
+          for u in sorted(candidates):
+              print(u)
+
+          print('=== PDF IDENTITIES ===')
+          for u in sorted(candidates):
+              try:
+                  rr = session.get(u, timeout=30)
+                  ct = rr.headers.get('content-type','')
+                  if not rr.ok or not rr.content.startswith(b'%PDF'):
+                      print('NOT_PDF', u, rr.status_code, ct, len(rr.content))
+                      continue
+                  sha = hashlib.sha256(rr.content).hexdigest()
+                  try:
+                      pages = len(PdfReader(io.BytesIO(rr.content)).pages)
+                  except Exception as e:
+                      pages = f'ERR:{e}'
+                  print('PDF', 'PAGES', pages, 'BYTES', len(rr.content), 'SHA256', sha, 'URL', u)
+              except Exception as e:
+                  print('PDF_ERROR', u, repr(e))
+          PY
+          python3 /tmp/probe.py

@@ -13,62 +13,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect repository and live frontend data for 421A
+      - name: Locate 421A source and bundle build path
         shell: bash
         run: |
           set -euo pipefail
+          echo '=== GIT GREP 421A ==='
+          git grep -n -I -E '421A|ムービン・ストラテジック・キャリア' -- ':!site/data/bundle.part.*' ':!site/data/frontend/*.gz' | head -n 300 || true
+          echo '=== BUNDLE MANIFEST BUILD REFERENCES ==='
+          git grep -n -I 'bundle.manifest.json' -- scripts .github package.json README.md docs | head -n 200 || true
+          echo '=== FRONTEND BUILD REFERENCES ==='
+          git grep -n -I -E 'build_frontend_data_shards|frontend-data|company-index.json.gz' -- scripts .github package.json README.md docs | head -n 200 || true
+          echo '=== SOURCE GENERATOR CANDIDATES ==='
+          find src data scripts -maxdepth 3 -type f \( -name '*.json' -o -name '*.mjs' -o -name '*.js' -o -name '*.py' \) -print | sort | head -n 500
+
           python3 - <<'PY'
-          import gzip, hashlib, json, pathlib, urllib.request
-
-          CODE='421A'
-          BASE='https://chu-kei.com/data/frontend/'
-
-          def summarize(label, company):
-              keep=['code','name','market','industry','stage','tier','summary','sourceUrl','sourceTitle','planPublishedDate','revenue','profit','margin','capital','returnPolicy','detailFile','lastVerifiedDate']
-              print(f'=== {label} ===')
-              print(json.dumps({k:company.get(k) for k in keep if k in company}, ensure_ascii=False, indent=2))
-              for k,v in company.items():
-                  if k.lower().startswith('source') or 'url' in k.lower() or 'document' in k.lower():
-                      print('FIELD',k,json.dumps(v,ensure_ascii=False)[:3000])
-
-          # Repo static data
-          manifest=json.loads(pathlib.Path('site/data/frontend/manifest.json').read_text())
-          index=json.loads(gzip.decompress(pathlib.Path('site/data/frontend/'+manifest['index']['file']).read_bytes()))
-          company=next(c for c in index['companies'] if str(c['code'])==CODE)
-          print('REPO_MANIFEST',json.dumps({k:manifest.get(k) for k in ('generatedAt','sourceBundleSha256','companyCount','progressCount')},ensure_ascii=False))
-          summarize('REPO INDEX 421A',company)
-          shard=next(s for s in manifest['detailShards'] if s['file']==company['detailFile'])
-          detail_payload=json.loads(gzip.decompress(pathlib.Path('site/data/frontend/'+shard['file']).read_bytes()))
-          detail=next(c for c in detail_payload['companies'] if str(c['code'])==CODE)
-          summarize('REPO DETAIL 421A',detail)
-          print('REPO_DETAIL_FULL',json.dumps(detail,ensure_ascii=False,indent=2)[:30000])
-
-          # Live data
-          def get(url):
-              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Cache-Control':'no-cache'})
-              with urllib.request.urlopen(req,timeout=30) as r:
-                  return r.read(), dict(r.headers)
-          live_manifest_bytes,headers=get(BASE+'manifest.json?probe=421A')
-          live_manifest=json.loads(live_manifest_bytes)
-          print('LIVE_MANIFEST',json.dumps({k:live_manifest.get(k) for k in ('generatedAt','sourceBundleSha256','companyCount','progressCount')},ensure_ascii=False))
-          print('LIVE_MANIFEST_HEADERS',json.dumps({k:v for k,v in headers.items() if k.lower() in ('etag','last-modified','cache-control','server','x-nf-request-id')},ensure_ascii=False))
-          index_bytes,_=get(BASE+live_manifest['index']['file']+'?probe=421A')
-          print('LIVE_INDEX_SHA256',hashlib.sha256(index_bytes).hexdigest(),'EXPECTED',live_manifest['index']['sha256'],'BYTES',len(index_bytes))
-          live_index=json.loads(gzip.decompress(index_bytes))
-          live_company=next(c for c in live_index['companies'] if str(c['code'])==CODE)
-          summarize('LIVE INDEX 421A',live_company)
-          live_shard=next(s for s in live_manifest['detailShards'] if s['file']==live_company['detailFile'])
-          shard_bytes,_=get(BASE+live_shard['file']+'?probe=421A')
-          print('LIVE_SHARD_SHA256',hashlib.sha256(shard_bytes).hexdigest(),'EXPECTED',live_shard['sha256'],'BYTES',len(shard_bytes))
-          live_payload=json.loads(gzip.decompress(shard_bytes))
-          live_detail=next(c for c in live_payload['companies'] if str(c['code'])==CODE)
-          summarize('LIVE DETAIL 421A',live_detail)
-          print('LIVE_DETAIL_FULL',json.dumps(live_detail,ensure_ascii=False,indent=2)[:30000])
-
-          print('STATIC_MATCH', json.dumps({
-              'manifestSourceBundleMatches': manifest.get('sourceBundleSha256')==live_manifest.get('sourceBundleSha256'),
-              'indexSourceUrlMatches': company.get('sourceUrl')==live_company.get('sourceUrl'),
-              'detailSourceUrlMatches': detail.get('sourceUrl')==live_detail.get('sourceUrl'),
-              'detailObjectMatches': detail==live_detail
-          }, ensure_ascii=False))
+          import gzip, json, pathlib
+          manifest=json.loads(pathlib.Path('site/data/bundle.manifest.json').read_text())
+          raw=b''.join((pathlib.Path('site/data')/p['file']).read_bytes() for p in manifest['parts'])
+          bundle=json.loads(gzip.decompress(raw))
+          company=next(c for c in bundle['companies'] if str(c.get('code'))=='421A')
+          print('=== BUNDLE 421A FULL ===')
+          print(json.dumps(company,ensure_ascii=False,indent=2))
+          print('BUNDLE_KEYS',sorted(bundle.keys()))
           PY

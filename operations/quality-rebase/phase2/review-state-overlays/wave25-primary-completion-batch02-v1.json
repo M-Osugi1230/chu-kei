@@ -1,0 +1,23 @@
+{
+  "schemaVersion":"phase2-review-state-overlay-v1",
+  "createdAt":"2026-08-08T21:42:00+09:00",
+  "wave":25,
+  "batch":2,
+  "baseWaveFile":"operations/quality-rebase/phase2/primary-review-wave25-v1.json",
+  "previousOverlay":"operations/quality-rebase/phase2/review-state-overlays/wave25-primary-completion-batch01-v1.json",
+  "reason":"Wave25後半5社のGrowth開示を全文レビューし、正式中計の内包有無を明示分類してWave25一次レビューを10/10へ完了する。",
+  "expectedBase":{"primaryReviewComplete":241,"independentReviewReady":61,"remainingPrimaryReviews":209},
+  "companyCompletions":[
+    {"order":230,"code":"3187","name":"ミラタップ","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3187-primary-review-v1.json"},
+    {"order":234,"code":"3653","name":"モルフォ","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3653-primary-review-v1.json"},
+    {"order":247,"code":"2981","name":"ランディックス","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2981-primary-review-v1.json"},
+    {"order":257,"code":"3803","name":"イメージ情報開発","formalManagementPlanConfirmed":false,"status":"primary_growth_document_review_complete_legacy_plan_pending_new_management_plan_replacement_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3803-primary-review-v1.json"},
+    {"order":259,"code":"3905","name":"データセクション","formalManagementPlanConfirmed":false,"status":"primary_growth_document_review_complete_single_year_ai_infrastructure_plan_not_formal_management_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3905-primary-review-v1.json"}
+  ],
+  "completedChecksForAll":["sourceDocumentClassification","formalPlanBoundary","formalPlanExistenceWithinGrowthDocument","forecastActualAndTargetSeparation","fullTextReview","metricsValidation","capitalPolicyReview","shareholderReturnPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],
+  "pendingChecksForAll":["remainingVisualFigureReview","independentDoubleCheck"],
+  "effectiveCounts":{"wavePrimaryReviewComplete":10,"wavePrimaryReviewRemaining":0,"formalPlanEmbedded":6,"notCurrentFormalManagementPlan":4,"waveIndependentVisualReviewPending":10,"primaryReviewComplete":246,"independentReviewReady":61,"remainingPrimaryReviews":204,"deepVerificationApproved":0},
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":false
+}

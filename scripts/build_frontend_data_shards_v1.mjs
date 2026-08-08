@@ -7,6 +7,12 @@ const ROOT = path.resolve('.');
 const SOURCE_DIR = path.join(ROOT, 'site', 'data');
 const OUTPUT_DIR = path.join(SOURCE_DIR, 'frontend');
 const REPORT_DIR = path.join(ROOT, 'reports', 'v43');
+const PUBLICATION_OVERRIDE_PATH = path.join(
+  ROOT,
+  'operations',
+  'publication-overrides',
+  'company-data-overrides-v1.json',
+);
 const SHARD_SIZE = 20;
 const INDEX_INITIAL_BUDGET = 256 * 1024;
 const DETAIL_SHARD_BUDGET = 32 * 1024;
@@ -21,6 +27,7 @@ const compactSummary = value => {
   const text = String(value ?? '');
   return text.length > CARD_SUMMARY_LENGTH ? `${text.slice(0, CARD_SUMMARY_LENGTH)}…` : text;
 };
+const stableEqual = (left, right) => JSON.stringify(left) === JSON.stringify(right);
 
 const sourceManifest = JSON.parse(fs.readFileSync(path.join(SOURCE_DIR, 'bundle.manifest.json'), 'utf8'));
 const sourceCompressed = Buffer.concat(
@@ -28,6 +35,57 @@ const sourceCompressed = Buffer.concat(
 );
 if (sha256(sourceCompressed) !== sourceManifest.sha256) throw new Error('Source bundle SHA-256 mismatch');
 const source = JSON.parse(zlib.gunzipSync(sourceCompressed).toString('utf8'));
+
+let publicationOverrideMetadata = null;
+if (fs.existsSync(PUBLICATION_OVERRIDE_PATH)) {
+  const overrideBytes = fs.readFileSync(PUBLICATION_OVERRIDE_PATH);
+  const overrideDoc = JSON.parse(overrideBytes.toString('utf8'));
+  if (overrideDoc.schemaVersion !== 'company-publication-overrides-v1') {
+    throw new Error(`Unsupported publication override schema: ${overrideDoc.schemaVersion}`);
+  }
+  if (!Array.isArray(overrideDoc.overrides)) throw new Error('Publication overrides must be an array');
+
+  const companyByCode = new Map(source.companies.map(company => [String(company.code), company]));
+  const seenCodes = new Set();
+  const appliedCodes = [];
+  for (const entry of overrideDoc.overrides) {
+    const code = String(entry.code ?? '');
+    if (!code) throw new Error('Publication override is missing code');
+    if (seenCodes.has(code)) throw new Error(`Duplicate publication override code: ${code}`);
+    seenCodes.add(code);
+
+    const company = companyByCode.get(code);
+    if (!company) throw new Error(`Publication override company not found: ${code}`);
+    if (entry.name && company.name !== entry.name) {
+      throw new Error(`Publication override name mismatch for ${code}: ${company.name} !== ${entry.name}`);
+    }
+    if (!entry.expectedBefore || typeof entry.expectedBefore !== 'object' || Array.isArray(entry.expectedBefore)) {
+      throw new Error(`Publication override ${code} must define expectedBefore`);
+    }
+    if (!entry.updates || typeof entry.updates !== 'object' || Array.isArray(entry.updates)) {
+      throw new Error(`Publication override ${code} must define updates`);
+    }
+
+    for (const [key, expected] of Object.entries(entry.expectedBefore)) {
+      if (!stableEqual(company[key], expected)) {
+        throw new Error(
+          `Publication override precondition failed for ${code}.${key}: `
+          + `${JSON.stringify(company[key])} !== ${JSON.stringify(expected)}`,
+        );
+      }
+    }
+    for (const [key, value] of Object.entries(entry.updates)) company[key] = value;
+    appliedCodes.push(code);
+  }
+
+  publicationOverrideMetadata = {
+    schemaVersion: overrideDoc.schemaVersion,
+    file: path.relative(ROOT, PUBLICATION_OVERRIDE_PATH).split(path.sep).join('/'),
+    sha256: sha256(overrideBytes),
+    overrideCount: overrideDoc.overrides.length,
+    appliedCodes,
+  };
+}
 
 fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
 fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -110,6 +168,7 @@ const manifest = {
   version: 'frontend-data-manifest-v1',
   generatedAt: new Date().toISOString(),
   sourceBundleSha256: sourceManifest.sha256,
+  publicationOverrides: publicationOverrideMetadata,
   companyCount: source.companies.length,
   progressCount: source.progress.length,
   index: {
@@ -128,9 +187,10 @@ if (initialBytes > INDEX_INITIAL_BUDGET) {
 }
 
 const report = {
-  version: 'frontend-data-shards-v1.3',
+  version: 'frontend-data-shards-v1.4',
   generatedAt: manifest.generatedAt,
   sourceBundleSha256: sourceManifest.sha256,
+  publicationOverrides: publicationOverrideMetadata,
   companyCount: source.companies.length,
   structuredCompanyCount: source.companies.filter(company => ['core', 'detailed_extracted'].includes(company.stage)).length,
   indexBytes: indexCompressed.length,

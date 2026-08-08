@@ -1,0 +1,133 @@
+name: Deep visual remaining blockers
+
+on:
+  push:
+    branches:
+      - agent/deep-verification-probe
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          python3 -m pip install --quiet pillow
+      - name: Fetch official PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p pdfs rendered contacts key
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://ssl4.eir-parts.net/doc/175A/ir_material_for_fiscal_ym1/200999/00.pdf' -o pdfs/175A.pdf
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/05/release_20250519_01.pdf' -o pdfs/2146-base.pdf
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/11/release_20251113_05.pdf' -o pdfs/2146-revision.pdf
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www2.jpx.co.jp/disc/27640/140120260225568568.pdf' -o pdfs/2764.pdf
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www2.jpx.co.jp/disc/31750/140120260529555629.pdf' -o pdfs/3175.pdf
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www.nipponpaint-holdings.com/ir/assets/files/name/20260213ir02_2j.pdf' -o pdfs/4612.pdf
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf' -o pdfs/6036.pdf
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www2.jpx.co.jp/disc/60500/140120251217521239.pdf' -o pdfs/6050.pdf
+          sha256sum pdfs/*.pdf
+          pdfinfo pdfs/175A.pdf | grep '^Pages:'
+          pdfinfo pdfs/2146-base.pdf | grep '^Pages:'
+          pdfinfo pdfs/2146-revision.pdf | grep '^Pages:'
+          pdfinfo pdfs/2764.pdf | grep '^Pages:'
+          pdfinfo pdfs/3175.pdf | grep '^Pages:'
+          pdfinfo pdfs/4612.pdf | grep '^Pages:'
+          pdfinfo pdfs/6036.pdf | grep '^Pages:'
+          pdfinfo pdfs/6050.pdf | grep '^Pages:'
+      - name: Render all pages and contact sheets
+        shell: bash
+        run: |
+          set -euo pipefail
+          for name in 175A 2146-base 2146-revision 2764 3175 4612 6036 6050; do
+            mkdir -p rendered/$name
+            pdftoppm -jpeg -jpegopt quality=78 -r 72 pdfs/$name.pdf rendered/$name/page >/dev/null 2>&1
+          done
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps, ImageDraw
+          root=Path('rendered'); out=Path('contacts'); out.mkdir(exist_ok=True)
+          for folder in sorted(p for p in root.iterdir() if p.is_dir()):
+              files=sorted(folder.glob('page-*.jpg'))
+              # Natural numeric sort.
+              files=sorted(files, key=lambda p:int(p.stem.split('-')[-1]))
+              per=12; cols=3; rows=4
+              for batch_start in range(0,len(files),per):
+                  batch=files[batch_start:batch_start+per]
+                  thumbs=[]
+                  for idx,p in enumerate(batch,batch_start+1):
+                      im=Image.open(p).convert('RGB')
+                      im.thumbnail((520,360))
+                      canvas=Image.new('RGB',(540,395),'white')
+                      canvas.paste(im,((540-im.width)//2,20))
+                      ImageDraw.Draw(canvas).text((8,5),f'PDF page {idx}',fill='black')
+                      thumbs.append(canvas)
+                  sheet=Image.new('RGB',(cols*540,rows*395),'white')
+                  for i,im in enumerate(thumbs):
+                      sheet.paste(im,((i%cols)*540,(i//cols)*395))
+                  first=batch_start+1; last=batch_start+len(batch)
+                  sheet.save(out/f'{folder.name}-pages-{first:02d}-{last:02d}.jpg',quality=88)
+          PY
+      - name: Render key pages high resolution
+        shell: bash
+        run: |
+          set -euo pipefail
+          render_key() { pdf="$1"; page="$2"; out="$3"; pdftoppm -f "$page" -singlefile -png -r 165 "$pdf" "key/$out"; }
+          render_key pdfs/175A.pdf 5 175A-p05-boundary
+          render_key pdfs/175A.pdf 27 175A-p27-financial
+          render_key pdfs/175A.pdf 28 175A-p28-kpi
+          render_key pdfs/175A.pdf 29 175A-p29-kpi
+          render_key pdfs/175A.pdf 31 175A-p31-capital
+
+          render_key pdfs/2146-base.pdf 1 2146-base-p01
+          render_key pdfs/2146-base.pdf 8 2146-base-p08
+          render_key pdfs/2146-base.pdf 24 2146-base-p24
+          render_key pdfs/2146-base.pdf 42 2146-base-p42
+          render_key pdfs/2146-revision.pdf 1 2146-rev-p01
+          render_key pdfs/2146-revision.pdf 3 2146-rev-p03-financial
+          render_key pdfs/2146-revision.pdf 4 2146-rev-p04-targets
+          render_key pdfs/2146-revision.pdf 9 2146-rev-p09-capital
+          render_key pdfs/2146-revision.pdf 10 2146-rev-p10-return
+
+          render_key pdfs/2764.pdf 40 2764-p40-investment
+          render_key pdfs/2764.pdf 42 2764-p42-investment
+          render_key pdfs/2764.pdf 44 2764-p44-investment
+          render_key pdfs/2764.pdf 46 2764-p46-revised-targets
+          render_key pdfs/2764.pdf 47 2764-p47-return
+          render_key pdfs/2764.pdf 49 2764-p49-terminal
+          render_key pdfs/2764.pdf 50 2764-p50-appendix
+          render_key pdfs/2764.pdf 51 2764-p51-cashflow
+
+          render_key pdfs/3175.pdf 3 3175-p03-financial
+          render_key pdfs/3175.pdf 19 3175-p19-investment
+          render_key pdfs/3175.pdf 20 3175-p20-targets
+          render_key pdfs/3175.pdf 21 3175-p21-leverage
+          render_key pdfs/3175.pdf 22 3175-p22-return
+
+          render_key pdfs/4612.pdf 24 4612-p24-nonfinancial
+          render_key pdfs/4612.pdf 25 4612-p25-nonfinancial
+
+          render_key pdfs/6036.pdf 21 6036-p21-targets
+          render_key pdfs/6036.pdf 23 6036-p23-segment
+          render_key pdfs/6036.pdf 24 6036-p24-investment
+          render_key pdfs/6036.pdf 25 6036-p25-return
+          render_key pdfs/6036.pdf 26 6036-p26-targets
+          render_key pdfs/6036.pdf 28 6036-p28-network
+
+          render_key pdfs/6050.pdf 7 6050-p07-financial
+          render_key pdfs/6050.pdf 10 6050-p10-business-model
+          render_key pdfs/6050.pdf 14 6050-p14-capital-return
+
+          sha256sum contacts/* key/*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deep-visual-remaining-evidence
+          path: |
+            contacts/*
+            key/*
+          if-no-files-found: error
+          retention-days: 7

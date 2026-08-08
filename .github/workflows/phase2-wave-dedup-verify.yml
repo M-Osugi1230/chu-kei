@@ -1,0 +1,42 @@
+name: Verify Phase 2 Wave Dedup
+
+on:
+  push:
+    branches:
+      - agent/phase2-wave-dedup
+    paths:
+      - '.github/workflows/phase2-wave-dedup-verify.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assert unique company codes and orders across waves
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from collections import defaultdict
+          from pathlib import Path
+          root = Path('operations/quality-rebase/phase2')
+          by_code = defaultdict(list)
+          by_order = defaultdict(list)
+          for path in sorted(root.glob('primary-review-wave*-v1.json')):
+              data = json.loads(path.read_text(encoding='utf-8'))
+              for c in data.get('companies', []):
+                  code = str(c.get('code','')).strip()
+                  order = c.get('order')
+                  by_code[code].append(path.name)
+                  by_order[order].append(path.name)
+          duplicate_codes = {k:v for k,v in by_code.items() if k and len(v)>1}
+          duplicate_orders = {k:v for k,v in by_order.items() if k is not None and len(v)>1}
+          print('duplicate_codes=', duplicate_codes)
+          print('duplicate_orders=', duplicate_orders)
+          if duplicate_codes or duplicate_orders:
+              raise SystemExit('duplicate Phase 2 wave assignments remain')
+          print(f'unique_codes={len(by_code)} unique_orders={len(by_order)}')
+          PY

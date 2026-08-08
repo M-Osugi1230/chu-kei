@@ -1,0 +1,46 @@
+name: Verify Phase 2 Generator Review File Guard
+
+on:
+  push:
+    branches:
+      - agent/phase2-generator-review-file-guard
+    paths:
+      - '.github/workflows/phase2-generator-review-file-guard-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate next-wave selection excludes canonical review files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/generate_phase2_next_primary_review_wave.py \
+            --repo-root . \
+            --target-count 10 \
+            --include-growth-documents \
+            --check | tee /tmp/next-wave.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          output = json.loads(Path('/tmp/next-wave.json').read_text(encoding='utf-8'))
+          selected = {str(item['code']) for item in output['companies']}
+          reviewed = {
+              path.name.removesuffix('-primary-review-v1.json')
+              for path in Path('operations/quality-rebase/phase2/reviews').glob('*-primary-review-v1.json')
+          }
+          overlap = sorted(selected & reviewed)
+          print('selected=', sorted(selected))
+          print('review_file_overlap=', overlap)
+          if overlap:
+              raise SystemExit(f'generator selected already-reviewed companies: {overlap}')
+          print(f'review_files={len(reviewed)} overlap=0')
+          PY

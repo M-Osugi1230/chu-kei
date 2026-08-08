@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"6302","name":"住友重機械工業"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6302-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6302-independent-review-v1.json",
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/6302-independent-source-resolution-v1.json",
+  "source": {
+    "title": "中期経営計画2026／2025年2月14日目標見直し",
+    "officialUrl": "https://www.shi.co.jp/ir/policy/plan/pdf/2026management_plan.pdf",
+    "pdfSha256": "c7d81a5d04b6cee3753078d5208183b0f63ed117234b9cd0875ce786a16be375",
+    "pageCount": 25
+  },
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity_and_boundary","status":"confirmed","evidencePdfPages":[1,7],"result":"会社公式経営計画ページから現行25ページ元計画を確認し、Phase 2収集正本のURL・SHA-256・25ページをcanonicalへ固定した。旧mt p2026.pdfのURL/hashは取得時点の監査履歴として保持する。"},
+    {"id":"official_revision_source","status":"confirmed","result":"2025年2月14日の会社公式1ページ『中期経営計画の目標見直しに関するお知らせ』を独立に開き、2026年12月期の現行財務目標を上書きする公式補足正本であることを画像確認した。binary SHA-256再計算のみ最終Deep Verificationへ残す。"},
+    {"id":"revised_financial_targets","status":"confirmed","result":"公式見直し通知で2026年12月期の受注高12,000億円、売上高11,730億円、営業利益800億円、営業利益率6.8%、ROIC7.0%、参考ROE7.8%を独立に確認した。"},
+    {"id":"previous_target_exclusion","status":"confirmed","evidencePdfPages":[7],"result":"元計画の受注高12,800億円、売上高12,500億円、営業利益1,000億円、営業利益率8.0%、ROIC8.0%、ROE10.0%は改定前目標として分離し、現行目標として表示しない。"},
+    {"id":"strategy_structure","status":"confirmed","evidencePdfPages":[3,4,5,9,11,12,14],"result":"収益力改善、資本効率向上、新事業探索、重点領域投資、人的資本・DX・サステナビリティを中期経営計画2026の戦略構造として確認した。"},
+    {"id":"investment_policy","status":"confirmed","evidencePdfPages":[7,20],"result":"2024～2026年度3カ年累計の設備投資1,900億円、研究開発投資900億円を確認し、会社公式経営計画ページでも現在維持されていることを確認した。"},
+    {"id":"shareholder_return","status":"confirmed","result":"会社公式の最新『市場との対話』で、中計最終年度DOE3.5%以上、期間中最低配当125円、総還元性向40%以上を基本方針とし、株価・財務バランスを踏まえ機動的自己株式取得を継続する方針を確認した。"}
+  ],
+  "crossChecks": {
+    "collectionIntegrity": {
+      "file": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-02/6302/collection.json",
+      "sourceUrlMatched": true,
+      "pdfSha256Matched": true,
+      "pageCountMatched": true
+    },
+    "revisionReview": {
+      "officialLandingPageConfirmed": true,
+      "officialOnePagePdfConfirmed": true,
+      "revisedTargetsVisuallyConfirmed": true,
+      "revisionPdfSha256Recalculated": false
+    },
+    "visualReview": {
+      "originalTargetPageConfirmed": true,
+      "revisionTargetPageConfirmed": true,
+      "investmentPolicyConfirmed": true,
+      "shareholderReturnOfficialPageConfirmed": true
+    }
+  },
+  "finalDeepVerificationBlockers": ["revision_pdf_sha256_recalculation"],
+  "review": {
+    "minimumDistinctReviewers": 2,
+    "reviewRole": "independent_reviewer",
+    "primaryReviewerMustNotSelfApprove": true,
+    "completedAt": "2026-08-08T19:05:00+09:00",
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "result": "confirmed_after_base_and_revision_source_repair"
+  }
+}

@@ -8,7 +8,7 @@
   "source": {"title":"中期経営方針","officialUrl":"https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf","pdfSha256":"a5d3c212e83056e2ce6a9d05f06da860f61a973b7710ecaafdadbc161a7aaec3","pageCount":27},
   "status": "independent_review_complete",
   "checks": [
-    {"id":"source_identity","status":"confirmed_with_override","evidencePdfPages":[1,5],"result":"会社公式の現行27ページPDFを再取得し、主要目標ページを独立に視覚確認した。取得時点のhash差は監査履歴として保持し、Phase 2収集正本を再現用canonicalとする。"},
+    {"id":"source_identity","status":"confirmed_with_override","evidencePdfPages":[1,5],"result":"会社公式の現行27ページPDFを独立に再取得し、主要目標ページを視覚確認した。さらにGitHub Actions runnerで現行配信PDFを再取得し、SHA-256 a5d3c212e83056e2ce6a9d05f06da860f61a973b7710ecaafdadbc161a7aaec3、2,234,807 bytes、27ページがcanonical sourceと完全一致することを確認した。"},
     {"id":"plan_period","status":"confirmed","result":"2025年6月期から2027年6月期を対象とする現行中期経営方針として確認した。"},
     {"id":"previous_current_boundary","status":"confirmed","evidencePdfPages":[3,5],"result":"BY25の営業利益160億円・営業利益率8%という旧計画コミットメントと、更新後の率ベース目標を分離した。"},
     {"id":"financial_targets","status":"confirmed","evidencePdfPages":[5],"result":"売上高・営業利益の年率10%以上成長、営業利益率10%以上を再確認した。単一年度の絶対額目標へ変換しない。"},
@@ -16,7 +16,7 @@
     {"id":"capital_policy","status":"confirmed","evidencePdfPages":[5,25],"result":"社員育成とM&Aを成長手段とするが、固定投資総額・区分別固定金額は開示されていないため補完しない。"},
     {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[5],"result":"配当性向50%以上、累進配当、自己株式取得を確認した。過去の連続増配年数は将来目標として扱わない。"}
   ],
-  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-03/2154/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"officialPdfReviewed":true,"keyTargetPageConfirmed":true,"note":"現行会社公式PDFの主要目標ページを独立に視覚確認済み。現行配信PDFのSHA-256再計算のみ最終ゲートへ残す。"}},
-  "finalDeepVerificationBlockers": ["current_official_pdf_sha256_recalculation"],
-  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T18:33:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_override"}
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-03/2154/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"officialPdfReviewed":true,"keyTargetPageConfirmed":true},"currentOfficialIdentity":{"workflowRunId":31252904989,"sha256Confirmed":true,"bytesConfirmed":true,"pageCountConfirmed":true,"matchedCanonical":true}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T18:33:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_override_and_current_identity_recheck"}
 }

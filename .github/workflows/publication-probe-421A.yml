@@ -13,18 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Locate 421A source and bundle build path
+      - name: Inspect 421A bundle object and build path
         shell: bash
         run: |
-          set -euo pipefail
+          set -u
           echo '=== GIT GREP 421A ==='
-          git grep -n -I -E '421A|ムービン・ストラテジック・キャリア' -- ':!site/data/bundle.part.*' ':!site/data/frontend/*.gz' | head -n 300 || true
-          echo '=== BUNDLE MANIFEST BUILD REFERENCES ==='
-          git grep -n -I 'bundle.manifest.json' -- scripts .github package.json README.md docs | head -n 200 || true
+          git grep -n -I -E '421A|ムービン・ストラテジック・キャリア' -- ':!site/data/bundle.gz.part*' ':!site/data/frontend/*.gz' | head -n 300 || true
+          echo '=== BUNDLE BUILD REFERENCES ==='
+          git grep -n -I 'bundle.manifest.json' -- scripts .github package.json README.md docs 2>/dev/null | head -n 200 || true
           echo '=== FRONTEND BUILD REFERENCES ==='
-          git grep -n -I -E 'build_frontend_data_shards|frontend-data|company-index.json.gz' -- scripts .github package.json README.md docs | head -n 200 || true
-          echo '=== SOURCE GENERATOR CANDIDATES ==='
-          find src data scripts -maxdepth 3 -type f \( -name '*.json' -o -name '*.mjs' -o -name '*.js' -o -name '*.py' \) -print | sort | head -n 500
+          git grep -n -I -E 'build_frontend_data_shards|data:frontend|company-index.json.gz' -- scripts .github package.json README.md docs 2>/dev/null | head -n 200 || true
 
           python3 - <<'PY'
           import gzip, json, pathlib
@@ -32,7 +30,10 @@ jobs:
           raw=b''.join((pathlib.Path('site/data')/p['file']).read_bytes() for p in manifest['parts'])
           bundle=json.loads(gzip.decompress(raw))
           company=next(c for c in bundle['companies'] if str(c.get('code'))=='421A')
+          print('=== BUNDLE MANIFEST ===')
+          print(json.dumps({k:manifest.get(k) for k in ['sha256','companyCount','progressCount','compressedBytes','uncompressedBytes']},ensure_ascii=False,indent=2))
           print('=== BUNDLE 421A FULL ===')
           print(json.dumps(company,ensure_ascii=False,indent=2))
-          print('BUNDLE_KEYS',sorted(bundle.keys()))
+          print('=== BUNDLE KEYS ===')
+          print(sorted(bundle.keys()))
           PY

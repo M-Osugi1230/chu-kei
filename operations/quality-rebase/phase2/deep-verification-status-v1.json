@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "quality-rebase-phase2-deep-verification-status-v1",
+  "generatedAt": "2026-08-08T19:30:00+09:00",
+  "basis": {
+    "independentReviewStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
+    "completionDirectory": "operations/quality-rebase/phase2/independent-completions",
+    "inventoryWorkflowRunId": 31252842408,
+    "hashRecheckWorkflowRunId": 31252904989
+  },
+  "counts": {
+    "independentReviewComplete": 61,
+    "sourceIdentityBlocked": 0,
+    "deepVerificationApproved": 0,
+    "companiesWithExplicitFinalBlockers": 11,
+    "readyForSeparateFinalReview": 50,
+    "explicitBlockerInstances": 12
+  },
+  "blockerTypeCounts": {
+    "independent_visual_render_recheck": 4,
+    "capital_allocation_and_shareholder_return_visual_render_recheck": 1,
+    "financial_target_visual_render_recheck": 1,
+    "full_base_and_revision_visual_sequence_recheck": 1,
+    "post_publication_link_and_render_check": 1,
+    "public_eir_render_recheck": 1,
+    "regional_nonfinancial_visual_render_recheck": 1,
+    "shareholder_return_independent_screenshot_recheck": 1,
+    "strategy_and_shareholder_return_full_visual_render_recheck": 1
+  },
+  "blockedCompanies": [
+    {"code":"175A","name":"Will Smart","blockers":["public_eir_render_recheck"]},
+    {"code":"2146","name":"UTグループ","blockers":["full_base_and_revision_visual_sequence_recheck"]},
+    {"code":"2764","name":"ひらまつ","blockers":["independent_visual_render_recheck"]},
+    {"code":"3175","name":"エー・ピーホールディングス","blockers":["independent_visual_render_recheck"]},
+    {"code":"3646","name":"駅探","blockers":["strategy_and_shareholder_return_full_visual_render_recheck"]},
+    {"code":"421A","name":"ムービン・ストラテジック・キャリア","blockers":["shareholder_return_independent_screenshot_recheck","post_publication_link_and_render_check"]},
+    {"code":"4612","name":"日本ペイントホールディングス","blockers":["regional_nonfinancial_visual_render_recheck"]},
+    {"code":"6036","name":"KeePer技研","blockers":["independent_visual_render_recheck"]},
+    {"code":"6050","name":"イー・ガーディアン","blockers":["independent_visual_render_recheck"]},
+    {"code":"6089","name":"ウィルグループ","blockers":["capital_allocation_and_shareholder_return_visual_render_recheck"]},
+    {"code":"6822","name":"大井電気","blockers":["financial_target_visual_render_recheck"]}
+  ],
+  "resolvedInThisBatch": [
+    {
+      "code":"2154",
+      "name":"オープンアップグループ",
+      "resolvedBlocker":"current_official_pdf_sha256_recalculation",
+      "evidence":"現行会社公式27ページPDFをGitHub Actions runnerから直接再取得し、SHA-256 a5d3c212e83056e2ce6a9d05f06da860f61a973b7710ecaafdadbc161a7aaec3、2,234,807 bytesでcanonicalと完全一致。"
+    },
+    {
+      "code":"6302",
+      "name":"住友重機械工業",
+      "resolvedBlocker":"revision_pdf_sha256_recalculation",
+      "evidence":"2025年2月14日公式改定通知をGitHub Actions runnerから直接再取得し、1ページ、112,465 bytes、SHA-256 690ad252a6b8f244bbb864424497547c0f479dc61b6857d1b6bf041b26ebff5bを確定。"
+    }
+  ],
+  "policy": {
+    "absenceOfExplicitBlockerDoesNotEqualApproval": true,
+    "deepVerificationRequiresSeparateFinalReview": true,
+    "independentReviewerMustNotSelfApproveFinalGate": true,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "nextQueue": {
+    "priority1": "独立視覚再確認系11社を処理し、completionのfinalDeepVerificationBlockersを実証ベースで解消する。",
+    "priority2": "ブロッカーなし50社は別担当のfinal reviewerへ回し、独立レビュー担当と分離した最終承認記録を作成する。",
+    "priority3": "公開後リンク・レンダリング確認が必要な項目は実公開状態を確認できた場合のみ解除する。"
+  }
+}

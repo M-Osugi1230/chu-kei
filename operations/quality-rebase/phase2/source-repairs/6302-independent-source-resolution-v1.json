@@ -2,8 +2,8 @@
   "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
   "company": {"code":"6302","name":"住友重機械工業"},
   "detectedAt": "2026-08-08T05:41:00+09:00",
-  "resolvedAt": "2026-08-08T19:05:00+09:00",
-  "resolutionStatus": "base_plan_collection_canonical_revision_officially_reconnected",
+  "resolvedAt": "2026-08-08T19:30:00+09:00",
+  "resolutionStatus": "base_plan_collection_canonical_revision_identity_verified",
   "collectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-02/6302/collection.json",
   "independentReviewPacket": "operations/quality-rebase/phase2/independent/6302-independent-review-v1.json",
   "canonicalSource": {
@@ -22,10 +22,16 @@
     "officialUrl": "https://www.shi.co.jp/info/2025/6kgpsq000000nry1-att/6kgpsq000000nryo.pdf",
     "publishedDate": "2025-02-14",
     "pageCount": 1,
-    "pdfSha256": null,
+    "pdfBytes": 112465,
+    "pdfSha256": "690ad252a6b8f244bbb864424497547c0f479dc61b6857d1b6bf041b26ebff5b",
     "role": "2026年12月期の現行財務目標を上書きする公式補足正本"
   },
-  "resolutionEvidence": "会社公式経営計画ページが現行の中期経営計画2026として25ページ元計画を掲載し、2025年2月に目標を見直したことを明示している。元計画の主要目標図表と、2025年2月14日の1ページ公式見直し通知を独立に画像確認した。戦略・3カ年投資方針は元計画、現行財務目標は公式見直し通知へ接続する。改定通知PDFのbinary SHA-256再計算だけを最終Deep Verificationへ残す。",
+  "resolutionEvidence": "会社公式経営計画ページが現行の中期経営計画2026として25ページ元計画を掲載し、2025年2月に目標を見直したことを明示している。元計画の主要目標図表と2025年2月14日の1ページ公式見直し通知を独立に画像確認した。さらにGitHub Actions runnerで改定通知PDFを公式URLから直接再取得し、SHA-256 690ad252a6b8f244bbb864424497547c0f479dc61b6857d1b6bf041b26ebff5b、112,465 bytes、1ページを確定した。戦略・3カ年投資方針は元計画、現行財務目標は公式見直し通知へ接続する。",
+  "identityProbe": {
+    "workflowRunId": 31252904989,
+    "method": "GitHub Actions runner direct official-PDF fetch plus pypdf page count and sha256",
+    "revisionSha256Confirmed": true
+  },
   "confirmedCurrentFinancialTargets": {
     "orders": "12,000億円",
     "sales": "11,730億円",
@@ -39,7 +45,7 @@
     "researchAndDevelopmentThreeYears": "900億円"
   },
   "independentReviewCompletionBlocked": false,
-  "finalDeepVerificationBlockers": ["revision_pdf_sha256_recalculation"],
+  "finalDeepVerificationBlockers": [],
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false

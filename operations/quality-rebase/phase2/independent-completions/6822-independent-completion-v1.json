@@ -8,13 +8,13 @@
   "checks": [
     {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,23],"result":"2026年5月15日公表の23ページ中期経営計画であり、Phase 2収集正本とURL・SHA-256・ページ数が一致する。"},
     {"id":"plan_boundary","status":"confirmed","evidencePdfPages":[6,8,10,12],"result":"2023-2025前中計、FY2026単年度予想、FY2028中計目標、長期ビジョン2035を分離した。"},
-    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[12,20],"result":"FY2028売上高404億円、営業利益21億円、営業利益率5.20%、ROE10%以上、期間内PBR1.0倍以上をcanonical PDF本文と会社公式情報で再確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[12,20],"result":"FY2028売上高404億円、営業利益21億円、営業利益率5.20%、ROE10%以上、期間内PBR1.0倍以上をcanonical PDF本文と会社公式情報で再確認した。さらに公式PDFの業績目標図表を独立レンダリングし、FY2026予想40,200百万円・営業利益1,600百万円・営業利益率3.98%と、FY2028計画40,400百万円・2,100百万円・5.20%を画像で確認した。"},
     {"id":"capital_allocation","status":"confirmed","evidencePdfPages":[19],"result":"営業CF約80億円、資産売却約7億円を原資に、研究開発30～40億円、設備投資10～20億円、財務基盤10～20億円、株主還元を含む資本政策3～10億円へ配分する図表を独立に確認した。"},
     {"id":"capital_efficiency","status":"confirmed","evidencePdfPages":[20],"result":"ROE10%以上、PBR1.0倍以上、株主資本コスト7%程度を意識する資本効率方針を図表で確認した。"},
     {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[19,21],"result":"FY2025配当実績を基準に累進的配当を意識し、将来的なDOE採用を検討、成長投資・財務基盤とのバランスを踏まえ機動的自己株取得も検討する方針を確認した。固定DOE・配当性向は補完しない。"},
     {"id":"nonfinancial","status":"confirmed","evidencePdfPages":[18],"result":"非財務部分はマテリアリティ方針中心で、計画上の数値目標として未開示の値を登録しない。"}
   ],
-  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6822/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"capitalAllocationPageConfirmed":true,"capitalEfficiencyPageConfirmed":true,"financialTargetPageRenderComplete":false,"note":"キャピタルアロケーションと資本効率ページは独立に視覚確認済み。財務目標ページはcanonical PDF本文・会社公式情報で再確認したが、独立レンダリング再確認を最終Deep Verificationゲートに残す。"}},
-  "finalDeepVerificationBlockers": ["financial_target_visual_render_recheck"],
-  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:52:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_with_visual_recheck_blocker"}
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6822/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"visualReview":{"capitalAllocationPageConfirmed":true,"capitalEfficiencyPageConfirmed":true,"financialTargetPageRenderComplete":true,"financialTargetRenderWorkflowRunId":31253283774,"financialTargetRenderArtifactId":9020658256,"financialTargetRenderedPdfPage":13,"financialTargetFigureConfirmed":true,"note":"GitHub Actions runnerでcanonical公式PDFを取得し、PDF13ページの業績目標図表をPNG化して独立画像確認した。FY2028売上高40,400百万円、営業利益2,100百万円、営業利益率5.20%を図表から確認済み。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T06:52:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_financial_target_visual_recheck"}
 }

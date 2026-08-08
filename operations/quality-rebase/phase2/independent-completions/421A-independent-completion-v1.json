@@ -20,33 +20,15 @@
     {"id":"organic_growth_and_ma_separation","status":"confirmed","evidencePdfPages":[3,4],"result":"FY28売上高100億円とFY25～FY28売上CAGR約38%はオーガニック成長のみの目標で、M&Aはプラスアルファの上積みであることを確認した。"},
     {"id":"advisor_kpis","status":"confirmed","evidencePdfPages":[3,6],"result":"キャリアアドバイザー数はFY26期末150人、FY27期末200人超、FY28期末260人超、一人当たり売上高はFY26～FY28各357万円/月を維持する計画であることを訂正版で再確認した。"},
     {"id":"strategy_structure","status":"confirmed","evidencePdfPages":[3,6,7,10,27,28],"result":"クライアントシフト、求職者集客・DB活用、AIによる早期戦力化、人員拡大、生涯キャリアハブ、M&Aの戦略構造を確認した。訂正前PDF16頁以降は訂正版で1ページ前倒しになるため、後半証跡は訂正版ページへ再マッピングした。"},
-    {"id":"capital_and_shareholder_return","status":"confirmed","evidencePdfPages":[10],"result":"キャリアアドバイザー採用、M&A、生涯キャリアハブ構想、AIシステム等の利益成長投資を優先し、適切な投資機会がなくなった段階で余剰資金の自己株式取得・配当等を検討する方針を確認した。固定投資額・固定配当性向は開示されていないため補完しない。"},
+    {"id":"capital_and_shareholder_return","status":"confirmed","evidencePdfPages":[10],"result":"公式訂正版PDFの株主還元ページを独立レンダリングし、まず利益成長に寄与するCA採用、AIシステム、M&A、生涯キャリアハブ構想への投資を優先し、適切な投資機会がなくなった段階で余剰資金の自社株買い・配当・デジタルギフト等の直接還元を検討する優先順位を画像で確認した。固定投資額・固定配当性向は開示されていないため補完しない。"},
     {"id":"page_mapping","status":"confirmed","result":"訂正前PDF1～14頁は訂正版1～14頁に対応し、訂正前PDF15頁を削除、訂正前PDF16～37頁は訂正版15～36頁へ1ページ前倒しする監査マッピングをsource correctionへ保存した。"}
   ],
   "crossChecks": {
-    "collectionIntegrity": {
-      "file": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/421A/collection.json",
-      "sourceUrlMatched": true,
-      "pdfSha256Matched": true,
-      "pageCountMatched": true
-    },
-    "identityProbe": {
-      "workflowRunId": 31252560350,
-      "correctedPdfFetched": true,
-      "correctedPdfSha256Confirmed": true,
-      "correctionNoticeFetched": true,
-      "correctionNoticeSha256Confirmed": true,
-      "originalPdfFetched": true
-    },
-    "visualReview": {
-      "correctedExecutiveSummaryConfirmed": true,
-      "correctedAdvisorKpiPageConfirmed": true,
-      "financialTargetPageTextAndFigureConfirmed": true,
-      "shareholderReturnTextConfirmed": true,
-      "shareholderReturnIndependentScreenshotComplete": false
-    }
+    "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/421A/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
+    "identityProbe": {"workflowRunId":31252560350,"correctedPdfFetched":true,"correctedPdfSha256Confirmed":true,"correctionNoticeFetched":true,"correctionNoticeSha256Confirmed":true,"originalPdfFetched":true},
+    "visualReview": {"correctedExecutiveSummaryConfirmed":true,"correctedAdvisorKpiPageConfirmed":true,"financialTargetPageTextAndFigureConfirmed":true,"shareholderReturnTextConfirmed":true,"shareholderReturnIndependentScreenshotComplete":true,"renderWorkflowRunId":31253283774,"renderArtifactId":9020658256,"shareholderReturnRenderedPdfPage":10,"note":"GitHub Actions runnerで訂正版公式PDFを取得し、PDF10ページをPNG化。利益成長投資を優先し、投資機会枯渇後に自社株買い・配当等を検討する株主還元の優先順位を独立画像確認した。"}
   },
-  "finalDeepVerificationBlockers": ["shareholder_return_independent_screenshot_recheck","post_publication_link_and_render_check"],
+  "finalDeepVerificationBlockers": ["post_publication_link_and_render_check"],
   "review": {
     "minimumDistinctReviewers": 2,
     "reviewRole": "independent_reviewer",
@@ -54,6 +36,6 @@
     "completedAt": "2026-08-08T19:22:00+09:00",
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false,
-    "result": "confirmed_after_corrected_36_page_source_resolution"
+    "result": "confirmed_after_corrected_source_and_shareholder_return_visual_recheck"
   }
 }

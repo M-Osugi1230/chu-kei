@@ -1,0 +1,33 @@
+name: UT source probe
+
+on:
+  push:
+    branches:
+      - agent/ut-source-probe
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch official UT PDFs and print immutable identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -L --fail --retry 3 --connect-timeout 20 \
+            -A 'Mozilla/5.0' \
+            'https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/05/release_20250519_01.pdf' \
+            -o ut-fifth-plan.pdf
+          curl -L --fail --retry 3 --connect-timeout 20 \
+            -A 'Mozilla/5.0' \
+            'https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/11/release_20251113_05.pdf' \
+            -o ut-fifth-plan-revision.pdf
+          echo '=== SHA256 ==='
+          sha256sum ut-fifth-plan.pdf ut-fifth-plan-revision.pdf
+          echo '=== BYTES ==='
+          wc -c ut-fifth-plan.pdf ut-fifth-plan-revision.pdf
+          echo '=== PDF INFO ==='
+          pdfinfo ut-fifth-plan.pdf | grep -E '^(Pages|File size):' || true
+          pdfinfo ut-fifth-plan-revision.pdf | grep -E '^(Pages|File size):' || true

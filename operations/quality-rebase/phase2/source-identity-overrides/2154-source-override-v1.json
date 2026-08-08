@@ -2,14 +2,24 @@
   "schemaVersion": "quality-rebase-phase2-source-identity-override-v1",
   "company": {"code":"2154","name":"オープンアップグループ"},
   "createdAt": "2026-08-08T18:32:00+09:00",
+  "updatedAt": "2026-08-08T19:30:00+09:00",
   "repairFile": "operations/quality-rebase/phase2/source-repairs/2154-independent-source-resolution-v1.json",
   "canonicalSource": {
     "officialUrl": "https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf",
     "pdfSha256": "a5d3c212e83056e2ce6a9d05f06da860f61a973b7710ecaafdadbc161a7aaec3",
+    "pdfBytes": 2234807,
     "pageCount": 27
   },
+  "currentOfficialSourceRecheck": {
+    "pdfSha256": "a5d3c212e83056e2ce6a9d05f06da860f61a973b7710ecaafdadbc161a7aaec3",
+    "pdfBytes": 2234807,
+    "pageCount": 27,
+    "matchedCanonical": true,
+    "workflowRunId": 31252904989,
+    "method": "GitHub Actions runner direct official-PDF fetch plus pypdf page count and sha256"
+  },
   "supersededIndependentPacketSha256": "b97770392191df90b8c687f5f80acdb4281c5b65c6cadcba659fa2f97db0a7a1",
-  "resolution": "会社公式の現行27ページ中期経営方針を独立に再取得し、主要目標ページを視覚確認した。取得時点のPDFハッシュ差は監査履歴として保持し、再現用canonicalはPhase 2収集正本へ固定する。",
+  "resolution": "会社公式の現行27ページ中期経営方針を再取得し、主要目標ページを独立に視覚確認した。さらにGitHub Actions runnerから現行公式PDFを直接再取得し、SHA-256・byte数・ページ数がPhase 2 canonical sourceと完全一致することを確認した。旧独立パケットhashは取得時点の監査履歴として保持する。",
   "confirmedFacts": [
     "売上高・営業利益は年率10%以上成長",
     "営業利益率10%以上",
@@ -19,7 +29,7 @@
     "累進配当",
     "自己株式取得"
   ],
-  "finalDeepVerificationBlockers": ["current_official_pdf_sha256_recalculation"],
+  "finalDeepVerificationBlockers": [],
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false
 }

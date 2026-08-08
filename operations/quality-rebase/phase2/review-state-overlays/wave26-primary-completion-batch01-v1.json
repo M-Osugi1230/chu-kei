@@ -1,0 +1,23 @@
+{
+  "schemaVersion":"phase2-review-state-overlay-v1",
+  "createdAt":"2026-08-08T21:52:00+09:00",
+  "wave":26,
+  "batch":1,
+  "baseWaveFile":"operations/quality-rebase/phase2/primary-review-wave26-v1.json",
+  "previousWaveOverlay":"operations/quality-rebase/phase2/review-state-overlays/wave25-primary-completion-batch02-v1.json",
+  "reason":"Wave26前半5社のGrowth開示を全文レビューし、正式中計の内包有無、旧計画・単年度予想・中長期ロードマップとの境界を明示する。独立図表確認は未完了のため自動承認しない。",
+  "expectedBase":{"primaryReviewComplete":246,"independentReviewReady":61,"remainingPrimaryReviews":204},
+  "companyCompletions":[
+    {"order":276,"code":"4015","name":"ペイクラウドホールディングス","formalManagementPlanConfirmed":false,"status":"primary_growth_document_review_complete_completed_plan_and_2029_vision_not_current_formal_management_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4015-primary-review-v1.json"},
+    {"order":289,"code":"4888","name":"ステラファーマ","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_revised_forecasts_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/4888-primary-review-v1.json"},
+    {"order":294,"code":"6085","name":"アーキテクツ・スタジオ・ジャパン","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_phoenix_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6085-primary-review-v1.json"},
+    {"order":304,"code":"9270","name":"バリュエンスホールディングス","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_fy25_fy27_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/9270-primary-review-v1.json"},
+    {"order":316,"code":"246A","name":"アスア","formalManagementPlanConfirmed":false,"status":"primary_growth_document_review_complete_mid_long_term_roadmap_not_formal_management_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/246A-primary-review-v1.json"}
+  ],
+  "completedChecksForAll":["sourceDocumentClassification","formalPlanBoundary","formalPlanExistenceWithinGrowthDocument","forecastActualAndTargetSeparation","fullTextReview","metricsValidation","capitalPolicyReview","shareholderReturnPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],
+  "pendingChecksForAll":["remainingVisualFigureReview","independentDoubleCheck"],
+  "effectiveCounts":{"wavePrimaryReviewComplete":5,"wavePrimaryReviewRemaining":5,"formalPlanEmbedded":3,"notCurrentFormalManagementPlan":2,"waveIndependentVisualReviewPending":5,"primaryReviewComplete":251,"independentReviewReady":61,"remainingPrimaryReviews":199,"deepVerificationApproved":0},
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":false
+}

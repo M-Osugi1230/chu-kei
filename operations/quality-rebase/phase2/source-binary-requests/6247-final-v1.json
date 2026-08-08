@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "phase2-source-binary-request-v1",
+  "company": {"code":"6247","name":"日阪製作所"},
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/6247-independent-source-resolution-v1.json",
+  "outputEvidenceFile": "operations/quality-rebase/phase2/source-binary-evidence/6247-final-v1.json",
+  "officialPdf": {
+    "url": "https://www2.jpx.co.jp/disc/62470/140120260529554991.pdf",
+    "pageCount": 56,
+    "sourceRole": "current_official_jpx_challenge2028"
+  },
+  "purpose": "現行JPX公式PDFをrunnerから直接再取得し、SHA-256、バイト数、ページ数を固定して同一URL版差を解消する。レビュー承認は行わない。",
+  "requestedAt": "2026-08-08T21:14:00+09:00",
+  "retrySequence": 1,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false
+}

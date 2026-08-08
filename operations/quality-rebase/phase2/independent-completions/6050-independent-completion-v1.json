@@ -11,18 +11,29 @@
   },
   "status": "independent_review_complete",
   "checks": [
-    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,15],"result":"Phase 2収集正本・一次レビュー・独立レビューパケットでURL、PDF SHA-256、全15ページ、公表日2025年12月17日が一致する。外部の適時開示ミラーでも同日・同タイトル・3カ年計画を再確認した。"},
-    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[7],"result":"2026/2027/2028年9月期の売上高120/150/200億円、EBITDA17.5/20/25億円を確認した。"},
+    {"id":"source_identity","status":"confirmed","evidencePdfPages":[1,2,15],"result":"Phase 2収集正本でURL・PDF SHA-256・全15ページ・公表日2025年12月17日を固定した。最終視覚確認では同一JPX URLの現行15ページ再配信版を全ページ確認した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[7],"result":"2026/2027/2028年9月期の売上高120/150/200億円、EBITDA17.5/20/25億円を図表で再確認した。"},
     {"id":"business_model","status":"confirmed","evidencePdfPages":[10],"result":"売上高に占めるシステム・プロダクト販売比率について、中計期間30%と計画後5年の50%を異なる時間軸として確認した。"},
-    {"id":"strategy","status":"confirmed","evidencePdfPages":[4,6,9,11,12,13],"result":"AIシステム・プロダクト、AI×人の専門人材、サイバーセキュリティ、新事業、BPO・セキュリティ・テスト・AI領域のM&A戦略を確認した。"},
-    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[14],"result":"現預金約110億円、営業CF約40億円を確認。M&A・成長投資・基盤投資・株主還元の個別金額は資料上『●●百万円』で未開示のため、数値を推計・補完しない。"},
-    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[14],"result":"株主優待・配当による株主還元を重要視する定性的方針を確認。配当性向、DOE、自己株式取得額、還元総額の定量値は本資料では開示されていない。"}
+    {"id":"strategy","status":"confirmed","evidencePdfPages":[4,6,9,11,12,13],"result":"AIシステム・プロダクト、AI×人の専門人材、サイバーセキュリティ、新事業、BPO・セキュリティ・テスト・AI領域のM&A戦略を全ページ視覚確認した。"},
+    {"id":"capital_policy","status":"confirmed","evidencePdfPages":[14],"result":"現預金約110億円、営業CF約40億円を確認。M&A・成長投資・基盤投資・株主還元の個別金額は資料上未開示のため、数値を推計・補完しない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[14],"result":"株主優待・配当による株主還元を重要視する定性的方針を図表で確認。配当性向、DOE、自己株式取得額、還元総額の定量値は本資料では開示されていない。"}
   ],
   "crossChecks": {
     "collectionIntegrity": {"file":"operations/quality-rebase/phase2/bulk-collection/batch-05/wave-04/6050/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},
     "secondaryDisclosureMirror": {"url":"https://www.daiwair.co.jp/td_download.cgi?c=6050&i=3123145","confirmed":true,"note":"2025年12月17日公表、2026年9月期～2028年9月期の3カ年中期経営計画であることを別経路で再確認した。"},
-    "visualReview": {"jpxScreenshotAttempted":true,"jpxScreenshotCacheUnavailable":true,"note":"JPX PDFスクリーンショットはキャッシュミスで取得不能。独立レビューでは同一hashの収集正本、JPXページ別テキスト、別経路の適時開示を照合した。図表レンダリングの独立再確認は最終deep verificationの追加ゲートとして残す。"}
+    "visualReview": {
+      "fullCurrentOfficialSequenceRendered": true,
+      "renderedPageCount": 15,
+      "financialTargetsConfirmed": true,
+      "businessModelConfirmed": true,
+      "capitalAndReturnPageConfirmed": true,
+      "renderWorkflowRunId": 31253620625,
+      "renderArtifactId": 9020752641,
+      "renderArtifactDigest": "sha256:525a34d52e465d99089cb5d0aa52f9df55c8a9bd997afe1a1d204501a58e4a22",
+      "currentOfficialRenditionSha256": "fdf776b2e96e2f25f67ee3993a59c235c2cb5a29f0fefaf58802012f2b161a65",
+      "note":"同一JPX URLの現行15ページ版を全ページコンタクトシート化し、財務目標、AI/新事業戦略、資本配分・株主還元方針を画像確認した。現行配信byte hashは収集時と異なるが、ページ数・全体構成・主要事実の意味内容一致を確認した。"
+    }
   },
-  "finalDeepVerificationBlockers": ["independent_visual_render_recheck"],
-  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T08:54:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_with_visual_render_recheck_reserved_for_final_gate"}
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-07T08:54:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_full_independent_visual_recheck"}
 }

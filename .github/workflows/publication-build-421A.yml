@@ -1,0 +1,68 @@
+name: Publication build 421A
+
+on:
+  push:
+    branches:
+      - agent/publication-fix-421A
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: ${{ !contains(github.event.head_commit.message, '[skip publication-build-421A]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/publication-fix-421A
+          fetch-depth: 0
+      - name: Rebuild frontend shards with audited publication override
+        run: node scripts/build_frontend_data_shards_v1.mjs
+      - name: Verify 421A publication payload
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import gzip, json, pathlib, sys
+          root=pathlib.Path('site/data/frontend')
+          manifest=json.loads((root/'manifest.json').read_text())
+          overrides=manifest.get('publicationOverrides') or {}
+          assert overrides.get('appliedCodes') == ['421A'], overrides
+          assert overrides.get('overrideCount') == 1, overrides
+          index=json.loads(gzip.decompress((root/manifest['index']['file']).read_bytes()))
+          row=next(c for c in index['companies'] if str(c['code'])=='421A')
+          shard=next(s for s in manifest['detailShards'] if s['file']==row['detailFile'])
+          detail_payload=json.loads(gzip.decompress((root/shard['file']).read_bytes()))
+          detail=next(c for c in detail_payload['companies'] if str(c['code'])=='421A')
+          expected_url='https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf'
+          assert detail['sourceUrl']==expected_url, detail['sourceUrl']
+          assert '固定投資総額は未開示' in detail['capital'], detail['capital']
+          assert '適切な投資機会がなくなった段階' in detail['returnPolicy'], detail['returnPolicy']
+          assert detail['evidenceRefs'], 'missing evidenceRefs'
+          assert all(ref.get('url')==expected_url for ref in detail['evidenceRefs']), detail['evidenceRefs']
+          assert max(ref.get('page',0) for ref in detail['evidenceRefs']) <= 36, detail['evidenceRefs']
+          assert any('訂正版36ページ' in warning for warning in detail['warnings']), detail['warnings']
+          print(json.dumps({
+            'manifestGeneratedAt': manifest['generatedAt'],
+            'publicationOverrides': overrides,
+            'detailFile': row['detailFile'],
+            'sourceUrl': detail['sourceUrl'],
+            'capital': detail['capital'],
+            'returnPolicy': detail['returnPolicy'],
+            'maxEvidencePage': max(ref.get('page',0) for ref in detail['evidenceRefs']),
+            'evidenceCount': len(detail['evidenceRefs'])
+          }, ensure_ascii=False, indent=2))
+          PY
+      - name: Commit generated frontend data and remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/publication-build-421A.yml
+          git add site/data/frontend reports/v43/FRONTEND_DATA_SHARDS_V1_REPORT.json
+          echo '=== GENERATED DIFF ==='
+          git status --short
+          git diff --cached --stat
+          git commit -m 'quality: regenerate Movin frontend publication data [skip publication-build-421A]'
+          git push origin HEAD:agent/publication-fix-421A

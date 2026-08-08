@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-deep-verification-status-v1",
-  "generatedAt": "2026-08-08T19:45:00+09:00",
+  "generatedAt": "2026-08-08T18:45:00+09:00",
   "basis": {
     "independentReviewStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
     "completionDirectory": "operations/quality-rebase/phase2/independent-completions",
@@ -8,58 +8,67 @@
     "hashRecheckWorkflowRunId": 31252904989,
     "visualRenderWorkflowRunId": 31253283774,
     "visualRenderArtifactId": 9020658256,
-    "visualRenderArtifactDigest": "sha256:8613c9272453dd465ddb32f3d138b65a2a5a9395e8518884c80865570a14e162"
+    "visualRenderArtifactDigest": "sha256:8613c9272453dd465ddb32f3d138b65a2a5a9395e8518884c80865570a14e162",
+    "remainingVisualRenderWorkflowRunId": 31253620625,
+    "remainingVisualRenderArtifactId": 9020752641,
+    "remainingVisualRenderArtifactDigest": "sha256:525a34d52e465d99089cb5d0aa52f9df55c8a9bd997afe1a1d204501a58e4a22"
   },
   "counts": {
     "independentReviewComplete": 61,
     "sourceIdentityBlocked": 0,
     "deepVerificationApproved": 0,
-    "companiesWithExplicitFinalBlockers": 8,
-    "readyForSeparateFinalReview": 53,
-    "explicitBlockerInstances": 8
+    "companiesWithExplicitFinalBlockers": 1,
+    "readyForSeparateFinalReview": 60,
+    "explicitBlockerInstances": 1
   },
   "blockerTypeCounts": {
-    "independent_visual_render_recheck": 4,
-    "full_base_and_revision_visual_sequence_recheck": 1,
-    "post_publication_link_and_render_check": 1,
-    "public_eir_render_recheck": 1,
-    "regional_nonfinancial_visual_render_recheck": 1
+    "post_publication_link_and_render_check": 1
   },
   "blockedCompanies": [
-    {"code":"175A","name":"Will Smart","blockers":["public_eir_render_recheck"]},
-    {"code":"2146","name":"UTグループ","blockers":["full_base_and_revision_visual_sequence_recheck"]},
-    {"code":"2764","name":"ひらまつ","blockers":["independent_visual_render_recheck"]},
-    {"code":"3175","name":"エー・ピーホールディングス","blockers":["independent_visual_render_recheck"]},
-    {"code":"421A","name":"ムービン・ストラテジック・キャリア","blockers":["post_publication_link_and_render_check"]},
-    {"code":"4612","name":"日本ペイントホールディングス","blockers":["regional_nonfinancial_visual_render_recheck"]},
-    {"code":"6036","name":"KeePer技研","blockers":["independent_visual_render_recheck"]},
-    {"code":"6050","name":"イー・ガーディアン","blockers":["independent_visual_render_recheck"]}
+    {"code":"421A","name":"ムービン・ストラテジック・キャリア","blockers":["post_publication_link_and_render_check"]}
   ],
   "resolvedInThisBatch": [
     {
-      "code":"6822",
-      "name":"大井電気",
-      "resolvedBlocker":"financial_target_visual_render_recheck",
-      "evidence":"canonical公式PDF13ページの業績目標図表を独立レンダリングし、FY2028売上高40,400百万円、営業利益2,100百万円、営業利益率5.20%を画像確認。"
+      "code":"175A",
+      "name":"Will Smart",
+      "resolvedBlocker":"public_eir_render_recheck",
+      "evidence":"同一EIR URLの現行40ページ版を全ページコンタクトシート化し、2030年売上30億円・営業利益3.5億円・営業利益率12%、取引社数300社以上、自社PF売上比率70%以上、成長投資優先のキャピタルアロケーションを高解像度画像で確認した。"
     },
     {
-      "code":"3646",
-      "name":"駅探",
-      "resolvedBlocker":"strategy_and_shareholder_return_full_visual_render_recheck",
-      "evidence":"canonical公式PDFの戦略15・21～24ページと株主還元29ページを独立レンダリングし、インバウンドメディア、予約KPI、CGMプラットフォーム、DOE3%以上の安定配当、株主優待新設を画像確認。"
+      "code":"2146",
+      "name":"UTグループ",
+      "resolvedBlocker":"full_base_and_revision_visual_sequence_recheck",
+      "evidence":"第5次中計本体43ページと見直し10ページを全ページ連続レンダリングし、基礎戦略、見直し後年度別財務目標、技術職38,000人、人的資本株式報酬最大約100億円、ROE20%、Net D/E0.5倍以下、配当性向100%、最低配当10円を画像確認した。"
     },
     {
-      "code":"6089",
-      "name":"ウィルグループ",
-      "resolvedBlocker":"capital_allocation_and_shareholder_return_visual_render_recheck",
-      "evidence":"canonical公式PDF46・48・49ページを独立レンダリングし、キャッシュアロケーション、M&A3年間100億円、累進配当、総還元性向30%以上、機動的自己株式取得を画像確認。"
+      "code":"2764",
+      "name":"ひらまつ",
+      "resolvedBlocker":"independent_visual_render_recheck",
+      "evidence":"canonical55ページPDFを全ページレンダリングし、約45.6億円の6年間事業投資、別枠M&A30億円規模、2026～2028年度上方修正、配当性向30%程度・復配前倒し、2030年終端目標、Appendix丸め差、年度別キャッシュフローを画像確認した。"
     },
     {
-      "code":"421A",
-      "name":"ムービン・ストラテジック・キャリア",
-      "resolvedBlocker":"shareholder_return_independent_screenshot_recheck",
-      "remainingBlocker":"post_publication_link_and_render_check",
-      "evidence":"訂正版公式PDF10ページを独立レンダリングし、利益成長投資を優先し、適切な投資機会がなくなった段階で自社株買い・配当・デジタルギフト等の余剰資金直接還元を検討する優先順位を画像確認。"
+      "code":"3175",
+      "name":"エー・ピーホールディングス",
+      "resolvedBlocker":"independent_visual_render_recheck",
+      "evidence":"同一JPX URLの現行34ページ版を全ページレンダリングし、2031年グループ流通総額約460億円・連結純売上約430億円・営業利益30～45億円、投資目安、優先株償還、Net有利子負債/EBITDA上限3～4倍、普通株配当方針の条件を画像確認した。"
+    },
+    {
+      "code":"4612",
+      "name":"日本ペイントホールディングス",
+      "resolvedBlocker":"regional_nonfinancial_visual_render_recheck",
+      "evidence":"会社公式26ページ版を全ページレンダリングし、PDF24・25ページの地域別非財務ロードマップでDuluxGroup・太平洋、日本グループ等の対象範囲・基準年付き環境目標とDuluxGroupのサステナブル製品・包装材目標を画像確認した。"
+    },
+    {
+      "code":"6036",
+      "name":"KeePer技研",
+      "resolvedBlocker":"independent_visual_render_recheck",
+      "evidence":"source overrideのcanonical42ページ・SHA-256と今回の公式再取得PDFが完全一致。全ページレンダリングし、2031年経営指標、事業別目標、直営店建設投資約110億円、配当性向40%以上、店舗網計画を画像確認した。"
+    },
+    {
+      "code":"6050",
+      "name":"イー・ガーディアン",
+      "resolvedBlocker":"independent_visual_render_recheck",
+      "evidence":"同一JPX URLの現行15ページ版を全ページレンダリングし、2026～2028年9月期の売上・EBITDA目標、AI/セキュリティ/M&A戦略、資本配分、定性的株主還元方針を画像確認した。未開示の配分額・配当性向等は補完していない。"
     }
   ],
   "policy": {
@@ -71,8 +80,8 @@
     "deepVerificationApproved": false
   },
   "nextQueue": {
-    "priority1": "残る明示Deep blocker 8社を実証ベースで処理する。",
-    "priority2": "ブロッカーなし53社は別担当のfinal reviewerへ回し、独立レビュー担当と分離した最終承認記録を作成する。",
-    "priority3": "ムービンの公開後リンク・レンダリング確認は実公開状態を確認できた場合のみ解除する。"
+    "priority1": "ムービン・ストラテジック・キャリアの実公開ページで訂正版sourceリンク・主要数値・表示レンダリングを確認し、実証できた場合のみ最後のpost_publication_link_and_render_checkを解除する。",
+    "priority2": "ブロッカーなし60社を独立レビュー担当とは別のfinal reviewerへ回し、別役割による最終承認記録を作成する。",
+    "priority3": "明示blockerが0になっても自動Deep承認は行わない。"
   }
 }

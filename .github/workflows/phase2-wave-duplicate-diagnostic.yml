@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Find duplicate company and order assignments
+      - name: Inspect duplicate company and review states
         shell: bash
         run: |
           python - <<'PY'
@@ -25,20 +25,31 @@ jobs:
 
           root = Path('operations/quality-rebase/phase2')
           by_code = defaultdict(list)
-          by_order = defaultdict(list)
           for path in sorted(root.glob('primary-review-wave*-v1.json')):
               data = json.loads(path.read_text(encoding='utf-8'))
               for company in data.get('companies', []):
                   code = str(company.get('code', '')).strip()
-                  order = company.get('order')
-                  by_code[code].append((path.name, order, company.get('name')))
-                  by_order[order].append((path.name, code, company.get('name')))
-          print('DUPLICATE_CODES')
+                  by_code[code].append({
+                      'wave': path.name,
+                      'order': company.get('order'),
+                      'name': company.get('name'),
+                      'waveStatus': company.get('status'),
+                  })
           for code, entries in sorted(by_code.items()):
-              if code and len(entries) > 1:
-                  print(code, entries)
-          print('DUPLICATE_ORDERS')
-          for order, entries in sorted(by_order.items(), key=lambda item: (item[0] is None, item[0])):
-              if order is not None and len(entries) > 1:
-                  print(order, entries)
+              if not code or len(entries) <= 1:
+                  continue
+              review = root / 'reviews' / f'{code}-primary-review-v1.json'
+              review_state = None
+              review_role = None
+              if review.is_file():
+                  data = json.loads(review.read_text(encoding='utf-8'))
+                  review_state = (data.get('review') or {}).get('status')
+                  review_role = (data.get('review') or {}).get('reviewRole')
+              print(json.dumps({
+                  'code': code,
+                  'entries': entries,
+                  'reviewExists': review.is_file(),
+                  'reviewStatus': review_state,
+                  'reviewRole': review_role,
+              }, ensure_ascii=False))
           PY

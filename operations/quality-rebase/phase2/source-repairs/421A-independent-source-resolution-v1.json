@@ -1,23 +1,36 @@
 {
   "schemaVersion": "quality-rebase-phase2-independent-source-resolution-v1",
-  "company": {"code": "421A", "name": "ムービン・ストラテジック・キャリア"},
+  "company": {"code":"421A","name":"ムービン・ストラテジック・キャリア"},
   "detectedAt": "2026-08-07T09:25:00+09:00",
-  "resolutionStatus": "corrected_pdf_direct_source_unresolved",
+  "resolvedAt": "2026-08-08T19:22:00+09:00",
+  "resolutionStatus": "corrected_36_page_company_pdf_resolved_and_canonicalized",
   "originalCollectionFile": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-02/421A/collection.json",
   "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/421A-source-correction-v1.json",
   "independentReviewPacket": "operations/quality-rebase/phase2/independent/421A-independent-review-v2.json",
+  "canonicalSource": {
+    "officialListingUrl": "https://corp.movin.co.jp/ir/disclosure.html",
+    "officialUrl": "https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf",
+    "pdfSha256": "54a253644651e2e29918ff8101e7a4e3b41551eb844a7ef4c5f83b4e33f6f469",
+    "pdfBytes": 2816539,
+    "pageCount": 36,
+    "publishedDate": "2026-03-24"
+  },
   "originalSource": {
     "officialUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
     "pdfSha256": "26c39be7814ced99a399fcb55de226267a08c9a34182ef7ddf71e879288a79f5",
+    "pdfBytes": 2826591,
     "pageCount": 37
   },
   "officialCorrection": {
     "noticeUrl": "https://www2.jpx.co.jp/disc/421A0/140120260324588022.pdf",
+    "noticePdfSha256": "1b80a824116ba9ad2625fcc9fe955e2c86434b933c05caac6744e824793f4e7c",
+    "noticePdfBytes": 83843,
+    "noticePageCount": 1,
     "officialListingUrl": "https://corp.movin.co.jp/ir/disclosure.html",
     "correctionScope": "訂正前資料の印字14頁（PDF15頁）『市場環境：人材紹介市場は安定拡大』を削除する。",
     "correctedExpectedPageCount": 36,
-    "correctedDirectPdfUrl": null,
-    "correctedPdfSha256": null
+    "correctedDirectPdfUrl": "https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf",
+    "correctedPdfSha256": "54a253644651e2e29918ff8101e7a4e3b41551eb844a7ef4c5f83b4e33f6f469"
   },
   "reviewDisposition": {
     "preserveExistingPrimaryAnalysis": true,
@@ -26,15 +39,17 @@
     "strategyTargetsAffected": false,
     "capitalPolicyAffected": false,
     "shareholderReturnPolicyAffected": false,
-    "statement": "訂正内容は主要分析を変更しないが、独立レビュー完了には訂正後36ページ版の直接PDF URL・SHA-256を正本として固定する必要がある。"
+    "pageMapping": "訂正前PDF1～14頁は訂正版1～14頁、訂正前PDF15頁を削除、訂正前PDF16～37頁は訂正版15～36頁へ対応する。",
+    "statement": "会社公式IR掲載の訂正後36ページPDFを直接特定し、URL・SHA-256・byte数・ページ数を独立確定した。訂正通知と訂正版の実体から削除対象を確認し、主要分析が削除ページに依存しないことを再確認した。"
   },
-  "requiredNextChecks": [
-    "会社公式IRページから訂正後36ページ版の直接PDF URLを確定する",
-    "訂正後PDFのSHA-256とページ数36を確認する",
-    "削除ページが一次レビューの項目別証跡に使われていないことを訂正版で再確認する",
-    "訂正後正本でFY26～FY28計画、主要KPI、資本政策を独立再確認する"
-  ],
-  "independentReviewCompletionBlocked": true,
+  "identityProbe": {
+    "method": "GitHub Actions runner direct official-PDF fetch plus pypdf page count and sha256",
+    "workflowRunId": 31252560350,
+    "correctedPdfSha256": "54a253644651e2e29918ff8101e7a4e3b41551eb844a7ef4c5f83b4e33f6f469",
+    "correctionNoticeSha256": "1b80a824116ba9ad2625fcc9fe955e2c86434b933c05caac6744e824793f4e7c"
+  },
+  "requiredNextChecks": [],
+  "independentReviewCompletionBlocked": false,
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false

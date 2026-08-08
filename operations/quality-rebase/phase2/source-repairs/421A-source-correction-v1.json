@@ -9,32 +9,50 @@
     "publishedDate": "2026-03-24T08:30:00+09:00",
     "url": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
     "pdfSha256": "26c39be7814ced99a399fcb55de226267a08c9a34182ef7ddf71e879288a79f5",
+    "pdfBytes": 2826591,
     "pageCount": 37
   },
   "correctionNotice": {
     "title": "（訂正）『中期経営計画（事業計画及び成長可能性に関する事項）』の一部訂正について",
     "publishedDate": "2026-03-24T19:00:00+09:00",
     "tdnetUrl": "https://www2.jpx.co.jp/disc/421A0/140120260324588022.pdf",
+    "pdfSha256": "1b80a824116ba9ad2625fcc9fe955e2c86434b933c05caac6744e824793f4e7c",
+    "pdfBytes": 83843,
+    "pageCount": 1,
     "officialListingUrl": "https://corp.movin.co.jp/ir/disclosure.html",
-    "correctionScope": "元資料14頁『市場環境：人材紹介市場は安定拡大』を削除する。",
-    "correctedDocumentExpectedPageCount": 36,
-    "correctedPdfDirectUrlResolved": false
+    "correctionScope": "元資料14頁『市場環境：人材紹介市場は安定拡大』を削除する。"
+  },
+  "correctedSource": {
+    "title": "中期経営計画（事業計画及び成長可能性に関する事項）・訂正版",
+    "officialListingUrl": "https://corp.movin.co.jp/ir/disclosure.html",
+    "directPdfUrl": "https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf",
+    "pdfSha256": "54a253644651e2e29918ff8101e7a4e3b41551eb844a7ef4c5f83b4e33f6f469",
+    "pdfBytes": 2816539,
+    "pageCount": 36,
+    "directUrlResolved": true
   },
   "reviewApplication": {
-    "status": "official_correction_applied_by_excluding_deleted_page",
+    "status": "official_corrected_pdf_resolved_and_page_deletion_verified",
     "deletedOriginalPdfPage": 15,
     "deletedPrintedPage": 14,
+    "deletedPageTitle": "市場環境：人材紹介市場は安定拡大",
     "deletedPageUsedAsEvidence": false,
     "financialTargetsAffected": false,
     "strategyTargetsAffected": false,
     "capitalPolicyAffected": false,
     "shareholderReturnPolicyAffected": false,
-    "statement": "訂正通知に従い、訂正前PDFの印字14頁（PDF15頁）をレビュー対象・証跡から除外する。訂正後PDFの直接URLとハッシュは独立再確認時の追加確認事項として残す。"
+    "pageMapping": "訂正前PDF1～14頁は訂正版1～14頁、訂正前PDF15頁を削除、訂正前PDF16～37頁は訂正版15～36頁へ対応する。",
+    "statement": "会社公式IRが配信する36ページ訂正版の直接URL、SHA-256、byte数、ページ数を独立確定した。公式訂正通知と訂正版実体の双方から削除対象を確認し、削除ページの市場統計をレビュー証跡から除外する。中計財務目標・KPI・投資優先順位・株主還元方針は削除ページに依存しない。"
+  },
+  "identityProbe": {
+    "method": "GitHub Actions runner direct official-PDF fetch plus pypdf page count and sha256",
+    "workflowRunId": 31252560350,
+    "verifiedAt": "2026-08-08T19:20:29+09:00"
   },
   "approvalSafety": {
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false,
-    "independentCorrectedSourceCheckRequired": true,
+    "independentCorrectedSourceCheckRequired": false,
     "postPublicationLinkAndRenderCheckRequired": true
   }
 }

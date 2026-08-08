@@ -7,8 +7,9 @@ approves deep verification.
 
 Selection rules:
 - read the canonical source-relevance candidate queue;
-- exclude Phase 1 companies, canonical completed reviews, and every company
-  already assigned in an existing Phase 2 wave;
+- exclude Phase 1 companies, canonical completed reviews, companies with an
+  existing canonical primary-review file, and every company already assigned in
+  an existing Phase 2 wave;
 - require an existing primary-review-template.json in the bulk collection tree;
 - accept formal management plans and plan revisions/updates by default;
 - growth-potential documents are excluded unless explicitly enabled, because
@@ -73,6 +74,40 @@ def canonical_completed_codes(status: dict[str, Any]) -> set[str]:
         if code in codes:
             raise SystemExit(f"duplicate completed company code: {code}")
         codes.add(code)
+    return codes
+
+
+def canonical_review_file_codes(phase2_dir: Path) -> set[str]:
+    """Return companies that already have a canonical primary-review artifact.
+
+    current-status-v1.json can lag behind append-only review work. The review
+    artifact itself is therefore an independent exclusion source. Filename and
+    embedded company code must agree so a malformed file cannot silently hide a
+    different company from the queue.
+    """
+
+    reviews_dir = phase2_dir / "reviews"
+    codes: set[str] = set()
+    for path in sorted(reviews_dir.glob("*-primary-review-v1.json")):
+        filename_code = path.name.removesuffix("-primary-review-v1.json").strip()
+        if not filename_code:
+            raise SystemExit(f"review filename lacks company code: {path}")
+
+        review = load_json(path)
+        company = review.get("company")
+        if not isinstance(company, dict):
+            raise SystemExit(f"review file lacks company object: {path}")
+        embedded_code = str(company.get("code", "")).strip()
+        if not embedded_code:
+            raise SystemExit(f"review file lacks company code: {path}")
+        if embedded_code != filename_code:
+            raise SystemExit(
+                f"review filename/company code mismatch: {path}: "
+                f"{filename_code} != {embedded_code}"
+            )
+        if embedded_code in codes:
+            raise SystemExit(f"duplicate canonical review company code: {embedded_code}")
+        codes.add(embedded_code)
     return codes
 
 
@@ -166,7 +201,9 @@ def build_wave(
     if not isinstance(candidates, list):
         raise SystemExit("candidate queue companies must be an array")
 
-    completed = canonical_completed_codes(status)
+    completed_from_status = canonical_completed_codes(status)
+    completed_from_review_files = canonical_review_file_codes(phase2_dir)
+    completed = completed_from_status | completed_from_review_files
     assigned, assigned_orders, highest_wave = existing_wave_state(phase2_dir)
     phase1 = phase1_codes(repo_root)
 
@@ -245,6 +282,14 @@ def build_wave(
             f"missing review inputs: {', '.join(skipped_missing_input[:20]) or 'none'}"
         )
 
+    selected_codes = {item["code"] for item in selected}
+    stale_review_overlap = selected_codes & completed_from_review_files
+    if stale_review_overlap:
+        raise SystemExit(
+            "generated wave contains companies with canonical review files: "
+            + ", ".join(sorted(stale_review_overlap))
+        )
+
     next_wave = highest_wave + 1
     now = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     type_counts = {
@@ -272,6 +317,7 @@ def build_wave(
         "selectionPolicy": {
             "sourceQueue": "primary_review_candidate",
             "excludeCompletedPrimaryReviews": True,
+            "excludeCanonicalPrimaryReviewFiles": True,
             "excludePhase1ReviewedCompanies": True,
             "excludePreviouslyAssignedCompanies": True,
             "requireExistingReviewInput": True,

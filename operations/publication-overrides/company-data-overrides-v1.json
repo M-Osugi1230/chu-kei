@@ -1,7 +1,7 @@
 {
   "schemaVersion": "company-publication-overrides-v1",
-  "generatedAt": "2026-08-08T18:45:00+09:00",
-  "purpose": "Apply audited publication-only corrections after loading the immutable historical source bundle. Overrides must include exact expectedBefore values so stale or mismatched source data fails closed.",
+  "generatedAt": "2026-08-08T18:52:00+09:00",
+  "purpose": "Apply audited publication-only corrections after loading the immutable historical source bundle. Overrides must include exact expectedBefore values for stable source fields so stale or mismatched source data fails closed.",
   "overrides": [
     {
       "code": "421A",
@@ -11,13 +11,12 @@
       "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/421A-independent-completion-v1.json",
       "expectedBefore": {
         "sourceUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
-        "sourceTitle": "中期経営計画(事業計画及び成長可能性に関する事項)pdf",
-        "correctionDetected": false,
         "capital": "未開示",
         "returnPolicy": "現時点では配当を想定していない。\n中期計画期間中は成長投資を優先"
       },
       "updates": {
         "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf",
+        "document": "中期経営計画（事業計画及び成長可能性に関する事項）・訂正版",
         "sourceTitle": "中期経営計画（事業計画及び成長可能性に関する事項）・訂正版",
         "correctionDetected": true,
         "capital": "キャリアアドバイザー採用、M&A、生涯キャリアハブ構想、AIシステム等の利益成長投資を優先。固定投資総額は未開示。",

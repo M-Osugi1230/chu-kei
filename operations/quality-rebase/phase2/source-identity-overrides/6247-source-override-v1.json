@@ -2,6 +2,7 @@
   "schemaVersion": "quality-rebase-phase2-source-identity-override-v1",
   "company": {"code":"6247","name":"日阪製作所"},
   "createdAt": "2026-08-08T18:34:00+09:00",
+  "updatedAt": "2026-08-08T18:45:00+09:00",
   "repairFile": "operations/quality-rebase/phase2/source-repairs/6247-independent-source-resolution-v1.json",
   "canonicalSource": {
     "officialUrl": "https://www2.jpx.co.jp/disc/62470/140120260529554991.pdf",
@@ -14,7 +15,7 @@
     "relationship": "会社公式IRが公開する同一Challenge2028説明会資料として内容を独立確認"
   },
   "supersededIndependentPacketSha256": "f143ba84cce248a5b501a28f42d2423872a5ee240dd4f1d8ee577df371730ba2",
-  "resolution": "JPX56ページ収集正本と会社公式56ページChallenge2028資料について、会社名、公表日、計画期間、財務目標、資本政策、株主還元の意味内容一致を確認した。取得時点のhash差は監査履歴として保持し、再現用canonicalはPhase 2収集正本へ固定する。",
+  "resolution": "JPX56ページ収集正本と会社公式56ページChallenge2028資料について、会社名、公表日、計画期間、財務目標、資本政策、株主還元の意味内容一致を確認した。取得時点のhash差は監査履歴として保持し、再現用canonicalはPhase 2収集正本へ固定する。会社公式PDFの財務目標・セグメント目標・キャッシュアロケーションの重要図表ページも独立に画像確認した。",
   "confirmedFacts": [
     "2029年3月期 売上高550億円・営業利益50億円・営業利益率9.1%",
     "2029年3月期 ROE7%・ROIC5.5%",
@@ -24,7 +25,13 @@
     "株主還元80～110億円",
     "2029年3月末現預金90億円"
   ],
-  "finalDeepVerificationBlockers": ["independent_visual_render_recheck"],
+  "visualEvidence": {
+    "financialTargetsConfirmed": true,
+    "segmentTargetsConfirmed": true,
+    "capitalAllocationConfirmed": true,
+    "independentVisualReviewComplete": true
+  },
+  "finalDeepVerificationBlockers": [],
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false
 }

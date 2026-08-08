@@ -1,0 +1,38 @@
+name: Deep visual artifact
+
+on:
+  push:
+    branches:
+      - agent/deep-verification-probe
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install renderer
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - name: Fetch and render evidence pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www2.jpx.co.jp/disc/68220/140120260515538497.pdf' -o ooi.pdf
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf' -o movin.pdf
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www2.jpx.co.jp/disc/36460/140120260130543384.pdf' -o ekitan.pdf
+          pdftoppm -f 12 -singlefile -png -r 140 ooi.pdf evidence/6822-p12-financial-targets
+          pdftoppm -f 20 -singlefile -png -r 140 ooi.pdf evidence/6822-p20-capital-efficiency
+          pdftoppm -f 10 -singlefile -png -r 140 movin.pdf evidence/421A-p10-capital-return
+          pdftoppm -f 2 -singlefile -png -r 140 ekitan.pdf evidence/3646-p02-current-plan-summary
+          pdftoppm -f 15 -singlefile -png -r 140 ekitan.pdf evidence/3646-p15-strategy
+          pdftoppm -f 21 -singlefile -png -r 140 ekitan.pdf evidence/3646-p21-strategy
+          pdftoppm -f 29 -singlefile -png -r 140 ekitan.pdf evidence/3646-p29-shareholder-return
+          sha256sum evidence/*.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deep-visual-evidence-6822-421A-3646
+          path: evidence/*.png
+          if-no-files-found: error
+          retention-days: 7

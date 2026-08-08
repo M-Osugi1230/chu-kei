@@ -1,0 +1,44 @@
+name: Diagnose Phase 2 Wave Duplicates
+
+on:
+  push:
+    branches:
+      - agent/phase2-primary-wave25
+    paths:
+      - '.github/workflows/phase2-wave-duplicate-diagnostic.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find duplicate company and order assignments
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from collections import defaultdict
+          from pathlib import Path
+
+          root = Path('operations/quality-rebase/phase2')
+          by_code = defaultdict(list)
+          by_order = defaultdict(list)
+          for path in sorted(root.glob('primary-review-wave*-v1.json')):
+              data = json.loads(path.read_text(encoding='utf-8'))
+              for company in data.get('companies', []):
+                  code = str(company.get('code', '')).strip()
+                  order = company.get('order')
+                  by_code[code].append((path.name, order, company.get('name')))
+                  by_order[order].append((path.name, code, company.get('name')))
+          print('DUPLICATE_CODES')
+          for code, entries in sorted(by_code.items()):
+              if code and len(entries) > 1:
+                  print(code, entries)
+          print('DUPLICATE_ORDERS')
+          for order, entries in sorted(by_order.items(), key=lambda item: (item[0] is None, item[0])):
+              if order is not None and len(entries) > 1:
+                  print(order, entries)
+          PY

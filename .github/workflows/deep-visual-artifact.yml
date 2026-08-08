@@ -22,17 +22,29 @@ jobs:
           curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www2.jpx.co.jp/disc/68220/140120260515538497.pdf' -o ooi.pdf
           curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf' -o movin.pdf
           curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www2.jpx.co.jp/disc/36460/140120260130543384.pdf' -o ekitan.pdf
-          pdftoppm -f 12 -singlefile -png -r 140 ooi.pdf evidence/6822-p12-financial-targets
-          pdftoppm -f 20 -singlefile -png -r 140 ooi.pdf evidence/6822-p20-capital-efficiency
-          pdftoppm -f 10 -singlefile -png -r 140 movin.pdf evidence/421A-p10-capital-return
-          pdftoppm -f 2 -singlefile -png -r 140 ekitan.pdf evidence/3646-p02-current-plan-summary
-          pdftoppm -f 15 -singlefile -png -r 140 ekitan.pdf evidence/3646-p15-strategy
-          pdftoppm -f 21 -singlefile -png -r 140 ekitan.pdf evidence/3646-p21-strategy
-          pdftoppm -f 29 -singlefile -png -r 140 ekitan.pdf evidence/3646-p29-shareholder-return
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://www2.jpx.co.jp/disc/60890/140120260515536880.pdf' -o willgroup.pdf
+
+          pdftoppm -f 13 -singlefile -png -r 160 ooi.pdf evidence/6822-p13-financial-targets
+          pdftoppm -f 20 -singlefile -png -r 160 ooi.pdf evidence/6822-p20-capital-efficiency
+
+          pdftoppm -f 10 -singlefile -png -r 160 movin.pdf evidence/421A-p10-capital-return
+
+          pdftoppm -f 2 -singlefile -png -r 160 ekitan.pdf evidence/3646-p02-current-plan-summary
+          pdftoppm -f 15 -singlefile -png -r 160 ekitan.pdf evidence/3646-p15-strategy
+          pdftoppm -f 21 -singlefile -png -r 160 ekitan.pdf evidence/3646-p21-strategy
+          pdftoppm -f 22 -singlefile -png -r 160 ekitan.pdf evidence/3646-p22-strategy
+          pdftoppm -f 23 -singlefile -png -r 160 ekitan.pdf evidence/3646-p23-strategy
+          pdftoppm -f 24 -singlefile -png -r 160 ekitan.pdf evidence/3646-p24-strategy
+          pdftoppm -f 29 -singlefile -png -r 160 ekitan.pdf evidence/3646-p29-shareholder-return
+
+          pdftoppm -f 46 -singlefile -png -r 160 willgroup.pdf evidence/6089-p46-capital-allocation
+          pdftoppm -f 48 -singlefile -png -r 160 willgroup.pdf evidence/6089-p48-capital-allocation
+          pdftoppm -f 49 -singlefile -png -r 160 willgroup.pdf evidence/6089-p49-shareholder-return
+
           sha256sum evidence/*.png
       - uses: actions/upload-artifact@v4
         with:
-          name: deep-visual-evidence-6822-421A-3646
+          name: deep-visual-evidence-expanded
           path: evidence/*.png
           if-no-files-found: error
           retention-days: 7

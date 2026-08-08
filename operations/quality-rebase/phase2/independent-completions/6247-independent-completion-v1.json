@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+  "company": {"code":"6247","name":"日阪製作所"},
+  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6247-primary-review-v1.json",
+  "independentReviewPacket": "operations/quality-rebase/phase2/independent/6247-independent-review-v1.json",
+  "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/6247-independent-source-resolution-v1.json",
+  "sourceIdentityOverride": "operations/quality-rebase/phase2/source-identity-overrides/6247-source-override-v1.json",
+  "source": {"title":"2026年3月期決算 新中期経営計画 Challenge2028 説明会資料","officialUrl":"https://www2.jpx.co.jp/disc/62470/140120260529554991.pdf","pdfSha256":"064bb96e3d1f245caccd5ecade6255f91819f8e0e710c8b2e1d242cb4b112913","pageCount":56},
+  "status": "independent_review_complete",
+  "checks": [
+    {"id":"source_identity","status":"confirmed_with_override","evidencePdfPages":[1,2,22],"result":"JPX56ページ収集正本をcanonicalに固定し、会社公式IRが公開する56ページChallenge2028資料と会社名・公表日・計画内容の一致を確認した。取得時点のhash差は監査履歴として保持する。"},
+    {"id":"classification_correction","status":"confirmed","evidencePdfPages":[22,32,50],"result":"2026年3月期決算説明と、2027年3月期～2029年3月期の新規正式中計Challenge2028を含む資料として確認した。"},
+    {"id":"period_boundary","status":"confirmed","evidencePdfPages":[5,16,50,51],"result":"G-23の2026年実績、2027年単年度見通し、2029年中計目標、2031年中計後資本目標を分離した。"},
+    {"id":"financial_targets","status":"confirmed","evidencePdfPages":[50,51],"result":"会社公式56ページPDFの図表を独立画像確認し、2029年3月期の受注540億円、売上550億円、営業利益50億円、営業利益率9.1%、親会社株主帰属当期純利益42億円、ROE7%、ROIC5.5%を確認した。"},
+    {"id":"post_plan_targets","status":"confirmed","evidencePdfPages":[47,50,56],"result":"ROE8%以上と政策保有株式比率15%以下は2031年の中計後目標として分離する。"},
+    {"id":"segment_reconciliation","status":"confirmed","evidencePdfPages":[52],"result":"会社公式PDFのセグメント図表を独立画像確認し、熱交換器、プロセスエンジニアリング、バルブ、その他のセグメント目標と調整額を全社目標と分離して保持する。"},
+    {"id":"capital_sources","status":"confirmed","evidencePdfPages":[48],"result":"会社公式PDFのキャッシュアロケーション図を独立画像確認し、2026年3月末現預金120億円、営業CF135億円以上、政策保有株式縮減40億円以上を資金源として確認した。"},
+    {"id":"capital_uses","status":"confirmed","evidencePdfPages":[48],"result":"成長投資95～125億円、株主還元80～110億円、2029年3月末現預金90億円を確認した。"},
+    {"id":"range_handling","status":"confirmed","evidencePdfPages":[48],"result":"資金源は下限、資金使途はレンジで示されるため、上下限を単一点へ機械的に一致させない。"},
+    {"id":"shareholder_return","status":"confirmed","evidencePdfPages":[46,48],"result":"新中計3年間の配当・自己株式取得総額80～110億円を確認した。配当と自己株式取得の内訳、固定配当性向、1株配当は推測しない。"}
+  ],
+  "crossChecks": {"collectionIntegrity":{"file":"operations/quality-rebase/phase2/bulk-collection/batch-04/wave-04/6247/collection.json","sourceUrlMatched":true,"pdfSha256Matched":true,"pageCountMatched":true},"officialMirror":{"companyOfficialPdfConfirmed":true,"pageCountMatched":true,"semanticContentMatched":true},"visualReview":{"independentTargetPageRenderComplete":true,"financialTargetsConfirmed":true,"segmentTargetsConfirmed":true,"capitalAllocationConfirmed":true,"note":"会社公式56ページPDFの財務目標、セグメント目標、キャッシュアロケーションの重要図表ページを独立に画像確認した。"}},
+  "finalDeepVerificationBlockers": [],
+  "review": {"minimumDistinctReviewers":2,"reviewRole":"independent_reviewer","primaryReviewerMustNotSelfApprove":true,"completedAt":"2026-08-08T18:45:00+09:00","automaticApprovalAllowed":false,"deepVerificationApproved":false,"result":"confirmed_after_source_override"}
+}

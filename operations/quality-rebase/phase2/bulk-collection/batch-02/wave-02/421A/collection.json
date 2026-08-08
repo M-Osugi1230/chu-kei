@@ -6,24 +6,40 @@
     "name": "ムービン・ストラテジック・キャリア",
     "market": "Growth",
     "industry": "サービス業",
-    "document": "中期経営計画(事業計画及び成長可能性に関する事項)",
+    "document": "中期経営計画(事業計画及び成長可能性に関する事項)・訂正版",
     "planPublishedDate": "2026-03-24",
-    "sourceUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
+    "sourceUrl": "https://corp.movin.co.jp/ir/disclosure.html",
     "phaseScore": 162,
     "templatePatternIds": []
   },
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false,
-  "status": "collection_complete_primary_human_review_pending",
-  "resolvedPageUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
-  "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
-  "htmlTitle": null,
-  "pdfCandidates": [],
+  "status": "collection_source_identity_corrected_primary_review_v2_applied",
+  "resolvedPageUrl": "https://corp.movin.co.jp/ir/disclosure.html",
+  "resolvedPdfUrl": "https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf",
+  "htmlTitle": "IR情報｜適時開示情報｜ムービン・ストラテジック・キャリア",
+  "pdfCandidates": [
+    {
+      "url": "https://contents.xj-storage.jp/xcontents/AS09259/46652e9d/01a6/4eac/9e2f/d2f95cfb93c6/140120260317583980.pdf",
+      "text": "会社公式IR掲載の訂正後36ページ版",
+      "score": 100
+    },
+    {
+      "url": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
+      "text": "訂正前37ページ版・監査証跡",
+      "score": 20
+    },
+    {
+      "url": "https://www2.jpx.co.jp/disc/421A0/140120260324588022.pdf",
+      "text": "公式訂正通知",
+      "score": 95
+    }
+  ],
   "candidateErrors": [],
-  "pdfSha256": "26c39be7814ced99a399fcb55de226267a08c9a34182ef7ddf71e879288a79f5",
-  "pdfBytes": 2826591,
-  "pageCount": 37,
-  "documentTypeCandidate": "growth_potential_document",
+  "pdfSha256": "54a253644651e2e29918ff8101e7a4e3b41551eb844a7ef4c5f83b4e33f6f469",
+  "pdfBytes": 2816539,
+  "pageCount": 36,
+  "documentTypeCandidate": "growth_potential_document_with_formal_management_plan",
   "textCharacters": 15612,
   "textExtractionErrors": [],
   "metricCandidateCount": 12,
@@ -31,5 +47,28 @@
   "requiresVisualReview": true,
   "requiresPrimaryHumanReview": true,
   "requiresIndependentReview": true,
-  "elapsedSeconds": 1.402
+  "contentMetadataStatus": "source_identity_corrected_automatic_candidate_metrics_not_recomputed_after_single_page_deletion",
+  "sourceCorrection": {
+    "correctedAt": "2026-08-08T19:22:00+09:00",
+    "reason": "2026年3月24日19時の公式訂正通知により、訂正前資料の印字14頁（PDF15頁）『市場環境：人材紹介市場は安定拡大』が削除された。会社公式IRが配信するXJ-Storage上の36ページ訂正版を直接特定し、canonical sourceを訂正版へ更新した。",
+    "supersededSource": {
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/421A0/140120260317583980.pdf",
+      "pdfSha256": "26c39be7814ced99a399fcb55de226267a08c9a34182ef7ddf71e879288a79f5",
+      "pdfBytes": 2826591,
+      "pageCount": 37,
+      "classification": "official_original_before_page_deletion_correction"
+    },
+    "correctionNotice": {
+      "officialUrl": "https://www2.jpx.co.jp/disc/421A0/140120260324588022.pdf",
+      "pdfSha256": "1b80a824116ba9ad2625fcc9fe955e2c86434b933c05caac6744e824793f4e7c",
+      "pdfBytes": 83843,
+      "pageCount": 1
+    },
+    "identityProbe": {
+      "method": "GitHub Actions runner direct official-PDF fetch plus pypdf page count and sha256",
+      "workflowRunId": 31252560350,
+      "verifiedAt": "2026-08-08T19:20:29+09:00"
+    },
+    "pageMapping": "訂正前PDF1～14頁は訂正版1～14頁に対応。訂正前PDF15頁を削除し、訂正前PDF16～37頁は訂正版15～36頁へ1ページ前倒し。"
+  }
 }

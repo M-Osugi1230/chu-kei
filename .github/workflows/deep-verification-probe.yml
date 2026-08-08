@@ -1,0 +1,62 @@
+name: Deep verification probe
+
+on:
+  push:
+    branches:
+      - agent/deep-verification-probe
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inventory independent completions
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, glob, collections
+          rows=[]
+          blocker_counts=collections.Counter()
+          approved=[]
+          for path in sorted(glob.glob('operations/quality-rebase/phase2/independent-completions/*-independent-completion-v1.json')):
+              with open(path, encoding='utf-8') as f:
+                  d=json.load(f)
+              company=d.get('company') or {}
+              blockers=d.get('finalDeepVerificationBlockers')
+              if blockers is None:
+                  one=d.get('finalDeepVerificationBlocker')
+                  blockers=[one] if one else []
+              if isinstance(blockers,str): blockers=[blockers]
+              blockers=[b for b in blockers if b]
+              for b in blockers: blocker_counts[b]+=1
+              review=d.get('review') or {}
+              deep=bool(review.get('deepVerificationApproved', d.get('deepVerificationApproved', False)))
+              if deep: approved.append(company.get('code'))
+              rows.append({
+                  'code':company.get('code'),
+                  'name':company.get('name'),
+                  'file':path,
+                  'blockers':blockers,
+                  'blockerCount':len(blockers),
+                  'deepVerificationApproved':deep,
+                  'independentReviewResult':review.get('result')
+              })
+          with_block=[r for r in rows if r['blockers']]
+          ready=[r for r in rows if not r['blockers'] and not r['deepVerificationApproved']]
+          out={
+              'completionCount':len(rows),
+              'deepVerificationApprovedCount':len(approved),
+              'withBlockersCount':len(with_block),
+              'readyForSeparateFinalReviewCount':len(ready),
+              'blockerTypeCounts':dict(sorted(blocker_counts.items(), key=lambda kv:(-kv[1],kv[0]))),
+              'withBlockers':with_block,
+              'readyForSeparateFinalReview':[{'code':r['code'],'name':r['name']} for r in ready],
+              'approvedCodes':approved
+          }
+          print('DEEP_VERIFICATION_INVENTORY_BEGIN')
+          print(json.dumps(out, ensure_ascii=False, indent=2))
+          print('DEEP_VERIFICATION_INVENTORY_END')
+          PY

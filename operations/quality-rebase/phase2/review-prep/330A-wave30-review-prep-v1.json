@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "phase2-wave30-review-prep-v1",
+  "company": {"code":"330A","name":"TalentX","wave":30,"order":249},
+  "source": {"title":"事業計画及び成長可能性に関する事項","publishedDate":"2026-06-30","officialUrl":"https://www2.jpx.co.jp/disc/330A0/140120260630585047.pdf","pageCount":60,"documentTypeCandidate":"growth_potential_document"},
+  "boundaryAssessment": {
+    "status":"review_prepared_not_completed",
+    "formalManagementPlanConfirmed":false,
+    "provisionalClassification":"growth_potential_document_with_explicit_mid_long_term_growth_strategy_and_aspiration_targets",
+    "reason":"資料は中長期成長戦略とアスピレーション目標を明示し、売上高100億円・営業利益率20%の早期達成を掲げる。ただし終端年度を固定した正式中期経営計画ではなく、目標年度未定の成長戦略として扱う。"
+  },
+  "evidenceCandidates": [
+    {"topic":"aspiration_target","pdfPage":53,"facts":["売上高100億円、営業利益率20%の早期達成を目標","2027年3月期を戦略的投資期間と位置付ける"]},
+    {"topic":"growth_investment","pdfPage":53,"facts":["営業利益率10%程度に抑制して成長投資を優先","AIネイティブ開発、R&D、ブランド統合、マーケティング投資、採用強化を推進"]},
+    {"topic":"growth_path","pdfPage":52,"facts":["2028年度からの売上成長スピード加速に向けた成長投資を推進","利益創出力を活かした成長投資フェーズへ移行"]}
+  ],
+  "requiredNextChecks":["fullTextReviewAll60Pages","visualFigureReviewForPages52And53","explicitFormalPlanPeriodSearch","capitalPolicyScopeValidation","shareholderReturnPolicyValidation","yearUnitScopeValidation","fieldLevelEvidenceFinalization"],
+  "safety":{"primaryReviewComplete":false,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"formalPlanPromotionAllowed":false}
+}

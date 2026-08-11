@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "phase2-wave30-review-prep-v1",
+  "company": {"code":"352A","name":"LOIVE","wave":30,"order":250},
+  "source": {"title":"事業計画及び成長可能性に関する事項","publishedDate":"2026-06-30","officialUrl":"https://www2.jpx.co.jp/disc/352A0/140120260629583891.pdf","pageCount":30,"documentTypeCandidate":"growth_potential_document"},
+  "boundaryAssessment": {
+    "status":"review_prepared_not_completed",
+    "formalManagementPlanConfirmed":false,
+    "provisionalClassification":"growth_potential_document_with_short_term_expansion_strategy_not_confirmed_as_formal_management_plan",
+    "reason":"資料は成長戦略、店舗KPI、次年度出店計画を明示するが、確認範囲では正式中期経営計画の名称や複数年度の全社財務終端目標を確認できない。"
+  },
+  "evidenceCandidates": [
+    {"topic":"store_growth","pdfPage":23,"facts":["短期的成長戦略としてpilates Kの出店強化を掲げる","2027年3月期にpilates K 193店舗、来期出店68店舗を計画"]},
+    {"topic":"operating_model","pdfPage":14,"facts":["店舗初期投資はロイブ・ピラティスK平均で35〜45百万円程度","想定投資回収期間はロイブ3.0年、ピラティスK2.8年"]},
+    {"topic":"historical_kpis","pdfPage":19,"facts":["2026年3月期末店舗数200、会員数8.3万人","2026年3月期売上高11,421百万円、営業利益722百万円"]}
+  ],
+  "requiredNextChecks":["fullTextReviewAll30Pages","visualFigureReviewForGrowthStrategyPages","explicitFormalPlanPeriodSearch","multiYearCompanyFinancialTargetSearch","capitalPolicyScopeValidation","shareholderReturnPolicySearch","yearUnitScopeValidation","fieldLevelEvidenceFinalization"],
+  "safety":{"primaryReviewComplete":false,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"formalPlanPromotionAllowed":false}
+}

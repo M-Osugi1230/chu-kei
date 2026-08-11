@@ -15,38 +15,67 @@
     "documentTypeCandidate": "growth_potential_document",
     "pageCount": 74,
     "pdfSha256": "c99fe42d2aeaaf546e0256bc102ac3b0dec664a136e613af94e923f7949abcd1",
-    "formalPlanConfirmed": false,
+    "formalPlanConfirmed": true,
     "fullTextHumanReviewComplete": false
   },
   "structuredAnalysis": {
-    "summary": null,
-    "period": null,
-    "strategyThemes": [],
-    "financialTargets": [],
-    "capitalPolicy": null,
-    "shareholderReturnPolicy": null,
-    "nonFinancialTargets": [],
-    "importantDefinitions": []
+    "summary": "Growth資料内に『中期経営計画サマリー』を明示的に内包。2028年度に売上160億円・営業利益20億円を目標とし、2029年度のプライム市場移行を目指す。仲間づくり、既存ストック事業成長、新規サービス開発の3軸で非連続・オーガニック双方の成長を狙う。",
+    "period": {"startFiscalYear": 2026, "endFiscalYear": 2028, "label": "2028年度目標を置く中期経営計画"},
+    "strategyThemes": [
+      "仲間づくりによる非連続成長",
+      "ストック型収益の最大化",
+      "既存顧客・市場向け新規サービス開発",
+      "MEO・不動産テック等の既存事業成長",
+      "2029年度プライム市場移行を目指す"
+    ],
+    "financialTargets": [
+      {"metric": "売上高", "targetFiscalYear": 2028, "value": 160, "unit": "億円", "scope": "連結", "evidencePage": 11},
+      {"metric": "営業利益", "targetFiscalYear": 2028, "value": 20, "unit": "億円", "scope": "連結", "evidencePage": 11},
+      {"metric": "SEM事業売上高", "targetFiscalYear": 2028, "value": 4601, "unit": "百万円", "scope": "SEM事業", "evidencePage": 67},
+      {"metric": "SEM事業契約件数", "targetFiscalYear": 2028, "value": 9763, "unit": "件", "scope": "SEM事業", "evidencePage": 67}
+    ],
+    "capitalPolicy": {
+      "summary": "合計約32億円の投資余力を活用し、ストック型ビジネス、デジタルマーケティング、不動産テック領域を中心とする仲間づくりを推進。",
+      "evidencePage": 64
+    },
+    "shareholderReturnPolicy": {
+      "summary": "資料では高成長・高還元の両立を掲げるが、今回確認した範囲では中計サマリーと直接結び付く配当性向・DOE等の定量方針は確認できず、未補完とする。",
+      "evidencePage": 9
+    },
+    "nonFinancialTargets": [
+      {"metric": "プライム市場移行", "targetFiscalYear": 2029, "value": "目指す", "evidencePage": 11}
+    ],
+    "importantDefinitions": [
+      "資料タイトル自体はGrowth資料だが、p11に『中期経営計画サマリー』が明記されているためformal planを内包すると判定。",
+      "2028年のMEO市場規模予測306億円は外部市場予測であり会社の財務目標ではない。",
+      "個別事業KPIと全社中計財務目標を分離する。"
+    ],
+    "fieldLevelEvidence": [
+      {"field": "formalPlanBoundary", "page": 11, "text": "中期経営計画サマリー"},
+      {"field": "financialTargets", "page": 11, "text": "2028年度 売上160億円、営業利益20億円"},
+      {"field": "listingGoal", "page": 11, "text": "2029年度にプライム市場への移行を目指す"},
+      {"field": "capitalPolicy", "page": 64, "text": "合計約32億円の投資余力を活用"}
+    ]
   },
   "validation": {
-    "companyIdentityConfirmed": false,
-    "publicationDateConfirmed": false,
-    "strategyStructured": false,
-    "metricsValidated": false,
-    "fieldLevelEvidenceLinked": false,
-    "yearValidated": false,
-    "unitValidated": false,
-    "scopeValidated": false,
-    "forecastActualSeparated": false,
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
     "templateTextRemaining": false,
     "independentDoubleCheck": false,
     "postPublicationLinkAndRenderCheck": false
   },
   "review": {
-    "status": "collection_complete_primary_human_review_pending",
+    "status": "primary_review_evidence_structured_independent_review_pending",
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false,
-    "reviewers": []
+    "reviewers": ["openai-primary-review"]
   }
 }

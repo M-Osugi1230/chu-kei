@@ -19,34 +19,58 @@
     "fullTextHumanReviewComplete": false
   },
   "structuredAnalysis": {
-    "summary": null,
+    "summary": "PRIME CAR-T技術を軸とした固形がん向け細胞療法の開発、NIB103を最優先とする自社創薬、NIB104等の後続パイプライン、外部パートナーへの技術ライセンスを組み合わせた成長戦略を示すGrowth資料。正式な『中期経営計画』の明示は確認できず、パイプラインの開発ロードマップや上場時調達資金使途は全社中計・キャッシュアロケーションへ自動昇格しない。",
     "period": null,
-    "strategyThemes": [],
+    "strategyThemes": [
+      "NIB103の最優先開発",
+      "NIB104の医師主導臨床試験開始準備",
+      "PRIME技術のライセンスアウト",
+      "Swift PRIME CAR-T・in vivo CAR-T等の新規技術開発",
+      "創薬と技術ライセンスのハイブリッドモデル"
+    ],
     "financialTargets": [],
-    "capitalPolicy": null,
+    "capitalPolicy": {
+      "summary": "p41に上場時調達資金の使途を掲載。NIB101/NIB103/NIB104以降の開発費、新規パイプライン創製、新規基盤技術研究、運転資金等への充当を示すが、これはIPO調達資金の使途であり全社中期キャッシュアロケーションとは扱わない。",
+      "evidencePage": 41,
+      "classification": "ipo_proceeds_use_not_corporate_cash_allocation"
+    },
     "shareholderReturnPolicy": null,
-    "nonFinancialTargets": [],
-    "importantDefinitions": []
+    "nonFinancialTargets": [
+      {"metric": "NIB103", "target": "第I相臨床試験完了・申請承認を見据えた開発", "classification": "pipeline_milestone", "evidencePages": [36,37]},
+      {"metric": "NIB104", "target": "2027-2028年の医師主導臨床試験開始予定", "classification": "pipeline_milestone", "evidencePages": [38,39]}
+    ],
+    "importantDefinitions": [
+      "資料内に正式中期経営計画の明示なし。",
+      "開発ロードマップ上の申請・承認時期は確定的なものではなく、財務目標ではない。",
+      "上場時調達資金の使途は全社キャッシュアロケーションへ変換しない。",
+      "市場規模・想定患者数は会社財務目標と分離する。"
+    ],
+    "fieldLevelEvidence": [
+      {"field": "formalPlanBoundary", "page": 0, "text": "資料名は事業計画及び成長可能性に関する事項。本文検索で中期経営計画の明示なし。"},
+      {"field": "pipelineStrategy", "page": 5, "text": "NIB103を優先パイプラインとして開発、NIB104の医師主導臨床試験開始準備"},
+      {"field": "pipelineMilestone", "page": 39, "text": "NIB104 医師主導臨床試験開始予定"},
+      {"field": "capitalPolicyBoundary", "page": 41, "text": "上場時調達資金の使途について"}
+    ]
   },
   "validation": {
-    "companyIdentityConfirmed": false,
-    "publicationDateConfirmed": false,
-    "strategyStructured": false,
-    "metricsValidated": false,
-    "fieldLevelEvidenceLinked": false,
-    "yearValidated": false,
-    "unitValidated": false,
-    "scopeValidated": false,
-    "forecastActualSeparated": false,
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
     "templateTextRemaining": false,
     "independentDoubleCheck": false,
     "postPublicationLinkAndRenderCheck": false
   },
   "review": {
-    "status": "collection_complete_primary_human_review_pending",
+    "status": "primary_review_evidence_structured_independent_review_pending",
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false,
-    "reviewers": []
+    "reviewers": ["openai-primary-review"]
   }
 }

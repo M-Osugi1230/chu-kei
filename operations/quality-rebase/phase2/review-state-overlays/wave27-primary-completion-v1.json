@@ -1,0 +1,28 @@
+{
+  "schemaVersion":"phase2-review-state-overlay-v1",
+  "createdAt":"2026-08-11T18:28:00+09:00",
+  "wave":27,
+  "batch":1,
+  "baseWaveFile":"operations/quality-rebase/phase2/primary-review-wave27-v1.json",
+  "previousWaveOverlay":"operations/quality-rebase/phase2/review-state-overlays/wave26-primary-completion-batch02-v1.json",
+  "reason":"Wave27の10社について資料区分、formal plan境界、全文、主要数値、資本政策、株主還元、項目別証跡を一次レビューした。Growth資料に正式中計が内包される場合と、Growth資料内の複数年事業計画・中長期方向性に留まる場合を分離し、旧値・単年度予想・将来計画を現行中計へ混在させない。独立図表確認・独立再確認・final reviewは別工程として維持する。",
+  "expectedBase":{"primaryReviewComplete":256,"independentReviewReady":61,"remainingPrimaryReviews":194,"independentVisualReviewPending":193,"additionalSourceMappingRequired":2},
+  "companyCompletions":[
+    {"order":412,"code":"3140","name":"BRUNO","formalManagementPlanConfirmed":true,"growthDocumentFormalPlanEmbedded":true,"status":"primary_review_complete_revised_current_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3140-primary-review-v1.json"},
+    {"order":416,"code":"3261","name":"グランディーズ","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_revised_business_plan_not_explicit_formal_management_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3261-primary-review-v1.json"},
+    {"order":108,"code":"3070","name":"ジェリービーンズグループ","formalManagementPlanConfirmed":true,"status":"primary_review_complete_revised_formal_medium_term_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3070-primary-review-v1.json"},
+    {"order":121,"code":"5411","name":"JFEホールディングス","formalManagementPlanConfirmed":true,"sourceMappingFollowupRequired":true,"status":"primary_review_complete_source_remapped_to_current_formal_plan_independent_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/5411-primary-review-v1.json"},
+    {"order":133,"code":"6544","name":"ジャパンエレベーターサービスホールディングス","formalManagementPlanConfirmed":true,"status":"primary_review_complete_current_formal_management_plan_independent_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6544-primary-review-v1.json"},
+    {"order":135,"code":"150A","name":"JSH","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"explicitMultiYearBusinessPlanEmbedded":true,"status":"primary_growth_document_review_complete_explicit_multi_year_business_plan_embedded_independent_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/150A-primary-review-v1.json"},
+    {"order":140,"code":"302A","name":"ビースタイルホールディングス","formalManagementPlanConfirmed":true,"growthDocumentFormalPlanEmbedded":true,"status":"primary_growth_document_review_complete_current_multi_year_plan_confirmed_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/302A-primary-review-v1.json"},
+    {"order":141,"code":"3224","name":"ゼネラル・オイスター","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_strategy_and_single_year_outlook_not_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3224-primary-review-v1.json"},
+    {"order":145,"code":"3773","name":"アドバンスト・メディア","formalManagementPlanConfirmed":true,"growthDocumentFormalPlanEmbedded":true,"status":"primary_review_complete_current_formal_plan_revised_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3773-primary-review-v1.json"},
+    {"order":147,"code":"3979","name":"うるる","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_new_growth_strategy_not_explicit_formal_management_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3979-primary-review-v1.json"}
+  ],
+  "completedChecksForAll":["sourceDocumentClassification","formalPlanBoundary","forecastActualAndTargetSeparation","fullTextReview","metricsValidation","capitalPolicyReview","shareholderReturnPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],
+  "pendingChecksForAll":["remainingVisualFigureReview","independentDoubleCheck","separateFinalReview"],
+  "effectiveCounts":{"wavePrimaryReviewComplete":10,"wavePrimaryReviewRemaining":0,"formalManagementPlanConfirmed":6,"growthDocumentFormalPlanEmbedded":3,"notCurrentFormalManagementPlan":4,"waveIndependentVisualReviewPending":10,"primaryReviewComplete":266,"independentReviewReady":61,"remainingPrimaryReviews":184,"independentVisualReviewPending":203,"additionalSourceMappingRequired":3,"deepVerificationApproved":0},
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":false
+}

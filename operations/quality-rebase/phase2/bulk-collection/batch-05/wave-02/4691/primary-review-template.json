@@ -15,35 +15,82 @@
     "documentTypeCandidate": "formal_management_plan",
     "pageCount": 41,
     "pdfSha256": "cefe28f85922b6dd5c1428d84fbd7b7a208f190cce30e13a3f3fc76be5519921",
-    "formalPlanConfirmed": false,
+    "formalPlanConfirmed": true,
     "fullTextHumanReviewComplete": false
   },
   "structuredAnalysis": {
-    "summary": null,
-    "period": null,
-    "strategyThemes": [],
-    "financialTargets": [],
-    "capitalPolicy": null,
-    "shareholderReturnPolicy": null,
-    "nonFinancialTargets": [],
-    "importantDefinitions": []
+    "summary": "2027年3月期から2031年3月期までの5ヶ年を対象とする正式な中期経営計画。既存ホテルのリニューアル、藤田観光との連携を通じたブランド・顧客基盤強化、出店手法の多様化による拠点拡大を軸に、収益性と資本効率を高める計画。",
+    "period": {
+      "startFiscalYear": "2027-03",
+      "endFiscalYear": "2031-03",
+      "years": 5
+    },
+    "strategyThemes": [
+      "既存店リニューアルの加速による商品価値最大化",
+      "藤田観光との提携を活用したワシントンブランド強化と顧客基盤拡大",
+      "出店地域・方式・業態を多様化した拠点拡大",
+      "DXによる業務効率化・集客向上",
+      "人的資本への投資と業界トップクラスの処遇水準の実現"
+    ],
+    "financialTargets": [
+      {"metric":"売上高","basePeriod":"2026-03 見込","baseValue":242,"targetPeriod":"2031-03","targetValue":400,"unit":"億円"},
+      {"metric":"営業利益","basePeriod":"2026-03 見込","baseValue":37.6,"targetPeriod":"2031-03","targetValue":87,"unit":"億円"},
+      {"metric":"営業利益率","basePeriod":"2026-03 見込","baseValue":15.5,"targetPeriod":"2031-03","targetValue":21,"unit":"%"},
+      {"metric":"ROIC","basePeriod":"2026-03 見込","baseValue":7,"targetPeriod":"2031-03","targetValue":10,"targetQualifier":"以上","unit":"%"},
+      {"metric":"ROE","basePeriod":"2026-03 見込","baseValue":26,"targetPeriod":"2031-03","targetValue":20,"targetQualifier":"以上","unit":"%"}
+    ],
+    "capitalPolicy": {
+      "summary": "営業キャッシュフローを主な原資として成長投資を最優先しつつ、有利子負債圧縮による財務健全性回復と株主還元を両立する。5年間で成長・維持投資201億円を計画。D/Eレシオ1倍を目安に借入返済を実行し、ROICはWACC超過、ROEは20%以上の継続を重視する。",
+      "plannedInvestmentTotal": 201,
+      "plannedInvestmentUnit": "億円",
+      "plannedInvestmentPeriod": "2027-03〜2031-03",
+      "renewalInvestment": 69,
+      "newBaseDevelopmentExpansion": 114,
+      "systemDxInvestment": 5,
+      "deRatioGuide": "1倍を目安"
+    },
+    "shareholderReturnPolicy": {
+      "summary": "配当を基本としつつ自己株式取得も機動的に活用する。成長投資とのバランスを前提に、配当性向25%以上を早期に実現する方針。",
+      "dividendPayoutRatioTarget": 25,
+      "dividendPayoutRatioQualifier": "以上を早期に実現",
+      "shareBuybacks": "機動的に実施"
+    },
+    "nonFinancialTargets": [
+      {"metric":"期末保有室数","basePeriod":"2026-03 予想","baseValue":9469,"targetPeriod":"2031-03","targetValue":11000,"unit":"室"},
+      {"metric":"ワシントンネット会員数","basePeriod":"2026-03 予想","baseValue":60,"targetPeriod":"2031-03","targetValue":120,"unit":"万人"},
+      {"metric":"全館リニューアル実施ホテル数","targetPeriod":"2027-03〜2031-03","targetValue":16,"unit":"ホテル"}
+    ],
+    "importantDefinitions": [
+      {"term":"RevPAR","definition":"販売可能な客室1室当たり売上。客室稼働率（OCC）×客室平均単価（ADR）。"},
+      {"term":"ADR","definition":"客室1室当たり平均販売単価。室料売上合計÷販売客室数。"},
+      {"term":"ROIC","definition":"本計画では想定WACCを安定的に上回る水準の確保・継続を重視。"}
+    ],
+    "fieldLevelEvidence": {
+      "planPeriod":"PDF p.1（資料内ページ表記前）: 2027年3月期〜2031年3月期",
+      "financialTargets":"PDF p.1: 売上高400億円、営業利益87億円、営業利益率21%、ROIC10%以上、ROE20%以上",
+      "strategy":"PDF p.1, p.7-8: リニューアル、ブランド強化、拠点拡大",
+      "memberTarget":"PDF p.26: ワシントンネット会員数120万人",
+      "roomTarget":"PDF p.28: 保有室数11,000室",
+      "capitalPolicy":"PDF p.33-36: 成長・維持投資201億円、ROIC/WACC、D/Eレシオ、資本配分",
+      "shareholderReturn":"PDF p.33, p.36-37: 配当性向25%以上の早期実現、機動的な自己株式取得"
+    }
   },
   "validation": {
-    "companyIdentityConfirmed": false,
-    "publicationDateConfirmed": false,
-    "strategyStructured": false,
-    "metricsValidated": false,
-    "fieldLevelEvidenceLinked": false,
-    "yearValidated": false,
-    "unitValidated": false,
-    "scopeValidated": false,
-    "forecastActualSeparated": false,
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
     "templateTextRemaining": false,
     "independentDoubleCheck": false,
     "postPublicationLinkAndRenderCheck": false
   },
   "review": {
-    "status": "collection_complete_primary_human_review_pending",
+    "status": "machine_assisted_evidence_complete_primary_human_review_pending",
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false,

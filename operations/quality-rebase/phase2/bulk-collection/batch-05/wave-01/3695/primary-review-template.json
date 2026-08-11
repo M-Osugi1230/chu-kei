@@ -19,34 +19,59 @@
     "fullTextHumanReviewComplete": false
   },
   "structuredAnalysis": {
-    "summary": null,
+    "summary": "成長可能性資料として、ポイント機能を基盤とするプラットフォーム事業への転換、広告・アンケート・ポイント運用による収益ミックス改善、M&A・承継を含むプラットフォーム拡大戦略を説明。資料内に正式な『中期経営計画』の明示は確認できず、FY2026業績予想や2027-2028年の事業ロードマップは正式中計とは分離して扱う。",
     "period": null,
-    "strategyThemes": [],
-    "financialTargets": [],
-    "capitalPolicy": null,
-    "shareholderReturnPolicy": null,
+    "strategyThemes": [
+      "プラットフォーム活用プロダクト数の増加",
+      "広告・ポイント運用等の高粗利機能への収益ミックス転換",
+      "プラットフォーム機能強化",
+      "M&A・事業承継によるプロダクト拡大",
+      "労働集約型事業からプラットフォーム型への構造改革"
+    ],
+    "financialTargets": [
+      {"metric": "営業利益", "targetFiscalYear": 2026, "value": 7.31, "unit": "億円", "scope": "連結業績予想", "classification": "single_year_forecast", "evidencePage": 2},
+      {"metric": "営業利益率", "targetFiscalYear": 2026, "value": 10.3, "unit": "%", "scope": "連結業績予想", "classification": "single_year_forecast", "evidencePage": 2}
+    ],
+    "capitalPolicy": {
+      "summary": "中長期の価値創造ではプラットフォーム拡大投資を優先。投資力上限を連結純資産の2/3（16.37億円）とする財務規律を示し、手許資金・営業CF・有利子負債・エクイティを資金調達手段として想定。",
+      "evidencePage": 26
+    },
+    "shareholderReturnPolicy": {
+      "summary": "配当性向65%以上とDOE2%のうち高い方を採用する方針。FY2026業績予想ベースの配当性向は75.0%。",
+      "evidencePages": [26,27]
+    },
     "nonFinancialTargets": [],
-    "importantDefinitions": []
+    "importantDefinitions": [
+      "正式中期経営計画は資料内で確認できない。",
+      "FY2026数値は単年度業績予想であり中期目標へ昇格しない。",
+      "2027-2028年の各事業ロードマップは戦略ロードマップとして保持し、全社中計期間とは扱わない。"
+    ],
+    "fieldLevelEvidence": [
+      {"field": "formalPlanBoundary", "page": 0, "text": "資料名は事業計画及び成長可能性に関する説明資料。本文検索で中期経営計画の明示なし。"},
+      {"field": "singleYearForecast", "page": 2, "text": "FY2026営業利益7.31億円、営業利益率10.3%"},
+      {"field": "capitalPolicy", "page": 26, "text": "中長期の価値創造に向けプラットフォーム拡大への投資を優先"},
+      {"field": "shareholderReturnPolicy", "page": 27, "text": "配当性向65%以上、DOE2%、高い方を採用"}
+    ]
   },
   "validation": {
-    "companyIdentityConfirmed": false,
-    "publicationDateConfirmed": false,
-    "strategyStructured": false,
-    "metricsValidated": false,
-    "fieldLevelEvidenceLinked": false,
-    "yearValidated": false,
-    "unitValidated": false,
-    "scopeValidated": false,
-    "forecastActualSeparated": false,
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
     "templateTextRemaining": false,
     "independentDoubleCheck": false,
     "postPublicationLinkAndRenderCheck": false
   },
   "review": {
-    "status": "collection_complete_primary_human_review_pending",
+    "status": "primary_review_evidence_structured_independent_review_pending",
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false,
-    "reviewers": []
+    "reviewers": ["openai-primary-review"]
   }
 }

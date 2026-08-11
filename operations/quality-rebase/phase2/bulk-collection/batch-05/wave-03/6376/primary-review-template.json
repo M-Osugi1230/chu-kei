@@ -15,38 +15,67 @@
     "documentTypeCandidate": "plan_revision_or_update",
     "pageCount": 32,
     "pdfSha256": "1d9b68ef1756d549c1963f128c26aac55b7be83bb2050b32c54a9d46c91c1e14",
-    "formalPlanConfirmed": false,
+    "formalPlanConfirmed": true,
     "fullTextHumanReviewComplete": false
   },
   "structuredAnalysis": {
-    "summary": null,
-    "period": null,
-    "strategyThemes": [],
-    "financialTargets": [],
-    "capitalPolicy": null,
-    "shareholderReturnPolicy": null,
+    "summary": "2026-2028年の新中期経営計画『NIKKISO 2028』。前計画の成果刈り取りと2035年長期ビジョンに向けた種まきを同時に進め、品質、技術、事業・製品ポートフォリオ、資本効率・収益力、グローバル事業インフラ・ガバナンスの5本柱で企業価値向上を目指す。",
+    "period": {"startFiscalYear": 2026, "endFiscalYear": 2028, "label": "2026年-2028年"},
+    "strategyThemes": [
+      "品質を原点とした価値創出",
+      "技術革新と社会実装加速",
+      "事業・製品ポートフォリオ拡大・再構築",
+      "資本効率最大化と収益力強化",
+      "グローバル事業インフラ・ガバナンス強化"
+    ],
+    "financialTargets": [
+      {"metric": "売上収益", "targetFiscalYear": 2028, "value": 2700, "unit": "億円", "scope": "連結", "evidencePage": 8},
+      {"metric": "営業利益", "targetFiscalYear": 2028, "value": 220, "unit": "億円", "scope": "連結", "evidencePage": 8},
+      {"metric": "営業利益率", "targetFiscalYear": 2028, "value": 8.1, "unit": "%", "scope": "連結", "evidencePage": 25},
+      {"metric": "ROE", "targetFiscalYear": 2028, "value": 9.0, "unit": "%以上", "scope": "連結", "evidencePage": 25},
+      {"metric": "ネットD/Eレシオ", "targetFiscalYear": 2028, "value": 0.4, "unit": "倍水準", "scope": "連結", "evidencePage": 25},
+      {"metric": "自己資本比率", "targetFiscalYear": 2028, "value": 40.0, "unit": "%水準", "scope": "連結", "evidencePage": 25},
+      {"metric": "DOE", "targetFiscalYear": 2028, "value": 2.5, "unit": "%水準", "scope": "連結", "evidencePage": 25}
+    ],
+    "capitalPolicy": {
+      "summary": "3年間累計で営業CF620億円と政策保有株式売却130億円を主なキャッシュインとし、戦略・成長投資約430億円、経常投資約200億円、株主還元約120億円へ配分。必要に応じ財務レバレッジも活用する。",
+      "evidencePage": 26
+    },
+    "shareholderReturnPolicy": {
+      "summary": "収益力向上を前提とした累進配当を基本方針とし、2028年にDOE2.5%水準を目安。自己株式取得は経営環境・株価状況を踏まえ検討。",
+      "evidencePage": 27
+    },
     "nonFinancialTargets": [],
-    "importantDefinitions": []
+    "importantDefinitions": [
+      "2035年長期ビジョン目標（売上収益4,000億円、営業利益500億円、ROE10%以上）とFY2028中計目標を分離する。",
+      "FY2025実績とFY2028計画を混同しない。"
+    ],
+    "fieldLevelEvidence": [
+      {"field": "period", "page": 0, "text": "2026年から始まる3ヵ年の新中期経営計画 NIKKISO 2028"},
+      {"field": "financialTargets", "page": 8, "text": "FY2028 売上収益2,700億円、営業利益220億円、ROE9.0%以上"},
+      {"field": "capitalPolicy", "page": 26, "text": "3ヵ年累計キャッシュアロケーション"},
+      {"field": "shareholderReturnPolicy", "page": 27, "text": "累進配当、2028年DOE2.5%水準"}
+    ]
   },
   "validation": {
-    "companyIdentityConfirmed": false,
-    "publicationDateConfirmed": false,
-    "strategyStructured": false,
-    "metricsValidated": false,
-    "fieldLevelEvidenceLinked": false,
-    "yearValidated": false,
-    "unitValidated": false,
-    "scopeValidated": false,
-    "forecastActualSeparated": false,
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
     "templateTextRemaining": false,
     "independentDoubleCheck": false,
     "postPublicationLinkAndRenderCheck": false
   },
   "review": {
-    "status": "collection_complete_primary_human_review_pending",
+    "status": "primary_review_evidence_structured_independent_review_pending",
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false,
-    "reviewers": []
+    "reviewers": ["openai-primary-review"]
   }
 }

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "phase2-wave30-review-prep-v1",
+  "company": {
+    "code": "3624",
+    "name": "アクセルマーク",
+    "wave": 30,
+    "order": 233
+  },
+  "source": {
+    "title": "事業計画及び成長可能性に関する説明資料",
+    "publishedDate": "2025-12-30",
+    "officialUrl": "https://www2.jpx.co.jp/disc/36240/140120251226527642.pdf",
+    "pageCount": 44,
+    "documentTypeCandidate": "growth_potential_document"
+  },
+  "boundaryAssessment": {
+    "status": "review_prepared_not_completed",
+    "formalManagementPlanConfirmed": false,
+    "provisionalClassification": "growth_potential_disclosure_with_business_and_financial_strategy_not_yet_confirmed_as_formal_management_plan",
+    "reason": "資料は成長の方向性、事業戦略、財務戦略、資金使途を開示している一方、確認済み範囲では会社全体の明示的な複数年度正式中計期間・年度別財務終端目標を確認できていない。正式中計としての昇格は全文・図表レビュー完了まで禁止する。"
+  },
+  "evidenceCandidates": [
+    {
+      "topic": "growth_strategy",
+      "pdfPage": 13,
+      "facts": [
+        "トレカ事業およびヘルスケア分野を基盤としたビューティー＆ウェルネス事業を新たな柱へ育成",
+        "M&Aやアライアンスを積極推進"
+      ]
+    },
+    {
+      "topic": "business_and_financial_strategy",
+      "pdfPage": 14,
+      "facts": [
+        "暗号資産を活用した二軸型トレジャリー戦略を導入",
+        "ヘルスケア・ビューティー＆ウェルネス事業とトレカ事業の拡大を成長戦略として掲げる"
+      ]
+    },
+    {
+      "topic": "capital_use",
+      "pdfPage": 15,
+      "facts": [
+        "ビューティー＆ウェルネス事業拡大 300百万円",
+        "トレカ事業拡大 400百万円",
+        "子会社等への成長投資 223百万円",
+        "M&A及び資本業務提携 500百万円"
+      ]
+    },
+    {
+      "topic": "growth_phase",
+      "pdfPage": 17,
+      "facts": [
+        "前期からの成長戦略に基づく施策・投資は完了し事業成長フェーズに移行",
+        "調達資金を活用して加速度的な成長を目指す"
+      ]
+    }
+  ],
+  "requiredNextChecks": [
+    "fullTextReviewAll44Pages",
+    "visualFigureReviewForGrowthDirectionPages",
+    "explicitFormalPlanPeriodSearch",
+    "multiYearFinancialTargetSearch",
+    "capitalPolicyScopeValidation",
+    "shareholderReturnPolicySearch",
+    "yearUnitScopeValidation",
+    "fieldLevelEvidenceFinalization"
+  ],
+  "safety": {
+    "primaryReviewComplete": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "formalPlanPromotionAllowed": false
+  }
+}

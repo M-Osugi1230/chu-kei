@@ -1,9 +1,9 @@
 {
-  "schemaVersion": "quality-rebase-phase2-effective-status-v1",
-  "updatedAt": "2026-08-12T00:03:00+09:00",
-  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
-  "independentReviewStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
-  "appliedOverlays": [
+  "schemaVersion":"quality-rebase-phase2-effective-status-v1",
+  "updatedAt":"2026-08-12T00:21:00+09:00",
+  "baseStatusFile":"operations/quality-rebase/phase2/current-status-v1.json",
+  "independentReviewStatusFile":"operations/quality-rebase/phase2/independent-review-status-v1.json",
+  "appliedOverlays":[
     "operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave08-primary-completion-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave09-primary-completion-v1.json",
@@ -28,79 +28,15 @@
     "operations/quality-rebase/phase2/review-state-overlays/wave26-primary-completion-batch02-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave27-primary-completion-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave28-primary-completion-v1.json",
-    "operations/quality-rebase/phase2/review-state-overlays/wave29-primary-completion-v1.json"
+    "operations/quality-rebase/phase2/review-state-overlays/wave29-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave30-primary-completion-batch01-v1.json"
   ],
-  "targets": {"phase1":50,"phase2Additional":450,"totalIncludingPhase1":500},
-  "assignment": {
-    "primaryReviewWavesAssigned": 30,
-    "phase2CompaniesAssignedTotal": 292,
-    "currentWaveFile": "operations/quality-rebase/phase2/primary-review-wave30-v1.json",
-    "nonGrowthPrimaryReviewCandidatesRemaining": 0,
-    "activeQueue": "growth_potential_document_formal_plan_boundary_review"
-  },
-  "review": {
-    "phase1PrimaryReviewComplete": 50,
-    "phase2PrimaryReviewComplete": 280,
-    "primaryReviewCompleteIncludingPhase1": 330,
-    "phase2PrimaryReviewCompletionRatePercent": 62.2,
-    "totalPrimaryReviewCompletionRatePercent": 66.0,
-    "independentReviewReady": 61,
-    "independentReviewComplete": 61,
-    "independentReviewPending": 0,
-    "independentReviewBlockedSourceIdentity": 0,
-    "independentVisualReviewPending": 217,
-    "additionalSourceMappingRequired": 3,
-    "remainingPhase2PrimaryReviews": 170,
-    "deepVerificationApproved": 0,
-    "growthDocumentClassifications": {
-      "formalPlanEmbedded": 20,
-      "notFormalManagementPlan": 31,
-      "sourceRemapOrExclusionRequired": 0
-    }
-  },
-  "activeWave": {
-    "wave": 30,
-    "assigned": 10,
-    "primaryReviewComplete": 0,
-    "formalManagementPlanConfirmed": 0,
-    "formalPlanEmbedded": 0,
-    "growthRoadmapNotFormalPlan": 0,
-    "sourceMappingFollowupRequired": 0,
-    "independentReviewReady": 0,
-    "independentVisualReviewPending": 0,
-    "remaining": 10,
-    "status": "primary_review_assigned_formal_plan_boundary_required"
-  },
-  "openVisualFollowups": [
-    {"wave":7,"primaryReviewComplete":10,"independentReviewReady":5,"independentVisualReviewPending":5},
-    {"wave":8,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":9,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":10,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":11,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":12,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":13,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":14,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":15,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":16,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":17,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":18,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":19,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":20,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":21,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":22,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":23,"primaryReviewComplete":8,"independentReviewReady":0,"independentVisualReviewPending":8},
-    {"wave":24,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":25,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":26,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":27,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":28,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":29,"primaryReviewComplete":4,"independentReviewReady":0,"independentVisualReviewPending":4}
+  "targets":{"phase1":50,"phase2Additional":450,"totalIncludingPhase1":500},
+  "assignment":{"primaryReviewWavesAssigned":30,"phase2CompaniesAssignedTotal":292,"currentWaveFile":"operations/quality-rebase/phase2/primary-review-wave30-v1.json","nonGrowthPrimaryReviewCandidatesRemaining":0,"activeQueue":"growth_potential_document_formal_plan_boundary_review"},
+  "review":{"phase1PrimaryReviewComplete":50,"phase2PrimaryReviewComplete":285,"primaryReviewCompleteIncludingPhase1":335,"phase2PrimaryReviewCompletionRatePercent":63.3,"totalPrimaryReviewCompletionRatePercent":67.0,"independentReviewReady":61,"independentReviewComplete":61,"independentReviewPending":0,"independentReviewBlockedSourceIdentity":0,"independentVisualReviewPending":222,"additionalSourceMappingRequired":3,"remainingPhase2PrimaryReviews":165,"deepVerificationApproved":0,"growthDocumentClassifications":{"formalPlanEmbedded":20,"notFormalManagementPlan":36,"sourceRemapOrExclusionRequired":0}},
+  "activeWave":{"wave":30,"assigned":10,"primaryReviewComplete":5,"formalManagementPlanConfirmed":0,"formalPlanEmbedded":0,"growthRoadmapNotFormalPlan":5,"sourceMappingFollowupRequired":0,"independentReviewReady":0,"independentVisualReviewPending":5,"remaining":5,"status":"primary_review_partially_complete_independent_visual_review_pending"},
+  "openVisualFollowups":[
+    {"wave":7,"primaryReviewComplete":10,"independentReviewReady":5,"independentVisualReviewPending":5},{"wave":8,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":9,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":10,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":11,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":12,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":13,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":14,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":15,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":16,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":17,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":18,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":19,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":20,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":21,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":22,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":23,"primaryReviewComplete":8,"independentReviewReady":0,"independentVisualReviewPending":8},{"wave":24,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":25,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":26,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":27,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":28,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},{"wave":29,"primaryReviewComplete":4,"independentReviewReady":0,"independentVisualReviewPending":4},{"wave":30,"primaryReviewComplete":5,"independentReviewReady":0,"independentVisualReviewPending":5}
   ],
-  "approvalSafety": {
-    "automaticFactCompletionAllowed": false,
-    "automaticApprovalAllowed": false,
-    "primaryReviewerMaySelfApprove": false,
-    "growthDocumentMayBePromotedWithoutFormalPlanEvidence": false,
-    "deepVerificationApproved": false
-  }
+  "approvalSafety":{"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"primaryReviewerMaySelfApprove":false,"growthDocumentMayBePromotedWithoutFormalPlanEvidence":false,"deepVerificationApproved":false}
 }

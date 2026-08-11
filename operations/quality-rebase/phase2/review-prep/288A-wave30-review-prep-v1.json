@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "phase2-wave30-review-prep-v1",
+  "company": {"code":"288A","name":"ラクサス・テクノロジーズ","wave":30,"order":246},
+  "source": {"title":"事業計画及び成長可能性に関する事項","publishedDate":"2026-06-11","officialUrl":"https://www2.jpx.co.jp/disc/288A0/140120260611568046.pdf","pageCount":35,"documentTypeCandidate":"growth_potential_document"},
+  "boundaryAssessment": {
+    "status":"review_prepared_not_completed",
+    "formalManagementPlanConfirmed":false,
+    "provisionalClassification":"growth_potential_disclosure_with_business_plan_not_confirmed_as_formal_management_plan",
+    "reason":"資料は事業計画・成長戦略・KPIを開示しているが、確認範囲では正式な中期経営計画の名称、明示的な複数年度全社計画期間、終端年度の全社財務目標を確認できない。"
+  },
+  "evidenceCandidates": [
+    {"topic":"business_plan_structure","pdfPage":1,"facts":["目次に事業計画セクションを明示"]},
+    {"topic":"growth_model","pdfPage":9,"facts":["ブランドバッグ資産を基盤にバッグ以外への展開やシステムOEM等の成長可能性を提示"]},
+    {"topic":"market_growth","pdfPage":7,"facts":["複数関連市場について中長期CAGRを提示するが、これらは外部市場予測であり会社計画値ではない"]}
+  ],
+  "requiredNextChecks":["fullTextReviewAll35Pages","visualFigureReviewForBusinessPlanPages","explicitFormalPlanPeriodSearch","multiYearCompanyFinancialTargetSearch","capitalPolicyScopeValidation","shareholderReturnPolicySearch","yearUnitScopeValidation","fieldLevelEvidenceFinalization"],
+  "safety":{"primaryReviewComplete":false,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"formalPlanPromotionAllowed":false}
+}

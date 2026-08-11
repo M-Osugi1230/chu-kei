@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"phase2-wave30-review-prep-v1",
+  "company":{"code":"2370","name":"メディネット","wave":30,"order":241},
+  "source":{"title":"事業計画及び成長可能性に関する説明資料","publishedDate":"2025-11-13","officialUrl":"https://www2.jpx.co.jp/disc/23700/140120251113501235.pdf","pageCount":48,"documentTypeCandidate":"growth_potential_document"},
+  "boundaryAssessment":{"status":"review_prepared_strong_formal_plan_content_embedded","formalManagementPlanConfirmed":false,"formalPlanEmbedded":true,"provisionalClassification":"growth_potential_disclosure_with_explicit_vision2030_business_plan_and_2028_profitability_target","reason":"資料内に独立した『事業計画』章、VISION2030、経営方針、成長戦略、経営指標、利益計画が存在し、細胞加工業の2028年9月期黒字回復を明示。正式中計相当性は高いが、全社計画範囲と財務終端目標の粒度を最終確認するまで昇格保留。"},
+  "evidenceCandidates":[
+    {"topic":"vision","pdfPage":33,"facts":["VISION2030","Well-Being社会に貢献するHealthcare Innovating Companyを目指す"]},
+    {"topic":"management_policy","pdfPage":34,"facts":["特定細胞加工物製造受託拡大","CDMO基盤強化","再生医療等製品開発加速","収益性・生産性向上","新規事業育成","人財活性化・DX"]},
+    {"topic":"capital_allocation","pdfPage":38,"facts":["CDMO体制整備996百万円・2025年9月時点606百万円充当","施設拡充893百万円","充当予定時期2021年9月～2027年9月"]},
+    {"topic":"rd_capital_allocation","pdfPage":40,"facts":["HSP105研究開発537百万円・285百万円充当","再生医療等製品開発1,254百万円・533百万円充当"]},
+    {"topic":"medium_term_management_metric","pdfPage":41,"facts":["細胞加工業：2028年9月期黒字回復"]},
+    {"topic":"fy2026_profit_plan","pdfPage":43,"facts":["2026年9月期売上高943百万円予想","売上総利益202百万円","営業損失1,454百万円"]}
+  ],
+  "requiredNextChecks":["fullTextReviewAll48Pages","visualReviewPages33To43","formalPlanScopeCompanyWideVsCellProcessingSegment","2028TargetMetricDefinitionValidation","capitalPolicyAndDilutionReview","shareholderReturnPolicySearch","yearUnitScopeValidation","fieldLevelEvidenceFinalization"],
+  "safety":{"primaryReviewComplete":false,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"formalPlanPromotionAllowed":false}
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "phase2-wave30-review-prep-v1",
+  "company": {"code":"3652","name":"ディジタルメディアプロフェッショナル","wave":30,"order":253},
+  "source": {"title":"事業計画及び成長可能性に関する事項","publishedDate":"2026-06-22","officialUrl":"https://www2.jpx.co.jp/disc/36520/140120260622575725.pdf","pageCount":40,"documentTypeCandidate":"growth_potential_document"},
+  "boundaryAssessment": {
+    "status":"review_prepared_not_completed",
+    "formalManagementPlanConfirmed":false,
+    "provisionalClassification":"growth_potential_document_with_business_level_mid_term_visions_not_confirmed_as_formal_companywide_plan",
+    "reason":"資料にはエッジAI半導体事業・FA事業の中期ビジョンおよび三位一体の成長戦略があるが、確認範囲では会社全体の正式中期経営計画としての計画期間・全社終端財務目標は明示されていない。"
+  },
+  "evidenceCandidates": [
+    {"topic":"edge_ai_mid_term_vision","pdfPage":31,"facts":["エッジAI半導体事業で2030年3月期に30億円規模の売上達成を目指す"]},
+    {"topic":"fa_mid_term_vision","pdfPage":32,"facts":["FA事業で2030年3月期に20億円規模の売上達成を目指す"]},
+    {"topic":"company_growth_strategy","pdfPage":33,"facts":["エッジAI半導体事業、FA事業、アミューズメント事業の三位一体成長戦略を提示"]},
+    {"topic":"single_year_forecast","pdfPage":40,"facts":["2027年3月期予想は売上高3,640百万円、営業利益30百万円、経常利益45百万円、当期純利益30百万円","単年度予想として中期目標とは分離する"]}
+  ],
+  "requiredNextChecks":["fullTextReviewAll40Pages","visualFigureReviewForMidTermVisionPages","explicitCompanywideFormalPlanSearch","capitalPolicyScopeValidation","shareholderReturnPolicySearch","yearUnitScopeValidation","fieldLevelEvidenceFinalization"],
+  "safety":{"primaryReviewComplete":false,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"formalPlanPromotionAllowed":false}
+}

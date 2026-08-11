@@ -36,11 +36,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Checkout target branch
+      - name: Checkout only Wave-generation inputs
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/generate_phase2_next_primary_review_wave.py
+            /operations/quality-rebase/phase1-cohort-50-v1.json
+            /operations/quality-rebase/phase2/current-status-v1.json
+            /operations/quality-rebase/phase2/generate-next-wave-request.json
+            /operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json
+            /operations/quality-rebase/phase2/primary-review-wave*-v1.json
+            /operations/quality-rebase/phase2/reviews/*-primary-review-v1.json
+            /operations/quality-rebase/phase2/bulk-collection/**/primary-review-template.json
 
       - name: Set up Python
         uses: actions/setup-python@v5

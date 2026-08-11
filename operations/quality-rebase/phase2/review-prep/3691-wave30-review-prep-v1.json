@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "phase2-wave30-review-prep-v1",
+  "company": {"code":"3691","name":"デジタルプラス","wave":30,"order":235},
+  "source": {"title":"事業計画及び成長可能性に関する事項の説明資料","publishedDate":"2025-12-24","officialUrl":"https://www2.jpx.co.jp/disc/36910/140120251224525492.pdf","pageCount":34,"documentTypeCandidate":"growth_potential_document"},
+  "boundaryAssessment": {
+    "status":"review_prepared_strong_formal_plan_content_embedded",
+    "formalManagementPlanConfirmed":false,
+    "formalPlanEmbedded":true,
+    "provisionalClassification":"growth_potential_disclosure_with_explicit_medium_term_targets_embedded",
+    "reason":"資料自体は成長可能性開示だが、INDEXに『フィンテック事業 中期目標』があり、2028年9月期の流通総額1,000億円・営業利益率50%など明示的な中期目標を含む。正式中計としての最終昇格は全文・図表・資本政策レビュー完了後に判断する。"
+  },
+  "evidenceCandidates": [
+    {"topic":"medium_term_target","pdfPage":10,"facts":["2028年9月期目標：流通総額1,000億円","営業利益率50%","2026年9月期目標：流通総額250億円"]},
+    {"topic":"intermediate_profit_model","pdfPage":12,"facts":["流通総額1,000億円への中間目標として営業利益10億円","月間流通総額35億円×12カ月＝年間420億円","流通粗利率5%・流通粗利21億円","販管費10億円"]},
+    {"topic":"human_capital_targets","pdfPage":13,"facts":["正社員あたり流通総額10億円","流通粗利率5%で粗利5,000万円","平均年収1,000万円","100名で流通総額1,000億円を目指す"]},
+    {"topic":"shareholder_benefit_growth_target","pdfPage":19,"facts":["2028年に株主優待導入企業500社・国内No.1を目指す"]},
+    {"topic":"fy2026_forecast","pdfPage":23,"facts":["FY2026流通総額25,000百万円","売上1,700百万円","営業利益200百万円","営業利益率11.8%"]}
+  ],
+  "requiredNextChecks":["fullTextReviewAll34Pages","visualFigureReviewForMediumTermTargetPages","formalPlanScopeCompanyWideVsFintechSegment","capitalPolicyReview","shareholderReturnPolicyReview","yearUnitScopeValidation","fieldLevelEvidenceFinalization"],
+  "safety":{"primaryReviewComplete":false,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"formalPlanPromotionAllowed":false}
+}

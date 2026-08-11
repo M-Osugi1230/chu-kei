@@ -1,52 +1,30 @@
 {
   "schemaVersion": "deep-verification-primary-review-template-v1",
-  "company": {
-    "code": "6036",
-    "name": "KeePer技研",
-    "market": "Prime",
-    "industry": "サービス業"
-  },
-  "document": {
-    "candidateTitle": "中期経営計画(2031年6月期)",
-    "candidatePublishedDate": "2026-03-19",
-    "sourceUrl": "https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf",
-    "resolvedPageUrl": "https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf",
-    "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf",
-    "documentTypeCandidate": "formal_management_plan",
-    "pageCount": 42,
-    "pdfSha256": "967cca44b934477af9b9991f6dc84685b71994b3f43b4c404f5460ba766daa24",
-    "formalPlanConfirmed": false,
-    "fullTextHumanReviewComplete": false
-  },
+  "company": {"code":"6036","name":"KeePer技研","market":"Prime","industry":"サービス業"},
+  "document": {"candidateTitle":"中期経営計画(2031年6月期)","candidatePublishedDate":"2026-03-19","sourceUrl":"https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf","resolvedPageUrl":"https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf","resolvedPdfUrl":"https://www2.jpx.co.jp/disc/60360/140120260319585211.pdf","documentTypeCandidate":"formal_management_plan","pageCount":42,"pdfSha256":"967cca44b934477af9b9991f6dc84685b71994b3f43b4c404f5460ba766daa24","formalPlanConfirmed":true,"fullTextHumanReviewComplete":false},
   "structuredAnalysis": {
-    "summary": null,
-    "period": null,
-    "strategyThemes": [],
-    "financialTargets": [],
-    "capitalPolicy": null,
-    "shareholderReturnPolicy": null,
-    "nonFinancialTargets": [],
-    "importantDefinitions": []
+    "summary":"2026/6期から2031/6期を対象とする正式中期経営計画。KeePerブランドの拡張を掲げ、LABO500店舗網、既存事業のビジネスモデル革新、新車マーケット・海外・車以外の新市場を成長軸とする。",
+    "period":{"start":"FY2026/06","end":"FY2031/06"},
+    "strategyThemes":["KeePerブランドの拡張","LABO500店舗網の確立（直営250店＋FC250店）","モビリティベース構想とサービス多角化","新車マーケット拡大","海外事業基盤づくり","車以外の新市場開拓"],
+    "financialTargets":[
+      {"metric":"売上高","target":46922,"unit":"百万円","fiscalYear":"FY2031/06","scope":"全社","cagr":"12.5%"},
+      {"metric":"営業利益","target":16100,"unit":"百万円","fiscalYear":"FY2031/06","scope":"全社"},
+      {"metric":"営業利益率","target":34.2,"unit":"%","fiscalYear":"FY2031/06","scope":"全社"},
+      {"metric":"ROE","target":"30%以上","unit":"%","fiscalYear":"FY2031/06","scope":"全社"},
+      {"metric":"EPS","target":406,"unit":"円","fiscalYear":"FY2031/06","scope":"全社"}
+    ],
+    "capitalPolicy":{"summary":"マーケティング投資と直営店出店投資を重点化。広告宣伝費は全社売上高の3〜7%を計画し、2027/6期〜2031/6期の直営店建設投資は総額約110億円を計画。"},
+    "shareholderReturnPolicy":"配当性向を従来33.5%から40%以上へ引き上げる方針。成長投資状況と中計進捗を踏まえて株主還元を強化。",
+    "nonFinancialTargets":[{"metric":"KeePer LABO店舗数","target":500,"unit":"店舗","fiscalYear":"FY2031/06","breakdown":"直営250店＋FC250店"}],
+    "importantDefinitions":["前中計（2023/6期-2025/6期）の実績と新中計（2026/6期-2031/6期）の計画値を分離","2025/6期下期からLABO運営事業の経費計上ルール変更があるため前中計比較は旧基準を使用"]
   },
-  "validation": {
-    "companyIdentityConfirmed": false,
-    "publicationDateConfirmed": false,
-    "strategyStructured": false,
-    "metricsValidated": false,
-    "fieldLevelEvidenceLinked": false,
-    "yearValidated": false,
-    "unitValidated": false,
-    "scopeValidated": false,
-    "forecastActualSeparated": false,
-    "templateTextRemaining": false,
-    "independentDoubleCheck": false,
-    "postPublicationLinkAndRenderCheck": false
-  },
-  "review": {
-    "status": "collection_complete_primary_human_review_pending",
-    "automaticFactCompletionAllowed": false,
-    "automaticApprovalAllowed": false,
-    "deepVerificationApproved": false,
-    "reviewers": []
-  }
+  "evidence":[
+    {"field":"period","pages":[20],"note":"新中期経営計画（2026/6期-2031/6期）"},
+    {"field":"financialTargets","pages":[6,21,26],"note":"2031/6期売上高約470億円、営業利益161億円、営業利益率34.2%、ROE30%以上。p21には営業利益160億円表記、数値計画p26は161億円のため詳細計画値を採用。"},
+    {"field":"strategyThemes","pages":[21,22,23],"note":"500店舗網、モビリティベース、新車マーケット、海外、車以外の市場開拓。"},
+    {"field":"capitalPolicy","pages":[24],"note":"広告宣伝費3〜7%、直営店建設投資2027/6-2031/6の5年間で約110億円。"},
+    {"field":"shareholderReturnPolicy","pages":[25],"note":"配当性向40%以上を計画。"}
+  ],
+  "validation": {"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"forecastActualSeparated":true,"templateTextRemaining":false,"independentDoubleCheck":false,"postPublicationLinkAndRenderCheck":false},
+  "review": {"status":"primary_review_evidence_structured_independent_review_pending","automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"reviewers":["ChatGPT-primary-review"]}
 }

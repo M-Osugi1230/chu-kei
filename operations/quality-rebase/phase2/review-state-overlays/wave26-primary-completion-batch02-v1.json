@@ -1,0 +1,23 @@
+{
+  "schemaVersion":"phase2-review-state-overlay-v1",
+  "createdAt":"2026-08-11T15:19:00+09:00",
+  "wave":26,
+  "batch":2,
+  "baseWaveFile":"operations/quality-rebase/phase2/primary-review-wave26-v1.json",
+  "previousWaveOverlay":"operations/quality-rebase/phase2/review-state-overlays/wave26-primary-completion-batch01-v1.json",
+  "reason":"Wave26後半5社のGrowth開示を全文レビューし、Growth資料内の正式中計内包有無、単年度予想・実績・中長期目標との境界を明示する。独立図表確認は未完了のため自動承認しない。",
+  "expectedBase":{"primaryReviewComplete":251,"independentReviewReady":61,"remainingPrimaryReviews":199},
+  "companyCompletions":[
+    {"order":318,"code":"2934","name":"ジェイフロンティア","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_2026_2028_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/2934-primary-review-v1.json"},
+    {"order":353,"code":"6086","name":"シンメンテホールディングス","formalManagementPlanConfirmed":false,"status":"primary_growth_document_review_complete_single_year_forecast_not_formal_management_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6086-primary-review-v1.json"},
+    {"order":355,"code":"6224","name":"JRC","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_fy2028_terminal_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/6224-primary-review-v1.json"},
+    {"order":373,"code":"7695","name":"交換できるくん","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_progress_update_fy2026_fy2028_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/7695-primary-review-v1.json"},
+    {"order":404,"code":"248A","name":"キッズスター","formalManagementPlanConfirmed":true,"status":"primary_review_complete_formal_plan_embedded_in_growth_document_fy2026_fy2028_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/248A-primary-review-v1.json"}
+  ],
+  "completedChecksForAll":["sourceDocumentClassification","formalPlanBoundary","formalPlanExistenceWithinGrowthDocument","forecastActualAndTargetSeparation","fullTextReview","metricsValidation","capitalPolicyReview","shareholderReturnPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],
+  "pendingChecksForAll":["remainingVisualFigureReview","independentDoubleCheck"],
+  "effectiveCounts":{"wavePrimaryReviewComplete":10,"wavePrimaryReviewRemaining":0,"formalPlanEmbedded":7,"notCurrentFormalManagementPlan":3,"waveIndependentVisualReviewPending":10,"primaryReviewComplete":256,"independentReviewReady":61,"remainingPrimaryReviews":194,"deepVerificationApproved":0},
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":false
+}

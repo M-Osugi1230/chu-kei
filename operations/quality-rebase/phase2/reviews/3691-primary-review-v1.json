@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"3691","name":"デジタルプラス","market":"Growth","industry":"情報・通信業"},
+  "source": {
+    "title":"事業計画及び成長可能性に関する事項の説明資料",
+    "publishedDate":"2025-12-24",
+    "officialUrl":"https://www2.jpx.co.jp/disc/36910/140120251224525492.pdf",
+    "pdfSha256":"156ebeac56fc1c849ea82238eb6db6080ec5f3544a03343ab063c453ebed8f91",
+    "pageCount":34,
+    "documentClassification":"growth_potential_document_with_explicit_midterm_targets_not_formal_management_plan",
+    "formalPlanBoundary":{"formalManagementPlanConfirmed":false,"statement":"資料はフィンテック事業の中期目標を明示するが、会社全体の正式な『中期経営計画』としては表題・期間・計画体系を提示していないため、正式中計には昇格しない。2026年9月期単年度予想と2028年9月期中期目標を分離する。"}
+  },
+  "summary":"フィンテック事業へ集中し、資金移動業対応デジタルウォレットを垂直立ち上げして流通総額を拡大する。中期目標は2028年9月期の流通総額1,000億円・営業利益率50%。中間目標として営業利益10億円を置き、人的資本では正社員1人当たり流通総額10億円・平均年収1,000万円を目指す。",
+  "financialTargets":[
+    {"metric":"流通総額","target":1000,"unit":"億円","targetFiscalYear":"2028年9月期","classification":"midterm_target","evidencePdfPage":9},
+    {"metric":"営業利益率","target":50,"unit":"%","targetFiscalYear":"2028年9月期","classification":"midterm_target","evidencePdfPage":9},
+    {"metric":"営業利益","target":10,"unit":"億円","classification":"intermediate_target","evidencePdfPages":[11,20]},
+    {"metric":"流通総額","target":250,"unit":"億円","targetFiscalYear":"2026年9月期","classification":"single_year_target","evidencePdfPage":16}
+  ],
+  "operatingKpis":[
+    {"metric":"正社員1人当たり流通総額","target":10,"unit":"億円","classification":"midterm_target","evidencePdfPage":12},
+    {"metric":"平均年収","target":1000,"unit":"万円","classification":"midterm_human_capital_target","evidencePdfPage":12}
+  ],
+  "strategyThemes":["フィンテック事業への集中","資金移動業対応デジタルウォレットの垂直立ち上げ","流通総額拡大を優先した先行投資","AIを含む運用最適化と生産性向上"],
+  "capitalPolicy":{"status":"qualitative_growth_investment_policy","evidence":"資金移動業の立ち上げ、人材・開発等へ積極的先行投資を行う。定量的な全社キャッシュアロケーションは本資料で確認できない。","evidencePdfPages":[11,20]},
+  "shareholderReturnPolicy":{"status":"not_disclosed_in_reviewed_document"},
+  "validation":{"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":false,"formalPlanBoundaryValidated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"forecastActualSeparated":true,"capitalPolicyReviewed":true,"shareholderReturnPolicyReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false,"postPublicationLinkAndRenderCheck":false},
+  "review":{"status":"primary_review_complete_independent_visual_review_pending","automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"reviewers":["ChatGPT primary reviewer"]}
+}

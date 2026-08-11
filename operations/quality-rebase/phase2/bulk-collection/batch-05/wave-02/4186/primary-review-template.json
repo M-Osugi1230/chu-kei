@@ -1,52 +1,9 @@
 {
-  "schemaVersion": "deep-verification-primary-review-template-v1",
-  "company": {
-    "code": "4186",
-    "name": "東京応化工業",
-    "market": "Prime",
-    "industry": "化学"
-  },
-  "document": {
-    "candidateTitle": "TOKグループ中期経営計画「tok 中期計画 2027」の見直しに関するお知らせ",
-    "candidatePublishedDate": "2026-02-09",
-    "sourceUrl": "https://www2.jpx.co.jp/disc/41860/140120260209551576.pdf",
-    "resolvedPageUrl": "https://www2.jpx.co.jp/disc/41860/140120260209551576.pdf",
-    "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/41860/140120260209551576.pdf",
-    "documentTypeCandidate": "plan_revision_or_update",
-    "pageCount": 25,
-    "pdfSha256": "93dd727515b1d502860977d306b3aa0061ceb3b83a538caa980fc605bf9e9350",
-    "formalPlanConfirmed": false,
-    "fullTextHumanReviewComplete": false
-  },
-  "structuredAnalysis": {
-    "summary": null,
-    "period": null,
-    "strategyThemes": [],
-    "financialTargets": [],
-    "capitalPolicy": null,
-    "shareholderReturnPolicy": null,
-    "nonFinancialTargets": [],
-    "importantDefinitions": []
-  },
-  "validation": {
-    "companyIdentityConfirmed": false,
-    "publicationDateConfirmed": false,
-    "strategyStructured": false,
-    "metricsValidated": false,
-    "fieldLevelEvidenceLinked": false,
-    "yearValidated": false,
-    "unitValidated": false,
-    "scopeValidated": false,
-    "forecastActualSeparated": false,
-    "templateTextRemaining": false,
-    "independentDoubleCheck": false,
-    "postPublicationLinkAndRenderCheck": false
-  },
-  "review": {
-    "status": "collection_complete_primary_human_review_pending",
-    "automaticFactCompletionAllowed": false,
-    "automaticApprovalAllowed": false,
-    "deepVerificationApproved": false,
-    "reviewers": []
-  }
+  "schemaVersion":"deep-verification-primary-review-template-v1",
+  "company":{"code":"4186","name":"東京応化工業","market":"Prime","industry":"化学"},
+  "document":{"candidateTitle":"TOKグループ中期経営計画「tok 中期計画 2027」の見直しに関するお知らせ","candidatePublishedDate":"2026-02-09","sourceUrl":"https://www2.jpx.co.jp/disc/41860/140120260209551576.pdf","resolvedPageUrl":"https://www2.jpx.co.jp/disc/41860/140120260209551576.pdf","resolvedPdfUrl":"https://www2.jpx.co.jp/disc/41860/140120260209551576.pdf","documentTypeCandidate":"plan_revision_or_update","pageCount":25,"pdfSha256":"93dd727515b1d502860977d306b3aa0061ceb3b83a538caa980fc605bf9e9350","formalPlanConfirmed":true,"fullTextHumanReviewComplete":false},
+  "structuredAnalysis":{"summary":"2025年12月期〜2027年12月期の正式中計『tok中期計画2027』について、生成AI関連半導体需要の拡大と想定以上の円安を踏まえ、2027年度の主要定量目標を上方修正。定性目標・重点戦略は変更なし。","period":{"start":"FY2025/12","end":"FY2027/12"},"strategyThemes":["既存の7つの重点戦略を継続","生成AI関連を中心とした半導体需要拡大への対応","グローバル供給体制・サプライチェーン強化","統合思考経営とマテリアリティ連動"],"financialTargets":[{"metric":"連結売上高","originalTarget":2700,"revisedTarget":2950,"unit":"億円","fiscalYear":"FY2027/12","scope":"連結"},{"metric":"連結営業利益","originalTarget":480,"revisedTarget":580,"unit":"億円","fiscalYear":"FY2027/12","scope":"連結"},{"metric":"EBITDA","originalTarget":610,"revisedTarget":720,"unit":"億円","fiscalYear":"FY2027/12","scope":"連結"},{"metric":"ROE","originalTarget":13.0,"revisedTarget":14.0,"unit":"%","fiscalYear":"FY2027/12","scope":"連結"}],"capitalPolicy":null,"shareholderReturnPolicy":null,"nonFinancialTargets":[],"importantDefinitions":["2025年1月公表の当初目標と2026年2月見直し後目標を分離","2025年度実績は売上高2,370億円、営業利益473億円、EBITDA561億円、ROE15.6%であり計画値とは分離","定性目標および重点戦略は変更なし"]},
+  "evidence":[{"field":"formalPlanBoundary","source":"東京応化工業公式IR 長期ビジョン・中期計画","note":"tok中期計画2027は2025年12月期〜2027年12月期の中期計画として公式掲載。"},{"field":"financialTargets","source":"2026-02-09 見直しに関するお知らせ","note":"売上高2700→2950億円、営業利益480→580億円、EBITDA610→720億円、ROE13.0→14.0%。"},{"field":"revisionReason","source":"2026-02-09 見直しに関するお知らせ","note":"生成AI関連需要増と円安進行。2025-2027年度平均USD/JPY前提を135円から150円へ変更。"}],
+  "validation":{"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"forecastActualSeparated":true,"templateTextRemaining":false,"independentDoubleCheck":false,"postPublicationLinkAndRenderCheck":false},
+  "review":{"status":"primary_review_evidence_structured_independent_review_pending","automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"reviewers":["ChatGPT-primary-review"]}
 }

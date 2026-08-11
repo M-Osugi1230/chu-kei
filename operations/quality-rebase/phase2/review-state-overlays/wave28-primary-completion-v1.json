@@ -1,0 +1,28 @@
+{
+  "schemaVersion":"phase2-review-state-overlay-v1",
+  "createdAt":"2026-08-11T18:36:00+09:00",
+  "wave":28,
+  "batch":1,
+  "baseWaveFile":"operations/quality-rebase/phase2/primary-review-wave28-v1.json",
+  "previousWaveOverlay":"operations/quality-rebase/phase2/review-state-overlays/wave27-primary-completion-v1.json",
+  "reason":"Wave28の10社についてGrowth資料内のformal plan境界、全文、主要数値、資本政策、株主還元、項目別証跡を一次レビューした。正式中計、中期ビジョン、複数年事業見通し、単年度方針、長期プロダクト目標を分離し、Growth資料という理由だけで正式中計へ昇格しない。独立図表確認・独立再確認・final reviewは別工程として維持する。",
+  "expectedBase":{"primaryReviewComplete":266,"independentReviewReady":61,"remainingPrimaryReviews":184,"independentVisualReviewPending":203,"additionalSourceMappingRequired":3},
+  "companyCompletions":[
+    {"order":157,"code":"7133","name":"HYUGA PRIMARY CARE","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_expired_prior_plan_and_future_plan_not_yet_published_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/7133-primary-review-v1.json"},
+    {"order":166,"code":"304A","name":"フォルシア","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_single_year_forecast_and_long_term_strategy_not_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/304A-primary-review-v1.json"},
+    {"order":196,"code":"130A","name":"Veritas In Silico","formalManagementPlanConfirmed":true,"growthDocumentFormalPlanEmbedded":true,"status":"primary_growth_document_review_complete_formal_medium_term_plan_embedded_financial_endpoint_not_disclosed_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/130A-primary-review-v1.json"},
+    {"order":197,"code":"138A","name":"光フードサービス","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_long_term_2030_targets_not_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/138A-primary-review-v1.json"},
+    {"order":198,"code":"145A","name":"L is B","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_medium_long_term_growth_model_not_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/145A-primary-review-v1.json"},
+    {"order":207,"code":"3474","name":"G-FACTORY","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"explicitMultiYearBusinessOutlookEmbedded":true,"status":"primary_growth_document_review_complete_multi_year_outlook_not_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3474-primary-review-v1.json"},
+    {"order":208,"code":"3664","name":"WIZE","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_medium_term_business_targets_not_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3664-primary-review-v1.json"},
+    {"order":210,"code":"3727","name":"アプリックス","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_single_year_policy_and_long_term_product_vision_not_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3727-primary-review-v1.json"},
+    {"order":211,"code":"3914","name":"JIG-SAW","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"status":"primary_growth_document_review_complete_qualitative_growth_image_not_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/3914-primary-review-v1.json"},
+    {"order":213,"code":"410A","name":"GMOコマース","formalManagementPlanConfirmed":false,"growthDocumentFormalPlanEmbedded":false,"quantifiedMediumTermVisionConfirmed":true,"status":"primary_growth_document_review_complete_quantified_medium_term_vision_not_formal_plan_independent_visual_review_pending","reviewFile":"operations/quality-rebase/phase2/reviews/410A-primary-review-v1.json"}
+  ],
+  "completedChecksForAll":["sourceDocumentClassification","formalPlanBoundary","forecastActualAndTargetSeparation","fullTextReview","metricsValidation","capitalPolicyReview","shareholderReturnPolicyReview","fieldLevelEvidence","yearUnitScopeValidation"],
+  "pendingChecksForAll":["remainingVisualFigureReview","independentDoubleCheck","separateFinalReview"],
+  "effectiveCounts":{"wavePrimaryReviewComplete":10,"wavePrimaryReviewRemaining":0,"formalManagementPlanConfirmed":1,"growthDocumentFormalPlanEmbedded":1,"notCurrentFormalManagementPlan":9,"waveIndependentVisualReviewPending":10,"primaryReviewComplete":276,"independentReviewReady":61,"remainingPrimaryReviews":174,"independentVisualReviewPending":213,"additionalSourceMappingRequired":3,"deepVerificationApproved":0},
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":false
+}

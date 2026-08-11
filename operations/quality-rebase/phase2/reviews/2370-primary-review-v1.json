@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"2370","name":"メディネット","market":"Growth","industry":"サービス業"},
+  "source": {
+    "title":"事業計画及び成長可能性に関する説明資料",
+    "publishedDate":"2025-11-13",
+    "officialUrl":"https://www2.jpx.co.jp/disc/23700/140120251113501235.pdf",
+    "pdfSha256":"f664b49e76619fcc5657bb60b0d056350c1a97d33d1babaaec163b19a1d64fe1",
+    "pageCount":48,
+    "documentClassification":"growth_potential_document_with_vision2030_and_business_plan_not_formal_management_plan",
+    "formalPlanBoundary":{"formalManagementPlanConfirmed":false,"statement":"資料はVISION2030、経営方針、成長戦略、経営指標、利益計画を含むが、正式な『中期経営計画』としての計画期間・全社終端財務目標体系は明示していない。VISION2030、2028年9月期事業KPI、2026年9月期単年度予想を分離する。"}
+  },
+  "summary":"VISION2030の下、細胞加工業の製造受託・CDMO拡大と再生医療等製品の開発加速を進める。細胞加工業は2028年9月期の黒字回復を経営指標に設定。2026年9月期は売上高943百万円、営業損失1,454百万円を予想する。",
+  "financialTargets":[
+    {"metric":"細胞加工業黒字回復","target":"黒字","targetFiscalYear":"2028年9月期","classification":"business_segment_midterm_target","evidencePdfPage":40},
+    {"metric":"売上高","target":943,"unit":"百万円","targetFiscalYear":"2026年9月期","classification":"single_year_forecast","evidencePdfPage":42},
+    {"metric":"営業損失","target":-1454,"unit":"百万円","targetFiscalYear":"2026年9月期","classification":"single_year_forecast","evidencePdfPage":42}
+  ],
+  "strategyThemes":["特定細胞加工物製造受託の拡大","CDMO事業基盤強化","再生医療等製品開発の加速","収益性・生産性向上","新規事業育成とDX・人的資本強化"],
+  "capitalPolicy":{"status":"pipeline_specific_funding_not_companywide_cash_allocation","evidence":"新株予約権による研究開発資金の充当計画を開示。HSP105研究開発537百万円、再生医療等製品開発1,254百万円等が示されるが、これは開発パイプライン別資金使途であり全社キャッシュアロケーションとは扱わない。","evidencePdfPage":39},
+  "shareholderReturnPolicy":{"status":"not_disclosed_in_reviewed_document"},
+  "nonFinancialTargets":[{"metric":"Stempeucel開発・商業化オプション権行使及び治験開始","targetFiscalYear":"2026年9月期","evidencePdfPage":41},{"metric":"MDNT-01国内開発方針決定","targetFiscalYear":"2026年9月期","evidencePdfPage":41}],
+  "validation":{"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pdfHashConfirmed":true,"pageCountConfirmed":true,"formalPlanConfirmed":false,"formalPlanBoundaryValidated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":false,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"forecastActualSeparated":true,"capitalPolicyReviewed":true,"shareholderReturnPolicyReviewed":true,"templateTextRemaining":false,"independentDoubleCheck":false,"postPublicationLinkAndRenderCheck":false},
+  "review":{"status":"primary_review_complete_independent_visual_review_pending","automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"reviewers":["ChatGPT primary reviewer"]}
+}

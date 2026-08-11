@@ -15,38 +15,64 @@
     "documentTypeCandidate": "plan_revision_or_update",
     "pageCount": 30,
     "pdfSha256": "e046a8adaafb7d12477462aaf9ce2384be7f20b289162f39dba2152a0bf64f34",
-    "formalPlanConfirmed": false,
+    "formalPlanConfirmed": true,
     "fullTextHumanReviewComplete": false
   },
   "structuredAnalysis": {
-    "summary": null,
-    "period": null,
-    "strategyThemes": [],
-    "financialTargets": [],
-    "capitalPolicy": null,
-    "shareholderReturnPolicy": null,
+    "summary": "2035年長期ビジョン『BLOOMING VISION 2035』と、その創生期にあたる2026-2028年度の正式中期経営計画『ヨドコウグループ中期経営計画2028』を策定。既存事業の強化、成長戦略の推進、経営基盤の強化を軸に、収益基盤再構築と次の成長ステージへの投資を進める。",
+    "period": {"startFiscalYear": 2026, "endFiscalYear": 2028, "label": "2026年度-2028年度"},
+    "strategyThemes": [
+      "既存事業の強化",
+      "成長戦略の推進",
+      "経営基盤の強化",
+      "事業ポートフォリオ見直しと重点領域明確化",
+      "周辺事業領域拡大・M&A",
+      "DX・人的資本・ESG"
+    ],
+    "financialTargets": [
+      {"metric": "売上高", "targetFiscalYear": 2028, "value": 2500, "unit": "億円", "scope": "連結", "evidencePage": 18},
+      {"metric": "営業利益", "targetFiscalYear": 2028, "value": 200, "unit": "億円", "scope": "連結", "evidencePage": 18},
+      {"metric": "ROE", "targetFiscalYear": 2028, "value": 8, "unit": "%", "scope": "連結", "evidencePage": 18}
+    ],
+    "capitalPolicy": {
+      "summary": "中計3年間で営業CF500億円以上、資産売却130億円、必要に応じ資金調達を活用。キャッシュアウトは既存事業維持・強化260億円、成長戦略400億円、経営基盤70億円、株主還元150億円を計画。",
+      "evidencePages": [27, 28]
+    },
+    "shareholderReturnPolicy": {
+      "summary": "年間配当1株40円以上を維持し、配当性向75%以上。自己株式保有上限を発行済株式総数の10%未満とし、政策保有株式は2026年3月末残高比で3年間20%相当縮減。",
+      "evidencePage": 27
+    },
     "nonFinancialTargets": [],
-    "importantDefinitions": []
+    "importantDefinitions": [
+      "長期ビジョン2035の数値目標（売上高3,000億円、営業利益230億円等）と中計2028の数値目標を分離する。",
+      "中計2025の実績・旧目標を現行中計2028の目標と混同しない。"
+    ],
+    "fieldLevelEvidence": [
+      {"field": "period", "page": 0, "text": "2026年度から2028年度までを対象とした中期経営計画2028"},
+      {"field": "financialTargets", "page": 18, "text": "2028年度 売上高2,500億円、営業利益200億円、ROE8%"},
+      {"field": "shareholderReturnPolicy", "page": 27, "text": "1株40円以上、配当性向75%以上"},
+      {"field": "capitalPolicy", "page": 28, "text": "3年間累計キャッシュアロケーション"}
+    ]
   },
   "validation": {
-    "companyIdentityConfirmed": false,
-    "publicationDateConfirmed": false,
-    "strategyStructured": false,
-    "metricsValidated": false,
-    "fieldLevelEvidenceLinked": false,
-    "yearValidated": false,
-    "unitValidated": false,
-    "scopeValidated": false,
-    "forecastActualSeparated": false,
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
     "templateTextRemaining": false,
     "independentDoubleCheck": false,
     "postPublicationLinkAndRenderCheck": false
   },
   "review": {
-    "status": "collection_complete_primary_human_review_pending",
+    "status": "primary_review_evidence_structured_independent_review_pending",
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false,
-    "reviewers": []
+    "reviewers": ["openai-primary-review"]
   }
 }

@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"phase2-wave30-review-prep-v1",
+  "company":{"code":"462A","name":"FUNDINNO","wave":30,"order":236},
+  "source":{"title":"事業計画及び成長可能性に関する事項","publishedDate":"2026-01-30","officialUrl":"https://www2.jpx.co.jp/disc/462A0/140120260130542513.pdf","pageCount":57,"documentTypeCandidate":"growth_potential_document"},
+  "boundaryAssessment":{"status":"review_prepared_not_completed","formalManagementPlanConfirmed":false,"formalPlanEmbedded":false,"provisionalClassification":"growth_potential_disclosure_with_detailed_growth_strategy_and_near_term_forecast","reason":"57ページにわたり成長戦略とKPIを詳細開示しているが、確認済み範囲では明示的な複数年度の会社全体中期計画期間・終端財務目標は確認できない。2026年10月期予想は単年度予想として分離する。"},
+  "evidenceCandidates":[
+    {"topic":"business_model","pdfPage":2,"facts":["未上場株式市場でプライマリー・グロース・セカンダリーの3領域を統合","資本政策・ガバナンス・CxO採用等も含むDXプラットフォーム"]},
+    {"topic":"fy2026_forecast","pdfPage":15,"facts":["2026年10月期連結営業収益3,892百万円予想","連結営業利益1,132百万円予想","2025年10月期に黒字化"]},
+    {"topic":"growth_kpi","pdfPage":38,"facts":["GMV拡大を起点に営業収益最大化","2023年10月期GMV13.8億円、2024年52.7億円、2025年129.5億円"]},
+    {"topic":"growth_strategy","pdfPage":40,"facts":["投資ポテンシャル拡大","業界内プレゼンス確立","取扱商品増加","発行体・投資家向けサービス拡張","規制緩和への対応"]},
+    {"topic":"regulatory_growth_leverage","pdfPage":43,"facts":["Tech Touchのデータ活用とHigh Touchで高単価顧客を攻略","Low Touch展開でスケール・持続的成長を狙う"]},
+    {"topic":"product_expansion","pdfPage":46,"facts":["第二種金融商品取引業・投資運用業登録に向け体制強化","ファンドを通じた投資スキームで投資機会拡大を狙う"]}
+  ],
+  "requiredNextChecks":["fullTextReviewAll57Pages","explicitMediumTermPeriodSearch","multiYearFinancialTargetSearch","capitalPolicyReview","shareholderReturnPolicySearch","yearUnitScopeValidation","fieldLevelEvidenceFinalization"],
+  "safety":{"primaryReviewComplete":false,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"formalPlanPromotionAllowed":false}
+}

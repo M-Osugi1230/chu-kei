@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-effective-status-v1",
-  "updatedAt": "2026-08-11T18:30:00+09:00",
+  "updatedAt": "2026-08-11T18:38:00+09:00",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
   "independentReviewStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
   "appliedOverlays": [
@@ -26,48 +26,49 @@
     "operations/quality-rebase/phase2/review-state-overlays/wave25-primary-completion-batch02-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave26-primary-completion-batch01-v1.json",
     "operations/quality-rebase/phase2/review-state-overlays/wave26-primary-completion-batch02-v1.json",
-    "operations/quality-rebase/phase2/review-state-overlays/wave27-primary-completion-v1.json"
+    "operations/quality-rebase/phase2/review-state-overlays/wave27-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave28-primary-completion-v1.json"
   ],
   "targets": {"phase1":50,"phase2Additional":450,"totalIncludingPhase1":500},
   "assignment": {
-    "primaryReviewWavesAssigned": 27,
-    "phase2CompaniesAssignedTotal": 268,
-    "currentWaveFile": "operations/quality-rebase/phase2/primary-review-wave27-v1.json",
+    "primaryReviewWavesAssigned": 28,
+    "phase2CompaniesAssignedTotal": 278,
+    "currentWaveFile": "operations/quality-rebase/phase2/primary-review-wave28-v1.json",
     "nonGrowthPrimaryReviewCandidatesRemaining": 0,
     "activeQueue": "mixed_plan_revision_and_growth_potential_document"
   },
   "review": {
     "phase1PrimaryReviewComplete": 50,
-    "phase2PrimaryReviewComplete": 266,
-    "primaryReviewCompleteIncludingPhase1": 316,
-    "phase2PrimaryReviewCompletionRatePercent": 59.1,
-    "totalPrimaryReviewCompletionRatePercent": 63.2,
+    "phase2PrimaryReviewComplete": 276,
+    "primaryReviewCompleteIncludingPhase1": 326,
+    "phase2PrimaryReviewCompletionRatePercent": 61.3,
+    "totalPrimaryReviewCompletionRatePercent": 65.2,
     "independentReviewReady": 61,
     "independentReviewComplete": 61,
     "independentReviewPending": 0,
     "independentReviewBlockedSourceIdentity": 0,
-    "independentVisualReviewPending": 203,
+    "independentVisualReviewPending": 213,
     "additionalSourceMappingRequired": 3,
-    "remainingPhase2PrimaryReviews": 184,
+    "remainingPhase2PrimaryReviews": 174,
     "deepVerificationApproved": 0,
     "growthDocumentClassifications": {
-      "formalPlanEmbedded": 18,
-      "notFormalManagementPlan": 19,
+      "formalPlanEmbedded": 19,
+      "notFormalManagementPlan": 28,
       "sourceRemapOrExclusionRequired": 0
     }
   },
   "activeWave": {
-    "wave": 27,
+    "wave": 28,
     "assigned": 10,
     "primaryReviewComplete": 10,
-    "formalManagementPlanConfirmed": 6,
-    "formalPlanEmbedded": 3,
-    "growthRoadmapNotFormalPlan": 4,
-    "sourceMappingFollowupRequired": 1,
+    "formalManagementPlanConfirmed": 1,
+    "formalPlanEmbedded": 1,
+    "growthRoadmapNotFormalPlan": 9,
+    "sourceMappingFollowupRequired": 0,
     "independentReviewReady": 0,
     "independentVisualReviewPending": 10,
     "remaining": 0,
-    "status": "primary_review_complete_independent_visual_review_and_source_followup_pending"
+    "status": "primary_review_complete_independent_visual_review_pending"
   },
   "openVisualFollowups": [
     {"wave":7,"primaryReviewComplete":10,"independentReviewReady":5,"independentVisualReviewPending":5},
@@ -90,7 +91,8 @@
     {"wave":24,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
     {"wave":25,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
     {"wave":26,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
-    {"wave":27,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10}
+    {"wave":27,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10},
+    {"wave":28,"primaryReviewComplete":10,"independentReviewReady":0,"independentVisualReviewPending":10}
   ],
   "approvalSafety": {
     "automaticFactCompletionAllowed": false,

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "phase2-wave30-review-prep-v1",
+  "company": {"code":"245A","name":"INGS","wave":30,"order":244},
+  "source": {"title":"事業計画及び成長可能性に関する事項","publishedDate":"2025-11-28","officialUrl":"https://www2.jpx.co.jp/disc/245A0/140120251128511446.pdf","pageCount":31,"documentTypeCandidate":"growth_potential_document"},
+  "boundaryAssessment": {
+    "status":"review_prepared_not_completed",
+    "formalManagementPlanConfirmed":false,
+    "provisionalClassification":"growth_potential_document_with_long_term_store_target_not_confirmed_as_formal_management_plan",
+    "reason":"資料は成長戦略と長期店舗目標を明示するが、確認範囲では正式中期経営計画の名称、固定された複数年度計画期間、終端年度の全社財務目標は確認できない。"
+  },
+  "evidenceCandidates": [
+    {"topic":"long_term_store_target","pdfPage":25,"facts":["長期目標として合計500店舗を目指す","直営店はラーメン100店舗・レストラン100店舗の計200店舗、プロデュース・ライセンス店は計300店舗を目標"]},
+    {"topic":"historical_growth","pdfPage":8,"facts":["2025年8月期売上高77.3億円","2021年8月期から2025年8月期の売上高年平均成長率40%"]},
+    {"topic":"growth_strategy_scope","pdfPage":24,"facts":["成長戦略セクションを独立して設置し、複数ブランドでの規模拡大を掲げる"]}
+  ],
+  "requiredNextChecks":["fullTextReviewAll31Pages","visualFigureReviewForGrowthStrategyPages","explicitFormalPlanPeriodSearch","multiYearCompanyFinancialTargetSearch","capitalPolicyScopeValidation","shareholderReturnPolicySearch","yearUnitScopeValidation","fieldLevelEvidenceFinalization"],
+  "safety":{"primaryReviewComplete":false,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"formalPlanPromotionAllowed":false}
+}

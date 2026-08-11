@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "phase2-wave30-review-prep-v1",
+  "company": {"code":"3237","name":"イントランス","wave":30,"order":248},
+  "source": {"title":"事業計画及び成長可能性に関する資料","publishedDate":"2026-06-29","officialUrl":"https://intrance.jp/wp-content/uploads/2026/06/news_pdf01_2026629799428.pdf","pageCount":38,"documentTypeCandidate":"growth_potential_document"},
+  "boundaryAssessment": {
+    "status":"review_prepared_not_completed",
+    "formalManagementPlanConfirmed":false,
+    "formalPlanEmbedded":true,
+    "provisionalClassification":"growth_potential_document_with_explicit_mid_long_range_plan_embedded",
+    "reason":"資料内に中長期計画およびアクションプランが明示され、2027/03〜2031/03の年度別前提と2031/03の全社目標が示されている。ただし資料名自体は事業計画及び成長可能性資料であり、正式中期経営計画としての最終昇格は全文・図表・資本政策確認後とする。"
+  },
+  "evidenceCandidates": [
+    {"topic":"mid_long_plan","pdfPage":23,"facts":["中長期計画として不動産×ホテル×AIインフラの三位一体戦略を推進","2031年3月期に売上高150億円、営業利益6億円を目指す"]},
+    {"topic":"multi_year_action_plan","pdfPage":24,"facts":["2027/03〜2031/03の年度別アクションプランを提示","不動産・ホテル運営・AIDCの各事業について件数および売上前提を年度別に記載"]},
+    {"topic":"funding","pdfPage":25,"facts":["中長期アクションプラン達成のため2026年に2回の資金調達を決議","第3回無担保転換社債型新株予約権付社債の発行金額1,297百万円"]}
+  ],
+  "requiredNextChecks":["fullTextReviewAll38Pages","visualFigureReviewForPages23And24","formalPlanNamingDecision","capitalPolicyScopeValidation","shareholderReturnPolicySearch","yearUnitScopeValidation","fieldLevelEvidenceFinalization"],
+  "safety":{"primaryReviewComplete":false,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"formalPlanPromotionAllowed":false}
+}

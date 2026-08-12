@@ -1,0 +1,45 @@
+{
+  "schemaVersion":"phase2-source-remap-audit-v1",
+  "updatedAt":"2026-08-12T20:50:00+09:00",
+  "wave":38,
+  "findings":[
+    {
+      "code":"9404","name":"日本テレビホールディングス",
+      "assignedCandidateTitle":"2026年3月期決算・経営方針",
+      "wrongResolvedSource":"Impact Report 2025",
+      "canonicalSource":{"title":"中期経営計画2025-2027","officialLandingPage":"https://www.ntvhd.co.jp/ir/management","publishedDate":"2025-05-08"},
+      "action":"replace_wrong_pdf_with_current_formal_management_plan"
+    },
+    {
+      "code":"7649","name":"スギホールディングス",
+      "assignedCandidateTitle":"中期経営計画 2027年2月期~2031年2月期",
+      "wrongResolvedSource":"2018年2月期 第1四半期決算資料",
+      "canonicalSource":{"title":"中期経営計画（2027年2月期〜2031年2月期）","officialLandingPage":"https://www.sugi-hd.co.jp/ir/library/briefing.html","period":"2026年度～2030年度"},
+      "action":"replace_stale_2018_pdf_with_current_formal_management_plan"
+    },
+    {
+      "code":"1301","name":"極洋",
+      "assignedCandidateTitle":"中期経営計画 Gear Up Kyokuyo 2027/2026年3月期決算",
+      "wrongResolvedSource":"2026年秋新商品・リニューアル品のご案内",
+      "canonicalSource":{"title":"Gear Up Kyokuyo 2027","officialLandingPage":"https://www.kyokuyo.co.jp/company/point/plan/","period":"2024年度～2026年度"},
+      "action":"replace_product_announcement_with_current_formal_management_plan"
+    },
+    {
+      "code":"4689","name":"LINEヤフー",
+      "assignedCandidateTitle":"plan revision/update candidate",
+      "wrongResolvedSource":"LINEヘルスケア吸収合併に係る事前開示書類",
+      "canonicalSource":{"title":"現行経営方針・株主還元方針","officialLandingPage":"https://www.lycorp.co.jp/ja/ir/","shareholderReturnPage":"https://www.lycorp.co.jp/ja/ir/stock/return/"},
+      "action":"replace_merger_legal_document_with_current_management_and_capital_policy_sources"
+    },
+    {
+      "code":"9449","name":"GMOインターネットグループ",
+      "assignedCandidateTitle":"GMOインターネットグループ 2026年6月 グループ成長戦略・事業戦略",
+      "wrongResolvedSource":"2024年6月25日 持株会社体制移行・会社分割開示",
+      "canonicalSource":{"title":"熊谷正寿が語るグループ成長戦略・事業戦略","officialLandingPage":"https://ir.group.gmo/management-policy/strategy/","asOf":"2026-03"},
+      "formalPlanPolicy":"公式コーポレートガバナンスポリシーで中期経営計画を策定・公表しない方針を明示",
+      "action":"replace_corporate_reorganization_pdf_with_current_strategy_and_governance_policy"
+    }
+  ],
+  "counts":{"sourceMismatches":5,"formalPlanCanonicalRemaps":3,"managementPolicyRemaps":2},
+  "safety":{"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false}
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion":"phase2-primary-completion-overlay-v1",
+  "wave":33,
+  "batch":"02",
+  "updatedAt":"2026-08-12T17:28:00+09:00",
+  "companies":[
+    {"code":"3623","name":"ビリングシステム","status":"primary_review_complete_independent_visual_review_pending","formalManagementPlanConfirmed":true,"reviewFile":"operations/quality-rebase/phase2/reviews/3623-primary-review-v1.json"},
+    {"code":"4572","name":"カルナバイオサイエンス","status":"primary_review_complete_independent_visual_review_pending","formalPlanEmbedded":true,"reviewFile":"operations/quality-rebase/phase2/reviews/4572-primary-review-v1.json"},
+    {"code":"4582","name":"シンバイオ製薬","status":"primary_review_complete_independent_visual_review_pending","formalPlanEmbedded":false,"reviewFile":"operations/quality-rebase/phase2/reviews/4582-primary-review-v1.json"},
+    {"code":"4583","name":"カイオム・バイオサイエンス","status":"primary_review_complete_independent_review_ready","formalPlanEmbedded":false,"reviewFile":"operations/quality-rebase/phase2/reviews/4583-primary-review-v1.json"},
+    {"code":"4586","name":"メドレックス","status":"primary_review_complete_independent_visual_review_pending","formalPlanEmbedded":false,"reviewFile":"operations/quality-rebase/phase2/reviews/4586-primary-review-v1.json"},
+    {"code":"4597","name":"ソレイジア・ファーマ","status":"primary_review_complete_independent_visual_review_pending","formalPlanEmbedded":false,"reviewFile":"operations/quality-rebase/phase2/reviews/4597-primary-review-v1.json"},
+    {"code":"7776","name":"セルシード","status":"primary_review_complete_independent_visual_review_pending","formalPlanEmbedded":false,"reviewFile":"operations/quality-rebase/phase2/reviews/7776-primary-review-v1.json"}
+  ],
+  "resolvedSourceMappingFollowups":[{"code":"3623","name":"ビリングシステム","followupFile":"operations/quality-rebase/phase2/source-remap/3623-wave33-source-followup-v1.json"}],
+  "counts":{"primaryReviewComplete":7,"formalManagementPlanConfirmed":1,"formalPlanEmbedded":1,"growthRoadmapNotFormalPlan":5,"sourceMappingFollowupResolved":1,"independentReviewReady":1,"independentVisualReviewPending":6,"deepVerificationApproved":0},
+  "safety":{"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"primaryReviewerMaySelfApprove":false,"deepVerificationApproved":false}
+}

@@ -1,67 +1,18 @@
 {
-  "schemaVersion": "phase2-wave31-source-remap-v1",
-  "updatedAt": "2026-08-12T15:32:00+09:00",
-  "wave": 31,
-  "status": "source_remap_in_progress",
-  "automaticFactCompletionAllowed": false,
-  "automaticApprovalAllowed": false,
-  "deepVerificationApproved": false,
-  "companies": [
-    {
-      "code": "4591",
-      "name": "リボミック",
-      "action": "remap_to_latest_growth_potential_disclosure",
-      "assignedSourceStatus": "stale",
-      "latestPublishedDate": "2026-06-17",
-      "latestTitle": "事業計画及び成長可能性に関する事項",
-      "canonicalSourceRequired": true,
-      "reviewStatus": "latest_source_identity_and_full_text_review_required"
-    },
-    {
-      "code": "4594",
-      "name": "ブライトパス・バイオ",
-      "action": "remap_to_latest_growth_potential_disclosure",
-      "assignedSourceStatus": "stale",
-      "latestPublishedDate": "2026-06-26",
-      "latestTitle": "事業計画及び成長可能性に関する事項",
-      "officialLandingPage": "https://www.brightpathbio.com/ir/library_others.html",
-      "canonicalSourceRequired": true,
-      "reviewStatus": "latest_source_confirmed_full_text_review_required"
-    },
-    {
-      "code": "6166",
-      "name": "中村超硬",
-      "action": "freshness_recheck_before_completion",
-      "assignedSourceStatus": "requires_reconciliation",
-      "officialLandingPage": "https://www.nakamura-gp.co.jp/ir/business_plan.html",
-      "note": "公式事業計画ページで確認可能な最新掲載日とWave31 follow-upで検知した2026年開示候補の差異を解消してからcanonical sourceを確定する。",
-      "canonicalSourceRequired": true,
-      "reviewStatus": "source_date_reconciliation_required"
-    },
-    {
-      "code": "6545",
-      "name": "インターネットインフィニティー",
-      "action": "promote_formal_management_plan_as_canonical_source_candidate",
-      "assignedSourceStatus": "growth_document_not_preferred_when_formal_plan_exists",
-      "formalPlanPublishedDate": "2024-08-14",
-      "formalPlanPeriod": "2026年3月期から2028年3月期",
-      "formalPlanConfirmed": true,
-      "officialInvestorPage": "https://iif.jp/ir/individual.html",
-      "officialShareholderReturnPage": "https://iif.jp/ir/dividend.html",
-      "shareholderReturnPolicy": "連結配当性向30%を目途。中期経営計画では累進的に配当性向を高める方針。",
-      "canonicalSourceRequired": true,
-      "reviewStatus": "formal_plan_primary_review_required"
-    },
-    {
-      "code": "7114",
-      "name": "フーディソン",
-      "action": "remap_to_latest_growth_potential_disclosure",
-      "assignedSourceStatus": "stale",
-      "latestPublishedDate": "2026-06-26",
-      "latestTitle": "事業計画及び成長可能性に関する事項",
-      "canonicalSourceRequired": true,
-      "reviewStatus": "latest_source_identity_and_full_text_review_required"
-    }
+  "schemaVersion":"phase2-wave31-source-remap-v1",
+  "updatedAt":"2026-08-12T15:59:00+09:00",
+  "wave":31,
+  "status":"resolved",
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":false,
+  "summary":"Wave31の5社についてfreshnessを再検証。4591/4594/6166/7114は割当済みreviewInputがすでに2026年最新版であり、stale判定は誤検知だったためremap不要。6545のみ、2024年公表の正式中期経営計画をcanonical plan sourceとして優先し、2026年Growth資料を最新アップデートとして併用した。",
+  "companies":[
+    {"code":"4591","name":"リボミック","resolution":"assigned_source_already_latest","canonicalPublishedDate":"2026-06-17","canonicalUrl":"https://www2.jpx.co.jp/disc/45910/140120260616572106.pdf","reviewFile":"operations/quality-rebase/phase2/reviews/4591-primary-review-v1.json","sourceRemapRequired":false},
+    {"code":"4594","name":"ブライトパス・バイオ","resolution":"assigned_source_already_latest","canonicalPublishedDate":"2026-06-26","canonicalUrl":"https://www2.jpx.co.jp/disc/45940/140120260626581175.pdf","reviewFile":"operations/quality-rebase/phase2/reviews/4594-primary-review-v1.json","sourceRemapRequired":false},
+    {"code":"6166","name":"中村超硬","resolution":"assigned_source_already_latest_reconciliation_resolved","canonicalPublishedDate":"2026-06-26","canonicalUrl":"https://www2.jpx.co.jp/disc/61660/140120260626581962.pdf","reviewFile":"operations/quality-rebase/phase2/reviews/6166-primary-review-v1.json","sourceRemapRequired":false},
+    {"code":"6545","name":"インターネットインフィニティー","resolution":"formal_management_plan_prioritized_and_latest_growth_update_linked","formalPlanPublishedDate":"2024-08-14","formalPlanPeriod":"2026年3月期から2028年3月期","latestGrowthPublishedDate":"2026-06-26","latestGrowthUrl":"https://www2.jpx.co.jp/disc/65450/140120260626582076.pdf","reviewFile":"operations/quality-rebase/phase2/reviews/6545-primary-review-v1.json","sourceRemapRequired":false},
+    {"code":"7114","name":"フーディソン","resolution":"assigned_source_already_latest","canonicalPublishedDate":"2026-06-26","canonicalUrl":"https://www2.jpx.co.jp/disc/71140/140120260626581272.pdf","reviewFile":"operations/quality-rebase/phase2/reviews/7114-primary-review-v1.json","sourceRemapRequired":false}
   ],
-  "completionRule": "古いGrowth資料のまま一次レビュー完了にしない。正式中計が別資料で存在する場合は正式中計を優先し、Growth資料は補助資料として扱う。"
+  "completionRule":"freshness確認済みのcanonical sourceのみで一次レビューを完了し、正式中計が別資料で存在する場合は正式中計を優先する。"
 }

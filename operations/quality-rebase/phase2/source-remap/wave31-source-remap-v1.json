@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "phase2-wave31-source-remap-v1",
+  "updatedAt": "2026-08-12T15:32:00+09:00",
+  "wave": 31,
+  "status": "source_remap_in_progress",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "companies": [
+    {
+      "code": "4591",
+      "name": "リボミック",
+      "action": "remap_to_latest_growth_potential_disclosure",
+      "assignedSourceStatus": "stale",
+      "latestPublishedDate": "2026-06-17",
+      "latestTitle": "事業計画及び成長可能性に関する事項",
+      "canonicalSourceRequired": true,
+      "reviewStatus": "latest_source_identity_and_full_text_review_required"
+    },
+    {
+      "code": "4594",
+      "name": "ブライトパス・バイオ",
+      "action": "remap_to_latest_growth_potential_disclosure",
+      "assignedSourceStatus": "stale",
+      "latestPublishedDate": "2026-06-26",
+      "latestTitle": "事業計画及び成長可能性に関する事項",
+      "officialLandingPage": "https://www.brightpathbio.com/ir/library_others.html",
+      "canonicalSourceRequired": true,
+      "reviewStatus": "latest_source_confirmed_full_text_review_required"
+    },
+    {
+      "code": "6166",
+      "name": "中村超硬",
+      "action": "freshness_recheck_before_completion",
+      "assignedSourceStatus": "requires_reconciliation",
+      "officialLandingPage": "https://www.nakamura-gp.co.jp/ir/business_plan.html",
+      "note": "公式事業計画ページで確認可能な最新掲載日とWave31 follow-upで検知した2026年開示候補の差異を解消してからcanonical sourceを確定する。",
+      "canonicalSourceRequired": true,
+      "reviewStatus": "source_date_reconciliation_required"
+    },
+    {
+      "code": "6545",
+      "name": "インターネットインフィニティー",
+      "action": "promote_formal_management_plan_as_canonical_source_candidate",
+      "assignedSourceStatus": "growth_document_not_preferred_when_formal_plan_exists",
+      "formalPlanPublishedDate": "2024-08-14",
+      "formalPlanPeriod": "2026年3月期から2028年3月期",
+      "formalPlanConfirmed": true,
+      "officialInvestorPage": "https://iif.jp/ir/individual.html",
+      "officialShareholderReturnPage": "https://iif.jp/ir/dividend.html",
+      "shareholderReturnPolicy": "連結配当性向30%を目途。中期経営計画では累進的に配当性向を高める方針。",
+      "canonicalSourceRequired": true,
+      "reviewStatus": "formal_plan_primary_review_required"
+    },
+    {
+      "code": "7114",
+      "name": "フーディソン",
+      "action": "remap_to_latest_growth_potential_disclosure",
+      "assignedSourceStatus": "stale",
+      "latestPublishedDate": "2026-06-26",
+      "latestTitle": "事業計画及び成長可能性に関する事項",
+      "canonicalSourceRequired": true,
+      "reviewStatus": "latest_source_identity_and_full_text_review_required"
+    }
+  ],
+  "completionRule": "古いGrowth資料のまま一次レビュー完了にしない。正式中計が別資料で存在する場合は正式中計を優先し、Growth資料は補助資料として扱う。"
+}

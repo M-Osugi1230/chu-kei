@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-12T11:39:22+00:00",
+  "updatedAt": "2026-08-12T11:39:22+00:00",
+  "wave": 38,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludeCanonicalPrimaryReviewFiles": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": true,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 420,
+      "code": "3566",
+      "name": "ユニフォームネクスト",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 87,
+      "pageCount": 38,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-02/3566/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 165,
+      "code": "2983",
+      "name": "アールプランナー",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 85,
+      "pageCount": 46,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-02/2983/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 283,
+      "code": "6557",
+      "name": "AIAIグループ",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 85,
+      "pageCount": 61,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-06/wave-04/6557/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 84,
+      "code": "4689",
+      "name": "LINEヤフー",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 84,
+      "pageCount": 142,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-04/4689/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 104,
+      "code": "9404",
+      "name": "日本テレビホールディングス",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 84,
+      "pageCount": 43,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-01/9404/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 103,
+      "code": "7649",
+      "name": "スギホールディングス",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 83,
+      "pageCount": 11,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-01/7649/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 372,
+      "code": "7674",
+      "name": "NATTY SWANKYホールディングス",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 83,
+      "pageCount": 41,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-08/wave-03/7674/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 87,
+      "code": "9449",
+      "name": "GMOインターネットグループ",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 78,
+      "pageCount": 19,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-04/9449/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 94,
+      "code": "1301",
+      "name": "極洋",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 73,
+      "pageCount": 8,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-05/1301/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 95,
+      "code": "167A",
+      "name": "リョーサン菱洋ホールディングス",
+      "documentTypeCandidate": "formal_management_plan",
+      "relevanceScore": 69,
+      "pageCount": 4,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-05/167A/primary-review-template.json",
+      "status": "primary_review_assigned",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 4,
+    "planRevisionOrUpdateCandidates": 2,
+    "growthPotentialDocumentCandidates": 4,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

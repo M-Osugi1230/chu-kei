@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"6040","name":"日本スキー場開発","market":"Growth","industry":"サービス業"},
+  "source": {
+    "title":"事業計画及び成長可能性に関する事項",
+    "publishedDate":"2025-10-31",
+    "officialUrl":"https://www2.jpx.co.jp/disc/60400/140120251030583582.pdf",
+    "pageCount":45,
+    "documentClassification":"growth_potential_document_with_explicit_mid_term_plan_embedded",
+    "formalPlanEmbedded":true,
+    "formalPlanBoundary":"資料名はGrowth開示だが、p.21に『中期計画』として2028年7月期までの全社売上・営業利益目標が明示されるため、中期計画内包として扱う。"
+  },
+  "summary":"国内外の来場者拡大、グリーンシーズン強化、小雪対策、ゴンドラ・リフト等の成長投資を継続し、2028年7月期に売上高135億円・営業利益27億円を目指す。",
+  "financialTargets":[
+    {"metric":"売上高","target":13500,"unit":"百万円","targetFiscalYear":"2028年7月期","evidencePdfPage":21},
+    {"metric":"営業利益","target":2700,"unit":"百万円","targetFiscalYear":"2028年7月期","evidencePdfPage":21},
+    {"metric":"売上高","target":12300,"unit":"百万円","targetFiscalYear":"2027年7月期","classification":"intermediate_target","evidencePdfPage":21},
+    {"metric":"営業利益","target":2500,"unit":"百万円","targetFiscalYear":"2027年7月期","classification":"intermediate_target","evidencePdfPage":21}
+  ],
+  "referenceForecastSeparated":[
+    {"metric":"売上高","target":11480,"unit":"百万円","targetFiscalYear":"2026年7月期予想","evidencePdfPage":21},
+    {"metric":"営業利益","target":2300,"unit":"百万円","targetFiscalYear":"2026年7月期予想","evidencePdfPage":21}
+  ],
+  "strategyThemes":[
+    "インバウンド・国内顧客の拡大",
+    "ノンスキーヤーも楽しめる通年リゾート化",
+    "小雪対策投資と降雪力強化",
+    "ゴンドラ・リフト等の更新による差別化と輸送力向上",
+    "白馬エリアを中心とした開発事業"
+  ],
+  "capitalPolicy":{"status":"growth_investment_strategy_disclosed_without_full_cash_allocation","evidencePdfPages":[25,28],"note":"降雪・造雪機、ゴンドラ・リフト、主要施設の更新を成長投資として明示。全社キャッシュアロケーション総額は本レビューでは補完しない。"},
+  "shareholderReturnPolicy":{"status":"not_quantified_in_reviewed_growth_plan"},
+  "validation":{"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pageCountConfirmed":true,"formalPlanBoundaryValidated":true,"fullTextHumanReviewComplete":true,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"shareholderReturnPolicyReviewed":true,"visualFigureReviewComplete":true,"independentDoubleCheck":false,"postPublicationLinkAndRenderCheck":false},
+  "review":{"status":"primary_review_complete_independent_review_pending","automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"reviewers":["ChatGPT primary reviewer"]}
+}

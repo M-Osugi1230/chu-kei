@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {"code":"6522","name":"アスタリスク","market":"Growth","industry":"電気機器"},
+  "source": {
+    "title":"事業計画及び成長可能性に関する事項について記載した書面",
+    "publishedDate":"2025-11-28",
+    "officialUrl":"https://www2.jpx.co.jp/disc/65220/140120251119505848.pdf",
+    "pageCount":82,
+    "documentClassification":"growth_potential_document_with_single_year_business_reorganization_and_kpi",
+    "formalPlanEmbedded":false,
+    "formalPlanBoundary":"資料は2026年8月期の事業部再編、成長戦略、KPI、資金使途を開示するが、固定された複数年度の全社財務終端目標を伴う正式中期経営計画は確認できない。"
+  },
+  "summary":"2026年8月期にDX/NX/IT/AI/LMの5事業部へ再編し、モバイル化、RFID/AsCode、パッケージソフト、AIカメラ、リニアモーターの事業化を進める。受注高を主要KPIとし、国内外の販売チャネル拡大を図る。",
+  "historicalActuals":[
+    {"metric":"売上高","actual":1666,"unit":"百万円","fiscalYear":"2025年8月期","evidencePdfPage":9},
+    {"metric":"営業利益","actual":-125,"unit":"百万円","fiscalYear":"2025年8月期","evidencePdfPage":10}
+  ],
+  "operatingKpis":[
+    {"metric":"受注高","classification":"primary_kpi","definition":"受注件数×受注単価","evidencePdfPage":76},
+    {"metric":"受注単価前年比","actual":-11.3,"unit":"%","fiscalYear":"2025年8月期","evidencePdfPage":76},
+    {"metric":"受注件数前年比","actual":6.0,"unit":"%","fiscalYear":"2025年8月期","evidencePdfPage":76},
+    {"metric":"受注高前年比","actual":-6.0,"unit":"%","fiscalYear":"2025年8月期","evidencePdfPage":76}
+  ],
+  "strategyThemes":["DX事業のモバイル化","RFID・AsCode等の新認識技術","パッケージソフト開発","AIカメラ・顔認識","リニアモーター事業化","海外販売網・パートナー強化"],
+  "capitalPolicy":{"status":"equity_financing_use_disclosed_not_companywide_cash_allocation","raisedAmount":353,"unit":"百万円","fiscalYear":"2025年8月期","plannedUseTotal":676,"plannedUseUnit":"百万円","unallocatedCash":292,"unallocatedCashUnit":"百万円","note":"新株予約権の資金使途であり、全社キャッシュアロケーションとは区別する。","evidencePdfPage":78},
+  "shareholderReturnPolicy":{"status":"not_quantified_in_reviewed_document"},
+  "validation":{"companyIdentityConfirmed":true,"publicationDateConfirmed":true,"pageCountConfirmed":true,"formalPlanBoundaryValidated":true,"fullTextHumanReviewComplete":true,"visualFigureReviewComplete":true,"strategyStructured":true,"metricsValidated":true,"fieldLevelEvidenceLinked":true,"yearValidated":true,"unitValidated":true,"scopeValidated":true,"capitalPolicyReviewed":true,"shareholderReturnPolicyReviewed":true,"independentDoubleCheck":false,"postPublicationLinkAndRenderCheck":false},
+  "review":{"status":"primary_review_complete_independent_review_pending","automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false,"reviewers":["ChatGPT primary reviewer"]}
+}

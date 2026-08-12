@@ -1,0 +1,215 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-12T08:22:21+00:00",
+  "updatedAt": "2026-08-12T08:22:21+00:00",
+  "wave": 34,
+  "targetCompanies": 10,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludeCanonicalPrimaryReviewFiles": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": true,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 496,
+      "code": "485A",
+      "name": "パワーエックス",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 98,
+      "pageCount": 64,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-10/wave-05/485A/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 228,
+      "code": "2408",
+      "name": "KG情報",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 95,
+      "pageCount": 11,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-03/2408/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 116,
+      "code": "8802",
+      "name": "三菱地所",
+      "documentTypeCandidate": "plan_revision_or_update",
+      "relevanceScore": 93,
+      "pageCount": 51,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-02/8802/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "planRevisionSeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 136,
+      "code": "192A",
+      "name": "インテグループ",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 93,
+      "pageCount": 47,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/192A/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 138,
+      "code": "2937",
+      "name": "サンクゼール",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 93,
+      "pageCount": 65,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/2937/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 139,
+      "code": "296A",
+      "name": "令和アカウンティング・ホールディングス",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 93,
+      "pageCount": 46,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-04/296A/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 149,
+      "code": "520A",
+      "name": "ジェイファーマ",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 93,
+      "pageCount": 85,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-03/wave-05/520A/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 151,
+      "code": "6069",
+      "name": "トレンダーズ",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 93,
+      "pageCount": 45,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/6069/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 154,
+      "code": "6562",
+      "name": "ジーニー",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 93,
+      "pageCount": 67,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/6562/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 159,
+      "code": "177A",
+      "name": "コージンバイオ",
+      "documentTypeCandidate": "growth_potential_document",
+      "relevanceScore": 93,
+      "pageCount": 55,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-04/wave-01/177A/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanExistenceWithinGrowthDocument",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    }
+  ],
+  "counts": {
+    "assigned": 10,
+    "formalManagementPlanCandidates": 0,
+    "planRevisionOrUpdateCandidates": 2,
+    "growthPotentialDocumentCandidates": 8,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

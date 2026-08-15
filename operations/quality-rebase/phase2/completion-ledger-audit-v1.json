@@ -1,18 +1,18 @@
 {
   "schemaVersion": "phase2-completion-ledger-audit-v1",
-  "generatedAt": "2026-08-15T03:34:18+00:00",
+  "generatedAt": "2026-08-15T03:39:19+00:00",
   "counts": {
     "effectiveStatusDeclaredComplete": 370,
-    "canonicalPrimaryReviewArtifacts": 355,
+    "canonicalPrimaryReviewArtifacts": 360,
     "completionOverlayRows": 50,
     "completionOverlayUniqueCompanies": 50,
     "duplicateCompletionOverlayCodes": 0,
     "overlayCompleteWithoutReviewArtifact": 0,
-    "reviewArtifactWithoutCompletionOverlay": 305,
+    "reviewArtifactWithoutCompletionOverlay": 310,
     "historicallyAssignedUniqueCompanies": 357,
-    "assignedWithoutReviewArtifact": 5,
+    "assignedWithoutReviewArtifact": 0,
     "reviewArtifactWithoutHistoricalAssignment": 3,
-    "declaredMinusCanonicalArtifactGap": 15
+    "declaredMinusCanonicalArtifactGap": 10
   },
   "duplicateCompletionOverlayCodes": [],
   "overlayCompleteWithoutReviewArtifact": [],
@@ -1017,6 +1017,15 @@
       ]
     },
     {
+      "code": "3695",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/3695-wave29-primary-review-v1.json"
+      ],
+      "waveAssignments": [
+        29
+      ]
+    },
+    {
       "code": "3696",
       "reviewFiles": [
         "operations/quality-rebase/phase2/reviews/3696-primary-review-v1.json"
@@ -1206,6 +1215,15 @@
       ]
     },
     {
+      "code": "4058",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4058-wave29-primary-review-v1.json"
+      ],
+      "waveAssignments": [
+        29
+      ]
+    },
+    {
       "code": "4061",
       "reviewFiles": [
         "operations/quality-rebase/phase2/reviews/4061-primary-review-v1.json"
@@ -1237,6 +1255,15 @@
       ],
       "waveAssignments": [
         1
+      ]
+    },
+    {
+      "code": "415A",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/415A-wave29-primary-review-v1.json"
+      ],
+      "waveAssignments": [
+        29
       ]
     },
     {
@@ -1690,12 +1717,30 @@
       ]
     },
     {
+      "code": "5713",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/5713-wave05-primary-review-v1.json"
+      ],
+      "waveAssignments": [
+        5
+      ]
+    },
+    {
       "code": "5821",
       "reviewFiles": [
         "operations/quality-rebase/phase2/reviews/5821-primary-review-v1.json"
       ],
       "waveAssignments": [
         11
+      ]
+    },
+    {
+      "code": "5867",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/5867-wave29-primary-review-v1.json"
+      ],
+      "waveAssignments": [
+        29
       ]
     },
     {
@@ -2759,38 +2804,7 @@
       ]
     }
   ],
-  "assignedWithoutReviewArtifact": [
-    {
-      "code": "3695",
-      "waveAssignments": [
-        29
-      ]
-    },
-    {
-      "code": "4058",
-      "waveAssignments": [
-        29
-      ]
-    },
-    {
-      "code": "415A",
-      "waveAssignments": [
-        29
-      ]
-    },
-    {
-      "code": "5713",
-      "waveAssignments": [
-        5
-      ]
-    },
-    {
-      "code": "5867",
-      "waveAssignments": [
-        29
-      ]
-    }
-  ],
+  "assignedWithoutReviewArtifact": [],
   "reviewArtifactWithoutHistoricalAssignment": [
     {
       "code": "4061",

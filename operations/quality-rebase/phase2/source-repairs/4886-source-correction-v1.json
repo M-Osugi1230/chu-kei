@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "phase2-source-correction-v1",
+  "company": {"code": "4886", "name": "あすか製薬ホールディングス"},
+  "reviewWave": 39,
+  "detectedAt": "2026-08-15T22:35:00+09:00",
+  "problem": {
+    "type": "preliminary_plan_announcement_requires_full_plan_supplement",
+    "previousResolvedPdfUrl": "https://www2.jpx.co.jp/disc/48860/140120260323586491.pdf",
+    "description": "2026年3月23日の4ページ正式策定リリースは中期経営計画2028の存在・期間・基本方針・売上目標を確認できるが、キャッシュアロケーションや株主還元の詳細は2026年5月20日の公式説明会資料に開示されている。正式策定リリースを主資料として維持し、公式説明会資料を補完一次資料として紐付ける。"
+  },
+  "resolution": {
+    "officialLandingPage": "https://www.aska-pharma-hd.co.jp/invest/management-plan.html",
+    "primaryPdfUrl": "https://ssl4.eir-parts.net/doc/4886/tdnet/2779060/00.pdf",
+    "primaryTitle": "長期ビジョン『ASKA VISION 2035』および『中期経営計画2028』の策定について",
+    "primaryPublishedDate": "2026-03-23",
+    "supplementalPdfUrl": "https://ssl4.eir-parts.net/doc/4886/ir_material_for_fiscal_ym1/204257/00.pdf",
+    "supplementalTitle": "2026年3月期決算および中期経営計画説明会",
+    "supplementalPublishedDate": "2026-05-20",
+    "planPeriod": "2026年度～2028年度",
+    "documentClassification": "formal_management_plan",
+    "sourceAuthority": "あすか製薬ホールディングス 公式IR"
+  },
+  "verifiedFacts": [
+    {"metric": "2028年度売上高", "value": 850, "unit": "億円", "source": "primary_and_supplemental"},
+    {"metric": "2028年度営業利益", "value": 85, "unit": "億円", "source": "supplemental"},
+    {"metric": "2028年度営業利益率", "value": 10, "unit": "%", "source": "supplemental"},
+    {"metric": "2028年度ROE", "value": 10, "unit": "%", "source": "supplemental"},
+    {"metric": "総還元性向目安", "value": 40, "unit": "%", "source": "supplemental"},
+    {"metric": "3年間成長投資", "value": "300+α", "unit": "億円", "source": "supplemental"}
+  ],
+  "safety": {
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

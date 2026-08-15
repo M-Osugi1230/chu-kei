@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "wave": 5,
+  "company": {"code": "5713", "name": "住友金属鉱山"},
+  "document": {
+    "title": "中期経営計画2027",
+    "publishedDate": "2025-05-12",
+    "sourceUrl": "https://www.smm.co.jp/ir/management/plan/pdf/250512_setsumeikai.pdf",
+    "documentType": "formal_management_plan",
+    "formalPlanConfirmed": true,
+    "fullTextHumanReviewComplete": true
+  },
+  "sourceAnnotation": {
+    "authority": "住友金属鉱山 公式IR",
+    "relevance": "current_formal_management_plan_2025_2027",
+    "boundary": "公式IRの『中期経営計画2027』を正本とする。旧収集URL 070220setsumeikai.pdf は現行計画ではないため採用しない。"
+  },
+  "structuredAnalysis": {
+    "period": "2025年度～2027年度",
+    "summary": "『事業環境変化への対処』と『次の成長への準備』を軸に、大型プロジェクト戦力化、製錬事業の体制整備、電池材料事業の構造改革、機能性材料事業の成長、ROCE経営、株主還元強化を進める正式中期経営計画。",
+    "strategyThemes": ["ケブラダ・ブランカ銅鉱山とコテ金鉱山の戦力化", "製錬事業のサーキュラーエコノミー対応", "電池材料事業の構造改革", "機能性材料事業の成長", "ROCEを用いた事業ポートフォリオ管理", "次の成長に向けたGX・DXを含む投資", "株主還元の強化・充実"],
+    "financialTargets": [
+      {"fiscalYear": "2027年度", "metric": "税引前利益", "value": 1400, "unit": "億円", "classification": "formal_plan_terminal_target"},
+      {"fiscalYear": "2027年度", "metric": "売上高", "value": 13800, "unit": "億円", "classification": "formal_plan_terminal_target"},
+      {"fiscalYear": "2027年度", "metric": "当期利益", "value": 980, "unit": "億円", "classification": "formal_plan_terminal_target"},
+      {"fiscalYear": "2027年度", "metric": "ROCE", "value": 4.4, "unit": "%", "classification": "formal_plan_terminal_target"}
+    ],
+    "capitalPolicy": "中計27の3年間で設備投資・投融資を累計4,370億円計画。内訳は未来投資460億円、成長投資1,500億円、維持更新等2,410億円。",
+    "shareholderReturnPolicy": "剰余金の配当は原則連結配当性向35%以上とし、下限指標をDOE2.5%とする。自己株式取得は機動的に実施する方針。",
+    "nonFinancialTargets": ["国内外社員・協力会社の重篤災害ゼロ", "2030年のありたい姿・重要課題KPIの推進"]
+  },
+  "formalPlanBoundary": {
+    "status": "formal_management_plan_confirmed",
+    "reason": "公式IRが2025年度から2027年度を対象期間とする『中期経営計画2027』として明示し、2027年度の全社財務目標・投資計画・株主還元方針を設定している。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "formalPlanExistenceWithinGrowthDocumentChecked": true,
+    "visualFigureReviewComplete": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "planIdentityPages": [0, 1, 2],
+    "executiveSummaryPage": 3,
+    "terminalFinancialTargetsPage": 58,
+    "capitalAndShareholderReturnPage": 3,
+    "portfolioManagementPages": [14, 52, 53]
+  },
+  "sourceCorrection": {
+    "replacedWrongSource": "https://www.smm.co.jp/ir/management/plan/pdf/070220setsumeikai.pdf",
+    "replacementSource": "https://www.smm.co.jp/ir/management/plan/pdf/250512_setsumeikai.pdf",
+    "correctionReason": "legacy_2006_plan_url_replaced_with_current_2025_2027_formal_management_plan"
+  },
+  "review": {
+    "status": "primary_review_complete_formal_plan_confirmed_independent_review_pending",
+    "reviewedAt": "2026-08-15T12:51:00+09:00",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": ["ChatGPT primary review 2026-08-15"]
+  }
+}

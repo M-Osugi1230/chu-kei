@@ -29,6 +29,7 @@ jobs:
           sparse-checkout: |
             /scripts/build_phase2_remaining_exception_queue.py
             /operations/quality-rebase/phase2/build-remaining-exception-request.json
+            /operations/quality-rebase/phase2/effective-status-v1.json
             /operations/quality-rebase/phase2/source-relevance-audit/*.json
             /operations/quality-rebase/phase2/primary-review-wave*-v1.json
             /operations/quality-rebase/phase2/primary-reviews/*.json
@@ -83,13 +84,17 @@ jobs:
           counts = data.get('counts', {})
           if counts.get('currentAuditExceptions') != 93:
               raise SystemExit('currentAuditExceptions must be 93')
-          if counts.get('reviewedExceptionCompanies') != 13:
-              raise SystemExit('reviewedExceptionCompanies must be 13')
-          if counts.get('remainingExceptionCompanies') != 80:
-              raise SystemExit('remainingExceptionCompanies must be 80')
+          reviewed = counts.get('reviewedExceptionCompanies')
+          remaining = counts.get('remainingExceptionCompanies')
+          if not isinstance(reviewed, int) or not isinstance(remaining, int) or reviewed + remaining != 93:
+              raise SystemExit('reviewed + remaining exceptions must equal 93')
+          if counts.get('uniquePrimaryReviewArtifacts', 0) <= 0:
+              raise SystemExit('uniquePrimaryReviewArtifacts must be positive')
           policy = data.get('nextActionPolicy', {})
           if policy.get('normalWaveGeneratorMayConsumeExceptionQueues') is not False:
               raise SystemExit('normal wave generator must not consume exception queues')
+          if policy.get('aggregateLedgerMayOverrideMissingReviewArtifact') is not False:
+              raise SystemExit('aggregate ledger must not override missing review artifacts')
           if policy.get('automaticFactCompletionAllowed') is not False:
               raise SystemExit('automaticFactCompletionAllowed must remain false')
           if policy.get('automaticApprovalAllowed') is not False:

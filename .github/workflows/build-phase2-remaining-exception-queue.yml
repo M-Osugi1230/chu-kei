@@ -1,0 +1,115 @@
+name: Build Phase 2 Remaining Exception Queue
+
+on:
+  push:
+    branches:
+      - 'agent/phase2-*'
+    paths:
+      - 'operations/quality-rebase/phase2/build-remaining-exception-request.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase2-remaining-exception-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout remediation inputs
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/build_phase2_remaining_exception_queue.py
+            /operations/quality-rebase/phase2/build-remaining-exception-request.json
+            /operations/quality-rebase/phase2/source-relevance-audit/*.json
+            /operations/quality-rebase/phase2/primary-review-wave*-v1.json
+            /operations/quality-rebase/phase2/primary-reviews/*.json
+            /operations/quality-rebase/phase2/reviews/*.json
+            /operations/quality-rebase/phase2/source-repairs/remaining-exception-remediation-v1.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate request
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('operations/quality-rebase/phase2/build-remaining-exception-request.json')
+          request = json.loads(path.read_text(encoding='utf-8'))
+          if request.get('schemaVersion') != 'phase2-remaining-exception-request-v1':
+              raise SystemExit('unexpected request schemaVersion')
+          if request.get('status') != 'requested':
+              raise SystemExit('request status must be requested')
+          if request.get('writeChanges') is not True:
+              raise SystemExit('writeChanges must be true')
+          if request.get('automaticFactCompletionAllowed') is not False:
+              raise SystemExit('automaticFactCompletionAllowed must be false')
+          if request.get('automaticApprovalAllowed') is not False:
+              raise SystemExit('automaticApprovalAllowed must be false')
+          if request.get('deepVerificationApproved') not in (False, 0):
+              raise SystemExit('deepVerificationApproved must be false or zero')
+          PY
+
+      - name: Reconcile current exception queues
+        run: |
+          set -euo pipefail
+          python scripts/build_phase2_remaining_exception_queue.py --write
+
+      - name: Validate generated ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('operations/quality-rebase/phase2/source-repairs/remaining-exception-remediation-v1.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          counts = data.get('counts', {})
+          if counts.get('currentAuditExceptions') != 93:
+              raise SystemExit('currentAuditExceptions must be 93')
+          if counts.get('reviewedExceptionCompanies') != 13:
+              raise SystemExit('reviewedExceptionCompanies must be 13')
+          if counts.get('remainingExceptionCompanies') != 80:
+              raise SystemExit('remainingExceptionCompanies must be 80')
+          policy = data.get('nextActionPolicy', {})
+          if policy.get('normalWaveGeneratorMayConsumeExceptionQueues') is not False:
+              raise SystemExit('normal wave generator must not consume exception queues')
+          if policy.get('automaticFactCompletionAllowed') is not False:
+              raise SystemExit('automaticFactCompletionAllowed must remain false')
+          if policy.get('automaticApprovalAllowed') is not False:
+              raise SystemExit('automaticApprovalAllowed must remain false')
+          if policy.get('deepVerificationApproved') is not False:
+              raise SystemExit('deepVerificationApproved must remain false')
+          print(json.dumps(counts, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Commit reconciled ledger
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/source-repairs/remaining-exception-remediation-v1.json
+          if git diff --cached --quiet; then
+            echo 'No ledger changes to commit.'
+            exit 0
+          fi
+          git commit -m 'quality: reconcile remaining Phase2 exception companies'
+          git push origin HEAD:${{ github.ref_name }}

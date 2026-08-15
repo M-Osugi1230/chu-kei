@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "phase2-wave-review-summary-v1",
+  "updatedAt": "2026-08-15T12:16:00+09:00",
+  "wave": 38,
+  "primaryReview": {
+    "assigned": 10,
+    "complete": 10,
+    "phase2CompleteAfterWave": 370,
+    "phase2Target": 450,
+    "totalIncludingPhase1": 420,
+    "totalTargetIncludingPhase1": 500,
+    "remainingPhase2PrimaryReviews": 80
+  },
+  "classification": {
+    "formalManagementPlanConfirmed": ["9404", "7649", "1301", "167A"],
+    "growthOrBusinessPlanNotPromotedToFormalManagementPlan": ["3566", "2983", "6557", "7674"],
+    "currentPolicyNotPromotedToFormalManagementPlan": ["4689", "9449"]
+  },
+  "sourceCorrections": {
+    "count": 5,
+    "companies": ["9404", "7649", "1301", "4689", "9449"],
+    "auditFile": "operations/quality-rebase/phase2/source-remap/wave38-source-remap-v1.json"
+  },
+  "qualityLearning": [
+    "単年度業績予想は正式中期経営計画の終端目標へ自動昇格しない",
+    "Growth資料内の複数年事業計画は、正式中期経営計画としての明示がない場合は別分類で保持する",
+    "株主還元方針の複数年目標だけを会社全体の中期経営計画へ昇格しない",
+    "会社が中期経営計画を策定・公表しない方針を明示する場合、その方針自体を重要な企業情報として保持する",
+    "候補資料の自動解決結果は会社・資料名・公表時期の人手確認なしに正本化しない"
+  ],
+  "next": {
+    "primaryReview": "Wave39以降で残り80社を処理する",
+    "independentVisualReviewPending": 306,
+    "deepVerificationApproved": 0,
+    "policy": "一次レビューと独立図表レビューを並行し、件数のために承認基準を緩めない"
+  }
+}

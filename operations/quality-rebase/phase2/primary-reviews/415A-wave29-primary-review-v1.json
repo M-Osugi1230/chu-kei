@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "wave": 29,
+  "company": {"code": "415A", "name": "GMO TECHホールディングス"},
+  "document": {
+    "title": "事業計画及び成長可能性に関する事項",
+    "publishedDate": "2026-03-31",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/415A0/140120260331594489.pdf",
+    "documentType": "growth_potential_document_with_embedded_formal_management_plan",
+    "formalPlanConfirmed": true,
+    "fullTextHumanReviewComplete": true
+  },
+  "sourceAnnotation": {
+    "authority": "JPX official disclosure",
+    "relevance": "growth_document_with_explicit_medium_term_management_plan_summary",
+    "boundary": "資料全体はGrowth資料だが、本文p11に『中期経営計画サマリー』を明示するため、その範囲を正式中計として採用する。外部市場予測や単年度数値は分離する。"
+  },
+  "structuredAnalysis": {
+    "period": "2026年度～2028年度目標",
+    "summary": "Growth資料内に『中期経営計画サマリー』を明示的に内包し、2028年度に売上160億円・営業利益20億円、2029年度にプライム市場移行を目指す。仲間づくり、既存ストック事業成長、新規サービス開発の3軸で成長を図る。",
+    "strategyThemes": ["仲間づくりによる非連続成長", "ストック型収益の最大化", "既存顧客・市場向け新規サービス開発", "MEO・不動産テック等の既存事業成長", "2029年度プライム市場移行を目指す"],
+    "financialTargets": [
+      {"fiscalYear": "2028年度", "metric": "売上高", "value": 160, "unit": "億円", "classification": "formal_plan_terminal_target"},
+      {"fiscalYear": "2028年度", "metric": "営業利益", "value": 20, "unit": "億円", "classification": "formal_plan_terminal_target"},
+      {"fiscalYear": "2028年末", "metric": "SEM事業売上高", "value": 4601, "unit": "百万円", "classification": "segment_target"},
+      {"fiscalYear": "2028年末", "metric": "SEM事業契約件数", "value": 9763, "unit": "件", "classification": "segment_target"}
+    ],
+    "capitalPolicy": "合計約32億円の投資余力を活用し、ストック型ビジネス、デジタルマーケティング、不動産テック領域を中心に仲間づくりを推進する。",
+    "shareholderReturnPolicy": "高成長・高還元の両立を掲げるが、中計サマリーと直接結び付く配当性向・DOE等の定量方針は確認できないため補完しない。",
+    "nonFinancialTargets": [{"fiscalYear": "2029年度", "metric": "プライム市場移行", "value": "目指す"}]
+  },
+  "formalPlanBoundary": {
+    "status": "formal_management_plan_embedded_in_growth_document",
+    "reason": "本文p11が『中期経営計画サマリー』と明記し、2028年度の全社売上高・営業利益目標を設定している。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "formalPlanExistenceWithinGrowthDocumentChecked": true,
+    "visualFigureReviewComplete": false,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "formalPlanSummaryPage": 11,
+    "capitalPolicyPage": 64,
+    "segmentKpiPage": 67
+  },
+  "review": {
+    "status": "primary_review_complete_formal_plan_embedded_independent_visual_review_pending",
+    "reviewedAt": "2026-08-15T12:51:00+09:00",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": ["ChatGPT primary review 2026-08-15"]
+  }
+}

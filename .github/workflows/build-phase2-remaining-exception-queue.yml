@@ -28,13 +28,16 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             /scripts/build_phase2_remaining_exception_queue.py
+            /scripts/audit_phase2_completion_ledger.py
             /operations/quality-rebase/phase2/build-remaining-exception-request.json
             /operations/quality-rebase/phase2/effective-status-v1.json
             /operations/quality-rebase/phase2/source-relevance-audit/*.json
             /operations/quality-rebase/phase2/primary-review-wave*-v1.json
             /operations/quality-rebase/phase2/primary-reviews/*.json
             /operations/quality-rebase/phase2/reviews/*.json
+            /operations/quality-rebase/phase2/review-state-overlays/*.json
             /operations/quality-rebase/phase2/source-repairs/remaining-exception-remediation-v1.json
+            /operations/quality-rebase/phase2/completion-ledger-audit-v1.json
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -71,7 +74,12 @@ jobs:
           set -euo pipefail
           python scripts/build_phase2_remaining_exception_queue.py --write
 
-      - name: Validate generated ledger
+      - name: Audit aggregate completion ledger
+        run: |
+          set -euo pipefail
+          python scripts/audit_phase2_completion_ledger.py --write
+
+      - name: Validate generated ledgers
         shell: bash
         run: |
           set -euo pipefail
@@ -79,18 +87,16 @@ jobs:
           import json
           from pathlib import Path
 
-          path = Path('operations/quality-rebase/phase2/source-repairs/remaining-exception-remediation-v1.json')
-          data = json.loads(path.read_text(encoding='utf-8'))
-          counts = data.get('counts', {})
+          exception_path = Path('operations/quality-rebase/phase2/source-repairs/remaining-exception-remediation-v1.json')
+          exception_data = json.loads(exception_path.read_text(encoding='utf-8'))
+          counts = exception_data.get('counts', {})
           if counts.get('currentAuditExceptions') != 93:
               raise SystemExit('currentAuditExceptions must be 93')
           reviewed = counts.get('reviewedExceptionCompanies')
           remaining = counts.get('remainingExceptionCompanies')
           if not isinstance(reviewed, int) or not isinstance(remaining, int) or reviewed + remaining != 93:
               raise SystemExit('reviewed + remaining exceptions must equal 93')
-          if counts.get('uniquePrimaryReviewArtifacts', 0) <= 0:
-              raise SystemExit('uniquePrimaryReviewArtifacts must be positive')
-          policy = data.get('nextActionPolicy', {})
+          policy = exception_data.get('nextActionPolicy', {})
           if policy.get('normalWaveGeneratorMayConsumeExceptionQueues') is not False:
               raise SystemExit('normal wave generator must not consume exception queues')
           if policy.get('aggregateLedgerMayOverrideMissingReviewArtifact') is not False:
@@ -101,20 +107,34 @@ jobs:
               raise SystemExit('automaticApprovalAllowed must remain false')
           if policy.get('deepVerificationApproved') is not False:
               raise SystemExit('deepVerificationApproved must remain false')
-          print(json.dumps(counts, ensure_ascii=False, indent=2))
+
+          audit_path = Path('operations/quality-rebase/phase2/completion-ledger-audit-v1.json')
+          audit = json.loads(audit_path.read_text(encoding='utf-8'))
+          audit_counts = audit.get('counts', {})
+          if audit_counts.get('canonicalPrimaryReviewArtifacts') != counts.get('uniquePrimaryReviewArtifacts'):
+              raise SystemExit('completion audit and exception ledger disagree on canonical review artifacts')
+          repair_policy = audit.get('repairPolicy', {})
+          if repair_policy.get('canonicalReviewArtifactRequiredForCompletion') is not True:
+              raise SystemExit('canonical review artifact must remain required for completion')
+          if repair_policy.get('automaticApprovalAllowed') is not False:
+              raise SystemExit('automaticApprovalAllowed must remain false in completion audit')
+
+          print(json.dumps({'exception': counts, 'completion': audit_counts}, ensure_ascii=False, indent=2))
           PY
 
-      - name: Commit reconciled ledger
+      - name: Commit reconciled ledgers
         if: github.event_name == 'push'
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add operations/quality-rebase/phase2/source-repairs/remaining-exception-remediation-v1.json
+          git add \
+            operations/quality-rebase/phase2/source-repairs/remaining-exception-remediation-v1.json \
+            operations/quality-rebase/phase2/completion-ledger-audit-v1.json
           if git diff --cached --quiet; then
             echo 'No ledger changes to commit.'
             exit 0
           fi
-          git commit -m 'quality: reconcile remaining Phase2 exception companies'
+          git commit -m 'quality: audit Phase2 completion and exception ledgers'
           git push origin HEAD:${{ github.ref_name }}

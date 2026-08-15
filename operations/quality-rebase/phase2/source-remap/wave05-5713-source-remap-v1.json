@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "phase2-source-remap-audit-v1",
+  "updatedAt": "2026-08-15T12:55:00+09:00",
+  "wave": 5,
+  "findings": [
+    {
+      "code": "5713",
+      "name": "住友金属鉱山",
+      "assignedCandidateTitle": "住友金属鉱山 中期経営計画2027",
+      "wrongResolvedSource": "2006年中期経営計画（2007年2月20日資料）",
+      "wrongResolvedPdfUrl": "https://www.smm.co.jp/ir/management/plan/pdf/070220setsumeikai.pdf",
+      "canonicalSource": {
+        "title": "中期経営計画2027",
+        "officialLandingPage": "https://www.smm.co.jp/ir/management/plan/",
+        "pdfUrl": "https://www.smm.co.jp/ir/management/plan/pdf/250512_setsumeikai.pdf",
+        "publishedDate": "2025-05-12",
+        "period": "2025年度～2027年度"
+      },
+      "action": "replace_2006_plan_pdf_with_current_2027_formal_management_plan"
+    }
+  ],
+  "counts": {"sourceMismatches": 1, "formalPlanCanonicalRemaps": 1},
+  "safety": {
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

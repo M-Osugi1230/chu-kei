@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "wave": 39,
+  "company": {"code": "1377", "name": "サカタのタネ"},
+  "document": {
+    "title": "新長期経営計画『PASSION2035』",
+    "publishedDate": "2026-07-13",
+    "sourceUrl": "https://corporate.sakataseed.co.jp/news/2026/lum8rp00000002qe-att/20260713_sakata_release.pdf",
+    "landingPageUrl": "https://corporate.sakataseed.co.jp/news/2026/20260713.html",
+    "documentType": "formal_management_plan",
+    "planHorizonType": "long_term_10_year",
+    "formalPlanConfirmed": true,
+    "fullTextHumanReviewComplete": true
+  },
+  "sourceAnnotation": {
+    "authority": "サカタのタネ 公式企業サイト",
+    "relevance": "current_formal_long_term_management_plan_with_quantitative_milestones",
+    "boundary": "10年間の長期経営計画として正式に公表された資料を採用する。2031年5月期・2036年5月期の経営目標、成長投資、財務規律、株主還元を正式計画の数値として扱う。"
+  },
+  "structuredAnalysis": {
+    "period": "2027年5月期～2036年5月期（10年間）",
+    "summary": "2027年5月期を初年度とする10年間の長期経営計画。2031年5月期と2036年5月期に財務マイルストーンを置き、グローバル成長と収益性向上に向けた成長投資、自己資本規律、株主還元方針を明示している。",
+    "strategyThemes": [
+      "グローバルでの事業成長と市場拡大",
+      "種苗事業を中心とする競争力・収益力の強化",
+      "研究開発・生産・供給基盤への成長投資",
+      "資本効率を意識した財務基盤の構築",
+      "安定配当と機動的な株主還元"
+    ],
+    "financialTargets": [
+      {"fiscalYear": "2031年5月期", "metric": "売上高", "value": 1400, "unit": "億円", "classification": "formal_plan_milestone_target"},
+      {"fiscalYear": "2031年5月期", "metric": "営業利益", "value": 195, "unit": "億円", "classification": "formal_plan_milestone_target"},
+      {"fiscalYear": "2031年5月期", "metric": "営業利益率", "value": 13.9, "unit": "%", "classification": "formal_plan_milestone_target"},
+      {"fiscalYear": "2031年5月期", "metric": "親会社株主に帰属する当期純利益", "value": 155, "unit": "億円", "classification": "formal_plan_milestone_target"},
+      {"fiscalYear": "2031年5月期", "metric": "ROE", "value": 8, "unit": "%以上", "classification": "formal_plan_milestone_target"},
+      {"fiscalYear": "2036年5月期", "metric": "売上高", "value": 2000, "unit": "億円", "classification": "formal_plan_terminal_target"},
+      {"fiscalYear": "2036年5月期", "metric": "営業利益", "value": 350, "unit": "億円", "classification": "formal_plan_terminal_target"},
+      {"fiscalYear": "2036年5月期", "metric": "営業利益率", "value": 17.5, "unit": "%", "classification": "formal_plan_terminal_target"},
+      {"fiscalYear": "2036年5月期", "metric": "親会社株主に帰属する当期純利益", "value": 280, "unit": "億円", "classification": "formal_plan_terminal_target"},
+      {"fiscalYear": "2036年5月期", "metric": "ROE", "value": 10, "unit": "%以上", "classification": "formal_plan_terminal_target"}
+    ],
+    "capitalPolicy": "2031年5月期までの5年間で成長投資約500億円を計画し、自己資本比率は60％台を目安とする。",
+    "shareholderReturnPolicy": "DOE2.5％以上、配当性向35％程度を目安とし、今後5年間の総還元性向は60％程度を目安とする。",
+    "nonFinancialTargets": []
+  },
+  "formalPlanBoundary": {
+    "status": "formal_management_plan_confirmed_long_term",
+    "reason": "公式発表が『PASSION2035』を2027年5月期から始まる10年間の新長期経営計画と明示し、複数時点の全社財務目標・投資・財務規律・株主還元を設定している。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "formalPlanExistenceWithinGrowthDocumentChecked": true,
+    "visualFigureReviewComplete": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "planIdentityPages": [1],
+    "financialTargetsPage": 1,
+    "capitalPolicyPage": 1,
+    "shareholderReturnPage": 2,
+    "visualEvidenceReviewed": true
+  },
+  "sourceQueueResolution": {
+    "previousQueue": "human_relevance_review_required",
+    "previousReason": "insufficient_relevance_confidence",
+    "resolution": "promoted_to_primary_review_after_human_relevance_and_visual_confirmation"
+  },
+  "review": {
+    "status": "primary_review_complete_formal_plan_confirmed_independent_review_pending",
+    "reviewedAt": "2026-08-15T22:35:00+09:00",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": ["ChatGPT primary review 2026-08-15"]
+  }
+}

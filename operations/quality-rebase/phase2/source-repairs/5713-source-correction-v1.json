@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "phase2-source-correction-v1",
+  "company": {"code": "5713", "name": "住友金属鉱山"},
+  "reviewWave": 5,
+  "detectedAt": "2026-08-15T12:51:00+09:00",
+  "problem": {
+    "type": "legacy_document_misbinding",
+    "previousResolvedPdfUrl": "https://www.smm.co.jp/ir/management/plan/pdf/070220setsumeikai.pdf",
+    "description": "収集テンプレートの候補タイトルは『中期経営計画2027』だったが、resolvedPdfUrl は旧2006年中期経営計画のPDFを指していた。"
+  },
+  "resolution": {
+    "officialLandingPage": "https://www.smm.co.jp/ir/management/plan/",
+    "replacementPdfUrl": "https://www.smm.co.jp/ir/management/plan/pdf/250512_setsumeikai.pdf",
+    "replacementTitle": "中期経営計画2027",
+    "publishedDate": "2025-05-12",
+    "planPeriod": "2025年度～2027年度",
+    "documentClassification": "formal_management_plan",
+    "sourceAuthority": "住友金属鉱山 公式IR"
+  },
+  "verifiedFacts": [
+    {"metric": "2027年度税引前利益", "value": 1400, "unit": "億円", "evidencePage": 3},
+    {"metric": "中計27累計 設備投資・投融資", "value": 4370, "unit": "億円", "evidencePage": 3},
+    {"metric": "原則連結配当性向", "value": 35, "unit": "%以上", "evidencePage": 3},
+    {"metric": "DOE下限", "value": 2.5, "unit": "%", "evidencePage": 3}
+  ],
+  "safety": {
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

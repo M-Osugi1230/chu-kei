@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "phase2-canonical-primary-review-audit-v1",
+  "auditedAt": "2026-08-15T12:51:00+09:00",
+  "scope": {
+    "phase2Target": 450,
+    "phase1Target": 50,
+    "combinedTarget": 500,
+    "sourceRelevanceBaseline": "operations/quality-rebase/phase2/source-relevance-v2/summary.json"
+  },
+  "canonicalArtifactRule": "一次レビュー完了件数は operations/quality-rebase/phase2/primary-reviews/ に存在する会社コード単位のcanonical成果物を正本とし、割当ファイルやcompletion overlayだけでは完了扱いしない。",
+  "reconciliation": {
+    "canonicalPrimaryReviewsBeforeRecovery": 355,
+    "missingAssignedReviewsRecovered": 5,
+    "canonicalPrimaryReviewsAfterRecovery": 360,
+    "remainingPhase2PrimaryReviews": 90,
+    "phase2CompletionRatePercent": 80.0,
+    "phase1PrimaryReviewsComplete": 50,
+    "combinedPrimaryReviewsComplete": 410,
+    "combinedCompletionRatePercent": 82.0
+  },
+  "recoveredReviews": [
+    {"code": "3695", "name": "GMOプロダクトプラットフォーム", "wave": 29, "classification": "growth_document_not_formal_management_plan"},
+    {"code": "4058", "name": "トヨクモ", "wave": 29, "classification": "growth_document_not_formal_management_plan"},
+    {"code": "415A", "name": "GMO TECHホールディングス", "wave": 29, "classification": "formal_management_plan_embedded_in_growth_document"},
+    {"code": "5867", "name": "エスネットワークス", "wave": 29, "classification": "growth_document_not_formal_management_plan"},
+    {"code": "5713", "name": "住友金属鉱山", "wave": 5, "classification": "formal_management_plan_confirmed", "sourceCorrectionFile": "operations/quality-rebase/phase2/source-repairs/5713-source-correction-v1.json"}
+  ],
+  "sourceQueueBaseline": {
+    "primary_review_candidate": 313,
+    "human_relevance_review_required": 11,
+    "likely_wrong_document": 60,
+    "pdf_identification_required": 14,
+    "source_recovery_required": 52,
+    "total": 450,
+    "note": "これは監査開始時の分類母数であり、現在の未処理件数ではない。残り90社のキュー別内訳はcanonical完了コードを差し引いて別途再計算する。"
+  },
+  "correctionsToPriorWorkingAssumptions": [
+    "2588 プレミアムウォーターホールディングスは通常候補ではなく human_relevance_review_required に属する。",
+    "3276 JPMC、6098 リクルートホールディングス、8801 三井不動産は今回のPhase 2 source-relevance-v2 450社母集団の5キューに存在せず、Wave39候補として扱わない。",
+    "overlay集計370/450はcanonical成果物実体と一致しないため、現行進捗値として使用しない。"
+  ],
+  "nextWork": {
+    "normalCandidateQueueRemaining": 0,
+    "remainingWorkClass": "exception_remediation_and_source_resolution",
+    "priority": ["human_relevance_review_required", "likely_wrong_document_with_recoverable_official_source", "pdf_identification_required", "source_recovery_required"]
+  },
+  "safety": {
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

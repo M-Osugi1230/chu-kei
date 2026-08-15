@@ -3,13 +3,12 @@
 
 The normal Phase 2 primary-review candidate queue is exhausted after Wave 38.
 This script uses the latest source-relevance audit as the source of truth for
-exception classifications, then subtracts companies that already have a
-canonical primary-review artifact.
+exception classifications and compares it with canonical primary-review
+artifacts, historical wave assignments, and the effective progress ledger.
 
-It does not recover sources, infer facts, complete reviews, or approve quality.
-Its only purpose is to establish an auditable remaining-work ledger and to
-separate already-reviewed exceptions from companies that still require source
-remediation before primary review.
+It never recovers sources, infers facts, completes reviews, or approves quality.
+It exists to expose ledger/artifact discrepancies instead of hiding them behind
+aggregate completion counts.
 """
 
 from __future__ import annotations
@@ -25,10 +24,8 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 PHASE2 = ROOT / "operations" / "quality-rebase" / "phase2"
 AUDIT_DIR = PHASE2 / "source-relevance-audit"
-PRIMARY_REVIEW_DIRS = [
-    PHASE2 / "primary-reviews",
-    PHASE2 / "reviews",
-]
+EFFECTIVE_STATUS = PHASE2 / "effective-status-v1.json"
+PRIMARY_REVIEW_DIRS = [PHASE2 / "primary-reviews", PHASE2 / "reviews"]
 OUTPUT = PHASE2 / "source-repairs" / "remaining-exception-remediation-v1.json"
 
 QUEUE_FILES = {
@@ -44,7 +41,9 @@ EXPECTED_AUDIT_COUNTS = {
     "source_recovery_required": 52,
 }
 CODE_PATTERN = re.compile(r"^(?:\d{4}|\d{3}[A-Z])$")
-REVIEW_FILE_PATTERN = re.compile(r"^(?P<code>(?:\d{4}|\d{3}[A-Z]))(?:-wave\d+)?-primary-review-v\d+\.json$")
+REVIEW_FILE_PATTERN = re.compile(
+    r"^(?P<code>(?:\d{4}|\d{3}[A-Z]))(?:-wave\d+)?-primary-review-v\d+\.json$"
+)
 
 
 def load_json(path: Path) -> Any:
@@ -63,14 +62,12 @@ def extract_companies(path: Path) -> list[dict[str, Any]]:
     companies = payload.get("companies") if isinstance(payload, dict) else None
     if not isinstance(companies, list):
         raise SystemExit(f"queue has no companies list: {path}")
-    rows = [row for row in companies if isinstance(row, dict)]
-    return rows
+    return [row for row in companies if isinstance(row, dict)]
 
 
 def collect_exception_rows() -> dict[str, dict[str, Any]]:
     rows_by_code: dict[str, dict[str, Any]] = {}
     actual_counts: dict[str, int] = {}
-
     for queue, path in QUEUE_FILES.items():
         if not path.exists():
             raise SystemExit(f"missing current source relevance queue: {path}")
@@ -97,12 +94,11 @@ def collect_exception_rows() -> dict[str, dict[str, Any]]:
                 "error": row.get("error"),
                 "auditSourceFile": str(path.relative_to(ROOT)),
             }
-
     if actual_counts != EXPECTED_AUDIT_COUNTS:
         raise SystemExit(
             f"current audit count mismatch: expected={EXPECTED_AUDIT_COUNTS}, actual={actual_counts}"
         )
-    if len(rows_by_code) != sum(EXPECTED_AUDIT_COUNTS.values()):
+    if len(rows_by_code) != 93:
         raise SystemExit(f"expected 93 unique current exceptions, found {len(rows_by_code)}")
     return rows_by_code
 
@@ -161,10 +157,18 @@ def assignment_codes() -> dict[str, list[int]]:
             if not isinstance(row, dict):
                 continue
             code = normalize_code(row.get("code"))
-            if code is None:
-                continue
-            assigned.setdefault(code, []).append(wave)
+            if code is not None:
+                assigned.setdefault(code, []).append(wave)
     return assigned
+
+
+def declared_phase2_primary_complete() -> int | None:
+    if not EFFECTIVE_STATUS.exists():
+        return None
+    payload = load_json(EFFECTIVE_STATUS)
+    review = payload.get("review") if isinstance(payload, dict) else None
+    value = review.get("phase2PrimaryReviewComplete") if isinstance(review, dict) else None
+    return value if isinstance(value, int) else None
 
 
 def remediation_action(queue: str) -> str:
@@ -196,6 +200,7 @@ def main() -> int:
     exceptions = collect_exception_rows()
     reviewed_codes, review_evidence = collect_reviewed_codes()
     assigned = assignment_codes()
+    declared_complete = declared_phase2_primary_complete()
 
     reviewed_exception_codes = sorted(set(exceptions) & reviewed_codes)
     remaining_codes = sorted(set(exceptions) - reviewed_codes)
@@ -231,6 +236,15 @@ def main() -> int:
 
     remaining_counts = Counter(row["queue"] for row in remaining)
     reviewed_counts = Counter(row["queue"] for row in reviewed_exceptions)
+    all_assigned_codes = set(assigned)
+    reviewed_assigned_codes = reviewed_codes & all_assigned_codes
+    assigned_without_any_review = sorted(all_assigned_codes - reviewed_codes)
+
+    aggregate_gap = (
+        declared_complete - len(reviewed_codes)
+        if isinstance(declared_complete, int)
+        else None
+    )
 
     output = {
         "schemaVersion": "phase2-remaining-exception-remediation-v1",
@@ -239,16 +253,23 @@ def main() -> int:
             "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/summary.json",
             "oldSourceRelevanceV2IsHistoricalOnly": True,
             "normalPrimaryReviewCandidateQueueExhausted": True,
+            "completionEvidence": "canonical primary-review artifact",
         },
         "counts": {
             "currentAuditExceptions": len(exceptions),
             "reviewedExceptionCompanies": len(reviewed_exceptions),
             "remainingExceptionCompanies": len(remaining),
-            "assignedWithoutPrimaryReviewArtifact": len(assigned_without_review_codes),
+            "exceptionAssignedWithoutPrimaryReviewArtifact": len(assigned_without_review_codes),
+            "uniquePrimaryReviewArtifacts": len(reviewed_codes),
+            "uniqueHistoricallyAssignedCompanies": len(all_assigned_codes),
+            "assignedCompaniesWithReviewArtifact": len(reviewed_assigned_codes),
+            "assignedCompaniesWithoutReviewArtifact": len(assigned_without_any_review),
+            "effectiveStatusDeclaredPhase2PrimaryReviewComplete": declared_complete,
+            "declaredMinusUniqueReviewArtifactGap": aggregate_gap,
             "remainingByQueue": dict(sorted(remaining_counts.items())),
             "reviewedByQueue": dict(sorted(reviewed_counts.items())),
         },
-        "assignedWithoutPrimaryReviewArtifact": [
+        "exceptionAssignedWithoutPrimaryReviewArtifact": [
             {
                 "code": code,
                 "name": exceptions[code].get("name"),
@@ -257,43 +278,44 @@ def main() -> int:
             }
             for code in assigned_without_review_codes
         ],
+        "allAssignedWithoutPrimaryReviewArtifact": [
+            {"code": code, "previousWaveAssignments": sorted(assigned.get(code, []))}
+            for code in assigned_without_any_review
+        ],
         "reviewedExceptions": reviewed_exceptions,
         "remaining": remaining,
         "nextActionPolicy": {
             "normalWaveGeneratorMayConsumeExceptionQueues": False,
             "sourceRemediationRequiredBeforePrimaryReview": True,
             "probableWrongDocumentMayBeReviewedAsPlanWithoutReplacement": False,
+            "aggregateLedgerMayOverrideMissingReviewArtifact": False,
             "automaticFactCompletionAllowed": False,
             "automaticApprovalAllowed": False,
             "deepVerificationApproved": False,
         },
+        "warnings": [],
     }
 
-    # 450 total Phase 2 companies = 357 normal candidates + 93 current exceptions.
-    # If the normal candidate queue is exhausted and the project ledger says 370
-    # primary reviews are complete, 13 current-exception companies should already
-    # have review artifacts and 80 should remain. Treat divergence as a hard stop.
-    if len(reviewed_exceptions) != 13 or len(remaining) != 80:
-        raise SystemExit(
-            "exception reconciliation mismatch: expected reviewed=13 remaining=80, "
-            f"actual reviewed={len(reviewed_exceptions)} remaining={len(remaining)}; "
-            "inspect review artifact coverage before proceeding"
-        )
-
+    if len(reviewed_exceptions) + len(remaining) != 93:
+        raise SystemExit("exception partition must sum to 93")
     if assigned_without_review_codes:
-        # Do not fail solely because a historical assignment exists without an
-        # artifact, but surface it explicitly so the next recovery cohort cannot
-        # silently duplicate or skip it.
-        output["warnings"] = [
-            "One or more exception companies were historically assigned but have no canonical primary-review artifact. "
-            "They remain in remediation until the source and review artifact are completed."
-        ]
+        output["warnings"].append(
+            "Current exception companies exist in historical wave assignments without a canonical primary-review artifact. "
+            "They remain incomplete until the source and review artifact are completed."
+        )
+    if aggregate_gap not in (None, 0):
+        output["warnings"].append(
+            "The effective aggregate primary-review count differs from unique canonical primary-review artifacts. "
+            "Do not use the aggregate count as completion evidence until the gap is reconciled."
+        )
 
     if args.write:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     print(json.dumps(output["counts"], ensure_ascii=False, indent=2))
+    if output["warnings"]:
+        print(json.dumps({"warnings": output["warnings"]}, ensure_ascii=False, indent=2))
     return 0
 
 

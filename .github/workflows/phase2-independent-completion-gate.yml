@@ -10,6 +10,7 @@ on:
       - 'operations/quality-rebase/phase2/source-identity-overrides/*.json'
       - 'operations/quality-rebase/phase2/bulk-collection/**/collection.json'
       - 'scripts/validate_phase2_independent_completions.py'
+      - 'scripts/validate_phase2_independent_completions_v2.py'
       - '.github/workflows/phase2-independent-completion-gate.yml'
   push:
     branches:
@@ -23,6 +24,7 @@ on:
       - 'operations/quality-rebase/phase2/source-identity-overrides/*.json'
       - 'operations/quality-rebase/phase2/bulk-collection/**/collection.json'
       - 'scripts/validate_phase2_independent_completions.py'
+      - 'scripts/validate_phase2_independent_completions_v2.py'
       - '.github/workflows/phase2-independent-completion-gate.yml'
   workflow_dispatch:
 
@@ -43,7 +45,7 @@ jobs:
           python-version: '3.12'
 
       - name: Check validator syntax
-        run: python -m py_compile scripts/validate_phase2_independent_completions.py
+        run: python -m py_compile scripts/validate_phase2_independent_completions.py scripts/validate_phase2_independent_completions_v2.py
 
       - name: Validate independent completion ledger
-        run: python scripts/validate_phase2_independent_completions.py --repo-root .
+        run: python scripts/validate_phase2_independent_completions_v2.py --repo-root .

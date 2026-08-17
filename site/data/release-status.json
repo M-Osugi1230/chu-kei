@@ -1,10 +1,10 @@
 {
   "schemaVersion": "site-release-status-v1",
-  "updatedAt": "2026-08-01",
+  "updatedAt": "2026-08-16",
   "repository": {
-    "release": "Phase 0 Quality Rebase / Phase 1-2 Queue",
-    "lastVerifiedMainSha": "8bdb477f00bce44b462f8c5c61b53c87410980d6",
-    "launchCandidateBranch": "agent/quality-rebase-phase0-2",
+    "release": "Phase 2 canonical-count reconciliation / Wave39 remediation prep",
+    "lastVerifiedMainSha": "b6b6c5f2b2eab58d22cf5a53c8e42ab19a9aa637",
+    "launchCandidateBranch": "agent/phase2-wave39",
     "companies": 3000,
     "sourceConfirmed": 3000,
     "structured": 315,
@@ -32,30 +32,47 @@
       "canonicalContact": true,
       "operatorDisclosure": "Chu-kei事務局"
     },
+    "phase1PrimaryReviewComplete": 50,
+    "phase2PrimaryReviewComplete": 360,
+    "primaryReviewCompleteIncludingPhase1": 410,
+    "primaryReviewTargetIncludingPhase1": 500,
+    "primaryReviewCompletionRatePercent": 82.0,
+    "remainingPhase2PrimaryReviews": 90,
+    "normalPrimaryReviewCandidatesRemaining": 4,
+    "exceptionCandidatesRemaining": 86,
+    "independentReviewComplete": 61,
+    "independentReviewPending": 1,
+    "independentVisualReviewPending": 306,
     "deepVerified": 0,
     "reAuditPool": 315,
     "templateReviewRequired": 2685,
     "strictEarningsReleaseReSearch": 610,
     "phase1Selected": 50,
     "phase2Queued": 450,
-    "knownBrokenLinks": 6
+    "knownBrokenLinks": 6,
+    "countingPolicy": "company_code_unique_canonical_review_artifact",
+    "previousInflatedPhase2PrimaryReviewComplete": 370
   },
   "publicSite": {
-    "url": "https://chukei-insight.osugimurata.chatgpt.site/",
-    "release": "公開候補をmainへ統合後に本番反映",
+    "url": "https://chu-kei.com/",
+    "release": "Quality Rebase後のGitHub正本と公開品質表示の完全同期前",
     "verifiedAt": null,
-    "verificationStatus": "deployment_pending",
+    "verificationStatus": "quality_rebase_sync_pending",
     "verificationIssue": 49
   },
   "sync": {
     "status": "quality_rebase_in_progress",
-    "label": "品質再監査中",
+    "label": "品質再監査・公開同期準備中",
     "pending": [
-      "Phase 1の50社を新工程で全文精読し、二段階承認を完了する",
-      "Phase 2追加450社を50社単位で処理し、深掘り確認済み500社へ到達する",
+      "Phase 2残り90社を会社コード単位のcanonical一次レビュー成果物で完了させ、Phase 1込み500社へ到達する",
+      "通常候補4社と例外候補86社を分離して処理する",
+      "独立図表レビューpending 306社を並行処理する",
+      "独立レビュー完了企業からDeep Verification最終承認工程へ進める",
+      "決算短信起点610社から正式中計を再探索する",
       "証跡候補116社をレビューする",
       "既知404 6件を修復する",
-      "品質表示の公開反映後に公開URLを再監査する"
+      "GitHub正本の品質状態・資料区分・出典をchu-kei.comへ反映する",
+      "公開反映後にURL・検索・フィルタ・レンダリングを再監査する"
     ]
   }
 }

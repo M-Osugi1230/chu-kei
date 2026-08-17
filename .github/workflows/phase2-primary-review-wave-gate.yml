@@ -10,11 +10,13 @@ on:
       - 'operations/quality-rebase/phase2/primary-reviews/*-primary-review-v*.json'
       - 'operations/quality-rebase/phase2/independent/*-independent-review-v*.json'
       - 'operations/quality-rebase/phase2/source-repairs/*.json'
+      - 'operations/quality-rebase/phase2/wave-assignment-dedup-audit-v1.json'
       - 'scripts/validate_phase2_primary_review_wave.py'
       - 'scripts/validate_phase2_primary_review_wave_v2.py'
       - 'scripts/validate_phase2_primary_review_wave_v3.py'
       - 'scripts/validate_phase2_primary_review_wave_v4.py'
       - 'scripts/validate_phase2_primary_review_ledger_v1.py'
+      - 'scripts/validate_phase2_primary_review_ledger_v2.py'
       - '.github/workflows/phase2-primary-review-wave-gate.yml'
   push:
     branches:
@@ -28,11 +30,13 @@ on:
       - 'operations/quality-rebase/phase2/primary-reviews/*-primary-review-v*.json'
       - 'operations/quality-rebase/phase2/independent/*-independent-review-v*.json'
       - 'operations/quality-rebase/phase2/source-repairs/*.json'
+      - 'operations/quality-rebase/phase2/wave-assignment-dedup-audit-v1.json'
       - 'scripts/validate_phase2_primary_review_wave.py'
       - 'scripts/validate_phase2_primary_review_wave_v2.py'
       - 'scripts/validate_phase2_primary_review_wave_v3.py'
       - 'scripts/validate_phase2_primary_review_wave_v4.py'
       - 'scripts/validate_phase2_primary_review_ledger_v1.py'
+      - 'scripts/validate_phase2_primary_review_ledger_v2.py'
       - '.github/workflows/phase2-primary-review-wave-gate.yml'
   workflow_dispatch:
 
@@ -52,5 +56,8 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Check validator syntax
+        run: python -m py_compile scripts/validate_phase2_primary_review_ledger_v1.py scripts/validate_phase2_primary_review_ledger_v2.py
+
       - name: Validate canonical Phase 2 review ledger
-        run: python scripts/validate_phase2_primary_review_ledger_v1.py --repo-root .
+        run: python scripts/validate_phase2_primary_review_ledger_v2.py --repo-root .

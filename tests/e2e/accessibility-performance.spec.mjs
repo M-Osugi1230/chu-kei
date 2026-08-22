@@ -2,9 +2,35 @@ import fs from 'node:fs';
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const productionReadiness = JSON.parse(
-  fs.readFileSync(new URL('../../operations/production-quality/production-readiness-v1.json', import.meta.url), 'utf8'),
+const qualityRebase = JSON.parse(
+  fs.readFileSync(new URL('../../site/data/quality-rebase-v1.json', import.meta.url), 'utf8'),
 );
+
+const qualityStats = [
+  ['掲載企業', `${qualityRebase.counts.companies}社`],
+  ['深掘り確認済み', `${qualityRebase.counts.deepVerified}社`],
+  ['再監査対象', `${qualityRebase.counts.reAuditPool}社`],
+  ['テンプレート型', `${qualityRebase.counts.templateReviewRequired}社`],
+  ['決算短信の再探索', `${qualityRebase.counts.strictEarningsReleaseReSearch}社`],
+  ['進捗データ', `${qualityRebase.counts.progressCompanies}社 / ${qualityRebase.counts.progressRecords}件`],
+  ['Phase 1', `${qualityRebase.counts.phase1Selected}社`],
+  ['Phase 2追加キュー', `${qualityRebase.counts.phase2AdditionalQueued}社`],
+  ['証跡候補', `${qualityRebase.counts.evidenceCandidates}社`],
+  ['既知404', `${qualityRebase.counts.knownBrokenLinks}件`],
+];
+
+const coverageOnly = qualityRebase.counts.companies
+  - qualityRebase.counts.deepVerified
+  - qualityRebase.counts.deepReviewInProgress
+  - qualityRebase.counts.reAuditPool
+  - qualityRebase.counts.templateReviewRequired;
+const qualityAuditRows = [
+  ['深掘り確認済み', qualityRebase.counts.deepVerified],
+  ['深掘りレビュー中', qualityRebase.counts.deepReviewInProgress],
+  ['再監査対象', qualityRebase.counts.reAuditPool],
+  ['資料確認済み・深掘り前', qualityRebase.counts.templateReviewRequired],
+  ['カバレッジのみ', coverageOnly],
+];
 
 function captureErrors(page) {
   const consoleErrors = [];
@@ -37,6 +63,30 @@ async function expectQueueSummary(page) {
     await expect(page.locator('#queue-body .empty-row')).toHaveCount(0);
   }
   return candidateCount;
+}
+
+async function expectQualitySummary(page) {
+  await expect(page.locator('.quality-stat')).toHaveCount(qualityStats.length);
+  for (const [label, value] of qualityStats) {
+    const stat = page.locator('#quality-summary').getByText(label, { exact: true }).locator('..');
+    await expect(stat).toContainText(value);
+  }
+}
+
+async function expectQualityAudit(page) {
+  expect(coverageOnly).toBeGreaterThanOrEqual(0);
+  await expect(page.locator('#audit-body tr')).toHaveCount(qualityAuditRows.length);
+  for (const [label, companyCount] of qualityAuditRows) {
+    const row = page.locator('#audit-body tr').filter({
+      has: page.getByRole('rowheader', { name: label, exact: true }),
+    });
+    await expect(row).toHaveCount(1);
+    await expect(row.locator('td').first()).toHaveText(String(companyCount));
+    await expect(row.locator('.ratio')).toHaveCount(5);
+    expect(await row.locator('.ratio small').allTextContents()).toEqual(
+      Array(5).fill(` / ${companyCount}`),
+    );
+  }
 }
 
 test.describe('Accessibility and performance budgets', () => {
@@ -91,6 +141,8 @@ test.describe('Accessibility and performance budgets', () => {
     const queueCount = await expectQueueSummary(page);
     expect(Date.now() - started).toBeLessThan(8_000);
     await expectAccessible(page);
+    await expectQualitySummary(page);
+    await expectQualityAudit(page);
 
     const filterStarted = Date.now();
     await page.locator('#queue-priority').selectOption('A');
@@ -101,13 +153,6 @@ test.describe('Accessibility and performance budgets', () => {
     const priorityBCount = await expectQueueSummary(page);
     expect(priorityACount + priorityBCount).toBe(queueCount);
     if (queueCount > 0) expect(priorityACount).toBeGreaterThan(0);
-
-    const productionCount = productionReadiness.currentProduction;
-    const productionAuditRow = page.locator('#audit-body tr').filter({
-      has: page.getByRole('rowheader', { name: '本番', exact: true }),
-    });
-    await expect(productionAuditRow).toContainText(`${productionCount} / ${productionCount}`);
-    await expect(page.getByText('本番の一次証跡要確認').locator('..').getByText('0社')).toBeVisible();
 
     if (testInfo.project.name === 'mobile') {
       const width = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));

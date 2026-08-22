@@ -4,9 +4,35 @@ import { test, expect } from '@playwright/test';
 const milestone = JSON.parse(
   fs.readFileSync(new URL('../../operations/quality/coverage-milestone-v1.json', import.meta.url), 'utf8'),
 );
-const productionReadiness = JSON.parse(
-  fs.readFileSync(new URL('../../operations/production-quality/production-readiness-v1.json', import.meta.url), 'utf8'),
+const qualityRebase = JSON.parse(
+  fs.readFileSync(new URL('../../site/data/quality-rebase-v1.json', import.meta.url), 'utf8'),
 );
+
+const qualityStats = [
+  ['掲載企業', `${qualityRebase.counts.companies}社`],
+  ['深掘り確認済み', `${qualityRebase.counts.deepVerified}社`],
+  ['再監査対象', `${qualityRebase.counts.reAuditPool}社`],
+  ['テンプレート型', `${qualityRebase.counts.templateReviewRequired}社`],
+  ['決算短信の再探索', `${qualityRebase.counts.strictEarningsReleaseReSearch}社`],
+  ['進捗データ', `${qualityRebase.counts.progressCompanies}社 / ${qualityRebase.counts.progressRecords}件`],
+  ['Phase 1', `${qualityRebase.counts.phase1Selected}社`],
+  ['Phase 2追加キュー', `${qualityRebase.counts.phase2AdditionalQueued}社`],
+  ['証跡候補', `${qualityRebase.counts.evidenceCandidates}社`],
+  ['既知404', `${qualityRebase.counts.knownBrokenLinks}件`],
+];
+
+const coverageOnly = qualityRebase.counts.companies
+  - qualityRebase.counts.deepVerified
+  - qualityRebase.counts.deepReviewInProgress
+  - qualityRebase.counts.reAuditPool
+  - qualityRebase.counts.templateReviewRequired;
+const qualityAuditRows = [
+  ['深掘り確認済み', qualityRebase.counts.deepVerified],
+  ['深掘りレビュー中', qualityRebase.counts.deepReviewInProgress],
+  ['再監査対象', qualityRebase.counts.reAuditPool],
+  ['資料確認済み・深掘り前', qualityRebase.counts.templateReviewRequired],
+  ['カバレッジのみ', coverageOnly],
+];
 
 function captureErrors(page) {
   const consoleErrors = [];
@@ -34,15 +60,41 @@ async function expectQueueSummary(page) {
   return candidateCount;
 }
 
+async function expectQualitySummary(page) {
+  await expect(page.locator('.quality-stat')).toHaveCount(qualityStats.length);
+  for (const [label, value] of qualityStats) {
+    const stat = page.locator('#quality-summary').getByText(label, { exact: true }).locator('..');
+    await expect(stat).toContainText(value);
+  }
+}
+
+async function expectQualityAudit(page) {
+  expect(coverageOnly).toBeGreaterThanOrEqual(0);
+  await expect(page.locator('#audit-body tr')).toHaveCount(qualityAuditRows.length);
+  for (const [label, companyCount] of qualityAuditRows) {
+    const row = page.locator('#audit-body tr').filter({
+      has: page.getByRole('rowheader', { name: label, exact: true }),
+    });
+    await expect(row).toHaveCount(1);
+    await expect(row.locator('td').first()).toHaveText(String(companyCount));
+    await expect(row.locator('.ratio')).toHaveCount(5);
+    expect(await row.locator('.ratio small').allTextContents()).toEqual(
+      Array(5).fill(` / ${companyCount}`),
+    );
+  }
+}
+
 test.describe('Chu-kei portal', () => {
-  test('loads the milestone company set and supports search, strategy, detail and comparison', async ({ page }, testInfo) => {
+  test('loads the quality-rebased company set and supports search, strategy, detail and comparison', async ({ page }, testInfo) => {
     const errors = captureErrors(page);
     await page.goto('/');
     await expect(page).toHaveTitle(/Chu-kei/);
     await expect(page.locator('#stat-total')).toHaveText(`${milestone.companyTotal}社`);
-    await expect(page.locator('#stat-confirmed')).toHaveText(`${milestone.minimumSourceConfirmed}社`);
-    await expect(page.locator('#stat-structured')).toHaveText(`${milestone.minimumStructured}社`);
-    await expect(page.locator('#stat-progress')).toContainText(`${milestone.progressRows}件`);
+    await expect(page.locator('#stat-confirmed')).toHaveText(`${qualityRebase.counts.reAuditPool}社`);
+    await expect(page.locator('#stat-structured')).toHaveText(`${qualityRebase.counts.deepVerified}社`);
+    await expect(page.locator('#stat-progress')).toHaveText(
+      `${qualityRebase.counts.actualConnectedCompanies}社 / ${qualityRebase.counts.actualConnectedRecords}件`,
+    );
     await expect(page.locator('.company-card')).toHaveCount(50);
 
     await page.locator('#search').fill('三菱重工業');
@@ -157,7 +209,8 @@ test.describe('Chu-kei portal', () => {
     const errors = captureErrors(page);
     await page.goto('/quality.html');
     await expect(page).toHaveTitle(/品質ダッシュボード/);
-    await expect(page.locator('.quality-stat')).toHaveCount(8);
+    await expectQualitySummary(page);
+    await expectQualityAudit(page);
     await expect(page.locator('#queue-summary')).toBeVisible();
     const queueCount = await expectQueueSummary(page);
 
@@ -177,11 +230,7 @@ test.describe('Chu-kei portal', () => {
       await expect(page.locator('#queue-body tr[data-company-code]')).toHaveCount(1);
       await expect(page.locator('#queue-body')).toContainText(firstCode);
     } else {
-      const productionCount = productionReadiness.currentProduction;
       await expect(page.locator('#queue-body .empty-row')).toContainText('条件に一致する企業がありません。');
-      await expect(page.locator('#quality-summary')).toContainText(`本番品質${productionCount}社`);
-      const productionAuditRow = page.locator('#audit-body tr').filter({ has: page.getByRole('rowheader', { name: '本番', exact: true }) });
-      await expect(productionAuditRow).toContainText(`${productionCount} / ${productionCount}`);
     }
 
     if (testInfo.project.name === 'mobile') {

@@ -77,7 +77,7 @@ check('repair queue priorities match policy', actual.every(item => {
   return exp && item.priority === exp.priority;
 }));
 check('five-star core excluded from repair queue', actual.every(item => item.qualityStars !== 5));
-check('all non-five-star core records are queued', core.filter(company => company.quality?.stars !== 5).every(company => actual.some(item => item.code === company.code)));
+check('complete core records excluded from repair queue', core.filter(company => gaps(company).length === 0).every(company => !actual.some(item => item.code === company.code)));
 check('summary core count matches milestone', queueReport.summary?.coreCompanies === milestone.expectedCore, `summary=${queueReport.summary?.coreCompanies}`);
 check('summary queue count matches items', queueReport.summary?.repairQueue === actual.length);
 check('summary gap counts are dynamic', Number.isInteger(queueReport.summary?.publicationDateMissing) && Number.isInteger(queueReport.summary?.pageEvidenceMissing) && Number.isInteger(queueReport.summary?.progressMissing));

@@ -1,10 +1,10 @@
 {
   "schemaVersion": "phase2-remaining-exception-request-v1",
-  "requestedAt": "2026-08-15T13:02:00+09:00",
+  "requestedAt": "2026-08-23T03:08:00+09:00",
   "status": "requested",
   "writeChanges": true,
   "automaticFactCompletionAllowed": false,
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": 0,
-  "purpose": "欠落していたWave29の4社とWave5の住友金属鉱山のcanonical一次レビューを復旧した後、現行source-relevance-audit全450社、例外93社、Phase1の50社、過去Wave割当、completion overlay、canonical一次レビュー実体、effective statusを再突合する。会社コード単位の成果物を完了証跡とし、通常候補・例外候補・Phase1重複・監査外成果物を分離して真の残件を確定する。"
+  "purpose": "Wave39で通常一次レビュー候補4社（2588、3276、6098、8801）のcanonical一次レビューを完了し、Phase2 canonical成果物を364/450へ更新した状態から例外台帳を再同期する。現行source-relevance-auditの例外母集団93社のうち既レビュー7社と未レビュー86社を会社コード単位で再突合し、manual_source_relevance_check、pdf_identification_required、probable_wrong_document、source_recovery_requiredの実残件を確定する。通常候補を例外キューへ混入させず、canonical一次レビュー成果物がない会社を完了扱いしない。automatic fact completion、automatic approval、Deep Verification自動昇格は禁止する。"
 }

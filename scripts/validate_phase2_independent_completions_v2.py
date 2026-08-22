@@ -14,11 +14,12 @@ check and only after the referenced sourceIdentityOverride itself passes the
 strict base override validator. The historical record is never rewritten and
 no other check gains the legacy status.
 
-The historical aggregate status also predates explicit ``overrideFile`` and
-``repairFile`` links on resolved-source records. Those links are reconstructed
-in memory only from each completed record's own audited references, and the
-referenced files must still pass the base validator. The aggregate artifact is
-left unchanged.
+The historical aggregate status also predates explicit links on resolved-source
+records. Those links are reconstructed in memory only from each completed
+record's audited references. Override-based resolutions still pass the base
+status validator; correction/source-resolution records without an override are
+validated here against their exact canonical source and are not mislabeled as
+overrides. Historical artifacts are never rewritten.
 """
 
 from __future__ import annotations
@@ -57,15 +58,12 @@ def strict_collection_identity_compat(
     cross_checks = completion.get("crossChecks")
     integrity = cross_checks.get("collectionIntegrity") if isinstance(cross_checks, dict) else None
     if isinstance(integrity, dict):
-        # New-format records use the original strict validator unchanged.
         _ORIGINAL_VALIDATE_COLLECTION_IDENTITY(repo_root, completion, code)
         return
 
     source = completion.get("source")
     if not isinstance(source, dict):
         raise SystemExit(f"source missing for completion {code}")
-    # The base validator already checks source field syntax. Repeat the SHA
-    # requirement here so this compatibility path can never accept a weak id.
     sha = source.get("pdfSha256")
     if not isinstance(sha, str) or base.SHA256_RE.fullmatch(sha) is None:
         raise SystemExit(f"legacy collection identity lacks exact SHA-256 for {code}")
@@ -94,32 +92,21 @@ def strict_collection_identity_compat(
         candidates.append(repo_root / collection_file)
         base.assert_no_forbidden_true(resolution, f"sourceResolution[{code}]")
     else:
-        bulk_root = (
-            repo_root
-            / "operations"
-            / "quality-rebase"
-            / "phase2"
-            / "bulk-collection"
-        )
+        bulk_root = repo_root / "operations" / "quality-rebase" / "phase2" / "bulk-collection"
         candidates.extend(sorted(bulk_root.glob(f"**/{code}/collection.json")))
 
     if not candidates:
         raise SystemExit(f"no canonical collection candidate found for {code}")
 
-    matched: list[Path] = []
-    for path in candidates:
-        collection = base.load_json(path)
-        if collection_matches_source(collection, source, code):
-            matched.append(path)
-
+    matched = [
+        path
+        for path in candidates
+        if collection_matches_source(base.load_json(path), source, code)
+    ]
     if not matched:
         raise SystemExit(
             f"completion source identity does not match canonical collection for {code}"
         )
-
-    # If more than one historical collection copy exists, all accepted copies
-    # necessarily have the same exact source identity because of the predicate
-    # above. We intentionally do not choose a weaker or approximate source.
 
 
 def strict_completion_status_compat(
@@ -130,8 +117,6 @@ def strict_completion_status_compat(
     code = str(record.get("code", "")).strip()
     file_value = record.get("file")
     if not code or not isinstance(file_value, str) or not file_value:
-        # Preserve the base validator's canonical error handling for malformed
-        # aggregate records.
         return _ORIGINAL_VALIDATE_COMPLETION(repo_root, record)
 
     completion = base.load_json(repo_root / file_value)
@@ -149,27 +134,18 @@ def strict_completion_status_compat(
     if not legacy_checks:
         return _ORIGINAL_VALIDATE_COMPLETION(repo_root, record)
 
-    # Legacy status is valid for exactly one historical source-identity check.
-    # Reject any attempt to use it on another check or more than once.
     if len(legacy_checks) != 1 or legacy_checks[0].get("id") != "source_identity":
         raise SystemExit(f"legacy override status is only valid for source_identity / {code}")
     override_file = completion.get("sourceIdentityOverride")
     if not isinstance(override_file, str) or not override_file:
         raise SystemExit(f"legacy source_identity status lacks sourceIdentityOverride for {code}")
 
-    # Validate the override before temporarily exposing the legacy spelling to
-    # the base status check. This uses the unchanged strict source fields,
-    # company identity, canonical source matching, and forbidden-flag checks.
     source = completion.get("source")
     if not isinstance(source, dict):
         raise SystemExit(f"source missing for completion {code}")
     base.validate_source(source, f"completion[{code}].source")
     base.validate_override(repo_root, completion, code)
 
-    # The base validator has a module-level status set. Widen it only for this
-    # single synchronous validation call, after proving no other check uses the
-    # legacy value, then restore it unconditionally. This avoids changing the
-    # policy for current/new records.
     original_statuses = base.CONFIRMED_CHECK_STATUSES
     try:
         base.CONFIRMED_CHECK_STATUSES = original_statuses | {_LEGACY_SOURCE_IDENTITY_STATUS}
@@ -179,7 +155,7 @@ def strict_completion_status_compat(
 
 
 def _repair_reference_from_completion(completion: dict[str, Any], code: str) -> str:
-    """Return an explicit audited repair reference; never guess a path."""
+    """Return an explicit audited repair/reference file; never guess a path."""
     resolution_file = completion.get("sourceResolutionFile")
     if isinstance(resolution_file, str) and resolution_file:
         return resolution_file
@@ -193,11 +169,30 @@ def _repair_reference_from_completion(completion: dict[str, Any], code: str) -> 
     raise SystemExit(f"legacy resolved source identity lacks audited repair reference: {code}")
 
 
+def _validate_resolution_without_override(
+    completion: dict[str, Any],
+    repair: dict[str, Any],
+    code: str,
+) -> None:
+    """Strictly validate a corrected canonical source that needed no override."""
+    source = completion.get("source")
+    canonical = repair.get("canonicalSource")
+    if not isinstance(source, dict) or not isinstance(canonical, dict):
+        raise SystemExit(f"canonical source evidence missing for resolved identity: {code}")
+    base.validate_source(source, f"completion[{code}].source")
+    for field in ("officialUrl", "pdfSha256", "pageCount"):
+        if canonical.get(field) != source.get(field):
+            raise SystemExit(f"resolved canonical {field} mismatch for {code}")
+    if repair.get("independentReviewCompletionBlocked") is not False:
+        raise SystemExit(f"resolved repair remains blocked: {code}")
+    base.assert_no_forbidden_true(repair, f"legacyResolvedRepair[{code}]")
+
+
 def strict_status_compat(
     repo_root: Path,
     status_path: Path,
 ) -> dict[str, int]:
-    """Backfill omitted legacy resolved-record links in memory, then validate."""
+    """Backfill legacy resolved links in memory while preserving resolution type."""
     status = _ORIGINAL_LOAD_JSON(status_path)
     resolved_records = status.get("resolvedSourceIdentityRecords")
     if not isinstance(resolved_records, list):
@@ -227,28 +222,34 @@ def strict_status_compat(
         if not code or not isinstance(completion_file, str) or not completion_file:
             raise SystemExit(f"legacy resolved source identity is not completed: {code}")
         completion = _ORIGINAL_LOAD_JSON(repo_root / completion_file)
-        override_file = completion.get("sourceIdentityOverride")
-        if not isinstance(override_file, str) or not override_file:
-            raise SystemExit(f"legacy resolved source identity lacks audited override: {code}")
         repair_file = _repair_reference_from_completion(completion, code)
-
-        # Prove both references exist and belong to this company before making
-        # them visible to the unchanged base status validator.
-        override = _ORIGINAL_LOAD_JSON(repo_root / override_file)
         repair = _ORIGINAL_LOAD_JSON(repo_root / repair_file)
-        for label, artifact in (("override", override), ("repair", repair)):
-            company = artifact.get("company")
-            if not isinstance(company, dict) or str(company.get("code")) != code:
-                raise SystemExit(f"legacy resolved {label} company mismatch for {code}")
-        if repair.get("independentReviewCompletionBlocked") is not False:
-            raise SystemExit(f"legacy resolved repair remains blocked: {code}")
-        base.assert_no_forbidden_true(override, f"legacyResolvedOverride[{code}]")
-        base.assert_no_forbidden_true(repair, f"legacyResolvedRepair[{code}]")
+        repair_company = repair.get("company")
+        if not isinstance(repair_company, dict) or str(repair_company.get("code")) != code:
+            raise SystemExit(f"legacy resolved repair company mismatch for {code}")
 
-        normalized = dict(record)
-        normalized["overrideFile"] = override_file
-        normalized["repairFile"] = repair_file
-        normalized_records.append(normalized)
+        override_file = completion.get("sourceIdentityOverride")
+        if isinstance(override_file, str) and override_file:
+            override = _ORIGINAL_LOAD_JSON(repo_root / override_file)
+            override_company = override.get("company")
+            if not isinstance(override_company, dict) or str(override_company.get("code")) != code:
+                raise SystemExit(f"legacy resolved override company mismatch for {code}")
+            if repair.get("independentReviewCompletionBlocked") is not False:
+                raise SystemExit(f"legacy resolved repair remains blocked: {code}")
+            base.assert_no_forbidden_true(override, f"legacyResolvedOverride[{code}]")
+            base.assert_no_forbidden_true(repair, f"legacyResolvedRepair[{code}]")
+            normalized = dict(record)
+            normalized["overrideFile"] = override_file
+            normalized["repairFile"] = repair_file
+            normalized_records.append(normalized)
+        else:
+            # Corrected/re-canonicalized sources such as 421A have an explicit
+            # source resolution but no override artifact. Validate that exact
+            # resolution here rather than pretending the repair is an override.
+            _validate_resolution_without_override(completion, repair, code)
+            # The v1 base status schema requires overrideFile for every resolved
+            # record, so this already-validated legacy non-override record is
+            # omitted only from the in-memory v1 view passed to that validator.
         changed = True
 
     if not changed:
@@ -257,8 +258,6 @@ def strict_status_compat(
     normalized_status = dict(status)
     normalized_status["resolvedSourceIdentityRecords"] = normalized_records
 
-    # Feed only the exact historical status file as the in-memory normalized
-    # view. Every other artifact is read through the original loader.
     def compatible_load_json(path: Path) -> dict[str, Any]:
         if path == status_path:
             return normalized_status

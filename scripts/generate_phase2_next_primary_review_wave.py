@@ -11,7 +11,10 @@ Selection rules:
   existing canonical primary-review file, and every company already assigned in
   an existing Phase 2 wave;
 - require an existing primary-review-template.json in the bulk collection tree;
-- accept formal management plans and plan revisions/updates by default;
+- accept formal management plans, plan revisions/updates, and management-policy
+  or strategy documents by default;
+- management-policy or strategy documents always require a human to separate
+  formal-plan commitments from directional policy before completion;
 - growth-potential documents are excluded unless explicitly enabled, because
   their formal-plan boundary must first be confirmed by a human;
 - preserve deterministic ordering by relevance score (descending), then queue
@@ -26,11 +29,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+GROWTH_DOCUMENT_TYPE = "growth_potential_document"
+MANAGEMENT_POLICY_DOCUMENT_TYPE = "management_policy_or_strategy"
 ALLOWED_DEFAULT_DOCUMENT_TYPES = {
     "formal_management_plan",
     "plan_revision_or_update",
+    MANAGEMENT_POLICY_DOCUMENT_TYPE,
 }
-GROWTH_DOCUMENT_TYPE = "growth_potential_document"
 ASSIGNED_STATUS = "primary_review_assigned"
 BOUNDARY_REQUIRED_STATUS = "primary_review_assigned_formal_plan_boundary_required"
 
@@ -86,10 +91,18 @@ def canonical_review_file_codes(phase2_dir: Path) -> set[str]:
     different company from the queue.
     """
 
-    reviews_dir = phase2_dir / "reviews"
     codes: set[str] = set()
-    for path in sorted(reviews_dir.glob("*-primary-review-v1.json")):
-        filename_code = path.name.removesuffix("-primary-review-v1.json").strip()
+    review_paths = [
+        *sorted((phase2_dir / "reviews").glob("*-primary-review-v1.json")),
+        *sorted(
+            (phase2_dir / "primary-reviews").glob(
+                "*-wave*-primary-review-v1.json"
+            )
+        ),
+    ]
+    for path in review_paths:
+        filename_stem = path.name.removesuffix("-primary-review-v1.json").strip()
+        filename_code = filename_stem.split("-wave", 1)[0]
         if not filename_code:
             raise SystemExit(f"review filename lacks company code: {path}")
 
@@ -242,6 +255,7 @@ def build_wave(
 
         boundary_required = document_type in {
             "plan_revision_or_update",
+            MANAGEMENT_POLICY_DOCUMENT_TYPE,
             GROWTH_DOCUMENT_TYPE,
         }
         required_checks = [
@@ -253,6 +267,8 @@ def build_wave(
         ]
         if document_type == "plan_revision_or_update":
             required_checks.insert(1, "planRevisionSeparation")
+        if document_type == MANAGEMENT_POLICY_DOCUMENT_TYPE:
+            required_checks.insert(1, "formalPlanOrPolicySeparation")
         if document_type == GROWTH_DOCUMENT_TYPE:
             required_checks.insert(1, "formalPlanExistenceWithinGrowthDocument")
 
@@ -305,6 +321,10 @@ def build_wave(
             item["documentTypeCandidate"] == GROWTH_DOCUMENT_TYPE
             for item in selected
         ),
+        "managementPolicyOrStrategyCandidates": sum(
+            item["documentTypeCandidate"] == MANAGEMENT_POLICY_DOCUMENT_TYPE
+            for item in selected
+        ),
     }
 
     return {
@@ -323,6 +343,7 @@ def build_wave(
             "requireExistingReviewInput": True,
             "preferCurrentFormalManagementPlan": True,
             "preferCurrentPlanRevisionOrUpdate": True,
+            "allowManagementPolicyOrStrategyWithBoundaryReview": True,
             "excludeKnownWrongDocumentAndRecoveryQueues": True,
             "growthPotentialDocumentsEnabled": include_growth_documents,
             "automaticFactCompletionAllowed": False,

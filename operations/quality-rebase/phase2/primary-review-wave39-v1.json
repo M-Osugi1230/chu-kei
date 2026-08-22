@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "phase2-primary-review-wave-v1",
+  "generatedAt": "2026-08-22T10:17:22+00:00",
+  "updatedAt": "2026-08-22T10:17:22+00:00",
+  "wave": 39,
+  "targetCompanies": 4,
+  "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/primary-review-candidates.json",
+  "selectionPolicy": {
+    "sourceQueue": "primary_review_candidate",
+    "excludeCompletedPrimaryReviews": true,
+    "excludeCanonicalPrimaryReviewFiles": true,
+    "excludePhase1ReviewedCompanies": true,
+    "excludePreviouslyAssignedCompanies": true,
+    "requireExistingReviewInput": true,
+    "preferCurrentFormalManagementPlan": true,
+    "preferCurrentPlanRevisionOrUpdate": true,
+    "allowManagementPolicyOrStrategyWithBoundaryReview": true,
+    "excludeKnownWrongDocumentAndRecoveryQueues": true,
+    "growthPotentialDocumentsEnabled": false,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  },
+  "companies": [
+    {
+      "order": 81,
+      "code": "8801",
+      "name": "三井不動産",
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "relevanceScore": 93,
+      "pageCount": 55,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-04/8801/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanOrPolicySeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 85,
+      "code": "6098",
+      "name": "リクルートホールディングス",
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "relevanceScore": 93,
+      "pageCount": 60,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-04/6098/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanOrPolicySeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 417,
+      "code": "3276",
+      "name": "JPMC",
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "relevanceScore": 93,
+      "pageCount": 16,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-09/wave-02/3276/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanOrPolicySeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    },
+    {
+      "order": 245,
+      "code": "2588",
+      "name": "プレミアムウォーターホールディングス",
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "relevanceScore": 78,
+      "pageCount": 13,
+      "reviewInput": "operations/quality-rebase/phase2/bulk-collection/batch-05/wave-05/2588/primary-review-template.json",
+      "status": "primary_review_assigned_formal_plan_boundary_required",
+      "requiredChecks": [
+        "formalPlanBoundary",
+        "formalPlanOrPolicySeparation",
+        "fullTextReview",
+        "metricsValidation",
+        "capitalPolicyReview",
+        "fieldLevelEvidence"
+      ]
+    }
+  ],
+  "counts": {
+    "assigned": 4,
+    "formalManagementPlanCandidates": 0,
+    "planRevisionOrUpdateCandidates": 0,
+    "growthPotentialDocumentCandidates": 0,
+    "managementPolicyOrStrategyCandidates": 4,
+    "primaryReviewComplete": 0,
+    "independentReviewReady": 0,
+    "deepVerificationApproved": 0
+  },
+  "completionRule": "一次レビュー完了は、資料区分、全文確認、主要数値の年度・単位・範囲、資本政策、項目別証跡を人が確認した場合のみ記録する。"
+}

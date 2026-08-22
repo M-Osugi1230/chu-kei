@@ -1,11 +1,11 @@
 {
   "schemaVersion":"phase2-next-wave-request-v1",
-  "requestedAt":"2026-08-15T12:16:00+09:00",
+  "requestedAt":"2026-08-23T03:00:00+09:00",
   "status":"requested",
-  "targetCount":10,
+  "targetCount":4,
   "includeGrowthDocuments":true,
   "writeChanges":true,
   "automaticApprovalAllowed":false,
   "deepVerificationApproved":0,
-  "purpose":"Wave38一次レビュー10/10完了・Phase2 370/450・Phase1込み420/500へ同期した最新mainから、sparse checkoutでPhase 2一次レビューWave39を安全生成する。既存レビュー正本・既存割当・Phase1対象・既知誤資料を除外し、Growth資料はformal-plan境界確認を必須とする。Wave38で判明した資料誤紐付けを踏まえ、候補資料の会社・資料名・公表時期を一次レビュー前に再確認する。"
+  "purpose":"Phase2のcanonical一次レビュー成果物を会社コード単位で再監査した結果360/450社が完了、残り90社のうち通常一次レビュー候補は4社（2588、3276、6098、8801）である。例外キュー86社を通常Wave生成器へ混入させず、この4社のみをWave39として安全に割り当てる。既存レビュー正本・既存割当・Phase1対象を除外し、会社・資料名・公表時期・formal-plan境界を一次レビュー前に再確認する。automatic fact completion、automatic approval、Deep Verification自動昇格は禁止する。"
 }

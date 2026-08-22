@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "phase2-primary-completion-overlay-v1",
+  "updatedAt": "2026-08-22T19:20:00+09:00",
+  "wave": 39,
+  "batch": 1,
+  "completed": [
+    {
+      "code": "8801",
+      "name": "三井不動産",
+      "classification": "formal_long_term_management_policy_confirmed",
+      "reviewFile": "operations/quality-rebase/phase2/primary-reviews/8801-wave39-primary-review-v1.json",
+      "independentVisualReviewPending": true
+    },
+    {
+      "code": "6098",
+      "name": "リクルートホールディングス",
+      "classification": "investor_presentation_three_pillar_strategy_not_formal_management_plan",
+      "reviewFile": "operations/quality-rebase/phase2/primary-reviews/6098-wave39-primary-review-v1.json",
+      "independentVisualReviewPending": true
+    },
+    {
+      "code": "3276",
+      "name": "JPMC",
+      "classification": "formal_mid_long_term_management_policy_with_rolling_annual_financial_plan",
+      "reviewFile": "operations/quality-rebase/phase2/primary-reviews/3276-wave39-primary-review-v1.json",
+      "independentVisualReviewPending": true
+    },
+    {
+      "code": "2588",
+      "name": "プレミアムウォーターホールディングス",
+      "classification": "management_policy_qa_not_formal_management_plan",
+      "reviewFile": "operations/quality-rebase/phase2/primary-reviews/2588-wave39-primary-review-v1.json",
+      "independentVisualReviewPending": true
+    }
+  ],
+  "counts": {
+    "primaryReviewComplete": 4,
+    "formalManagementPlanConfirmed": 1,
+    "formalPlanEmbedded": 0,
+    "growthDocumentNotFormalManagementPlan": 0,
+    "currentPolicyNotFormalManagementPlan": 3,
+    "sourceCorrectionsApplied": 0,
+    "independentVisualReviewPending": 4
+  },
+  "safety": {
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

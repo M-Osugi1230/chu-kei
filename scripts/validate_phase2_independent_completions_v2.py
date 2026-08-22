@@ -6,6 +6,13 @@ Historical append-only records predate that field. For those records, this gate
 reconstructs collection integrity only when the completion source identity
 (official URL, exact SHA-256, page count, company code) matches a canonical
 bulk-collection record. No source fields are inferred or weakened.
+
+A small number of append-only historical records also predate the current
+``confirmed_after_override`` check-status spelling. The legacy
+``confirmed_with_override`` spelling is accepted only for the ``source_identity``
+check and only after the referenced sourceIdentityOverride itself passes the
+strict base override validator. The historical record is never rewritten and
+no other check gains the legacy status.
 """
 
 from __future__ import annotations
@@ -16,6 +23,9 @@ from typing import Any
 import validate_phase2_independent_completions as base
 
 _ORIGINAL_VALIDATE_COLLECTION_IDENTITY = base.validate_collection_identity
+_ORIGINAL_VALIDATE_COMPLETION = base.validate_completion
+_LEGACY_SOURCE_IDENTITY_STATUS = "confirmed_with_override"
+_CURRENT_OVERRIDE_STATUS = "confirmed_after_override"
 
 
 def collection_matches_source(
@@ -105,8 +115,65 @@ def strict_collection_identity_compat(
     # above. We intentionally do not choose a weaker or approximate source.
 
 
+def strict_completion_status_compat(
+    repo_root: Path,
+    record: dict[str, Any],
+) -> str:
+    """Validate the one legacy override spelling without widening base policy."""
+    code = str(record.get("code", "")).strip()
+    file_value = record.get("file")
+    if not code or not isinstance(file_value, str) or not file_value:
+        # Preserve the base validator's canonical error handling for malformed
+        # aggregate records.
+        return _ORIGINAL_VALIDATE_COMPLETION(repo_root, record)
+
+    completion = base.load_json(repo_root / file_value)
+    checks = completion.get("checks")
+    legacy_checks = (
+        [
+            check
+            for check in checks
+            if isinstance(check, dict)
+            and check.get("status") == _LEGACY_SOURCE_IDENTITY_STATUS
+        ]
+        if isinstance(checks, list)
+        else []
+    )
+    if not legacy_checks:
+        return _ORIGINAL_VALIDATE_COMPLETION(repo_root, record)
+
+    # Legacy status is valid for exactly one historical source-identity check.
+    # Reject any attempt to use it on another check or more than once.
+    if len(legacy_checks) != 1 or legacy_checks[0].get("id") != "source_identity":
+        raise SystemExit(f"legacy override status is only valid for source_identity / {code}")
+    override_file = completion.get("sourceIdentityOverride")
+    if not isinstance(override_file, str) or not override_file:
+        raise SystemExit(f"legacy source_identity status lacks sourceIdentityOverride for {code}")
+
+    # Validate the override before temporarily exposing the legacy spelling to
+    # the base status check. This uses the unchanged strict source fields,
+    # company identity, canonical source matching, and forbidden-flag checks.
+    source = completion.get("source")
+    if not isinstance(source, dict):
+        raise SystemExit(f"source missing for completion {code}")
+    base.validate_source(source, f"completion[{code}].source")
+    base.validate_override(repo_root, completion, code)
+
+    # The base validator has a module-level status set. Widen it only for this
+    # single synchronous validation call, after proving no other check uses the
+    # legacy value, then restore it unconditionally. This avoids changing the
+    # policy for current/new records.
+    original_statuses = base.CONFIRMED_CHECK_STATUSES
+    try:
+        base.CONFIRMED_CHECK_STATUSES = original_statuses | {_LEGACY_SOURCE_IDENTITY_STATUS}
+        return _ORIGINAL_VALIDATE_COMPLETION(repo_root, record)
+    finally:
+        base.CONFIRMED_CHECK_STATUSES = original_statuses
+
+
 def main() -> None:
     base.validate_collection_identity = strict_collection_identity_compat
+    base.validate_completion = strict_completion_status_compat
     base.main()
 
 

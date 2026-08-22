@@ -18,8 +18,10 @@ The historical aggregate status also predates explicit links on resolved-source
 records. Those links are reconstructed in memory only from each completed
 record's audited references. Override-based resolutions still pass the base
 status validator; correction/source-resolution records without an override are
-validated here against their exact canonical source and are not mislabeled as
-overrides. Historical artifacts are never rewritten.
+validated here against their exact canonical source. If a historical resolution
+preserves an earlier source hash, a later completion may supersede it only when
+its explicit collectionIntegrity record independently proves an exact canonical
+collection match. Historical artifacts are never rewritten.
 """
 
 from __future__ import annotations
@@ -170,6 +172,7 @@ def _repair_reference_from_completion(completion: dict[str, Any], code: str) -> 
 
 
 def _validate_resolution_without_override(
+    repo_root: Path,
     completion: dict[str, Any],
     repair: dict[str, Any],
     code: str,
@@ -180,9 +183,29 @@ def _validate_resolution_without_override(
     if not isinstance(source, dict) or not isinstance(canonical, dict):
         raise SystemExit(f"canonical source evidence missing for resolved identity: {code}")
     base.validate_source(source, f"completion[{code}].source")
-    for field in ("officialUrl", "pdfSha256", "pageCount"):
-        if canonical.get(field) != source.get(field):
-            raise SystemExit(f"resolved canonical {field} mismatch for {code}")
+
+    canonical_matches = all(
+        canonical.get(field) == source.get(field)
+        for field in ("officialUrl", "pdfSha256", "pageCount")
+    )
+    if not canonical_matches:
+        # Some historical source-resolution records preserve an earlier fetched
+        # hash even though the final append-only completion was reconciled to the
+        # canonical collection later in the same review. Accept that chronology
+        # only when the completion explicitly carries collectionIntegrity and
+        # the unchanged strict collection validator proves URL + SHA + pages.
+        cross_checks = completion.get("crossChecks")
+        integrity = (
+            cross_checks.get("collectionIntegrity")
+            if isinstance(cross_checks, dict)
+            else None
+        )
+        if not isinstance(integrity, dict):
+            for field in ("officialUrl", "pdfSha256", "pageCount"):
+                if canonical.get(field) != source.get(field):
+                    raise SystemExit(f"resolved canonical {field} mismatch for {code}")
+        _ORIGINAL_VALIDATE_COLLECTION_IDENTITY(repo_root, completion, code)
+
     if repair.get("independentReviewCompletionBlocked") is not False:
         raise SystemExit(f"resolved repair remains blocked: {code}")
     base.assert_no_forbidden_true(repair, f"legacyResolvedRepair[{code}]")
@@ -243,10 +266,7 @@ def strict_status_compat(
             normalized["repairFile"] = repair_file
             normalized_records.append(normalized)
         else:
-            # Corrected/re-canonicalized sources such as 421A have an explicit
-            # source resolution but no override artifact. Validate that exact
-            # resolution here rather than pretending the repair is an override.
-            _validate_resolution_without_override(completion, repair, code)
+            _validate_resolution_without_override(repo_root, completion, repair, code)
             # The v1 base status schema requires overrideFile for every resolved
             # record, so this already-validated legacy non-override record is
             # omitted only from the in-memory v1 view passed to that validator.

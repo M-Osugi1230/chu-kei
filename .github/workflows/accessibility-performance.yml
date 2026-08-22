@@ -35,6 +35,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/validate_frontend_budget_v1.mjs
+            /site/**
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:

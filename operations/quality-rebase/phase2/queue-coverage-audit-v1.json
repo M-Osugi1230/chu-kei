@@ -1,25 +1,24 @@
 {
   "schemaVersion": "phase2-queue-coverage-audit-v1",
-  "generatedAt": "2026-08-15T03:39:19+00:00",
+  "generatedAt": "2026-08-22T19:25:04+09:00",
   "counts": {
     "currentAuditUniqueCompanies": 450,
-    "canonicalPhase2PrimaryReviewArtifacts": 360,
-    "reviewedWithinCurrentAudit": 360,
-    "remainingWithinCurrentAudit": 90,
+    "canonicalPhase2PrimaryReviewArtifacts": 364,
+    "reviewedWithinCurrentAudit": 364,
+    "remainingWithinCurrentAudit": 86,
     "reviewArtifactsOutsideCurrentAudit": 0,
     "phase1OverlapWithinCurrentAudit": 0,
-    "normalPrimaryCandidatesRemaining": 4,
+    "normalPrimaryCandidatesRemaining": 0,
     "exceptionCandidatesRemaining": 86,
     "reviewedByQueue": {
       "manual_source_relevance_check": 5,
-      "primary_review_candidate": 353,
+      "primary_review_candidate": 357,
       "probable_wrong_document": 1,
       "source_recovery_required": 1
     },
     "remainingByQueue": {
       "manual_source_relevance_check": 14,
       "pdf_identification_required": 14,
-      "primary_review_candidate": 4,
       "probable_wrong_document": 7,
       "source_recovery_required": 51
     },
@@ -32,52 +31,7 @@
       "source_recovery_required": 52
     }
   },
-  "normalPrimaryCandidatesRemaining": [
-    {
-      "code": "2588",
-      "name": "プレミアムウォーターホールディングス",
-      "queue": "primary_review_candidate",
-      "relevanceScore": 78,
-      "documentTypeCandidate": "management_policy_or_strategy",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/25880/140120260702587009.pdf",
-      "phase1Overlap": false,
-      "previousWaveAssignments": [],
-      "requiredAction": "complete_primary_review_from_existing_review_input"
-    },
-    {
-      "code": "3276",
-      "name": "JPMC",
-      "queue": "primary_review_candidate",
-      "relevanceScore": 93,
-      "documentTypeCandidate": "management_policy_or_strategy",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/32760/140120260212557447.pdf",
-      "phase1Overlap": false,
-      "previousWaveAssignments": [],
-      "requiredAction": "complete_primary_review_from_existing_review_input"
-    },
-    {
-      "code": "6098",
-      "name": "リクルートホールディングス",
-      "queue": "primary_review_candidate",
-      "relevanceScore": 93,
-      "documentTypeCandidate": "management_policy_or_strategy",
-      "sourceUrl": "https://recruit-holdings.com/ja/",
-      "phase1Overlap": false,
-      "previousWaveAssignments": [],
-      "requiredAction": "complete_primary_review_from_existing_review_input"
-    },
-    {
-      "code": "8801",
-      "name": "三井不動産",
-      "queue": "primary_review_candidate",
-      "relevanceScore": 93,
-      "documentTypeCandidate": "management_policy_or_strategy",
-      "sourceUrl": "https://www.mitsuifudosan.co.jp/corporate/news/2024/0411/",
-      "phase1Overlap": false,
-      "previousWaveAssignments": [],
-      "requiredAction": "complete_primary_review_from_existing_review_input"
-    }
-  ],
+  "normalPrimaryCandidatesRemaining": [],
   "phase1OverlapWithinCurrentAudit": [],
   "reviewArtifactsOutsideCurrentAudit": [],
   "policy": {

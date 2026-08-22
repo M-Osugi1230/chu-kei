@@ -1,10 +1,10 @@
 {
-  "schemaVersion": "phase2-remaining-exception-request-v1",
-  "requestedAt": "2026-08-23T03:08:00+09:00",
-  "status": "requested",
-  "writeChanges": true,
-  "automaticFactCompletionAllowed": false,
-  "automaticApprovalAllowed": false,
-  "deepVerificationApproved": 0,
-  "purpose": "Wave39で通常一次レビュー候補4社（2588、3276、6098、8801）のcanonical一次レビューを完了し、Phase2 canonical成果物を364/450へ更新した状態から例外台帳を再同期する。現行source-relevance-auditの例外母集団93社のうち既レビュー7社と未レビュー86社を会社コード単位で再突合し、manual_source_relevance_check、pdf_identification_required、probable_wrong_document、source_recovery_requiredの実残件を確定する。通常候補を例外キューへ混入させず、canonical一次レビュー成果物がない会社を完了扱いしない。automatic fact completion、automatic approval、Deep Verification自動昇格は禁止する。"
+  "schemaVersion":"phase2-remaining-exception-request-v1",
+  "requestedAt":"2026-08-23T03:32:00+09:00",
+  "status":"requested",
+  "writeChanges":true,
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":0,
+  "purpose":"Phase2例外復旧Batch1でmanual_source_relevance_check残14社のうち6社（4911、1377、1847、6817、2109、4235）の正式な複数年度計画境界を人手確認し、canonical一次レビュー成果物を364社から370社へ増加させた。現行source-relevance-auditの例外母集団93社とcanonical成果物を会社コード単位で再突合し、残例外80社、manual_source_relevance_check残8社、pdf_identification_required14社、probable_wrong_document7社、source_recovery_required51社を再計算する。automatic fact completion、automatic approval、Deep Verification自動昇格は禁止する。"
 }

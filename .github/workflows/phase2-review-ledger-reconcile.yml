@@ -6,14 +6,23 @@ on:
       - 'agent/phase2-*'
     paths:
       - 'operations/quality-rebase/phase2/reviews/**'
+      - 'operations/quality-rebase/phase2/primary-reviews/**'
       - 'operations/quality-rebase/phase2/independent/**'
       - 'operations/quality-rebase/phase2/primary-review-wave*-v1.json'
-      - 'scripts/reconcile_phase2_review_ledgers.py'
+      - 'operations/quality-rebase/phase2/review-state-overlays/**'
+      - 'operations/quality-rebase/phase2/effective-status-v1.json'
+      - 'operations/quality-rebase/phase2/completion-ledger-audit-v1.json'
+      - 'operations/quality-rebase/phase2/queue-coverage-audit-v1.json'
+      - 'scripts/validate_phase2_primary_review_ledger_v1.py'
+      - 'scripts/validate_phase2_primary_review_ledger_v2.py'
+      - 'scripts/audit_phase2_completion_ledger.py'
+      - 'scripts/audit_phase2_queue_coverage.py'
+      - 'scripts/build_phase2_remaining_exception_queue.py'
       - '.github/workflows/phase2-review-ledger-reconcile.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: phase2-review-ledger-reconcile-${{ github.ref }}
@@ -26,45 +35,24 @@ jobs:
     steps:
       - name: Checkout current working branch
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
-          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Rebase on latest remote branch
-        run: git pull --rebase origin "${{ github.ref_name }}"
+      - name: Check canonical validator syntax
+        run: python -m py_compile scripts/validate_phase2_primary_review_ledger_v1.py scripts/validate_phase2_primary_review_ledger_v2.py
 
-      - name: Reconcile explicit review records
-        run: python scripts/reconcile_phase2_review_ledgers.py
+      - name: Validate canonical append-only review ledger
+        run: python scripts/validate_phase2_primary_review_ledger_v2.py --repo-root .
 
-      - name: Validate all Phase 2 waves
-        shell: bash
+      - name: Audit completion and remaining queue reconciliation
         run: |
           set -euo pipefail
-          for wave in operations/quality-rebase/phase2/primary-review-wave*-v1.json; do
-            python scripts/validate_phase2_primary_review_wave.py \
-              --wave "$wave" \
-              --status operations/quality-rebase/phase2/current-status-v1.json \
-              --repo-root .
-          done
+          python scripts/audit_phase2_completion_ledger.py
+          python scripts/audit_phase2_queue_coverage.py
+          python scripts/build_phase2_remaining_exception_queue.py
 
-      - name: Commit reconciled ledgers
-        run: |
-          set -euo pipefail
-          if git diff --quiet -- \
-            operations/quality-rebase/phase2/primary-review-wave*-v1.json \
-            operations/quality-rebase/phase2/current-status-v1.json; then
-            echo 'No ledger changes.'
-            exit 0
-          fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add \
-            operations/quality-rebase/phase2/primary-review-wave*-v1.json \
-            operations/quality-rebase/phase2/current-status-v1.json
-          git commit -m 'quality: explicit review recordsからPhase 2台帳を同期'
-          git push origin "HEAD:${{ github.ref_name }}"
+      - name: Confirm validation is read-only
+        run: git diff --exit-code

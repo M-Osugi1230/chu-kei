@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """Rerun collection only for unresolved Phase 2 source-recovery companies.
 
-This recovery utility is intentionally narrow:
+Safety model:
 - target membership comes from the current source-recovery audit queue;
 - companies that already have canonical primary-review artifacts are skipped;
-- only the target company's bulk-collection directory is replaced;
-- wave/batch/full-rollout summaries are rebuilt after collection;
-- no fact review, quality approval, or Deep Verification approval is performed.
+- recovered packets are written to an isolated recovery directory and NEVER
+  replace the historical bulk-collection packets;
+- the script only collects source evidence. It never completes a human review,
+  grants quality approval, or grants Deep Verification approval;
+- network/HTTP/DNS failures remain explicit in the recovery report for manual
+  source repair.
 
-The main use case is recovering source packets that previously failed because the
-runtime lacked PDF crypto support. Network/404/403 failures remain visible in the
-recovery report for later manual source repair.
+The primary use case is recovering packets that previously failed because the
+runtime lacked PDF AES/crypto support.
 """
 
 from __future__ import annotations
@@ -32,7 +34,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PHASE2 = ROOT / "operations" / "quality-rebase" / "phase2"
 QUEUE_PATH = ROOT / "operations" / "quality-rebase" / "phase2-queue-500-v1.json"
 SOURCE_RECOVERY_QUEUE = PHASE2 / "source-relevance-audit" / "source-recovery-required.json"
-BULK_ROOT = PHASE2 / "bulk-collection"
+RECOVERY_ROOT = PHASE2 / "source-recovery-collection-v1"
 REPORT_PATH = PHASE2 / "source-repairs" / "source-recovery-rerun-v1.json"
 PRIMARY_REVIEW_DIRS = [PHASE2 / "primary-reviews", PHASE2 / "reviews"]
 CODE_PATTERN = re.compile(r"^(?:\d{4}|\d{3}[A-Z])$")
@@ -53,7 +55,7 @@ def canonical_review_codes() -> set[str]:
     for directory in PRIMARY_REVIEW_DIRS:
         if not directory.exists():
             continue
-        for path in directory.glob("*.json"):
+        for path in sorted(directory.glob("*.json")):
             match = REVIEW_FILE_PATTERN.fullmatch(path.name)
             filename_code = match.group("code") if match else None
             json_code = None
@@ -74,22 +76,25 @@ def canonical_review_codes() -> set[str]:
     return reviewed
 
 
-def source_recovery_codes() -> list[str]:
+def source_recovery_rows() -> list[dict[str, Any]]:
     payload = read_json(SOURCE_RECOVERY_QUEUE)
     companies = payload.get("companies") if isinstance(payload, dict) else None
     if not isinstance(companies, list):
         raise SystemExit(f"source recovery queue has no companies list: {SOURCE_RECOVERY_QUEUE}")
-    codes: list[str] = []
+
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
     for row in companies:
         if not isinstance(row, dict):
             continue
         code = normalize_code(row.get("code"))
         if code is None:
             raise SystemExit(f"invalid source recovery company code: {row.get('code')!r}")
-        codes.append(code)
-    if len(codes) != len(set(codes)):
-        raise SystemExit("duplicate company code in source recovery queue")
-    return codes
+        if code in seen:
+            raise SystemExit(f"duplicate company code in source recovery queue: {code}")
+        seen.add(code)
+        rows.append({**row, "code": code})
+    return rows
 
 
 def company_locations() -> dict[str, dict[str, Any]]:
@@ -120,116 +125,11 @@ def company_locations() -> dict[str, dict[str, Any]]:
     return result
 
 
-def rebuild_wave_summary(batch_no: int, wave_no: int, locations: dict[str, dict[str, Any]]) -> None:
-    wave_dir = BULK_ROOT / f"batch-{batch_no:02d}" / f"wave-{wave_no:02d}"
-    rows = sorted(
-        (
-            location
-            for location in locations.values()
-            if location["batch"] == batch_no and location["wave"] == wave_no
-        ),
-        key=lambda row: row["order"],
-    )
-    if len(rows) != 10:
-        raise SystemExit(f"wave mapping incomplete: batch={batch_no} wave={wave_no} rows={len(rows)}")
-
-    results: list[dict[str, Any]] = []
-    for location in rows:
-        code = str(location["company"]["code"])
-        collection_path = wave_dir / code / "collection.json"
-        if not collection_path.exists():
-            raise SystemExit(f"missing collection while rebuilding wave summary: {collection_path}")
-        results.append(read_json(collection_path))
-
-    counts = Counter(str(row.get("status")) for row in results)
-    summary = {
-        "schemaVersion": "phase2-bulk-collection-wave-v1",
-        "batch": batch_no,
-        "wave": wave_no,
-        "orders": f"{rows[0]['order']}-{rows[-1]['order']}",
-        "targetCompanies": 10,
-        "processedCompanies": len(results),
-        "counts": dict(counts),
-        "automaticFactCompletionAllowed": False,
-        "automaticApprovalAllowed": False,
-        "deepVerificationApproved": 0,
-        "companies": [
-            {
-                "order": row["order"],
-                "code": row["company"]["code"],
-                "name": row["company"]["name"],
-                "status": row.get("status"),
-                "resolvedPdfUrl": row.get("resolvedPdfUrl"),
-                "pageCount": row.get("pageCount"),
-                "documentTypeCandidate": row.get("documentTypeCandidate"),
-            }
-            for row in results
-        ],
-    }
-    write_json(wave_dir / "summary.json", summary)
-
-
-def rebuild_batch_summary(batch_no: int) -> None:
-    batch_dir = BULK_ROOT / f"batch-{batch_no:02d}"
-    summaries = [read_json(path) for path in sorted(batch_dir.glob("wave-*/summary.json"))]
-    if len(summaries) != 5:
-        raise SystemExit(f"expected 5 wave summaries in batch {batch_no}, found {len(summaries)}")
-    counts: Counter[str] = Counter()
-    companies: list[dict[str, Any]] = []
-    for summary in summaries:
-        counts.update(summary.get("counts", {}))
-        companies.extend(summary.get("companies", []))
-    report = {
-        "schemaVersion": "phase2-bulk-collection-batch-v1",
-        "batch": batch_no,
-        "wavesExpected": 5,
-        "wavesCollected": 5,
-        "targetCompanies": 50,
-        "processedCompanies": len(companies),
-        "uniqueCompanies": len({str(row.get('code')) for row in companies}),
-        "counts": dict(counts),
-        "automaticFactCompletionAllowed": False,
-        "automaticApprovalAllowed": False,
-        "deepVerificationApproved": 0,
-        "companies": companies,
-    }
-    write_json(batch_dir / "summary.json", report)
-
-
-def rebuild_full_rollout_summary() -> None:
-    batches: list[dict[str, Any]] = []
-    all_companies: list[dict[str, Any]] = []
-    counts: Counter[str] = Counter()
-    for batch_no in range(2, 11):
-        path = BULK_ROOT / f"batch-{batch_no:02d}" / "summary.json"
-        if not path.exists():
-            batches.append({"batch": batch_no, "status": "artifact_missing"})
-            continue
-        summary = read_json(path)
-        batches.append(
-            {
-                "batch": batch_no,
-                "status": "collected",
-                "processedCompanies": summary.get("processedCompanies"),
-                "counts": summary.get("counts", {}),
-            }
-        )
-        all_companies.extend(summary.get("companies", []))
-        counts.update(summary.get("counts", {}))
-    report = {
-        "schemaVersion": "phase2-full-rollout-collection-v1",
-        "targetAdditionalCompanies": 450,
-        "collectedCompanies": len(all_companies),
-        "uniqueCompanies": len({str(row.get('code')) for row in all_companies}),
-        "batchesExpected": 9,
-        "batchesCollected": sum(1 for row in batches if row["status"] == "collected"),
-        "counts": dict(counts),
-        "automaticFactCompletionAllowed": False,
-        "automaticApprovalAllowed": False,
-        "deepVerificationApproved": 0,
-        "batches": batches,
-    }
-    write_json(BULK_ROOT / "full-rollout-summary.json", report)
+def safe_clear_target(code: str) -> Path:
+    target = RECOVERY_ROOT / code
+    if target.exists():
+        shutil.rmtree(target)
+    return target
 
 
 def main() -> int:
@@ -243,70 +143,84 @@ def main() -> int:
     args = parser.parse_args()
 
     reviewed = canonical_review_codes()
-    audit_codes = source_recovery_codes()
-    unresolved_codes = [code for code in audit_codes if code not in reviewed]
+    audit_rows = source_recovery_rows()
+    unresolved_rows = [row for row in audit_rows if row["code"] not in reviewed]
     if args.limit > 0:
-        unresolved_codes = unresolved_codes[: args.limit]
+        unresolved_rows = unresolved_rows[: args.limit]
 
     locations = company_locations()
-    missing_from_queue = [code for code in unresolved_codes if code not in locations]
+    missing_from_queue = [row["code"] for row in unresolved_rows if row["code"] not in locations]
     if missing_from_queue:
         raise SystemExit(f"source recovery companies missing from Phase 2 queue: {missing_from_queue}")
 
+    RECOVERY_ROOT.mkdir(parents=True, exist_ok=True)
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "ja,en;q=0.8"})
 
     results: list[dict[str, Any]] = []
-    affected_waves: set[tuple[int, int]] = set()
-    affected_batches: set[int] = set()
-
-    for code in unresolved_codes:
+    for audit_row in unresolved_rows:
+        code = audit_row["code"]
         location = locations[code]
-        batch_no = location["batch"]
-        wave_no = location["wave"]
         company = location["company"]
         order = location["order"]
-        wave_dir = BULK_ROOT / f"batch-{batch_no:02d}" / f"wave-{wave_no:02d}"
-        company_dir = wave_dir / code
 
-        if company_dir.exists():
-            shutil.rmtree(company_dir)
+        safe_clear_target(code)
+        # process_company writes to output_dir / code, therefore RECOVERY_ROOT is
+        # the isolated output directory for every recovery target.
+        result = process_company(session, company, order, RECOVERY_ROOT)
+        recovery_path = RECOVERY_ROOT / code
 
-        result = process_company(session, company, order, wave_dir)
-        results.append(
-            {
-                "code": code,
-                "name": company.get("name"),
-                "batch": batch_no,
-                "wave": wave_no,
-                "order": order,
-                "status": result.get("status"),
-                "resolvedPdfUrl": result.get("resolvedPdfUrl"),
-                "documentTypeCandidate": result.get("documentTypeCandidate"),
-                "pageCount": result.get("pageCount"),
-                "errorType": result.get("errorType"),
-                "error": result.get("error"),
-            }
-        )
-        affected_waves.add((batch_no, wave_no))
-        affected_batches.add(batch_no)
-        print(json.dumps(results[-1], ensure_ascii=False), flush=True)
+        report_row = {
+            "code": code,
+            "name": company.get("name"),
+            "batch": location["batch"],
+            "wave": location["wave"],
+            "order": order,
+            "previousErrorType": audit_row.get("errorType"),
+            "previousError": audit_row.get("error"),
+            "status": result.get("status"),
+            "resolvedPageUrl": result.get("resolvedPageUrl"),
+            "resolvedPdfUrl": result.get("resolvedPdfUrl"),
+            "documentTypeCandidate": result.get("documentTypeCandidate"),
+            "pageCount": result.get("pageCount"),
+            "textCharacters": result.get("textCharacters"),
+            "pdfSha256": result.get("pdfSha256"),
+            "errorType": result.get("errorType"),
+            "error": result.get("error"),
+            "recoveryDirectory": str(recovery_path.relative_to(ROOT)),
+            "requiresPrimaryHumanReview": result.get("status") == "collection_complete_primary_human_review_pending",
+            "automaticFactCompletionAllowed": False,
+            "automaticApprovalAllowed": False,
+            "deepVerificationApproved": False,
+        }
+        results.append(report_row)
+        print(json.dumps(report_row, ensure_ascii=False), flush=True)
 
-    for batch_no, wave_no in sorted(affected_waves):
-        rebuild_wave_summary(batch_no, wave_no, locations)
-    for batch_no in sorted(affected_batches):
-        rebuild_batch_summary(batch_no)
-    rebuild_full_rollout_summary()
+    status_counts = Counter(str(row["status"]) for row in results)
+    previous_error_counts = Counter(str(row.get("previousErrorType")) for row in results)
+    current_error_counts = Counter(
+        str(row.get("errorType")) for row in results if row.get("status") == "collection_failed"
+    )
+    successful_codes = [
+        row["code"]
+        for row in results
+        if row["status"] == "collection_complete_primary_human_review_pending"
+    ]
+    unresolved_codes = [row["code"] for row in results if row["status"] != "collection_complete_primary_human_review_pending"]
 
-    status_counts = Counter(row["status"] for row in results)
     report = {
         "schemaVersion": "phase2-source-recovery-rerun-v1",
         "generatedAt": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
         "sourceQueue": str(SOURCE_RECOVERY_QUEUE.relative_to(ROOT)),
-        "auditQueueCompanies": len(audit_codes),
-        "alreadyReviewedSkipped": len([code for code in audit_codes if code in reviewed]),
+        "recoveryRoot": str(RECOVERY_ROOT.relative_to(ROOT)),
+        "auditQueueCompanies": len(audit_rows),
+        "alreadyReviewedSkipped": len([row for row in audit_rows if row["code"] in reviewed]),
         "targetsAttempted": len(results),
         "counts": dict(status_counts),
+        "previousErrorTypeCounts": dict(previous_error_counts),
+        "currentFailedErrorTypeCounts": dict(current_error_counts),
+        "successfulRecoveryCodes": successful_codes,
+        "stillUnresolvedCodes": unresolved_codes,
         "automaticFactCompletionAllowed": False,
         "automaticApprovalAllowed": False,
         "deepVerificationApproved": False,

@@ -7,9 +7,15 @@ on:
       - 'agent/**'
     paths:
       - 'operations/quality-rebase/phase2/source-recovery-rerun-request.json'
+      - 'scripts/phase2_source_recovery_rerun_v1.py'
+      - '.github/workflows/phase2-source-recovery-rerun.yml'
 
 permissions:
   contents: write
+
+concurrency:
+  group: phase2-source-recovery-${{ github.ref }}
+  cancel-in-progress: false
 
 env:
   TARGET_BRANCH: ${{ github.ref_name }}
@@ -19,10 +25,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout recovery inputs
+        uses: actions/checkout@v4
         with:
           ref: ${{ env.TARGET_BRANCH }}
-          fetch-depth: 0
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/phase2_bulk_collect_v1.py
+            /scripts/phase2_source_recovery_rerun_v1.py
+            /operations/quality-rebase/phase2-queue-500-v1.json
+            /operations/quality-rebase/phase2/source-recovery-rerun-request.json
+            /operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json
+            /operations/quality-rebase/phase2/primary-reviews/*.json
+            /operations/quality-rebase/phase2/reviews/*.json
+            /operations/quality-rebase/phase2/source-recovery-collection-v1/
+            /operations/quality-rebase/phase2/source-repairs/source-recovery-rerun-v1.json
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -58,22 +76,28 @@ jobs:
           assert report['automaticFactCompletionAllowed'] is False
           assert report['automaticApprovalAllowed'] is False
           assert report['deepVerificationApproved'] is False
-          for row in report['results']:
-              code = str(row['code'])
-              if not code:
-                  raise SystemExit('empty company code in recovery report')
-          print(json.dumps(report['counts'], ensure_ascii=False, indent=2))
+          assert report['auditQueueCompanies'] == 52
+          assert report['alreadyReviewedSkipped'] >= 1
+          assert report['targetsAttempted'] + report['alreadyReviewedSkipped'] == 52
+          print(json.dumps({
+              'counts': report['counts'],
+              'successfulRecoveryCodes': report['successfulRecoveryCodes'],
+              'stillUnresolvedCodes': report['stillUnresolvedCodes'],
+          }, ensure_ascii=False, indent=2))
           PY
-      - name: Commit recovered source packets
+      - name: Commit isolated recovery packets
         shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add operations/quality-rebase/phase2/bulk-collection operations/quality-rebase/phase2/source-repairs/source-recovery-rerun-v1.json
+          git add \
+            operations/quality-rebase/phase2/source-recovery-collection-v1 \
+            operations/quality-rebase/phase2/source-repairs/source-recovery-rerun-v1.json
           if git diff --cached --quiet; then
             echo 'No source recovery changes.'
           else
-            git commit -m 'quality: rerun unresolved Phase2 source recovery with PDF crypto support'
+            git commit -m 'quality: collect unresolved Phase2 recovery sources with PDF crypto support'
             git pull --rebase origin "$TARGET_BRANCH"
             git push origin "HEAD:$TARGET_BRANCH"
           fi

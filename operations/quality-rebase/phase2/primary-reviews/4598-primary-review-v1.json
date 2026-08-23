@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "4598",
+    "name": "Delta-Fly Pharma",
+    "market": "Growth",
+    "industry": "医薬品"
+  },
+  "document": {
+    "title": "事業計画及び成長可能性に関する事項の開示",
+    "publishedDate": "2026-06-22",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/45980/140120260622575865.pdf",
+    "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/45980/140120260622575865.pdf",
+    "pdfSha256": "5b7f89019344cd46c064cace5e15fb5605216b2b7b0fb36996ad0a27367e0ae8",
+    "pageCount": 41,
+    "documentType": "growth_potential_disclosure_with_pipeline_strategy",
+    "formalPlanConfirmed": false,
+    "fullTextHumanReviewComplete": true
+  },
+  "structuredAnalysis": {
+    "period": "2027年3月期単年度予想および2031年3月期以降までの開発パイプライン工程",
+    "summary": "抗がん剤パイプラインを中心に臨床開発、ライセンス活動、機動的な資金調達を進める成長戦略。複数年の開発工程は示すものの、会社全体の複数年度財務目標を伴う正式な中期経営計画ではない。",
+    "strategyThemes": [
+      "DFP-10917を中心とする主力パイプラインへの重点投資",
+      "後期臨床試験・承認申請に向けた開発推進",
+      "海外製薬企業へのライセンス活動強化",
+      "機動的な資金調達による研究開発資金確保",
+      "研究開発体制・知財戦略の強化"
+    ],
+    "financialTargets": [
+      {"fiscalYear": "2027年3月期", "metric": "事業費用", "value": 1330, "unit": "百万円", "classification": "single_year_guidance_not_multi_year_plan"},
+      {"fiscalYear": "2027年3月期", "metric": "研究開発費", "value": 1070, "unit": "百万円", "classification": "single_year_guidance_not_multi_year_plan"},
+      {"fiscalYear": "2027年3月期", "metric": "営業利益", "value": -1330, "unit": "百万円", "classification": "single_year_guidance_not_multi_year_plan"}
+    ],
+    "capitalPolicy": "調達資金を主力パイプラインの臨床開発、承認申請・後期試験、開発体制強化、特許・知財戦略へ優先配分する。",
+    "importantDefinitions": [
+      "開発スケジュールは臨床・承認プロセスの工程であり、会社全体の固定された複数年度業績計画とは扱わない。",
+      "上市後の最大年間製品販売予測はパイプライン価値の試算であり、会社の連結売上高目標ではない。"
+    ]
+  },
+  "formalPlanBoundary": {
+    "status": "growth_potential_pipeline_strategy_not_formal_management_plan",
+    "reason": "資料は単年度の事業費用予想と2031年以降までの医薬品開発工程を示すが、会社全体の複数年度財務終端目標や正式な中期経営計画名称を持たないため。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": false,
+    "formalPlanBoundaryValidated": true,
+    "currentAndLongTermSeparated": true,
+    "forecastActualSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "recoveredCollection": "operations/quality-rebase/phase2/source-recovery-collection-v1/4598/collection.json",
+    "sourceText": "operations/quality-rebase/phase2/source-recovery-collection-v1/4598/full-text.txt",
+    "singleYearPlanPage": 34,
+    "capitalAllocationPage": 35,
+    "pipelineSchedulePage": 37
+  },
+  "review": {
+    "status": "primary_review_complete_growth_disclosure_formal_plan_not_confirmed_independent_visual_review_pending",
+    "reviewedAt": "2026-08-23T19:56:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": ["ChatGPT primary review 2026-08-23"]
+  }
+}

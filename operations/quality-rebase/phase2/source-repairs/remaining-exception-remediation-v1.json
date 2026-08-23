@@ -1,6 +1,6 @@
 {
   "schemaVersion": "phase2-remaining-exception-remediation-v1",
-  "generatedAt": "2026-08-23T04:22:45+00:00",
+  "generatedAt": "2026-08-23T04:25:33+00:00",
   "sourceOfTruth": {
     "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/summary.json",
     "oldSourceRelevanceV2IsHistoricalOnly": true,
@@ -9,23 +9,23 @@
   },
   "counts": {
     "currentAuditExceptions": 93,
-    "reviewedExceptionCompanies": 46,
-    "remainingExceptionCompanies": 47,
+    "reviewedExceptionCompanies": 51,
+    "remainingExceptionCompanies": 42,
     "exceptionAssignedWithoutPrimaryReviewArtifact": 0,
-    "uniquePrimaryReviewArtifacts": 403,
+    "uniquePrimaryReviewArtifacts": 408,
     "uniqueHistoricallyAssignedCompanies": 361,
     "assignedCompaniesWithReviewArtifact": 361,
     "assignedCompaniesWithoutReviewArtifact": 0,
     "effectiveStatusDeclaredPhase2PrimaryReviewComplete": 404,
-    "declaredMinusUniqueReviewArtifactGap": 1,
+    "declaredMinusUniqueReviewArtifactGap": -4,
     "remainingByQueue": {
-      "source_recovery_required": 47
+      "source_recovery_required": 42
     },
     "reviewedByQueue": {
       "manual_source_relevance_check": 19,
       "pdf_identification_required": 14,
       "probable_wrong_document": 8,
-      "source_recovery_required": 5
+      "source_recovery_required": 10
     }
   },
   "exceptionAssignedWithoutPrimaryReviewArtifact": [],
@@ -649,6 +649,26 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "4523",
+      "name": "エーザイ",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.eisai.co.jp/sustainability/management/strategy/index.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "403 Client Error: Forbidden for url: https://www.eisai.co.jp/sustainability/management/strategy/index.html",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4523-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "4911",
       "name": "資生堂",
       "queue": "manual_source_relevance_check",
@@ -957,6 +977,26 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "8058",
+      "name": "三菱商事",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.mitsubishicorp.com/jp/ja/news/release/2025/20250403001.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "403 Client Error: Forbidden for url: https://www.mitsubishicorp.com/jp/ja/news/release/2025/20250403001.html",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8058-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "8237",
       "name": "松屋",
       "queue": "manual_source_relevance_check",
@@ -1141,6 +1181,46 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "9699",
+      "name": "ニシオホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.nishio-holdings.co.jp/ir/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "ConnectionError",
+      "error": "HTTPSConnectionPool(host='www.nishio-holdings.co.jp', port=443): Max retries exceeded with url: /ir/ (Caused by NameResolutionError(\"HTTPSConnection(host='www.nishio-holdings.co.jp', port=443): Failed to resolve 'www.nishio-holdings.co.jp' ([Errno -2] Name or service not known)\"))",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9699-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "9766",
+      "name": "コナミグループ",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.konami.com/corporate/ja/ir/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "404 Client Error: Not Found for url: https://www.konami.com/corporate/ja/ir/",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9766-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "9831",
       "name": "ヤマダホールディングス",
       "queue": "pdf_identification_required",
@@ -1156,6 +1236,26 @@
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
       "reviewFiles": [
         "operations/quality-rebase/phase2/primary-reviews/9831-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "9843",
+      "name": "ニトリホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.nitorihd.co.jp/division/strategy.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "ReadTimeout",
+      "error": "HTTPSConnectionPool(host='www.nitorihd.co.jp', port=443): Read timed out. (read timeout=45)",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9843-primary-review-v1.json"
       ],
       "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
@@ -1626,28 +1726,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "4523",
-      "name": "エーザイ",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.eisai.co.jp/sustainability/management/strategy/index.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "403 Client Error: Forbidden for url: https://www.eisai.co.jp/sustainability/management/strategy/index.html",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "4598",
       "name": "Delta-Fly Pharma",
       "queue": "source_recovery_required",
@@ -2044,28 +2122,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "8058",
-      "name": "三菱商事",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.mitsubishicorp.com/jp/ja/news/release/2025/20250403001.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "403 Client Error: Forbidden for url: https://www.mitsubishicorp.com/jp/ja/news/release/2025/20250403001.html",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "8439",
       "name": "東京センチュリー",
       "queue": "source_recovery_required",
@@ -2166,72 +2222,6 @@
       "blockers": [],
       "errorType": "DependencyError",
       "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "9699",
-      "name": "ニシオホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.nishio-holdings.co.jp/ir/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "ConnectionError",
-      "error": "HTTPSConnectionPool(host='www.nishio-holdings.co.jp', port=443): Max retries exceeded with url: /ir/ (Caused by NameResolutionError(\"HTTPSConnection(host='www.nishio-holdings.co.jp', port=443): Failed to resolve 'www.nishio-holdings.co.jp' ([Errno -2] Name or service not known)\"))",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "9766",
-      "name": "コナミグループ",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.konami.com/corporate/ja/ir/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "404 Client Error: Not Found for url: https://www.konami.com/corporate/ja/ir/",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "9843",
-      "name": "ニトリホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.nitorihd.co.jp/division/strategy.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "ReadTimeout",
-      "error": "HTTPSConnectionPool(host='www.nitorihd.co.jp', port=443): Read timed out. (read timeout=45)",
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
       "priority": 100,
       "requiredAction": "recover_or_replace_official_source",

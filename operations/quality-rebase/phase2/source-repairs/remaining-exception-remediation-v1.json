@@ -1,6 +1,6 @@
 {
   "schemaVersion": "phase2-remaining-exception-remediation-v1",
-  "generatedAt": "2026-08-23T04:25:33+00:00",
+  "generatedAt": "2026-08-23T04:31:34+00:00",
   "sourceOfTruth": {
     "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/summary.json",
     "oldSourceRelevanceV2IsHistoricalOnly": true,
@@ -9,23 +9,23 @@
   },
   "counts": {
     "currentAuditExceptions": 93,
-    "reviewedExceptionCompanies": 51,
-    "remainingExceptionCompanies": 42,
+    "reviewedExceptionCompanies": 56,
+    "remainingExceptionCompanies": 37,
     "exceptionAssignedWithoutPrimaryReviewArtifact": 0,
-    "uniquePrimaryReviewArtifacts": 408,
+    "uniquePrimaryReviewArtifacts": 413,
     "uniqueHistoricallyAssignedCompanies": 361,
     "assignedCompaniesWithReviewArtifact": 361,
     "assignedCompaniesWithoutReviewArtifact": 0,
-    "effectiveStatusDeclaredPhase2PrimaryReviewComplete": 404,
-    "declaredMinusUniqueReviewArtifactGap": -4,
+    "effectiveStatusDeclaredPhase2PrimaryReviewComplete": 414,
+    "declaredMinusUniqueReviewArtifactGap": 1,
     "remainingByQueue": {
-      "source_recovery_required": 42
+      "source_recovery_required": 37
     },
     "reviewedByQueue": {
       "manual_source_relevance_check": 19,
       "pdf_identification_required": 14,
       "probable_wrong_document": 8,
-      "source_recovery_required": 10
+      "source_recovery_required": 15
     }
   },
   "exceptionAssignedWithoutPrimaryReviewArtifact": [],
@@ -195,6 +195,26 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "2321",
+      "name": "ソフトフロントホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.softfront.co.jp/ir-news/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/2321-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "2326",
       "name": "デジタルアーツ",
       "queue": "pdf_identification_required",
@@ -272,6 +292,26 @@
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
       "reviewFiles": [
         "operations/quality-rebase/phase2/primary-reviews/280A-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "3151",
+      "name": "バイタルケーエスケー・ホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.vitalksk.co.jp/ir/management/plan2027/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/3151-primary-review-v1.json"
       ],
       "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
@@ -814,6 +854,26 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "6501",
+      "name": "日立製作所",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.hitachi.co.jp/New/cnews/month/2025/04/0428/f_0428pre.pdf",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6501-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "6579",
       "name": "ログリー",
       "queue": "manual_source_relevance_check",
@@ -940,6 +1000,26 @@
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
       "reviewFiles": [
         "operations/quality-rebase/phase2/primary-reviews/7181-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "7752",
+      "name": "リコー",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://jp.ricoh.com/-/media/Ricoh/Sites/jp_ricoh/IR/events/2025/pdf/r07_keiei.pdf",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/7752-primary-review-v1.json"
       ],
       "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
@@ -1108,6 +1188,26 @@
       "previousWaveAssignments": [
         14
       ],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "8591",
+      "name": "オリックス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.orix.co.jp/grp/company/ir/growth_strategy/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8591-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
     },
     {
@@ -1396,28 +1496,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "2321",
-      "name": "ソフトフロントホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.softfront.co.jp/ir-news/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "2359",
       "name": "コア",
       "queue": "source_recovery_required",
@@ -1534,28 +1612,6 @@
       "relevanceScore": null,
       "documentTypeCandidate": null,
       "sourceUrl": "https://www.kioxia-holdings.com/ja-jp/ir/library/event.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "3151",
-      "name": "バイタルケーエスケー・ホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.vitalksk.co.jp/ir/management/plan2027/",
       "resolvedPdfUrl": null,
       "collectionStatus": "collection_failed",
       "reasons": [],
@@ -1946,28 +2002,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "6501",
-      "name": "日立製作所",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.hitachi.co.jp/New/cnews/month/2025/04/0428/f_0428pre.pdf",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "6523",
       "name": "PHCホールディングス",
       "queue": "source_recovery_required",
@@ -2056,28 +2090,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "7752",
-      "name": "リコー",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://jp.ricoh.com/-/media/Ricoh/Sites/jp_ricoh/IR/events/2025/pdf/r07_keiei.pdf",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "7994",
       "name": "オカムラ",
       "queue": "source_recovery_required",
@@ -2150,28 +2162,6 @@
       "relevanceScore": null,
       "documentTypeCandidate": null,
       "sourceUrl": "https://www2.jpx.co.jp/disc/85240/140120260323586923.pdf",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "8591",
-      "name": "オリックス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.orix.co.jp/grp/company/ir/growth_strategy/",
       "resolvedPdfUrl": null,
       "collectionStatus": "collection_failed",
       "reasons": [],

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "phase2-source-recovery-rerun-request-v1",
+  "requestedAt": "2026-08-23T13:14:00+09:00",
+  "queue": "source_recovery_required",
+  "replaceOnlyUnreviewedSourceRecoveryArtifacts": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": 0,
+  "purpose": "Recover only unresolved Phase 2 source-recovery packets after fixing AES-encrypted PDF support. Preserve all canonical primary reviews and do not grant any quality approval. Network, HTTP, DNS, or truly missing-source failures must remain explicit for manual remediation."
+}

@@ -1,0 +1,79 @@
+name: Phase 2 Source Recovery Rerun
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'agent/**'
+    paths:
+      - 'operations/quality-rebase/phase2/source-recovery-rerun-request.json'
+
+permissions:
+  contents: write
+
+env:
+  TARGET_BRANCH: ${{ github.ref_name }}
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_BRANCH }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install source recovery dependencies
+        run: pip install requests beautifulsoup4 'pypdf[crypto]'
+      - name: Verify PDF crypto support
+        run: |
+          python - <<'PY'
+          import cryptography
+          import pypdf
+          print('cryptography', cryptography.__version__)
+          print('pypdf', pypdf.__version__)
+          PY
+      - name: Validate recovery request safety
+        run: |
+          python - <<'PY'
+          import json
+          request = json.load(open('operations/quality-rebase/phase2/source-recovery-rerun-request.json'))
+          assert request['queue'] == 'source_recovery_required'
+          assert request['automaticFactCompletionAllowed'] is False
+          assert request['automaticApprovalAllowed'] is False
+          assert request['deepVerificationApproved'] == 0
+          assert request['replaceOnlyUnreviewedSourceRecoveryArtifacts'] is True
+          PY
+      - name: Rerun unresolved source recovery collection
+        run: python scripts/phase2_source_recovery_rerun_v1.py
+      - name: Assert recovery never grants approval
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('operations/quality-rebase/phase2/source-repairs/source-recovery-rerun-v1.json').read_text())
+          assert report['automaticFactCompletionAllowed'] is False
+          assert report['automaticApprovalAllowed'] is False
+          assert report['deepVerificationApproved'] is False
+          for row in report['results']:
+              code = str(row['code'])
+              if not code:
+                  raise SystemExit('empty company code in recovery report')
+          print(json.dumps(report['counts'], ensure_ascii=False, indent=2))
+          PY
+      - name: Commit recovered source packets
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/bulk-collection operations/quality-rebase/phase2/source-repairs/source-recovery-rerun-v1.json
+          if git diff --cached --quiet; then
+            echo 'No source recovery changes.'
+          else
+            git commit -m 'quality: rerun unresolved Phase2 source recovery with PDF crypto support'
+            git pull --rebase origin "$TARGET_BRANCH"
+            git push origin "HEAD:$TARGET_BRANCH"
+          fi

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "phase2-remaining-exception-remediation-v1",
-  "generatedAt": "2026-08-22T18:16:56+00:00",
+  "generatedAt": "2026-08-23T02:50:46+00:00",
   "sourceOfTruth": {
     "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/summary.json",
     "oldSourceRelevanceV2IsHistoricalOnly": true,
@@ -9,23 +9,22 @@
   },
   "counts": {
     "currentAuditExceptions": 93,
-    "reviewedExceptionCompanies": 13,
-    "remainingExceptionCompanies": 80,
+    "reviewedExceptionCompanies": 21,
+    "remainingExceptionCompanies": 72,
     "exceptionAssignedWithoutPrimaryReviewArtifact": 0,
-    "uniquePrimaryReviewArtifacts": 370,
+    "uniquePrimaryReviewArtifacts": 378,
     "uniqueHistoricallyAssignedCompanies": 361,
     "assignedCompaniesWithReviewArtifact": 361,
     "assignedCompaniesWithoutReviewArtifact": 0,
-    "effectiveStatusDeclaredPhase2PrimaryReviewComplete": 370,
+    "effectiveStatusDeclaredPhase2PrimaryReviewComplete": 378,
     "declaredMinusUniqueReviewArtifactGap": 0,
     "remainingByQueue": {
-      "manual_source_relevance_check": 8,
       "pdf_identification_required": 14,
       "probable_wrong_document": 7,
       "source_recovery_required": 51
     },
     "reviewedByQueue": {
-      "manual_source_relevance_check": 11,
+      "manual_source_relevance_check": 19,
       "probable_wrong_document": 1,
       "source_recovery_required": 1
     }
@@ -62,6 +61,31 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "1419",
+      "name": "タマホーム",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 30,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www.tamahome.jp/company/ir/release.html",
+      "resolvedPdfUrl": "https://www.tamahome.jp/company/ir/upload_file/tdnrelease/1419_20170714431559_P01_.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present"
+      ],
+      "blockers": [
+        "insufficient_extracted_text"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/1419-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "1847",
       "name": "イチケン",
       "queue": "manual_source_relevance_check",
@@ -87,6 +111,36 @@
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
       "reviewFiles": [
         "operations/quality-rebase/phase2/primary-reviews/1847-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "195A",
+      "name": "MUSCAT GROUP",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 68,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/195A-primary-review-v1.json"
       ],
       "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
@@ -151,6 +205,36 @@
       "previousWaveAssignments": [
         17
       ],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "4060",
+      "name": "rakumo",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 73,
+      "documentTypeCandidate": "growth_potential_document",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4060-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
     },
     {
@@ -293,6 +377,88 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "5368",
+      "name": "日本インシュレーション",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 73,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/5368-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "545A",
+      "name": "トランヴィア",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 44,
+      "documentTypeCandidate": "manual_classification_required",
+      "sourceUrl": "https://www.toranvia.co.jp/news/",
+      "resolvedPdfUrl": "https://www.toranvia.co.jp/news/files/20260401_en_news.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present"
+      ],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/545A-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "6579",
+      "name": "ログリー",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 68,
+      "documentTypeCandidate": "growth_potential_document",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6579-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "6817",
       "name": "スミダコーポレーション",
       "queue": "manual_source_relevance_check",
@@ -352,6 +518,36 @@
       "previousWaveAssignments": [
         13
       ],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "8237",
+      "name": "松屋",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 57,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present",
+        "multiple_financial_metric_terms",
+        "strategy_terms_present",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8237-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
     },
     {
@@ -416,219 +612,6 @@
         14
       ],
       "status": "primary_review_artifact_exists"
-    }
-  ],
-  "remaining": [
-    {
-      "code": "4060",
-      "name": "rakumo",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 73,
-      "documentTypeCandidate": "growth_potential_document",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 473,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "5368",
-      "name": "日本インシュレーション",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 73,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 473,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "195A",
-      "name": "MUSCAT GROUP",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 68,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 468,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "6579",
-      "name": "ログリー",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 68,
-      "documentTypeCandidate": "growth_potential_document",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 468,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "8237",
-      "name": "松屋",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 57,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "plan_terms_present",
-        "multiple_financial_metric_terms",
-        "strategy_terms_present",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 457,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "545A",
-      "name": "トランヴィア",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 44,
-      "documentTypeCandidate": "manual_classification_required",
-      "sourceUrl": "https://www.toranvia.co.jp/news/",
-      "resolvedPdfUrl": "https://www.toranvia.co.jp/news/files/20260401_en_news.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "plan_terms_present"
-      ],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 444,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "1419",
-      "name": "タマホーム",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 30,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www.tamahome.jp/company/ir/release.html",
-      "resolvedPdfUrl": "https://www.tamahome.jp/company/ir/upload_file/tdnrelease/1419_20170714431559_P01_.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present"
-      ],
-      "blockers": [
-        "insufficient_extracted_text"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 430,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
     },
     {
       "code": "9962",
@@ -649,14 +632,14 @@
       "errorType": null,
       "error": null,
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 425,
-      "requiredAction": "human_document_boundary_review",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9962-primary-review-v1.json"
+      ],
       "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
+      "status": "primary_review_artifact_exists"
+    }
+  ],
+  "remaining": [
     {
       "code": "1414",
       "name": "ショーボンドホールディングス",

@@ -1,17 +1,17 @@
 {
   "schemaVersion": "phase2-completion-ledger-audit-v1",
-  "generatedAt": "2026-08-22T18:16:56+00:00",
+  "generatedAt": "2026-08-23T02:50:46+00:00",
   "counts": {
-    "effectiveStatusDeclaredComplete": 370,
-    "canonicalPrimaryReviewArtifacts": 370,
+    "effectiveStatusDeclaredComplete": 378,
+    "canonicalPrimaryReviewArtifacts": 378,
     "completionOverlayRows": 54,
     "completionOverlayUniqueCompanies": 54,
     "duplicateCompletionOverlayCodes": 0,
     "overlayCompleteWithoutReviewArtifact": 0,
-    "reviewArtifactWithoutCompletionOverlay": 316,
+    "reviewArtifactWithoutCompletionOverlay": 324,
     "historicallyAssignedUniqueCompanies": 361,
     "assignedWithoutReviewArtifact": 0,
-    "reviewArtifactWithoutHistoricalAssignment": 9,
+    "reviewArtifactWithoutHistoricalAssignment": 17,
     "declaredMinusCanonicalArtifactGap": 0
   },
   "duplicateCompletionOverlayCodes": [],
@@ -59,6 +59,13 @@
       "waveAssignments": [
         28
       ]
+    },
+    {
+      "code": "1419",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/1419-primary-review-v1.json"
+      ],
+      "waveAssignments": []
     },
     {
       "code": "141A",
@@ -210,6 +217,13 @@
       "waveAssignments": [
         18
       ]
+    },
+    {
+      "code": "195A",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/195A-primary-review-v1.json"
+      ],
+      "waveAssignments": []
     },
     {
       "code": "1969",
@@ -1245,6 +1259,13 @@
       ]
     },
     {
+      "code": "4060",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4060-primary-review-v1.json"
+      ],
+      "waveAssignments": []
+    },
+    {
       "code": "4061",
       "reviewFiles": [
         "operations/quality-rebase/phase2/reviews/4061-primary-review-v1.json"
@@ -1706,6 +1727,13 @@
       ]
     },
     {
+      "code": "5368",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/5368-primary-review-v1.json"
+      ],
+      "waveAssignments": []
+    },
+    {
       "code": "5411",
       "reviewFiles": [
         "operations/quality-rebase/phase2/reviews/5411-primary-review-v1.json",
@@ -1723,6 +1751,13 @@
       "waveAssignments": [
         7
       ]
+    },
+    {
+      "code": "545A",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/545A-primary-review-v1.json"
+      ],
+      "waveAssignments": []
     },
     {
       "code": "5537",
@@ -2146,6 +2181,13 @@
       "waveAssignments": [
         25
       ]
+    },
+    {
+      "code": "6579",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6579-primary-review-v1.json"
+      ],
+      "waveAssignments": []
     },
     {
       "code": "6666",
@@ -2585,6 +2627,13 @@
       ]
     },
     {
+      "code": "8237",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8237-primary-review-v1.json"
+      ],
+      "waveAssignments": []
+    },
+    {
       "code": "8273",
       "reviewFiles": [
         "operations/quality-rebase/phase2/reviews/8273-primary-review-v1.json"
@@ -2844,6 +2893,13 @@
       "waveAssignments": [
         1
       ]
+    },
+    {
+      "code": "9962",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9962-primary-review-v1.json"
+      ],
+      "waveAssignments": []
     }
   ],
   "assignedWithoutReviewArtifact": [],
@@ -2855,15 +2911,33 @@
       ]
     },
     {
+      "code": "1419",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/1419-primary-review-v1.json"
+      ]
+    },
+    {
       "code": "1847",
       "reviewFiles": [
         "operations/quality-rebase/phase2/primary-reviews/1847-primary-review-v1.json"
       ]
     },
     {
+      "code": "195A",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/195A-primary-review-v1.json"
+      ]
+    },
+    {
       "code": "2109",
       "reviewFiles": [
         "operations/quality-rebase/phase2/primary-reviews/2109-primary-review-v1.json"
+      ]
+    },
+    {
+      "code": "4060",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4060-primary-review-v1.json"
       ]
     },
     {
@@ -2891,6 +2965,24 @@
       ]
     },
     {
+      "code": "5368",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/5368-primary-review-v1.json"
+      ]
+    },
+    {
+      "code": "545A",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/545A-primary-review-v1.json"
+      ]
+    },
+    {
+      "code": "6579",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6579-primary-review-v1.json"
+      ]
+    },
+    {
       "code": "6817",
       "reviewFiles": [
         "operations/quality-rebase/phase2/primary-reviews/6817-primary-review-v1.json"
@@ -2900,6 +2992,18 @@
       "code": "8113",
       "reviewFiles": [
         "operations/quality-rebase/phase2/reviews/8113-primary-review-v1.json"
+      ]
+    },
+    {
+      "code": "8237",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8237-primary-review-v1.json"
+      ]
+    },
+    {
+      "code": "9962",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9962-primary-review-v1.json"
       ]
     }
   ],

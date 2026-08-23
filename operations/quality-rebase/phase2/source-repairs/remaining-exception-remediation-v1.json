@@ -1,6 +1,6 @@
 {
   "schemaVersion": "phase2-remaining-exception-remediation-v1",
-  "generatedAt": "2026-08-23T04:08:46+00:00",
+  "generatedAt": "2026-08-23T04:20:47+00:00",
   "sourceOfTruth": {
     "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/summary.json",
     "oldSourceRelevanceV2IsHistoricalOnly": true,
@@ -9,23 +9,23 @@
   },
   "counts": {
     "currentAuditExceptions": 93,
-    "reviewedExceptionCompanies": 42,
-    "remainingExceptionCompanies": 51,
+    "reviewedExceptionCompanies": 46,
+    "remainingExceptionCompanies": 47,
     "exceptionAssignedWithoutPrimaryReviewArtifact": 0,
-    "uniquePrimaryReviewArtifacts": 399,
+    "uniquePrimaryReviewArtifacts": 403,
     "uniqueHistoricallyAssignedCompanies": 361,
     "assignedCompaniesWithReviewArtifact": 361,
     "assignedCompaniesWithoutReviewArtifact": 0,
-    "effectiveStatusDeclaredPhase2PrimaryReviewComplete": 399,
-    "declaredMinusUniqueReviewArtifactGap": 0,
+    "effectiveStatusDeclaredPhase2PrimaryReviewComplete": 404,
+    "declaredMinusUniqueReviewArtifactGap": 1,
     "remainingByQueue": {
-      "source_recovery_required": 51
+      "source_recovery_required": 47
     },
     "reviewedByQueue": {
       "manual_source_relevance_check": 19,
       "pdf_identification_required": 14,
       "probable_wrong_document": 8,
-      "source_recovery_required": 1
+      "source_recovery_required": 5
     }
   },
   "exceptionAssignedWithoutPrimaryReviewArtifact": [],
@@ -400,6 +400,26 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "4004",
+      "name": "レゾナック・ホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.resonac.com/jp/corporate/management-policy.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "404 Client Error: Not Found for url: https://www.resonac.com/jp/corporate/management-policy.html",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4004-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "4011",
       "name": "ヘッドウォータース",
       "queue": "pdf_identification_required",
@@ -484,6 +504,7 @@
       "error": "404 Client Error: Not Found for url: https://www.denka.co.jp/pdf/ir/presentation/20260227_denka_ir_management.pdf",
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
       "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4061-primary-review-v1.json",
         "operations/quality-rebase/phase2/reviews/4061-primary-review-v1.json"
       ],
       "previousWaveAssignments": [],
@@ -748,6 +769,26 @@
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
       "reviewFiles": [
         "operations/quality-rebase/phase2/primary-reviews/6196-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "6497",
+      "name": "ハマイ",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.hamai-net.com/corporation/ir/plan-2226/06.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "ConnectTimeout",
+      "error": "HTTPSConnectionPool(host='www.hamai-net.com', port=443): Max retries exceeded with url: /corporation/ir/plan-2226/06.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hamai-net.com', port=443) at 0x7f1eab91a390>, 'Connection to www.hamai-net.com timed out. (connect timeout=45)'))",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6497-primary-review-v1.json"
       ],
       "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
@@ -1057,6 +1098,46 @@
       "previousWaveAssignments": [
         14
       ],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "9413",
+      "name": "テレビ東京ホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.txhd.co.jp/ir/management/plan/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "404 Client Error: Not Found for url: https://www.txhd.co.jp/ir/management/plan/",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9413-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "9627",
+      "name": "アインホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.ainj.co.jp/corporate/ir/management/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "404 Client Error: Not Found for url: https://www.ainj.co.jp/corporate/ir/management/",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9627-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
     },
     {
@@ -1523,28 +1604,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "4004",
-      "name": "レゾナック・ホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.resonac.com/jp/corporate/management-policy.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "404 Client Error: Not Found for url: https://www.resonac.com/jp/corporate/management-policy.html",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "4188",
       "name": "三菱ケミカルグループ",
       "queue": "source_recovery_required",
@@ -1799,28 +1858,6 @@
       "blockers": [],
       "errorType": "DependencyError",
       "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "6497",
-      "name": "ハマイ",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.hamai-net.com/corporation/ir/plan-2226/06.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "ConnectTimeout",
-      "error": "HTTPSConnectionPool(host='www.hamai-net.com', port=443): Max retries exceeded with url: /corporation/ir/plan-2226/06.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hamai-net.com', port=443) at 0x7f1eab91a390>, 'Connection to www.hamai-net.com timed out. (connect timeout=45)'))",
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
       "priority": 100,
       "requiredAction": "recover_or_replace_official_source",
@@ -2117,28 +2154,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "9413",
-      "name": "テレビ東京ホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.txhd.co.jp/ir/management/plan/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "404 Client Error: Not Found for url: https://www.txhd.co.jp/ir/management/plan/",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "9434",
       "name": "ソフトバンク",
       "queue": "source_recovery_required",
@@ -2151,28 +2166,6 @@
       "blockers": [],
       "errorType": "DependencyError",
       "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "9627",
-      "name": "アインホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.ainj.co.jp/corporate/ir/management/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "404 Client Error: Not Found for url: https://www.ainj.co.jp/corporate/ir/management/",
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
       "priority": 100,
       "requiredAction": "recover_or_replace_official_source",
@@ -2258,5 +2251,7 @@
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false
   },
-  "warnings": []
+  "warnings": [
+    "The effective aggregate primary-review count differs from unique canonical primary-review artifacts. Do not use the aggregate count as completion evidence until the gap is reconciled."
+  ]
 }

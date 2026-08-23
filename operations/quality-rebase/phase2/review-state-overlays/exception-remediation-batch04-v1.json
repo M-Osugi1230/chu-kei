@@ -1,0 +1,15 @@
+{
+  "schemaVersion":"phase2-exception-primary-completion-overlay-v1",
+  "updatedAt":"2026-08-23T13:33:00+09:00",
+  "queue":"source_recovery_required",
+  "batch":4,
+  "completed":[
+    {"code":"4061","name":"デンカ","classification":"formal_management_plan_update_source_recovered","reviewFile":"operations/quality-rebase/phase2/primary-reviews/4061-primary-review-v1.json","independentVisualReviewPending":true},
+    {"code":"9413","name":"テレビ東京ホールディングス","classification":"formal_management_plan_update_source_recovered","reviewFile":"operations/quality-rebase/phase2/primary-reviews/9413-primary-review-v1.json","independentVisualReviewPending":true},
+    {"code":"9627","name":"アインホールディングス","classification":"quantified_long_term_vision_source_recovered_not_named_midterm_plan","reviewFile":"operations/quality-rebase/phase2/primary-reviews/9627-primary-review-v1.json","independentVisualReviewPending":true},
+    {"code":"6497","name":"ハマイ","classification":"formal_management_plan_source_recovered","reviewFile":"operations/quality-rebase/phase2/primary-reviews/6497-primary-review-v1.json","independentVisualReviewPending":true},
+    {"code":"4004","name":"レゾナック・ホールディングス","classification":"long_term_strategy_source_recovered_no_formal_midterm_plan","reviewFile":"operations/quality-rebase/phase2/primary-reviews/4004-primary-review-v1.json","independentVisualReviewPending":true}
+  ],
+  "counts":{"primaryReviewComplete":5,"formalManagementPlanConfirmed":3,"quantifiedLongTermVisionNotNamedMidtermPlan":1,"currentLongTermStrategyNoFormalMidtermPlan":1,"sourceCorrectionsApplied":5,"independentVisualReviewPending":5},
+  "safety":{"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false}
+}

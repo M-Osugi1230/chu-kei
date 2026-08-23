@@ -1,0 +1,23 @@
+{
+  "schemaVersion":"phase2-pdf-identification-decisions-v1",
+  "updatedAt":"2026-08-23T12:48:00+09:00",
+  "queue":"pdf_identification_required",
+  "decisions":[
+    {"code":"2326","name":"デジタルアーツ","resolution":"official_plan_and_current_final_year_update_identified","canonicalSource":"https://www.daj.jp/ir/management/message/","supportingPdf":"https://www.daj.jp/ir/data/daj2326_202603_4q_ref.pdf","classification":"formal_management_plan_current_final_year_update"},
+    {"code":"4452","name":"花王","resolution":"official_html_is_canonical_plan_source","canonicalSource":"https://www.kao.com/jp/corporate/strategy-and-mid-term-plan/","classification":"formal_management_plan_K27"},
+    {"code":"6861","name":"キーエンス","resolution":"official_html_is_canonical_policy_source","canonicalSource":"https://www.keyence.co.jp/investor/capital-allocation-policy.jsp","classification":"current_management_policy_not_formal_management_plan"},
+    {"code":"9984","name":"ソフトバンクグループ","resolution":"official_html_is_canonical_strategy_source","canonicalSource":"https://group.softbank/ir/investors/management_policy","classification":"current_mid_long_term_strategy_not_conventional_formal_management_plan"},
+    {"code":"1414","name":"ショーボンドホールディングス","resolution":"official_current_plan_identified","canonicalSource":"https://www.sho-bondhd.jp/ir/library/plan/","supportingPdf":"https://www.sho-bondhd.jp/pdf/ir-integratedreport-2025-03.pdf","classification":"formal_management_plan_2027"},
+    {"code":"3397","name":"トリドールホールディングス","resolution":"official_current_revised_plan_identified","canonicalSource":"https://www.toridoll.com/ir/","classification":"formal_mid_long_term_management_plan_current_revised"},
+    {"code":"3962","name":"チェンジホールディングス","resolution":"official_revised_plan_pdf_identified","canonicalSource":"https://www2.jpx.co.jp/disc/39620/140120260514534210.pdf","classification":"formal_management_plan_revised_DJ3_2026_2030"},
+    {"code":"4011","name":"ヘッドウォータース","resolution":"official_growth_document_contains_current_mid_long_term_plan","canonicalSource":"https://global-assets.irdirect.jp/pdf/tdnet/batch/140120260331594558.pdf","classification":"mid_long_term_management_plan_embedded_in_growth_potential_document"},
+    {"code":"3659","name":"ネクソン","resolution":"official_2026_transformation_plan_identified_and_old_2027_targets_superseded","canonicalSource":"https://www.nexon.co.jp/en/ir/uploads/CMB%202026%20Presentation%20Slides%20with%20Speech%20Script.pdf","classification":"transformation_plan_old_midterm_targets_not_attainable_no_restatement_yet"},
+    {"code":"4013","name":"勤次郎","resolution":"official_current_mtp_progress_identified","canonicalSource":"https://www.kinjiro-e.com/ir/","classification":"formal_three_year_management_plan_current_progress_update"},
+    {"code":"6196","name":"ストライクグループ","resolution":"official_holding_company_consolidated_mtp_identified","canonicalSource":"https://www2.jpx.co.jp/disc/61960/140120260428513894.pdf","classification":"formal_management_plan_current_holding_company_transition"},
+    {"code":"8252","name":"丸井グループ","resolution":"official_2031_strategy_identified_and_conventional_mtp_boundary_confirmed","canonicalSource":"https://www.0101maruigroup.co.jp/ir/management/plan.html","classification":"management_vision_strategy_story_2031_explicitly_not_conventional_midterm_plan"},
+    {"code":"9831","name":"ヤマダホールディングス","resolution":"official_current_five_year_plan_identified","canonicalSource":"https://www.yamada-holdings.jp/ir/","supportingPdf":"https://www.yamada-holdings.jp/ir/presentation/2026/260508.pdf","classification":"formal_management_plan_2026_2030"},
+    {"code":"6594","name":"ニデック","resolution":"official_current_conversion2027_identified","canonicalSource":"https://www.nidec.com/jp/ir/management/strategy/","supportingPdf":"https://www.nidec.com/files/user/www-nidec-com/ir/library/earnings/2025/FY24Q4_1_jp_rev.pdf","classification":"formal_management_plan_conversion2027"}
+  ],
+  "counts":{"resolved":14,"formalManagementPlanOrEmbeddedPlan":10,"currentStrategyOrPolicyNotConventionalFormalPlan":4,"unresolved":0},
+  "policy":{"officialHtmlMayBeCanonicalWhenItDirectlyPublishesCurrentPlanOrPolicy":true,"pdfAbsenceAloneDoesNotBlockPrimaryReview":true,"supersededTargetsMustNotRemainCurrent":true,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false}
+}

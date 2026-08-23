@@ -1,0 +1,39 @@
+{
+  "schemaVersion":"phase2-source-repair-decisions-v1",
+  "updatedAt":"2026-08-23T11:55:00+09:00",
+  "queue":"manual_source_relevance_check",
+  "decisions":[
+    {
+      "code":"1419",
+      "name":"タマホーム",
+      "oldResolvedPdfUrl":"https://www.tamahome.jp/company/ir/upload_file/tdnrelease/1419_20170714431559_P01_.pdf",
+      "oldDocumentAssessment":"wrong_historical_plan_revision_selected_by_candidate_tie",
+      "correctedSourceUrl":"https://www.tamahome.jp/company/ir/upload_file/tdnrelease/1419_20260714592795_P01_.pdf",
+      "correctedDocumentTitle":"中期経営計画『タマステップ2031』策定に関するお知らせ",
+      "correctedPublishedDate":"2026-07-14",
+      "repairStatus":"official_current_plan_recovered",
+      "reason":"IR一覧の候補スコア同点で2017年PDFが先に選択されていた。2026年7月14日の公式IR一覧に現行5カ年計画のPDFが存在し、2027年5月期～2031年5月期の正式中計であることを確認した。"
+    },
+    {
+      "code":"9962",
+      "name":"ミスミグループ本社",
+      "oldResolvedPdfUrl":"https://www.misumi.co.jp/sites/default/files/2026-07/news_260731_1.pdf",
+      "oldDocumentAssessment":"single_year_earnings_and_dividend_revision_not_management_plan",
+      "correctedSourceUrl":"https://www.misumi.co.jp/ir/message",
+      "correctedDocumentTitle":"トップメッセージ 2025年度の業績と今後の取り組み",
+      "repairStatus":"official_current_management_policy_recovered_no_named_formal_midterm_plan_identified",
+      "reason":"旧PDFは2027年3月期単年度業績・配当予想修正。公式IRトップメッセージではグローバル展開、デジタルモデルシフト、成長産業参入の3戦略と今後3年最大1,500億円の投資方針を確認したが、独立した名称付き中期経営計画としては扱わない。"
+    },
+    {
+      "code":"545A",
+      "name":"トランヴィア",
+      "oldResolvedPdfUrl":"https://www.toranvia.co.jp/news/files/20260401_en_news.pdf",
+      "oldDocumentAssessment":"incorporation_notice_not_business_plan",
+      "correctedSourceUrl":"https://www.toranvia.co.jp/ir/management/message.html",
+      "correctedDocumentTitle":"株主・投資家の皆様へ",
+      "repairStatus":"official_current_management_policy_recovered_no_group_formal_midterm_plan_identified",
+      "reason":"2026年4月設立の共同持株会社で、旧PDFは設立通知。現行IRでは統合シナジー、生成AI/DX、新ソリューション、人材育成を成長戦略として確認できる。一方、検索で確認できる中期経営計画は統合前子会社の計画であり、トランヴィア自身の正式グループ中計へ昇格しない。"
+    }
+  ],
+  "safety":{"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false}
+}

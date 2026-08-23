@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"phase2-probable-wrong-document-decisions-v1",
+  "updatedAt":"2026-08-23T13:12:00+09:00",
+  "queue":"probable_wrong_document",
+  "decisions":[
+    {"code":"4063","name":"信越化学工業","resolution":"wrong_source_repaired_to_official_management_policy","classification":"current_management_policy_no_named_formal_midterm_plan","reviewFile":"operations/quality-rebase/phase2/primary-reviews/4063-primary-review-v1.json"},
+    {"code":"280A","name":"TMH","resolution":"growth_document_relevance_resolved_by_official_current_strategy","classification":"quantified_midterm_phase_within_Vision1000_not_named_formal_mtp","reviewFile":"operations/quality-rebase/phase2/primary-reviews/280A-primary-review-v1.json"},
+    {"code":"3391","name":"ツルハホールディングス","resolution":"old_pre_merger_source_replaced_by_current_post_merger_plan","classification":"formal_management_plan_2027_2029_post_merger","reviewFile":"operations/quality-rebase/phase2/primary-reviews/3391-primary-review-v1.json"},
+    {"code":"544A","name":"GMSグループ","resolution":"incorporation_source_repaired_and_official_plan_page_checked","classification":"formal_mid_long_term_plan_not_yet_published_page_preparing","reviewFile":"operations/quality-rebase/phase2/primary-reviews/544A-primary-review-v1.json"},
+    {"code":"8282","name":"ケーズホールディングス","resolution":"original_source_valid_relevance_classifier_false_positive","classification":"formal_management_plan_2027_current_revised","reviewFile":"operations/quality-rebase/phase2/primary-reviews/8282-primary-review-v1.json"},
+    {"code":"2438","name":"アスカネット","resolution":"original_source_valid_relevance_classifier_false_positive","classification":"formal_management_plan_2026_2028","reviewFile":"operations/quality-rebase/phase2/primary-reviews/2438-primary-review-v1.json"},
+    {"code":"7181","name":"かんぽ生命保険","resolution":"original_source_valid_relevance_classifier_false_positive","classification":"formal_management_plan_2026_2028","reviewFile":"operations/quality-rebase/phase2/primary-reviews/7181-primary-review-v1.json"}
+  ],
+  "counts":{"resolved":7,"formalManagementPlan":4,"quantifiedVisionNotNamedFormalPlan":1,"currentPolicyNoFormalPlan":1,"formalPlanNotYetPublished":1,"unresolved":0,"sourceRepairs":3,"classifierFalsePositives":3},
+  "policy":{"wrongDocumentFlagMustBeHumanVerified":true,"negativeDisclaimerTermsAloneMustNotInvalidateFormalPlan":true,"newHoldingCompanyMustNotInheritPredecessorPlanWithoutEvidence":true,"supersededOrPreMergerPlanMustNotRemainCanonical":true,"automaticFactCompletionAllowed":false,"automaticApprovalAllowed":false,"deepVerificationApproved":false}
+}

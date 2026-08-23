@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "company": {
+    "code": "6558",
+    "name": "クックビズ",
+    "market": "Growth",
+    "industry": "サービス業"
+  },
+  "document": {
+    "title": "事業計画及び成長可能性に関する事項",
+    "publishedDate": "2026-02-26",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/65580/140120260226569402.pdf",
+    "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/65580/140120260226569402.pdf",
+    "pdfSha256": "f21f3239313a4114b378e243c96c81349663f08e5d15290c92c115856748d00e",
+    "pageCount": 70,
+    "documentType": "growth_potential_disclosure_with_mid_term_targets",
+    "formalPlanConfirmed": false,
+    "fullTextHumanReviewComplete": true
+  },
+  "structuredAnalysis": {
+    "period": "2026年11月期単年度予想および2028年頃までの中期ターゲット",
+    "summary": "HR事業を収益基盤とし、外国人人材、DX、食品加工・一次産業投資を成長領域として食産業の持続可能性を広げる成長戦略。主要HRサービスについて2028年頃までの売上・利用KPIとFY2028までの成長シミュレーションを示すが、資料上は『中期ターゲット』であり正式な中期経営計画とは称していない。",
+    "strategyThemes": [
+      "HR事業の収益性・生産性改善",
+      "人材紹介・求人広告・スカウト各サービスのKPI改善",
+      "外国人人材事業の高成長",
+      "飲食・食産業向けDXの拡大",
+      "食品加工・一次産業領域への投資",
+      "食産業の持続可能性を軸とする事業ポートフォリオ拡張"
+    ],
+    "financialTargets": [
+      {"targetPeriod": "2028年頃", "metric": "人材紹介サービス年間売上", "value": 1300, "unit": "百万円", "classification": "mid_term_service_target"},
+      {"targetPeriod": "2028年頃", "metric": "求人広告サービス年間売上", "value": 300, "unit": "百万円", "classification": "mid_term_service_target"},
+      {"targetPeriod": "2028年頃", "metric": "スカウトサービス年間売上", "value": 450, "unit": "百万円", "classification": "mid_term_service_target"},
+      {"targetPeriod": "2028年頃", "metric": "その他・新規サービス年間売上", "value": 450, "unit": "百万円", "classification": "mid_term_service_target"},
+      {"fiscalYear": "FY2028", "metric": "既存3事業売上シミュレーション", "value": 2096, "unit": "百万円", "classification": "mid_term_simulation_not_formal_plan_target"},
+      {"fiscalYear": "FY2028", "metric": "ワールドインワーカー売上シミュレーション", "value": 421, "unit": "百万円", "classification": "mid_term_simulation_not_formal_plan_target"},
+      {"fiscalYear": "FY2028", "metric": "グループ売上シミュレーション", "value": 2517, "unit": "百万円", "classification": "mid_term_simulation_not_formal_plan_target"}
+    ],
+    "importantDefinitions": [
+      "2026年11月期は単年度業績予想であり、2027年度以降の数値は中期ターゲットまたはシミュレーションとして区別する。",
+      "2026年2月開示ではHR事業の成長率見立てを見直し、従来の2027～2028年頃ターゲットから主要サービスの中期KPIを下方修正している。",
+      "資料中の『中期ターゲット』を正式名称を持つ会社全体の中期経営計画とは同一視しない。"
+    ]
+  },
+  "formalPlanBoundary": {
+    "status": "growth_potential_mid_term_targets_not_formal_management_plan",
+    "reason": "会社は主要サービスの2028年頃までの『中期ターゲット』とFY2028までの成長シミュレーションを開示しているが、資料は『事業計画及び成長可能性に関する事項』であり、正式な中期経営計画名称・全社財務KPI体系として提示していないため。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "pdfHashConfirmed": true,
+    "pageCountConfirmed": true,
+    "formalPlanConfirmed": false,
+    "formalPlanBoundaryValidated": true,
+    "currentAndLongTermSeparated": true,
+    "forecastActualSeparated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "recoveredCollection": "operations/quality-rebase/phase2/source-recovery-collection-v1/6558/collection.json",
+    "sourceText": "operations/quality-rebase/phase2/source-recovery-collection-v1/6558/full-text.txt",
+    "keyKpiPage": 53,
+    "midTermTargetPage": 54,
+    "targetRevisionPage": 55
+  },
+  "review": {
+    "status": "primary_review_complete_growth_disclosure_mid_term_targets_formal_plan_not_confirmed_independent_visual_review_pending",
+    "reviewedAt": "2026-08-23T20:04:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": ["ChatGPT primary review 2026-08-23"]
+  }
+}

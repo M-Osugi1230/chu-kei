@@ -1,0 +1,53 @@
+name: Phase 2 Source Recovery Review Digest
+
+on:
+  push:
+    branches:
+      - 'agent/phase2-*'
+    paths:
+      - 'operations/quality-rebase/phase2/source-recovery-review-digest-request.json'
+      - 'scripts/build_phase2_source_recovery_review_digest.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate request safety
+        run: |
+          python - <<'PY'
+          import json
+          p='operations/quality-rebase/phase2/source-recovery-review-digest-request.json'
+          r=json.load(open(p))
+          assert r['status']=='requested'
+          assert r['evidencePreparationOnly'] is True
+          assert r['automaticFactCompletionAllowed'] is False
+          assert r['automaticApprovalAllowed'] is False
+          assert r['deepVerificationApproved'] == 0
+          PY
+      - name: Build human review digest
+        run: python scripts/build_phase2_source_recovery_review_digest.py
+      - name: Commit digest
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '4189824+github-actions[bot]@users.noreply.github.com'
+          git add operations/quality-rebase/phase2/source-repairs/source-recovery-review-digest-v1
+          if git diff --cached --quiet; then
+            echo 'No digest changes.'
+          else
+            git commit -m 'quality: build Phase2 source recovery human review digest'
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi

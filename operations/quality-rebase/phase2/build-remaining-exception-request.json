@@ -1,10 +1,11 @@
 {
-  "schemaVersion": "phase2-remaining-exception-request-v1",
-  "requestedAt": "2026-08-23T03:08:00+09:00",
-  "status": "requested",
-  "writeChanges": true,
-  "automaticFactCompletionAllowed": false,
-  "automaticApprovalAllowed": false,
-  "deepVerificationApproved": 0,
-  "purpose": "Wave39で通常一次レビュー候補4社（2588、3276、6098、8801）のcanonical一次レビューを完了し、Phase2 canonical成果物を364/450へ更新した状態から例外台帳を再同期する。現行source-relevance-auditの例外母集団93社のうち既レビュー7社と未レビュー86社を会社コード単位で再突合し、manual_source_relevance_check、pdf_identification_required、probable_wrong_document、source_recovery_requiredの実残件を確定する。通常候補を例外キューへ混入させず、canonical一次レビュー成果物がない会社を完了扱いしない。automatic fact completion、automatic approval、Deep Verification自動昇格は禁止する。"
+  "schemaVersion":"phase2-remaining-exception-request-v1",
+  "requestedAt":"2026-08-23T14:12:00+09:00",
+  "status":"requested",
+  "writeChanges":true,
+  "sourceRecoveryRerun":false,
+  "automaticFactCompletionAllowed":false,
+  "automaticApprovalAllowed":false,
+  "deepVerificationApproved":0,
+  "purpose":"Phase2 source_recovery_requiredについて、非AES失敗5社の手動復旧とAES再取得成功群5社の人手レビューを完了し、canonical一次レビューを414社へ増加させた。収集成功のみでは完了扱いせず、現行性・計画境界・定量KPIを人手確認した成果物だけを正本として、例外台帳・completion ledger・queue coverageを再集計し残36社を確定する。automatic fact completion、automatic approval、Deep Verification自動昇格は禁止する。"
 }

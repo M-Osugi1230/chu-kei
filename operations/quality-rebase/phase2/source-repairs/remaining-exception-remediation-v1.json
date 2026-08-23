@@ -1,6 +1,6 @@
 {
   "schemaVersion": "phase2-remaining-exception-remediation-v1",
-  "generatedAt": "2026-08-22T18:04:47+00:00",
+  "generatedAt": "2026-08-23T04:31:34+00:00",
   "sourceOfTruth": {
     "sourceRelevanceAudit": "operations/quality-rebase/phase2/source-relevance-audit/summary.json",
     "oldSourceRelevanceV2IsHistoricalOnly": true,
@@ -9,30 +9,313 @@
   },
   "counts": {
     "currentAuditExceptions": 93,
-    "reviewedExceptionCompanies": 7,
-    "remainingExceptionCompanies": 86,
+    "reviewedExceptionCompanies": 56,
+    "remainingExceptionCompanies": 37,
     "exceptionAssignedWithoutPrimaryReviewArtifact": 0,
-    "uniquePrimaryReviewArtifacts": 364,
+    "uniquePrimaryReviewArtifacts": 413,
     "uniqueHistoricallyAssignedCompanies": 361,
     "assignedCompaniesWithReviewArtifact": 361,
     "assignedCompaniesWithoutReviewArtifact": 0,
-    "effectiveStatusDeclaredPhase2PrimaryReviewComplete": 364,
-    "declaredMinusUniqueReviewArtifactGap": 0,
+    "effectiveStatusDeclaredPhase2PrimaryReviewComplete": 414,
+    "declaredMinusUniqueReviewArtifactGap": 1,
     "remainingByQueue": {
-      "manual_source_relevance_check": 14,
-      "pdf_identification_required": 14,
-      "probable_wrong_document": 7,
-      "source_recovery_required": 51
+      "source_recovery_required": 37
     },
     "reviewedByQueue": {
-      "manual_source_relevance_check": 5,
-      "probable_wrong_document": 1,
-      "source_recovery_required": 1
+      "manual_source_relevance_check": 19,
+      "pdf_identification_required": 14,
+      "probable_wrong_document": 8,
+      "source_recovery_required": 15
     }
   },
   "exceptionAssignedWithoutPrimaryReviewArtifact": [],
   "allAssignedWithoutPrimaryReviewArtifact": [],
   "reviewedExceptions": [
+    {
+      "code": "1377",
+      "name": "サカタのタネ",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 57,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://corporate.sakataseed.co.jp/news/2026/20260713.html",
+      "resolvedPdfUrl": "https://corporate.sakataseed.co.jp/news/2026/lum8rp00000002qe-att/20260713_sakata_release.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present",
+        "multiple_financial_metric_terms",
+        "strategy_terms_present",
+        "multiple_year_references"
+      ],
+      "blockers": [
+        "very_short_without_strong_plan_terms"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/1377-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "1414",
+      "name": "ショーボンドホールディングス",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www.sho-bondhd.jp/ir/library/plan/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/1414-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "1419",
+      "name": "タマホーム",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 30,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www.tamahome.jp/company/ir/release.html",
+      "resolvedPdfUrl": "https://www.tamahome.jp/company/ir/upload_file/tdnrelease/1419_20170714431559_P01_.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present"
+      ],
+      "blockers": [
+        "insufficient_extracted_text"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/1419-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "1847",
+      "name": "イチケン",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 78,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/18470/140120260224567535.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/18470/140120260224567535.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/1847-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "195A",
+      "name": "MUSCAT GROUP",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 68,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/195A-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "2109",
+      "name": "DM三井製糖",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 78,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/21090/140120260520542189.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/21090/140120260520542189.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/2109-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "2321",
+      "name": "ソフトフロントホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.softfront.co.jp/ir-news/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/2321-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "2326",
+      "name": "デジタルアーツ",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www.daj.jp/ir/management/message/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/2326-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "2438",
+      "name": "アスカネット",
+      "queue": "probable_wrong_document",
+      "relevanceScore": 18,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/24380/140120260608565644.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/24380/140120260608565644.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected",
+        "severe_irrelevance_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/2438-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "280A",
+      "name": "TMH",
+      "queue": "probable_wrong_document",
+      "relevanceScore": -2,
+      "documentTypeCandidate": "growth_potential_document",
+      "sourceUrl": "https://ssl4.eir-parts.net/doc/280A/tdnet/2764303/00.pdf",
+      "resolvedPdfUrl": "https://ssl4.eir-parts.net/doc/280A/tdnet/2764303/00.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected",
+        "severe_irrelevance_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/280A-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "3151",
+      "name": "バイタルケーエスケー・ホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.vitalksk.co.jp/ir/management/plan2027/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/3151-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
     {
       "code": "3242",
       "name": "アーバネットコーポレーション",
@@ -66,6 +349,187 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "3391",
+      "name": "ツルハホールディングス",
+      "queue": "probable_wrong_document",
+      "relevanceScore": 13,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www.tsuruha-hd.co.jp/ir/vision/",
+      "resolvedPdfUrl": "https://contents.xj-storage.jp/xcontents/AS70521/b70f272c/3c0d/4b9c/9d7e/b9e307fa5738/20240509162030786s.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected",
+        "severe_irrelevance_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/3391-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "3397",
+      "name": "トリドールホールディングス",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www.toridoll.com/ir/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/3397-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "3659",
+      "name": "ネクソン",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "manual_classification_required",
+      "sourceUrl": "https://www.nexon.co.jp/ir/events-interviews/detail/?entry_id=652",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/3659-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "3962",
+      "name": "チェンジホールディングス",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www.changeholdings.co.jp/ir/mid-term/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/3962-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "4004",
+      "name": "レゾナック・ホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.resonac.com/jp/corporate/management-policy.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "404 Client Error: Not Found for url: https://www.resonac.com/jp/corporate/management-policy.html",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4004-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "4011",
+      "name": "ヘッドウォータース",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "manual_classification_required",
+      "sourceUrl": "https://www.headwaters.co.jp/ir/message/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4011-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "4013",
+      "name": "勤次郎",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "growth_potential_document",
+      "sourceUrl": "https://www.kinjiro-e.com/ir/message/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4013-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "4060",
+      "name": "rakumo",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 73,
+      "documentTypeCandidate": "growth_potential_document",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4060-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "4061",
       "name": "デンカ",
       "queue": "source_recovery_required",
@@ -80,7 +544,65 @@
       "error": "404 Client Error: Not Found for url: https://www.denka.co.jp/pdf/ir/presentation/20260227_denka_ir_management.pdf",
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
       "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4061-primary-review-v1.json",
         "operations/quality-rebase/phase2/reviews/4061-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "4063",
+      "name": "信越化学工業",
+      "queue": "probable_wrong_document",
+      "relevanceScore": -66,
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "sourceUrl": "https://www.shinetsu.co.jp/jp/ir/policy/",
+      "resolvedPdfUrl": "https://www.shinetsu.co.jp/wp-content/uploads/2026/02/%E4%BC%91%E6%97%A5%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present"
+      ],
+      "blockers": [
+        "negative_document_terms_detected",
+        "severe_irrelevance_terms_detected",
+        "very_short_without_strong_plan_terms"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4063-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "4235",
+      "name": "ウルトラファブリックス・ホールディングス",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 78,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/42350/140120260212558515.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/42350/140120260212558515.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4235-primary-review-v1.json"
       ],
       "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
@@ -147,6 +669,362 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "4452",
+      "name": "花王",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www.kao.com/jp/corporate/strategy-and-mid-term-plan/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4452-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "4523",
+      "name": "エーザイ",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.eisai.co.jp/sustainability/management/strategy/index.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "403 Client Error: Forbidden for url: https://www.eisai.co.jp/sustainability/management/strategy/index.html",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4523-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "4911",
+      "name": "資生堂",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 57,
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "sourceUrl": "https://corp.shiseido.com/jp/news/detail.html?n=00000000004093",
+      "resolvedPdfUrl": "https://corp.shiseido.com/jp/newsimg/4093_q3u08_jp.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present",
+        "multiple_financial_metric_terms",
+        "strategy_terms_present",
+        "multiple_year_references"
+      ],
+      "blockers": [
+        "very_short_without_strong_plan_terms"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/4911-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "5368",
+      "name": "日本インシュレーション",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 73,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/5368-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "544A",
+      "name": "GMSグループ",
+      "queue": "probable_wrong_document",
+      "relevanceScore": 21,
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "sourceUrl": "https://www.globalmolding-solutions.com/topics/14.html",
+      "resolvedPdfUrl": "https://www.globalmolding-solutions.com/uploads/2026/03/1990776736ca90501d9dcb2407d1e194953423b7.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present"
+      ],
+      "blockers": [
+        "very_short_without_strong_plan_terms"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/544A-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "545A",
+      "name": "トランヴィア",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 44,
+      "documentTypeCandidate": "manual_classification_required",
+      "sourceUrl": "https://www.toranvia.co.jp/news/",
+      "resolvedPdfUrl": "https://www.toranvia.co.jp/news/files/20260401_en_news.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present"
+      ],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/545A-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "6196",
+      "name": "ストライクグループ",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "sourceUrl": "https://www.strike.co.jp/group/ir/management/outline.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6196-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "6497",
+      "name": "ハマイ",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.hamai-net.com/corporation/ir/plan-2226/06.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "ConnectTimeout",
+      "error": "HTTPSConnectionPool(host='www.hamai-net.com', port=443): Max retries exceeded with url: /corporation/ir/plan-2226/06.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hamai-net.com', port=443) at 0x7f1eab91a390>, 'Connection to www.hamai-net.com timed out. (connect timeout=45)'))",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6497-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "6501",
+      "name": "日立製作所",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.hitachi.co.jp/New/cnews/month/2025/04/0428/f_0428pre.pdf",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6501-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "6579",
+      "name": "ログリー",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 68,
+      "documentTypeCandidate": "growth_potential_document",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6579-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "6594",
+      "name": "ニデック",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www.nidec.com/jp/ir/management/strategy/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6594-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "6817",
+      "name": "スミダコーポレーション",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 78,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/68170/140120260205549079.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/68170/140120260205549079.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6817-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "6861",
+      "name": "キーエンス",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "management_policy_or_strategy",
+      "sourceUrl": "https://www.keyence.co.jp/investor/capital-allocation-policy.jsp",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/6861-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "7181",
+      "name": "かんぽ生命保険",
+      "queue": "probable_wrong_document",
+      "relevanceScore": 8,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/71810/140120260514535820.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/71810/140120260514535820.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected",
+        "severe_irrelevance_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/7181-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "7752",
+      "name": "リコー",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://jp.ricoh.com/-/media/Ricoh/Sites/jp_ricoh/IR/events/2025/pdf/r07_keiei.pdf",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/7752-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "7871",
       "name": "フクビ化学工業",
       "queue": "manual_source_relevance_check",
@@ -176,6 +1054,107 @@
       "previousWaveAssignments": [
         13
       ],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "8058",
+      "name": "三菱商事",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.mitsubishicorp.com/jp/ja/news/release/2025/20250403001.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "403 Client Error: Forbidden for url: https://www.mitsubishicorp.com/jp/ja/news/release/2025/20250403001.html",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8058-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "8237",
+      "name": "松屋",
+      "queue": "manual_source_relevance_check",
+      "relevanceScore": 57,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "plan_terms_present",
+        "multiple_financial_metric_terms",
+        "strategy_terms_present",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8237-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "8252",
+      "name": "丸井グループ",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": "formal_management_plan",
+      "sourceUrl": "https://www.0101maruigroup.co.jp/ir/management/plan.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
+      "blockers": [],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8252-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
+      "code": "8282",
+      "name": "ケーズホールディングス",
+      "queue": "probable_wrong_document",
+      "relevanceScore": 3,
+      "documentTypeCandidate": "plan_revision_or_update",
+      "sourceUrl": "https://www2.jpx.co.jp/disc/82820/140120260507518657.pdf",
+      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/82820/140120260507518657.pdf",
+      "collectionStatus": "collection_complete_primary_human_review_pending",
+      "reasons": [
+        "expected_title_present",
+        "strong_plan_terms_present",
+        "multiple_financial_metric_terms",
+        "multiple_strategy_terms",
+        "multiple_year_references",
+        "substantive_page_count",
+        "substantive_text_volume"
+      ],
+      "blockers": [
+        "negative_document_terms_detected",
+        "severe_irrelevance_terms_detected"
+      ],
+      "errorType": null,
+      "error": null,
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8282-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
       "status": "primary_review_artifact_exists"
     },
     {
@@ -212,6 +1191,26 @@
       "status": "primary_review_artifact_exists"
     },
     {
+      "code": "8591",
+      "name": "オリックス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.orix.co.jp/grp/company/ir/growth_strategy/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "DependencyError",
+      "error": "cryptography>=3.1 is required for AES algorithm",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/8591-primary-review-v1.json"
+      ],
+      "previousWaveAssignments": [],
+      "status": "primary_review_artifact_exists"
+    },
+    {
       "code": "9044",
       "name": "NANKAI",
       "queue": "manual_source_relevance_check",
@@ -240,407 +1239,126 @@
         14
       ],
       "status": "primary_review_artifact_exists"
-    }
-  ],
-  "remaining": [
-    {
-      "code": "1847",
-      "name": "イチケン",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 78,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/18470/140120260224567535.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/18470/140120260224567535.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 478,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
     },
     {
-      "code": "2109",
-      "name": "DM三井製糖",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 78,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/21090/140120260520542189.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/21090/140120260520542189.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
+      "code": "9413",
+      "name": "テレビ東京ホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.txhd.co.jp/ir/management/plan/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "404 Client Error: Not Found for url: https://www.txhd.co.jp/ir/management/plan/",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9413-primary-review-v1.json"
       ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 478,
-      "requiredAction": "human_document_boundary_review",
       "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
+      "status": "primary_review_artifact_exists"
     },
     {
-      "code": "4235",
-      "name": "ウルトラファブリックス・ホールディングス",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 78,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/42350/140120260212558515.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/42350/140120260212558515.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
+      "code": "9627",
+      "name": "アインホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.ainj.co.jp/corporate/ir/management/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "404 Client Error: Not Found for url: https://www.ainj.co.jp/corporate/ir/management/",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9627-primary-review-v1.json"
       ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 478,
-      "requiredAction": "human_document_boundary_review",
       "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
+      "status": "primary_review_artifact_exists"
     },
     {
-      "code": "6817",
-      "name": "スミダコーポレーション",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 78,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/68170/140120260205549079.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/68170/140120260205549079.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
+      "code": "9699",
+      "name": "ニシオホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.nishio-holdings.co.jp/ir/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "ConnectionError",
+      "error": "HTTPSConnectionPool(host='www.nishio-holdings.co.jp', port=443): Max retries exceeded with url: /ir/ (Caused by NameResolutionError(\"HTTPSConnection(host='www.nishio-holdings.co.jp', port=443): Failed to resolve 'www.nishio-holdings.co.jp' ([Errno -2] Name or service not known)\"))",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9699-primary-review-v1.json"
       ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 478,
-      "requiredAction": "human_document_boundary_review",
       "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
+      "status": "primary_review_artifact_exists"
     },
     {
-      "code": "4060",
-      "name": "rakumo",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 73,
-      "documentTypeCandidate": "growth_potential_document",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/40600/140120260319585315.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
+      "code": "9766",
+      "name": "コナミグループ",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.konami.com/corporate/ja/ir/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "HTTPError",
+      "error": "404 Client Error: Not Found for url: https://www.konami.com/corporate/ja/ir/",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9766-primary-review-v1.json"
       ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 473,
-      "requiredAction": "human_document_boundary_review",
       "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
+      "status": "primary_review_artifact_exists"
     },
     {
-      "code": "5368",
-      "name": "日本インシュレーション",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 73,
+      "code": "9831",
+      "name": "ヤマダホールディングス",
+      "queue": "pdf_identification_required",
+      "relevanceScore": null,
       "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/53680/140120260513530302.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 473,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "195A",
-      "name": "MUSCAT GROUP",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 68,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/195A0/140120260331595075.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 468,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "6579",
-      "name": "ログリー",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 68,
-      "documentTypeCandidate": "growth_potential_document",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/65790/140120260619574608.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 468,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "1377",
-      "name": "サカタのタネ",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 57,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://corporate.sakataseed.co.jp/news/2026/20260713.html",
-      "resolvedPdfUrl": "https://corporate.sakataseed.co.jp/news/2026/lum8rp00000002qe-att/20260713_sakata_release.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "plan_terms_present",
-        "multiple_financial_metric_terms",
-        "strategy_terms_present",
-        "multiple_year_references"
-      ],
-      "blockers": [
-        "very_short_without_strong_plan_terms"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 457,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "4911",
-      "name": "資生堂",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 57,
-      "documentTypeCandidate": "management_policy_or_strategy",
-      "sourceUrl": "https://corp.shiseido.com/jp/news/detail.html?n=00000000004093",
-      "resolvedPdfUrl": "https://corp.shiseido.com/jp/newsimg/4093_q3u08_jp.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "plan_terms_present",
-        "multiple_financial_metric_terms",
-        "strategy_terms_present",
-        "multiple_year_references"
-      ],
-      "blockers": [
-        "very_short_without_strong_plan_terms"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 457,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "8237",
-      "name": "松屋",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 57,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/82370/140120260414503553.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "plan_terms_present",
-        "multiple_financial_metric_terms",
-        "strategy_terms_present",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 457,
-      "requiredAction": "human_document_boundary_review",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "545A",
-      "name": "トランヴィア",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 44,
-      "documentTypeCandidate": "manual_classification_required",
-      "sourceUrl": "https://www.toranvia.co.jp/news/",
-      "resolvedPdfUrl": "https://www.toranvia.co.jp/news/files/20260401_en_news.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "plan_terms_present"
-      ],
+      "sourceUrl": "https://www.yamada-holdings.jp/ir/",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "pdf_not_found",
+      "reasons": [],
       "blockers": [],
       "errorType": null,
       "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 444,
-      "requiredAction": "human_document_boundary_review",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9831-primary-review-v1.json"
+      ],
       "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
+      "status": "primary_review_artifact_exists"
     },
     {
-      "code": "1419",
-      "name": "タマホーム",
-      "queue": "manual_source_relevance_check",
-      "relevanceScore": 30,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www.tamahome.jp/company/ir/release.html",
-      "resolvedPdfUrl": "https://www.tamahome.jp/company/ir/upload_file/tdnrelease/1419_20170714431559_P01_.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present"
+      "code": "9843",
+      "name": "ニトリホールディングス",
+      "queue": "source_recovery_required",
+      "relevanceScore": null,
+      "documentTypeCandidate": null,
+      "sourceUrl": "https://www.nitorihd.co.jp/division/strategy.html",
+      "resolvedPdfUrl": null,
+      "collectionStatus": "collection_failed",
+      "reasons": [],
+      "blockers": [],
+      "errorType": "ReadTimeout",
+      "error": "HTTPSConnectionPool(host='www.nitorihd.co.jp', port=443): Read timed out. (read timeout=45)",
+      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9843-primary-review-v1.json"
       ],
-      "blockers": [
-        "insufficient_extracted_text"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 430,
-      "requiredAction": "human_document_boundary_review",
       "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
+      "status": "primary_review_artifact_exists"
     },
     {
       "code": "9962",
@@ -661,299 +1379,11 @@
       "errorType": null,
       "error": null,
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/manual-source-relevance-check.json",
-      "priority": 425,
-      "requiredAction": "human_document_boundary_review",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9962-primary-review-v1.json"
+      ],
       "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "1414",
-      "name": "ショーボンドホールディングス",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www.sho-bondhd.jp/ir/library/plan/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "2326",
-      "name": "デジタルアーツ",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www.daj.jp/ir/management/message/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "3397",
-      "name": "トリドールホールディングス",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www.toridoll.com/ir/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "3659",
-      "name": "ネクソン",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "manual_classification_required",
-      "sourceUrl": "https://www.nexon.co.jp/ir/events-interviews/detail/?entry_id=652",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "3962",
-      "name": "チェンジホールディングス",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www.changeholdings.co.jp/ir/mid-term/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "4011",
-      "name": "ヘッドウォータース",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "manual_classification_required",
-      "sourceUrl": "https://www.headwaters.co.jp/ir/message/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "4013",
-      "name": "勤次郎",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "growth_potential_document",
-      "sourceUrl": "https://www.kinjiro-e.com/ir/message/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "4452",
-      "name": "花王",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www.kao.com/jp/corporate/strategy-and-mid-term-plan/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "6196",
-      "name": "ストライクグループ",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "management_policy_or_strategy",
-      "sourceUrl": "https://www.strike.co.jp/group/ir/management/outline.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "6594",
-      "name": "ニデック",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www.nidec.com/jp/ir/management/strategy/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "6861",
-      "name": "キーエンス",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "management_policy_or_strategy",
-      "sourceUrl": "https://www.keyence.co.jp/investor/capital-allocation-policy.jsp",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "8252",
-      "name": "丸井グループ",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www.0101maruigroup.co.jp/ir/management/plan.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "9831",
-      "name": "ヤマダホールディングス",
-      "queue": "pdf_identification_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": "formal_management_plan",
-      "sourceUrl": "https://www.yamada-holdings.jp/ir/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "pdf_not_found",
-      "reasons": [],
-      "blockers": [],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
+      "status": "primary_review_artifact_exists"
     },
     {
       "code": "9984",
@@ -969,235 +1399,14 @@
       "errorType": null,
       "error": null,
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/pdf-identification-required.json",
-      "priority": 300,
-      "requiredAction": "identify_official_pdf_or_html_source",
+      "reviewFiles": [
+        "operations/quality-rebase/phase2/primary-reviews/9984-primary-review-v1.json"
+      ],
       "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "544A",
-      "name": "GMSグループ",
-      "queue": "probable_wrong_document",
-      "relevanceScore": 21,
-      "documentTypeCandidate": "management_policy_or_strategy",
-      "sourceUrl": "https://www.globalmolding-solutions.com/topics/14.html",
-      "resolvedPdfUrl": "https://www.globalmolding-solutions.com/uploads/2026/03/1990776736ca90501d9dcb2407d1e194953423b7.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "plan_terms_present"
-      ],
-      "blockers": [
-        "very_short_without_strong_plan_terms"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
-      "priority": 221,
-      "requiredAction": "discard_wrong_candidate_and_research_official_ir",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "2438",
-      "name": "アスカネット",
-      "queue": "probable_wrong_document",
-      "relevanceScore": 18,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/24380/140120260608565644.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/24380/140120260608565644.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected",
-        "severe_irrelevance_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
-      "priority": 218,
-      "requiredAction": "discard_wrong_candidate_and_research_official_ir",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "3391",
-      "name": "ツルハホールディングス",
-      "queue": "probable_wrong_document",
-      "relevanceScore": 13,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www.tsuruha-hd.co.jp/ir/vision/",
-      "resolvedPdfUrl": "https://contents.xj-storage.jp/xcontents/AS70521/b70f272c/3c0d/4b9c/9d7e/b9e307fa5738/20240509162030786s.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected",
-        "severe_irrelevance_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
-      "priority": 213,
-      "requiredAction": "discard_wrong_candidate_and_research_official_ir",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "7181",
-      "name": "かんぽ生命保険",
-      "queue": "probable_wrong_document",
-      "relevanceScore": 8,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/71810/140120260514535820.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/71810/140120260514535820.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected",
-        "severe_irrelevance_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
-      "priority": 208,
-      "requiredAction": "discard_wrong_candidate_and_research_official_ir",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "8282",
-      "name": "ケーズホールディングス",
-      "queue": "probable_wrong_document",
-      "relevanceScore": 3,
-      "documentTypeCandidate": "plan_revision_or_update",
-      "sourceUrl": "https://www2.jpx.co.jp/disc/82820/140120260507518657.pdf",
-      "resolvedPdfUrl": "https://www2.jpx.co.jp/disc/82820/140120260507518657.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected",
-        "severe_irrelevance_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
-      "priority": 203,
-      "requiredAction": "discard_wrong_candidate_and_research_official_ir",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "280A",
-      "name": "TMH",
-      "queue": "probable_wrong_document",
-      "relevanceScore": -2,
-      "documentTypeCandidate": "growth_potential_document",
-      "sourceUrl": "https://ssl4.eir-parts.net/doc/280A/tdnet/2764303/00.pdf",
-      "resolvedPdfUrl": "https://ssl4.eir-parts.net/doc/280A/tdnet/2764303/00.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "strong_plan_terms_present",
-        "multiple_financial_metric_terms",
-        "multiple_strategy_terms",
-        "multiple_year_references",
-        "substantive_page_count",
-        "substantive_text_volume"
-      ],
-      "blockers": [
-        "negative_document_terms_detected",
-        "severe_irrelevance_terms_detected"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
-      "priority": 198,
-      "requiredAction": "discard_wrong_candidate_and_research_official_ir",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "4063",
-      "name": "信越化学工業",
-      "queue": "probable_wrong_document",
-      "relevanceScore": -66,
-      "documentTypeCandidate": "management_policy_or_strategy",
-      "sourceUrl": "https://www.shinetsu.co.jp/jp/ir/policy/",
-      "resolvedPdfUrl": "https://www.shinetsu.co.jp/wp-content/uploads/2026/02/%E4%BC%91%E6%97%A5%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf",
-      "collectionStatus": "collection_complete_primary_human_review_pending",
-      "reasons": [
-        "expected_title_present",
-        "plan_terms_present"
-      ],
-      "blockers": [
-        "negative_document_terms_detected",
-        "severe_irrelevance_terms_detected",
-        "very_short_without_strong_plan_terms"
-      ],
-      "errorType": null,
-      "error": null,
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/probable-wrong-document.json",
-      "priority": 134,
-      "requiredAction": "discard_wrong_candidate_and_research_official_ir",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
+      "status": "primary_review_artifact_exists"
+    }
+  ],
+  "remaining": [
     {
       "code": "166A",
       "name": "タスキホールディングス",
@@ -1271,28 +1480,6 @@
       "relevanceScore": null,
       "documentTypeCandidate": null,
       "sourceUrl": "https://www2.jpx.co.jp/disc/22290/140120260327590826.pdf",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "2321",
-      "name": "ソフトフロントホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.softfront.co.jp/ir-news/",
       "resolvedPdfUrl": null,
       "collectionStatus": "collection_failed",
       "reasons": [],
@@ -1441,28 +1628,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "3151",
-      "name": "バイタルケーエスケー・ホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.vitalksk.co.jp/ir/management/plan2027/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "3302",
       "name": "帝国繊維",
       "queue": "source_recovery_required",
@@ -1595,28 +1760,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "4004",
-      "name": "レゾナック・ホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.resonac.com/jp/corporate/management-policy.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "404 Client Error: Not Found for url: https://www.resonac.com/jp/corporate/management-policy.html",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "4188",
       "name": "三菱ケミカルグループ",
       "queue": "source_recovery_required",
@@ -1629,28 +1772,6 @@
       "blockers": [],
       "errorType": "DependencyError",
       "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "4523",
-      "name": "エーザイ",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.eisai.co.jp/sustainability/management/strategy/index.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "403 Client Error: Forbidden for url: https://www.eisai.co.jp/sustainability/management/strategy/index.html",
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
       "priority": 100,
       "requiredAction": "recover_or_replace_official_source",
@@ -1881,50 +2002,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "6497",
-      "name": "ハマイ",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.hamai-net.com/corporation/ir/plan-2226/06.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "ConnectTimeout",
-      "error": "HTTPSConnectionPool(host='www.hamai-net.com', port=443): Max retries exceeded with url: /corporation/ir/plan-2226/06.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hamai-net.com', port=443) at 0x7f1eab91a390>, 'Connection to www.hamai-net.com timed out. (connect timeout=45)'))",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "6501",
-      "name": "日立製作所",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.hitachi.co.jp/New/cnews/month/2025/04/0428/f_0428pre.pdf",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "6523",
       "name": "PHCホールディングス",
       "queue": "source_recovery_required",
@@ -2013,28 +2090,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "7752",
-      "name": "リコー",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://jp.ricoh.com/-/media/Ricoh/Sites/jp_ricoh/IR/events/2025/pdf/r07_keiei.pdf",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "7994",
       "name": "オカムラ",
       "queue": "source_recovery_required",
@@ -2069,28 +2124,6 @@
       "blockers": [],
       "errorType": "DependencyError",
       "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "8058",
-      "name": "三菱商事",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.mitsubishicorp.com/jp/ja/news/release/2025/20250403001.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "403 Client Error: Forbidden for url: https://www.mitsubishicorp.com/jp/ja/news/release/2025/20250403001.html",
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
       "priority": 100,
       "requiredAction": "recover_or_replace_official_source",
@@ -2145,28 +2178,6 @@
       "deepVerificationApproved": false
     },
     {
-      "code": "8591",
-      "name": "オリックス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.orix.co.jp/grp/company/ir/growth_strategy/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "DependencyError",
-      "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
       "code": "9336",
       "name": "大栄環境",
       "queue": "source_recovery_required",
@@ -2179,28 +2190,6 @@
       "blockers": [],
       "errorType": "DependencyError",
       "error": "cryptography>=3.1 is required for AES algorithm",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "9413",
-      "name": "テレビ東京ホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.txhd.co.jp/ir/management/plan/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "404 Client Error: Not Found for url: https://www.txhd.co.jp/ir/management/plan/",
       "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
       "priority": 100,
       "requiredAction": "recover_or_replace_official_source",
@@ -2231,94 +2220,6 @@
       "automaticFactCompletionAllowed": false,
       "automaticApprovalAllowed": false,
       "deepVerificationApproved": false
-    },
-    {
-      "code": "9627",
-      "name": "アインホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.ainj.co.jp/corporate/ir/management/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "404 Client Error: Not Found for url: https://www.ainj.co.jp/corporate/ir/management/",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "9699",
-      "name": "ニシオホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.nishio-holdings.co.jp/ir/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "ConnectionError",
-      "error": "HTTPSConnectionPool(host='www.nishio-holdings.co.jp', port=443): Max retries exceeded with url: /ir/ (Caused by NameResolutionError(\"HTTPSConnection(host='www.nishio-holdings.co.jp', port=443): Failed to resolve 'www.nishio-holdings.co.jp' ([Errno -2] Name or service not known)\"))",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "9766",
-      "name": "コナミグループ",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.konami.com/corporate/ja/ir/",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "HTTPError",
-      "error": "404 Client Error: Not Found for url: https://www.konami.com/corporate/ja/ir/",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
-    },
-    {
-      "code": "9843",
-      "name": "ニトリホールディングス",
-      "queue": "source_recovery_required",
-      "relevanceScore": null,
-      "documentTypeCandidate": null,
-      "sourceUrl": "https://www.nitorihd.co.jp/division/strategy.html",
-      "resolvedPdfUrl": null,
-      "collectionStatus": "collection_failed",
-      "reasons": [],
-      "blockers": [],
-      "errorType": "ReadTimeout",
-      "error": "HTTPSConnectionPool(host='www.nitorihd.co.jp', port=443): Read timed out. (read timeout=45)",
-      "auditSourceFile": "operations/quality-rebase/phase2/source-relevance-audit/source-recovery-required.json",
-      "priority": 100,
-      "requiredAction": "recover_or_replace_official_source",
-      "previousWaveAssignments": [],
-      "status": "source_remediation_required_before_primary_review",
-      "automaticFactCompletionAllowed": false,
-      "automaticApprovalAllowed": false,
-      "deepVerificationApproved": false
     }
   ],
   "nextActionPolicy": {
@@ -2330,5 +2231,7 @@
     "automaticApprovalAllowed": false,
     "deepVerificationApproved": false
   },
-  "warnings": []
+  "warnings": [
+    "The effective aggregate primary-review count differs from unique canonical primary-review artifacts. Do not use the aggregate count as completion evidence until the gap is reconciled."
+  ]
 }

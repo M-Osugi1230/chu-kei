@@ -1,11 +1,11 @@
 {
   "schemaVersion":"phase2-remaining-exception-request-v1",
-  "requestedAt":"2026-08-23T13:38:00+09:00",
+  "requestedAt":"2026-08-23T14:12:00+09:00",
   "status":"requested",
   "writeChanges":true,
-  "sourceRecoveryRerun":true,
+  "sourceRecoveryRerun":false,
   "automaticFactCompletionAllowed":false,
   "automaticApprovalAllowed":false,
   "deepVerificationApproved":0,
-  "purpose":"Phase2 source_recovery_required Batch4で5社（4061、9413、9627、6497、4004）を手動復旧しcanonical一次レビューを404社へ増加。残る未レビューsource_recovery_required企業のみを、PDF crypto対応済みの隔離リカバリ収集へ投入し、その後に例外台帳・completion ledger・queue coverageを再集計する。既存bulk collectionとcanonical reviewは上書きしない。automatic fact completion、automatic approval、Deep Verification自動昇格は禁止する。"
+  "purpose":"Phase2 source_recovery_requiredについて、非AES失敗5社の手動復旧とAES再取得成功群5社の人手レビューを完了し、canonical一次レビューを414社へ増加させた。収集成功のみでは完了扱いせず、現行性・計画境界・定量KPIを人手確認した成果物だけを正本として、例外台帳・completion ledger・queue coverageを再集計し残36社を確定する。automatic fact completion、automatic approval、Deep Verification自動昇格は禁止する。"
 }

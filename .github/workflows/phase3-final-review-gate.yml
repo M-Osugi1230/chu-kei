@@ -1,0 +1,51 @@
+name: Phase 3 Final Review Gate
+
+on:
+  pull_request:
+    paths:
+      - 'operations/quality-rebase/phase2/**'
+      - 'operations/quality-rebase/phase3/**'
+      - 'scripts/build_phase3_final_review_queue_v1.mjs'
+      - 'scripts/validate_phase3_final_review_queue_v1.mjs'
+      - '.github/workflows/phase3-final-review-gate.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'operations/quality-rebase/phase2/**'
+      - 'operations/quality-rebase/phase3/**'
+      - 'scripts/build_phase3_final_review_queue_v1.mjs'
+      - 'scripts/validate_phase3_final_review_queue_v1.mjs'
+      - '.github/workflows/phase3-final-review-gate.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: phase3-final-review-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  final-review-queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Build Phase 3 final-review queue
+        run: node scripts/build_phase3_final_review_queue_v1.mjs
+      - name: Validate Phase 3 governance and counts
+        run: node scripts/validate_phase3_final_review_queue_v1.mjs
+      - name: Upload Phase 3 queue evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-final-review-queue
+          path: operations/quality-rebase/phase3/generated/final-review-queue-v1.json
+          if-no-files-found: error
+          retention-days: 90

@@ -85,8 +85,13 @@ assert.deepEqual(release.repository.forms,['general-inquiry','spot-report-reques
 assert.equal(release.repository.historyCompanies,history.companies.length);
 assert.equal(release.repository.historyPlans,history.companies.reduce((sum,company)=>sum+company.plans.length,0));
 assert.equal(release.repository.progressEvents,events.events.length);
-assert.equal(release.sync.status,'quality_rebase_in_progress');
-assert.equal(release.publicSite.verificationIssue,49);
+assert.equal(release.sync.status,'phase3_final_verification_and_public_release_alignment');
+assert.equal(release.repository.primaryReviewCompleteIncludingPhase1,500);
+assert.equal(release.repository.remainingPhase2PrimaryReviews,0);
+assert.equal(release.repository.readyForSeparateFinalReview,60);
+assert.equal(release.repository.deepVerificationExplicitBlockerCompanies,1);
+assert.equal(release.publicSite.verificationStatus,'production_behind_repository_quality_state');
+assert.equal(release.publicSite.company421A.remainingBlocker,'post_publication_link_and_render_check');
 
 assert.equal(intakeExample.schemaVersion,'commercial-intake-v1');
 assert.match(intakeExample.requestId,/^REQ-[0-9]{8}-[A-Z0-9]{6}$/);

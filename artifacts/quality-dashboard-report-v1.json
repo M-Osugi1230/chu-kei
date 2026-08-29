@@ -1,0 +1,105 @@
+{
+  "version": "quality-dashboard-v1",
+  "checkedAt": "2026-08-29T15:04:09.817Z",
+  "reviewQueue": {
+    "core": 3000,
+    "detailed": 0,
+    "structuredReviewableTotal": 3000,
+    "structuredReviewableMinimum": 305,
+    "priorityA": 0,
+    "priorityB": 0,
+    "detailedPageEvidenceMaximum": 2
+  },
+  "qualityDebtBudget": {
+    "publicationDateMaximum": 1,
+    "pageEvidenceMaximum": 14,
+    "publicationDateActual": 0,
+    "pageEvidenceActual": 0
+  },
+  "passed": 16,
+  "total": 16,
+  "allPassed": true,
+  "checks": [
+    {
+      "name": "quality source data readable",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality dashboard HTML exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality dashboard JavaScript exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality dashboard CSS exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "quality debt budget readable",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "structured reviewable company pool does not regress",
+      "ok": true,
+      "detail": "core=3000, detailed=0, total=3000, minimum=305"
+    },
+    {
+      "name": "priority A and B partition review queue",
+      "ok": true,
+      "detail": "A=0, B=0"
+    },
+    {
+      "name": "priority B within detailed evidence debt budget",
+      "ok": true,
+      "detail": "actual=0, maximum=2"
+    },
+    {
+      "name": "priority A reflects evidence improvements",
+      "ok": true,
+      "detail": "actual=0, minimum=-2"
+    },
+    {
+      "name": "production publication date gaps within quality debt budget",
+      "ok": true,
+      "detail": "actual=0, maximum=1"
+    },
+    {
+      "name": "production primary evidence gaps within quality debt budget",
+      "ok": true,
+      "detail": "actual=0, maximum=14"
+    },
+    {
+      "name": "dashboard linked from main navigation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dashboard explains no automatic promotion",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dashboard requires human review",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dashboard verifies bundle SHA-256",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dashboard has no recommendation language",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "issues": []
+}

@@ -4,13 +4,18 @@
     "independentReviewStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
     "deepVerificationStatusFile": "operations/quality-rebase/phase2/deep-verification-status-v1.json",
     "effectiveStatusFile": "operations/quality-rebase/phase2/effective-status-v1.json",
+    "finalReviewDirectory": "operations/quality-rebase/phase3/final-reviews",
     "independentStatusUpdatedAt": "2026-08-08T21:25:00+09:00",
     "phase2PrimaryReviewComplete": 450,
     "primaryReviewCompleteIncludingPhase1": 500
   },
   "counts": {
     "independentReviewComplete": 61,
-    "readyForSeparateFinalReview": 60,
+    "initialReadyForSeparateFinalReview": 60,
+    "pendingSeparateFinalReview": 60,
+    "approvedBySeparateFinalReview": 0,
+    "deferredAfterFinalReview": 0,
+    "finalReviewCompleted": 0,
     "companiesWithExplicitFinalBlockers": 1,
     "deepVerificationApproved": 0
   },
@@ -26,10 +31,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "A",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -43,10 +49,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "A",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -60,10 +67,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "A",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -77,10 +85,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "A",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -94,10 +103,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "A",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -111,10 +121,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "A",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -128,10 +139,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "A",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -145,10 +157,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "A",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -162,10 +175,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "A",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -179,10 +193,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -196,10 +211,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -213,10 +229,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -230,10 +247,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -247,10 +265,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -264,10 +283,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -281,10 +301,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -298,10 +319,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -315,10 +337,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -332,10 +355,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -349,10 +373,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -366,10 +391,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -383,10 +409,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -400,10 +427,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -417,10 +445,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -434,10 +463,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -451,10 +481,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -468,10 +499,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -485,10 +517,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -502,10 +535,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -519,10 +553,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -536,10 +571,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -553,10 +589,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -570,10 +607,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -587,10 +625,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -604,10 +643,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -621,10 +661,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -638,10 +679,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -655,10 +697,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -672,10 +715,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -689,10 +733,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -706,10 +751,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -723,10 +769,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -740,10 +787,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -757,10 +805,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -774,10 +823,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -791,10 +841,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -808,10 +859,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -825,10 +877,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -842,10 +895,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -859,10 +913,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -876,10 +931,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -893,10 +949,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -910,10 +967,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -927,10 +985,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -944,10 +1003,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -961,10 +1021,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -978,10 +1039,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -995,10 +1057,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -1012,10 +1075,11 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     },
     {
@@ -1029,13 +1093,16 @@
       "blockers": [],
       "blockerCount": 0,
       "priority": "B",
-      "finalReviewStatus": "pending_separate_final_reviewer",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "pending_separate_final_reviewer",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     }
   ],
+  "approvedBySeparateFinalReview": [],
+  "deferredAfterFinalReview": [],
   "blockedBeforeFinalReview": [
     {
       "code": "421A",
@@ -1050,10 +1117,11 @@
       ],
       "blockerCount": 1,
       "priority": "blocked",
-      "finalReviewStatus": "blocked_before_final_review",
       "requiredReviewRole": "final_reviewer",
       "selfApprovalAllowed": false,
       "automaticApprovalAllowed": false,
+      "finalReviewStatus": "blocked_before_final_review",
+      "finalReviewFile": null,
       "deepVerificationApproved": false
     }
   ],
@@ -1065,7 +1133,6 @@
     "independentReviewerMaySelfApproveFinalGate": false,
     "automaticFactCompletionAllowed": false,
     "automaticApprovalAllowed": false,
-    "automaticProductionPromotionAllowed": false,
-    "deepVerificationApproved": false
+    "automaticProductionPromotionAllowed": false
   }
 }

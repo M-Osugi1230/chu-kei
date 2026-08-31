@@ -1,10 +1,10 @@
 {
   "schemaVersion": "site-release-status-v1",
-  "updatedAt": "2026-08-16",
+  "updatedAt": "2026-08-24",
   "repository": {
-    "release": "Phase 2 canonical-count reconciliation / Wave39 remediation prep",
-    "lastVerifiedMainSha": "b6b6c5f2b2eab58d22cf5a53c8e42ab19a9aa637",
-    "launchCandidateBranch": "agent/phase2-wave39",
+    "release": "Phase 2 primary review complete / Phase 3 final verification kickoff",
+    "lastVerifiedMainSha": "ec922aea0b2ca89b881ddd77d5376aa70fb9cb53",
+    "launchCandidateBranch": "agent/phase3-independent-visual-batch01",
     "companies": 3000,
     "sourceConfirmed": 3000,
     "structured": 315,
@@ -33,16 +33,18 @@
       "operatorDisclosure": "Chu-kei事務局"
     },
     "phase1PrimaryReviewComplete": 50,
-    "phase2PrimaryReviewComplete": 360,
-    "primaryReviewCompleteIncludingPhase1": 410,
+    "phase2PrimaryReviewComplete": 450,
+    "primaryReviewCompleteIncludingPhase1": 500,
     "primaryReviewTargetIncludingPhase1": 500,
-    "primaryReviewCompletionRatePercent": 82.0,
-    "remainingPhase2PrimaryReviews": 90,
-    "normalPrimaryReviewCandidatesRemaining": 4,
-    "exceptionCandidatesRemaining": 86,
+    "primaryReviewCompletionRatePercent": 100.0,
+    "remainingPhase2PrimaryReviews": 0,
+    "normalPrimaryReviewCandidatesRemaining": 0,
+    "exceptionCandidatesRemaining": 0,
     "independentReviewComplete": 61,
-    "independentReviewPending": 1,
-    "independentVisualReviewPending": 306,
+    "independentReviewPending": 0,
+    "independentVisualReviewPending": 396,
+    "deepVerificationExplicitBlockerCompanies": 1,
+    "readyForSeparateFinalReview": 60,
     "deepVerified": 0,
     "reAuditPool": 315,
     "templateReviewRequired": 2685,
@@ -51,28 +53,45 @@
     "phase2Queued": 450,
     "knownBrokenLinks": 6,
     "countingPolicy": "company_code_unique_canonical_review_artifact",
-    "previousInflatedPhase2PrimaryReviewComplete": 370
+    "phase3StatusFile": "operations/quality-rebase/phase3/status-v1.json"
   },
   "publicSite": {
     "url": "https://chu-kei.com/",
     "release": "Quality Rebase後のGitHub正本と公開品質表示の完全同期前",
-    "verifiedAt": null,
-    "verificationStatus": "quality_rebase_sync_pending",
-    "verificationIssue": 49
+    "verifiedAt": "2026-08-24T14:27:00+09:00",
+    "verificationStatus": "production_behind_repository_quality_state",
+    "observedCompanies": 570,
+    "observedDetailedCompanies": 100,
+    "observedDataUpdateLabel": "2026-07-11",
+    "repositoryCompanies": 3000,
+    "company421A": {
+      "cardConfirmed": true,
+      "reviewedTargetsVisible": true,
+      "correctedSourceLinkConfirmed": false,
+      "detailRenderConfirmed": false,
+      "remainingBlocker": "post_publication_link_and_render_check"
+    }
   },
   "sync": {
-    "status": "quality_rebase_in_progress",
-    "label": "品質再監査・公開同期準備中",
+    "status": "phase3_final_verification_and_public_release_alignment",
+    "label": "Phase 3最終検証・公開同期中",
+    "completed": [
+      "Phase 1一次レビュー50/50社",
+      "Phase 2一次レビュー450/450社",
+      "Phase 1込み一次レビュー500/500社",
+      "通常一次レビュー候補0社",
+      "例外一次レビュー候補0社"
+    ],
     "pending": [
-      "Phase 2残り90社を会社コード単位のcanonical一次レビュー成果物で完了させ、Phase 1込み500社へ到達する",
-      "通常候補4社と例外候補86社を分離して処理する",
-      "独立図表レビューpending 306社を並行処理する",
-      "独立レビュー完了企業からDeep Verification最終承認工程へ進める",
+      "独立レビュー完了61社をblocker有無で再走査し、blockerなし60社を別役割final reviewerへ回す",
+      "421Aの訂正後36ページ版公式PDFリンクと本番詳細表示を確認できた場合のみpost_publication blockerを解除する",
+      "独立図表レビューpending 396社を並行処理する",
+      "GitHub正本3,000社と公開サイト570社の差分を解消する",
+      "GitHub正本の品質状態・資料区分・出典・確認日をchu-kei.comへ反映する",
+      "公開反映後にURL・検索・企業詳細・公式資料リンク・年度・単位・レンダリングを再監査する",
       "決算短信起点610社から正式中計を再探索する",
       "証跡候補116社をレビューする",
-      "既知404 6件を修復する",
-      "GitHub正本の品質状態・資料区分・出典をchu-kei.comへ反映する",
-      "公開反映後にURL・検索・フィルタ・レンダリングを再監査する"
+      "既知404 6件を修復する"
     ]
   }
 }

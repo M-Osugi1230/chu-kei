@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "quality-rebase-phase3-final-review-v1",
+  "company": {
+    "code": "2146",
+    "name": "UTグループ"
+  },
+  "decision": "approved",
+  "reviewedAt": "2026-08-31T22:57:38+09:00",
+  "reviewer": {
+    "role": "final_reviewer",
+    "separateFromPrimaryReviewer": true,
+    "separateFromIndependentReviewer": true
+  },
+  "evidence": {
+    "reviewedFiles": [
+      "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
+      "operations/quality-rebase/phase2/independent-completions/2146-independent-completion-v1.json",
+      "operations/quality-rebase/phase2/independent/2146-independent-review-v1.json",
+      "operations/quality-rebase/phase2/source-repairs/2146-source-resolution-v1.json",
+      "operations/quality-rebase/phase2/source-repairs/2146-independent-source-resolution-v1.json",
+      "operations/quality-rebase/phase2/source-repairs/2146-independent-evidence-correction-v1.json",
+      "operations/quality-rebase/phase2/bulk-collection/batch-02/wave-01/2146/collection.json",
+      "operations/quality-rebase/phase2/independent-review-status-v1.json",
+      "operations/quality-rebase/phase2/deep-verification-status-v1.json"
+    ],
+    "canonicalSource": {
+      "title": "第5次中期経営計画の見直し",
+      "publishedDate": "2025-11-13",
+      "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/11/release_20251113_05.pdf",
+      "pdfSha256": "0b7affcb94983159ba2131dd232aff43f93a83a97d650117e14d7131351c7a79",
+      "pdfBytes": 1469521,
+      "pageCount": 10
+    },
+    "basePlanSource": {
+      "title": "第5次中期経営計画",
+      "publishedDate": "2025-05-14",
+      "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2025/05/release_20250519_01.pdf",
+      "pdfSha256": "ce1864b730d54fe68db3cd7e52b974fe21e0ca1c49743bc25d4da198d57f91f5",
+      "pdfBytes": 2707576,
+      "pageCount": 43,
+      "role": "見直し通知で変更なしとされた経営ビジョン・事業戦略の基礎正本"
+    },
+    "sourceIdentityProbe": {
+      "workflowRunId": 31252140104,
+      "basePlanSha256Confirmed": true,
+      "revisionSha256Confirmed": true
+    },
+    "collectionIntegrity": {
+      "sourceUrlMatched": true,
+      "pdfSha256Matched": true,
+      "pageCountMatched": true
+    },
+    "visualReview": {
+      "basePlanFullSequenceRendered": true,
+      "basePlanRenderedPageCount": 43,
+      "revisionFullSequenceRendered": true,
+      "revisionRenderedPageCount": 10,
+      "renderWorkflowRunId": 31253620625,
+      "renderArtifactId": 9020752641,
+      "renderArtifactDigest": "sha256:525a34d52e465d99089cb5d0aa52f9df55c8a9bd997afe1a1d204501a58e4a22"
+    },
+    "pageLevelEvidence": [
+      {
+        "check": "source_identity",
+        "pdfPages": [
+          1,
+          10
+        ]
+      },
+      {
+        "check": "current_and_superseded_plan_boundary",
+        "pdfPages": [
+          1,
+          2
+        ]
+      },
+      {
+        "check": "base_plan_strategy_continuity",
+        "document": "basePlanSource",
+        "pdfPages": [
+          1,
+          2,
+          13,
+          19,
+          21,
+          31,
+          35,
+          38,
+          41,
+          42
+        ]
+      },
+      {
+        "check": "revised_financial_targets",
+        "pdfPages": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "check": "human_capital_targets",
+        "pdfPages": [
+          4,
+          9
+        ]
+      },
+      {
+        "check": "capital_efficiency",
+        "pdfPages": [
+          9
+        ]
+      },
+      {
+        "check": "shareholder_return",
+        "pdfPages": [
+          9,
+          10
+        ]
+      }
+    ]
+  },
+  "findings": {
+    "sourceIdentity": "第5次中期経営計画の見直し10ページPDFを現行数値計画の正本とし、第5次中期経営計画43ページPDFを変更なしとされた経営ビジョン・事業戦略の基礎正本として確認した。公式URL、SHA-256、byte数、ページ数はsource resolution、independent completion、collection metadata間で一致する。",
+    "currentVsSupersededBoundary": "2025年5月の第5次中計を基礎計画、2025年11月の見直しを現行数値計画として分離した。一次レビューと独立レビューパケットが参照する旧第4次ローリングプラン、および収集器が誤選択した2026年4月の長期経営ビジョン資料は、独立source resolutionとevidence correctionで明示的にsupersededとされており、現行事実には使用していない。",
+    "yearUnitScope": "見直し後の2026年3月期から2029年3月期までの年度別目標を億円単位で確認し、売上高、営業利益、親会社株主に帰属する当期純利益の範囲を区別した。2029年3月期の技術職社員数38,000人を現行目標として確認した。",
+    "strategyAndMetrics": "第5次中計の経営ビジョン・方針は見直しで変更されないことを確認した。基礎計画では、人的資本投資を通じた持続的な事業成長基盤とはたらき方のプラットフォームを中核に、モーター・エナジー、セミコンダクター、エージェント、ネクストキャリアの4事業戦略を区分している。見直し後の2029年3月期目標は売上高1,850億円、営業利益150億円、親会社株主に帰属する当期純利益91億円、技術職社員数38,000人であり、旧第4次ローリングの2030年目標および2027年値を除外した。",
+    "capitalAndShareholderReturn": "中計期間の人的資本への株式報酬最大約100億円、ROE20%の維持・向上、Net D/Eレシオ0.5倍以下の維持を現行の資本・財務方針として確認した。株主還元は配当性向100%を基本方針とし、株式分割後ベースの1株当たり最低配当10円である。旧第4次ローリングの総還元性向60%以上および最低配当168.19円とは定義・対象を分離した。",
+    "roleSeparation": "一次レビューはprimary_reviewer、独立completionはindependent_reviewerとして記録され、本記録は別役割のfinal_reviewerが作成した。独立completionのfinalDeepVerificationBlockersは空であり、Phase 2 statusではfull_base_and_revision_visual_sequence_recheckが解消済みとして記録されている。"
+  },
+  "checks": {
+    "sourceIdentityConfirmed": true,
+    "currentVsSupersededPlanBoundaryConfirmed": true,
+    "yearUnitScopeConfirmed": true,
+    "strategyMetricsConfirmed": true,
+    "capitalAndReturnPolicyConfirmed": true,
+    "primaryReviewCompleteConfirmed": true,
+    "independentReviewCompleteConfirmed": true,
+    "roleSeparationConfirmed": true,
+    "finalBlockersAbsentConfirmed": true,
+    "auditRecordComplete": true
+  },
+  "reasons": [],
+  "policy": {
+    "selfApprovalAllowed": false,
+    "automaticApprovalAllowed": false
+  },
+  "deepVerificationApproved": true
+}

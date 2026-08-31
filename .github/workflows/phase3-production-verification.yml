@@ -1,0 +1,66 @@
+name: Phase 3 Production Verification
+
+on:
+  pull_request:
+    paths:
+      - 'operations/quality-rebase/phase3/**'
+      - 'tests/e2e/phase3-production.spec.mjs'
+      - 'playwright.production.config.mjs'
+      - '.github/workflows/phase3-production-verification.yml'
+  schedule:
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+    inputs:
+      require_alignment:
+        description: 'Fail unless production is aligned and 421A corrected source is verifiable'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: phase3-production-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  production-observation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install Playwright test runner
+        run: npm install --no-save --ignore-scripts --no-audit --no-fund @playwright/test@1.53.0
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Observe production alignment and 421A corrected-source state
+        id: production
+        continue-on-error: true
+        env:
+          CHUKEI_PRODUCTION_URL: https://chu-kei.com
+          REQUIRE_PHASE3_PRODUCTION_ALIGNMENT: ${{ github.event_name == 'workflow_dispatch' && inputs.require_alignment && 'true' || 'false' }}
+        run: npx playwright test --config=playwright.production.config.mjs
+      - name: Enforce strict production alignment when explicitly requested
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.require_alignment }}
+        shell: bash
+        run: |
+          if [ "${{ steps.production.outcome }}" != "success" ]; then
+            echo 'Phase 3 strict production verification failed.' >&2
+            exit 1
+          fi
+      - name: Upload production verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-production-verification
+          path: |
+            playwright-production-report/
+            test-results/
+          if-no-files-found: warn
+          retention-days: 90

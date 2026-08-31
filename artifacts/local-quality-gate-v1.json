@@ -1,0 +1,74 @@
+{
+  "version": "local-quality-gate-v1",
+  "checkedAt": "2026-08-31T14:01:26.958Z",
+  "mode": "full",
+  "passed": 8,
+  "total": 8,
+  "allPassed": true,
+  "results": [
+    {
+      "name": "Research Platform v2",
+      "passed": true,
+      "status": 0,
+      "durationMs": 205,
+      "stdout": "{\n  \"passed\": true,\n  \"companies\": 3000,\n  \"production\": 0,\n  \"historyCompanies\": 1,\n  \"plans\": 2,\n  \"progressEvents\": 9,\n  \"commercialOffers\": 3,\n  \"forms\": 3,\n  \"releaseStatus\": \"phase3_final_verification_and_public_release_alignment\",\n  \"automaticPromotionAllowed\": false,\n  \"pilotReviewStatus\": \"in_review\",\n  \"intakeExample\": \"REQ-20260712-EXAMPL\"\n}",
+      "stderr": ""
+    },
+    {
+      "name": "Quality debt budget",
+      "passed": true,
+      "status": 0,
+      "durationMs": 403,
+      "stdout": "{\n  \"budgetMode\": \"enforced\",\n  \"effectiveAsOfDate\": \"2026-08-31\",\n  \"totalDebtItems\": 3000,\n  \"affectedCompanies\": 3000,\n  \"affectedByStage\": {\n    \"core\": 3000,\n    \"detailed_extracted\": 0,\n    \"source_indexed\": 0,\n    \"jpx_indexed\": 0\n  },\n  \"debtCounts\": {\n    \"deepVerification.notApproved\": 3000\n  },\n  \"regressions\": [],\n  \"improvements\": [\n    {\n      \"dimension\": \"core.missingPageEvidence\",\n      \"actual\": 0,\n      \"maximum\": 14,\n      \"decrease\": 14\n    },\n    {\n      \"dimension\": \"core.missingPublicationDate\",\n      \"actual\": 0,\n      \"maximum\": 1,\n      \"decrease\": 1\n    },\n    {\n      \"dimension\": \"detailed.missingPageEvidence\",\n      \"actual\": 0,\n      \"maximum\": 2,\n      \"decrease\": 2\n    }\n  ]\n}\nReport: /Users/osugimurata/.ule/api-workspaces/chu-kei-phase3/artifacts/quality-debt-report-v1.json\nItems: /Users/osugimurata/.ule/api-workspaces/chu-kei-phase3/artifacts/quality-debt-items-v1.csv",
+      "stderr": ""
+    },
+    {
+      "name": "Quality dashboard",
+      "passed": true,
+      "status": 0,
+      "durationMs": 313,
+      "stdout": "PASS quality source data readable\nPASS quality dashboard HTML exists\nPASS quality dashboard JavaScript exists\nPASS quality dashboard CSS exists\nPASS quality debt budget readable\nPASS structured reviewable company pool does not regress: core=3000, detailed=0, total=3000, minimum=305\nPASS priority A and B partition review queue: A=0, B=0\nPASS priority B within detailed evidence debt budget: actual=0, maximum=2\nPASS priority A reflects evidence improvements: actual=0, minimum=-2\nPASS production publication date gaps within quality debt budget: actual=0, maximum=1\nPASS production primary evidence gaps within quality debt budget: actual=0, maximum=14\nPASS dashboard linked from main navigation\nPASS dashboard explains no automatic promotion\nPASS dashboard requires human review\nPASS dashboard verifies bundle SHA-256\nPASS dashboard has no recommendation language\n\n16/16 checks passed",
+      "stderr": ""
+    },
+    {
+      "name": "v43 quality gate",
+      "passed": true,
+      "status": 0,
+      "durationMs": 376,
+      "stdout": "PASS bundle parts declared and non-empty: declared=43, actual=43\nPASS bundle compressed bytes: actual=729488\nPASS bundle absolute budget: actual=729488, budget=1572864\nPASS bundle SHA-256: d92e1d595aa31866da6a4d20fe9412283992acc2a0484049ba4f4ef379ef57c4\nPASS gzip and JSON readable\nPASS company total 3000: actual=3000\nPASS progress rows 353: actual=353\nPASS quality stage totals: {\"core\":3000,\"detailed_extracted\":0,\"source_indexed\":0,\"jpx_indexed\":0}\nPASS security codes unique\nPASS security code format\nPASS company names present\nPASS market values valid\nPASS source confirmed minimum 3000: actual=3000\nPASS structured minimum 3000: actual=3000\nPASS source URLs valid\nPASS legacy date removed\nPASS date semantics present: Coverageβでは省略をnullとして扱う\nPASS quality profile present\nPASS coverage not scored\nPASS coverage has no fabricated metrics\nPASS progress keys unique: duplicates=0\nPASS no orphan progress: orphans=0\nPASS no recommendation language\nPASS index.html exists\nPASS assets/app.js exists\nPASS assets/styles.css exists\nPASS 404.html exists\nPASS manifest.webmanifest exists\nPASS robots.txt exists\nPASS _headers exists\n\n30/30 checks passed",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax site/assets/local-metrics.js",
+      "passed": true,
+      "status": 0,
+      "durationMs": 134,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax site/assets/metrics.js",
+      "passed": true,
+      "status": 0,
+      "durationMs": 136,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax site/assets/release.js",
+      "passed": true,
+      "status": 0,
+      "durationMs": 129,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "Syntax site/assets/history.js",
+      "passed": true,
+      "status": 0,
+      "durationMs": 130,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

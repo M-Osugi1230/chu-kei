@@ -1,0 +1,70 @@
+name: Phase 3 Final Review Gate
+
+on:
+  pull_request:
+    paths:
+      - 'operations/quality-rebase/phase2/**'
+      - 'operations/quality-rebase/phase3/**'
+      - 'scripts/build_phase3_final_review_queue_v1.mjs'
+      - 'scripts/build_phase3_final_review_work_items_v1.mjs'
+      - 'scripts/validate_phase3_final_review_queue_v1.mjs'
+      - '.github/workflows/phase3-final-review-gate.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'operations/quality-rebase/phase2/**'
+      - 'operations/quality-rebase/phase3/**'
+      - 'scripts/build_phase3_final_review_queue_v1.mjs'
+      - 'scripts/build_phase3_final_review_work_items_v1.mjs'
+      - 'scripts/validate_phase3_final_review_queue_v1.mjs'
+      - '.github/workflows/phase3-final-review-gate.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: phase3-final-review-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  final-review-queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Build Phase 3 final-review queue
+        run: node scripts/build_phase3_final_review_queue_v1.mjs
+      - name: Build final-review work items
+        run: node scripts/build_phase3_final_review_work_items_v1.mjs
+      - name: Validate Phase 3 governance and counts
+        run: node scripts/validate_phase3_final_review_queue_v1.mjs
+      - name: Validate generated work-item partition
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const index = JSON.parse(fs.readFileSync('operations/quality-rebase/phase3/generated/final-review-work-items/index.json', 'utf8'));
+          if (index.readyCompanies !== 60) throw new Error(`expected 60 ready companies, got ${index.readyCompanies}`);
+          if (index.batchCount !== 6) throw new Error(`expected 6 final-review batches, got ${index.batchCount}`);
+          if (index.batches.some(batch => batch.count !== 10)) throw new Error('each initial Phase 3 final-review batch must contain 10 companies');
+          if (index.policy.generatedItemsAreNotApprovals !== true) throw new Error('work items must never be treated as approvals');
+          if (index.policy.automaticApprovalAllowed !== false) throw new Error('automatic approval must remain disabled');
+          console.log(JSON.stringify(index, null, 2));
+          NODE
+      - name: Upload Phase 3 review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-final-review-queue
+          path: |
+            operations/quality-rebase/phase3/generated/final-review-queue-v1.json
+            operations/quality-rebase/phase3/generated/final-review-work-items/
+          if-no-files-found: error
+          retention-days: 90

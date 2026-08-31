@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "quality-rebase-phase3-status-v1",
+  "updatedAt": "2026-08-24T14:27:00+09:00",
+  "phase2Handoff": {
+    "phase1PrimaryReviewComplete": 50,
+    "phase2PrimaryReviewComplete": 450,
+    "primaryReviewCompleteIncludingPhase1": 500,
+    "remainingPhase2PrimaryReviews": 0,
+    "independentReviewComplete": 61,
+    "companiesWithExplicitFinalBlockers": 1,
+    "readyForSeparateFinalReview": 60,
+    "deepVerificationApproved": 0
+  },
+  "productionObservation": {
+    "url": "https://chu-kei.com/",
+    "observedAt": "2026-08-24T14:27:00+09:00",
+    "publishedCompanyCount": 570,
+    "publishedDetailedCompanyCount": 100,
+    "publishedDataUpdateLabel": "2026-07-11",
+    "repositoryCompanyCount": 3000,
+    "alignmentStatus": "production_behind_repository_quality_state",
+    "blockingIssue": "quality_rebase_release_alignment_required",
+    "automaticPromotionAllowed": false
+  },
+  "company421A": {
+    "code": "421A",
+    "name": "ムービン・ストラテジック・キャリア",
+    "productionCardConfirmed": true,
+    "productionCardTargetsConfirmed": {
+      "fiscalYear": "2028年12月期",
+      "sales": "100億円",
+      "operatingProfit": "46億円",
+      "operatingMargin": "46.0%"
+    },
+    "correctedSourceLinkConfirmedInProduction": false,
+    "productionDetailRenderConfirmed": false,
+    "remainingBlockers": [
+      "post_publication_link_and_render_check"
+    ],
+    "note": "公開カードの企業名・主要目標は確認できたが、訂正後36ページ版の公式PDFリンクと詳細表示の本番ブラウザ確認が未完了のため、Deep Verification blockerは解除しない。"
+  },
+  "phase3Gate": {
+    "name": "separate_final_review_and_production_alignment",
+    "queueSource": "operations/quality-rebase/phase2/independent-review-status-v1.json",
+    "deepStatusSource": "operations/quality-rebase/phase2/deep-verification-status-v1.json",
+    "requirements": [
+      "independent completion recordを会社コード単位で再走査する",
+      "finalDeepVerificationBlockersが0件の会社だけを別担当final reviewerへ送る",
+      "一次レビュー担当・独立レビュー担当による自己最終承認を禁止する",
+      "公開サイトとGitHub正本の件数・品質状態のズレを明示する",
+      "公開反映後に企業詳細・公式資料リンク・年度・単位・レンダリングを確認する"
+    ]
+  },
+  "policy": {
+    "companyCodeIsCountingUnit": true,
+    "absenceOfBlockerDoesNotEqualApproval": true,
+    "deepVerificationRequiresSeparateFinalReviewer": true,
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "automaticProductionPromotionAllowed": false,
+    "deepVerificationApproved": false
+  }
+}

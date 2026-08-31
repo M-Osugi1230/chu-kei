@@ -12,32 +12,14 @@
   "counts": {
     "independentReviewComplete": 61,
     "initialReadyForSeparateFinalReview": 60,
-    "pendingSeparateFinalReview": 60,
-    "approvedBySeparateFinalReview": 0,
+    "pendingSeparateFinalReview": 59,
+    "approvedBySeparateFinalReview": 1,
     "deferredAfterFinalReview": 0,
-    "finalReviewCompleted": 0,
+    "finalReviewCompleted": 1,
     "companiesWithExplicitFinalBlockers": 1,
-    "deepVerificationApproved": 0
+    "deepVerificationApproved": 1
   },
   "readyForSeparateFinalReview": [
-    {
-      "code": "2146",
-      "name": "UTグループ",
-      "completionFile": "operations/quality-rebase/phase2/independent-completions/2146-independent-completion-v1.json",
-      "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
-      "independentReviewPacket": "operations/quality-rebase/phase2/independent/2146-independent-review-v1.json",
-      "sourceCorrectionFile": null,
-      "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/2146-independent-source-resolution-v1.json",
-      "blockers": [],
-      "blockerCount": 0,
-      "priority": "A",
-      "requiredReviewRole": "final_reviewer",
-      "selfApprovalAllowed": false,
-      "automaticApprovalAllowed": false,
-      "finalReviewStatus": "pending_separate_final_reviewer",
-      "finalReviewFile": null,
-      "deepVerificationApproved": false
-    },
     {
       "code": "2154",
       "name": "オープンアップグループ",
@@ -1101,7 +1083,26 @@
       "deepVerificationApproved": false
     }
   ],
-  "approvedBySeparateFinalReview": [],
+  "approvedBySeparateFinalReview": [
+    {
+      "code": "2146",
+      "name": "UTグループ",
+      "completionFile": "operations/quality-rebase/phase2/independent-completions/2146-independent-completion-v1.json",
+      "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
+      "independentReviewPacket": "operations/quality-rebase/phase2/independent/2146-independent-review-v1.json",
+      "sourceCorrectionFile": null,
+      "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/2146-independent-source-resolution-v1.json",
+      "blockers": [],
+      "blockerCount": 0,
+      "priority": "A",
+      "requiredReviewRole": "final_reviewer",
+      "selfApprovalAllowed": false,
+      "automaticApprovalAllowed": false,
+      "finalReviewStatus": "approved_by_separate_final_reviewer",
+      "finalReviewFile": "operations/quality-rebase/phase3/final-reviews/2146-final-review-v1.json",
+      "deepVerificationApproved": true
+    }
+  ],
   "deferredAfterFinalReview": [],
   "blockedBeforeFinalReview": [
     {

@@ -1,6 +1,6 @@
 {
   "version": "plan-detection-verified-overrides-v1",
-  "generatedAt": "2026-10-03T20:48:53.799Z",
+  "generatedAt": "2026-10-03T20:51:09.666Z",
   "referenceDate": "2026-10-04",
   "sourceStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
   "policy": {
@@ -14,11 +14,11 @@
   },
   "counts": {
     "independentReviewComplete": 61,
-    "verifiedOverrides": 53,
-    "current": 53,
+    "verifiedOverrides": 61,
+    "current": 61,
     "expired": 0,
     "noFormalPlan": 0,
-    "unresolved": 8
+    "unresolved": 0
   },
   "overrides": [
     {
@@ -61,7 +61,7 @@
         "sourceTitle": "中期経営計画2028",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2030-03-31 derived from to_2029"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -72,9 +72,9 @@
           "endFiscalYear": "2029年3月期",
           "managementLabel": "2026年度から2028年度"
         },
-        "planEndDate": "2030-03-31",
-        "planEndBasis": "to_2029",
-        "planEndPrecision": "classification_year",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/1719-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/1719-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -90,7 +90,7 @@
         "sourceTitle": "中期経営計画2030 Beyond 100（事業計画及び成長可能性に関する事項）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2030年度"
+        "note": "independent review confirmed formal plan; plan end 2030-12-31 derived from 2030年12月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -103,9 +103,9 @@
           "intermediateFiscalYear": "2028年12月期",
           "statement": "2026～2030年の3フェーズで進める計画。2028年度を構造転換の中間マイルストン、2030年度を最終KGIとする。"
         },
-        "planEndDate": "2031-03-31",
-        "planEndBasis": "2030年度",
-        "planEndPrecision": "fiscal_year",
+        "planEndDate": "2030-12-31",
+        "planEndBasis": "2030年12月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/175A-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/175A-independent-completion-v1.json",
         "independentReviewResult": "confirmed_after_public_eir_full_visual_recheck"
@@ -142,6 +142,35 @@
       }
     },
     {
+      "code": "2154",
+      "name": "オープンアップグループ",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-08",
+        "sourceUrl": "https://www.openupgroup.co.jp/_assets/pdf/ir/Medium-Term%20Management%20Policy.pdf",
+        "sourceTitle": "中期経営方針",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2027-06-30 derived from 2027年6月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-10-04",
+        "formalPlanConfirmed": true,
+        "classification": "formal_management_policy_update",
+        "period": {
+          "startFiscalYear": "2025年6月期",
+          "endFiscalYear": "2027年6月期",
+          "statement": "公式サステナビリティページでOPIと中期経営方針の到達年度を2027年6月期として確認した。"
+        },
+        "planEndDate": "2027-06-30",
+        "planEndBasis": "2027年6月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2154-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/2154-independent-completion-v1.json",
+        "independentReviewResult": "confirmed_after_source_override_and_current_identity_recheck"
+      }
+    },
+    {
       "code": "2303",
       "name": "ドーン",
       "status": "current",
@@ -151,7 +180,7 @@
         "sourceTitle": "2026年5月期 決算説明・中期経営計画進捗説明資料",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2028-12-31 derived from 2028年"
+        "note": "independent review confirmed formal plan; plan end 2028-05-31 derived from 2028年5月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -162,9 +191,9 @@
           "endFiscalYear": "2028年5月期",
           "statement": "第2次中期経営計画は2026年5月期から2028年5月期までの拡大ステージ。資料公表時点で初年度実績が確定し、2027年・2028年目標が更新されている。"
         },
-        "planEndDate": "2028-12-31",
-        "planEndBasis": "2028年",
-        "planEndPrecision": "calendar_year",
+        "planEndDate": "2028-05-31",
+        "planEndBasis": "2028年5月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2303-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/2303-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -180,7 +209,7 @@
         "sourceTitle": "第二次中期経営計画 プロジェクトフェニックスⅡ",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2030-03-31 derived from FY29"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -192,9 +221,9 @@
           "baselineFiscalYear": "2027年3月期業績予想",
           "statement": "FY27～FY29の3カ年計画。"
         },
-        "planEndDate": "2030-03-31",
-        "planEndBasis": "FY29",
-        "planEndPrecision": "fy_label",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2323-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/2323-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -269,7 +298,7 @@
         "sourceTitle": "第6次中期経営計画（2026-2030）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from to_2030"
+        "note": "independent review confirmed formal plan; plan end 2030-11-30 derived from 2030年11月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -279,9 +308,9 @@
           "startFiscalYear": "2026年11月期",
           "endFiscalYear": "2030年11月期"
         },
-        "planEndDate": "2031-03-31",
-        "planEndBasis": "to_2030",
-        "planEndPrecision": "classification_year",
+        "planEndDate": "2030-11-30",
+        "planEndBasis": "2030年11月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2734-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/2734-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -384,7 +413,7 @@
         "sourceTitle": "DCMホールディングス 第4次中期経営計画（2026年度-2028年度）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2030-12-31 derived from 2030年"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -396,9 +425,9 @@
           "endFiscalYearClosing": "2029年2月期",
           "statement": "2026年度から2028年度までの3カ年計画。2030年の長期事業構想とは区別して記録する。"
         },
-        "planEndDate": "2030-12-31",
-        "planEndBasis": "2030年",
-        "planEndPrecision": "calendar_year",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3050-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/3050-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -442,7 +471,7 @@
         "sourceTitle": "中期経営計画 FOOD CREATIVE FIRM ～食の総合プロデュースカンパニーへ～",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2032-03-31 derived from FY2031"
+        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -454,9 +483,9 @@
           "baselineFiscalYear": "2026年3月期",
           "statement": "適時開示本文が定める正式期間は2027年3月期～2031年3月期の5カ年。説明資料の『FY2026～FY2031』は2026年3月期基準から2031年3月期目標までの推移を示す。"
         },
-        "planEndDate": "2032-03-31",
-        "planEndBasis": "FY2031",
-        "planEndPrecision": "fy_label",
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2031年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3175-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/3175-independent-completion-v1.json",
         "independentReviewResult": "confirmed_after_full_independent_visual_recheck"
@@ -532,7 +561,7 @@
         "sourceTitle": "株式会社じげん 第3次中期経営計画 ZIGExN Matching Agent",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2032-03-31 derived from FY2031"
+        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -543,9 +572,9 @@
           "endFiscalYear": "2031年3月期",
           "statement": "FY2027/3からFY2031/3までの5カ年計画。"
         },
-        "planEndDate": "2032-03-31",
-        "planEndBasis": "FY2031",
-        "planEndPrecision": "fy_label",
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2031年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3679-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/3679-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -591,7 +620,7 @@
         "sourceTitle": "住友化学 2025～2027年度 中期経営計画 Leap Beyond ～成長軌道へ回帰～",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2036-03-31 derived from 2035年度"
+        "note": "independent review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -602,8 +631,8 @@
           "endFiscalYear": "2027年度",
           "statement": "2025年度から2027年度までの3カ年計画。2027年度中計目標と2035年度長期目標を区別する。"
         },
-        "planEndDate": "2036-03-31",
-        "planEndBasis": "2035年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4005-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/4005-independent-completion-v1.json",
@@ -620,7 +649,7 @@
         "sourceTitle": "日本触媒グループ 中期経営計画2027",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2030年度"
+        "note": "independent review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -632,8 +661,8 @@
           "calendarPeriod": "2025年4月から2028年3月",
           "statement": "2025年度から2027年度までの3カ年を変革加速ステージとする。2030年度の長期目標と区別して記録する。"
         },
-        "planEndDate": "2031-03-31",
-        "planEndBasis": "2030年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4114-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/4114-independent-completion-v1.json",
@@ -678,7 +707,7 @@
         "sourceTitle": "住友ベークライト 中期経営計画2024-26",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2030年度"
+        "note": "independent review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -689,8 +718,8 @@
           "endFiscalYear": "2026年度",
           "statement": "2024年度から2026年度までの3カ年計画。資料内の2030年度『ありたい姿』および2027-29年度の次期中計表示とは区別する。"
         },
-        "planEndDate": "2031-03-31",
-        "planEndBasis": "2030年度",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2026年度",
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4203-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/4203-independent-completion-v1.json",
@@ -795,7 +824,7 @@
         "sourceTitle": "中期経営計画2029 事業計画及び成長可能性に関する事項",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2030-03-31 derived from FY2029"
+        "note": "independent review confirmed formal plan; plan end 2029-04-30 derived from 2029年4月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -807,9 +836,9 @@
           "baselineFiscalYear": "2026年4月期実績",
           "statement": "FY2027からFY2029までの3カ年成長計画。資料中のFY表記は4月期を指す。"
         },
-        "planEndDate": "2030-03-31",
-        "planEndBasis": "FY2029",
-        "planEndPrecision": "fy_label",
+        "planEndDate": "2029-04-30",
+        "planEndBasis": "2029年4月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/441A-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/441A-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -884,7 +913,7 @@
         "sourceTitle": "中期経営計画2031",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2032-03-31 derived from to_2031"
+        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -894,9 +923,9 @@
           "startFiscalYear": "2027年3月期",
           "endFiscalYear": "2031年3月期"
         },
-        "planEndDate": "2032-03-31",
-        "planEndBasis": "to_2031",
-        "planEndPrecision": "classification_year",
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2031年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4691-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/4691-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -1051,6 +1080,34 @@
       }
     },
     {
+      "code": "6036",
+      "name": "KeePer技研",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-07",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/60360/140120260318583945.pdf",
+        "sourceTitle": "2031年6月期 中期経営計画",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2031-06-30 derived from 2031年6月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-10-04",
+        "formalPlanConfirmed": true,
+        "classification": "formal_six_year_management_plan_current_2026_to_2031",
+        "period": {
+          "startFiscalYear": "2026年6月期",
+          "endFiscalYear": "2031年6月期"
+        },
+        "planEndDate": "2031-06-30",
+        "planEndBasis": "2031年6月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6036-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/6036-independent-completion-v1.json",
+        "independentReviewResult": "confirmed_after_source_identity_override_and_full_visual_recheck"
+      }
+    },
+    {
       "code": "6050",
       "name": "イー・ガーディアン",
       "status": "current",
@@ -1060,7 +1117,7 @@
         "sourceTitle": "中期経営計画2026-2028",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from to_2028"
+        "note": "independent review confirmed formal plan; plan end 2028-09-30 derived from 2028年9月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1070,9 +1127,9 @@
           "startFiscalYear": "2026年9月期",
           "endFiscalYear": "2028年9月期"
         },
-        "planEndDate": "2029-03-31",
-        "planEndBasis": "to_2028",
-        "planEndPrecision": "classification_year",
+        "planEndDate": "2028-09-30",
+        "planEndBasis": "2028年9月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6050-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/6050-independent-completion-v1.json",
         "independentReviewResult": "confirmed_after_full_independent_visual_recheck"
@@ -1118,7 +1175,7 @@
         "sourceTitle": "オークマ 中期経営計画2028（2026～2028年度）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2030年度"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1129,8 +1186,8 @@
           "endFiscalYear": "2028年度",
           "statement": "2030年ビジョンのPhase2として位置付けられた2026年度から2028年度までの3カ年計画。2030年度目標とは区別する。"
         },
-        "planEndDate": "2031-03-31",
-        "planEndBasis": "2030年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6103-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/6103-independent-completion-v1.json",
@@ -1147,7 +1204,7 @@
         "sourceTitle": "中期経営計画2030説明会資料",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from to_2030"
+        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1159,8 +1216,8 @@
           "managementLabel": "2026年度から2030年度"
         },
         "planEndDate": "2031-03-31",
-        "planEndBasis": "to_2030",
-        "planEndPrecision": "classification_year",
+        "planEndBasis": "2031年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6140-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/6140-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -1197,6 +1254,36 @@
       }
     },
     {
+      "code": "6247",
+      "name": "日阪製作所",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-08",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/62470/140120260529554991.pdf",
+        "sourceTitle": "2026年3月期決算 新中期経営計画 Challenge2028 説明会資料",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-10-04",
+        "formalPlanConfirmed": true,
+        "classification": "official_results_and_formal_management_plan",
+        "period": {
+          "startFiscalYear": "2027年3月期",
+          "endFiscalYear": "2029年3月期",
+          "baselineFiscalYear": "2026年3月期実績",
+          "statement": "Challenge2028は2027年3月期～2029年3月期の3カ年計画。"
+        },
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6247-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/6247-independent-completion-v1.json",
+        "independentReviewResult": "confirmed_after_source_override"
+      }
+    },
+    {
       "code": "6294",
       "name": "オカダアイヨン",
       "status": "current",
@@ -1206,7 +1293,7 @@
         "sourceTitle": "2026年3月期決算および新中期経営計画 Onyx FY2026-FY2028",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from FY2028"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1218,11 +1305,40 @@
           "managementLabel": "FY2026-FY2028"
         },
         "planEndDate": "2029-03-31",
-        "planEndBasis": "FY2028",
-        "planEndPrecision": "fy_label",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6294-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/6294-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
+      }
+    },
+    {
+      "code": "6302",
+      "name": "住友重機械工業",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-08",
+        "sourceUrl": "https://www.shi.co.jp/ir/policy/plan/index.html",
+        "sourceTitle": "中期経営計画2026／2025年2月14日目標見直し",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2026-12-31 derived from 2026年12月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-10-04",
+        "formalPlanConfirmed": true,
+        "classification": "official_formal_management_plan_with_official_target_revision",
+        "period": {
+          "startFiscalYear": "2024年12月期",
+          "endFiscalYear": "2026年12月期",
+          "longTermVisionYear": "2030年"
+        },
+        "planEndDate": "2026-12-31",
+        "planEndBasis": "2026年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6302-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/6302-independent-completion-v1.json",
+        "independentReviewResult": "confirmed_after_base_revision_source_and_hash_recheck"
       }
     },
     {
@@ -1264,7 +1380,7 @@
         "sourceTitle": "中期経営計画 2026-2028",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from to_2028"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from FY2028"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1275,8 +1391,8 @@
           "endFiscalYear": "FY2028"
         },
         "planEndDate": "2029-03-31",
-        "planEndBasis": "to_2028",
-        "planEndPrecision": "classification_year",
+        "planEndBasis": "FY2028",
+        "planEndPrecision": "fy_label",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6822-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/6822-independent-completion-v1.json",
         "independentReviewResult": "confirmed_after_financial_target_visual_recheck"
@@ -1292,7 +1408,7 @@
         "sourceTitle": "新中期経営計画 Create ONE 28",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1306,11 +1422,40 @@
           "statement": "2026年度から2028年度までの3カ年計画。前中計Progress Go'25の実績と分離する。"
         },
         "planEndDate": "2029-03-31",
-        "planEndBasis": "2028年度",
-        "planEndPrecision": "fiscal_year",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7130-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/7130-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
+      }
+    },
+    {
+      "code": "7164",
+      "name": "全国保証",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-07",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/71640/140120260316582351.pdf",
+        "sourceTitle": "新中期経営計画 Go for 50 保証の力で未来をひらく",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-10-04",
+        "formalPlanConfirmed": true,
+        "classification": "formal_management_plan_current_2026_to_2030",
+        "period": {
+          "startFiscalYear": "2026年度",
+          "endFiscalYear": "2030年度",
+          "terminalFiscalYear": "2031年3月期"
+        },
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2031年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7164-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/7164-independent-completion-v1.json",
+        "independentReviewResult": "confirmed_after_source_identity_override"
       }
     },
     {
@@ -1323,7 +1468,7 @@
         "sourceTitle": "ゆうちょ銀行 中期経営計画（2026～2028年度）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2040-12-31 derived from 2040年"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1336,9 +1481,9 @@
           "longTermVisionYear": "2040年",
           "statement": "2026～2028年度の3カ年計画であり、15年後の中長期ビジョンとは分離して記録する。"
         },
-        "planEndDate": "2040-12-31",
-        "planEndBasis": "2040年",
-        "planEndPrecision": "calendar_year",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7182-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/7182-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -1354,7 +1499,7 @@
         "sourceTitle": "中期経営計画2029策定に関するお知らせ・中期経営計画2029",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2030-03-31 derived from to_2029"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1364,9 +1509,9 @@
           "startFiscalYear": "2027年3月期",
           "endFiscalYear": "2029年3月期"
         },
-        "planEndDate": "2030-03-31",
-        "planEndBasis": "to_2029",
-        "planEndPrecision": "classification_year",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7460-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/7460-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -1382,7 +1527,7 @@
         "sourceTitle": "中長期経営計画 2026-2035",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2036-03-31 derived from to_2035"
+        "note": "independent review confirmed formal plan; plan end 2036-03-31 derived from 2035年度"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1393,8 +1538,8 @@
           "endFiscalYear": "2035年度"
         },
         "planEndDate": "2036-03-31",
-        "planEndBasis": "to_2035",
-        "planEndPrecision": "classification_year",
+        "planEndBasis": "2035年度",
+        "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7504-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/7504-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -1426,6 +1571,34 @@
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7743-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/7743-independent-completion-v1.json",
+        "independentReviewResult": "confirmed"
+      }
+    },
+    {
+      "code": "8012",
+      "name": "長瀬産業",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-08",
+        "sourceUrl": "https://www.nagase.co.jp/assetfiles/uploads/20260512_IR_01.pdf",
+        "sourceTitle": "（訂正）中期経営計画 Walk the Talk 2028",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-10-04",
+        "formalPlanConfirmed": true,
+        "classification": "formal_management_plan_current_corrected_version",
+        "period": {
+          "startFiscalYear": "2026年度",
+          "endFiscalYear": "2028年度"
+        },
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8012-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/8012-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
       }
     },
@@ -1488,6 +1661,37 @@
       }
     },
     {
+      "code": "9007",
+      "name": "小田急電鉄",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-08",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/90070/140120260507518914.pdf",
+        "sourceTitle": "中期経営計画（2024～2026年度）のアップデート",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-10-04",
+        "formalPlanConfirmed": true,
+        "classification": "official_formal_management_plan_update_with_2030_vision_targets",
+        "period": {
+          "currentPlan": "2024年度から2026年度の中期経営計画",
+          "currentPlanTerminalYear": "2026年度",
+          "visionTargets": "2030年度の連結財務・事業目標",
+          "longTermTargets": "2032年度ホームドア、2035年度鉄道要員、2040年前後・2050年度の社会・環境目標",
+          "statement": "2026年度の現行中計最終値、2030年度の経営ビジョン目標、2032年度以降の長期KPIを分離する。2026～2030年度累計投資・還元額を2024～2026年度中計の3年間累計として扱わない。"
+        },
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2026年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9007-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9007-independent-completion-v1.json",
+        "independentReviewResult": "confirmed"
+      }
+    },
+    {
       "code": "9107",
       "name": "川崎汽船",
       "status": "current",
@@ -1526,7 +1730,7 @@
         "sourceTitle": "TREホールディングス 第2次中期経営計画（2024年度〜2028年度）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -1538,8 +1742,8 @@
           "statement": "資料上の5カ年収益計画は2025年3月期から2029年3月期。公表上の表題は2024年度〜2028年度。"
         },
         "planEndDate": "2029-03-31",
-        "planEndBasis": "2028年度",
-        "planEndPrecision": "fiscal_year",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9247-independent-completion-v1.json",
         "independentReviewResult": "confirmed"
@@ -1574,72 +1778,32 @@
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9684-independent-completion-v1.json",
         "independentReviewResult": "confirmed_with_evidence_correction"
       }
-    }
-  ],
-  "unresolved": [
-    {
-      "code": "2154",
-      "name": "オープンアップグループ",
-      "reason": "independent_evidence_gate_not_satisfied",
-      "sourceIdentityConfirmed": false,
-      "independentConfirmed": true,
-      "sourceUrlPresent": true
-    },
-    {
-      "code": "6036",
-      "name": "KeePer技研",
-      "reason": "independent_evidence_gate_not_satisfied",
-      "sourceIdentityConfirmed": false,
-      "independentConfirmed": true,
-      "sourceUrlPresent": true
-    },
-    {
-      "code": "6247",
-      "name": "日阪製作所",
-      "reason": "independent_evidence_gate_not_satisfied",
-      "sourceIdentityConfirmed": false,
-      "independentConfirmed": true,
-      "sourceUrlPresent": true
-    },
-    {
-      "code": "6302",
-      "name": "住友重機械工業",
-      "reason": "independent_evidence_gate_not_satisfied",
-      "sourceIdentityConfirmed": false,
-      "independentConfirmed": true,
-      "sourceUrlPresent": true
-    },
-    {
-      "code": "7164",
-      "name": "全国保証",
-      "reason": "independent_evidence_gate_not_satisfied",
-      "sourceIdentityConfirmed": false,
-      "independentConfirmed": true,
-      "sourceUrlPresent": true
-    },
-    {
-      "code": "8012",
-      "name": "長瀬産業",
-      "reason": "independent_evidence_gate_not_satisfied",
-      "sourceIdentityConfirmed": false,
-      "independentConfirmed": true,
-      "sourceUrlPresent": true
-    },
-    {
-      "code": "9007",
-      "name": "小田急電鉄",
-      "reason": "formal_plan_confirmed_but_end_date_unresolved",
-      "classification": "official_formal_management_plan_update_with_2030_vision_targets",
-      "period": null,
-      "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9007-primary-review-v1.json"
     },
     {
       "code": "9861",
       "name": "吉野家ホールディングス",
-      "reason": "independent_evidence_gate_not_satisfied",
-      "sourceIdentityConfirmed": false,
-      "independentConfirmed": true,
-      "sourceUrlPresent": true
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-07",
+        "sourceUrl": "https://www.yoshinoya-holdings.com/file/ir/dl/cp2026-21-32.pdf",
+        "sourceTitle": "統合報告書2026掲載 2025-2029年度グループ中期経営計画",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2030-03-31 derived from 2029年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-10-04",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2025年度-2029年度",
+        "planEndDate": "2030-03-31",
+        "planEndBasis": "2029年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9861-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9861-independent-completion-v1.json",
+        "independentReviewResult": "confirmed"
+      }
     }
-  ]
+  ],
+  "unresolved": []
 }

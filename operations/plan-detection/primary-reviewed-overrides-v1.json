@@ -1,6 +1,6 @@
 {
   "version": "plan-detection-primary-reviewed-overrides-v1",
-  "generatedAt": "2026-10-03T20:59:51.938Z",
+  "generatedAt": "2026-10-03T21:00:56.278Z",
   "referenceDate": "2026-10-04",
   "sourceReviewDirectories": [
     "operations/quality-rebase/phase1/reviews",
@@ -23,12 +23,12 @@
   },
   "counts": {
     "reviewFilesScanned": 502,
-    "uniqueEligiblePrimaryReviewedCompanies": 270,
+    "uniqueEligiblePrimaryReviewedCompanies": 267,
     "supersededByIndependentSeed": 60,
-    "primaryOverrides": 210,
-    "current": 209,
+    "primaryOverrides": 207,
+    "current": 206,
     "expired": 1,
-    "rejectedReviewFiles": 231
+    "rejectedReviewFiles": 234
   },
   "overrides": [
     {
@@ -54,32 +54,6 @@
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1301-wave38-primary-review-v1.json",
         "publishedDate": "2024-05-10",
-        "supersededByIndependentSeed": false
-      }
-    },
-    {
-      "code": "1377",
-      "name": "サカタのタネ",
-      "status": "current",
-      "review": {
-        "checkedAt": "2026-08-23",
-        "sourceUrl": "https://corporate.sakataseed.co.jp/news/2026/20260713.html",
-        "sourceTitle": "長期経営計画 PASSION2035",
-        "sourceType": "first_party_primary_reviewed",
-        "method": "quality_rebase_primary_review_l1_seed_v1",
-        "note": "primary human review confirmed formal plan; plan end 2036-05-31 derived from 2036年5月期"
-      },
-      "derivation": {
-        "referenceDate": "2026-10-04",
-        "assuranceTier": "primary_human_review",
-        "formalPlanConfirmed": true,
-        "classification": null,
-        "period": "2027年5月期～2036年5月期（10年間）",
-        "planEndDate": "2036-05-31",
-        "planEndBasis": "2036年5月期",
-        "planEndPrecision": "month_end",
-        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1377-primary-review-v1.json",
-        "publishedDate": "2026-07-13",
         "supersededByIndependentSeed": false
       }
     },
@@ -5128,36 +5102,6 @@
       }
     },
     {
-      "code": "8037",
-      "name": "カメイ",
-      "status": "current",
-      "review": {
-        "checkedAt": "2026-08-05",
-        "sourceUrl": "https://www2.jpx.co.jp/disc/80370/140120260525546307.pdf",
-        "sourceTitle": "長期経営方針説明資料 2026年5月 第3版",
-        "sourceType": "first_party_primary_reviewed",
-        "method": "quality_rebase_primary_review_l1_seed_v1",
-        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
-      },
-      "derivation": {
-        "referenceDate": "2026-10-04",
-        "assuranceTier": "primary_human_review",
-        "formalPlanConfirmed": true,
-        "classification": "official_long_term_management_policy_current_revision_with_three_year_capital_allocation",
-        "period": {
-          "startFiscalYear": "2026年度",
-          "endFiscalYear": "2028年度",
-          "terminalFiscalYear": "2028年度・キャッシュ配分期間"
-        },
-        "planEndDate": "2029-03-31",
-        "planEndBasis": "2028年度",
-        "planEndPrecision": "fiscal_year",
-        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8037-primary-review-v1.json",
-        "publishedDate": "2026-05-25",
-        "supersededByIndependentSeed": false
-      }
-    },
-    {
       "code": "8078",
       "name": "阪和興業",
       "status": "current",
@@ -5619,32 +5563,6 @@
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/8591-primary-review-v1.json",
         "publishedDate": "2025-05-12",
-        "supersededByIndependentSeed": false
-      }
-    },
-    {
-      "code": "8801",
-      "name": "三井不動産",
-      "status": "current",
-      "review": {
-        "checkedAt": "2026-08-22",
-        "sourceUrl": "https://www.mitsuifudosan.co.jp/corporate/innovation2030/pdf/innovation2030.pdf",
-        "sourceTitle": "三井不動産グループ長期経営方針 & INNOVATION 2030",
-        "sourceType": "first_party_primary_reviewed",
-        "method": "quality_rebase_primary_review_l1_seed_v1",
-        "note": "primary human review confirmed formal plan; plan end 2031-03-31 derived from 2030年度"
-      },
-      "derivation": {
-        "referenceDate": "2026-10-04",
-        "assuranceTier": "primary_human_review",
-        "formalPlanConfirmed": true,
-        "classification": null,
-        "period": "2030年度前後（2024年度～2026年度の定量目標・キャッシュ配分を含む）",
-        "planEndDate": "2031-03-31",
-        "planEndBasis": "2030年度",
-        "planEndPrecision": "fiscal_year",
-        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/8801-wave39-primary-review-v1.json",
-        "publishedDate": "2024-04-11",
         "supersededByIndependentSeed": false
       }
     },
@@ -6463,6 +6381,7 @@
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
         "companyIdentityConfirmed",
+        "midTermScopeConfirmed",
         "fullTextHumanReviewComplete"
       ]
     },
@@ -6614,6 +6533,15 @@
       "failedChecks": [
         "companyIdentityConfirmed",
         "fullTextHumanReviewComplete"
+      ]
+    },
+    {
+      "code": "1377",
+      "name": "サカタのタネ",
+      "file": "operations/quality-rebase/phase2/primary-reviews/1377-primary-review-v1.json",
+      "reason": "primary_l1_gate_not_satisfied",
+      "failedChecks": [
+        "midTermScopeConfirmed"
       ]
     },
     {
@@ -6947,7 +6875,8 @@
       "file": "operations/quality-rebase/phase2/primary-reviews/4004-primary-review-v1.json",
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
-        "formalPlanConfirmed"
+        "formalPlanConfirmed",
+        "midTermScopeConfirmed"
       ]
     },
     {
@@ -6956,6 +6885,7 @@
       "file": "operations/quality-rebase/phase2/primary-reviews/4011-primary-review-v1.json",
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
+        "midTermScopeConfirmed",
         "evidenceLinked"
       ]
     },
@@ -7328,11 +7258,21 @@
       ]
     },
     {
+      "code": "8801",
+      "name": "三井不動産",
+      "file": "operations/quality-rebase/phase2/primary-reviews/8801-wave39-primary-review-v1.json",
+      "reason": "primary_l1_gate_not_satisfied",
+      "failedChecks": [
+        "midTermScopeConfirmed"
+      ]
+    },
+    {
       "code": "8802",
       "name": "三菱地所",
       "file": "operations/quality-rebase/phase2/primary-reviews/8802-wave34-primary-review-v1.json",
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
+        "midTermScopeConfirmed",
         "reviewDatePresent"
       ]
     },
@@ -8286,6 +8226,15 @@
       "failedChecks": [
         "formalPlanConfirmed",
         "reviewDatePresent"
+      ]
+    },
+    {
+      "code": "8037",
+      "name": "カメイ",
+      "file": "operations/quality-rebase/phase2/reviews/8037-primary-review-v1.json",
+      "reason": "primary_l1_gate_not_satisfied",
+      "failedChecks": [
+        "midTermScopeConfirmed"
       ]
     },
     {

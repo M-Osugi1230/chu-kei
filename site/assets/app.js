@@ -29,6 +29,13 @@ const state = {
   currentDetail: null,
 };
 const stageLabels = { core: '資料登録済み（再監査中）', detailed_extracted: '詳細抽出済みβ', source_indexed: '一次確認β', jpx_indexed: 'カバレッジβ' };
+const planStatusLabels = {
+  current: '現行中計あり',
+  expired: '過去中計のみ',
+  no_formal_plan: '正式中計なし',
+  found_unstructured: '中計あり・未構造化',
+  not_checked: '中計未確認',
+};
 const sortLabels = { relevance: '検索との関連順', quality: '品質の高い順', verified: '最終確認日の新しい順', code: '証券コード順' };
 const strategies = [
   ['ma', 'M&A活用型', '買収・提携を成長手段として明示'],
@@ -170,6 +177,9 @@ function companyProgressShort(company) {
   const actual = rows.filter(row => row.actualValue != null).length;
   return `進捗目標 ${rows.length}件${actual ? `・実績 ${actual}件` : '・実績未接続'}`;
 }
+function planStatusText(company) {
+  return planStatusLabels[company.planStatus] || planStatusLabels.not_checked;
+}
 function researchStatus(company) {
   const progress = companyProgressShort(company);
   if (!['core', 'detailed_extracted'].includes(company.stage)) return progress || '詳細抽出前';
@@ -188,7 +198,7 @@ function renderCompanies() {
       <div class="card-head"><div><span class="stage-badge">${escapeHtml(stageLabels[company.stage] || company.tier)}</span><h3>${escapeHtml(company.name)}</h3><div class="meta">${escapeHtml(company.code)}・${escapeHtml(company.market)}・${escapeHtml(company.industry)}</div></div><div class="card-tools"><button class="save-button" type="button" data-save="${escapeHtml(company.code)}" aria-pressed="${saved}" aria-label="${escapeHtml(company.name)}を${saved ? '保存から外す' : '保存する'}">${saved ? '保存済み' : '保存'}</button><div class="quality-meta">${escapeHtml(qualityText(company))}</div></div></div>
       <p class="summary">${escapeHtml(company.summary || '中計本文の詳細は未抽出です。')}</p>
       <div class="tags">${(company.themes || []).slice(0, 5).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
-      <div class="research-status"><span>${escapeHtml(researchStatus(company))}</span><span>資料公表日 ${escapeHtml(company.planPublishedDate || '未確認')}</span></div>
+      <div class="research-status"><span>中計状態: ${escapeHtml(planStatusText(company))}</span><span>${escapeHtml(researchStatus(company))}</span></div>
       <div class="meta">最終確認日: ${escapeHtml(company.lastVerifiedDate || '未確認')}</div>
       <div class="card-actions"><button class="secondary-button" type="button" data-detail="${escapeHtml(company.code)}">詳細を見る</button><button class="primary-button" type="button" data-compare="${escapeHtml(company.code)}" aria-pressed="${compared}">${compared ? '比較から外す' : '比較に追加'}</button></div>
     </article>`;
@@ -269,7 +279,7 @@ function renderCompanyDetail(company) {
   const saved = state.saved.has(company.code);
   $('#company-detail').innerHTML = `<article class="dialog-card"><div class="dialog-head"><div><p class="eyebrow">${escapeHtml(stageLabels[company.stage])}・${escapeHtml(company.code)}</p><h2>${escapeHtml(company.name)}</h2><p>${escapeHtml(company.document || '中計資料未特定')} ${company.period ? `／ ${escapeHtml(company.period)}` : ''}</p></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div>
     <div class="detail-actions"><button class="secondary-button" type="button" data-save-detail="${escapeHtml(company.code)}" aria-pressed="${saved}">${saved ? '保存済み' : '調査候補に保存'}</button><button class="text-button" type="button" data-share-company="${escapeHtml(company.code)}">この企業のリンクをコピー</button></div>
-    <p>${escapeHtml(company.summary)}</p><div class="detail-grid"><div><dt>品質</dt><dd>${escapeHtml(qualityText(company))}</dd></div><div><dt>抽出状況</dt><dd>${escapeHtml(researchStatus(company))}</dd></div><div><dt>進捗データ</dt><dd>${escapeHtml(progressSummary(companyProgress(company)))}</dd></div><div><dt>資料公表日</dt><dd>${escapeHtml(company.planPublishedDate || '未確認')}</dd></div><div><dt>最終確認日</dt><dd>${escapeHtml(company.lastVerifiedDate || '未確認')}</dd></div><div><dt>業種</dt><dd>${escapeHtml(company.industry)}</dd></div>${metrics.filter(([, value]) => nonempty(value)).map(([key, value]) => `<div><dt>${key}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</div>
+    <p>${escapeHtml(company.summary)}</p><div class="detail-grid"><div><dt>中計確認状態</dt><dd>${escapeHtml(planStatusText(company))}</dd></div><div><dt>品質</dt><dd>${escapeHtml(qualityText(company))}</dd></div><div><dt>抽出状況</dt><dd>${escapeHtml(researchStatus(company))}</dd></div><div><dt>進捗データ</dt><dd>${escapeHtml(progressSummary(companyProgress(company)))}</dd></div><div><dt>資料公表日</dt><dd>${escapeHtml(company.planPublishedDate || '未確認')}</dd></div><div><dt>最終確認日</dt><dd>${escapeHtml(company.lastVerifiedDate || '未確認')}</dd></div><div><dt>業種</dt><dd>${escapeHtml(company.industry)}</dd></div>${metrics.filter(([, value]) => nonempty(value)).map(([key, value]) => `<div><dt>${key}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</div>
     ${renderProgressSection(company)}${section('戦略テーマ', company.themes)}${section('主なポイント', company.highlights)}${section('確認上の注意', company.warnings)}${section('原文証跡', company.evidenceRefs)}
     <div class="detail-section">${company.sourceUrl ? `<a class="primary-button" href="${escapeHtml(company.sourceUrl)}" target="_blank" rel="noopener noreferrer">公式資料を開く</a>` : '<p>公式中計資料は未特定です。</p>'}</div></article>`;
   $('[data-save-detail]', $('#company-dialog'))?.addEventListener('click', () => toggleSaved(company.code));
@@ -341,6 +351,7 @@ async function openCompare() {
   const companies = (await Promise.all([...state.compare].map(code => companyDetailByCode(code).catch(error => { console.error(error); return null; })))).filter(Boolean);
   if (companies.length < 2) { showToast('比較する企業を2社以上選択してください。'); return; }
   const rows = [
+    ['中計確認状態', c => planStatusText(c)],
     ['データ品質', c => qualityText(c)],
     ['市場・業種', c => `${c.market}・${c.industry}`],
     ['中計・対象資料', c => c.document || '未特定'],

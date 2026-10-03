@@ -57,14 +57,37 @@ check('canonical source chunk count under 256', sourceManifest.parts.length <= 2
 check('canonical source chunks have positive size', sourceManifest.parts.every(part => Number.isInteger(part.bytes) && part.bytes > 0));
 check('canonical source chunk bytes match manifest', sourceManifest.parts.reduce((sum, part) => sum + part.bytes, 0) === sourceManifest.compressedBytes);
 check('frontend source hash matches canonical bundle', frontendManifest.sourceBundleSha256 === sourceManifest.sha256, `frontend=${frontendManifest.sourceBundleSha256} source=${sourceManifest.sha256}`);
-check('frontend company count matches canonical bundle', frontendManifest.companyCount === bundle.companies.length, `frontend=${frontendManifest.companyCount} source=${bundle.companies.length}`);
+const frontendUniverseCompanyCount = Number.isInteger(frontendManifest.universeCompanyCount)
+  ? frontendManifest.universeCompanyCount
+  : bundle.companies.length;
+const frontendSourceBundleCompanyCount = Number.isInteger(frontendManifest.sourceBundleCompanyCount)
+  ? frontendManifest.sourceBundleCompanyCount
+  : bundle.companies.length;
+const frontendUniverseOnlyCount = Number.isInteger(frontendManifest.universeOnlyCount)
+  ? frontendManifest.universeOnlyCount
+  : Math.max(0, frontendManifest.companyCount - bundle.companies.length);
+const frontendSourceOnlyCount = Number.isInteger(frontendManifest.sourceOnlyCount)
+  ? frontendManifest.sourceOnlyCount
+  : Math.max(0, bundle.companies.length - frontendManifest.companyCount);
+
+check('frontend source-bundle count matches canonical bundle', frontendSourceBundleCompanyCount === bundle.companies.length, `frontendSource=${frontendSourceBundleCompanyCount} source=${bundle.companies.length}`);
+check('frontend company count matches active universe', frontendManifest.companyCount === frontendUniverseCompanyCount, `frontend=${frontendManifest.companyCount} universe=${frontendUniverseCompanyCount}`);
+check(
+  'frontend universe/source reconciliation is consistent',
+  frontendManifest.companyCount + frontendSourceOnlyCount === frontendSourceBundleCompanyCount + frontendUniverseOnlyCount,
+  `active+${frontendSourceOnlyCount}=${frontendManifest.companyCount + frontendSourceOnlyCount} source+${frontendUniverseOnlyCount}=${frontendSourceBundleCompanyCount + frontendUniverseOnlyCount}`,
+);
 check('frontend progress count matches canonical bundle', frontendManifest.progressCount === bundle.progress.length, `frontend=${frontendManifest.progressCount} source=${bundle.progress.length}`);
 check('initial frontend data under 256 KB', initialFrontendDataBytes <= INITIAL_FRONTEND_DATA_CAP_BYTES, `actual=${initialFrontendDataBytes}`);
 check('detail shard count is positive', frontendManifest.detailShards.length > 0, `actual=${frontendManifest.detailShards.length}`);
 check('each detail shard under 32 KB', maxDetailShardBytes <= DETAIL_SHARD_CAP_BYTES, `actual=${maxDetailShardBytes}`);
 check('frontend index bytes match manifest', indexBytesMatch, `actual=${size(`data/frontend/${frontendManifest.index.file}`)} expected=${frontendManifest.index.bytes}`);
 check('detail shard bytes match manifest', detailShardBytesMatch);
-check('frontend detail company count matches canonical bundle', frontendManifest.detailShards.reduce((sum, shard) => sum + shard.companyCount, 0) === bundle.companies.length);
+check(
+  'frontend detail company count matches active universe',
+  frontendManifest.detailShards.reduce((sum, shard) => sum + shard.companyCount, 0) === frontendManifest.companyCount,
+  `detail=${frontendManifest.detailShards.reduce((sum, shard) => sum + shard.companyCount, 0)} frontend=${frontendManifest.companyCount}`,
+);
 
 const html = shellFiles.filter(file => file.endsWith('.html')).map(file => fs.readFileSync(path.join(SITE, file), 'utf8')).join('\n');
 const scripts = shellFiles.filter(file => file.endsWith('.js')).map(file => fs.readFileSync(path.join(SITE, file), 'utf8')).join('\n');
@@ -92,6 +115,12 @@ const report = {
     canonicalSourceHardCapBytes: SOURCE_DATA_HARD_CAP_BYTES,
     canonicalSourceDensityBytes: Number(compressedSourceDensity.toFixed(1)),
     structuredCompanyCount,
+    canonicalSourceCompanyCount: bundle.companies.length,
+    frontendCompanyCount: frontendManifest.companyCount,
+    frontendUniverseCompanyCount,
+    frontendSourceBundleCompanyCount,
+    frontendUniverseOnlyCount,
+    frontendSourceOnlyCount,
     canonicalSourceChunks: sourceManifest.parts.length,
     frontendManifestBytes,
     frontendIndexBytes: frontendManifest.index.bytes,

@@ -12,7 +12,7 @@ function assert(condition, message) {
   }
 }
 
-const publicBase = 'https://chukei-insight.osugimurata.chatgpt.site/';
+const publicBase = 'https://chu-kei.com/';
 const [index, contact, privacy, robots, sitemap, releaseStatus, operationsStatus] = await Promise.all([
   read('site/index.html'),
   read('site/contact.html'),
@@ -23,8 +23,8 @@ const [index, contact, privacy, robots, sitemap, releaseStatus, operationsStatus
   read('operations/site-sync/current.json'),
 ]);
 
-assert(index.includes('<link rel="canonical" href="https://chukei-insight.osugimurata.chatgpt.site/">'), 'トップページのcanonical URLがありません。');
-assert(index.includes('3,000社'), 'トップページに3,000社の公開表示がありません。');
+assert(index.includes(`<link rel="canonical" href="${publicBase}">`), 'トップページのcanonical URLがありません。');
+assert(index.includes('東証主要3市場の上場企業'), 'トップページにUniverse-firstの公開説明がありません。');
 assert(index.includes('./contact.html'), 'トップページに問い合わせ導線がありません。');
 assert(index.includes('運営：Chu-kei事務局'), 'トップページに事務局表示がありません。');
 

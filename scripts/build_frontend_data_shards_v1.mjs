@@ -33,6 +33,12 @@ fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
 fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
 const UNIVERSE_PATH = path.join(ROOT, 'operations', 'universe', 'current-universe-v1.json');
+const PLAN_DETECTION_PATH = path.join(ROOT, 'operations', 'plan-detection', 'registry-v1.json');
+const planDetection = fs.existsSync(PLAN_DETECTION_PATH)
+  ? JSON.parse(fs.readFileSync(PLAN_DETECTION_PATH, 'utf8'))
+  : { companies: [] };
+if (!Array.isArray(planDetection.companies)) throw new Error('Invalid plan detection registry');
+const planByCode = new Map(planDetection.companies.map(company => [String(company.code), company]));
 
 const sourceByCode = new Map(source.companies.map(company => [String(company.code).toUpperCase(), company]));
 let sourceOnlyCount = 0;
@@ -151,6 +157,8 @@ const indexPayload = {
     market: company.market,
     industry: company.industry,
     stage: company.stage,
+    planStatus: planByCode.get(String(company.code))?.status || 'not_checked',
+    planStatusCheckedAt: planByCode.get(String(company.code))?.review?.checkedAt || null,
     lastVerifiedDate: company.lastVerifiedDate ?? null,
     planPublishedDate: company.planPublishedDate ?? null,
     themes: (company.themes ?? []).slice(0, CARD_THEME_LIMIT),

@@ -5,7 +5,7 @@
   "description": "日本上場企業の中期経営計画を比較・理解・調査するための品質重視ポータル",
   "type": "module",
   "scripts": {
-    "quality:v43": "node scripts/run_quality_pipeline_v43.mjs && node scripts/align_metric_evidence_refs_v1.mjs && node scripts/rebuild_quality_scores_v2.mjs && node scripts/normalize_bundle_contract_v1.mjs && node scripts/build_company_universe_v1.mjs && node scripts/build_plan_detection_verified_overrides_v1.mjs && node scripts/build_plan_detection_registry_v1.mjs && node scripts/build_research_priority_queue_v1.mjs && node scripts/build_frontend_data_shards_v1.mjs && node scripts/audit_production_readiness_v1.mjs && node scripts/validate_core_document_relevance_v1.mjs && node scripts/validate_public_launch_v1.mjs",
+    "quality:v43": "node scripts/run_quality_pipeline_v43.mjs && node scripts/align_metric_evidence_refs_v1.mjs && node scripts/rebuild_quality_scores_v2.mjs && node scripts/normalize_bundle_contract_v1.mjs && node scripts/build_company_universe_v1.mjs && node scripts/build_plan_detection_verified_overrides_v1.mjs && node scripts/build_plan_detection_primary_reviewed_overrides_v1.mjs && node scripts/build_plan_detection_registry_v1.mjs && node scripts/build_research_priority_queue_v1.mjs && node scripts/build_frontend_data_shards_v1.mjs && node scripts/audit_production_readiness_v1.mjs && node scripts/validate_core_document_relevance_v1.mjs && node scripts/validate_public_launch_v1.mjs",
     "quality:content:audit": "node scripts/validate_core_document_relevance_v1.mjs",
     "quality:public-launch": "node scripts/validate_public_launch_v1.mjs",
     "quality:local": "node scripts/run_local_quality_gate.mjs",
@@ -22,10 +22,11 @@
     "company:coverage:apply": "node scripts/apply_company_coverage_1000_v1.mjs",
     "quality": "npm run quality:v43",
     "company:universe:build": "node scripts/build_company_universe_v1.mjs",
-    "company:universe:sync": "npm run company:coverage:fetch && npm run company:universe:build && npm run company:plan-detection:verified-overrides:build && npm run company:plan-detection:build && npm run company:research-priority:build && node scripts/build_frontend_data_shards_v1.mjs && npm run quality:local:quick",
+    "company:universe:sync": "npm run company:coverage:fetch && npm run company:universe:build && npm run company:plan-detection:verified-overrides:build && npm run company:plan-detection:primary-overrides:build && npm run company:plan-detection:build && npm run company:research-priority:build && node scripts/build_frontend_data_shards_v1.mjs && npm run quality:local:quick",
     "company:plan-detection:build": "node scripts/build_plan_detection_registry_v1.mjs",
     "company:research-priority:build": "node scripts/build_research_priority_queue_v1.mjs",
-    "company:plan-detection:verified-overrides:build": "node scripts/build_plan_detection_verified_overrides_v1.mjs"
+    "company:plan-detection:verified-overrides:build": "node scripts/build_plan_detection_verified_overrides_v1.mjs",
+    "company:plan-detection:primary-overrides:build": "node scripts/build_plan_detection_primary_reviewed_overrides_v1.mjs"
   },
   "engines": {
     "node": ">=20"

@@ -1,0 +1,56 @@
+name: Sync Company Universe
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 21 * * 1'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: company-universe-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch current JPX listed-company universe
+        run: npm run company:coverage:fetch
+
+      - name: Build current Prime Standard Growth universe
+        run: npm run company:universe:build
+
+      - name: Rebuild frontend search data
+        run: node scripts/build_frontend_data_shards_v1.mjs
+
+      - name: Run quick quality gate
+        run: npm run quality:local:quick
+
+      - name: Commit universe refresh
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No universe changes."
+            exit 0
+          fi
+          git config user.name "chu-kei-universe-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add             operations/research/jpx-listed-companies-latest.json             operations/universe/current-universe-v1.json             site/data/company-universe-v1.json             site/data/frontend
+          git commit -m "data: sync current JPX company universe"
+          git push

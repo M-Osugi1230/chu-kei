@@ -32,7 +32,74 @@ const source = JSON.parse(zlib.gunzipSync(sourceCompressed).toString('utf8'));
 fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
 fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
-const sorted = [...source.companies].sort((a, b) => String(a.code).localeCompare(String(b.code), 'ja'));
+const UNIVERSE_PATH = path.join(ROOT, 'operations', 'universe', 'current-universe-v1.json');
+
+const sourceByCode = new Map(source.companies.map(company => [String(company.code).toUpperCase(), company]));
+let sourceOnlyCount = 0;
+let universeOnlyCount = 0;
+let universeCompanyCount = null;
+let sorted = [...source.companies].sort((a, b) => String(a.code).localeCompare(String(b.code), 'ja'));
+
+if (fs.existsSync(UNIVERSE_PATH)) {
+  const universe = JSON.parse(fs.readFileSync(UNIVERSE_PATH, 'utf8'));
+  if (universe.version !== 'company-universe-v1' || !Array.isArray(universe.companies)) {
+    throw new Error('Unsupported company universe format');
+  }
+
+  universeCompanyCount = universe.companies.length;
+  const universeCodes = new Set(universe.companies.map(company => String(company.code).toUpperCase()));
+  sourceOnlyCount = source.companies.filter(company => !universeCodes.has(String(company.code).toUpperCase())).length;
+
+  sorted = universe.companies.map(listing => {
+    const code = String(listing.code).toUpperCase();
+    const existing = sourceByCode.get(code);
+    if (existing) {
+      return {
+        ...existing,
+        code,
+        name: listing.name,
+        market: listing.market,
+        industry: listing.industry,
+        listingStatus: 'active',
+        listingSource: 'JPX',
+      };
+    }
+
+    universeOnlyCount += 1;
+    const sourceUrl = `https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=${encodeURIComponent(code)}`;
+    return {
+      code,
+      name: listing.name,
+      market: listing.market,
+      industry: listing.industry,
+      category: `${listing.industry}/上場企業カバレッジ`,
+      stage: 'jpx_indexed',
+      tier: 'Coverageβ',
+      sourceUrl,
+      document: 'JPX上場会社情報',
+      period: null,
+      revenue: null,
+      profit: null,
+      margin: null,
+      capital: null,
+      returnPolicy: null,
+      planPublishedDate: null,
+      lastVerifiedDate: universe.sourceFetchedAt ? String(universe.sourceFetchedAt).slice(0, 10) : null,
+      themes: [],
+      summary: '企業探索用。JPXで現行上場・市場・業種を確認済み。中期経営計画の公式資料、目標数値、戦略テーマは未確認です。',
+      highlights: [],
+      warnings: ['Coverageβ。JPX上場情報のみ確認済みで、中期経営計画の公式資料は未確認です。'],
+      evidenceRefs: [
+        `JPX上場会社検索: ${sourceUrl}`,
+        universe.sourceWorkbook ? `東証上場銘柄一覧: ${universe.sourceWorkbook}` : '東証上場銘柄一覧',
+      ],
+      flags: {},
+      quality: null,
+      listingStatus: 'active',
+      listingSource: 'JPX',
+    };
+  }).sort((a, b) => String(a.code).localeCompare(String(b.code), 'ja'));
+}
 const shards = [];
 const detailFileByCode = new Map();
 
@@ -110,8 +177,12 @@ const manifest = {
   version: 'frontend-data-manifest-v1',
   generatedAt: new Date().toISOString(),
   sourceBundleSha256: sourceManifest.sha256,
-  companyCount: source.companies.length,
-  progressCount: source.progress.length,
+  companyCount: sorted.length,
+  sourceBundleCompanyCount: source.companies.length,
+  universeCompanyCount,
+  universeOnlyCount,
+  sourceOnlyCount,
+  progressCount: (source.progress ?? []).length,
   index: {
     file: indexFile,
     sha256: sha256(indexCompressed),
@@ -131,13 +202,17 @@ const report = {
   version: 'frontend-data-shards-v1.3',
   generatedAt: manifest.generatedAt,
   sourceBundleSha256: sourceManifest.sha256,
-  companyCount: source.companies.length,
-  structuredCompanyCount: source.companies.filter(company => ['core', 'detailed_extracted'].includes(company.stage)).length,
+  companyCount: sorted.length,
+  sourceBundleCompanyCount: source.companies.length,
+  universeCompanyCount,
+  universeOnlyCount,
+  sourceOnlyCount,
+  structuredCompanyCount: sorted.filter(company => ['core', 'detailed_extracted'].includes(company.stage)).length,
   indexBytes: indexCompressed.length,
   manifestBytes,
   initialBytes,
   initialBudgetBytes: INDEX_INITIAL_BUDGET,
-  initialBytesPerCompany: Number((initialBytes / source.companies.length).toFixed(2)),
+  initialBytesPerCompany: Number((initialBytes / sorted.length).toFixed(2)),
   detailShardCount: shards.length,
   maxDetailShardBytes: Math.max(...shards.map(shard => shard.bytes)),
   detailShardBudgetBytes: DETAIL_SHARD_BUDGET,

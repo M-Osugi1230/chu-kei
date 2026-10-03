@@ -39,6 +39,9 @@ jobs:
       - name: Refresh plan detection registry
         run: npm run company:plan-detection:build
 
+      - name: Rebuild ADE research priority queue
+        run: npm run company:research-priority:build
+
       - name: Rebuild frontend search data
         run: node scripts/build_frontend_data_shards_v1.mjs
 
@@ -59,8 +62,10 @@ jobs:
             operations/universe/current-universe-v1.json \
             operations/plan-detection/registry-v1.json \
             operations/plan-detection/research-queue-v1.json \
+            operations/research-priority/current-v1.json \
             site/data/company-universe-v1.json \
             site/data/plan-detection-summary-v1.json \
+            site/data/research-priority-summary-v1.json \
             site/data/frontend
           git commit -m "data: sync current JPX company universe"
           git push

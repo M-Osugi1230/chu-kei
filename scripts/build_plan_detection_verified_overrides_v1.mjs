@@ -93,17 +93,43 @@ function extractEndDates(value) {
 function derivePlanEnd(primary) {
   const source = primary.source || primary.document || {};
   const period = source.period ?? primary.period ?? null;
-  const candidates = extractEndDates(period);
+
+  // Prefer explicit structured end fields over narrative text. This prevents
+  // long-term vision years mentioned in statements from extending a formal
+  // mid-term plan by mistake.
+  let candidates = [];
+  if (period && typeof period === 'object' && !Array.isArray(period)) {
+    const explicitEndEntries = Object.entries(period)
+      .filter(([key]) => /(?:end|terminal|targetClosing|currentPlanTerminal)/i.test(key))
+      .map(([, value]) => value);
+    for (const value of explicitEndEntries) {
+      candidates.push(...extractEndDates(value));
+    }
+  } else {
+    candidates.push(...extractEndDates(period));
+  }
+
+  const boundary = source.formalPlanBoundary || primary.formalPlanBoundary || null;
+  if (!candidates.length && boundary && typeof boundary === 'object') {
+    const boundaryEntries = Object.entries(boundary)
+      .filter(([key]) => /(?:currentPlanTerminal|currentPlan$|currentPlanPeriod|planPeriod)/i.test(key))
+      .map(([, value]) => value);
+    for (const value of boundaryEntries) {
+      candidates.push(...extractEndDates(value));
+    }
+  }
 
   const classification = String(source.documentClassification || '');
-  for (const match of classification.matchAll(/(?:to|through|until)_?(20\d{2})/gi)) {
-    const date = toIsoDate(Number(match[1]) + 1, 3, 31);
-    if (date) candidates.push({ date, basis: match[0], precision: 'classification_year' });
+  if (!candidates.length) {
+    for (const match of classification.matchAll(/(?:to|through|until)_?(20\d{2})/gi)) {
+      const date = toIsoDate(Number(match[1]) + 1, 3, 31);
+      if (date) candidates.push({ date, basis: match[0], precision: 'classification_year_fallback' });
+    }
   }
 
   candidates.sort((a, b) => a.date.localeCompare(b.date));
   return {
-    period,
+    period: period || boundary || null,
     planEnd: candidates.length ? candidates.at(-1) : null,
     allCandidates: candidates,
   };
@@ -190,7 +216,8 @@ for (const record of status.completionRecords) {
 
   const sourceIdentityConfirmed =
     (completion.checks || []).some(check =>
-      check.id === 'source_identity' && check.status === 'confirmed'
+      /(?:source|document)_identity/.test(String(check.id || ''))
+      && String(check.status || '').startsWith('confirmed')
     );
   const independentConfirmed =
     completion.review?.reviewRole === 'independent_reviewer'

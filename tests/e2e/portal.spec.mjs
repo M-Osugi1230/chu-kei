@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import { test, expect } from '@playwright/test';
 
-const milestone = JSON.parse(
-  fs.readFileSync(new URL('../../operations/quality/coverage-milestone-v1.json', import.meta.url), 'utf8'),
+const frontendManifest = JSON.parse(
+  fs.readFileSync(new URL('../../site/data/frontend/manifest.json', import.meta.url), 'utf8'),
 );
 const qualityRebase = JSON.parse(
   fs.readFileSync(new URL('../../site/data/quality-rebase-v1.json', import.meta.url), 'utf8'),
@@ -89,7 +89,7 @@ test.describe('Chu-kei portal', () => {
     const errors = captureErrors(page);
     await page.goto('/');
     await expect(page).toHaveTitle(/Chu-kei/);
-    await expect(page.locator('#stat-total')).toHaveText(`${milestone.companyTotal}社`);
+    await expect(page.locator('#stat-total')).toHaveText(`${frontendManifest.companyCount}社`);
     await expect(page.locator('#stat-confirmed')).toHaveText(`${qualityRebase.counts.reAuditPool}社`);
     await expect(page.locator('#stat-structured')).toHaveText(`${qualityRebase.counts.deepVerified}社`);
     await expect(page.locator('#stat-progress')).toHaveText(

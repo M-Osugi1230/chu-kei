@@ -178,3 +178,23 @@ Generated artifacts:
 - `site/data/research-priority-summary-v1.json`
 
 This keeps the autonomous loop aligned with product value instead of raw data volume.
+
+
+## Verified L1 seed from historical independent reviews
+
+Phase 2 independent-review completions are reused as L1 evidence only when all of the following are true:
+
+- independent review status is complete
+- source identity is explicitly confirmed
+- independent reviewer result is confirmed
+- a first-party or official source URL is present
+- formal-plan existence is explicit in the reviewed record
+- current / expired status can be derived from the reviewed plan end date
+
+The importer never promotes unresolved records. Those stay `not_checked`.
+
+Generated artifact:
+
+- `operations/plan-detection/verified-overrides-v1.json`
+
+The override is provenance-preserving and recalculates plan currentness against the current Tokyo date, so a previously current plan can become `expired` automatically after its reviewed end date. A newer manually reviewed L1 record takes precedence over an older imported review.

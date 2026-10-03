@@ -36,6 +36,9 @@ jobs:
       - name: Build current Prime Standard Growth universe
         run: npm run company:universe:build
 
+      - name: Refresh verified plan detection overrides
+        run: npm run company:plan-detection:verified-overrides:build
+
       - name: Refresh plan detection registry
         run: npm run company:plan-detection:build
 
@@ -60,6 +63,7 @@ jobs:
           git add \
             operations/research/jpx-listed-companies-latest.json \
             operations/universe/current-universe-v1.json \
+            operations/plan-detection/verified-overrides-v1.json \
             operations/plan-detection/registry-v1.json \
             operations/plan-detection/research-queue-v1.json \
             operations/research-priority/current-v1.json \

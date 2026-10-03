@@ -12,6 +12,7 @@ Chu-keiは投資助言・銘柄推奨を目的としません。未確認情報�
 プロジェクトの現状、差分、次の優先順位は次の基準文書を参照してください。
 
 - [`docs/Chu-kei_project_current_and_ideal_v7.md`](docs/Chu-kei_project_current_and_ideal_v7.md)
+- Universe-first設計: [`docs/CHU_KEI_UNIVERSE_FIRST_ARCHITECTURE_V1.md`](docs/CHU_KEI_UNIVERSE_FIRST_ARCHITECTURE_V1.md)
 - Phase 2進捗正本: [`operations/quality-rebase/phase2/effective-status-v1.json`](operations/quality-rebase/phase2/effective-status-v1.json)
 - Phase 2会社コード単位監査: [`operations/quality-rebase/phase2/queue-coverage-audit-v1.json`](operations/quality-rebase/phase2/queue-coverage-audit-v1.json)
 
@@ -23,6 +24,21 @@ Chu-keiは投資助言・銘柄推奨を目的としません。未確認情報�
 - GitHub: 企業データ、出典、品質、変更履歴、レビュー判断、監査コードの正本
 
 同期方針は [`docs/LIVE_SITE_ALIGNMENT.md`](docs/LIVE_SITE_ALIGNMENT.md) を参照してください。
+
+## Universe-first product direction
+
+Chu-keiは2026-10以降、1社あたりの詳細情報網羅性よりも企業数の網羅性を優先する。
+
+- Prime / Standard / Growth の現行上場企業を検索母集団として100%保持する
+- 既存の高品質企業データはGold Datasetとして維持する
+- 中計確認状態 → Comparison Core → 必要時Deep Researchの順で深くする
+- 詳細情報を全社一律に埋めることを完成条件にしない
+- JPX公式一覧からUniverseを定期同期し、新規上場・市場変更を検索母集団へ反映する
+
+実装:
+- `npm run company:universe:build`
+- `npm run company:universe:sync`
+- `.github/workflows/sync-company-universe.yml`
 
 ## Current data release
 
@@ -125,15 +141,13 @@ npm run quality:local
 - `releases/` リリースマニフェストとチェックサム
 - `docs/` 品質方針、運用方針、ロードマップ、プロジェクト基準文書
 
-## Development priority after canonical-count reconciliation
+## Development priority — Universe first
 
-1. 通常一次レビュー候補はWave39で全件完了。例外キュー86社を `manual_source_relevance_check` → `pdf_identification_required` / `probable_wrong_document` → `source_recovery_required` の順に、会社コード単位で復旧する
-2. Phase 2残り86社をcanonical一次レビュー成果物で完了し、Phase 1込み一次レビュー500 / 500社へ到達する
-3. 独立図表レビューpending 310社を古いWaveから並行処理する
-4. 独立レビュー完了企業からDeep Verification最終承認工程へ進める
-5. 610社の決算短信起点データから正式な中計資料を再探索する
-6. 116社の証跡候補と6件の404を解消する
-7. 353件の進捗データを企業詳細へ同期し、72社・258件の実績接続を維持・拡大する
-8. GitHub正本と `chu-kei.com` の品質表示・企業データを完全同期する
-9. 新中計・改定・決算更新の日次検知と週次公開を定常化する
-10. 500社工程で得た品質指標を反映し、基準を緩めず1,000社へ段階拡張する
+1. Prime / Standard / Growth の現行上場企業UniverseをJPX公式一覧から100%同期する
+2. 全Universe企業を検索可能にし、企業がChu-kei上に存在しない状態を解消する
+3. 全社の中計確認状態を `current / expired / no_formal_plan / found_unstructured / not_checked` で管理する
+4. 比較を阻害するComparison Core欠損を優先して埋める
+5. 既存Gold Datasetの品質と証跡は維持し、詳細改善はCore Coverageを妨げない範囲で行う
+6. 新中計・改定・決算更新の検知をFreshness改善へ接続する
+7. ユーザーの比較・検索需要が発生した企業だけDeep Researchへ送る
+8. GitHub正本と `chu-kei.com` の検索母集団・品質表示を同期する

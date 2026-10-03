@@ -289,11 +289,20 @@ function passesPrimaryL1Gate(primary) {
     ['validation', 'evidenceLinked'],
   ]);
 
+  const title = String(source.title || '');
+  const classification = String(source.classification || '');
+  const longTermOnlyTitle =
+    /長期|long[-\s]?term/i.test(title)
+    && !/中期|中長期|mid[-\s]?term/i.test(title);
+  const classificationSupportsMidTerm =
+    /formal_management_plan|mid[-_\s]?term|中期|中長期/i.test(classification);
+
   const checks = {
     primaryReviewComplete: status.startsWith('primary_review_complete'),
     companyCodePresent: Boolean(String(company.code || '').trim()),
     companyIdentityConfirmed,
     formalPlanConfirmed: formalPlanConfirmed(primary),
+    midTermScopeConfirmed: !longTermOnlyTitle || classificationSupportsMidTerm,
     fullTextHumanReviewComplete,
     metricsValidated,
     evidenceLinked,

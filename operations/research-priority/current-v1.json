@@ -1,7 +1,7 @@
 {
   "version": "chu-kei-research-priority-v1",
-  "generatedAt": "2026-10-03T20:57:47.842Z",
-  "universeGeneratedAt": "2026-10-03T20:57:47.383Z",
+  "generatedAt": "2026-10-03T20:59:52.374Z",
+  "universeGeneratedAt": "2026-10-03T20:59:51.569Z",
   "sourceBundleSha256": "d92e1d595aa31866da6a4d20fe9412283992acc2a0484049ba4f4ef379ef57c4",
   "policy": {
     "productGoal": "企業数の網羅性を維持しながら、企業発見・比較能力を最大化する",
@@ -18,11 +18,11 @@
   "counts": {
     "universe": 3709,
     "sourceBundleCompanies": 3000,
-    "planResolved": 272,
-    "planPending": 3437,
-    "planCandidateHinted": 2728,
-    "currentOrUnstructuredPlan": 271,
-    "comparisonCoreQueued": 256,
+    "planResolved": 271,
+    "planPending": 3438,
+    "planCandidateHinted": 2729,
+    "currentOrUnstructuredPlan": 270,
+    "comparisonCoreQueued": 255,
     "noCurrentCoreRequired": 1
   },
   "comparisonCoreDefinition": [
@@ -1322,6 +1322,29 @@
         "name": "Ｓｃｈｏｏ",
         "market": "Growth",
         "industry": "サービス業",
+        "priorityBand": "P0",
+        "priorityScore": 1100,
+        "candidateHintScore": 100,
+        "candidateHints": [
+          "plan_like_document_title",
+          "source_url_present",
+          "plan_published_date_present",
+          "evidence_refs_present",
+          "existing_structured_record"
+        ],
+        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
+        "completionRequires": [
+          "checkedAt",
+          "sourceUrl",
+          "explicit_status"
+        ]
+      },
+      {
+        "layer": "L1_PLAN_DETECTION",
+        "code": "265A",
+        "name": "Ｈｍｃｏｍｍ",
+        "market": "Growth",
+        "industry": "情報・通信業",
         "priorityBand": "P0",
         "priorityScore": 1100,
         "candidateHintScore": 100,
@@ -74981,35 +75004,6 @@
         "name": "ヒビノ",
         "market": "Standard",
         "industry": "サービス業",
-        "planStatus": "current",
-        "priorityBand": "P1",
-        "priorityScore": 503,
-        "comparisonReadiness": 0.9167,
-        "availableFields": [
-          "period",
-          "revenue",
-          "profit",
-          "margin",
-          "capital",
-          "returnPolicy",
-          "strategy",
-          "evidence"
-        ],
-        "missingFields": [
-          {
-            "key": "progress",
-            "label": "最新進捗",
-            "impactWeight": 3
-          }
-        ],
-        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
-      },
-      {
-        "layer": "L2_COMPARISON_CORE",
-        "code": "265A",
-        "name": "Ｈｍｃｏｍｍ",
-        "market": "Growth",
-        "industry": "情報・通信業",
         "planStatus": "current",
         "priorityBand": "P1",
         "priorityScore": 503,

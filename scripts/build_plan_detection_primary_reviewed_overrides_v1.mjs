@@ -118,7 +118,7 @@ function extractEndDates(value) {
       const date = toIsoDate(Number(match[1]) + 1, 3, 31);
       if (date) dates.push({ date, basis: match[0], precision: 'fiscal_year' });
     }
-    for (const match of text.matchAll(/\bFY\s*([2-9]\d|20\d{2})\b/gi)) {
+    for (const match of text.matchAll(/\bFY\s*([2-9]\d|20\d{2})(?![./-]\d)\b/gi)) {
       const raw = Number(match[1]);
       const year = raw < 100 ? 2000 + raw : raw;
       const date = toIsoDate(year + 1, 3, 31);

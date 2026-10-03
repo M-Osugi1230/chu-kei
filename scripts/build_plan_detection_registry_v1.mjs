@@ -5,6 +5,7 @@ const ROOT = path.resolve('.');
 const UNIVERSE_PATH = path.join(ROOT, 'operations', 'universe', 'current-universe-v1.json');
 const REGISTRY_PATH = path.join(ROOT, 'operations', 'plan-detection', 'registry-v1.json');
 const VERIFIED_OVERRIDES_PATH = path.join(ROOT, 'operations', 'plan-detection', 'verified-overrides-v1.json');
+const PRIMARY_REVIEWED_OVERRIDES_PATH = path.join(ROOT, 'operations', 'plan-detection', 'primary-reviewed-overrides-v1.json');
 const QUEUE_PATH = path.join(ROOT, 'operations', 'plan-detection', 'research-queue-v1.json');
 const PUBLIC_SUMMARY_PATH = path.join(ROOT, 'site', 'data', 'plan-detection-summary-v1.json');
 
@@ -55,6 +56,20 @@ if (fs.existsSync(VERIFIED_OVERRIDES_PATH)) {
   );
 }
 
+let primaryReviewedByCode = new Map();
+if (fs.existsSync(PRIMARY_REVIEWED_OVERRIDES_PATH)) {
+  const primaryReviewed = readJson(PRIMARY_REVIEWED_OVERRIDES_PATH);
+  if (
+    primaryReviewed.version !== 'plan-detection-primary-reviewed-overrides-v1'
+    || !Array.isArray(primaryReviewed.overrides)
+  ) {
+    throw new Error('Unsupported primary-reviewed plan detection override format');
+  }
+  primaryReviewedByCode = new Map(
+    primaryReviewed.overrides.map(item => [String(item.code), item]),
+  );
+}
+
 let previousByCode = new Map();
 if (fs.existsSync(REGISTRY_PATH)) {
   const previous = readJson(REGISTRY_PATH);
@@ -67,28 +82,40 @@ if (fs.existsSync(REGISTRY_PATH)) {
 const companies = universe.companies.map(listing => {
   const code = String(listing.code);
   const previous = previousByCode.get(code);
+  const primaryReviewed = primaryReviewedByCode.get(code);
   const verified = verifiedByCode.get(code);
-  const previousIsAutoDerived =
-    previous?.review?.method === 'quality_rebase_phase2_independent_completion_v1';
+  const autoDerivedMethods = new Set([
+    'quality_rebase_phase2_independent_completion_v1',
+    'quality_rebase_primary_review_l1_seed_v1',
+  ]);
+  const previousIsAutoDerived = autoDerivedMethods.has(previous?.review?.method);
 
   let selected = previousIsAutoDerived ? null : previous;
   let selectedDerivation = previousIsAutoDerived ? null : (previous?.derivation || null);
 
-  if (verified) {
+  const manualPreviousIsNewerThan = seed => {
     const previousCheckedAt = String(previous?.review?.checkedAt || '');
-    const verifiedCheckedAt = String(verified?.review?.checkedAt || '');
-    const manualPreviousIsNewer =
+    const seedCheckedAt = String(seed?.review?.checkedAt || '');
+    return (
       previous
       && !previousIsAutoDerived
       && RESOLVED.has(previous.status)
       && validDate(previousCheckedAt)
-      && validDate(verifiedCheckedAt)
-      && previousCheckedAt > verifiedCheckedAt;
+      && validDate(seedCheckedAt)
+      && previousCheckedAt > seedCheckedAt
+    );
+  };
 
-    if (!manualPreviousIsNewer) {
-      selected = verified;
-      selectedDerivation = verified.derivation || null;
-    }
+  if (primaryReviewed && !manualPreviousIsNewerThan(primaryReviewed)) {
+    selected = primaryReviewed;
+    selectedDerivation = primaryReviewed.derivation || null;
+  }
+
+  // Independently reviewed evidence always outranks a primary-review seed,
+  // unless a newer explicit manual L1 decision exists.
+  if (verified && !manualPreviousIsNewerThan(verified)) {
+    selected = verified;
+    selectedDerivation = verified.derivation || null;
   }
 
   const status = selected?.status || 'not_checked';
@@ -156,6 +183,7 @@ const registry = {
   resolvedCount,
   detectionCoverage: Number(detectionCoverage.toFixed(6)),
   verifiedOverrideCount: verifiedByCode.size,
+  primaryReviewedOverrideCount: primaryReviewedByCode.size,
   counts,
   companies,
   archived,
@@ -192,6 +220,7 @@ const publicSummary = {
   pendingCount: counts.not_checked,
   detectionCoverage: registry.detectionCoverage,
   verifiedOverrideCount: verifiedByCode.size,
+  primaryReviewedOverrideCount: primaryReviewedByCode.size,
   counts,
 };
 

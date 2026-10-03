@@ -4,6 +4,7 @@ import path from 'node:path';
 const ROOT = path.resolve('.');
 const UNIVERSE_PATH = path.join(ROOT, 'operations', 'universe', 'current-universe-v1.json');
 const REGISTRY_PATH = path.join(ROOT, 'operations', 'plan-detection', 'registry-v1.json');
+const VERIFIED_OVERRIDES_PATH = path.join(ROOT, 'operations', 'plan-detection', 'verified-overrides-v1.json');
 const QUEUE_PATH = path.join(ROOT, 'operations', 'plan-detection', 'research-queue-v1.json');
 const PUBLIC_SUMMARY_PATH = path.join(ROOT, 'site', 'data', 'plan-detection-summary-v1.json');
 
@@ -40,6 +41,20 @@ if (universe.version !== 'company-universe-v1' || !Array.isArray(universe.compan
   throw new Error('Unsupported company universe format');
 }
 
+let verifiedByCode = new Map();
+if (fs.existsSync(VERIFIED_OVERRIDES_PATH)) {
+  const verified = readJson(VERIFIED_OVERRIDES_PATH);
+  if (
+    verified.version !== 'plan-detection-verified-overrides-v1'
+    || !Array.isArray(verified.overrides)
+  ) {
+    throw new Error('Unsupported verified plan detection override format');
+  }
+  verifiedByCode = new Map(
+    verified.overrides.map(item => [String(item.code), item]),
+  );
+}
+
 let previousByCode = new Map();
 if (fs.existsSync(REGISTRY_PATH)) {
   const previous = readJson(REGISTRY_PATH);
@@ -52,18 +67,42 @@ if (fs.existsSync(REGISTRY_PATH)) {
 const companies = universe.companies.map(listing => {
   const code = String(listing.code);
   const previous = previousByCode.get(code);
-  const status = previous?.status || 'not_checked';
+  const verified = verifiedByCode.get(code);
+  const previousIsAutoDerived =
+    previous?.review?.method === 'quality_rebase_phase2_independent_completion_v1';
+
+  let selected = previousIsAutoDerived ? null : previous;
+  let selectedDerivation = previousIsAutoDerived ? null : (previous?.derivation || null);
+
+  if (verified) {
+    const previousCheckedAt = String(previous?.review?.checkedAt || '');
+    const verifiedCheckedAt = String(verified?.review?.checkedAt || '');
+    const manualPreviousIsNewer =
+      previous
+      && !previousIsAutoDerived
+      && RESOLVED.has(previous.status)
+      && validDate(previousCheckedAt)
+      && validDate(verifiedCheckedAt)
+      && previousCheckedAt > verifiedCheckedAt;
+
+    if (!manualPreviousIsNewer) {
+      selected = verified;
+      selectedDerivation = verified.derivation || null;
+    }
+  }
+
+  const status = selected?.status || 'not_checked';
 
   if (!STATUSES.has(status)) throw new Error(`Invalid plan detection status for ${code}: ${status}`);
 
-  const review = previous?.review && typeof previous.review === 'object'
+  const review = selected?.review && typeof selected.review === 'object'
     ? {
-        checkedAt: previous.review.checkedAt || null,
-        sourceUrl: previous.review.sourceUrl || null,
-        sourceTitle: previous.review.sourceTitle || null,
-        sourceType: previous.review.sourceType || null,
-        method: previous.review.method || null,
-        note: previous.review.note || null,
+        checkedAt: selected.review.checkedAt || null,
+        sourceUrl: selected.review.sourceUrl || null,
+        sourceTitle: selected.review.sourceTitle || null,
+        sourceType: selected.review.sourceType || null,
+        method: selected.review.method || null,
+        note: selected.review.note || null,
       }
     : {
         checkedAt: null,
@@ -90,6 +129,7 @@ const companies = universe.companies.map(listing => {
     industry: listing.industry,
     status,
     review,
+    derivation: selectedDerivation,
   };
 }).sort((a, b) => a.code.localeCompare(b.code, 'ja'));
 
@@ -115,6 +155,7 @@ const registry = {
   companyCount: companies.length,
   resolvedCount,
   detectionCoverage: Number(detectionCoverage.toFixed(6)),
+  verifiedOverrideCount: verifiedByCode.size,
   counts,
   companies,
   archived,
@@ -150,6 +191,7 @@ const publicSummary = {
   resolvedCount,
   pendingCount: counts.not_checked,
   detectionCoverage: registry.detectionCoverage,
+  verifiedOverrideCount: verifiedByCode.size,
   counts,
 };
 

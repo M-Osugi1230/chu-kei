@@ -138,3 +138,43 @@ Research Priorityは概念的に次で評価する。
 Comparison Impact × User Demand × Gap Severity × Freshness Importance / Research Cost
 
 この順序により、詳細データ改善が目的化することを防ぐ。
+
+
+## ADE executable research queue
+
+`scripts/build_research_priority_queue_v1.mjs` converts the architecture into an executable backlog.
+
+### L1 priority
+
+All `not_checked` companies enter `L1_PLAN_DETECTION`.
+
+Existing document titles, source URLs, publication dates and evidence references may raise research priority as candidate hints, but they never change Plan Detection status automatically. A resolved status still requires the evidence gate defined by the Plan Detection registry.
+
+### L2 priority
+
+Only companies already resolved as `current` or `found_unstructured` are evaluated for Comparison Core gaps.
+
+The initial Core readiness model uses:
+
+- period
+- revenue
+- profit
+- margin
+- capital
+- returnPolicy
+- strategy themes
+- official evidence
+- progress
+
+Missing fields are weighted by comparison impact and placed in `L2_COMPARISON_CORE`. The queue asks ADE to fill only the missing comparison-blocking fields.
+
+### L3 rule
+
+Deep Research is not generated from generic data incompleteness. It is created only from user demand or an explicit research goal.
+
+Generated artifacts:
+
+- `operations/research-priority/current-v1.json`
+- `site/data/research-priority-summary-v1.json`
+
+This keeps the autonomous loop aligned with product value instead of raw data volume.

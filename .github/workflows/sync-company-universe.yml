@@ -39,6 +39,9 @@ jobs:
       - name: Refresh verified plan detection overrides
         run: npm run company:plan-detection:verified-overrides:build
 
+      - name: Refresh primary-reviewed plan detection overrides
+        run: npm run company:plan-detection:primary-overrides:build
+
       - name: Refresh plan detection registry
         run: npm run company:plan-detection:build
 
@@ -64,6 +67,7 @@ jobs:
             operations/research/jpx-listed-companies-latest.json \
             operations/universe/current-universe-v1.json \
             operations/plan-detection/verified-overrides-v1.json \
+            operations/plan-detection/primary-reviewed-overrides-v1.json \
             operations/plan-detection/registry-v1.json \
             operations/plan-detection/research-queue-v1.json \
             operations/research-priority/current-v1.json \

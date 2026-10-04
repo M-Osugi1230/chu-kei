@@ -65,9 +65,34 @@ function flattenStrings(value, out = []) {
   return out;
 }
 
+function focusPeriodText(value) {
+  if (typeof value !== 'string') return value;
+  const segments = value
+    .split(/[／/]|、(?=\s*(?:中期|長期|現行|Vision|ビジョン))/i)
+    .map(text => text.trim())
+    .filter(Boolean);
+  const midTerm = segments.find(text =>
+    /中期|mid[-\s]?term|現行(?:中計|計画)|current\s+plan/i.test(text)
+    && !/長期|long[-\s]?term/i.test(text)
+  );
+  let focused = midTerm || segments[0] || value;
+  focused = focused.replace(
+    /[（(][^）)]*(?:長期|long[-\s]?term|vision|ビジョン|目指す姿|上位方針)[^）)]*[）)]/gi,
+    '',
+  );
+  return focused.trim();
+}
+
 function extractEndDates(value) {
   const dates = [];
-  for (const text of flattenStrings(value)) {
+  for (const rawText of flattenStrings(value)) {
+    const text = String(focusPeriodText(rawText) || rawText);
+    for (const match of text.matchAll(/\bFY\s*(20\d{2}|[2-9]\d)[./-](1[0-2]|0?[1-9])\b/gi)) {
+      const raw = Number(match[1]);
+      const year = raw < 100 ? 2000 + raw : raw;
+      const date = monthEnd(year, match[2]);
+      if (date) dates.push({ date, basis: match[0], precision: 'fy_month_end' });
+    }
     for (const match of text.matchAll(/(20\d{2})年\s*(1[0-2]|0?[1-9])月期/g)) {
       const date = monthEnd(match[1], match[2]);
       if (date) dates.push({ date, basis: match[0], precision: 'month_end' });
@@ -76,7 +101,7 @@ function extractEndDates(value) {
       const date = toIsoDate(Number(match[1]) + 1, 3, 31);
       if (date) dates.push({ date, basis: match[0], precision: 'fiscal_year' });
     }
-    for (const match of text.matchAll(/\bFY\s*([2-9]\d|20\d{2})\b/gi)) {
+    for (const match of text.matchAll(/\bFY\s*([2-9]\d|20\d{2})(?![./-]\d)\b/gi)) {
       const raw = Number(match[1]);
       const year = raw < 100 ? 2000 + raw : raw;
       const date = toIsoDate(year + 1, 3, 31);

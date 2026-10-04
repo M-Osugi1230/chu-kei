@@ -198,3 +198,31 @@ Generated artifact:
 - `operations/plan-detection/verified-overrides-v1.json`
 
 The override is provenance-preserving and recalculates plan currentness against the current Tokyo date, so a previously current plan can become `expired` automatically after its reviewed end date. A newer manually reviewed L1 record takes precedence over an older imported review.
+
+
+## Primary-reviewed L1 seed
+
+Completed primary human reviews may also resolve L1 when the record itself proves all of the following:
+
+- primary review status is complete
+- company/source identity is confirmed
+- formal plan existence is explicitly confirmed
+- full text human review is complete
+- metrics are validated
+- field-level evidence is linked
+- an official/first-party source URL exists
+- the primary review date is recorded
+- the reviewed formal-plan end date can be resolved
+
+This tier is intentionally narrower than "a source was found". A review with `formalPlanConfirmed=false` does **not** become `no_formal_plan`; it remains unresolved unless a separate exhaustive plan-existence review proves that no formal plan exists.
+
+Precedence:
+
+1. newer explicit manual L1 decision
+2. independent-reviewed seed
+3. primary-human-reviewed seed
+4. not_checked
+
+Generated artifact:
+
+- `operations/plan-detection/primary-reviewed-overrides-v1.json`

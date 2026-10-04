@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "plan-detection-candidate-batch-v1",
+  "batchId": "ade-batch-001",
+  "checkedAt": "2026-10-04",
+  "nonPublic": true,
+  "purpose": "Prepare bounded Plan Detection candidates from official or first-party evidence for later human review without changing published Plan Detection state.",
+  "policy": {
+    "humanReviewRequired": true,
+    "automaticPromotionAllowed": false,
+    "publicationAllowed": false,
+    "inferNoFormalPlanFromMissingEvidence": false,
+    "allowedSuggestedStatuses": [
+      "current",
+      "expired",
+      "found_unstructured",
+      "not_checked"
+    ],
+    "finalRegistryMutationAllowed": false
+  },
+  "candidates": [
+    {
+      "code": "130A",
+      "name": "Ｖｅｒｉｔａｓ Ｉｎ Ｓｉｌｉｃｏ",
+      "market": "Growth",
+      "industry": "医薬品",
+      "priority": {
+        "layer": "L1_PLAN_DETECTION",
+        "band": "P0",
+        "score": 1100,
+        "candidateHintScore": 100
+      },
+      "source": {
+        "authority": "official_primary",
+        "title": "事業計画及び成長可能性に関する説明資料",
+        "publishedDate": "2026-02-12",
+        "url": "https://www2.jpx.co.jp/disc/130A0/140120260212556443.pdf",
+        "currentnessUrl": "https://www.veritasinsilico.com/jp/growth_strategy.html",
+        "currentnessCheckedAt": "2026-10-04"
+      },
+      "observation": {
+        "suggestedStatus": "current",
+        "formalPlanObservation": "confirmed_in_reviewed_primary_source",
+        "periodLabel": "2025年度～2027年度",
+        "exactPlanEndDate": null,
+        "fiscalBoundaryNote": "Exact fiscal-year boundary is intentionally not inferred at candidate stage.",
+        "currentnessNote": "The company's current growth-strategy page continues to describe 2026-2027 as the investment period toward the 2030 vision.",
+        "evidenceSummary": "The reviewed primary disclosure explicitly labels the medium-term management plan period and separates that period from the 2030 long-term vision."
+      },
+      "provenance": {
+        "repositoryPaths": [
+          "operations/quality-rebase/phase2/reviews/130A-primary-review-v1.json",
+          "operations/patches/batch73-130A-20260720.json"
+        ]
+      },
+      "review": {
+        "decision": "needs_review",
+        "status": "pending",
+        "requiredChecks": [
+          "Confirm the 2025-2027 plan-period boundary against the source pages.",
+          "Keep the 2030 vision separate from the medium-term plan period.",
+          "Confirm that no later official disclosure supersedes the observed plan period."
+        ]
+      },
+      "publication": {
+        "eligible": false
+      },
+      "promotion": {
+        "allowed": false
+      }
+    },
+    {
+      "code": "135A",
+      "name": "ＶＲＡＩＮ Ｓｏｌｕｔｉｏｎ",
+      "market": "Growth",
+      "industry": "情報・通信業",
+      "priority": {
+        "layer": "L1_PLAN_DETECTION",
+        "band": "P0",
+        "score": 1100,
+        "candidateHintScore": 100
+      },
+      "source": {
+        "authority": "official_primary",
+        "title": "事業計画及び成長可能性に関する事項",
+        "publishedDate": "2026-05-29",
+        "url": "https://www2.jpx.co.jp/disc/135A0/140120260512524967.pdf",
+        "currentnessUrl": "https://vrain.co.jp/ir/",
+        "currentnessCheckedAt": "2026-10-04"
+      },
+      "observation": {
+        "suggestedStatus": "found_unstructured",
+        "formalPlanObservation": "independent_formal_medium_term_plan_not_confirmed_in_reviewed_growth_document",
+        "periodLabel": "中期経営方針 / 中長期戦略（5か年計画）",
+        "exactPlanEndDate": null,
+        "fiscalBoundaryNote": "The five-year strategy horizon is preserved as disclosed; it is not converted into a formal-plan end date.",
+        "currentnessNote": "Official materials continue to disclose a medium-term management policy and a five-year strategy, but the reviewed source is a Growth-market business-plan disclosure rather than an independently confirmed formal medium-term plan.",
+        "evidenceSummary": "Sales CAGR +50% and operating margin 30-40% are disclosed as medium-term management policy; a five-year strategy is also disclosed."
+      },
+      "provenance": {
+        "repositoryPaths": [
+          "operations/quality-rebase/phase2/reviews/135A-primary-review-v1.json",
+          "operations/patches/batch73-135A-20260720.json"
+        ]
+      },
+      "review": {
+        "decision": "needs_review",
+        "status": "pending",
+        "requiredChecks": [
+          "Confirm whether a separately approved/formal medium-term management plan exists outside the Growth disclosure.",
+          "Preserve the distinction between medium-term policy, five-year strategy, and annual forecasts.",
+          "Do not promote to no_formal_plan if a separate formal-plan document is not found."
+        ]
+      },
+      "publication": {
+        "eligible": false
+      },
+      "promotion": {
+        "allowed": false
+      }
+    },
+    {
+      "code": "137A",
+      "name": "Ｃｏｃｏｌｉｖｅ",
+      "market": "Growth",
+      "industry": "情報・通信業",
+      "priority": {
+        "layer": "L1_PLAN_DETECTION",
+        "band": "P0",
+        "score": 1100,
+        "candidateHintScore": 100
+      },
+      "source": {
+        "authority": "first_party_primary",
+        "title": "事業計画及び成長可能性に関する事項",
+        "publishedDate": "2026-08-31",
+        "url": "https://cocolive.co.jp/ir/library/material/",
+        "officialIrUrl": "https://cocolive.co.jp/ir/",
+        "currentnessCheckedAt": "2026-10-04",
+        "sourceLocator": "Cocolive IR / 2026-08-31 / 事業計画及び成長可能性に関する事項"
+      },
+      "observation": {
+        "suggestedStatus": "found_unstructured",
+        "formalPlanObservation": "formal_medium_term_plan_not_confirmed_in_current_primary_disclosure",
+        "periodLabel": "2027年5月期計画 + 短期・中期的な成長戦略 / 中長期的な成長戦略",
+        "exactPlanEndDate": null,
+        "fiscalBoundaryNote": "The annual FY2027 plan and broader strategy horizons are kept separate; no fixed multi-year formal-plan end date is inferred.",
+        "currentnessNote": "The 2026-08-31 disclosure updates the annual FY2027 plan and continues the three-direction short/mid- and medium/long-term growth strategy.",
+        "evidenceSummary": "The current disclosure contains an FY2027 annual plan and strategic horizons, but this candidate does not equate those sections with a separately confirmed formal medium-term management plan."
+      },
+      "provenance": {
+        "repositoryPaths": [
+          "operations/patches/batch73-137A-20260720.json"
+        ]
+      },
+      "review": {
+        "decision": "needs_review",
+        "status": "pending",
+        "requiredChecks": [
+          "Confirm the 2026-08-31 current disclosure directly in the official IR library.",
+          "Keep the FY2027 annual plan separate from the broader growth-strategy horizons.",
+          "Do not infer no_formal_plan from the absence of an independently titled medium-term plan."
+        ]
+      },
+      "publication": {
+        "eligible": false
+      },
+      "promotion": {
+        "allowed": false
+      }
+    }
+  ]
+}

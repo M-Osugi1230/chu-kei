@@ -59,6 +59,9 @@ for (const file of files) {
   if (payload?.policy?.publicationAllowed !== false) {
     fail(`${file}: publication must be disabled`);
   }
+  if (payload?.policy?.inferNoFormalPlanFromMissingEvidence !== false) {
+    fail(`${file}: missing evidence must never imply no formal plan`);
+  }
   if (payload?.policy?.finalRegistryMutationAllowed !== false) {
     fail(`${file}: final registry mutation must be disabled`);
   }

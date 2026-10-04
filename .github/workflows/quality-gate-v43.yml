@@ -34,6 +34,9 @@ jobs:
             npm run quality:v43 -- --allow-missing
           fi
 
+      - name: Validate non-public Plan Detection candidates
+        run: node scripts/validate_plan_detection_candidates_v1.mjs
+
       - name: Upload quality report
         if: always()
         uses: actions/upload-artifact@v4

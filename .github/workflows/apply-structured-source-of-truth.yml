@@ -120,6 +120,7 @@ jobs:
           rm -f package-lock.json
 
       - name: Commit generated source of truth
+        if: github.event_name == 'workflow_dispatch'
         env:
           TARGET_BRANCH: ${{ steps.target.outputs.branch }}
           APPLY_REQUESTED: ${{ steps.request.outputs.requested }}

@@ -1,0 +1,170 @@
+{
+  "schemaVersion": "plan-detection-candidate-batch-v1",
+  "batchId": "ade-batch-002",
+  "checkedAt": "2026-10-04",
+  "nonPublic": true,
+  "purpose": "Prepare bounded Plan Detection candidates from official or first-party evidence for later human review without changing published Plan Detection state.",
+  "policy": {
+    "humanReviewRequired": true,
+    "automaticPromotionAllowed": false,
+    "publicationAllowed": false,
+    "inferNoFormalPlanFromMissingEvidence": false,
+    "allowedSuggestedStatuses": [
+      "current",
+      "expired",
+      "found_unstructured",
+      "not_checked"
+    ],
+    "finalRegistryMutationAllowed": false
+  },
+  "candidates": [
+    {
+      "code": "138A",
+      "name": "光フードサービス",
+      "market": "Growth",
+      "industry": "小売業",
+      "priority": {
+        "layer": "L1_PLAN_DETECTION",
+        "band": "P0",
+        "score": 1100,
+        "candidateHintScore": 100
+      },
+      "source": {
+        "authority": "official_primary",
+        "title": "事業計画及び成長可能性に関する事項",
+        "publishedDate": "2026-02-24",
+        "url": "https://www2.jpx.co.jp/disc/138A0/140120260219565426.pdf",
+        "currentnessUrl": "https://www.hikari-food-service.jp/ir/",
+        "currentnessCheckedAt": "2026-10-04"
+      },
+      "observation": {
+        "suggestedStatus": "found_unstructured",
+        "formalPlanObservation": "independent_formal_medium_term_plan_not_confirmed_in_reviewed_growth_document",
+        "periodLabel": "2026年11月期単年度計画 + 2030年に向けた成長戦略（長期目標）",
+        "exactPlanEndDate": null,
+        "fiscalBoundaryNote": "The 2030 long-term targets are preserved as disclosed and kept separate from formal medium-term management plan boundaries.",
+        "currentnessNote": "Official materials continue to disclose a single-year plan for FY2026 and long-term targets for FY2030, but the reviewed source is a Growth-market business-plan disclosure rather than an independently confirmed formal medium-term plan.",
+        "evidenceSummary": "The document discloses FY2026 single-year targets and FY2030 long-term growth targets, but does not present an independently confirmed formal medium-term management plan."
+      },
+      "provenance": {
+        "repositoryPaths": [
+          "operations/quality-rebase/phase2/reviews/138A-primary-review-v1.json",
+          "operations/patches/batch74-138A-20260721.json"
+        ]
+      },
+      "review": {
+        "decision": "needs_review",
+        "status": "pending",
+        "requiredChecks": [
+          "Confirm whether a separately approved formal medium-term management plan exists.",
+          "Keep FY2026 single-year forecast and FY2030 long-term targets separate from formal medium-term plan bounds.",
+          "Do not infer no_formal_plan from missing evidence."
+        ]
+      },
+      "publication": {
+        "eligible": false
+      },
+      "promotion": {
+        "allowed": false
+      }
+    },
+    {
+      "code": "1401",
+      "name": "エムビーエス",
+      "market": "Growth",
+      "industry": "建設業",
+      "priority": {
+        "layer": "L1_PLAN_DETECTION",
+        "band": "P0",
+        "score": 1100,
+        "candidateHintScore": 100
+      },
+      "source": {
+        "authority": "official_primary",
+        "title": "事業計画及び成長可能性に関する事項",
+        "publishedDate": "2025-08-29",
+        "url": "https://www2.jpx.co.jp/disc/14010/140120250829549476.pdf",
+        "currentnessUrl": "https://www.mbs-inc.co.jp/ir/",
+        "currentnessCheckedAt": "2026-10-04"
+      },
+      "observation": {
+        "suggestedStatus": "found_unstructured",
+        "formalPlanObservation": "formal_medium_term_plan_not_confirmed_in_current_primary_disclosure",
+        "periodLabel": "事業計画及び成長可能性に関する事項",
+        "exactPlanEndDate": null,
+        "fiscalBoundaryNote": "Exact fiscal-year boundary is intentionally not inferred at candidate stage.",
+        "currentnessNote": "Official materials continue to disclose growth strategies and business plans, but an independently confirmed formal medium-term management plan is not confirmed in the primary disclosure.",
+        "evidenceSummary": "Growth-market disclosure covering human capital, sustainability, and capital efficiency topics, but not an independently titled formal medium-term plan."
+      },
+      "provenance": {
+        "repositoryPaths": [
+          "operations/patches/batch74-1401-20260721.json"
+        ]
+      },
+      "review": {
+        "decision": "needs_review",
+        "status": "pending",
+        "requiredChecks": [
+          "Confirm whether an independent formal medium-term management plan exists.",
+          "Preserve growth strategy details while keeping formal plan status unconfirmed.",
+          "Do not infer no_formal_plan from missing evidence."
+        ]
+      },
+      "publication": {
+        "eligible": false
+      },
+      "promotion": {
+        "allowed": false
+      }
+    },
+    {
+      "code": "142A",
+      "name": "ジンジブ",
+      "market": "Growth",
+      "industry": "サービス業",
+      "priority": {
+        "layer": "L1_PLAN_DETECTION",
+        "band": "P0",
+        "score": 1100,
+        "candidateHintScore": 100
+      },
+      "source": {
+        "authority": "official_primary",
+        "title": "2026年3月期 通期 決算説明資料(事業計画及び成長可能性に関する事項)",
+        "publishedDate": "2026-05-15",
+        "url": "https://www2.jpx.co.jp/disc/142A0/140120260515538676.pdf",
+        "currentnessUrl": "https://jinjib.co.jp/ir",
+        "currentnessCheckedAt": "2026-10-04"
+      },
+      "observation": {
+        "suggestedStatus": "found_unstructured",
+        "formalPlanObservation": "formal_medium_term_plan_not_confirmed_in_current_primary_disclosure",
+        "periodLabel": "2026年3月期計画 + 成長戦略",
+        "exactPlanEndDate": null,
+        "fiscalBoundaryNote": "Annual FY2026 plan and strategic horizons are kept separate; no fixed multi-year formal-plan end date is inferred.",
+        "currentnessNote": "The 2026-05-15 disclosure outlines FY2026 targets and growth strategy, but an independently confirmed formal medium-term management plan is not confirmed in this document.",
+        "evidenceSummary": "The document discloses annual forecasts and growth strategy focusing on human capital, productivity, AI, and M&A, but does not constitute an independently confirmed formal medium-term plan."
+      },
+      "provenance": {
+        "repositoryPaths": [
+          "operations/patches/batch73-142A-20260720.json"
+        ]
+      },
+      "review": {
+        "decision": "needs_review",
+        "status": "pending",
+        "requiredChecks": [
+          "Confirm whether a separately approved formal medium-term management plan exists outside the Growth disclosure.",
+          "Keep single-year forecasts and broader strategy horizons separate.",
+          "Do not infer no_formal_plan from missing evidence."
+        ]
+      },
+      "publication": {
+        "eligible": false
+      },
+      "promotion": {
+        "allowed": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "plan-detection-candidate-batch-v1",
+  "batchId": "ade-batch-003",
+  "checkedAt": "2026-10-04",
+  "nonPublic": true,
+  "purpose": "Prepare bounded Plan Detection candidates from official or first-party evidence for later human review without changing published Plan Detection state.",
+  "policy": {
+    "humanReviewRequired": true,
+    "automaticPromotionAllowed": false,
+    "publicationAllowed": false,
+    "inferNoFormalPlanFromMissingEvidence": false,
+    "allowedSuggestedStatuses": [
+      "current",
+      "expired",
+      "found_unstructured",
+      "not_checked"
+    ],
+    "finalRegistryMutationAllowed": false
+  },
+  "candidates": [
+    {
+      "code": "1332",
+      "name": "ニッスイ",
+      "market": "Prime",
+      "industry": "水産・農林業",
+      "priority": {
+        "layer": "L1_PLAN_DETECTION",
+        "band": "P0",
+        "score": 1100,
+        "candidateHintScore": 100
+      },
+      "source": {
+        "authority": "official_primary",
+        "title": "ニッスイグループ中期経営計画 GOOD FOODS Recipe2",
+        "publishedDate": "2025-04-08",
+        "url": "https://contents.xj-storage.jp/xcontents/AS06310/db26ad37/6531/4546/8b88/578c1877326e/140120250408510385.pdf",
+        "currentnessUrl": "https://www.nissui.co.jp/ir/download/business_report/2025mid-term-plan_session.pdf",
+        "currentnessCheckedAt": "2026-10-04"
+      },
+      "observation": {
+        "suggestedStatus": "current",
+        "formalPlanObservation": "confirmed_in_reviewed_primary_source",
+        "periodLabel": "2025年度～2027年度",
+        "exactPlanEndDate": null,
+        "fiscalBoundaryNote": "Exact fiscal-year boundary is intentionally not inferred at candidate stage.",
+        "currentnessNote": "The company's IR materials confirm GOOD FOODS Recipe2 covering FY2025-FY2027.",
+        "evidenceSummary": "The primary disclosure establishes GOOD FOODS Recipe2 for the 2025-2027 fiscal period."
+      },
+      "provenance": {
+        "repositoryPaths": [
+          "operations/quality-rebase/phase1/reviews/1332-primary-review-v1.json",
+          "operations/patches/batch70-1332-20260720.json"
+        ]
+      },
+      "review": {
+        "decision": "needs_review",
+        "status": "pending",
+        "requiredChecks": [
+          "Confirm the 2025-2027 plan period boundary against official IR source pages.",
+          "Verify that no subsequent disclosure has superseded GOOD FOODS Recipe2.",
+          "Ensure actual, forecast, and target values remain strictly separated."
+        ]
+      },
+      "publication": {"eligible": false},
+      "promotion": {"allowed": false}
+    },
+    {
+      "code": "1333",
+      "name": "Ｕｍｉｏｓ",
+      "market": "Prime",
+      "industry": "水産・農林業",
+      "priority": {
+        "layer": "L1_PLAN_DETECTION",
+        "band": "P0",
+        "score": 1100,
+        "candidateHintScore": 100
+      },
+      "source": {
+        "authority": "official_primary",
+        "title": "新長期ビジョン及び中期経営計画の策定に関するお知らせ",
+        "publishedDate": "2025-03-24",
+        "url": "https://www2.jpx.co.jp/disc/13330/140120250324598645.pdf",
+        "currentnessUrl": "https://www2.jpx.co.jp/tseHpFront/StockSearch.do?method=topsearch&topSearchStr=1333",
+        "currentnessCheckedAt": "2026-10-04"
+      },
+      "observation": {
+        "suggestedStatus": "found_unstructured",
+        "formalPlanObservation": "confirmed_in_reviewed_primary_source_currentness_unresolved",
+        "periodLabel": "新長期ビジョン及び中期経営計画",
+        "exactPlanEndDate": null,
+        "fiscalBoundaryNote": "Exact fiscal-year boundary is intentionally not inferred at candidate stage.",
+        "currentnessNote": "The 2025-03-24 JPX disclosure confirms formulation of a formal medium-term management plan, but the candidate evidence does not yet establish its plan period or whether it remains current as of the batch check date.",
+        "evidenceSummary": "Official primary disclosure confirms formulation of the plan; period and currentness remain pending review."
+      },
+      "provenance": {
+        "repositoryPaths": [
+          "operations/patches/batch75-1333-20260721.json"
+        ]
+      },
+      "review": {
+        "decision": "needs_review",
+        "status": "pending",
+        "requiredChecks": [
+          "Confirm the medium-term management plan period against the detailed PDF disclosure.",
+          "Distinguish long-term vision targets from medium-term plan targets.",
+          "Confirm currentness against official IR announcements before promoting to current."
+        ]
+      },
+      "publication": {"eligible": false},
+      "promotion": {"allowed": false}
+    },
+    {
+      "code": "1375",
+      "name": "ユキグニファクトリー",
+      "market": "Prime",
+      "industry": "水産・農林業",
+      "priority": {
+        "layer": "L1_PLAN_DETECTION",
+        "band": "P0",
+        "score": 1100,
+        "candidateHintScore": 100
+      },
+      "source": {
+        "authority": "official_primary",
+        "title": "2026年3月期 第3四半期 決算説明資料",
+        "publishedDate": "2026-02-09",
+        "url": "https://www2.jpx.co.jp/disc/13750/140120260209551503.pdf",
+        "currentnessUrl": "https://www.yukiguni-factory.co.jp/ir/middleplan/",
+        "currentnessCheckedAt": "2026-10-04"
+      },
+      "observation": {
+        "suggestedStatus": "current",
+        "formalPlanObservation": "confirmed_in_official_primary_source",
+        "periodLabel": "2024年3月期～2028年3月期",
+        "exactPlanEndDate": null,
+        "fiscalBoundaryNote": "Exact fiscal-year boundary is intentionally not inferred at candidate stage.",
+        "currentnessNote": "The 2026-02-09 official earnings presentation contains a dedicated section for the FY2024-FY2028 medium-term management plan, and the company's current IR page continued to present that plan at the batch check date.",
+        "evidenceSummary": "Official primary disclosure confirms the FY2024-FY2028 medium-term management plan without relying on the previously unverified publication date."
+      },
+      "provenance": {
+        "repositoryPaths": [
+          "operations/quality-rebase/phase1/reviews/1375-primary-review-v1.json"
+        ]
+      },
+      "review": {
+        "decision": "needs_review",
+        "status": "pending",
+        "requiredChecks": [
+          "Confirm the plan-period boundary and currentness against the official IR page.",
+          "Keep the 2026-02-09 earnings-presentation publication date separate from the original plan-update publication date.",
+          "Verify actuals, forecasts, and target metrics remain separated."
+        ]
+      },
+      "publication": {"eligible": false},
+      "promotion": {"allowed": false}
+    }
+  ]
+}

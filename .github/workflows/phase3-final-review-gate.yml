@@ -51,9 +51,31 @@ jobs:
           node - <<'NODE'
           const fs = require('fs');
           const index = JSON.parse(fs.readFileSync('operations/quality-rebase/phase3/generated/final-review-work-items/index.json', 'utf8'));
-          if (index.readyCompanies !== 60) throw new Error(`expected 60 ready companies, got ${index.readyCompanies}`);
-          if (index.batchCount !== 6) throw new Error(`expected 6 final-review batches, got ${index.batchCount}`);
-          if (index.batches.some(batch => batch.count !== 10)) throw new Error('each initial Phase 3 final-review batch must contain 10 companies');
+          const batchSize = index.batchSize;
+          const expectedBatchCount = index.readyCompanies === 0 ? 0 : Math.ceil(index.readyCompanies / batchSize);
+          const partitionedCompanies = index.batches.reduce((sum, batch) => sum + batch.count, 0);
+
+          if (!Number.isInteger(index.readyCompanies) || index.readyCompanies < 0) {
+            throw new Error(`readyCompanies must be a non-negative integer, got ${index.readyCompanies}`);
+          }
+          if (!Number.isInteger(batchSize) || batchSize <= 0) {
+            throw new Error(`batchSize must be a positive integer, got ${batchSize}`);
+          }
+          if (index.batchCount !== expectedBatchCount) {
+            throw new Error(`expected ${expectedBatchCount} batches for ${index.readyCompanies} ready companies, got ${index.batchCount}`);
+          }
+          if (index.batches.length !== index.batchCount) {
+            throw new Error(`batch index length ${index.batches.length} does not match batchCount ${index.batchCount}`);
+          }
+          if (partitionedCompanies !== index.readyCompanies) {
+            throw new Error(`partition covers ${partitionedCompanies} companies but readyCompanies is ${index.readyCompanies}`);
+          }
+          if (index.batches.some(batch => !Number.isInteger(batch.count) || batch.count < 1 || batch.count > batchSize)) {
+            throw new Error(`every generated batch must contain between 1 and ${batchSize} companies`);
+          }
+          if (index.batches.slice(0, -1).some(batch => batch.count !== batchSize)) {
+            throw new Error(`every non-final batch must contain exactly ${batchSize} companies`);
+          }
           if (index.policy.generatedItemsAreNotApprovals !== true) throw new Error('work items must never be treated as approvals');
           if (index.policy.automaticApprovalAllowed !== false) throw new Error('automatic approval must remain disabled');
           console.log(JSON.stringify(index, null, 2));

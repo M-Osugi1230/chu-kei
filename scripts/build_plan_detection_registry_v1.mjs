@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import zlib from 'node:zlib';
 
 const ROOT = path.resolve('.');
 const UNIVERSE_PATH = path.join(ROOT, 'operations', 'universe', 'current-universe-v1.json');
@@ -8,6 +9,8 @@ const VERIFIED_OVERRIDES_PATH = path.join(ROOT, 'operations', 'plan-detection', 
 const PRIMARY_REVIEWED_OVERRIDES_PATH = path.join(ROOT, 'operations', 'plan-detection', 'primary-reviewed-overrides-v1.json');
 const QUEUE_PATH = path.join(ROOT, 'operations', 'plan-detection', 'research-queue-v1.json');
 const PUBLIC_SUMMARY_PATH = path.join(ROOT, 'site', 'data', 'plan-detection-summary-v1.json');
+const MANIFEST_PATH = path.join(ROOT, 'site', 'data', 'bundle.manifest.json');
+const PATCH_DIR = path.join(ROOT, 'operations', 'patches');
 
 const STATUSES = new Set([
   'current',
@@ -33,6 +36,114 @@ const validUrl = value => {
   }
 };
 
+function tokyoToday() {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date());
+  const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
+const REFERENCE_DATE = process.env.PLAN_DETECTION_REFERENCE_DATE || tokyoToday();
+
+function toIsoDate(year, month, day) {
+  const y = Number(year);
+  const m = Number(month);
+  const d = Number(day);
+  if (!Number.isInteger(y) || !Number.isInteger(m) || !Number.isInteger(d)) return null;
+  const date = new Date(Date.UTC(y, m - 1, d));
+  if (
+    date.getUTCFullYear() !== y
+    || date.getUTCMonth() !== m - 1
+    || date.getUTCDate() !== d
+  ) return null;
+  return `${String(y).padStart(4, '0')}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+}
+
+function monthEnd(year, month) {
+  const y = Number(year);
+  const m = Number(month);
+  if (!Number.isInteger(y) || !Number.isInteger(m) || m < 1 || m > 12) return null;
+  const day = new Date(Date.UTC(y, m, 0)).getUTCDate();
+  return toIsoDate(y, m, day);
+}
+
+function flattenStrings(value, out = []) {
+  if (value === null || value === undefined) return out;
+  if (typeof value === 'string' || typeof value === 'number') {
+    out.push(String(value));
+    return out;
+  }
+  if (Array.isArray(value)) {
+    for (const item of value) flattenStrings(item, out);
+    return out;
+  }
+  if (typeof value === 'object') {
+    for (const [key, item] of Object.entries(value)) {
+      if (/baseline|previous|actual|start/i.test(key)) continue;
+      flattenStrings(item, out);
+    }
+  }
+  return out;
+}
+
+function focusPeriodText(value) {
+  if (typeof value !== 'string') return value;
+  const segments = value
+    .split(/[／/]|、(?=\s*(?:中期|長期|現行|Vision|ビジョン))/i)
+    .map(text => text.trim())
+    .filter(Boolean);
+  const midTerm = segments.find(text =>
+    /中期|mid[-\s]?term|現行(?:中計|計画)|current\s+plan/i.test(text)
+    && !/長期|long[-\s]?term/i.test(text)
+  );
+  let focused = midTerm || segments[0] || value;
+  focused = focused.replace(
+    /[（(][^）)]*(?:長期|long[-\s]?term|vision|ビジョン|目指す姿|上位方針)[^）)]*[）)]/gi,
+    '',
+  );
+  return focused.trim();
+}
+
+function extractEndDates(value) {
+  const dates = [];
+  for (const rawText of flattenStrings(value)) {
+    const text = String(focusPeriodText(rawText) || rawText);
+    for (const match of text.matchAll(/\bFY\s*(20\d{2}|[2-9]\d)[./-](1[0-2]|0?[1-9])\b/gi)) {
+      const raw = Number(match[1]);
+      const year = raw < 100 ? 2000 + raw : raw;
+      const date = monthEnd(year, match[2]);
+      if (date) dates.push({ date, basis: match[0], precision: 'fy_month_end' });
+    }
+    for (const match of text.matchAll(/(20\d{2})年\s*(1[0-2]|0?[1-9])月期/g)) {
+      const date = monthEnd(match[1], match[2]);
+      if (date) dates.push({ date, basis: match[0], precision: 'month_end' });
+    }
+    for (const match of text.matchAll(/(20\d{2})年度/g)) {
+      const date = toIsoDate(Number(match[1]) + 1, 3, 31);
+      if (date) dates.push({ date, basis: match[0], precision: 'fiscal_year' });
+    }
+    for (const match of text.matchAll(/\bFY\s*([2-9]\d|20\d{2})(?![./-]\d)\b/gi)) {
+      const raw = Number(match[1]);
+      const year = raw < 100 ? 2000 + raw : raw;
+      const date = toIsoDate(year + 1, 3, 31);
+      if (date) dates.push({ date, basis: match[0], precision: 'fy_label' });
+    }
+    for (const match of text.matchAll(/(20\d{2})年(?!\s*(?:1[0-2]|0?[1-9])月)/g)) {
+      const date = toIsoDate(match[1], 12, 31);
+      if (date) dates.push({ date, basis: match[0], precision: 'calendar_year' });
+    }
+    for (const match of text.matchAll(/(?:20\d{2})[-~～─](20\d{2})/g)) {
+      const date = toIsoDate(Number(match[1]) + 1, 3, 31);
+      if (date) dates.push({ date, basis: match[0], precision: 'range_end_year' });
+    }
+  }
+  return dates;
+}
+
 if (!fs.existsSync(UNIVERSE_PATH)) {
   throw new Error('Company universe is missing. Run company:universe:build first.');
 }
@@ -40,6 +151,40 @@ if (!fs.existsSync(UNIVERSE_PATH)) {
 const universe = readJson(UNIVERSE_PATH);
 if (universe.version !== 'company-universe-v1' || !Array.isArray(universe.companies)) {
   throw new Error('Unsupported company universe format');
+}
+
+const officialByCode = new Map();
+if (fs.existsSync(MANIFEST_PATH)) {
+  const manifest = readJson(MANIFEST_PATH);
+  const compressed = Buffer.concat(
+    manifest.parts.map(part => fs.readFileSync(path.join(ROOT, 'site', 'data', part.file))),
+  );
+  const bundle = JSON.parse(zlib.gunzipSync(compressed).toString('utf8'));
+  for (const company of bundle.companies || []) {
+    if (company.code) officialByCode.set(String(company.code).toUpperCase(), company);
+  }
+}
+
+if (fs.existsSync(PATCH_DIR)) {
+  const patchFiles = fs.readdirSync(PATCH_DIR).filter(f => f.endsWith('.json'));
+  for (const file of patchFiles) {
+    const patch = readJson(path.join(PATCH_DIR, file));
+    if (patch.companyCode) {
+      const code = String(patch.companyCode).toUpperCase();
+      const existing = officialByCode.get(code) || {};
+      const updates = patch.updates || {};
+      officialByCode.set(code, {
+        ...existing,
+        ...patch,
+        ...updates,
+        sourceUrl: updates.sourceUrl || patch.sourceUrl || existing.sourceUrl,
+        document: updates.document || patch.document || existing.document,
+        period: updates.period || patch.period || existing.period,
+        planPublishedDate: updates.planPublishedDate || patch.planPublishedDate || existing.planPublishedDate,
+        lastVerifiedDate: updates.lastVerifiedDate || patch.lastVerifiedDate || existing.lastVerifiedDate,
+      });
+    }
+  }
 }
 
 let verifiedByCode = new Map();
@@ -79,15 +224,19 @@ if (fs.existsSync(REGISTRY_PATH)) {
   previousByCode = new Map(previous.companies.map(company => [String(company.code), company]));
 }
 
+const autoDerivedMethods = new Set([
+  'quality_rebase_phase2_independent_completion_v1',
+  'quality_rebase_primary_review_l1_seed_v1',
+  'quality_rebase_official_source_evidence_v1',
+]);
+
 const companies = universe.companies.map(listing => {
   const code = String(listing.code);
   const previous = previousByCode.get(code);
   const primaryReviewed = primaryReviewedByCode.get(code);
   const verified = verifiedByCode.get(code);
-  const autoDerivedMethods = new Set([
-    'quality_rebase_phase2_independent_completion_v1',
-    'quality_rebase_primary_review_l1_seed_v1',
-  ]);
+  const official = officialByCode.get(code.toUpperCase());
+
   const previousIsAutoDerived = autoDerivedMethods.has(previous?.review?.method);
 
   let selected = previousIsAutoDerived ? null : previous;
@@ -116,6 +265,86 @@ const companies = universe.companies.map(listing => {
   if (verified && !manualPreviousIsNewerThan(verified)) {
     selected = verified;
     selectedDerivation = verified.derivation || null;
+  }
+
+  if ((!selected || selected.status === 'not_checked') && official) {
+    const sourceUrl = official.sourceUrl;
+    if (validUrl(sourceUrl)) {
+      const doc = String(official.document || '');
+      const cat = String(official.category || '');
+      const pubDate = String(official.planPublishedDate || official.lastVerifiedDate || '').slice(0, 10);
+      const checkedAt = validDate(pubDate)
+        ? pubDate
+        : (validDate(official.lastVerifiedDate)
+            ? String(official.lastVerifiedDate).slice(0, 10)
+            : REFERENCE_DATE);
+
+      const textsToSearch = [
+        official.period,
+        official.document,
+        official.category,
+        official.summary,
+        ...(official.highlights || []),
+        ...(official.evidenceRefs || []),
+      ];
+
+      const dates = extractEndDates(textsToSearch);
+      let derivedStatus = null;
+      let planEnd = null;
+      let note = null;
+
+      if (dates.length > 0) {
+        dates.sort((a, b) => a.date.localeCompare(b.date));
+        planEnd = dates.at(-1);
+        derivedStatus = planEnd.date >= REFERENCE_DATE ? 'current' : 'expired';
+        note = `official source evidence confirmed formal plan; plan end ${planEnd.date} derived from ${planEnd.basis}`;
+      } else if (
+        /事業計画及び成長可能性|成長可能性に関する説明資料|事業計画書/i.test(doc)
+        || /事業計画及び成長可能性/i.test(cat)
+      ) {
+        derivedStatus = 'found_unstructured';
+        note = `official JPX disclosure confirmed unstructured business/growth plan: ${doc}`;
+      } else if (
+        /中期経営計画|中長期経営計画|中期経営戦略|中期方針|中期事業計画/i.test(doc)
+        || /中期経営計画/i.test(cat)
+      ) {
+        if (validDate(pubDate)) {
+          const pubYear = Number(pubDate.slice(0, 4));
+          derivedStatus = pubYear >= 2024 ? 'current' : 'expired';
+          note = `official source disclosure confirmed mid-term plan published in ${pubDate}`;
+        } else {
+          derivedStatus = 'current';
+          note = `official source disclosure confirmed current mid-term plan: ${doc}`;
+        }
+      }
+
+      if (derivedStatus) {
+        selected = {
+          code,
+          name: listing.name,
+          market: listing.market,
+          industry: listing.industry,
+          status: derivedStatus,
+          review: {
+            checkedAt,
+            sourceUrl,
+            sourceTitle: doc || listing.name,
+            sourceType: 'official_first_party_indexed',
+            method: 'quality_rebase_official_source_evidence_v1',
+            note,
+          },
+        };
+        selectedDerivation = {
+          referenceDate: REFERENCE_DATE,
+          sourceType: 'official_first_party_indexed',
+          document: doc || null,
+          period: official.period || null,
+          publishedDate: validDate(pubDate) ? pubDate : null,
+          planEndDate: planEnd?.date || null,
+          planEndBasis: planEnd?.basis || null,
+        };
+      }
+    }
   }
 
   const status = selected?.status || 'not_checked';

@@ -1,3 +1,4 @@
+import child_process from 'node:child_process';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -16,6 +17,11 @@ const compressed = Buffer.concat(
   manifest.parts.map((part) => fs.readFileSync(path.join(dataDir, part.file))),
 );
 const payload = JSON.parse(zlib.gunzipSync(compressed).toString('utf8'));
+
+const buildUniverseScript = path.join(root, 'scripts', 'build_company_universe_v1.mjs');
+if (fs.existsSync(buildUniverseScript)) {
+  child_process.execFileSync(process.execPath, [buildUniverseScript], { stdio: 'inherit' });
+}
 
 const universePath = path.join(root, 'operations', 'universe', 'current-universe-v1.json');
 const canonicalMap = new Map();

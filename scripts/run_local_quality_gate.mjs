@@ -20,6 +20,11 @@ const checks = [
     required: true,
   },
   {
+    name: 'Plan detection validation and registry tests',
+    command: ['node', '--test', 'tests/test_plan_detection_validation_v1.js'],
+    required: true,
+  },
+  {
     name: 'v43 quality gate',
     command: ['node', 'scripts/validate_quality_v43.mjs'],
     required: !quick,
@@ -62,7 +67,7 @@ function run(name, command) {
 }
 
 for (const check of checks) {
-  const scriptPath = check.command[1];
+  const scriptPath = check.command[0] === 'node' && check.command[1] === '--test' ? check.command[2] : check.command[1];
   if (!fs.existsSync(scriptPath)) {
     if (check.required) {
       results.push({ name: check.name, passed: false, status: null, durationMs: 0, stdout: '', stderr: `Missing ${scriptPath}` });

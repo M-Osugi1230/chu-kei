@@ -37,6 +37,9 @@ jobs:
       - name: Validate non-public Plan Detection candidates
         run: node scripts/validate_plan_detection_candidates_v1.mjs
 
+      - name: Run Plan Detection regression tests
+        run: node --test tests/test_plan_detection_validation_v1.js
+
       - name: Upload quality report
         if: always()
         uses: actions/upload-artifact@v4

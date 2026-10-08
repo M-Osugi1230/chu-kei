@@ -11,6 +11,22 @@ const qualityReportPath = path.join(root, 'reports', 'v43', 'QUALITY_SCORE_V3_RE
 const artifactDir = path.join(root, 'artifacts');
 const TARGET_PARTS = 43;
 
+const UNIVERSE_PATH = path.join(root, 'operations', 'universe', 'current-universe-v1.json');
+const PUBLIC_UNIVERSE_PATH = path.join(root, 'site', 'data', 'company-universe-v1.json');
+
+const universePath = fs.existsSync(UNIVERSE_PATH)
+  ? UNIVERSE_PATH
+  : (fs.existsSync(PUBLIC_UNIVERSE_PATH) ? PUBLIC_UNIVERSE_PATH : null);
+const canonicalMap = new Map();
+if (universePath) {
+  const universe = JSON.parse(fs.readFileSync(universePath, 'utf8'));
+  for (const item of universe.companies ?? []) {
+    if (item && item.code) {
+      canonicalMap.set(String(item.code).toUpperCase(), item);
+    }
+  }
+}
+
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 const compressed = Buffer.concat(
   manifest.parts.map((part) => fs.readFileSync(path.join(dataDir, part.file))),
@@ -32,6 +48,22 @@ for (const company of payload.companies ?? []) {
   for (const field of ['code', 'name', 'market', 'stage', 'lastVerifiedDate', 'quality']) {
     if (company[field] == null || company[field] === '') {
       blocking.push({ code, field, reason: '安全に補完できない必須項目' });
+    }
+  }
+
+  const canonical = canonicalMap.get(code.toUpperCase());
+  if (canonical) {
+    if (canonical.name && company.name !== canonical.name) {
+      changes.push({ code, field: 'name', before: company.name, after: canonical.name, action: 'align_canonical' });
+      company.name = canonical.name;
+    }
+    if (canonical.market && company.market !== canonical.market) {
+      changes.push({ code, field: 'market', before: company.market, after: canonical.market, action: 'align_canonical' });
+      company.market = canonical.market;
+    }
+    if (canonical.industry && canonical.industry !== '未分類' && company.industry !== canonical.industry) {
+      changes.push({ code, field: 'industry', before: company.industry, after: canonical.industry, action: 'align_canonical' });
+      company.industry = canonical.industry;
     }
   }
 

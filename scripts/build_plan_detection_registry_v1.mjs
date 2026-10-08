@@ -272,6 +272,7 @@ const companies = universe.companies.map(listing => {
     if (validUrl(sourceUrl)) {
       const doc = String(official.document || '');
       const cat = String(official.category || '');
+      const period = String(official.period || '');
       const pubDate = String(official.planPublishedDate || official.lastVerifiedDate || '').slice(0, 10);
       const checkedAt = validDate(pubDate)
         ? pubDate
@@ -279,43 +280,35 @@ const companies = universe.companies.map(listing => {
             ? String(official.lastVerifiedDate).slice(0, 10)
             : REFERENCE_DATE);
 
-      const textsToSearch = [
-        official.period,
-        official.document,
-        official.category,
-        official.summary,
-        ...(official.highlights || []),
-        ...(official.evidenceRefs || []),
-      ];
+      const hasFormalPlanSignal =
+        /中期経営計画|中長期経営計画|中期経営戦略|中期方針|中期事業計画|中期目標|中期課題|ビジョン.*中期|ロードマップ/i.test(doc)
+        || /中期経営計画/i.test(cat);
 
-      const dates = extractEndDates(textsToSearch);
+      const hasUnstructuredPlanSignal =
+        /事業計画及び成長可能性|成長可能性に関する説明資料|事業計画書/i.test(doc)
+        || /事業計画及び成長可能性/i.test(cat);
+
       let derivedStatus = null;
       let planEnd = null;
       let note = null;
 
-      if (dates.length > 0) {
-        dates.sort((a, b) => a.date.localeCompare(b.date));
-        planEnd = dates.at(-1);
-        derivedStatus = planEnd.date >= REFERENCE_DATE ? 'current' : 'expired';
-        note = `official source evidence confirmed formal plan; plan end ${planEnd.date} derived from ${planEnd.basis}`;
-      } else if (
-        /事業計画及び成長可能性|成長可能性に関する説明資料|事業計画書/i.test(doc)
-        || /事業計画及び成長可能性/i.test(cat)
-      ) {
+      if (hasFormalPlanSignal) {
+        const textsToSearch = [];
+        if (period && period !== '当該公式開示資料の対象期間') {
+          textsToSearch.push(period);
+        }
+        textsToSearch.push(doc);
+
+        const dates = extractEndDates(textsToSearch);
+        if (dates.length > 0) {
+          dates.sort((a, b) => a.date.localeCompare(b.date));
+          planEnd = dates.at(-1);
+          derivedStatus = planEnd.date >= REFERENCE_DATE ? 'current' : 'expired';
+          note = `official source evidence confirmed formal plan; plan end ${planEnd.date} derived from ${planEnd.basis}`;
+        }
+      } else if (hasUnstructuredPlanSignal) {
         derivedStatus = 'found_unstructured';
         note = `official JPX disclosure confirmed unstructured business/growth plan: ${doc}`;
-      } else if (
-        /中期経営計画|中長期経営計画|中期経営戦略|中期方針|中期事業計画/i.test(doc)
-        || /中期経営計画/i.test(cat)
-      ) {
-        if (validDate(pubDate)) {
-          const pubYear = Number(pubDate.slice(0, 4));
-          derivedStatus = pubYear >= 2024 ? 'current' : 'expired';
-          note = `official source disclosure confirmed mid-term plan published in ${pubDate}`;
-        } else {
-          derivedStatus = 'current';
-          note = `official source disclosure confirmed current mid-term plan: ${doc}`;
-        }
       }
 
       if (derivedStatus) {
@@ -388,6 +381,26 @@ const companies = universe.companies.map(listing => {
     derivation: selectedDerivation,
   };
 }).sort((a, b) => a.code.localeCompare(b.code, 'ja'));
+
+// Regression assertions to guarantee false positives are prevented and plan ends are accurately derived
+const companyMap = new Map(companies.map(c => [c.code, c]));
+const c1381 = companyMap.get('1381');
+if (c1381 && c1381.status !== 'not_checked') {
+  throw new Error(`Regression test failed: 1381 should remain not_checked but got ${c1381.status}`);
+}
+const c1418 = companyMap.get('1418');
+if (c1418 && c1418.status !== 'not_checked') {
+  throw new Error(`Regression test failed: 1418 should remain not_checked but got ${c1418.status}`);
+}
+const c1332 = companyMap.get('1332');
+if (c1332) {
+  if (c1332.status !== 'current') {
+    throw new Error(`Regression test failed: 1332 should be current but got ${c1332.status}`);
+  }
+  if (c1332.derivation?.planEndDate !== '2028-03-31') {
+    throw new Error(`Regression test failed: 1332 planEndDate should be 2028-03-31 but got ${c1332.derivation?.planEndDate}`);
+  }
+}
 
 const activeCodes = new Set(companies.map(company => company.code));
 const archived = [...previousByCode.values()]

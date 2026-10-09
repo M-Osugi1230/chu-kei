@@ -1,3 +1,4 @@
+import child_process from 'node:child_process';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -17,6 +18,22 @@ const compressed = Buffer.concat(
 );
 const payload = JSON.parse(zlib.gunzipSync(compressed).toString('utf8'));
 
+const buildUniverseScript = path.join(root, 'scripts', 'build_company_universe_v1.mjs');
+if (fs.existsSync(buildUniverseScript)) {
+  child_process.execFileSync(process.execPath, [buildUniverseScript], { stdio: 'inherit' });
+}
+
+const universePath = path.join(root, 'operations', 'universe', 'current-universe-v1.json');
+const canonicalMap = new Map();
+if (fs.existsSync(universePath)) {
+  const universe = JSON.parse(fs.readFileSync(universePath, 'utf8'));
+  for (const company of universe.companies ?? []) {
+    if (company.code) {
+      canonicalMap.set(String(company.code), company);
+    }
+  }
+}
+
 const stageTier = {
   core: '資料登録済み（再監査中）',
   detailed_extracted: '詳細抽出済みβ',
@@ -29,6 +46,40 @@ const blocking = [];
 
 for (const company of payload.companies ?? []) {
   const code = String(company.code ?? '');
+  const canonical = canonicalMap.get(code);
+  if (canonical) {
+    if (canonical.name && company.name !== canonical.name) {
+      changes.push({
+        code,
+        field: 'name',
+        before: company.name,
+        after: canonical.name,
+        action: 'align_with_canonical_universe',
+      });
+      company.name = canonical.name;
+    }
+    if (canonical.market && company.market !== canonical.market) {
+      changes.push({
+        code,
+        field: 'market',
+        before: company.market,
+        after: canonical.market,
+        action: 'align_with_canonical_universe',
+      });
+      company.market = canonical.market;
+    }
+    if (canonical.industry && company.industry !== canonical.industry) {
+      changes.push({
+        code,
+        field: 'industry',
+        before: company.industry,
+        after: canonical.industry,
+        action: 'align_with_canonical_universe',
+      });
+      company.industry = canonical.industry;
+    }
+  }
+
   for (const field of ['code', 'name', 'market', 'stage', 'lastVerifiedDate', 'quality']) {
     if (company[field] == null || company[field] === '') {
       blocking.push({ code, field, reason: '安全に補完できない必須項目' });
@@ -77,6 +128,16 @@ for (const company of payload.companies ?? []) {
   if (!company.flags || typeof company.flags !== 'object' || Array.isArray(company.flags)) {
     company.flags = {};
     changes.push({ code, field: 'flags', action: 'set_empty_object' });
+  }
+
+  if (canonical) {
+    if (company.name !== canonical.name || company.market !== canonical.market || company.industry !== canonical.industry) {
+      blocking.push({
+        code,
+        field: 'canonicalUniverseAlignment',
+        reason: `標準企業ユニバースとの不一致 (name: ${company.name} vs ${canonical.name}, market: ${company.market} vs ${canonical.market}, industry: ${company.industry} vs ${canonical.industry})`,
+      });
+    }
   }
 }
 

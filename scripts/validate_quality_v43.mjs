@@ -12,13 +12,13 @@ const issues = [];
 
 const defaultMilestone = {
   schemaVersion: 'coverage-milestone-v1',
-  companyTotal: 570,
-  progressRows: 149,
-  expectedCore: 30,
-  minimumSourceConfirmed: 200,
-  minimumStructured: 200,
-  maximumCoverageBeta: 370,
-  absoluteBundleBudgetBytes: 131072,
+  companyTotal: 3000,
+  progressRows: 353,
+  expectedCore: 3000,
+  minimumSourceConfirmed: 3000,
+  minimumStructured: 3000,
+  maximumCoverageBeta: 0,
+  absoluteBundleBudgetBytes: 1572864,
 };
 
 const milestone = fs.existsSync(milestonePath)

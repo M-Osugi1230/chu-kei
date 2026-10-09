@@ -106,8 +106,96 @@ function validateChangeRecords() {
   }
 }
 
+function validatePublicSiteReleaseStatus() {
+  const releaseStatusPath = 'site/data/release-status.json';
+  add('public site release-status.json exists', fs.existsSync(path.join(root, releaseStatusPath)), releaseStatusPath);
+  if (!fs.existsSync(path.join(root, releaseStatusPath))) return;
+
+  const releaseStatus = readJson(releaseStatusPath);
+  add('public site release status company count matches current release', releaseStatus.repository?.companies === currentRelease.repository.companies, `actual=${releaseStatus.repository?.companies}, expected=${currentRelease.repository.companies}`);
+  add('public site release status release string matches current release', releaseStatus.repository?.release === currentRelease.repository.release, releaseStatus.repository?.release);
+  add('public site release status sync status matches current release', releaseStatus.sync?.status === currentRelease.sync.status, releaseStatus.sync?.status);
+}
+
+function validatePublicCompanyUniverseSync() {
+  const publicPath = 'site/data/company-universe-v1.json';
+  const canonicalPath = 'operations/universe/current-universe-v1.json';
+  add('public company-universe-v1.json exists', fs.existsSync(path.join(root, publicPath)), publicPath);
+  add('canonical current-universe-v1.json exists', fs.existsSync(path.join(root, canonicalPath)), canonicalPath);
+  if (!fs.existsSync(path.join(root, publicPath)) || !fs.existsSync(path.join(root, canonicalPath))) return;
+
+  const publicUniverse = readJson(publicPath);
+  const canonicalUniverse = readJson(canonicalPath);
+  add('public company universe company count matches canonical universe', publicUniverse.companyCount === canonicalUniverse.companyCount, `public=${publicUniverse.companyCount}, canonical=${canonicalUniverse.companyCount}`);
+  add('public company universe Prime count matches canonical', publicUniverse.marketCounts?.Prime === canonicalUniverse.marketCounts?.Prime, `public=${publicUniverse.marketCounts?.Prime}, canonical=${canonicalUniverse.marketCounts?.Prime}`);
+  add('public company universe Standard count matches canonical', publicUniverse.marketCounts?.Standard === canonicalUniverse.marketCounts?.Standard, `public=${publicUniverse.marketCounts?.Standard}, canonical=${canonicalUniverse.marketCounts?.Standard}`);
+  add('public company universe Growth count matches canonical', publicUniverse.marketCounts?.Growth === canonicalUniverse.marketCounts?.Growth, `public=${publicUniverse.marketCounts?.Growth}, canonical=${canonicalUniverse.marketCounts?.Growth}`);
+}
+
+function validatePublicPlanDetectionSummarySync() {
+  const publicPath = 'site/data/plan-detection-summary-v1.json';
+  const canonicalPath = 'operations/plan-detection/registry-v1.json';
+  add('public plan-detection-summary-v1.json exists', fs.existsSync(path.join(root, publicPath)), publicPath);
+  add('canonical plan detection registry-v1.json exists', fs.existsSync(path.join(root, canonicalPath)), canonicalPath);
+  if (!fs.existsSync(path.join(root, publicPath)) || !fs.existsSync(path.join(root, canonicalPath))) return;
+
+  const summary = readJson(publicPath);
+  const registry = readJson(canonicalPath);
+  add('public plan detection summary company count matches registry', summary.companyCount === registry.companyCount, `summary=${summary.companyCount}, registry=${registry.companyCount}`);
+  add('public plan detection summary resolved count matches registry', summary.resolvedCount === registry.resolvedCount, `summary=${summary.resolvedCount}, registry=${registry.resolvedCount}`);
+  add('public plan detection summary pending count matches registry not_checked', summary.pendingCount === registry.counts?.not_checked, `summary=${summary.pendingCount}, registry=${registry.counts?.not_checked}`);
+  add('public plan detection summary current count matches registry', summary.counts?.current === registry.counts?.current, `summary=${summary.counts?.current}, registry=${registry.counts?.current}`);
+  add('public plan detection summary coverage matches registry', summary.detectionCoverage === registry.detectionCoverage, `summary=${summary.detectionCoverage}, registry=${registry.detectionCoverage}`);
+}
+
+function validatePublicResearchPrioritySummarySync() {
+  const publicPath = 'site/data/research-priority-summary-v1.json';
+  const canonicalUniversePath = 'operations/universe/current-universe-v1.json';
+  add('public research-priority-summary-v1.json exists', fs.existsSync(path.join(root, publicPath)), publicPath);
+  if (!fs.existsSync(path.join(root, publicPath))) return;
+
+  const researchPriority = readJson(publicPath);
+  if (fs.existsSync(path.join(root, canonicalUniversePath))) {
+    const canonicalUniverse = readJson(canonicalUniversePath);
+    add('public research priority summary universe count matches company universe', researchPriority.counts?.universe === canonicalUniverse.companyCount, `summary=${researchPriority.counts?.universe}, universe=${canonicalUniverse.companyCount}`);
+  }
+  add('public research priority summary bundle count matches current release', researchPriority.counts?.sourceBundleCompanies === currentRelease.repository.companies, `summary=${researchPriority.counts?.sourceBundleCompanies}, release=${currentRelease.repository.companies}`);
+  add('public research priority summary plan counts add to universe', (researchPriority.counts?.planResolved ?? 0) + (researchPriority.counts?.planPending ?? 0) === researchPriority.counts?.universe, `resolved+pending=${(researchPriority.counts?.planResolved ?? 0) + (researchPriority.counts?.planPending ?? 0)}, universe=${researchPriority.counts?.universe}`);
+}
+
+function validatePublicQualityRebaseSync() {
+  const publicPath = 'site/data/quality-rebase-v1.json';
+  add('public quality-rebase-v1.json exists', fs.existsSync(path.join(root, publicPath)), publicPath);
+  if (!fs.existsSync(path.join(root, publicPath))) return;
+
+  const qualityRebase = readJson(publicPath);
+  add('public quality rebase company count matches current release', qualityRebase.counts?.companies === currentRelease.repository.companies, `actual=${qualityRebase.counts?.companies}, expected=${currentRelease.repository.companies}`);
+}
+
+function validateBundleCompanyUniverseMembership() {
+  const canonicalPath = 'operations/universe/current-universe-v1.json';
+  if (!fs.existsSync(path.join(root, canonicalPath))) return;
+
+  const canonicalUniverse = readJson(canonicalPath);
+  const universeCodes = new Set((canonicalUniverse.companies ?? []).map((c) => String(c.code)));
+
+  let validMembershipCount = 0;
+  for (const code of companyByCode.keys()) {
+    if (universeCodes.has(code)) {
+      validMembershipCount += 1;
+    }
+  }
+  add('all bundle companies present in canonical company universe', validMembershipCount === companyByCode.size, `valid=${validMembershipCount}, total=${companyByCode.size}`);
+}
+
 validatePublicationRecords();
 validateChangeRecords();
+validatePublicSiteReleaseStatus();
+validatePublicCompanyUniverseSync();
+validatePublicPlanDetectionSummarySync();
+validatePublicResearchPrioritySummarySync();
+validatePublicQualityRebaseSync();
+validateBundleCompanyUniverseMembership();
 
 const blockers = [];
 if (publication.status === 'awaiting_export') blockers.push('詳細β70社の公表日監査レコードが未受領');

@@ -46,6 +46,40 @@ const blocking = [];
 
 for (const company of payload.companies ?? []) {
   const code = String(company.code ?? '');
+  const canonical = canonicalMap.get(code);
+  if (canonical) {
+    if (canonical.name && company.name !== canonical.name) {
+      changes.push({
+        code,
+        field: 'name',
+        before: company.name,
+        after: canonical.name,
+        action: 'align_with_canonical_universe',
+      });
+      company.name = canonical.name;
+    }
+    if (canonical.market && company.market !== canonical.market) {
+      changes.push({
+        code,
+        field: 'market',
+        before: company.market,
+        after: canonical.market,
+        action: 'align_with_canonical_universe',
+      });
+      company.market = canonical.market;
+    }
+    if (canonical.industry && company.industry !== canonical.industry) {
+      changes.push({
+        code,
+        field: 'industry',
+        before: company.industry,
+        after: canonical.industry,
+        action: 'align_with_canonical_universe',
+      });
+      company.industry = canonical.industry;
+    }
+  }
+
   for (const field of ['code', 'name', 'market', 'stage', 'lastVerifiedDate', 'quality']) {
     if (company[field] == null || company[field] === '') {
       blocking.push({ code, field, reason: '安全に補完できない必須項目' });

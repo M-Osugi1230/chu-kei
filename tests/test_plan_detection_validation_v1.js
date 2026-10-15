@@ -520,4 +520,8 @@ test('Workspace Registry Data - Regression Assertions for specific stock codes',
   const planEnd1332 = dates1332.at(-1);
   assert.ok(planEnd1332);
   assert.equal(planEnd1332.date, '2028-03-31');
+
+  // 4. Resolved companies count threshold regression check
+  const resolvedCompanies = registry.companies.filter(c => c.status === 'current' || c.status === 'expired');
+  assert.ok(resolvedCompanies.length >= 371, `Resolved companies count (${resolvedCompanies.length}) must be at least 371 (>= 10% coverage)`);
 });

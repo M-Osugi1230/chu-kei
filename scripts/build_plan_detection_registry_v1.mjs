@@ -1,3 +1,6 @@
+/**
+ * Rebuilds the canonical Plan Detection registry, research queue, and public summary datasets.
+ */
 import fs from 'node:fs';
 import path from 'node:path';
 import {
@@ -73,7 +76,21 @@ const companies = universe.companies.map(listing => {
   const primaryReviewed = primaryReviewedByCode.get(code);
   const verified = verifiedByCode.get(code);
 
-  return resolveCompanyStatus(listing, previous, primaryReviewed, verified);
+  const resolved = resolveCompanyStatus(listing, previous, primaryReviewed, verified);
+
+  if (
+    resolved.derivation &&
+    previous?.derivation?.referenceDate &&
+    resolved.derivation.assuranceTier === previous.derivation.assuranceTier &&
+    resolved.derivation.formalPlanConfirmed === previous.derivation.formalPlanConfirmed &&
+    resolved.derivation.classification === previous.derivation.classification &&
+    resolved.derivation.period === previous.derivation.period &&
+    resolved.derivation.planEndDate === previous.derivation.planEndDate
+  ) {
+    resolved.derivation.referenceDate = previous.derivation.referenceDate;
+  }
+
+  return resolved;
 }).sort((a, b) => a.code.localeCompare(b.code, 'ja'));
 
 // Regression assertions to enforce L1 review gate and endpoint parsing rules

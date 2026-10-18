@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "COMPLETE",
+  "company_count": 3709,
+  "final_resolved_count": 928,
+  "coverage": 0.250202,
+  "coverage_percentage": "25.02%",
+  "target_repository_sha": "ceb4aca9511dcac7747cf218e97d8357dc2f71d6",
+  "counts": {
+    "current": 920,
+    "expired": 8,
+    "no_formal_plan": 0,
+    "found_unstructured": 0,
+    "not_checked": 2781
+  },
+  "overrides": {
+    "verified_override_count": 61,
+    "primary_reviewed_override_count": 867
+  },
+  "evidence_references": [
+    {
+      "type": "registry",
+      "path": "operations/plan-detection/registry-v1.json",
+      "description": "Canonical Plan Detection Registry mapping company stock codes to resolved plan statuses"
+    },
+    {
+      "type": "summary",
+      "path": "site/data/plan-detection-summary-v1.json",
+      "description": "Public summary dataset reflecting Plan Detection stats and coverage"
+    },
+    {
+      "type": "verified_overrides",
+      "path": "operations/plan-detection/verified-overrides-v1.json",
+      "description": "Verified human overrides for Plan Detection"
+    },
+    {
+      "type": "primary_reviewed_overrides",
+      "path": "operations/plan-detection/primary-reviewed-overrides-v1.json",
+      "description": "Primary reviewed human overrides for Plan Detection"
+    },
+    {
+      "type": "candidates",
+      "path": "operations/plan-detection/candidates/",
+      "description": "Bounded candidate batches under human review governance"
+    }
+  ]
+}

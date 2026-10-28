@@ -488,6 +488,35 @@ test('Workspace Candidates Data - Existing candidate files pass candidate valida
   }
 });
 
+test('Workspace Candidates Data - Batch 004 candidates validation', () => {
+  const batch004File = path.resolve('operations/plan-detection/candidates/ade-batch-004/candidates-v1.json');
+  assert.ok(fs.existsSync(batch004File), 'ade-batch-004 candidates file must exist');
+
+  const payload = JSON.parse(fs.readFileSync(batch004File, 'utf8'));
+  assert.equal(payload.schemaVersion, 'plan-detection-candidate-batch-v1');
+  assert.equal(payload.batchId, 'ade-batch-004');
+  assert.equal(payload.nonPublic, true);
+  assert.equal(payload.candidates.length, 3327, 'ade-batch-004 candidate count must be 3327');
+
+  assert.doesNotThrow(() => {
+    validateCandidateBatchPayload(batch004File, payload, 'ade-batch-004');
+  });
+});
+
+test('Workspace Summary Data - Plan detection summary counts validation', () => {
+  const summaryFile = path.resolve('site/data/plan-detection-summary-v1.json');
+  assert.ok(fs.existsSync(summaryFile), 'plan detection summary file must exist');
+
+  const summary = JSON.parse(fs.readFileSync(summaryFile, 'utf8'));
+  assert.equal(summary.version, 'plan-detection-summary-v1');
+  assert.equal(summary.companyCount, 3709);
+  assert.equal(summary.resolvedCount, 375);
+  assert.equal(summary.pendingCount, 3334);
+  assert.equal(summary.counts.current, 369);
+  assert.equal(summary.counts.expired, 6);
+  assert.equal(summary.counts.not_checked, 3334);
+});
+
 test('Workspace Registry Data - Regression Assertions for specific stock codes', () => {
   const registryPath = path.resolve('operations/plan-detection/registry-v1.json');
   if (!fs.existsSync(registryPath)) return;

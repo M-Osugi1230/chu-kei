@@ -59,8 +59,11 @@ jobs:
       - name: Rebuild frontend search data
         run: node scripts/build_frontend_data_shards_v1.mjs
 
-      - name: Run quick quality gate
-        run: npm run quality:local:quick
+      - name: Validate refreshed universe and publication artifacts
+        run: |
+          npm run quality:v43
+          node --test tests/test_plan_detection_validation_v1.js
+          node scripts/validate_frontend_budget_v1.mjs
 
       - name: Commit universe refresh
         shell: bash

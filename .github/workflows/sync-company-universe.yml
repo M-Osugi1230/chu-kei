@@ -2,6 +2,11 @@ name: Sync Company Universe
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/sync-company-universe.yml'
   schedule:
     - cron: '17 21 * * 1'
 
@@ -29,6 +34,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Install Excel workbook parsers
+        run: python -m pip install --disable-pip-version-check 'openpyxl>=3.1,<4' 'xlrd>=2,<3'
 
       - name: Fetch current JPX listed-company universe
         run: npm run company:coverage:fetch

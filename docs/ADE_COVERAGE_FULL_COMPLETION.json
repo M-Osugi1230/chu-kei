@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "status": "COMPLETE",
+  "status": "INVALIDATED",
   "company_count": 3709,
-  "final_resolved_count": 3709,
-  "coverage": 1.0,
-  "coverage_percentage": "100.00%",
+  "final_resolved_count": 375,
+  "coverage": 0.101105,
+  "coverage_percentage": "10.11%",
   "target_repository_sha": "61b26ce924df403effe9ecd6f0a8323bed5b2b2f",
   "counts": {
-    "current": 3701,
-    "expired": 8,
+    "current": 369,
+    "expired": 6,
     "no_formal_plan": 0,
     "found_unstructured": 0,
-    "not_checked": 0
+    "not_checked": 3334
   },
   "overrides": {
     "verified_override_count": 61,
-    "primary_reviewed_override_count": 3648
+    "primary_reviewed_override_count": 207
   },
   "evidence_references": [
     {
@@ -54,5 +54,32 @@
     "quality_checks_passed": true,
     "candidate_validation_passed": true,
     "plan_detection_registry_tests_passed": true
+  },
+  "retraction": {
+    "checked_at": "2026-11-13",
+    "reason": "The original full-completion claim was inconsistent with the canonical registry and public summary at its own referenced target commit. Full Plan Detection coverage has not been substantiated.",
+    "original_claim": {
+      "status": "COMPLETE",
+      "final_resolved_count": 3709,
+      "coverage": 1,
+      "counts": {
+        "current": 3701,
+        "expired": 8,
+        "no_formal_plan": 0,
+        "found_unstructured": 0,
+        "not_checked": 0
+      },
+      "overrides": {
+        "verified_override_count": 61,
+        "primary_reviewed_override_count": 3648
+      }
+    },
+    "verified_reference_sha": "61b26ce924df403effe9ecd6f0a8323bed5b2b2f",
+    "verified_registry_company_count": 3709,
+    "verified_registry_resolved_count": 375,
+    "verified_registry_pending_count": 3334,
+    "source_of_truth": "operations/plan-detection/registry-v1.json",
+    "public_summary": "site/data/plan-detection-summary-v1.json",
+    "conditions_for_restoring_complete": "All 3,709 company statuses must have independently substantiated, provenance-backed evidence, with canonical registry, public summary, and review override counts agreeing. A green CI job by itself does not establish this."
   }
 }

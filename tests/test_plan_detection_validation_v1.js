@@ -505,16 +505,44 @@ test('Workspace Candidates Data - Batch 004 candidates validation', () => {
 
 test('Workspace Summary Data - Plan detection summary counts validation', () => {
   const summaryFile = path.resolve('site/data/plan-detection-summary-v1.json');
-  assert.ok(fs.existsSync(summaryFile), 'plan detection summary file must exist');
+  const registryFile = path.resolve('operations/plan-detection/registry-v1.json');
+  const universeFile = path.resolve('operations/universe/current-universe-v1.json');
+
+  for (const sourceFile of [summaryFile, registryFile, universeFile]) {
+    assert.ok(fs.existsSync(sourceFile), `required source missing: ${sourceFile}`);
+  }
 
   const summary = JSON.parse(fs.readFileSync(summaryFile, 'utf8'));
+  const registry = JSON.parse(fs.readFileSync(registryFile, 'utf8'));
+  const universe = JSON.parse(fs.readFileSync(universeFile, 'utf8'));
+
   assert.equal(summary.version, 'plan-detection-summary-v1');
-  assert.equal(summary.companyCount, 3709);
-  assert.equal(summary.resolvedCount, 375);
-  assert.equal(summary.pendingCount, 3334);
-  assert.equal(summary.counts.current, 369);
-  assert.equal(summary.counts.expired, 6);
-  assert.equal(summary.counts.not_checked, 3334);
+  assert.equal(registry.version, 'plan-detection-registry-v1');
+  assert.equal(universe.version, 'company-universe-v1');
+
+  // The official listing universe changes as companies list/delist; never
+  // pin the acceptance criteria to a historical company count or status.
+  assert.equal(summary.companyCount, universe.companies.length);
+  assert.equal(registry.companyCount, universe.companies.length);
+  assert.equal(registry.companies.length, universe.companies.length);
+  assert.equal(summary.resolvedCount, registry.resolvedCount);
+  assert.equal(summary.pendingCount, registry.counts.not_checked);
+  assert.equal(summary.resolvedCount + summary.pendingCount, summary.companyCount);
+  assert.deepEqual(summary.counts, registry.counts);
+  assert.equal(summary.verifiedOverrideCount, registry.verifiedOverrideCount);
+  assert.equal(summary.primaryReviewedOverrideCount, registry.primaryReviewedOverrideCount);
+
+  const counted = { current: 0, expired: 0, no_formal_plan: 0, found_unstructured: 0, not_checked: 0 };
+  for (const company of registry.companies) {
+    assert.ok(Object.hasOwn(counted, company.status), `unknown status for ${company.code}`);
+    counted[company.status] += 1;
+  }
+  assert.deepEqual(counted, summary.counts);
+  assert.equal(
+    summary.resolvedCount,
+    summary.companyCount - counted.not_checked,
+    'resolved must reflect actual reviewed status rows, not a completion marker',
+  );
 });
 
 test('Workspace Registry Data - Regression Assertions for specific stock codes', () => {

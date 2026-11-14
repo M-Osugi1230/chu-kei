@@ -174,18 +174,42 @@ function validatePublicQualityRebaseSync() {
 
 function validateBundleCompanyUniverseMembership() {
   const canonicalPath = 'operations/universe/current-universe-v1.json';
+  const frontendPath = 'site/data/frontend/manifest.json';
   if (!fs.existsSync(path.join(root, canonicalPath))) return;
+  if (!fs.existsSync(path.join(root, frontendPath))) {
+    add('public frontend manifest exists for universe reconciliation', false, frontendPath);
+    return;
+  }
 
   const canonicalUniverse = readJson(canonicalPath);
-  const universeCodes = new Set((canonicalUniverse.companies ?? []).map((c) => String(c.code)));
+  const activeCodes = new Set((canonicalUniverse.companies ?? []).map((c) => String(c.code)));
+  const frontend = readJson(frontendPath);
+  const indexFile = frontend.index?.file;
+  add('frontend index path is safe', /^company-index\.json\.gz$/.test(String(indexFile)), String(indexFile));
+  if (!/^company-index\.json\.gz$/.test(String(indexFile))) return;
 
-  let validMembershipCount = 0;
-  for (const code of companyByCode.keys()) {
-    if (universeCodes.has(code)) {
-      validMembershipCount += 1;
-    }
-  }
-  add('all bundle companies present in canonical company universe', validMembershipCount === companyByCode.size, `valid=${validMembershipCount}, total=${companyByCode.size}`);
+  const bytes = fs.readFileSync(path.join(root, 'site', 'data', 'frontend', indexFile));
+  const digest = crypto.createHash('sha256').update(bytes).digest('hex');
+  add('frontend index hash matches manifest', digest === frontend.index.sha256, digest);
+  const index = JSON.parse(zlib.gunzipSync(bytes).toString('utf8'));
+  const frontendCodes = new Set((index.companies ?? []).map((c) => String(c.code)));
+
+  const retainedSourceOnly = [...companyByCode.keys()].filter((code) => !activeCodes.has(code));
+  const accidentallyPublic = retainedSourceOnly.filter((code) => frontendCodes.has(code));
+  const missingActive = [...activeCodes].filter((code) => !frontendCodes.has(code));
+
+  add('source-only historical bundle count reconciles with frontend manifest',
+    retainedSourceOnly.length === frontend.sourceOnlyCount,
+    'outside current JPX target=' + retainedSourceOnly.length + ', manifest=' + frontend.sourceOnlyCount);
+  add('historical bundle rows outside current JPX target are not public search results',
+    accidentallyPublic.length === 0,
+    'incorrectly public=' + accidentallyPublic.join(','));
+  add('all current JPX target companies are in public frontend',
+    missingActive.length === 0 && frontendCodes.size === activeCodes.size,
+    'missing=' + missingActive.length + ', expected=' + activeCodes.size + ', actual=' + frontendCodes.size);
+  // The 3,000-company research source is a historical structured bundle.
+  // Its membership is not an assertion that every record is currently listed.
+  // Do not infer delisting reasons or auto-delete retained historical research.
 }
 
 validatePublicationRecords();

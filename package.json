@@ -5,7 +5,7 @@
   "description": "日本上場企業の中期経営計画を比較・理解・調査するための品質重視ポータル",
   "type": "module",
   "scripts": {
-    "quality:v43": "node scripts/run_quality_pipeline_v43.mjs && node scripts/align_metric_evidence_refs_v1.mjs && node scripts/rebuild_quality_scores_v2.mjs && node scripts/normalize_bundle_contract_v1.mjs && node scripts/build_company_universe_v1.mjs && node scripts/build_plan_detection_verified_overrides_v1.mjs && node scripts/build_plan_detection_primary_reviewed_overrides_v1.mjs && node scripts/build_plan_detection_registry_v1.mjs && node scripts/build_research_priority_queue_v1.mjs && node scripts/build_frontend_data_shards_v1.mjs && node scripts/audit_production_readiness_v1.mjs && node scripts/validate_core_document_relevance_v1.mjs && node scripts/validate_public_launch_v1.mjs && node scripts/audit_plan_detection_evidence_consistency_v1.mjs && node scripts/validate_full_universe_frontend_v1.mjs",
+    "quality:v43": "node scripts/run_quality_pipeline_v43.mjs && node scripts/align_metric_evidence_refs_v1.mjs && node scripts/rebuild_quality_scores_v2.mjs && node scripts/normalize_bundle_contract_v1.mjs && node scripts/build_company_universe_v1.mjs && node scripts/build_plan_detection_verified_overrides_v1.mjs && node scripts/build_plan_detection_primary_reviewed_overrides_v1.mjs && node scripts/build_plan_detection_registry_v1.mjs && node scripts/build_research_priority_queue_v1.mjs && node scripts/build_frontend_data_shards_v1.mjs && node scripts/audit_production_readiness_v1.mjs && node scripts/validate_core_document_relevance_v1.mjs && node scripts/validate_public_launch_v1.mjs && node scripts/audit_plan_detection_evidence_consistency_v1.mjs && node scripts/validate_full_universe_frontend_v1.mjs && node scripts/audit_live_deployment_parity_v1.mjs --offline",
     "quality:content:audit": "node scripts/validate_core_document_relevance_v1.mjs",
     "quality:public-launch": "node scripts/validate_public_launch_v1.mjs",
     "quality:local": "node scripts/run_local_quality_gate.mjs",
@@ -28,7 +28,9 @@
     "company:plan-detection:verified-overrides:build": "node scripts/build_plan_detection_verified_overrides_v1.mjs",
     "company:plan-detection:primary-overrides:build": "node scripts/build_plan_detection_primary_reviewed_overrides_v1.mjs",
     "quality:plan-detection-evidence": "node scripts/audit_plan_detection_evidence_consistency_v1.mjs",
-    "quality:universe-integrity": "node scripts/validate_full_universe_frontend_v1.mjs"
+    "quality:universe-integrity": "node scripts/validate_full_universe_frontend_v1.mjs",
+    "quality:live-parity:offline": "node scripts/audit_live_deployment_parity_v1.mjs --offline",
+    "quality:live-parity": "node scripts/audit_live_deployment_parity_v1.mjs"
   },
   "engines": {
     "node": ">=20"

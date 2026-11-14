@@ -59,11 +59,25 @@ jobs:
       - name: Rebuild frontend search data
         run: node scripts/build_frontend_data_shards_v1.mjs
 
+      - name: Validate canonical static bundle without regenerating it
+        run: |
+          node scripts/validate_quality_v43.mjs
+          node scripts/validate_public_launch_v1.mjs
+          node scripts/validate_data_contract_v1.mjs
+
       - name: Validate refreshed universe and publication artifacts
         run: |
-          npm run quality:v43
           node --test tests/test_plan_detection_validation_v1.js
+          node scripts/audit_plan_detection_evidence_consistency_v1.mjs
+          node scripts/validate_full_universe_frontend_v1.mjs
           node scripts/validate_frontend_budget_v1.mjs
+
+      - name: Fail if the source bundle changed during a listing-only sync
+        run: |
+          if ! git diff --quiet -- site/data/bundle.manifest.json site/data/bundle.gz.part*; then
+            echo "Source bundle unexpectedly mutated in listing-only JPX sync." >&2
+            exit 1
+          fi
 
       - name: Commit universe refresh
         shell: bash

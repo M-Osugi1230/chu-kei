@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "reviewStatus": "UNVERIFIED",
+  "publicCandidate": {
+    "url": "https://chukei-insight.osugimurata.chatgpt.site/",
+    "origin": "docs/LIVE_SITE_ALIGNMENT.md",
+    "hosting": "ChatGPT Sites",
+    "sourceLinkage": "not_verified"
+  },
+  "legacyAdvertisedDomain": {
+    "url": "https://chu-kei.com/",
+    "origin": "README.md and site/index.html canonical metadata",
+    "ownership": "not_verified",
+    "shouldNotTreatAsAuthoritative": true
+  },
+  "policy": {
+    "canonicalRepository": "M-Osugi1230/chu-kei",
+    "sourceOfTruth": "operations/universe/current-universe-v1.json",
+    "publicationProofRequires": [
+      "public HTML is generated from the approved GitHub site",
+      "public frontend manifest and compressed index are byte-for-byte consistent with reviewed main",
+      "public Plan Detection summary agrees with canonical status counts",
+      "domain ownership and deployment access verified by site owner"
+    ],
+    "automaticPublication": false,
+    "unknownSiteMustNotBeCalledProduction": true
+  }
+}

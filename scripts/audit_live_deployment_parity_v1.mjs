@@ -31,6 +31,7 @@ const universe = readJson('operations/universe/current-universe-v1.json');
 const registry = readJson('operations/plan-detection/registry-v1.json');
 const summary = readJson('site/data/plan-detection-summary-v1.json');
 const manifest = readJson('site/data/frontend/manifest.json');
+const sourceBundleManifest = readJson('site/data/bundle.manifest.json');
 const target = readJson('operations/site-sync/deployment-targets-v1.json');
 
 const expectedCount = universe.companies.length;
@@ -38,6 +39,9 @@ check('canonical universe count', universe.companyCount === expectedCount, Strin
 check('registry universe count', registry.companyCount === expectedCount, String(registry.companyCount));
 check('public summary universe count', summary.companyCount === expectedCount, String(summary.companyCount));
 check('frontend manifest count', manifest.companyCount === expectedCount, String(manifest.companyCount));
+check('frontend index built from committed source bundle',
+  manifest.sourceBundleSha256 === sourceBundleManifest.sha256,
+  'frontend=' + manifest.sourceBundleSha256 + ' source=' + sourceBundleManifest.sha256);
 check('frontend shards cover universe',
   manifest.detailShards.reduce((sum, shard) => sum + shard.companyCount, 0) === expectedCount,
   String(manifest.detailShards.length) + ' detail files');

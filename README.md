@@ -2,10 +2,19 @@
 
 日本上場企業の中期経営計画を、戦略の違いから探し、比較・理解・調査するためのポータルです。
 
-- 公開サイト: https://chu-kei.com/
+- 公開候補（ChatGPT Sites版、GitHubとの同期は未検証）: https://chukei-insight.osugimurata.chatgpt.site/
+- `https://chu-kei.com/` はGitHub内に旧公開URLとして残存。所有権・リダイレクト・公開同期が未確認のため正式な本番URLと断定しない。
 - GitHub: `M-Osugi1230/chu-kei`
 
 Chu-keiは投資助言・銘柄推奨を目的としません。未確認情報を推測で補完せず、公式一次資料、確認日、品質状態、レビュー判断を分離して管理します。
+
+## Current canonical data (2026-11-14確認)
+
+- JPX公式一覧を2026-11-13に取得：Prime / Standard / Growth の検索対象 **3,686社**。
+- 正本中計判定：**374社判定済み**、**3,312社未判定**。3,686社掲載と3,686社の正式中計確認は異なる。
+- 構造化元データバンドルは**3,000社**であり、最新の検索母集団3,686社と混同しない。
+- GitHubの最新データと公開済みサイトの一致は未検証。配信先候補と判定条件は `operations/site-sync/deployment-targets-v1.json`、検査方法は `docs/LIVE_DEPLOYMENT_PARITY_RUNBOOK.md` を参照。
+- 公開サイトと正本が一致したことを確認するまで、サイト全体の完成・本番同期完了は宣言しない。
 
 ## Project baseline
 

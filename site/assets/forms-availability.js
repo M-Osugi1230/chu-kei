@@ -5,7 +5,11 @@
  * confirms form delivery on the exact origin and records non-sensitive proof.
  * This prevents a successful-looking POST on an unsupported static host.
  */
-const formElements = [...document.querySelectorAll('form[data-netlify="true"]')];
+// NOTE: Netlify post-processing strips data-netlify attributes from the
+// served HTML once form detection is enabled, so the activation gate must
+// select the (initially hidden) named forms directly. Approval still
+// requires the form name to be listed in the verified configuration.
+const formElements = [...document.querySelectorAll('form[name]')].filter(form => form.hidden);
 
 async function enableVerifiedForms() {
   if (formElements.length === 0) return;

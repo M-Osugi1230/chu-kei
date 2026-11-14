@@ -2,6 +2,12 @@ name: Chu-kei Live Deployment Parity
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/live-deployment-parity.yml'
+      - 'scripts/audit_live_deployment_parity_v1.mjs'
+      - 'operations/site-sync/deployment-targets-v1.json'
   schedule:
     - cron: '35 22 * * *'
 

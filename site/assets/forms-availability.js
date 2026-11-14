@@ -24,7 +24,7 @@ async function enableVerifiedForms() {
     config?.provider === 'netlify-forms' &&
     config?.verifiedOrigin === location.origin &&
     typeof config?.verifiedAt === 'string' &&
-    /^\\d{4}-\\d{2}-\\d{2}T/.test(config.verifiedAt) &&
+    /^\d{4}-\d{2}-\d{2}T/.test(config.verifiedAt) &&
     typeof config?.verificationEvidence === 'string' &&
     config.verificationEvidence.trim().length > 0 &&
     Array.isArray(config?.verifiedFormNames);

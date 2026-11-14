@@ -1,9 +1,13 @@
 {
   "schemaVersion": 1,
   "provider": "netlify-forms",
-  "status": "unverified",
-  "verifiedOrigin": null,
-  "verifiedAt": null,
-  "verifiedFormNames": [],
-  "verificationEvidence": null
+  "status": "verified",
+  "verifiedOrigin": "https://chu-kei-insight-preview.netlify.app",
+  "verifiedAt": "2026-11-15T01:40:00+09:00",
+  "verifiedFormNames": [
+    "general-inquiry",
+    "spot-report-request",
+    "product-waitlist"
+  ],
+  "verificationEvidence": "2026-11-15: Netlify form detection was enabled and a production redeploy (main@54dcedf) registered all three forms as Active in the Netlify dashboard. Test POST submissions to general-inquiry, spot-report-request and product-waitlist each returned HTTP 200 (HTTP 404 before the fix). Intake opening approved by the site operator on 2026-11-15."
 }

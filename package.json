@@ -31,7 +31,8 @@
     "quality:universe-integrity": "node scripts/validate_full_universe_frontend_v1.mjs",
     "quality:live-parity:offline": "node scripts/audit_live_deployment_parity_v1.mjs --offline",
     "quality:live-parity": "node scripts/audit_live_deployment_parity_v1.mjs",
-    "quality:forms:delivery": "node --test tests/forms-availability.test.mjs"
+    "quality:forms:delivery": "node --test tests/forms-availability.test.mjs",
+    "seo:company-pages": "node scripts/build_company_pages_v1.mjs"
   },
   "engines": {
     "node": ">=20"

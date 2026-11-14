@@ -108,4 +108,34 @@ test.describe('Complete universe search and detail coverage', () => {
     await expect(page.locator('#result-summary')).toContainText(`${manifest.companyCount}社が該当`);
     expect(pageErrors).toEqual([]);
   });
+
+  test('JPX listing-only data never displays its fetch date as a plan review date', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('#stage').selectOption('jpx_indexed');
+    await expect(page.locator('.company-card')).toHaveCount(50);
+    await expect(page.locator('.company-card').first()).toContainText('中計未確認');
+    await expect(page.locator('.company-card').first()).toContainText('上場情報取得日');
+    await expect(page.locator('.company-card').first()).not.toContainText('最終確認日');
+
+    await page.locator('[data-detail]').first().click();
+    await expect(page.locator('#company-dialog')).toBeVisible();
+    await expect(page.locator('#company-detail')).toContainText('上場情報取得日');
+    await expect(page.locator('#company-detail')).toContainText('中計未確認');
+    await expect(page.locator('#company-detail')).not.toContainText('最終確認日');
+  });
+
+  test('release dashboard separates current searchable companies from legacy source and unreviewed plans', async ({ page }) => {
+    const summary = readJson('site/data/plan-detection-summary-v1.json');
+    await page.goto('/release.html');
+    await expect(page.locator('#release-error')).toBeHidden();
+    await expect(page.locator('#repo-stats')).toContainText('現行検索対象');
+    await expect(page.locator('#repo-stats')).toContainText(String(manifest.companyCount));
+    await expect(page.locator('#repo-stats')).toContainText('正式中計判定済み');
+    await expect(page.locator('#repo-stats')).toContainText(String(summary.resolvedCount));
+    await expect(page.locator('#repo-stats')).toContainText('中計未確認');
+    await expect(page.locator('#repo-stats')).toContainText(String(summary.pendingCount));
+    await expect(page.locator('#repo-stats')).toContainText('既存の構造化元データ');
+    await expect(page.locator('#release-updated')).toContainText('JPX企業一覧取得');
+    await expect(page.locator('#pending-sync')).toContainText('公開済みホスティング');
+  });
 });

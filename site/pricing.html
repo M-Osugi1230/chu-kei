@@ -30,7 +30,8 @@
       <section class="section platform-card">
         <h2>先行利用の登録</h2>
         <p class="form-note">送信時点では契約・課金は成立しません。必要な機能、利用人数、データ用途を確認して提供順を決めます。</p>
-        <form name="product-waitlist" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <p class="form-note" data-form-availability-status role="status">受付環境の確認中につき、フォームからの送信は一時停止しています。受信確認が完了した後に利用可能になります。</p>
+        <form hidden name="product-waitlist" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="product-waitlist">
           <p hidden><label>入力しないでください <input name="bot-field"></label></p>
           <div class="form-grid">
@@ -50,5 +51,6 @@
   </main>
   <footer><p>運営：Chu-kei事務局　予定価格と機能は検証結果により変更する場合があります。 <a href="./contact.html">お問い合わせ</a></p></footer>
   <script src="./assets/local-metrics.js"></script>
+  <script type="module" src="./assets/forms-availability.js"></script>
 </body>
 </html>

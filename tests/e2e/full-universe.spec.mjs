@@ -111,11 +111,11 @@ test.describe('Complete universe search and detail coverage', () => {
 
   test('JPX listing-only data never displays its fetch date as a plan review date', async ({ page }) => {
     await page.goto('/');
-    await page.locator('#search').fill('130A');
-    await expect(page.locator('.company-card')).toHaveCount(1);
-    await expect(page.locator('.company-card')).toContainText('中計未確認');
-    await expect(page.locator('.company-card')).toContainText('上場情報取得日');
-    await expect(page.locator('.company-card')).not.toContainText('最終確認日');
+    await page.locator('#stage').selectOption('jpx_indexed');
+    await expect(page.locator('.company-card')).toHaveCount(50);
+    await expect(page.locator('.company-card').first()).toContainText('中計未確認');
+    await expect(page.locator('.company-card').first()).toContainText('上場情報取得日');
+    await expect(page.locator('.company-card').first()).not.toContainText('最終確認日');
 
     await page.locator('[data-detail]').first().click();
     await expect(page.locator('#company-dialog')).toBeVisible();

@@ -1,5 +1,7 @@
 # 商用受付 公開チェックリスト v1
 
+> 公開前の安全ゲート：Netlify Formsの実受信を確認するまでフォームは非表示です。手順は [`FORM_DELIVERY_RELEASE_GATE_20261114.md`](FORM_DELIVERY_RELEASE_GATE_20261114.md) を参照してください。ChatGPT SitesにNetlify Formsの受信機能があるとは仮定しません。
+
 ## Netlify Forms
 
 - [ ] `spot-report-request`がForms一覧に表示される

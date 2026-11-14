@@ -33,7 +33,8 @@
       <section class="section platform-card">
         <h2>調査依頼</h2>
         <p class="form-note">送信内容は依頼対応のみに利用します。送信時点では契約・課金は成立しません。</p>
-        <form name="spot-report-request" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <p class="form-note" data-form-availability-status role="status">受付環境の確認中につき、フォームからの送信は一時停止しています。受信確認が完了した後に利用可能になります。</p>
+        <form hidden name="spot-report-request" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="spot-report-request">
           <p hidden><label>入力しないでください <input name="bot-field"></label></p>
           <div class="form-grid">
@@ -54,5 +55,6 @@
   </main>
   <footer><p>運営：Chu-kei事務局　重要な意思決定では、納品レポートと各社の最新公式資料をご確認ください。 <a href="./contact.html">お問い合わせ</a></p></footer>
   <script src="./assets/local-metrics.js"></script>
+  <script type="module" src="./assets/forms-availability.js"></script>
 </body>
 </html>

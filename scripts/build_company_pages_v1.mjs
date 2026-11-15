@@ -9,7 +9,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SITE_ORIGIN = 'https://chu-kei-insight-preview.netlify.app';
+const SITE_ORIGIN = 'https://chu-kei.com';
 const RESOLVED = new Set(['current', 'expired', 'no_formal_plan', 'found_unstructured']);
 const STATUS_LABEL = {
   current: '現行の中期経営計画を確認済み',

@@ -12,7 +12,7 @@ function assert(condition, message) {
   }
 }
 
-const publicBase = 'https://chu-kei-insight-preview.netlify.app/';
+const publicBase = 'https://chu-kei.com/';
 const [index, contact, privacy, robots, sitemap, releaseStatus, operationsStatus] = await Promise.all([
   read('site/index.html'),
   read('site/contact.html'),

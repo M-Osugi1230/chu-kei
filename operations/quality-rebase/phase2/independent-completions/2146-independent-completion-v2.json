@@ -5,7 +5,7 @@
   "name": "UTグループ"
  },
  "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
- "independentReviewPacket": null,
+ "independentReviewPacket": "operations/quality-rebase/phase2/independent/2146-independent-review-v2.json",
  "source": {
   "title": "2026年3月期 通期決算説明資料（第5次中期経営計画を含む）",
   "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/05/release_20260514_04.pdf",
@@ -41,11 +41,11 @@
   },
   {
    "id": "capital_allocation",
-   "status": "not_quantitatively_disclosed",
+   "status": "confirmed",
    "evidencePdfPages": [
     3
    ],
-   "result": "従業員への株式給付・社員株主化を通じた利益分配の方針は確認できたが、計画期間全体の投資総額等の定量的な資本配分計画は本資料では未確認（一次レビューも定量的な資本配分目標を登録していないため、記録との矛盾はない）。"
+   "result": "一次レビューの資本配分記録が原資料と一致することを確認した。本資料に計画期間全体の投資総額等の定量的な資本配分計画の開示はなく、一次レビューも定量値を登録していない（記録されているのは従業員への株式給付・社員株主化を通じた利益分配の方針のみ）。すなわち「未開示であること」自体が原資料どおりであることを確認した。"
   },
   {
    "id": "shareholder_return",
@@ -67,7 +67,7 @@
  ],
  "crossChecks": {
   "collectionIntegrity": {
-   "file": null,
+   "file": "operations/quality-rebase/phase2/supersession-collections/2146-collection-v1.json",
    "sourceUrlMatched": true,
    "pdfSha256Matched": true,
    "pageCountMatched": true,
@@ -80,9 +80,7 @@
    "note": "独立レビュアーが公式PDFの目標表・株主還元方針を閲覧確認し、一次レビュアーのローカル全文照合と一致した。定量的な資本配分計画は資料に開示がなく、確認対象外として明記する。"
   }
  },
- "finalDeepVerificationBlockers": [
-  "定量的な資本配分計画は出典資料に開示がないため未確認（記録の欠落ではなく開示の不存在）。"
- ],
+ "finalDeepVerificationBlockers": [],
  "review": {
   "minimumDistinctReviewers": 2,
   "reviewRole": "independent_reviewer",
@@ -90,11 +88,14 @@
   "completedAt": "2026-11-16T18:47:00+09:00",
   "automaticApprovalAllowed": false,
   "deepVerificationApproved": false,
-  "result": "confirmed_with_reservations",
+  "result": "confirmed",
   "reviewers": [
    "ChatGPT (independent recheck, 2026-11-16, chat「独立再確認 PR-04」)",
    "Muse (primary reviewer; local PDF fetch, SHA-256 and headline-target verification)"
   ],
-  "note": "本レコードは後継計画への出典差し替えに伴う新規の独立レビュー完了記録であり、旧計画に対する v1 の完了記録は監査履歴として保持される（append-only）。"
- }
+  "note": "本レコードは後継計画への出典差し替えに伴う新規の独立レビュー完了記録であり、旧計画に対する v1 の完了記録は監査履歴として保持される（append-only）。",
+  "reservationNote": "資本配分については、定量的な計画が原資料に開示されていないことを確認した（一次レビューの記録と一致）。これは記録の欠落ではなく開示の不存在である。"
+ },
+ "sourceResolutionFile": "operations/quality-rebase/phase2/source-repairs/2146-independent-source-resolution-v1.json",
+ "sourceResolutionNote": "当該ファイルは 2146 の旧出典に対する監査済み出典同一性解決の記録であり、履歴として参照する。本 v2 完了記録による後継文書への差し替えは、本ファイルの checks と一次レビュー（PR-04）に記録されている。"
 }

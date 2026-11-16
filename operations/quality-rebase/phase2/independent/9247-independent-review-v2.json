@@ -1,0 +1,76 @@
+{
+ "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+ "company": {
+  "code": "9247",
+  "name": "TREホールディングス"
+ },
+ "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
+ "source": {
+  "title": "「TRE中期経営計画 2030」策定について",
+  "officialLandingPage": null,
+  "officialUrl": "https://www2.jpx.co.jp/disc/92470/140120260515537503.pdf",
+  "pdfSha256": "22805d16df3f094696eeed197afdb03006506ba8ace3ea9b7352be4dd66c329d",
+  "pageCount": 2
+ },
+ "status": "independent_review_ready",
+ "reviewContext": "後継計画への出典差し替え（Issue #288 / PR-04）に伴う独立再確認のパケット（課題定義）。独立レビュアー（ChatGPT）が公式PDFを実際に開いて6項目を再確認する（2026-11-16、チャット「独立再確認 PR-04」）。判定結果は対応する独立レビュー完了記録（independent-completions v2）に記録され、本パケットのチェックは課題定義として pending のまま保持される。",
+ "checks": [
+  {
+   "id": "source_identity",
+   "description": "発行体・証券コード・日付（2026年5月15日）・表題と一次レビューの記録の一致を確認する。",
+   "expectedEvidencePdfPages": [
+    1
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "current_plan_boundary",
+   "description": "第3次中計として取締役会で決議・策定され、計画期間が2027年3月期～2031年3月期と明記されていることを確認する。",
+   "expectedEvidencePdfPages": [
+    1,
+    2
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "financial_targets",
+   "description": "2031年3月期目標（売上高135,000百万円、事業利益13,500百万円・同率10.0%、経常利益12,400百万円、当期純利益8,060百万円、EBITDA24,400百万円）を確認する。",
+   "expectedEvidencePdfPages": [
+    2
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "capital_allocation",
+   "description": "新規投資概算額575億円とその内訳を確認する。",
+   "expectedEvidencePdfPages": [
+    2
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "shareholder_return",
+   "description": "総還元性向35〜40%下限と自己資本比率40%以上維持の方針を確認する。",
+   "expectedEvidencePdfPages": [
+    2
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "nonfinancial_targets",
+   "description": "非財務の重点施策の有無を確認する。",
+   "expectedEvidencePdfPages": [
+    2
+   ],
+   "status": "pending"
+  }
+ ],
+ "review": {
+  "minimumDistinctReviewers": 2,
+  "primaryReviewerMustNotSelfApprove": true,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "completedAt": null,
+  "reviewer": null
+ }
+}

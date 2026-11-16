@@ -1,0 +1,82 @@
+{
+ "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+ "company": {
+  "code": "9107",
+  "name": "川崎汽船"
+ },
+ "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9107-primary-review-v1.json",
+ "source": {
+  "title": "中期経営計画（2027-2031年度）",
+  "officialLandingPage": "https://www.kline.co.jp/ja/ir/management/strategy.html",
+  "officialUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2026_2_medium-term%20management%20plan_j.pdf",
+  "pdfSha256": "80d4e1592724f7e68faa33bd78e20706fe3a6534d6b55250778f4cc9707bb713",
+  "pageCount": 32
+ },
+ "status": "independent_review_ready",
+ "reviewContext": "後継計画への出典差し替え（Issue #288 / PR-04）に伴う独立再確認のパケット（課題定義）。独立レビュアー（ChatGPT）が公式PDFを実際に開いて6項目を再確認する（2026-11-16、チャット「独立再確認 PR-04」）。判定結果は対応する独立レビュー完了記録（independent-completions v2）に記録され、本パケットのチェックは課題定義として pending のまま保持される。",
+ "checks": [
+  {
+   "id": "source_identity",
+   "description": "表紙の会社名・計画名・対象期間・公表日（2026年11月4日）と、一次レビューの記録（URL・SHA-256・32ページ）の一致を独立に確認する。",
+   "expectedEvidencePdfPages": [
+    1
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "current_plan_boundary",
+   "description": "本資料が2027-2031年度の現行の正式な中期経営計画資料であり、従来計画と区別されることを確認する。",
+   "expectedEvidencePdfPages": [
+    8,
+    9,
+    10
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "financial_targets",
+   "description": "2031年度目標（ROE15%以上、当期純利益2,100億円+α、ROIC7.5%以上）の年度・単位・範囲を確認する。",
+   "expectedEvidencePdfPages": [
+    13
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "capital_allocation",
+   "description": "投資規模12,500億円（オフバランス含む）の定義と、定義の異なる投資関連指標との区別を確認する。",
+   "expectedEvidencePdfPages": [
+    13,
+    22,
+    23
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "shareholder_return",
+   "description": "株主還元総額7,000〜8,000億円（継続配当と機動的還元の内訳）を確認する。",
+   "expectedEvidencePdfPages": [
+    22,
+    24
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "nonfinancial_targets",
+   "description": "非財務の重点施策の有無と内容を確認する。",
+   "expectedEvidencePdfPages": [
+    6,
+    7,
+    15
+   ],
+   "status": "pending"
+  }
+ ],
+ "review": {
+  "minimumDistinctReviewers": 2,
+  "primaryReviewerMustNotSelfApprove": true,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "completedAt": null,
+  "reviewer": null
+ }
+}

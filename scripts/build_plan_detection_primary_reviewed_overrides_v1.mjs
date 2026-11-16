@@ -104,6 +104,9 @@ function extractEndDates(value) {
   const dates = [];
   for (const rawText of flattenStrings(value)) {
     const text = String(focusPeriodText(rawText) || rawText);
+    for (const match of text.matchAll(/\b(20\d{2})-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])\b/g)) {
+      dates.push({ date: match[0], basis: match[0], precision: 'explicit_date' });
+    }
     for (const match of text.matchAll(/\bFY\s*(20\d{2}|[2-9]\d)[./-](1[0-2]|0?[1-9])\b/gi)) {
       const raw = Number(match[1]);
       const year = raw < 100 ? 2000 + raw : raw;
@@ -145,7 +148,8 @@ function derivePlanEnd(primary) {
       .map(([, value]) => value);
     const genericEnds = entries
       .filter(([key]) =>
-        /^(?:endFiscalYear|terminalFiscalYear|endYear|terminalYear|targetClosingFiscalYear)$/i.test(key)
+        (/^(?:endFiscalYear|terminalFiscalYear|endYear|terminalYear|targetClosingFiscalYear)$/i.test(key)
+          || /^explicitPlanEndDate$/i.test(key))
         && !/(?:long|tenYear|vision|phase2)/i.test(key)
       )
       .map(([, value]) => value);
@@ -184,6 +188,11 @@ function derivePlanEnd(primary) {
       });
     }
   }
+
+  // An explicit end date stated in the document (precision 'explicit_date')
+  // takes precedence over every derived candidate (derivation priority 1).
+  const explicitDates = candidates.filter(c => c.precision === 'explicit_date');
+  if (explicitDates.length) candidates = explicitDates;
 
   candidates.sort((a, b) => a.date.localeCompare(b.date));
   return {

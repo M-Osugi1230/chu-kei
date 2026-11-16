@@ -1,6 +1,6 @@
 {
   "version": "plan-detection-primary-reviewed-overrides-v1",
-  "generatedAt": "2026-11-16T09:14:31.577Z",
+  "generatedAt": "2026-11-16T09:35:14.184Z",
   "referenceDate": "2026-11-16",
   "sourceReviewDirectories": [
     "operations/quality-rebase/phase1/reviews",
@@ -22,13 +22,13 @@
     "unresolvedEvidenceRemainsNotChecked": true
   },
   "counts": {
-    "reviewFilesScanned": 560,
-    "uniqueEligiblePrimaryReviewedCompanies": 325,
+    "reviewFilesScanned": 562,
+    "uniqueEligiblePrimaryReviewedCompanies": 328,
     "supersededByIndependentSeed": 60,
-    "primaryOverrides": 265,
-    "current": 264,
-    "expired": 1,
-    "rejectedReviewFiles": 234
+    "primaryOverrides": 268,
+    "current": 268,
+    "expired": 0,
+    "rejectedReviewFiles": 233
   },
   "overrides": [
     {
@@ -360,24 +360,24 @@
       "name": "タスキホールディングス",
       "status": "current",
       "review": {
-        "checkedAt": "2026-08-23",
-        "sourceUrl": "https://www2.jpx.co.jp/disc/166A0/140120251226527334.pdf",
-        "sourceTitle": "事業計画及び成長可能性に関する事項",
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://www.release.tdnet.info/inbs/140120261110571715.pdf",
+        "sourceTitle": "長期ビジョン・第2次中期経営計画",
         "sourceType": "first_party_primary_reviewed",
         "method": "quality_rebase_primary_review_l1_seed_v1",
-        "note": "primary human review confirmed formal plan; plan end 2027-09-30 derived from FY2027.9"
+        "note": "primary human review confirmed formal plan; plan end 2030-09-30 derived from 2030年9月期"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
         "classification": null,
-        "period": "FY2025.9～FY2027.9（中期経営計画）／FY2033.9（長期ビジョンBEYOND 2033）",
-        "planEndDate": "2027-09-30",
-        "planEndBasis": "FY2027.9",
-        "planEndPrecision": "fy_month_end",
+        "period": "2027年9月期～2030年9月期",
+        "planEndDate": "2030-09-30",
+        "planEndBasis": "2030年9月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/166A-primary-review-v1.json",
-        "publishedDate": "2025-12-26",
+        "publishedDate": "2026-11-10",
         "supersededByIndependentSeed": false
       }
     },
@@ -5071,6 +5071,32 @@
       }
     },
     {
+      "code": "6196",
+      "name": "ストライクグループ",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://tdnet-pdf.kabutan.jp/20261030/140120261030560443.pdf",
+        "sourceTitle": "2026年9月期 通期決算説明資料（中期経営計画を含む）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-09-30 derived from 2029年9月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2027年9月期～2029年9月期",
+        "planEndDate": "2029-09-30",
+        "planEndBasis": "2029年9月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/6196-primary-review-v1.json",
+        "publishedDate": "2026-10-30",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "6222",
       "name": "島精機製作所",
       "status": "current",
@@ -5183,6 +5209,37 @@
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6250-primary-review-v1.json",
         "publishedDate": "2026-02-25",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "6291",
+      "name": "日本エアーテック",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/62910/140120260812518187.pdf",
+        "sourceTitle": "中期経営計画（2027年〜2031年）（中期経営計画策定に関するお知らせ）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-12-31 derived from 2031年12月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_management_plan",
+        "period": {
+          "startFiscalYear": "2027年12月期",
+          "endFiscalYear": "2031年12月期",
+          "terminalFiscalYear": "2031年12月期",
+          "statement": "新中期経営計画の期間は2027年から2031年（12月決算）。前回中計（2024年〜2028年）は本計画に更新された。"
+        },
+        "planEndDate": "2031-12-31",
+        "planEndBasis": "2031年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6291-primary-review-v1.json",
+        "publishedDate": "2026-08-12",
         "supersededByIndependentSeed": false
       }
     },
@@ -7512,26 +7569,57 @@
     {
       "code": "9699",
       "name": "ニシオホールディングス",
-      "status": "expired",
+      "status": "current",
       "review": {
-        "checkedAt": "2026-08-23",
-        "sourceUrl": "https://nishio-grp.co.jp/nishio-group/management_plan/",
-        "sourceTitle": "中期経営計画 Next Stage 2026",
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://nishio-grp.co.jp/wordpress/wp-content/uploads/2026/11/20261110-2.pdf",
+        "sourceTitle": "中期経営計画（2027年9月期～2029年9月期）「N-Vision 2029」",
         "sourceType": "first_party_primary_reviewed",
         "method": "quality_rebase_primary_review_l1_seed_v1",
-        "note": "primary human review confirmed formal plan; plan end 2026-09-30 derived from 2026年9月期"
+        "note": "primary human review confirmed formal plan; plan end 2029-09-30 derived from 2029年9月期"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
         "classification": null,
-        "period": "2024年9月期～2026年9月期",
-        "planEndDate": "2026-09-30",
-        "planEndBasis": "2026年9月期",
+        "period": "2027年9月期～2029年9月期",
+        "planEndDate": "2029-09-30",
+        "planEndBasis": "2029年9月期",
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/9699-primary-review-v1.json",
-        "publishedDate": null,
+        "publishedDate": "2026-11-10",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "9708",
+      "name": "帝国ホテル",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://www.imperialhotel.co.jp/sites/default/files/file/2023-12/5a5ee36de54a98603aaf0e7436c3d51f.pdf",
+        "sourceTitle": "中長期経営計画（2026年度改訂版）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-03-31 derived from 2030年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_management_plan",
+        "period": {
+          "startFiscalYear": "2026年度",
+          "endFiscalYear": "2030年度",
+          "terminalFiscalYear": "2030年度",
+          "statement": "改訂版の重点期間は2026年度から2030年度（2031年度以降も対象とする中長期計画の改訂版）。"
+        },
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2030年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9708-primary-review-v1.json",
+        "publishedDate": "2026-05-14",
         "supersededByIndependentSeed": false
       }
     }
@@ -8598,15 +8686,6 @@
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
         "formalPlanConfirmed"
-      ]
-    },
-    {
-      "code": "6196",
-      "name": "ストライクグループ",
-      "file": "operations/quality-rebase/phase2/primary-reviews/6196-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "evidenceLinked"
       ]
     },
     {

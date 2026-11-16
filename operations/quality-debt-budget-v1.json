@@ -1,61 +1,61 @@
 {
-  "schemaVersion": "quality-debt-budget-v1",
-  "recordedAt": "2026-08-01",
-  "policy": {
-    "asOfDate": "2026-08-01",
-    "staleAfterDays": {
-      "core": 90,
-      "detailed_extracted": 180,
-      "source_indexed": 365,
-      "jpx_indexed": 365
-    }
-  },
-  "maximumCounts": {
-    "core.missingPageEvidence": 14,
-    "core.missingPublicationDate": 1,
-    "detailed.missingPageEvidence": 2,
-    "core.missingMetricExtraction": 0,
-    "core.missingProgressConnection": 0,
-    "core.placeholderSummary": 0,
-    "core.noEvidenceRefs": 0,
-    "core.missingOfficialSource": 0,
-    "core.missingDocumentLabel": 0,
-    "core.staleVerification": 0,
-    "detailed.missingPublicationDate": 0,
-    "detailed.missingMetricExtraction": 0,
-    "detailed.placeholderSummary": 0,
-    "detailed.noEvidenceRefs": 0,
-    "detailed_extracted.missingOfficialSource": 0,
-    "detailed_extracted.missingDocumentLabel": 0,
-    "detailed_extracted.staleVerification": 0,
-    "source_indexed.missingOfficialSource": 0,
-    "source_indexed.missingDocumentLabel": 0,
-    "source_indexed.staleVerification": 0,
-    "sourceIndexed.unexpectedAnalysis": 0,
-    "jpx_indexed.staleVerification": 0,
-    "coverage.unexpectedAnalysis": 0,
-    "coverage.invalidJpxSource": 0,
-    "coverage.unexpectedPublicationDate": 0,
-    "invalidLastVerifiedDate": 0,
-    "futureLastVerifiedDate": 0,
-    "invalidPlanPublishedDate": 0,
-    "futurePlanPublishedDate": 0,
-    "publicationAfterVerification": 0,
-    "emptyEvidenceRef": 0,
-    "duplicateEvidenceRef": 0,
-    "duplicateSourceUrlGroup": 0,
-    "duplicateStructuredSummaryGroup": 0,
-    "deepVerification.notApproved": 3000
-  },
-  "minimumCounts": {
-    "structured.reviewableCompanies": 305
-  },
-  "rules": {
-    "regressionPolicy": "actual count must be less than or equal to maximum count for every debt dimension",
-    "coverageRegressionPolicy": "core plus detailed_extracted companies must remain greater than or equal to the configured structured reviewable-company minimum",
-    "improvementPolicy": "when actual debt count falls below maximum, lower the maximum in the same or next quality PR",
-    "automaticFactCompletion": false,
-    "automaticPromotion": false,
-    "deepVerificationPolicy": "未承認件数はPhase 0基準値3,000社から単調減少させ、承認済み企業を自動で増やさない"
+ "schemaVersion": "quality-debt-budget-v1",
+ "recordedAt": "2026-11-16",
+ "policy": {
+  "asOfDate": "2026-11-16",
+  "staleAfterDays": {
+   "core": 90,
+   "detailed_extracted": 180,
+   "source_indexed": 365,
+   "jpx_indexed": 365
   }
+ },
+ "maximumCounts": {
+  "core.missingPageEvidence": 14,
+  "core.missingPublicationDate": 1,
+  "detailed.missingPageEvidence": 2,
+  "core.missingMetricExtraction": 0,
+  "core.missingProgressConnection": 0,
+  "core.placeholderSummary": 0,
+  "core.noEvidenceRefs": 0,
+  "core.missingOfficialSource": 0,
+  "core.missingDocumentLabel": 0,
+  "core.staleVerification": 0,
+  "detailed.missingPublicationDate": 0,
+  "detailed.missingMetricExtraction": 0,
+  "detailed.placeholderSummary": 0,
+  "detailed.noEvidenceRefs": 0,
+  "detailed_extracted.missingOfficialSource": 0,
+  "detailed_extracted.missingDocumentLabel": 0,
+  "detailed_extracted.staleVerification": 0,
+  "source_indexed.missingOfficialSource": 0,
+  "source_indexed.missingDocumentLabel": 0,
+  "source_indexed.staleVerification": 0,
+  "sourceIndexed.unexpectedAnalysis": 0,
+  "jpx_indexed.staleVerification": 0,
+  "coverage.unexpectedAnalysis": 0,
+  "coverage.invalidJpxSource": 0,
+  "coverage.unexpectedPublicationDate": 0,
+  "invalidLastVerifiedDate": 0,
+  "futureLastVerifiedDate": 0,
+  "invalidPlanPublishedDate": 0,
+  "futurePlanPublishedDate": 0,
+  "publicationAfterVerification": 0,
+  "emptyEvidenceRef": 0,
+  "duplicateEvidenceRef": 0,
+  "duplicateSourceUrlGroup": 0,
+  "duplicateStructuredSummaryGroup": 0,
+  "deepVerification.notApproved": 3000
+ },
+ "minimumCounts": {
+  "structured.reviewableCompanies": 305
+ },
+ "rules": {
+  "regressionPolicy": "actual count must be less than or equal to maximum count for every debt dimension",
+  "coverageRegressionPolicy": "core plus detailed_extracted companies must remain greater than or equal to the configured structured reviewable-company minimum",
+  "improvementPolicy": "when actual debt count falls below maximum, lower the maximum in the same or next quality PR",
+  "automaticFactCompletion": false,
+  "automaticPromotion": false,
+  "deepVerificationPolicy": "未承認件数はPhase 0基準値3,000社から単調減少させ、承認済み企業を自動で増やさない"
+ }
 }

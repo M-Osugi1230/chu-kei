@@ -1,0 +1,103 @@
+{
+ "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+ "company": {
+  "code": "9107",
+  "name": "川崎汽船"
+ },
+ "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9107-primary-review-v1.json",
+ "independentReviewPacket": null,
+ "source": {
+  "title": "中期経営計画（2027-2031年度）",
+  "officialUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2026_2_medium-term%20management%20plan_j.pdf",
+  "pdfSha256": "80d4e1592724f7e68faa33bd78e20706fe3a6534d6b55250778f4cc9707bb713",
+  "pageCount": 32
+ },
+ "status": "independent_review_complete",
+ "checks": [
+  {
+   "id": "source_identity",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    1
+   ],
+   "result": "表紙に川崎汽船・中期経営計画・2027-2031年度・2026年11月4日を確認し、一次レビューの記録と一致（独立レビュアー確認）。"
+  },
+  {
+   "id": "current_plan_boundary",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    8,
+    9,
+    10
+   ],
+   "result": "2027-2031年度の正式な中期経営計画資料であり、従来計画（2026年度まで）と区別されていることを確認。"
+  },
+  {
+   "id": "financial_targets",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    13
+   ],
+   "result": "全社KPI表で2031年度目標（ROE15%以上、当期純利益2,100億円+α＝自営1,200億円+α＋コンテナ船900億円、ROIC7.5%以上）を原資料で再確認した。"
+  },
+  {
+   "id": "capital_allocation",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    13,
+    22,
+    23
+   ],
+   "result": "投資規模12,500億円（オフバランス含む）を確認。戦略投資枠2,500億円等の定義の異なる投資関連指標と区別した。"
+  },
+  {
+   "id": "shareholder_return",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    22,
+    24
+   ],
+   "result": "株主還元総額7,000〜8,000億円（継続配当 累計3,500億円程度＋機動的還元3,500〜4,500億円）を確認。"
+  },
+  {
+   "id": "nonfinancial_targets",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    6,
+    7,
+    15
+   ],
+   "result": "環境対応、データ・AI活用、液化CO2輸送・洋上風力・水素関連事業への展開等の非財務施策を確認（定量目標は本資料の確認範囲では未確認）。"
+  }
+ ],
+ "crossChecks": {
+  "collectionIntegrity": {
+   "file": null,
+   "sourceUrlMatched": true,
+   "pdfSha256Matched": true,
+   "pageCountMatched": true,
+   "note": "後継文書は一括収集バッチ未収録のため、一次レビュアーが公式URLから取得したPDF（SHA-256・ページ数をローカルで算出）と独立レビュアーの閲覧が一致することをもって整合確認とした。"
+  },
+  "visualReview": {
+   "financialTargetsConfirmed": true,
+   "investmentAllocationConfirmed": true,
+   "shareholderReturnConfirmed": true,
+   "note": "独立レビュアーが公式PDFのKPI表・資本政策・株主還元方針を閲覧確認し、一次レビュアーのローカル全文照合と一致した。"
+  }
+ },
+ "finalDeepVerificationBlockers": [],
+ "review": {
+  "minimumDistinctReviewers": 2,
+  "reviewRole": "independent_reviewer",
+  "primaryReviewerMustNotSelfApprove": true,
+  "completedAt": "2026-11-16T18:47:00+09:00",
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "result": "confirmed",
+  "reviewers": [
+   "ChatGPT (independent recheck, 2026-11-16, chat「独立再確認 PR-04」)",
+   "Muse (primary reviewer; local PDF fetch, SHA-256 and headline-target verification)"
+  ],
+  "note": "本レコードは後継計画への出典差し替えに伴う新規の独立レビュー完了記録であり、旧計画に対する v1 の完了記録は監査履歴として保持される（append-only）。"
+ }
+}

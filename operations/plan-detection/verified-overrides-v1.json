@@ -1,6 +1,6 @@
 {
   "version": "plan-detection-verified-overrides-v1",
-  "generatedAt": "2026-11-16T09:35:13.309Z",
+  "generatedAt": "2026-11-16T09:49:41.646Z",
   "referenceDate": "2026-11-16",
   "sourceStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
   "policy": {
@@ -13,9 +13,9 @@
     "deepVerificationApprovalNotRequiredForL1PlanExistenceClassification": true
   },
   "counts": {
-    "independentReviewComplete": 61,
-    "verifiedOverrides": 61,
-    "current": 61,
+    "independentReviewComplete": 64,
+    "verifiedOverrides": 64,
+    "current": 64,
     "expired": 0,
     "noFormalPlan": 0,
     "unresolved": 0
@@ -117,28 +117,58 @@
       "status": "current",
       "review": {
         "checkedAt": "2026-08-08",
-        "sourceUrl": "https://www.ut-g.co.jp/hubfs/ir/library/plan/UTG_rollingplan_2026_ja.pdf",
-        "sourceTitle": "第4次中期経営計画ローリングプラン（2026年5月更新）",
+        "sourceUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/05/release_20260514_04.pdf",
+        "sourceTitle": "2026年3月期 通期決算説明資料（第5次中期経営計画を含む）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2030-03-31 derived from 2030年3月期"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
         "formalPlanConfirmed": true,
-        "classification": "official_formal_management_plan_annual_rolling_update",
+        "classification": "earnings_presentation_containing_current_plan",
         "period": {
-          "startFiscalYear": "2024年3月期",
-          "endFiscalYear": "2030年3月期",
-          "currentRollingHorizon": "2027年3月期",
-          "baselineFiscalYear": "2026年3月期実績"
+          "startFiscalYear": "2026年3月期",
+          "endFiscalYear": "2029年3月期",
+          "terminalFiscalYear": "2029年3月期",
+          "statement": "第5次中期経営計画の期間は2026年3月期から2029年3月期。2025年11月に見直しが公表されており、本資料は見直し後の目標を現行目標として提示している。"
         },
-        "planEndDate": "2030-03-31",
-        "planEndBasis": "2030年3月期",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/2146-independent-completion-v1.json",
         "independentReviewResult": "confirmed_after_fifth_plan_source_repair_and_full_visual_sequence_recheck"
+      }
+    },
+    {
+      "code": "2146",
+      "name": "UTグループ",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/05/release_20260514_04.pdf",
+        "sourceTitle": "2026年3月期 通期決算説明資料（第5次中期経営計画を含む）",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "formalPlanConfirmed": true,
+        "classification": "earnings_presentation_containing_current_plan",
+        "period": {
+          "startFiscalYear": "2026年3月期",
+          "endFiscalYear": "2029年3月期",
+          "terminalFiscalYear": "2029年3月期",
+          "statement": "第5次中期経営計画の期間は2026年3月期から2029年3月期。2025年11月に見直しが公表されており、本資料は見直し後の目標を現行目標として提示している。"
+        },
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/2146-independent-completion-v2.json",
+        "independentReviewResult": "confirmed_with_reservations"
       }
     },
     {
@@ -1697,26 +1727,57 @@
       "status": "current",
       "review": {
         "checkedAt": "2026-08-08",
-        "sourceUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2022_medium-term%20management%20plan_j.pdf",
-        "sourceTitle": "2022年度 中期経営計画",
+        "sourceUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2026_2_medium-term%20management%20plan_j.pdf",
+        "sourceTitle": "中期経営計画（2027-2031年度）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
+        "note": "independent review confirmed formal plan; plan end 2032-03-31 derived from 2031年度"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
         "formalPlanConfirmed": true,
-        "classification": "formal_management_plan_current_through_fy2026_next_plan_not_yet_published",
+        "classification": "formal_management_plan",
         "period": {
-          "startFiscalYear": "2022年度",
-          "endFiscalYear": "2026年度",
-          "statement": "5か年計画。2026年度が現行計画の最終年度であり、次期中計は2026年度中の公表予定と公式説明されているため、現時点では本資料を現行基準計画として扱う。"
+          "startFiscalYear": "2027年度",
+          "endFiscalYear": "2031年度",
+          "terminalFiscalYear": "2031年度",
+          "statement": "5か年計画。2031年度が最終年度。"
         },
-        "planEndDate": "2027-03-31",
-        "planEndBasis": "2026年度",
+        "planEndDate": "2032-03-31",
+        "planEndBasis": "2031年度",
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9107-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9107-independent-completion-v1.json",
+        "independentReviewResult": "confirmed"
+      }
+    },
+    {
+      "code": "9107",
+      "name": "川崎汽船",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2026_2_medium-term%20management%20plan_j.pdf",
+        "sourceTitle": "中期経営計画（2027-2031年度）",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2032-03-31 derived from 2031年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "formalPlanConfirmed": true,
+        "classification": "formal_management_plan",
+        "period": {
+          "startFiscalYear": "2027年度",
+          "endFiscalYear": "2031年度",
+          "terminalFiscalYear": "2031年度",
+          "statement": "5か年計画。2031年度が最終年度。"
+        },
+        "planEndDate": "2032-03-31",
+        "planEndBasis": "2031年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9107-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9107-independent-completion-v2.json",
         "independentReviewResult": "confirmed"
       }
     },
@@ -1726,26 +1787,57 @@
       "status": "current",
       "review": {
         "checkedAt": "2026-08-07",
-        "sourceUrl": "https://tre-hd.co.jp/download/assets/uploads/trehd_mtbp.pdf",
-        "sourceTitle": "TREホールディングス 第2次中期経営計画（2024年度〜2028年度）",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/92470/140120260515537503.pdf",
+        "sourceTitle": "「TRE中期経営計画 2030」策定について",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
         "formalPlanConfirmed": true,
         "classification": "formal_management_plan",
         "period": {
-          "startFiscalYear": "2025年3月期",
-          "endFiscalYear": "2029年3月期",
-          "statement": "資料上の5カ年収益計画は2025年3月期から2029年3月期。公表上の表題は2024年度〜2028年度。"
+          "startFiscalYear": "2027年3月期",
+          "endFiscalYear": "2031年3月期",
+          "terminalFiscalYear": "2031年3月期",
+          "statement": "第3次中期経営計画の業績目標期間は2027年3月期から2031年3月期の5か年。第2次中期経営計画（2024〜2028）は一旦総括された。"
         },
-        "planEndDate": "2029-03-31",
-        "planEndBasis": "2029年3月期",
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2031年3月期",
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
         "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9247-independent-completion-v1.json",
+        "independentReviewResult": "confirmed"
+      }
+    },
+    {
+      "code": "9247",
+      "name": "TREホールディングス",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/92470/140120260515537503.pdf",
+        "sourceTitle": "「TRE中期経営計画 2030」策定について",
+        "sourceType": "first_party_independent_reviewed",
+        "method": "quality_rebase_phase2_independent_completion_v1",
+        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "formalPlanConfirmed": true,
+        "classification": "formal_management_plan",
+        "period": {
+          "startFiscalYear": "2027年3月期",
+          "endFiscalYear": "2031年3月期",
+          "terminalFiscalYear": "2031年3月期",
+          "statement": "第3次中期経営計画の業績目標期間は2027年3月期から2031年3月期の5か年。第2次中期経営計画（2024〜2028）は一旦総括された。"
+        },
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2031年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9247-independent-completion-v2.json",
         "independentReviewResult": "confirmed"
       }
     },

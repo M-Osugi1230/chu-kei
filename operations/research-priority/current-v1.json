@@ -1,8 +1,8 @@
 {
   "version": "chu-kei-research-priority-v1",
-  "generatedAt": "2026-11-16T09:35:14.634Z",
-  "universeGeneratedAt": "2026-11-16T09:35:12.915Z",
-  "sourceBundleSha256": "fb8b41963fba7d93bedc0649e447a28a8341939e80c675b8372fe18d7d1ebe9e",
+  "generatedAt": "2026-11-16T09:49:43.005Z",
+  "universeGeneratedAt": "2026-11-16T09:49:41.303Z",
+  "sourceBundleSha256": "122dd7e50a5a8bae3616936493414e024e3f48854dd1d7fc00cdd66d4fb24476",
   "policy": {
     "productGoal": "企業数の網羅性を維持しながら、企業発見・比較能力を最大化する",
     "priorityOrder": [
@@ -21,9 +21,9 @@
     "planResolved": 432,
     "planPending": 3254,
     "planCandidateHinted": 2538,
-    "currentOrUnstructuredPlan": 427,
-    "comparisonCoreQueued": 391,
-    "noCurrentCoreRequired": 5
+    "currentOrUnstructuredPlan": 426,
+    "comparisonCoreQueued": 390,
+    "noCurrentCoreRequired": 6
   },
   "comparisonCoreDefinition": [
     {
@@ -72455,35 +72455,6 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
-        "code": "2461",
-        "name": "ファンコミュニケーションズ",
-        "market": "Prime",
-        "industry": "サービス業",
-        "planStatus": "current",
-        "priorityBand": "P1",
-        "priorityScore": 503,
-        "comparisonReadiness": 0.9167,
-        "availableFields": [
-          "period",
-          "revenue",
-          "profit",
-          "margin",
-          "capital",
-          "returnPolicy",
-          "strategy",
-          "evidence"
-        ],
-        "missingFields": [
-          {
-            "key": "progress",
-            "label": "最新進捗",
-            "impactWeight": 3
-          }
-        ],
-        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
-      },
-      {
-        "layer": "L2_COMPARISON_CORE",
         "code": "2469",
         "name": "ヒビノ",
         "market": "Standard",
@@ -80906,6 +80877,12 @@
       "name": "学情",
       "status": "expired",
       "checkedAt": "2026-07-20"
+    },
+    {
+      "code": "2461",
+      "name": "ファンコミュニケーションズ",
+      "status": "expired",
+      "checkedAt": "2026-11-16"
     },
     {
       "code": "6005",

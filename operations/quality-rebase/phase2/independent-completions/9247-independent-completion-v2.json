@@ -1,0 +1,97 @@
+{
+ "schemaVersion": "quality-rebase-phase2-independent-completion-v1",
+ "company": {
+  "code": "9247",
+  "name": "TREホールディングス"
+ },
+ "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
+ "independentReviewPacket": "operations/quality-rebase/phase2/independent/9247-independent-review-v2.json",
+ "source": {
+  "title": "「TRE中期経営計画 2030」策定について",
+  "officialUrl": "https://www2.jpx.co.jp/disc/92470/140120260515537503.pdf",
+  "pdfSha256": "22805d16df3f094696eeed197afdb03006506ba8ace3ea9b7352be4dd66c329d",
+  "pageCount": 2
+ },
+ "status": "independent_review_complete",
+ "checks": [
+  {
+   "id": "source_identity",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    1
+   ],
+   "result": "発行体・証券コード・日付（2026年5月15日）・表題が一次レビューの記録と一致（独立レビュアー確認）。"
+  },
+  {
+   "id": "current_plan_boundary",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    1,
+    2
+   ],
+   "result": "2026年5月15日の取締役会で第3次中計として決議・策定され、計画期間2027年3月期～2031年3月期と明記されていることを確認。"
+  },
+  {
+   "id": "financial_targets",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    2
+   ],
+   "result": "2031年3月期目標（売上高135,000百万円、事業利益13,500百万円・同率10.0%、経常利益12,400百万円、当期純利益8,060百万円、EBITDA24,400百万円）を業績目標表で再確認した。"
+  },
+  {
+   "id": "capital_allocation",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    2
+   ],
+   "result": "主要な新規投資計画の投資概算額575億円（環境複合事業485億円、相馬サーキュラーパーク35億円、その他55億円）を確認。"
+  },
+  {
+   "id": "shareholder_return",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    2
+   ],
+   "result": "財務戦略で総還元性向35〜40%を下限とする方針と自己資本比率40%以上維持を確認。"
+  },
+  {
+   "id": "nonfinancial_targets",
+   "status": "confirmed",
+   "evidencePdfPages": [
+    2
+   ],
+   "result": "DX戦略・人的資本経営・産学官連携等の重点施策を確認（定量的な非財務KPIは本開示文書には記載なし）。"
+  }
+ ],
+ "crossChecks": {
+  "collectionIntegrity": {
+   "file": "operations/quality-rebase/phase2/supersession-collections/9247-collection-v1.json",
+   "sourceUrlMatched": true,
+   "pdfSha256Matched": true,
+   "pageCountMatched": true,
+   "note": "後継文書は一括収集バッチ未収録のため、一次レビュアーが公式URLから取得したPDF（SHA-256・ページ数をローカルで算出）と独立レビュアーの閲覧が一致することをもって整合確認とした。"
+  },
+  "visualReview": {
+   "financialTargetsConfirmed": true,
+   "investmentAllocationConfirmed": true,
+   "shareholderReturnConfirmed": true,
+   "note": "独立レビュアーがJPX開示PDF（全2ページ）の目標表・投資概算・財務戦略を閲覧確認し、一次レビュアーのローカル全文照合と一致した。詳細な中計説明資料は別途開示予定の旨が文書末尾に案内されている。"
+  }
+ },
+ "finalDeepVerificationBlockers": [],
+ "review": {
+  "minimumDistinctReviewers": 2,
+  "reviewRole": "independent_reviewer",
+  "primaryReviewerMustNotSelfApprove": true,
+  "completedAt": "2026-11-16T18:47:00+09:00",
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "result": "confirmed",
+  "reviewers": [
+   "ChatGPT (independent recheck, 2026-11-16, chat「独立再確認 PR-04」)",
+   "Muse (primary reviewer; local PDF fetch, SHA-256 and headline-target verification)"
+  ],
+  "note": "本レコードは後継計画への出典差し替えに伴う新規の独立レビュー完了記録であり、旧計画に対する v1 の完了記録は監査履歴として保持される（append-only）。"
+ }
+}

@@ -1,6 +1,6 @@
 {
   "version": "plan-detection-primary-reviewed-overrides-v1",
-  "generatedAt": "2026-11-16T09:35:14.184Z",
+  "generatedAt": "2026-11-16T10:02:58.772Z",
   "referenceDate": "2026-11-16",
   "sourceReviewDirectories": [
     "operations/quality-rebase/phase1/reviews",
@@ -23,12 +23,12 @@
   },
   "counts": {
     "reviewFilesScanned": 562,
-    "uniqueEligiblePrimaryReviewedCompanies": 328,
+    "uniqueEligiblePrimaryReviewedCompanies": 350,
     "supersededByIndependentSeed": 60,
-    "primaryOverrides": 268,
-    "current": 268,
-    "expired": 0,
-    "rejectedReviewFiles": 233
+    "primaryOverrides": 290,
+    "current": 289,
+    "expired": 1,
+    "rejectedReviewFiles": 211
   },
   "overrides": [
     {
@@ -2373,6 +2373,32 @@
       }
     },
     {
+      "code": "2408",
+      "name": "KG情報",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-15",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/24080/140120260126538176.pdf",
+        "sourceTitle": "株式会社KG情報 中期経営計画（2026年度～2028年度）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-12-31 derived from 2028年12月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2025年12月期〜2028年12月期",
+        "planEndDate": "2028-12-31",
+        "planEndBasis": "2028年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2408-wave34-primary-review-v1.json",
+        "publishedDate": "2026-01-26",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "2425",
       "name": "ケアサービス",
       "status": "current",
@@ -2436,14 +2462,14 @@
     {
       "code": "2461",
       "name": "ファンコミュニケーションズ",
-      "status": "current",
+      "status": "expired",
       "review": {
-        "checkedAt": "2026-08-06",
+        "checkedAt": "2026-11-16",
         "sourceUrl": "https://www2.jpx.co.jp/disc/24610/140120260206550877.pdf",
         "sourceTitle": "中期経営計画 FY25-27 一部見直し",
         "sourceType": "first_party_primary_reviewed",
         "method": "quality_rebase_primary_review_l1_seed_v1",
-        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
+        "note": "primary human review confirmed formal plan; plan end 2026-08-31 derived from 2026年8月期"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
@@ -2453,11 +2479,13 @@
         "period": {
           "startFiscalYear": "2025年度",
           "endFiscalYear": "2027年度",
-          "terminalFiscalYear": "2027年度"
+          "terminalFiscalYear": "2027年度",
+          "currentPlanTerminal": "2026年8月期",
+          "terminationNote": "2026-08-10の取締役会決議による中期経営計画の取り下げにより、計画は2026年8月に終了した（当初期間は2025年12月期～2027年12月期）。"
         },
-        "planEndDate": "2028-03-31",
-        "planEndBasis": "2027年度",
-        "planEndPrecision": "fiscal_year",
+        "planEndDate": "2026-08-31",
+        "planEndBasis": "2026年8月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2461-primary-review-v1.json",
         "publishedDate": "2026-02-09",
         "supersededByIndependentSeed": false
@@ -2837,6 +2865,37 @@
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3040-primary-review-v1.json",
         "publishedDate": "2026-03-19",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "3070",
+      "name": "ジェリービーンズグループ",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://ssl4.eir-parts.net/doc/3070/tdnet/2775877/00.pdf",
+        "sourceTitle": "中期経営計画策定の修正及び2027年1月期予算に関するお知らせ／中期経営計画の修正と2027年1月期予算",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-01-31 derived from 2028年1月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "current_formal_medium_term_management_plan_revision",
+        "period": {
+          "startFiscalYear": "2026年1月期",
+          "endFiscalYear": "2028年1月期",
+          "terminalFiscalYear": "2028年1月期",
+          "statement": "中期経営計画「Reframe the Future Project～未来再構築～」（2026年1月期～2028年1月期）。2025-09-11公表の当初計画を2026-03-13の修正お知らせで修正。"
+        },
+        "planEndDate": "2028-01-31",
+        "planEndBasis": "2028年1月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3070-primary-review-v1.json",
+        "publishedDate": "2026-03-13",
         "supersededByIndependentSeed": false
       }
     },
@@ -3328,6 +3387,32 @@
         "planEndPrecision": "fy_label",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3475-primary-review-v1.json",
         "publishedDate": "2025-12-15",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "3490",
+      "name": "アズ企画設計",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/34900/140120260708589852.pdf",
+        "sourceTitle": "新中期経営計画について／新株予約権発行に関する補足資料",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-02-28 derived from 2029年2月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2027年2月期-2029年2月期",
+        "planEndDate": "2029-02-28",
+        "planEndBasis": "2029年2月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/3490-primary-review-v1.json",
+        "publishedDate": "2026-07-08",
         "supersededByIndependentSeed": false
       }
     },
@@ -4810,6 +4895,32 @@
       }
     },
     {
+      "code": "5210",
+      "name": "日本山村硝子",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/52100/140120260608565790.pdf",
+        "sourceTitle": "2026年3月期 決算・新中期経営計画説明会",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2027年3月期-2029年3月期",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/5210-primary-review-v1.json",
+        "publishedDate": "2026-06-09",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "5233",
       "name": "太平洋セメント",
       "status": "current",
@@ -5562,6 +5673,32 @@
       }
     },
     {
+      "code": "6493",
+      "name": "NITTAN",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS05830/2034a7ff/3929/4d10/b01d/e987830b9b6f/20260615165351994s.pdf",
+        "sourceTitle": "2026年3月期決算および新中期経営計画説明会",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2027年3月期-2029年3月期",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/6493-primary-review-v1.json",
+        "publishedDate": "2026-06-09",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "6497",
       "name": "ハマイ",
       "status": "current",
@@ -5644,6 +5781,32 @@
       }
     },
     {
+      "code": "6506",
+      "name": "安川電機",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www.yaskawa.co.jp/wp-content/uploads/2026/05/Dash35.pdf",
+        "sourceTitle": "中期経営計画 Dash 35",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2030-03-31 derived from 2029年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2026年度-2029年度",
+        "planEndDate": "2030-03-31",
+        "planEndBasis": "2029年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/6506-primary-review-v1.json",
+        "publishedDate": "2026-05-22",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "6523",
       "name": "PHCホールディングス",
       "status": "current",
@@ -5666,6 +5829,37 @@
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/6523-primary-review-v1.json",
         "publishedDate": "2024-11-13",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "6544",
+      "name": "ジャパンエレベーターサービスホールディングス",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-11",
+        "sourceUrl": "https://www.jes24.co.jp/ja/ir/strategy/main/03/teaserItems1/01/linkList/0/link/Vision2027_from2022_jp.pdf",
+        "sourceTitle": "中期経営計画 -VISION2027-",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2027年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "current_formal_management_plan",
+        "period": {
+          "startFiscalYear": "2023年3月期",
+          "endFiscalYear": "2027年3月期",
+          "terminalFiscalYear": "2027年3月期",
+          "statement": "中期経営計画 VISION2027（2023年3月期～2027年3月期）。登録レビューおよび#288再確認（verified_unchanged）で確認。"
+        },
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2027年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6544-primary-review-v1.json",
+        "publishedDate": "2022-05-18",
         "supersededByIndependentSeed": false
       }
     },
@@ -5696,6 +5890,32 @@
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6561-primary-review-v1.json",
         "publishedDate": "2026-02-20",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "6594",
+      "name": "ニデック",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-23",
+        "sourceUrl": "https://www.nidec.com/files/user/www-nidec-com/ir/library/earnings/2025/FY24Q4_1_jp_rev.pdf",
+        "sourceTitle": "中期経営計画 Conversion 2027",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from FY2027"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "FY2025～FY2027を中心とするConversion 2027",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "FY2027",
+        "planEndPrecision": "fy_label",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/6594-primary-review-v1.json",
+        "publishedDate": null,
         "supersededByIndependentSeed": false
       }
     },
@@ -6021,6 +6241,32 @@
       }
     },
     {
+      "code": "6976",
+      "name": "太陽誘電",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www.yuden.co.jp/jp/ir/library/fr_presentation.html",
+        "sourceTitle": "中期経営計画2030",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-03-31 derived from 2030年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2026年度-2030年度",
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2030年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/6976-primary-review-v1.json",
+        "publishedDate": "2026-05-08",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "7033",
       "name": "マネジメントソリューションズ",
       "status": "current",
@@ -6049,6 +6295,32 @@
         "planEndPrecision": "classification_year_fallback",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7033-primary-review-v1.json",
         "publishedDate": "2026-02-16",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "7181",
+      "name": "かんぽ生命保険",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-23",
+        "sourceUrl": "https://www.jp-life.japanpost.jp/information/assets/pdf/2026/0515pr-4-01.pdf",
+        "sourceTitle": "かんぽ生命保険 中期経営計画（2026年度～2028年度）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2026年度～2028年度（3年間）",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/7181-primary-review-v1.json",
+        "publishedDate": "2026-05-15",
         "supersededByIndependentSeed": false
       }
     },
@@ -6203,6 +6475,32 @@
       }
     },
     {
+      "code": "7305",
+      "name": "新家工業",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/73050/140120260513529341.pdf",
+        "sourceTitle": "中期経営計画2026 2025年度進捗報告および資本コストや株価を意識した経営の実現に向けた対応について",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "midterm_plan_progress_report_with_capital_cost_update",
+        "period": "2024年度-2026年度",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2026年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7305-primary-review-v1.json",
+        "publishedDate": "2026-05-13",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "7314",
       "name": "小田原機器",
       "status": "current",
@@ -6229,6 +6527,58 @@
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7314-primary-review-v1.json",
         "publishedDate": "2026-02-20",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "7343",
+      "name": "ブロードマインド",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/73430/140120260623577064.pdf",
+        "sourceTitle": "事業計画及び成長可能性に関する説明資料",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2030-03-31 derived from 2030年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "growth_potential_disclosure_with_multi_year_financial_targets",
+        "period": "2027年3月期-2030年3月期財務目標",
+        "planEndDate": "2030-03-31",
+        "planEndBasis": "2030年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7343-primary-review-v1.json",
+        "publishedDate": "2026-06-30",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "7345",
+      "name": "アイ・パートナーズフィナンシャル",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/73450/140120260515536422.pdf",
+        "sourceTitle": "事業計画及び成長可能性に関する事項",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "growth_potential_disclosure_with_rolling_three_year_targets",
+        "period": "2029年3月期までの3年後経営目標",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7345-primary-review-v1.json",
+        "publishedDate": "2026-05-15",
         "supersededByIndependentSeed": false
       }
     },
@@ -6465,6 +6815,32 @@
       }
     },
     {
+      "code": "7771",
+      "name": "日本精密",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www.nihon-s.co.jp/wp-content/uploads/2026/06/20260629_%E4%B8%AD%E6%9C%9F%E7%B5%8C%E5%96%B6%E8%A8%88%E7%94%BB%E3%80%8CASEAN-Project%E2%85%A2%E3%80%8D%E3%81%AE%E7%AD%96%E5%AE%9A%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B-002.pdf",
+        "sourceTitle": "中期経営計画 ASEAN Project III",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2027年3月期-2031年3月期",
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2031年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7771-primary-review-v1.json",
+        "publishedDate": "2026-06-29",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "7811",
       "name": "中本パックス",
       "status": "current",
@@ -6521,6 +6897,32 @@
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/7871-primary-review-v1.json",
         "publishedDate": "2026-05-15",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "7957",
+      "name": "フジコピアン",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/79570/140120260305576489.pdf",
+        "sourceTitle": "中期経営計画（2026～2030）FCX80 ～守る／変える～",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2030-12-31 derived from 2030年12月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2026年12月期-2030年12月期",
+        "planEndDate": "2030-12-31",
+        "planEndBasis": "2030年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7957-primary-review-v1.json",
+        "publishedDate": "2026-03-05",
         "supersededByIndependentSeed": false
       }
     },
@@ -7024,6 +7426,39 @@
       }
     },
     {
+      "code": "8386",
+      "name": "百十四銀行",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-07",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/83860/140120260330593288.pdf",
+        "sourceTitle": "新中期経営計画の策定について／だから、挑む。－地域の未来を、たしかなカタチに－",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_management_plan_current_fy2026_to_fy2028_with_long_term_vision2030_and_bank_capital_allocation",
+        "period": {
+          "start": "2026年4月1日",
+          "end": "2029年3月31日",
+          "fiscalYears": "2026年度～2028年度",
+          "duration": "3カ年",
+          "endFiscalYear": "2028年度",
+          "terminalFiscalYear": "2028年度"
+        },
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8386-primary-review-v1.json",
+        "publishedDate": "2026-04-01",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "8393",
       "name": "宮崎銀行",
       "status": "current",
@@ -7252,6 +7687,32 @@
       }
     },
     {
+      "code": "9049",
+      "name": "京福電気鉄道",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/90490/140120260601556727.pdf",
+        "sourceTitle": "京福グループ中期経営計画2028",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2026年度-2028年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9049-primary-review-v1.json",
+        "publishedDate": "2026-06-01",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "9072",
       "name": "ニッコンホールディングス",
       "status": "current",
@@ -7282,6 +7743,32 @@
       }
     },
     {
+      "code": "9073",
+      "name": "京極運輸商事",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/90730/140120260518539970.pdf",
+        "sourceTitle": "第3次中期経営計画",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2026年度-2028年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9073-primary-review-v1.json",
+        "publishedDate": "2026-05-18",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "9142",
       "name": "九州旅客鉄道",
       "status": "current",
@@ -7308,6 +7795,58 @@
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9142-primary-review-v1.json",
         "publishedDate": "2026-05-11",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "9204",
+      "name": "スカイマーク",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/92040/140120260611568685.pdf",
+        "sourceTitle": "事業計画及び成長可能性に関する資料",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-03-31 derived from FY2030"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "growth_potential_disclosure_with_updated_midterm_targets",
+        "period": "FY2026-FY2030",
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "FY2030",
+        "planEndPrecision": "fy_label",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9204-primary-review-v1.json",
+        "publishedDate": "2026-06-18",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "9252",
+      "name": "ラストワンマイル",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/92520/140120251126509183.pdf",
+        "sourceTitle": "中期経営計画（事業計画及び成長可能性に関する説明資料）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-08-31 derived from 2027年8月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2026年8月期-2027年8月期",
+        "planEndDate": "2027-08-31",
+        "planEndBasis": "2027年8月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9252-primary-review-v1.json",
+        "publishedDate": "2025-11-26",
         "supersededByIndependentSeed": false
       }
     },
@@ -7365,6 +7904,58 @@
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/9336-primary-review-v1.json",
         "publishedDate": "2026-05-14",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "9366",
+      "name": "サンリツ",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/93660/140120260514532100.pdf",
+        "sourceTitle": "新中期経営計画",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2027年3月期-2029年3月期",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9366-primary-review-v1.json",
+        "publishedDate": "2026-05-14",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "9367",
+      "name": "大東港運",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-08-01",
+        "sourceUrl": "https://www.daito-koun.co.jp/ir_cms/upload_file/tdnrelease/9367_20260513528865_P01_.pdf",
+        "sourceTitle": "大東港運グループ 第9次中期経営計画 Stronger Together ～ともに、強くなろう～",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": null,
+        "period": "2026年度-2028年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9367-primary-review-v1.json",
+        "publishedDate": "2026-05-13",
         "supersededByIndependentSeed": false
       }
     },
@@ -7789,16 +8380,6 @@
       ]
     },
     {
-      "code": "3490",
-      "name": "アズ企画設計",
-      "file": "operations/quality-rebase/phase1/reviews/3490-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
       "code": "3598",
       "name": "山喜",
       "file": "operations/quality-rebase/phase1/reviews/3598-primary-review-v1.json",
@@ -7842,16 +8423,6 @@
       "code": "4568",
       "name": "第一三共",
       "file": "operations/quality-rebase/phase1/reviews/4568-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "5210",
-      "name": "日本山村硝子",
-      "file": "operations/quality-rebase/phase1/reviews/5210-primary-review-v1.json",
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
         "companyIdentityConfirmed",
@@ -7941,36 +8512,6 @@
       ]
     },
     {
-      "code": "6493",
-      "name": "NITTAN",
-      "file": "operations/quality-rebase/phase1/reviews/6493-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "6506",
-      "name": "安川電機",
-      "file": "operations/quality-rebase/phase1/reviews/6506-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "6976",
-      "name": "太陽誘電",
-      "file": "operations/quality-rebase/phase1/reviews/6976-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
       "code": "7218",
       "name": "田中精密工業",
       "file": "operations/quality-rebase/phase1/reviews/7218-primary-review-v1.json",
@@ -7982,59 +8523,9 @@
       ]
     },
     {
-      "code": "7305",
-      "name": "新家工業",
-      "file": "operations/quality-rebase/phase1/reviews/7305-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "7343",
-      "name": "ブロードマインド",
-      "file": "operations/quality-rebase/phase1/reviews/7343-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "7345",
-      "name": "アイ・パートナーズフィナンシャル",
-      "file": "operations/quality-rebase/phase1/reviews/7345-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "7771",
-      "name": "日本精密",
-      "file": "operations/quality-rebase/phase1/reviews/7771-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
       "code": "7911",
       "name": "TOPPANホールディングス",
       "file": "operations/quality-rebase/phase1/reviews/7911-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "7957",
-      "name": "フジコピアン",
-      "file": "operations/quality-rebase/phase1/reviews/7957-primary-review-v1.json",
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
         "companyIdentityConfirmed",
@@ -8068,66 +8559,6 @@
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
         "formalPlanConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "9049",
-      "name": "京福電気鉄道",
-      "file": "operations/quality-rebase/phase1/reviews/9049-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "9073",
-      "name": "京極運輸商事",
-      "file": "operations/quality-rebase/phase1/reviews/9073-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "9204",
-      "name": "スカイマーク",
-      "file": "operations/quality-rebase/phase1/reviews/9204-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "9252",
-      "name": "ラストワンマイル",
-      "file": "operations/quality-rebase/phase1/reviews/9252-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "9366",
-      "name": "サンリツ",
-      "file": "operations/quality-rebase/phase1/reviews/9366-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
-        "fullTextHumanReviewComplete"
-      ]
-    },
-    {
-      "code": "9367",
-      "name": "大東港運",
-      "file": "operations/quality-rebase/phase1/reviews/9367-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "companyIdentityConfirmed",
         "fullTextHumanReviewComplete"
       ]
     },
@@ -8228,15 +8659,6 @@
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
         "formalPlanConfirmed"
-      ]
-    },
-    {
-      "code": "2408",
-      "name": "KG情報",
-      "file": "operations/quality-rebase/phase2/primary-reviews/2408-wave34-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "reviewDatePresent"
       ]
     },
     {
@@ -8743,15 +9165,6 @@
       ]
     },
     {
-      "code": "6594",
-      "name": "ニデック",
-      "file": "operations/quality-rebase/phase2/primary-reviews/6594-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "evidenceLinked"
-      ]
-    },
-    {
       "code": "6696",
       "name": "トラース・オン・プロダクト",
       "file": "operations/quality-rebase/phase2/primary-reviews/6696-wave35-primary-review-v1.json",
@@ -8768,15 +9181,6 @@
       "failedChecks": [
         "formalPlanConfirmed",
         "metricsValidated",
-        "evidenceLinked"
-      ]
-    },
-    {
-      "code": "7181",
-      "name": "かんぽ生命保険",
-      "file": "operations/quality-rebase/phase2/primary-reviews/7181-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
         "evidenceLinked"
       ]
     },
@@ -9160,15 +9564,6 @@
       "reason": "primary_l1_gate_not_satisfied",
       "failedChecks": [
         "primaryReviewComplete",
-        "formalPlanConfirmed"
-      ]
-    },
-    {
-      "code": "3070",
-      "name": "ジェリービーンズグループ",
-      "file": "operations/quality-rebase/phase2/reviews/3070-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
         "formalPlanConfirmed"
       ]
     },
@@ -9710,15 +10105,6 @@
       ]
     },
     {
-      "code": "6544",
-      "name": "ジャパンエレベーターサービスホールディングス",
-      "file": "operations/quality-rebase/phase2/reviews/6544-primary-review-v1.json",
-      "reason": "primary_l1_gate_not_satisfied",
-      "failedChecks": [
-        "formalPlanConfirmed"
-      ]
-    },
-    {
       "code": "6545",
       "name": "インターネットインフィニティー",
       "file": "operations/quality-rebase/phase2/reviews/6545-primary-review-v1.json",
@@ -9832,19 +10218,6 @@
       "failedChecks": [
         "fullTextHumanReviewComplete"
       ]
-    },
-    {
-      "code": "8386",
-      "name": "百十四銀行",
-      "file": "operations/quality-rebase/phase2/reviews/8386-primary-review-v1.json",
-      "reason": "formal_plan_confirmed_but_end_date_unresolved",
-      "classification": "formal_management_plan_current_fy2026_to_fy2028_with_long_term_vision2030_and_bank_capital_allocation",
-      "period": {
-        "start": "2026年4月1日",
-        "end": "2029年3月31日",
-        "fiscalYears": "2026年度～2028年度",
-        "duration": "3カ年"
-      }
     },
     {
       "code": "8938",

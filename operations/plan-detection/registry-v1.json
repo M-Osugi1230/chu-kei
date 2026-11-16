@@ -1,15 +1,15 @@
 {
   "version": "plan-detection-registry-v1",
-  "universeGeneratedAt": "2026-11-16T09:35:12.915Z",
+  "universeGeneratedAt": "2026-11-16T10:02:57.393Z",
   "sourceFetchedAt": "2026-11-14T04:19:59.774573Z",
   "companyCount": 3686,
   "resolvedCount": 432,
   "detectionCoverage": 0.1172,
   "verifiedOverrideCount": 61,
-  "primaryReviewedOverrideCount": 268,
+  "primaryReviewedOverrideCount": 290,
   "counts": {
-    "current": 427,
-    "expired": 5,
+    "current": 426,
+    "expired": 6,
     "no_formal_plan": 0,
     "found_unstructured": 0,
     "not_checked": 3254
@@ -4457,29 +4457,29 @@
       "industry": "サービス業",
       "status": "current",
       "review": {
-        "checkedAt": "2026-08-08",
-        "sourceUrl": "https://www.ut-g.co.jp/hubfs/ir/library/plan/UTG_rollingplan_2026_ja.pdf",
-        "sourceTitle": "第4次中期経営計画ローリングプラン（2026年5月更新）",
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/05/release_20260514_04.pdf",
+        "sourceTitle": "2026年3月期 通期決算説明資料（第5次中期経営計画を含む）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2030-03-31 derived from 2030年3月期"
+        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
         "formalPlanConfirmed": true,
-        "classification": "official_formal_management_plan_annual_rolling_update",
+        "classification": "earnings_presentation_containing_current_plan",
         "period": {
-          "startFiscalYear": "2024年3月期",
-          "endFiscalYear": "2030年3月期",
-          "currentRollingHorizon": "2027年3月期",
-          "baselineFiscalYear": "2026年3月期実績"
+          "startFiscalYear": "2026年3月期",
+          "endFiscalYear": "2029年3月期",
+          "terminalFiscalYear": "2029年3月期",
+          "statement": "第5次中期経営計画の期間は2026年3月期から2029年3月期。2025年11月に見直しが公表されており、本資料は見直し後の目標を現行目標として提示している。"
         },
-        "planEndDate": "2030-03-31",
-        "planEndBasis": "2030年3月期",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
-        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/2146-independent-completion-v1.json",
-        "independentReviewResult": "confirmed_after_fifth_plan_source_repair_and_full_visual_sequence_recheck"
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/2146-independent-completion-v2.json",
+        "independentReviewResult": "confirmed"
       }
     },
     {
@@ -6402,22 +6402,25 @@
       "industry": "サービス業",
       "status": "current",
       "review": {
-        "checkedAt": "2026-07-20",
+        "checkedAt": "2026-11-15",
         "sourceUrl": "https://www2.jpx.co.jp/disc/24080/140120260126538176.pdf",
         "sourceTitle": "株式会社KG情報 中期経営計画（2026年度～2028年度）",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2026-2028"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-12-31 derived from 2028年12月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
-        "period": "2026-2028",
-        "planEndDate": "2029-03-31",
-        "planEndBasis": "2026-2028",
-        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2408-wave34-primary-review-v1.json"
+        "classification": null,
+        "period": "2025年12月期〜2028年12月期",
+        "planEndDate": "2028-12-31",
+        "planEndBasis": "2028年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2408-wave34-primary-review-v1.json",
+        "publishedDate": "2026-01-26",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -6873,14 +6876,14 @@
       "name": "ファンコミュニケーションズ",
       "market": "Prime",
       "industry": "サービス業",
-      "status": "current",
+      "status": "expired",
       "review": {
-        "checkedAt": "2026-08-06",
+        "checkedAt": "2026-11-16",
         "sourceUrl": "https://www2.jpx.co.jp/disc/24610/140120260206550877.pdf",
         "sourceTitle": "中期経営計画 FY25-27 一部見直し",
         "sourceType": "first_party_primary_reviewed",
         "method": "quality_rebase_primary_review_l1_seed_v1",
-        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
+        "note": "primary human review confirmed formal plan; plan end 2026-08-31 derived from 2026年8月期"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
@@ -6890,11 +6893,13 @@
         "period": {
           "startFiscalYear": "2025年度",
           "endFiscalYear": "2027年度",
-          "terminalFiscalYear": "2027年度"
+          "terminalFiscalYear": "2027年度",
+          "currentPlanTerminal": "2026年8月期",
+          "terminationNote": "2026-08-10の取締役会決議による中期経営計画の取り下げにより、計画は2026年8月に終了した（当初期間は2025年12月期～2027年12月期）。"
         },
-        "planEndDate": "2028-03-31",
-        "planEndBasis": "2027年度",
-        "planEndPrecision": "fiscal_year",
+        "planEndDate": "2026-08-31",
+        "planEndBasis": "2026年8月期",
+        "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2461-primary-review-v1.json",
         "publishedDate": "2026-02-09",
         "supersededByIndependentSeed": false
@@ -11074,20 +11079,30 @@
       "industry": "卸売業",
       "status": "current",
       "review": {
-        "checkedAt": "2026-07-20",
-        "sourceUrl": "https://www.jelly-beans-group.co.jp/ir/",
-        "sourceTitle": "中期経営計画／事業計画と成長可能性",
-        "sourceType": "first_party_primary",
-        "method": "audited_patch_evidence_v1",
-        "note": "audited patch confirmed formal medium-term plan; period: 2027年1月期以降; plan end 2027-01-31"
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://ssl4.eir-parts.net/doc/3070/tdnet/2775877/00.pdf",
+        "sourceTitle": "中期経営計画策定の修正及び2027年1月期予算に関するお知らせ／中期経営計画の修正と2027年1月期予算",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-01-31 derived from 2028年1月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
-        "assuranceTier": "patch_formal_plan",
-        "period": "2027年1月期以降",
-        "planEndDate": "2027-01-31",
-        "planEndBasis": "2027年1月期",
-        "patchFile": "operations/patches/batch63-3070-20260720.json"
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "current_formal_medium_term_management_plan_revision",
+        "period": {
+          "startFiscalYear": "2026年1月期",
+          "endFiscalYear": "2028年1月期",
+          "terminalFiscalYear": "2028年1月期",
+          "statement": "中期経営計画「Reframe the Future Project～未来再構築～」（2026年1月期～2028年1月期）。2025-09-11公表の当初計画を2026-03-13の修正お知らせで修正。"
+        },
+        "planEndDate": "2028-01-31",
+        "planEndBasis": "2028年1月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/3070-primary-review-v1.json",
+        "publishedDate": "2026-03-13",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -14796,18 +14811,21 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/34900/140120260708589852.pdf",
         "sourceTitle": "新中期経営計画について／新株予約権発行に関する補足資料",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-02-28 derived from 2029年2月期"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-02-28 derived from 2029年2月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2027年2月期-2029年2月期",
         "planEndDate": "2029-02-28",
         "planEndBasis": "2029年2月期",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/3490-primary-review-v1.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/3490-primary-review-v1.json",
+        "publishedDate": "2026-07-08",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -29884,18 +29902,21 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/52100/140120260608565790.pdf",
         "sourceTitle": "2026年3月期 決算・新中期経営計画説明会",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2027年3月期-2029年3月期",
         "planEndDate": "2029-03-31",
         "planEndBasis": "2029年3月期",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/5210-primary-review-v1.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/5210-primary-review-v1.json",
+        "publishedDate": "2026-06-09",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -39258,18 +39279,21 @@
         "sourceUrl": "https://contents.xj-storage.jp/xcontents/AS05830/2034a7ff/3929/4d10/b01d/e987830b9b6f/20260615165351994s.pdf",
         "sourceTitle": "2026年3月期決算および新中期経営計画説明会",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2027年3月期-2029年3月期",
         "planEndDate": "2029-03-31",
         "planEndBasis": "2029年3月期",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/6493-primary-review-v1.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/6493-primary-review-v1.json",
+        "publishedDate": "2026-06-09",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -39467,18 +39491,21 @@
         "sourceUrl": "https://www.yaskawa.co.jp/wp-content/uploads/2026/05/Dash35.pdf",
         "sourceTitle": "中期経営計画 Dash 35",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2030-03-31 derived from 2029年度"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2030-03-31 derived from 2029年度"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2026年度-2029年度",
         "planEndDate": "2030-03-31",
         "planEndBasis": "2029年度",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/6506-primary-review-v1.json"
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/6506-primary-review-v1.json",
+        "publishedDate": "2026-05-22",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -39836,20 +39863,30 @@
       "industry": "サービス業",
       "status": "current",
       "review": {
-        "checkedAt": "2026-07-20",
-        "sourceUrl": "https://www.jes24.co.jp/ja/ir/strategy.html",
-        "sourceTitle": "中期経営計画 VISION2027",
-        "sourceType": "first_party_primary",
-        "method": "audited_patch_evidence_v1",
-        "note": "audited patch confirmed formal medium-term plan; period: 2023年3月期～2027年3月期; plan end 2027-03-31"
+        "checkedAt": "2026-08-11",
+        "sourceUrl": "https://www.jes24.co.jp/ja/ir/strategy/main/03/teaserItems1/01/linkList/0/link/Vision2027_from2022_jp.pdf",
+        "sourceTitle": "中期経営計画 -VISION2027-",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2027年3月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
-        "assuranceTier": "patch_formal_plan",
-        "period": "2023年3月期～2027年3月期",
+        "referenceDate": "2026-11-16",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "current_formal_management_plan",
+        "period": {
+          "startFiscalYear": "2023年3月期",
+          "endFiscalYear": "2027年3月期",
+          "terminalFiscalYear": "2027年3月期",
+          "statement": "中期経営計画 VISION2027（2023年3月期～2027年3月期）。登録レビューおよび#288再確認（verified_unchanged）で確認。"
+        },
         "planEndDate": "2027-03-31",
         "planEndBasis": "2027年3月期",
-        "patchFile": "operations/patches/batch66-6544-20260720.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6544-primary-review-v1.json",
+        "publishedDate": "2022-05-18",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -40388,21 +40425,24 @@
       "status": "current",
       "review": {
         "checkedAt": "2026-08-23",
-        "sourceUrl": "https://www.nidec.com/jp/ir/management/strategy/",
+        "sourceUrl": "https://www.nidec.com/files/user/www-nidec-com/ir/library/earnings/2025/FY24Q4_1_jp_rev.pdf",
         "sourceTitle": "中期経営計画 Conversion 2027",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2028-03-31 derived from FY2027"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from FY2027"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "FY2025～FY2027を中心とするConversion 2027",
         "planEndDate": "2028-03-31",
         "planEndBasis": "FY2027",
-        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/6594-primary-review-v1.json"
+        "planEndPrecision": "fy_label",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/6594-primary-review-v1.json",
+        "publishedDate": null,
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -43561,18 +43601,21 @@
         "sourceUrl": "https://www.yuden.co.jp/jp/ir/library/fr_presentation.html",
         "sourceTitle": "中期経営計画2030",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2031-03-31 derived from 2030年度"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-03-31 derived from 2030年度"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2026年度-2030年度",
         "planEndDate": "2031-03-31",
         "planEndBasis": "2030年度",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/6976-primary-review-v1.json"
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/6976-primary-review-v1.json",
+        "publishedDate": "2026-05-08",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -45371,18 +45414,21 @@
         "sourceUrl": "https://www.jp-life.japanpost.jp/information/assets/pdf/2026/0515pr-4-01.pdf",
         "sourceTitle": "かんぽ生命保険 中期経営計画（2026年度～2028年度）",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2026年度～2028年度（3年間）",
         "planEndDate": "2029-03-31",
         "planEndBasis": "2028年度",
-        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/7181-primary-review-v1.json"
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/7181-primary-review-v1.json",
+        "publishedDate": "2026-05-15",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -46572,8 +46618,8 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/73050/140120260513529341.pdf",
         "sourceTitle": "中期経営計画2026 2025年度進捗報告および資本コストや株価を意識した経営の実現に向けた対応について",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -46583,7 +46629,10 @@
         "period": "2024年度-2026年度",
         "planEndDate": "2027-03-31",
         "planEndBasis": "2026年度",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7305-primary-review-v1.json"
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7305-primary-review-v1.json",
+        "publishedDate": "2026-05-13",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -46773,8 +46822,8 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/73430/140120260623577064.pdf",
         "sourceTitle": "事業計画及び成長可能性に関する説明資料",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2030-03-31 derived from 2030年3月期"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2030-03-31 derived from 2030年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -46784,7 +46833,10 @@
         "period": "2027年3月期-2030年3月期財務目標",
         "planEndDate": "2030-03-31",
         "planEndBasis": "2030年3月期",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7343-primary-review-v1.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7343-primary-review-v1.json",
+        "publishedDate": "2026-06-30",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -46798,8 +46850,8 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/73450/140120260515536422.pdf",
         "sourceTitle": "事業計画及び成長可能性に関する事項",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -46809,7 +46861,10 @@
         "period": "2029年3月期までの3年後経営目標",
         "planEndDate": "2029-03-31",
         "planEndBasis": "2029年3月期",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7345-primary-review-v1.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7345-primary-review-v1.json",
+        "publishedDate": "2026-05-15",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -50264,18 +50319,21 @@
         "sourceUrl": "https://www.nihon-s.co.jp/wp-content/uploads/2026/06/20260629_%E4%B8%AD%E6%9C%9F%E7%B5%8C%E5%96%B6%E8%A8%88%E7%94%BB%E3%80%8CASEAN-Project%E2%85%A2%E3%80%8D%E3%81%AE%E7%AD%96%E5%AE%9A%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B-002.pdf",
         "sourceTitle": "中期経営計画 ASEAN Project III",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2027年3月期-2031年3月期",
         "planEndDate": "2031-03-31",
         "planEndBasis": "2031年3月期",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7771-primary-review-v1.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7771-primary-review-v1.json",
+        "publishedDate": "2026-06-29",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -51994,18 +52052,21 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/79570/140120260305576489.pdf",
         "sourceTitle": "中期経営計画（2026～2030）FCX80 ～守る／変える～",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2030-12-31 derived from 2030年12月期"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2030-12-31 derived from 2030年12月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2026年12月期-2030年12月期",
         "planEndDate": "2030-12-31",
         "planEndBasis": "2030年12月期",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7957-primary-review-v1.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/7957-primary-review-v1.json",
+        "publishedDate": "2026-03-05",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -55483,11 +55544,11 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/83860/140120260330593288.pdf",
         "sourceTitle": "新中期経営計画の策定について／だから、挑む。－地域の未来を、たしかなカタチに－",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
         "classification": "formal_management_plan_current_fy2026_to_fy2028_with_long_term_vision2030_and_bank_capital_allocation",
@@ -55495,11 +55556,16 @@
           "start": "2026年4月1日",
           "end": "2029年3月31日",
           "fiscalYears": "2026年度～2028年度",
-          "duration": "3カ年"
+          "duration": "3カ年",
+          "endFiscalYear": "2028年度",
+          "terminalFiscalYear": "2028年度"
         },
         "planEndDate": "2029-03-31",
         "planEndBasis": "2028年度",
-        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8386-primary-review-v1.json"
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/8386-primary-review-v1.json",
+        "publishedDate": "2026-04-01",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -58165,18 +58231,21 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/90490/140120260601556727.pdf",
         "sourceTitle": "京福グループ中期経営計画2028",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2026年度-2028年度",
         "planEndDate": "2029-03-31",
         "planEndBasis": "2028年度",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9049-primary-review-v1.json"
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9049-primary-review-v1.json",
+        "publishedDate": "2026-06-01",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -58382,18 +58451,21 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/90730/140120260518539970.pdf",
         "sourceTitle": "第3次中期経営計画",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2026年度-2028年度",
         "planEndDate": "2029-03-31",
         "planEndBasis": "2028年度",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9073-primary-review-v1.json"
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9073-primary-review-v1.json",
+        "publishedDate": "2026-05-18",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -58563,27 +58635,28 @@
       "industry": "海運業",
       "status": "current",
       "review": {
-        "checkedAt": "2026-08-08",
-        "sourceUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2022_medium-term%20management%20plan_j.pdf",
-        "sourceTitle": "2022年度 中期経営計画",
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://www.kline.co.jp/ja/ir/management/strategy/main/0/teaserItems1/0/tableContents/0/multiFileUpload2_0/link/2026_2_medium-term%20management%20plan_j.pdf",
+        "sourceTitle": "中期経営計画（2027-2031年度）",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
+        "note": "independent review confirmed formal plan; plan end 2032-03-31 derived from 2031年度"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
         "formalPlanConfirmed": true,
-        "classification": "formal_management_plan_current_through_fy2026_next_plan_not_yet_published",
+        "classification": "formal_management_plan",
         "period": {
-          "startFiscalYear": "2022年度",
-          "endFiscalYear": "2026年度",
-          "statement": "5か年計画。2026年度が現行計画の最終年度であり、次期中計は2026年度中の公表予定と公式説明されているため、現時点では本資料を現行基準計画として扱う。"
+          "startFiscalYear": "2027年度",
+          "endFiscalYear": "2031年度",
+          "terminalFiscalYear": "2031年度",
+          "statement": "5か年計画。2031年度が最終年度。"
         },
-        "planEndDate": "2027-03-31",
-        "planEndBasis": "2026年度",
+        "planEndDate": "2032-03-31",
+        "planEndBasis": "2031年度",
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9107-primary-review-v1.json",
-        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9107-independent-completion-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9107-independent-completion-v2.json",
         "independentReviewResult": "confirmed"
       }
     },
@@ -58966,8 +59039,8 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/92040/140120260611568685.pdf",
         "sourceTitle": "事業計画及び成長可能性に関する資料",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2031-03-31 derived from FY2030"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-03-31 derived from FY2030"
       },
       "derivation": {
         "referenceDate": "2026-10-04",
@@ -58977,7 +59050,10 @@
         "period": "FY2026-FY2030",
         "planEndDate": "2031-03-31",
         "planEndBasis": "FY2030",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9204-primary-review-v1.json"
+        "planEndPrecision": "fy_label",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9204-primary-review-v1.json",
+        "publishedDate": "2026-06-18",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -59387,27 +59463,28 @@
       "industry": "サービス業",
       "status": "current",
       "review": {
-        "checkedAt": "2026-08-07",
-        "sourceUrl": "https://tre-hd.co.jp/download/assets/uploads/trehd_mtbp.pdf",
-        "sourceTitle": "TREホールディングス 第2次中期経営計画（2024年度〜2028年度）",
+        "checkedAt": "2026-11-16",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/92470/140120260515537503.pdf",
+        "sourceTitle": "「TRE中期経営計画 2030」策定について",
         "sourceType": "first_party_independent_reviewed",
         "method": "quality_rebase_phase2_independent_completion_v1",
-        "note": "independent review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+        "note": "independent review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
       },
       "derivation": {
         "referenceDate": "2026-11-16",
         "formalPlanConfirmed": true,
         "classification": "formal_management_plan",
         "period": {
-          "startFiscalYear": "2025年3月期",
-          "endFiscalYear": "2029年3月期",
-          "statement": "資料上の5カ年収益計画は2025年3月期から2029年3月期。公表上の表題は2024年度〜2028年度。"
+          "startFiscalYear": "2027年3月期",
+          "endFiscalYear": "2031年3月期",
+          "terminalFiscalYear": "2031年3月期",
+          "statement": "第3次中期経営計画の業績目標期間は2027年3月期から2031年3月期の5か年。第2次中期経営計画（2024〜2028）は一旦総括された。"
         },
-        "planEndDate": "2029-03-31",
-        "planEndBasis": "2029年3月期",
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2031年3月期",
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/9247-primary-review-v1.json",
-        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9247-independent-completion-v1.json",
+        "independentCompletionFile": "operations/quality-rebase/phase2/independent-completions/9247-independent-completion-v2.json",
         "independentReviewResult": "confirmed"
       }
     },
@@ -59486,18 +59563,21 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/92520/140120251126509183.pdf",
         "sourceTitle": "中期経営計画（事業計画及び成長可能性に関する説明資料）",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2027-04-30 derived from 2027年4月期【2026-11-16 #288再確認に基づく出典修正】決算期の誤認（4月期→8月期）を一次レビューとあわせて是正し、planEndDateを2027-08-31とした。"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-08-31 derived from 2027年8月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2026年8月期-2027年8月期",
         "planEndDate": "2027-08-31",
         "planEndBasis": "2027年8月期",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9252-primary-review-v1.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9252-primary-review-v1.json",
+        "publishedDate": "2025-11-26",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -60484,18 +60564,21 @@
         "sourceUrl": "https://www2.jpx.co.jp/disc/93660/140120260514532100.pdf",
         "sourceTitle": "新中期経営計画",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2027年3月期-2029年3月期",
         "planEndDate": "2029-03-31",
         "planEndBasis": "2029年3月期",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9366-primary-review-v1.json"
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9366-primary-review-v1.json",
+        "publishedDate": "2026-05-14",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -60509,18 +60592,21 @@
         "sourceUrl": "https://www.daito-koun.co.jp/ir_cms/upload_file/tdnrelease/9367_20260513528865_P01_.pdf",
         "sourceTitle": "大東港運グループ 第9次中期経営計画 Stronger Together ～ともに、強くなろう～",
         "sourceType": "first_party_primary_reviewed",
-        "method": "primary_review_audited_v1",
-        "note": "audited primary review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
+        "referenceDate": "2026-11-16",
         "assuranceTier": "primary_human_review",
         "formalPlanConfirmed": true,
-        "classification": "",
+        "classification": null,
         "period": "2026年度-2028年度",
         "planEndDate": "2029-03-31",
         "planEndBasis": "2028年度",
-        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9367-primary-review-v1.json"
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase1/reviews/9367-primary-review-v1.json",
+        "publishedDate": "2026-05-13",
+        "supersededByIndependentSeed": false
       }
     },
     {

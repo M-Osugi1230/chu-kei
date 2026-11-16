@@ -1,0 +1,77 @@
+{
+ "schemaVersion": "quality-rebase-phase2-independent-review-v1",
+ "company": {
+  "code": "2146",
+  "name": "UTグループ"
+ },
+ "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2146-primary-review-v1.json",
+ "source": {
+  "title": "2026年3月期 通期決算説明資料（第5次中期経営計画を含む）",
+  "officialLandingPage": "https://www.ut-g.co.jp/ir/management/strategy/",
+  "officialUrl": "https://www.ut-g.co.jp/id3neq81fx/wp-content/uploads/2026/05/release_20260514_04.pdf",
+  "pdfSha256": "a5797feeb3d722278aa33d7c2c0233fa15a24dcb2ce93377986a805817dd6d76",
+  "pageCount": 50
+ },
+ "status": "independent_review_ready",
+ "reviewContext": "後継計画への出典差し替え（Issue #288 / PR-04）に伴う独立再確認のパケット（課題定義）。独立レビュアー（ChatGPT）が公式PDFを実際に開いて6項目を再確認する（2026-11-16、チャット「独立再確認 PR-04」）。判定結果は対応する独立レビュー完了記録（independent-completions v2）に記録され、本パケットのチェックは課題定義として pending のまま保持される。",
+ "checks": [
+  {
+   "id": "source_identity",
+   "description": "表紙の資料名・日付（2026年5月14日）・証券コードと一次レビューの記録の一致を確認する。",
+   "expectedEvidencePdfPages": [
+    1
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "current_plan_boundary",
+   "description": "第5次中期経営計画（2026年3月期〜2029年3月期）が本決算説明資料に含まれていることを確認する。",
+   "expectedEvidencePdfPages": [
+    2,
+    3
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "financial_targets",
+   "description": "2029年3月期目標（売上高1,850億円、売上総利益350億円、営業利益150億円、当期純利益91億円、配当15.20円）を確認する。",
+   "expectedEvidencePdfPages": [
+    2
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "capital_allocation",
+   "description": "計画期間全体の投資総額等の定量的な資本配分計画の開示の有無を確認する。",
+   "expectedEvidencePdfPages": [
+    3
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "shareholder_return",
+   "description": "配当性向100%の基本方針、年間配当10円下限、四半期配当の方針を確認する。",
+   "expectedEvidencePdfPages": [
+    3,
+    5
+   ],
+   "status": "pending"
+  },
+  {
+   "id": "nonfinancial_targets",
+   "description": "在籍人数38,000人等の非財務目標を確認する。",
+   "expectedEvidencePdfPages": [
+    2
+   ],
+   "status": "pending"
+  }
+ ],
+ "review": {
+  "minimumDistinctReviewers": 2,
+  "primaryReviewerMustNotSelfApprove": true,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "completedAt": null,
+  "reviewer": null
+ }
+}

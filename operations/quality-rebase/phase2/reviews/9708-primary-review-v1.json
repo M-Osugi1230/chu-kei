@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+  "company": {
+    "code": "9708",
+    "name": "帝国ホテル",
+    "market": "Standard",
+    "industry": "サービス業"
+  },
+  "source": {
+    "title": "中長期経営計画（2026年度改訂版）",
+    "publishedDate": "2026-05-14",
+    "officialUrl": "https://www.imperialhotel.co.jp/sites/default/files/file/2023-12/5a5ee36de54a98603aaf0e7436c3d51f.pdf",
+    "pdfSha256": "fe0a315a71f0353581d0d924b00c069b31abcd51eb63080b78bfdebb80048b80",
+    "pageCount": 25,
+    "documentClassification": "formal_management_plan",
+    "identityEvidence": {
+      "pdfPages": [1],
+      "statement": "株式会社帝国ホテルが2026年5月14日に公表した中長期経営計画（2026年度改訂版）であり、計画の改訂内容と数値目標を含む。"
+    },
+    "period": {
+      "startFiscalYear": "2026年度",
+      "endFiscalYear": "2030年度",
+      "terminalFiscalYear": "2030年度",
+      "statement": "改訂版の重点期間は2026年度から2030年度（2031年度以降も対象とする中長期計画の改訂版）。"
+    },
+    "formalPlanBoundary": {
+      "currentPlan": "中長期経営計画（2026年度改訂版）",
+      "currentStatus": "current",
+      "previousPlan": "従前登録の中長期経営計画は本改訂版に置き換えられた",
+      "statement": "改訂前の目標は現行目標として扱わず、改訂版の数値目標（2026年度および2027〜2030年度）を現行目標として分離する。"
+    }
+  },
+  "summary": "中長期経営計画の2026年度改訂版。2026年度に売上高614億円・EBITDA59億円、2027〜2030年度に売上高620億円以上・EBITDA70億円以上を目標とする。",
+  "strategyThemes": [
+    {
+      "theme": "ビジョン（目指すべき姿と基本戦略）の推進",
+      "evidence": "資料はビジョン（目指すべき姿と基本戦略）、事業環境（これまでの振り返り）、中長期経営計画の改訂で構成される。"
+    }
+  ],
+  "financialTargets": [
+    {"metric": "売上高", "target": 614, "unit": "億円", "targetFiscalYear": "2026年度"},
+    {"metric": "EBITDA", "target": 59, "unit": "億円", "targetFiscalYear": "2026年度"},
+    {"metric": "売上高", "target": 620, "unit": "億円以上", "targetFiscalYear": "2027年度〜2030年度"},
+    {"metric": "EBITDA", "target": 70, "unit": "億円以上", "targetFiscalYear": "2027年度〜2030年度"}
+  ],
+  "capitalPolicy": {
+    "status": "not_quantified_in_extracted_targets",
+    "policy": "数値目標表で確認した範囲を超える資本配分の定量目標は、推計で補完しない。"
+  },
+  "shareholderReturnPolicy": {
+    "status": "not_quantified_in_extracted_targets",
+    "policy": "数値目標表で確認した範囲を超える株主還元の定量目標は、推計で補完しない。"
+  },
+  "nonFinancialTargets": [],
+  "definitions": [
+    {
+      "term": "改訂版の位置づけ",
+      "definition": "本資料は中長期経営計画の2026年度改訂版であり、従前登録の計画に代わる現行の正本である。"
+    }
+  ],
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "formalPlanConfirmed": true,
+    "formalPlanBoundaryValidated": true,
+    "currentPlanStatusValidated": true,
+    "fullTextHumanReviewComplete": true,
+    "visualFigureReviewComplete": false,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "longTermTargetsSeparatedFromPlanTargets": true,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "review": {
+    "status": "primary_review_complete_independent_review_ready",
+    "reviewedAt": "2026-11-16T19:10:00+09:00",
+    "reviewRole": "primary_reviewer",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": ["Muse (#288 PR-03 successor replacement; official PDF locally fetched and target table verified)"],
+    "remainingChecks": [
+      "独立確認者による公式PDF全25ページと図表の原寸再確認",
+      "戦略テーマの詳細（ビジョン・基本戦略の内訳）の独立確認"
+    ]
+  },
+  "replacementNote": "Issue #288 の鮮度再確認と PRE-01 の後継特定で、2026-05-14に中長期経営計画（2026年度改訂版）が公表されたことを確認したため、登録を改訂版へ差し替えた。"
+}

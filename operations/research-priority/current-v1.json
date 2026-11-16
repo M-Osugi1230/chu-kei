@@ -1,6 +1,6 @@
 {
   "version": "chu-kei-research-priority-v1",
-  "generatedAt": "2026-11-16T09:14:32.224Z",
+  "generatedAt": "2026-11-16T09:25:14.387Z",
   "universeGeneratedAt": "2026-11-16T05:51:11.354Z",
   "sourceBundleSha256": "905f0d82e03ce2bf0b3d4afaf8f7a0675cfd942ec3ace951af6a4433996c88dc",
   "policy": {
@@ -21,9 +21,9 @@
     "planResolved": 432,
     "planPending": 3254,
     "planCandidateHinted": 2538,
-    "currentOrUnstructuredPlan": 426,
-    "comparisonCoreQueued": 390,
-    "noCurrentCoreRequired": 6
+    "currentOrUnstructuredPlan": 427,
+    "comparisonCoreQueued": 391,
+    "noCurrentCoreRequired": 5
   },
   "comparisonCoreDefinition": [
     {
@@ -80720,6 +80720,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "9699",
+        "name": "ニシオホールディングス",
+        "market": "Prime",
+        "industry": "サービス業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "9708",
         "name": "帝国ホテル",
         "market": "Standard",
@@ -80895,12 +80924,6 @@
       "name": "ＳＢＩホールディングス",
       "status": "expired",
       "checkedAt": "2026-07-13"
-    },
-    {
-      "code": "9699",
-      "name": "ニシオホールディングス",
-      "status": "expired",
-      "checkedAt": "2026-08-23"
     }
   ]
 }

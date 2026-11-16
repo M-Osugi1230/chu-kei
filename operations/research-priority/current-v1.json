@@ -1,8 +1,8 @@
 {
   "version": "chu-kei-research-priority-v1",
-  "generatedAt": "2026-11-16T10:02:59.215Z",
-  "universeGeneratedAt": "2026-11-16T10:02:57.393Z",
-  "sourceBundleSha256": "122dd7e50a5a8bae3616936493414e024e3f48854dd1d7fc00cdd66d4fb24476",
+  "generatedAt": "2026-11-16T10:14:18.425Z",
+  "universeGeneratedAt": "2026-11-16T10:14:16.687Z",
+  "sourceBundleSha256": "0191a308f65b8d04d4f85880af32ee09fea546aa8eef7e9913ca5d5f75910470",
   "policy": {
     "productGoal": "企業数の網羅性を維持しながら、企業発見・比較能力を最大化する",
     "priorityOrder": [
@@ -21,9 +21,9 @@
     "planResolved": 432,
     "planPending": 3254,
     "planCandidateHinted": 2538,
-    "currentOrUnstructuredPlan": 426,
-    "comparisonCoreQueued": 390,
-    "noCurrentCoreRequired": 6
+    "currentOrUnstructuredPlan": 429,
+    "comparisonCoreQueued": 393,
+    "noCurrentCoreRequired": 3
   },
   "comparisonCoreDefinition": [
     {
@@ -71759,6 +71759,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "2121",
+        "name": "ＭＩＸＩ",
+        "market": "Prime",
+        "industry": "情報・通信業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "212A",
         "name": "フィットイージー",
         "market": "Prime",
@@ -76602,6 +76631,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "6005",
+        "name": "三浦工業",
+        "market": "Prime",
+        "industry": "機械",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "6030",
         "name": "アドベンチャー",
         "market": "Growth",
@@ -78112,6 +78170,35 @@
         "layer": "L2_COMPARISON_CORE",
         "code": "7033",
         "name": "マネジメントソリューションズ",
+        "market": "Prime",
+        "industry": "サービス業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "7085",
+        "name": "カーブスホールディングス",
         "market": "Prime",
         "industry": "サービス業",
         "planStatus": "current",
@@ -80867,12 +80954,6 @@
   },
   "excludedFromCurrentCore": [
     {
-      "code": "2121",
-      "name": "ＭＩＸＩ",
-      "status": "expired",
-      "checkedAt": "2026-07-20"
-    },
-    {
       "code": "2301",
       "name": "学情",
       "status": "expired",
@@ -80883,18 +80964,6 @@
       "name": "ファンコミュニケーションズ",
       "status": "expired",
       "checkedAt": "2026-11-16"
-    },
-    {
-      "code": "6005",
-      "name": "三浦工業",
-      "status": "expired",
-      "checkedAt": "2026-07-14"
-    },
-    {
-      "code": "7085",
-      "name": "カーブスホールディングス",
-      "status": "expired",
-      "checkedAt": "2026-07-20"
     },
     {
       "code": "8473",

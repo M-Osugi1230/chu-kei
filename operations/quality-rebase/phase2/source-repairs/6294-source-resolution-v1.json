@@ -1,38 +1,84 @@
 {
-  "schemaVersion": "phase2-source-resolution-v1",
-  "company": {"code": "6294", "name": "オカダアイヨン"},
-  "resolutionStatus": "current_formal_plan_section_confirmed_in_official_results_presentation",
-  "currentOfficialDocument": {
-    "landingPageUrl": "https://okadaaiyon.com/ir/plan",
-    "collectedPdfUrl": "https://www2.jpx.co.jp/disc/62940/140120260518539424.pdf",
-    "officialMirrorPdfUrl": "https://media.okadaaiyon.com/cms/uploads/J_FinancialResultsforFY3-26_5.pdf",
-    "documentTitle": "2026年3月期決算および新中期経営計画 Onyx FY2026-FY2028",
-    "planSectionTitle": "新中期経営計画 Onyx",
-    "publishedDate": "2026-05-20",
-    "securityCode": "6294",
-    "pageCount": 46,
-    "collectedPdfSha256": "64e6f20ab625f0c6d46b35daed1adbe7ed8d698e2c774596c1ab288d2339d2be",
-    "planSectionPdfPages": [18, 37],
-    "identityConfirmed": true
-  },
-  "documentClassification": "official_results_presentation_containing_current_formal_management_plan",
-  "formalPlanBoundary": {
-    "currentPlan": "Onyx FY2026-FY2028（2027年3月期から2029年3月期）",
-    "longTermVision": "新VISION30（2031年3月期）",
-    "statement": "2029年3月期までのOnyxコミット目標と、2031年3月期の新VISION30長期目標を分離する。2026年3月期実績と2027年3月期予想も中計最終目標へ混在させない。",
-    "evidencePdfPages": [20, 23, 24]
-  },
-  "validation": {
-    "officialLandingPageConfirmed": true,
-    "companyIdentityConfirmed": true,
-    "securityCodeConfirmed": true,
-    "publicationDateConfirmed": true,
-    "pageCountConfirmed": true,
-    "formalPlanSectionConfirmed": true,
-    "formalPlanBoundaryConfirmed": true,
-    "longTermVisionSeparatedFromCurrentPlan": true,
-    "automaticFactCompletionAllowed": false,
-    "automaticApprovalAllowed": false,
-    "deepVerificationApproved": false
-  }
+ "schemaVersion": "phase2-source-resolution-v1",
+ "company": {
+  "code": "6294",
+  "name": "オカダアイヨン"
+ },
+ "resolutionStatus": "current_formal_plan_section_confirmed_in_official_results_presentation",
+ "currentOfficialDocument": {
+  "landingPageUrl": "https://okadaaiyon.com/ir/plan",
+  "collectedPdfUrl": "https://www2.jpx.co.jp/disc/62940/140120260518539424.pdf",
+  "officialMirrorPdfUrl": "https://media.okadaaiyon.com/cms/uploads/J_FinancialResultsforFY3-26_5.pdf",
+  "documentTitle": "2026年3月期決算および新中期経営計画 Onyx FY2026-FY2028",
+  "planSectionTitle": "新中期経営計画 Onyx",
+  "publishedDate": "2026-05-20",
+  "securityCode": "6294",
+  "pageCount": 46,
+  "collectedPdfSha256": "64e6f20ab625f0c6d46b35daed1adbe7ed8d698e2c774596c1ab288d2339d2be",
+  "planSectionPdfPages": [
+   18,
+   37
+  ],
+  "identityConfirmed": true,
+  "pdfUrl": "https://media.okadaaiyon.com/cms/uploads/J_FinancialResultsforFY3-26_5.pdf",
+  "pdfSha256": "64e6f20ab625f0c6d46b35daed1adbe7ed8d698e2c774596c1ab288d2339d2be",
+  "pageCountConfirmed": true,
+  "publicationDateConfirmed": true,
+  "binaryHashConfirmed": true
+ },
+ "documentClassification": "official_results_presentation_containing_current_formal_management_plan",
+ "formalPlanBoundary": {
+  "currentPlan": "Onyx FY2026-FY2028（2027年3月期から2029年3月期）",
+  "longTermVision": "新VISION30（2031年3月期）",
+  "statement": "2029年3月期までのOnyxコミット目標と、2031年3月期の新VISION30長期目標を分離する。2026年3月期実績と2027年3月期予想も中計最終目標へ混在させない。",
+  "evidencePdfPages": [
+   20,
+   23,
+   24
+  ]
+ },
+ "validation": {
+  "officialLandingPageConfirmed": true,
+  "companyIdentityConfirmed": true,
+  "securityCodeConfirmed": true,
+  "publicationDateConfirmed": true,
+  "pageCountConfirmed": true,
+  "formalPlanSectionConfirmed": true,
+  "formalPlanBoundaryConfirmed": true,
+  "longTermVisionSeparatedFromCurrentPlan": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "pdfSha256Confirmed": true,
+  "fullTextRepositoryReviewComplete": true,
+  "visualFigureReviewComplete": true,
+  "independentDoubleCheck": false
+ },
+ "primaryReviewComplete": true,
+ "independentReviewReady": true,
+ "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6294-primary-review-v1.json",
+ "automaticFactCompletionAllowed": false,
+ "automaticApprovalAllowed": false,
+ "deepVerificationApproved": false,
+ "recordReconciliation": {
+  "date": "2026-11-17T16:00:13+09:00",
+  "basis": "各社の一次レビューファイル・正本台帳・公式資料との照合（2026-11-17 CI是正）",
+  "changes": [
+   "primaryReviewComplete を実態（一次レビュー完了）に合わせて true へ",
+   "independentReviewReady をレビュー状態に合わせて true へ",
+   "primaryReviewFile を正本台帳の参照先に設定",
+   "automaticFactCompletionAllowed を false で明示",
+   "automaticApprovalAllowed を false で明示",
+   "deepVerificationApproved を false で明示",
+   "currentOfficialDocument.pdfUrl を実態に合わせて設定",
+   "currentOfficialDocument.pdfSha256 を実態に合わせて設定",
+   "currentOfficialDocument.pageCountConfirmed を実態に合わせて設定",
+   "currentOfficialDocument.publicationDateConfirmed を実態に合わせて設定",
+   "currentOfficialDocument.binaryHashConfirmed を実態に合わせて設定",
+   "validation.pdfSha256Confirmed をレビュー検証実績に合わせて設定",
+   "validation.fullTextRepositoryReviewComplete をレビュー検証実績に合わせて設定",
+   "validation.visualFigureReviewComplete をレビュー検証実績に合わせて設定",
+   "validation.independentDoubleCheck をレビュー検証実績に合わせて設定"
+  ]
+ }
 }

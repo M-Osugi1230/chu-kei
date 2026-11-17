@@ -16,6 +16,13 @@ Supported source-resolution states:
    are additionally cross-validated, in completion context, by the
    independent-completions validator; here they are checked for identity and
    canonical-source well-formedness.
+6. A genuine official document that is not a formal management plan at all
+   (for example a growth potential disclosure whose issuer states the next
+   plan is yet to be formulated) is isolated until a formal plan appears.
+7. A source resolution whose primary review was completed on a track that
+   does not report through the canonical ledger is accepted when the review
+   artifact itself evidences completion and any pending binary hash is
+   declared explicitly rather than invented.
 
 This validator never approves a review, infers a fact, or converts a pending
 record into a completed one.
@@ -340,20 +347,122 @@ def validate_completed_legacy_resolution(
     }
 
 
+def validate_completed_noncanonical_resolution(
+    repair: dict[str, Any],
+    repair_path: Path,
+    repo_root: Path,
+) -> dict[str, Any]:
+    """A source resolution whose primary review was completed on a track that
+    does not report through the canonical current-status ledger (for example
+    the L1 seed or audited-patch tracks). The review artifact itself is the
+    completion evidence; binary hashes may still be pending, but only when
+    the record declares that state explicitly instead of inventing a hash.
+    """
+    code = company_code(repair, repair_path)
+
+    require_true(repair, "primaryReviewComplete", str(repair_path))
+    for key in (
+        "automaticFactCompletionAllowed",
+        "automaticApprovalAllowed",
+        "deepVerificationApproved",
+    ):
+        require_false(repair, key, str(repair_path))
+
+    phase2_dir = repo_root / "operations/quality-rebase/phase2"
+    candidates: list[Path] = []
+    declared_review = repair.get("primaryReviewFile")
+    if isinstance(declared_review, str) and declared_review:
+        candidates.append(repo_root / declared_review)
+    for directory_name in ("reviews", "primary-reviews"):
+        candidates.extend(
+            sorted((phase2_dir / directory_name).glob(f"{code}-*primary-review-v*.json"))
+        )
+    review = None
+    for candidate in candidates:
+        if not candidate.exists():
+            continue
+        payload = load_json(candidate)
+        payload_company = payload.get("company")
+        if isinstance(payload_company, dict) and str(payload_company.get("code")) == code:
+            review = payload
+            break
+    if review is None:
+        raise SystemExit(f"completed primary review file missing for: {code}")
+    review_state = review.get("review")
+    review_status = ""
+    if isinstance(review_state, dict):
+        review_status = str(review_state.get("status", ""))
+    if not review_status.startswith("primary_review_complete"):
+        raise SystemExit(f"primary review is not complete for resolved source: {code}")
+
+    classification = repair.get("documentClassification")
+    if not isinstance(classification, str) or not classification:
+        raise SystemExit(f"documentClassification missing: {repair_path}")
+
+    boundary = repair.get("formalPlanBoundary")
+    if not isinstance(boundary, dict) or not isinstance(boundary.get("statement"), str):
+        raise SystemExit(f"formalPlanBoundary evidence missing: {repair_path}")
+
+    validation = repair.get("validation")
+    if not isinstance(validation, dict):
+        raise SystemExit(f"validation section missing: {repair_path}")
+
+    def check_document(document: Any, location: str, url_key: str) -> None:
+        if not isinstance(document, dict):
+            raise SystemExit(f"official document section missing: {location}")
+        validate_https_url(document.get(url_key), f"{location}.{url_key}")
+        page_count = document.get("pageCount")
+        if not isinstance(page_count, int) or page_count <= 0:
+            raise SystemExit(f"{location}.pageCount must be positive")
+        digest = document.get("pdfSha256")
+        if digest is not None:
+            if not isinstance(digest, str) or not SHA256_PATTERN.fullmatch(digest):
+                raise SystemExit(f"{location}.pdfSha256 must be lowercase SHA-256")
+        else:
+            hash_status = document.get("binaryHashStatus")
+            if not isinstance(hash_status, str) or not hash_status.startswith("pending"):
+                raise SystemExit(
+                    f"{location} lacks pdfSha256 without a declared pending hash status"
+                )
+
+    document = repair.get("currentOfficialDocument")
+    if isinstance(document, dict):
+        for key in ("identityConfirmed", "pageCountConfirmed", "publicationDateConfirmed"):
+            require_true(document, key, f"{repair_path}.currentOfficialDocument")
+        check_document(document, f"{repair_path}.currentOfficialDocument", "pdfUrl")
+    else:
+        sources = repair.get("currentOfficialSources")
+        formal_plan = sources.get("formalPlanPdf") if isinstance(sources, dict) else None
+        if not isinstance(formal_plan, dict):
+            raise SystemExit(f"no official document section: {repair_path}")
+        check_document(formal_plan, f"{repair_path}.currentOfficialSources.formalPlanPdf", "url")
+
+    return {
+        "code": code,
+        "mode": "completed_primary_review_source_resolution",
+        "quarantined": False,
+        "resolutionStatus": repair.get("resolutionStatus"),
+    }
+
+
 def validate_legacy_resolution(
     repair: dict[str, Any],
     repair_path: Path,
     repo_root: Path,
     completed_records: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
+    if repair.get("primaryReviewComplete") is True:
+        if str(repair.get("company", {}).get("code", "")) in completed_records:
+            return validate_completed_legacy_resolution(
+                repair, repair_path, repo_root, completed_records
+            )
+        return validate_completed_noncanonical_resolution(
+            repair, repair_path, repo_root
+        )
+
     incorrect = repair.get("incorrectCandidate")
     if isinstance(incorrect, dict) and incorrect.get("mayEnterPrimaryReview") is False:
         return validate_legacy_quarantine(repair, repair_path, repo_root, completed_records)
-
-    if repair.get("primaryReviewComplete") is True:
-        return validate_completed_legacy_resolution(
-            repair, repair_path, repo_root, completed_records
-        )
 
     raise SystemExit(
         f"legacy source resolution is neither quarantined nor completed: {repair_path}"
@@ -418,14 +527,89 @@ def validate_corrected_official_source(
     }
 
 
+def validate_formal_plan_boundary_quarantine(
+    repair: dict[str, Any],
+    repair_path: Path,
+    repo_root: Path,
+    completed_records: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    """The candidate is a genuine official document (for example a growth
+    potential disclosure) that is not a formal management plan at all, so the
+    source is isolated until a formal plan is published. Unlike the
+    quantified-plan quarantine, no management roadmap is confirmed here; the
+    document itself states that the next plan has yet to be formulated.
+    """
+    code = company_code(repair, repair_path)
+
+    candidate = repair.get("candidate")
+    if not isinstance(candidate, dict):
+        raise SystemExit(f"candidate missing: {repair_path}")
+    for key in ("title", "candidatePublishedDate"):
+        if not isinstance(candidate.get(key), str) or not candidate.get(key):
+            raise SystemExit(f"candidate.{key} missing: {repair_path}")
+    validate_pdf_identity(candidate, f"{repair_path}.candidate")
+
+    finding = repair.get("finding")
+    if not isinstance(finding, dict):
+        raise SystemExit(f"finding missing: {repair_path}")
+    if finding.get("type") != "formal_management_plan_boundary_not_met":
+        raise SystemExit(f"unsupported boundary finding: {repair_path}")
+    require_true(finding, "sourceIdentityConfirmed", f"{repair_path}.finding")
+    require_false(finding, "formalManagementPlanConfirmed", f"{repair_path}.finding")
+    evidence = finding.get("evidence")
+    if not isinstance(evidence, list) or not evidence:
+        raise SystemExit(f"finding.evidence missing: {repair_path}")
+    if not isinstance(finding.get("reason"), str) or not finding.get("reason"):
+        raise SystemExit(f"finding.reason missing: {repair_path}")
+
+    resolution = repair.get("resolution")
+    if not isinstance(resolution, dict):
+        raise SystemExit(f"resolution missing: {repair_path}")
+    if resolution.get("status") != "source_isolated_formal_plan_search_required":
+        raise SystemExit(f"unsupported boundary resolution: {repair_path}")
+    require_false(resolution, "waveEligibility", f"{repair_path}.resolution")
+    require_true(resolution, "replacementRequired", f"{repair_path}.resolution")
+    next_actions = resolution.get("nextActions")
+    if not isinstance(next_actions, list) or not next_actions:
+        raise SystemExit(f"resolution.nextActions missing: {repair_path}")
+
+    approval = repair.get("approval")
+    if not isinstance(approval, dict):
+        raise SystemExit(f"approval missing: {repair_path}")
+    require_false(approval, "automaticApprovalAllowed", f"{repair_path}.approval")
+    require_false(approval, "deepVerificationApproved", f"{repair_path}.approval")
+
+    assert_not_completed_elsewhere(code, repo_root, completed_records)
+
+    return {
+        "code": code,
+        "mode": "formal_plan_boundary_quarantine",
+        "quarantined": True,
+        "resolutionStatus": resolution.get("status"),
+    }
+
+
 def validate_corrected_schema(
     repair: dict[str, Any],
     repair_path: Path,
     repo_root: Path,
     completed_records: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
+    if repair.get("primaryReviewComplete") is True:
+        if str(repair.get("company", {}).get("code", "")) in completed_records:
+            return validate_completed_legacy_resolution(
+                repair, repair_path, repo_root, completed_records
+            )
+        return validate_completed_noncanonical_resolution(
+            repair, repair_path, repo_root
+        )
     resolution = repair.get("resolution")
     if isinstance(resolution, dict) and resolution.get("waveEligibility") is False:
+        finding = repair.get("finding")
+        if isinstance(finding, dict) and finding.get("type") == "formal_management_plan_boundary_not_met":
+            return validate_formal_plan_boundary_quarantine(
+                repair, repair_path, repo_root, completed_records
+            )
         return validate_quantified_plan_quarantine(
             repair, repair_path, repo_root, completed_records
         )
@@ -532,6 +716,16 @@ def main() -> None:
                     1
                     for result in results
                     if result["mode"] == "independent_source_resolution"
+                ),
+                "formalPlanBoundaryQuarantines": sum(
+                    1
+                    for result in results
+                    if result["mode"] == "formal_plan_boundary_quarantine"
+                ),
+                "completedPrimaryReviewSourceResolutions": sum(
+                    1
+                    for result in results
+                    if result["mode"] == "completed_primary_review_source_resolution"
                 ),
                 "deepVerificationApproved": 0,
                 "records": results,

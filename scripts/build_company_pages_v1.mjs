@@ -1,6 +1,8 @@
 // Chu-kei Insight: 企業別静的ページ生成 (SEO)
 // 検索インデックス (company-index.json.gz) の正本データだけを使い、
 // 中計判定済み企業についてインデックス可能な静的HTMLを生成する。
+// 各社の詳細レコード (site/data/frontend/details-NNN.json.gz) があれば、
+// 計画名・計画期間、数値目標、資本政策、株主還元、ハイライト、出典を追加する。
 // 生成物は site/company/<code>.html と site/sitemap.xml への企業URL追加。
 // データ更新後は `node scripts/build_company_pages_v1.mjs` で再生成すること。
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
@@ -20,25 +22,52 @@ const STATUS_LABEL = {
 const MARKET_LABEL = { Prime: '東証プライム', Standard: '東証スタンダード', Growth: '東証グロース' };
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const hasText = (v) => typeof v === 'string' && v.trim() !== '';
 
 const indexGz = readFileSync(join(root, 'site/data/frontend/company-index.json.gz'));
 const index = JSON.parse(gunzipSync(indexGz).toString('utf8'));
 const companies = (index.companies || []).filter((c) => RESOLVED.has(c.planStatus));
 companies.sort((a, b) => String(a.code).localeCompare(String(b.code)));
 
+// 詳細シャードの読み込み（同一シャードは1回だけ読む）
+const detailCache = new Map();
+function loadDetailShard(detailFile) {
+  if (detailCache.has(detailFile)) return detailCache.get(detailFile);
+  const byCode = new Map();
+  try {
+    const gz = readFileSync(join(root, 'site/data/frontend', detailFile));
+    const parsed = JSON.parse(gunzipSync(gz).toString('utf8'));
+    const records = Array.isArray(parsed) ? parsed : (parsed.companies || []);
+    for (const r of records) {
+      if (r && r.code != null) byCode.set(String(r.code), r);
+    }
+  } catch (e) {
+    console.warn(`詳細シャードの読み込みに失敗しました: ${detailFile}: ${e.message}`);
+  }
+  detailCache.set(detailFile, byCode);
+  return byCode;
+}
+function getDetail(c) {
+  if (!c || !c.detailFile) return null;
+  return loadDetailShard(c.detailFile).get(String(c.code)) || null;
+}
+
 mkdirSync(join(root, 'site/company'), { recursive: true });
 
-function page(c) {
+function page(c, d = null) {
   const market = MARKET_LABEL[c.market] || c.market || '';
   const status = STATUS_LABEL[c.planStatus] || c.planStatus;
   const title = `${c.name}（${c.code}）の中期経営計画 | Chu-kei Insight`;
   const desc = `${c.name}（証券コード${c.code}、${market}、${c.industry || ''}）の中期経営計画の確認状況と概要。${status}。一次情報に基づく確認日と品質レベルを掲載。`;
   const url = `${SITE_ORIGIN}/company/${c.code}.html`;
+  const summary = hasText(d?.summary) ? d.summary : c.summary;
   const rows = [
     ['証券コード', c.code],
     ['市場', market],
     ['業種', c.industry],
     ['中期経営計画の状態', status],
+    ['計画名', d?.document],
+    ['計画期間', d?.period],
     ['計画公表日', c.planPublishedDate],
     ['状態確認日', c.planStatusCheckedAt],
     ['最終確認日', c.lastVerifiedDate],
@@ -52,8 +81,42 @@ function page(c) {
     name: title,
     url,
     description: desc,
+    ...(c.lastVerifiedDate ? { dateModified: c.lastVerifiedDate } : {}),
+    inLanguage: 'ja',
     about: { '@type': 'Organization', name: c.name, tickerSymbol: c.code },
   };
+  const overviewHeading = hasText(d?.document) || hasText(d?.period)
+    ? '  <h2>中期経営計画の概要</h2>\n'
+    : '';
+
+  const sections = [];
+  const targets = [
+    ['売上高・収益', d?.revenue],
+    ['利益', d?.profit],
+    ['収益性・資本効率', d?.margin],
+  ].filter(([, v]) => hasText(v));
+  if (targets.length) {
+    sections.push(`  <section>\n    <h2>数値目標</h2>\n${targets.map(([label, v]) => `    <h3>${esc(label)}</h3>\n    <p>${esc(v)}</p>`).join('\n')}\n  </section>`);
+  }
+  if (hasText(d?.capital)) {
+    sections.push(`  <section>\n    <h2>資本政策</h2>\n    <p>${esc(d.capital)}</p>\n  </section>`);
+  }
+  if (hasText(d?.returnPolicy)) {
+    sections.push(`  <section>\n    <h2>株主還元</h2>\n    <p>${esc(d.returnPolicy)}</p>\n  </section>`);
+  }
+  const highlights = Array.isArray(d?.highlights) ? d.highlights.filter((v) => hasText(v)) : [];
+  if (highlights.length) {
+    sections.push(`  <section>\n    <h2>ハイライト</h2>\n    <ul>\n${highlights.map((v) => `      <li>${esc(v)}</li>`).join('\n')}\n    </ul>\n  </section>`);
+  }
+  if (hasText(d?.sourceUrl) || hasText(d?.document)) {
+    const linkText = hasText(d?.document) ? `公式資料（${d.document}）` : '公式資料';
+    const sourceBody = hasText(d?.sourceUrl)
+      ? `<a href="${esc(d.sourceUrl)}">${esc(linkText)}</a>`
+      : esc(d.document);
+    sections.push(`  <section>\n    <h2>出典</h2>\n    <p>${sourceBody}</p>\n  </section>`);
+  }
+  const extraSections = sections.length ? `\n${sections.join('\n')}` : '';
+
   return `<!doctype html>
 <html lang="ja">
 <head>
@@ -74,12 +137,12 @@ function page(c) {
 </header>
 <main>
   <h1>${esc(c.name)}（${esc(c.code)}）の中期経営計画</h1>
-  <p>${esc(c.summary || '')}</p>
-  <table>
+  <p>${esc(summary || '')}</p>
+${overviewHeading}  <table>
     <tbody>
 ${table}
     </tbody>
-  </table>
+  </table>${extraSections}
   <p><a href="/?company=${encodeURIComponent(c.code)}">この企業の詳細・数値目標・比較をワークスペースで見る</a></p>
   <p>本ページは企業の公式開示に基づく確認状況の要約です。未確認の項目は未確認と表示し、推測で補完することはありません。投資助言・銘柄推奨を目的としたものではありません。</p>
 </main>
@@ -92,7 +155,7 @@ ${table}
 }
 
 for (const c of companies) {
-  writeFileSync(join(root, 'site/company', `${c.code}.html`), page(c));
+  writeFileSync(join(root, 'site/company', `${c.code}.html`), page(c, getDetail(c)));
 }
 
 // sitemap: 既存の基幹URLを保持し、企業URLを差し替える

@@ -1,0 +1,120 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "5981",
+  "name": "東京製綱",
+  "market": "Prime",
+  "industry": "金属製品"
+ },
+ "source": {
+  "title": "新中期経営計画『TCTRX』",
+  "publishedDate": "2024-05-13",
+  "officialUrl": "https://www2.jpx.co.jp/disc/59810/140120240513591995.pdf",
+  "pdfSha256": "a8627367df557d4fd7f1238c07989791376d77b2fcc74aaf05b4649dda21184d",
+  "pageCount": 4,
+  "documentClassification": "formal_management_plan_adoption_notice_with_full_target_set",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "東京製綱の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2025年3月期",
+   "endFiscalYear": "2027年3月期",
+   "terminalFiscalYear": "2027年3月期",
+   "statement": "2025年3月期から2027年3月期の3か年計画。2027年3月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "新中期経営計画『TCTRX』",
+   "currentStatus": "current",
+   "statement": "本資料は4ページの策定のお知らせだが、新中計TCTRXの最終年度目標表を収録しているため計画文書として扱う。前中期経営計画の目標・実績は現行目標とは分離する。EBITDAの目標値は抽出テキストで数値対応を確定できなかったため登録しない。"
+  }
+ },
+ "summary": "社会インフラの維持・更新需要や防災・減災需要を取り込む3か年計画「TCTRX」。2027年3月期に売上高680億円、営業利益45億円、ROE8.4%を目指す。ワイヤロープ・鋼線・産業用機械などの基盤事業の収益力を高め、成長分野への展開と海外事業の強化を進める。",
+ "strategyThemes": [
+  {
+   "theme": "基盤事業の収益力強化"
+  },
+  {
+   "theme": "社会インフラの維持・更新需要への対応"
+  },
+  {
+   "theme": "成長分野への展開と海外事業の強化"
+  },
+  {
+   "theme": "生産体制の効率化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 680,
+   "unit": "億円",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 45,
+   "unit": "億円",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 8.4,
+   "unit": "%",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

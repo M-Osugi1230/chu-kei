@@ -1,0 +1,109 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "3231",
+  "name": "野村不動産ホールディングス",
+  "market": "Prime",
+  "industry": "不動産業"
+ },
+ "source": {
+  "title": "経営計画（長期経営方針・3カ年計画（2026/3期～2028/3期））説明資料",
+  "publishedDate": "2025-04-24",
+  "officialUrl": "https://www.nomura-re-hd.co.jp/ir/pdf/plan2025_presen.pdf",
+  "pdfSha256": "096355c8522c2a500087c43c47d1b773a5fae0cb2b5e7f5eef810ce36813332c",
+  "pageCount": 41,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "野村不動産ホールディングスの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2026年3月期",
+   "endFiscalYear": "2028年3月期",
+   "terminalFiscalYear": "2028年3月期",
+   "statement": "3カ年計画は2026年3月期〜2028年3月期。2028年3月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "経営計画（長期経営方針・3カ年計画（2026/3期～2028/3期））説明資料",
+   "currentStatus": "current",
+   "statement": "同社は従来の9カ年中長期経営計画（3年ごと見直し）の形式を変更し、「長期経営方針」と「3カ年計画」に分けて策定する方式へ移行した。長期経営方針の財務指針（2026/3期〜2030年頃：ROA5%以上、ROE10%以上、事業利益年平均成長率8%水準、自己資本比率30%水準、総還元性向40〜50%）は長期の指針であり、3カ年計画の目標（2028年3月期 事業利益1,600億円）とは分離する。"
+  }
+ },
+ "summary": "長期経営方針と3カ年計画を組み合わせ、持続的な利益成長と資産・資本効率の向上を目指す。賃貸住宅、ホテル、シニア住宅、物流施設などの成長事業への投資を重点化する。開発事業と賃貸事業における外部投資家資金の活用や、収益不動産の売却による資産回転を推進する。海外事業の成長、グループ内連携、戦略的M&Aを通じて事業基盤を強化する。",
+ "strategyThemes": [
+  {
+   "theme": "賃貸住宅・ホテル・シニア住宅・物流施設への重点投資"
+  },
+  {
+   "theme": "開発事業・賃貸事業への投資家資金導入"
+  },
+  {
+   "theme": "グループ内連携と野村グループとの連携強化"
+  },
+  {
+   "theme": "海外事業の将来収益拡大"
+  },
+  {
+   "theme": "戦略投資・M&Aによる成長加速"
+  },
+  {
+   "theme": "資産回転とバランスシート管理の高度化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "事業利益",
+   "target": 1600,
+   "unit": "億円",
+   "targetFiscalYear": "2028年3月期",
+   "evidencePdfPages": [
+    19
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "investment_recycling_and_bs_control",
+  "policy": "2026/3期～2028/3期に基幹事業への継続投資と成長事業への投資拡大を実施する。賃貸資産ポートフォリオの見直しと収益不動産の売却を通じて投資回収を進め、バランスシートの過度な拡大を抑制する。投資・回収計画およびキャピタルアロケーション計画を設定する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "long_term_guideline_total_return_40_50pct",
+  "policy": "総還元性向40〜50%は長期経営方針の財務指針（2026/3期〜2030年頃）として示されたものであり、3カ年計画期間の還元目標として切り分けられていない。本資料の範囲では計画期間に紐づく具体的な配当性向・自己株式取得方針の数値は確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:10:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認",
+   "公表日は #288 再確認記録（2025年4月24日策定発表）に基づく。本説明資料自体に日付の印刷はなく、PDFメタデータの作成日は2025年6月25日（再アップロードの可能性）であり、公表日の原寸再確認が望ましい"
+  ]
+ }
+}

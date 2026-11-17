@@ -1,0 +1,103 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "5463",
+  "name": "丸一鋼管",
+  "market": "Prime",
+  "industry": "鉄鋼"
+ },
+ "source": {
+  "title": "第7次中期経営計画",
+  "publishedDate": "2024-04-05",
+  "officialUrl": "https://www2.jpx.co.jp/disc/54630/140120240404566344.pdf",
+  "pdfSha256": "1add7441c1db4f9066b8983e0fee4f26e7a67ed70a15cd394816bad1c2a79020",
+  "pageCount": 40,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "丸一鋼管の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2024年度",
+   "endFiscalYear": "2026年度",
+   "terminalFiscalYear": "2026年度",
+   "statement": "2024年度〜2026年度の3か年計画。2026年度が最終年度。公表資料の日付は2024年4月5日。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "第7次中期経営計画",
+   "currentStatus": "current",
+   "statement": "現行計画は第7次中期経営計画。営業利益の最終年度目標は抽出テキストで表の対応を確定できなかったため登録しない。"
+  }
+ },
+ "summary": "鋼管事業の3か年計画（第7次中期経営計画）。2026年度に売上高3,000億円を目指す。北米を中心とする海外拠点の収益力強化と国内生産体制の効率化、高付加価値製品の拡充を進める。",
+ "strategyThemes": [
+  {
+   "theme": "海外事業の拡大と収益力強化"
+  },
+  {
+   "theme": "高付加価値鋼管製品の拡充"
+  },
+  {
+   "theme": "国内生産体制の効率化"
+  },
+  {
+   "theme": "資本効率の向上"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 3000,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    6
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認",
+   "営業利益の最終年度目標値は抽出テキストの図表から確定できなかったため未登録"
+  ]
+ }
+}

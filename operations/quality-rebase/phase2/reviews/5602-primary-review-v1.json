@@ -1,0 +1,103 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "5602",
+  "name": "栗本鐵工所",
+  "market": "Prime",
+  "industry": "鉄鋼"
+ },
+ "source": {
+  "title": "中期経営計画「KURIMOTO 100th Plan」",
+  "publishedDate": "2024-05-14",
+  "officialUrl": "https://www2.jpx.co.jp/disc/56020/140120240513591055.pdf",
+  "pdfSha256": "7cc1f80f2d0ad184daea2f96394bf59fee4938d01fabe25f4ffd9cb50b4457b0",
+  "pageCount": 50,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "栗本鐵工所の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2024年度",
+   "endFiscalYear": "2026年度",
+   "terminalFiscalYear": "2026年度",
+   "statement": "2024年度〜2026年度の3か年計画。2026年度が最終年度。公表資料の日付は2024年5月14日。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画「KURIMOTO 100th Plan」",
+   "currentStatus": "current",
+   "statement": "現行計画は中期経営計画「KURIMOTO 100th Plan」。営業利益等の数値は抽出テキストで計画表の対応を確定できなかったため登録しない。"
+  }
+ },
+ "summary": "鋳鉄管・バルブ・機械事業を基盤とする3か年計画「KURIMOTO 100th Plan」。2026年度に売上高1,300億円を目指す。インフラ更新需要の取り込みと環境・エネルギー関連の新規分野への展開、海外事業の拡大を進める。",
+ "strategyThemes": [
+  {
+   "theme": "既存事業の収益力強化"
+  },
+  {
+   "theme": "環境・エネルギー関連新規事業の育成"
+  },
+  {
+   "theme": "海外事業の拡大"
+  },
+  {
+   "theme": "生産体制の最適化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 1300,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    9
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認",
+   "営業利益・ROE等の目標値は抽出テキストの図表から確定できなかったため未登録"
+  ]
+ }
+}

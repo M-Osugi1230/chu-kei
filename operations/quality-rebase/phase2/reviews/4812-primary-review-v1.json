@@ -1,0 +1,142 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "4812",
+  "name": "電通総研",
+  "market": "Prime",
+  "industry": "情報・通信業"
+ },
+ "source": {
+  "title": "社会進化実装 2027",
+  "publishedDate": "2025-02-12",
+  "officialUrl": "https://www2.jpx.co.jp/disc/48120/140120250206565754.pdf",
+  "pdfSha256": "7d966e063977fc8f4773a4bbd30bba269abab17c58cdc6ca2442c779e06e27ae",
+  "pageCount": 25,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "電通総研の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2025年12月期",
+   "endFiscalYear": "2027年12月期",
+   "terminalFiscalYear": "2027年12月期",
+   "statement": "同社は12月決算。2025年12月期〜2027年12月期の3か年計画。2027年12月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "社会進化実装 2027",
+   "currentStatus": "current",
+   "statement": "Vision 2030の数値（売上高3,000億円・営業利益率20％）は長期ビジョンであり、本計画（2025〜2027年度）の目標とは分離する。"
+  }
+ },
+ "summary": "Vision 2030に向けた第2段階として、新しい基盤の上でさらなる挑戦を進める3年間の計画。システムインテグレーション、コンサルティング、シンクタンクの3機能を組み合わせて社会進化を実装する。企業変革・社会変革起点での価値提供、ソリューション強化、経営基盤強化を基本方針とする。先端技術の活用、外部連携、独自製品強化、人的資本拡充によって高付加価値化を目指す。",
+ "strategyThemes": [
+  {
+   "theme": "企業変革・社会変革起点での価値提供"
+  },
+  {
+   "theme": "営業機能と技術機能の統合"
+  },
+  {
+   "theme": "生成AI等の先端テクノロジー活用"
+  },
+  {
+   "theme": "外部連携と独自ソリューション強化"
+  },
+  {
+   "theme": "新製品・新事業開発の推進"
+  },
+  {
+   "theme": "人的資本強化と経営基盤改革"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 2100,
+   "unit": "億円",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    17
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 315,
+   "unit": "億円",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    17
+   ]
+  },
+  {
+   "metric": "営業利益率",
+   "target": 15.0,
+   "unit": "%",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    17
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 18.0,
+   "unit": "%以上",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    17
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "growth_investment_frame_750oku",
+  "policy": "技術・製品・DX投資および出資・M&Aに向けて750億円の成長投資枠を準備する。手元資金とフリーキャッシュフローを活用し、財務健全性に配慮した投資を実行する。資金調達時には自己資本比率50％以上の維持を目安とする。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_to_50pct_by_2027",
+  "policy": "適正かつ安定的な配当を継続し、業績成長と配当性向向上を通じて株主還元を強化する。連結配当性向の目安を従来の40.0％以上から引き上げ、2027年度50.0％を目指す。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:15:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ },
+ "planEndCorrection": {
+  "date": "2026-11-17",
+  "appliedIn": "Milestone 1 batch 03 (review correction before first registration build)",
+  "previousDerivedPlanEndDate": "2028-03-31",
+  "correctPlanEndDate": "2027-12-31",
+  "evidence": "同社は12月決算であり、計画文書内に「2024年12月期」等の表記を確認した。年度表記からの3月期前提の導出を是正する。"
+ }
+}

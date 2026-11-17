@@ -1,0 +1,126 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "6507",
+  "name": "シンフォニアテクノロジー",
+  "market": "Prime",
+  "industry": "電気機器"
+ },
+ "source": {
+  "title": "SINFONIA NEXT DREAM",
+  "publishedDate": "2025-05-13",
+  "officialUrl": "https://www2.jpx.co.jp/disc/65070/140120250508533782.pdf",
+  "pdfSha256": "01d9337f79640d1a863bfab237d409efda71fa89548b8bc5398cccab6cf07b60",
+  "pageCount": 2,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "シンフォニアテクノロジーの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2025年度",
+   "endFiscalYear": "2027年度",
+   "terminalFiscalYear": "2027年度",
+   "statement": "2025年度〜2027年度の3か年計画。2027年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "SINFONIA NEXT DREAM",
+   "currentStatus": "current",
+   "statement": "現行計画は中期経営計画「SINFONIA NEXT DREAM」（2025〜2027年度）。数値目標表は画像配置だが、抽出テキストおよび #288 再確認で2027年度目標（売上高1,600億円・営業利益率14％・ROE15％）を確認した。"
+  }
+ },
+ "summary": "技術開発力・対応力によって顧客満足度を高める技術オリエンテッド型の事業拡大を推進する。半導体関連市場の領域拡大と航空宇宙事業の生産能力拡充を成長の牽引役とする。モーター、モータードライブ、パワーエレクトロニクスのコア技術を強化し、事業ポートフォリオを変革する。設備投資、技術者育成、自動化、デジタル化によって成長基盤を構築する。",
+ "strategyThemes": [
+  {
+   "theme": "半導体関連分野での事業領域拡大"
+  },
+  {
+   "theme": "航空宇宙事業のキャパシティ倍増"
+  },
+  {
+   "theme": "コア技術強化と製品ポートフォリオ変革"
+  },
+  {
+   "theme": "技術者増強と技術開発体制強化"
+  },
+  {
+   "theme": "生産能力増強・自動化・デジタル化"
+  },
+  {
+   "theme": "組織・文化改革と人的資本強化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 1600,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "営業利益率",
+   "target": 14,
+   "unit": "%",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 15,
+   "unit": "%",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    2
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "cash_allocation_620oku",
+  "policy": "2025～2027年度の3年間で営業キャッシュフローおよび資産圧縮・有効活用等による620億円を原資とする。2030年に向けた拡大投資320億円、更新・自動化投資等180億円を計画する。政策保有株式の縮減、M&Aを含む外部協業、技術開発センター設立なども推進する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_30pct_guide",
+  "policy": "安定配当を前提に配当性向30％を目安とする。3年間の株主還元額は120億円を想定する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:15:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

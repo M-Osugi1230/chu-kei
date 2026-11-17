@@ -1,0 +1,136 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "5957",
+  "name": "日東精工",
+  "market": "Prime",
+  "industry": "金属製品"
+ },
+ "source": {
+  "title": "中期経営計画「Mission G-final」",
+  "publishedDate": "2026-02-10",
+  "officialUrl": "https://www2.jpx.co.jp/disc/59570/140120260210553572.pdf",
+  "pdfSha256": "9b38868476669104b078d2ef02a3eae348f5fed5d95c695d047a27e399a3b1bb",
+  "pageCount": 30,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "日東精工の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2026年12月期",
+   "endFiscalYear": "2028年12月期",
+   "terminalFiscalYear": "2028年12月期",
+   "statement": "同社は12月決算。2026年から2028年までの3か年計画。最終年度は2028年12月期。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画「Mission G-final」",
+   "currentStatus": "current",
+   "statement": "計画名称は「Mission G-final」。4つの戦略（Growth#1 事業拡大戦略、Growth#2 環境戦略、Growth#3 人財戦略、Growth#4 財務戦略）で構成され、最終年度目標として営業利益60億円を最上位目標とする。"
+  }
+ },
+ "summary": "工業用ファスナー・自動組立機・制御システム事業を基盤とする3か年計画「Mission G-final」。最終年度に営業利益60億円を最上位目標とし、売上高632億円、ROIC8%以上、ROE9%以上を目指す。4つの戦略すべてが収益力の源となるよう推進し、環境・人財に関する数値目標も設定している。",
+ "strategyThemes": [
+  {
+   "theme": "Growth#1 事業拡大戦略"
+  },
+  {
+   "theme": "Growth#2 環境戦略"
+  },
+  {
+   "theme": "Growth#3 人財戦略"
+  },
+  {
+   "theme": "Growth#4 財務戦略"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 632,
+   "unit": "億円",
+   "targetFiscalYear": "2028年12月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 60,
+   "unit": "億円",
+   "targetFiscalYear": "2028年12月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "ROIC",
+   "target": 8,
+   "unit": "%以上",
+   "targetFiscalYear": "2028年12月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 9,
+   "unit": "%以上",
+   "targetFiscalYear": "2028年12月期",
+   "evidencePdfPages": [
+    1
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "roic_roe_targets",
+  "policy": "Growth#4 財務戦略としてROIC8%以上・ROE9%以上を目標に資本効率を重視した経営を推進する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [
+  {
+   "metric": "CO2排出量削減（2019年比）",
+   "target": 28,
+   "unit": "%削減",
+   "targetFiscalYear": "2028年12月期"
+  }
+ ],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

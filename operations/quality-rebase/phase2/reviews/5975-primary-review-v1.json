@@ -1,0 +1,111 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "5975",
+  "name": "東プレ",
+  "market": "Prime",
+  "industry": "金属製品"
+ },
+ "source": {
+  "title": "第16次中期経営計画",
+  "publishedDate": "2024-05-14",
+  "officialUrl": "https://www2.jpx.co.jp/disc/59750/140120240510590342.pdf",
+  "pdfSha256": "3f447507e9d0a0a79f08e994b2b7a1a08d8212ae2ac880826fe0768f8042718f",
+  "pageCount": 16,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "東プレの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2024年度",
+   "endFiscalYear": "2026年度",
+   "terminalFiscalYear": "2026年度",
+   "statement": "2024年度〜2026年度の3か年計画。2026年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "第16次中期経営計画",
+   "currentStatus": "current",
+   "statement": "現行計画は第16次中期経営計画。数値目標は連結ベース。"
+  }
+ },
+ "summary": "自動車用プレス関連製品、定温物流関連製品、空調機器・電子機器関連製品の各事業を対象とする3か年計画（第16次中期経営計画）。2026年度に売上高3,900億円、営業利益230億円を目指す。電動化・カーボンニュートラル対応や海外事業の拡大、生産体制の最適化を進める。",
+ "strategyThemes": [
+  {
+   "theme": "既存事業の収益力強化"
+  },
+  {
+   "theme": "電動化・カーボンニュートラル対応"
+  },
+  {
+   "theme": "海外事業の拡大とグローバル生産体制の強化"
+  },
+  {
+   "theme": "生産体制の最適化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 3900,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 230,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    1
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

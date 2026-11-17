@@ -1,0 +1,109 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "9418",
+  "name": "Ｕ－ＮＥＸＴ ＨＯＬＤＩＮＧＳ",
+  "market": "Prime",
+  "industry": "情報・通信業"
+ },
+ "source": {
+  "title": "新中期経営計画「Road to 2030」",
+  "publishedDate": "2025-10-14",
+  "officialUrl": "https://www2.jpx.co.jp/disc/94180/140120251014572506.pdf",
+  "pdfSha256": "2226dd5b339f473ebb63b0072336aabc2849c2b348db297d2f0599fc493d93b1",
+  "pageCount": 41,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "Ｕ－ＮＥＸＴ ＨＯＬＤＩＮＧＳの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2026年8月期",
+   "endFiscalYear": "2030年8月期",
+   "terminalFiscalYear": "2030年8月期",
+   "statement": "2026年8月期〜2030年8月期の5か年計画。2030年8月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "新中期経営計画「Road to 2030」",
+   "currentStatus": "current",
+   "statement": "最終年度目標はレンジ表記（売上高6,000〜6,450億円・営業利益450〜515億円）。ROE・純利益等の目標は抽出テキストで表の列対応を確定できなかったため登録しない。"
+  }
+ },
+ "summary": "エンターテインメント事業を中心とする5か年計画「Road to 2030」。2030年8月期に売上高6,000〜6,450億円、営業利益450〜515億円を目指す。U-NEXTを中心とした事業成長と収益力強化を進める。",
+ "strategyThemes": [
+  {
+   "theme": "U-NEXTを中心としたエンターテインメント事業の成長"
+  },
+  {
+   "theme": "収益力の強化"
+  },
+  {
+   "theme": "グループシナジーの最大化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": "6,000〜6,450",
+   "unit": "億円",
+   "targetFiscalYear": "2030年8月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": "450〜515",
+   "unit": "億円",
+   "targetFiscalYear": "2030年8月期",
+   "evidencePdfPages": [
+    1
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_20_30pct_adjusted",
+  "policy": "親会社株主に帰属する当期純利益にのれん償却費を加算した調整後利益に対して、配当性向20%〜30%を目安とする。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認",
+   "ROE・EBITDA等の目標値は抽出テキストの表の列対応が確定できなかったため未登録（#288 ではROE15%以上・EBITDA600〜675億円と記録）"
+  ]
+ }
+}

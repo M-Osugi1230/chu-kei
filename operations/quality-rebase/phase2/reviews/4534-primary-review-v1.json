@@ -1,0 +1,132 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "4534",
+  "name": "持田製薬",
+  "market": "Prime",
+  "industry": "医薬品"
+ },
+ "source": {
+  "title": "25-27中期経営計画",
+  "publishedDate": "2025-05-12",
+  "officialUrl": "https://www2.jpx.co.jp/disc/45340/140120250512540704.pdf",
+  "pdfSha256": "d7c91112db73021bc9363d5cabe4fdc8da132b57a55a5f92a77adb17b5309fc6",
+  "pageCount": 32,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "持田製薬の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2025年度",
+   "endFiscalYear": "2027年度",
+   "terminalFiscalYear": "2027年度",
+   "statement": "2025年度〜2027年度の3か年計画。2027年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "25-27中期経営計画",
+   "currentStatus": "current",
+   "statement": "2031年度の数値（売上高1,400億円・営業利益210億円・EBITDA＋研究開発費355億円）は長期の「ありたい姿」に対応するものであり、25-27中期経営計画の目標とは分離する。"
+  }
+ },
+ "summary": "2031年のありたい姿の実現に向け、2025～2027年度を成長戦略加速の3年間と位置づける。医薬事業とヘルスケア事業の収益力強化によって計画期間中の成長を支える。バイオマテリアル、核酸医薬、細胞医薬への継続投資を進める。製造体制や組織基盤を強化し、2028年度以降の成長投資による利益貢献につなげる。",
+ "strategyThemes": [
+  {
+   "theme": "医薬事業の収益力強化と主要新薬の拡大"
+  },
+  {
+   "theme": "フラッグシップ医薬品とバイオシミラーの拡充"
+  },
+  {
+   "theme": "ヘルスケア事業の成長"
+  },
+  {
+   "theme": "バイオマテリアル事業の製品開発と上市"
+  },
+  {
+   "theme": "核酸医薬・細胞医薬の研究開発"
+  },
+  {
+   "theme": "グローバル展開と製造・経営基盤強化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 1200,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    11,
+    12,
+    31
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 120,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    11,
+    12,
+    31
+   ]
+  },
+  {
+   "metric": "EBITDA＋研究開発費",
+   "target": 265,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    11,
+    12,
+    31
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "continued_growth_investment",
+  "policy": "バイオマテリアル、核酸医薬、細胞医薬など将来の成長事業に継続投資する。医薬事業では製造体制の強化、自動化・連続生産・DX化、外部リソース活用などを進める。投資総額の明示値は本資料では確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:15:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

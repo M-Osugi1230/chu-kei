@@ -1,0 +1,154 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "4027",
+  "name": "テイカ",
+  "market": "Prime",
+  "industry": "化学"
+ },
+ "source": {
+  "title": "MOVING-10 STAGE3",
+  "publishedDate": "2026-05-13",
+  "officialUrl": "https://www2.jpx.co.jp/disc/40270/140120260512524811.pdf",
+  "pdfSha256": "74925e1fc6c2447a56a079665e5af0e210417575ed4e61f0ac45cca458130673",
+  "pageCount": 20,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "テイカの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2026年度",
+   "endFiscalYear": "2029年度",
+   "terminalFiscalYear": "2029年度",
+   "statement": "2026年度〜2029年度の4か年計画。2029年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "MOVING-10 STAGE3",
+   "currentStatus": "current",
+   "statement": "従来のMOVING-10 STAGE2は前倒しで終結し、本計画（STAGE3）に置き換わった。STAGE2の目標は現行目標として扱わない。"
+  }
+ },
+ "summary": "急速な市場環境の変化に対応するため、従来のMOVING-10 STAGE2を前倒しで終結し、新計画を策定した。営業利益の拡大、新規事業の実現、資本効率の改善を基本方針とする。電子材料・化成品事業と医療・圧電関連事業の成長を重点的に推進する。機能性材料事業の構造改革、資本政策の刷新、経営基盤の強靭化によって企業価値向上を目指す。",
+ "strategyThemes": [
+  {
+   "theme": "電子材料事業の拡大と導電性高分子薬剤の成長"
+  },
+  {
+   "theme": "医療・圧電関連事業の成長"
+  },
+  {
+   "theme": "機能性材料事業の構造改革と収益改善"
+  },
+  {
+   "theme": "新規事業創出とM&A・事業提携の活用"
+  },
+  {
+   "theme": "運転資本効率化と資本収益性の向上"
+  },
+  {
+   "theme": "人的資本強化と脱炭素対応"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 590,
+   "unit": "億円",
+   "targetFiscalYear": "2029年度",
+   "evidencePdfPages": [
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 45,
+   "unit": "億円",
+   "targetFiscalYear": "2029年度",
+   "evidencePdfPages": [
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "metric": "営業利益率",
+   "target": 8,
+   "unit": "%",
+   "targetFiscalYear": "2029年度",
+   "evidencePdfPages": [
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 8,
+   "unit": "%以上",
+   "targetFiscalYear": "2029年度",
+   "evidencePdfPages": [
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "metric": "EBITDA",
+   "target": 73,
+   "unit": "億円",
+   "targetFiscalYear": "2029年度",
+   "evidencePdfPages": [
+    7,
+    8,
+    9
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "growth_investment_over_150oku",
+  "policy": "2026～2029年度の成長投資額150億円以上を計画。M&Aを含む戦略投資を積極活用する。在庫回転期間短縮、回収条件適正化などの運転資本改善と資本効率化を進める。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "doe_3pct_or_payout_100pct_higher",
+  "policy": "DOE3%以上または配当性向100%のいずれか高い方を配当基準とする。2026～2029年度に自己株式取得100億円以上を計画する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:15:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

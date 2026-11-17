@@ -1,0 +1,111 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "2531",
+  "name": "宝ホールディングス",
+  "market": "Prime",
+  "industry": "食料品"
+ },
+ "source": {
+  "title": "宝グループ中期経営計画2030",
+  "publishedDate": "2026-05-13",
+  "officialUrl": "https://www2.jpx.co.jp/disc/25310/140120260513528339.pdf",
+  "pdfSha256": "d97016f4f7b907f25739a1f633f63d5e068030bbe91ea31368145d2d1282abba",
+  "pageCount": 9,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "宝ホールディングスの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2027年3月期",
+   "endFiscalYear": "2031年3月期",
+   "terminalFiscalYear": "2031年3月期",
+   "statement": "2031年3月期を最終年度とする5か年計画。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "宝グループ中期経営計画2030",
+   "currentStatus": "current",
+   "statement": "現行計画は宝グループ中期経営計画2030。ROE9.0%以上は #288 再確認で記録されたが、本レビューの抽出テキスト照合では確認できなかったため財務目標に含めていない。"
+  }
+ },
+ "summary": "宝酒造を中心とした酒類事業と宝ヘルスケアを中心としたバイオ事業の5か年計画。2031年3月期に売上高4,930億円以上、営業利益378億円以上を目指す。海外展開と高付加価値商品の開発、バイオ事業の拡大を進める。",
+ "strategyThemes": [
+  {
+   "theme": "酒類事業の海外展開と高付加価値化"
+  },
+  {
+   "theme": "バイオ事業の成長加速"
+  },
+  {
+   "theme": "国内事業の収益力強化"
+  },
+  {
+   "theme": "サステナビリティ経営の推進"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 4930,
+   "unit": "億円以上",
+   "targetFiscalYear": "2031年3月期",
+   "evidencePdfPages": [
+    4
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 378,
+   "unit": "億円以上",
+   "targetFiscalYear": "2031年3月期",
+   "evidencePdfPages": [
+    4
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "total_return_50pct_5year_cumulative",
+  "policy": "中期経営計画期間の5年累計で総還元性向50％を基本方針とする。自己株式取得は成長投資とのバランスを勘案して機動的に実施する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

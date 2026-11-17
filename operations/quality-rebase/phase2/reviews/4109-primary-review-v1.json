@@ -1,0 +1,123 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "4109",
+  "name": "ステラ ケミファ",
+  "market": "Prime",
+  "industry": "化学"
+ },
+ "source": {
+  "title": "第４次中期経営計画",
+  "publishedDate": "2025-05-09",
+  "officialUrl": "https://www2.jpx.co.jp/disc/41090/140120250509536888.pdf",
+  "pdfSha256": "2e929a783f3cad0a2335cb65f8ab78294a7ac21a43b4e50c3b1db0e3bec07d35",
+  "pageCount": 26,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "ステラ ケミファの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2026年3月期",
+   "endFiscalYear": "2028年3月期",
+   "terminalFiscalYear": "2028年3月期",
+   "statement": "2026年3月期〜2028年3月期の3か年計画。2028年3月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "第４次中期経営計画",
+   "currentStatus": "current",
+   "statement": "現行計画は第４次中期経営計画。第3次中期経営計画の実績・総括は計画目標とは分離する。"
+  }
+ },
+ "summary": "第3次中期経営計画での地盤固めを経て、真の成長に向けた変革期と位置づける3カ年計画。2028年3月期に売上高420億円、営業利益55億円、ROE8.0%以上を目指す。半導体関連製品の海外重点市場への販売強化、電子材料・一般製品の販路拡大、フッ素化学の独自技術を活かした研究開発を推進する。",
+ "strategyThemes": [
+  {
+   "theme": "半導体関連製品の海外重点市場への販売強化"
+  },
+  {
+   "theme": "電子材料・一般製品の販路拡大"
+  },
+  {
+   "theme": "フッ素化学の独自技術を活かした研究開発"
+  },
+  {
+   "theme": "事業成長と価値創造のための経営基盤構築"
+  },
+  {
+   "theme": "デジタル化と人的資本経営の推進"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 420,
+   "unit": "億円",
+   "targetFiscalYear": "2028年3月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 55,
+   "unit": "億円",
+   "targetFiscalYear": "2028年3月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 8.0,
+   "unit": "%以上",
+   "targetFiscalYear": "2028年3月期",
+   "evidencePdfPages": [
+    1
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "roe_target_and_capital_cost_awareness",
+  "policy": "ROE8.0％以上を目標とし、資本コストと株価を意識した経営を推進する。財務・資本戦略およびキャッシュ・アロケーションを計画に盛り込む。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "total_return_over_100pct_3years",
+  "policy": "3年間累計の総還元性向100％以上を目標とする。1株当たり年間配当金170円を下限とする。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

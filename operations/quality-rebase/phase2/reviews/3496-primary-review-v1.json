@@ -1,0 +1,119 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "3496",
+  "name": "アズーム",
+  "market": "Prime",
+  "industry": "不動産業"
+ },
+ "source": {
+  "title": "中期経営計画2030",
+  "publishedDate": "2025-11-13",
+  "officialUrl": "https://www2.jpx.co.jp/disc/34960/140120251113500165.pdf",
+  "pdfSha256": "460ab8092473a5caf6c423488ca32f1d979ccdc90f04ebf51e42e58d6e684aaf",
+  "pageCount": 73,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "アズームの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2026年9月期",
+   "endFiscalYear": "2030年9月期",
+   "terminalFiscalYear": "2030年9月期",
+   "statement": "同社は9月決算。計画の対象は2026〜2030年であり、最終年度は2030年9月期と解釈する。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画2030",
+   "currentStatus": "current",
+   "statement": "現行計画は中期経営計画2030。ROE15%以上は #288 再確認で記録されたが、資料の表が文字化けしており本レビューの抽出テキスト照合では確認できなかったため財務目標に含めていない。"
+  }
+ },
+ "summary": "都市に点在する遊休駐車場や不動産の価値創出を推進する中期経営計画2030。2030年に向けて受託台数12万台、売上高500億円、営業利益125億円を目指す方針が示されている。AI基盤SYNAPSEによる業務効率化と組織知の集約を進め、高収益体質の維持・強化を図る。",
+ "strategyThemes": [
+  {
+   "theme": "遊休駐車場・不動産の価値創出"
+  },
+  {
+   "theme": "駐車場受託事業の拡大"
+  },
+  {
+   "theme": "AI基盤SYNAPSEによる業務効率化"
+  },
+  {
+   "theme": "高収益体質の維持・強化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 500,
+   "unit": "億円",
+   "targetFiscalYear": "2030年9月期",
+   "evidencePdfPages": [
+    3
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 125,
+   "unit": "億円",
+   "targetFiscalYear": "2030年9月期",
+   "evidencePdfPages": [
+    3
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [
+  {
+   "metric": "受託台数",
+   "target": 12,
+   "unit": "万台",
+   "targetFiscalYear": "2030年9月期"
+  }
+ ],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認",
+   "ROE15%以上は #288 再確認の記録にあるが、表の文字化けのため未照合"
+  ]
+ }
+}

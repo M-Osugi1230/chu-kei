@@ -1,0 +1,126 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "8804",
+  "name": "東京建物",
+  "market": "Prime",
+  "industry": "不動産業"
+ },
+ "source": {
+  "title": "中期経営計画 2025-2027年度",
+  "publishedDate": "2025-01-16",
+  "officialUrl": "https://www2.jpx.co.jp/disc/88040/140120250114550128.pdf",
+  "pdfSha256": "0e171455578087061ff3cf4ffe8807ef4c7d8563b4c62a35b46d410bf049e275",
+  "pageCount": 43,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "東京建物の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2025年12月期",
+   "endFiscalYear": "2027年12月期",
+   "terminalFiscalYear": "2027年12月期",
+   "statement": "同社は12月決算。2025年12月期〜2027年12月期の3か年計画。2027年12月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画 2025-2027年度",
+   "currentStatus": "current",
+   "statement": "ROE10％と事業利益ベースROA4％程度は中計期間に関する目標であり、最終年度単独の目標ではないため財務目標には含めない。政策保有株式純資産比率10％以下（2027年末時点）は資本政策の目標として資本政策欄に記録する。"
+  }
+ },
+ "summary": "長期ビジョン「次世代デベロッパーへ」の実現に向け、強靭かつしなやかな事業ポートフォリオの構築を進める。資産回転型事業の加速、海外事業の拡大、分譲マンション事業の成長、大規模再開発を推進する。2027年12月期に事業利益950億円、親会社株主に帰属する当期純利益600億円を目指す。資本効率向上、バランスシート管理、株主還元拡充を一体的に推進する。",
+ "strategyThemes": [
+  {
+   "theme": "投資家向け物件売却事業の加速"
+  },
+  {
+   "theme": "海外事業の拡大"
+  },
+  {
+   "theme": "分譲マンション事業の成長"
+  },
+  {
+   "theme": "大規模再開発の推進"
+  },
+  {
+   "theme": "賃貸資産ポートフォリオの多様化"
+  },
+  {
+   "theme": "資産売却と資本効率の向上"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "事業利益",
+   "target": 950,
+   "unit": "億円",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    10
+   ]
+  },
+  {
+   "metric": "親会社株主に帰属する当期純利益",
+   "target": 600,
+   "unit": "億円",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    10
+   ]
+  },
+  {
+   "metric": "EPS",
+   "target": 290,
+   "unit": "円程度",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    10
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "asset_recycling_and_bs_discipline",
+  "policy": "事業ポートフォリオ戦略に基づき、資産回転型事業を拡大する。計画期間累計で固定資産売却・政策保有株式売却1,300億円以上を目指す。政策保有株式純資産比率を2027年末に10％以下とし、規律あるバランスシート管理を推進する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_40pct_by_2027",
+  "policy": "2027年12月期の配当性向40％を目指す。自己株式取得は株価水準、事業環境、財務状況等を総合的に勘案して機動的に実施する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:20:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

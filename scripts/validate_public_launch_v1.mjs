@@ -29,9 +29,9 @@ assert(index.includes('./contact.html'), 'トップページに問い合わせ�
 assert(index.includes('運営：Chu-kei事務局'), 'トップページに事務局表示がありません。');
 
 assert(contact.includes('name="general-inquiry"'), '一般問い合わせフォーム名がありません。');
-assert(contact.includes('data-netlify="true"'), '一般問い合わせフォームがNetlify Forms形式ではありません。');
-assert(contact.includes('netlify-honeypot="bot-field"'), '一般問い合わせフォームにハニーポットがありません。');
-assert(contact.includes('name="form-name" value="general-inquiry"'), '一般問い合わせフォームのhidden form-nameがありません。');
+assert(contact.includes('action="https://api.web3forms.com/submit"'), '一般問い合わせフォームがWeb3Forms形式ではありません。');
+assert(contact.includes('name="botcheck"'), '一般問い合わせフォームにハニーポットがありません。');
+assert(contact.includes('name="access_key"'), '一般問い合わせフォームのhidden access_keyがありません。');
 assert(contact.includes('運営：Chu-kei事務局'), '問い合わせページに事務局表示がありません。');
 assert(!contact.includes('@'), '問い合わせページにメールアドレスを直接公開しないでください。');
 

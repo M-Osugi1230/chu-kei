@@ -1,14 +1,14 @@
 /**
- * Fail-closed Netlify Forms activation.
+ * Fail-closed Web3Forms activation.
  *
  * HTML forms are hidden by default. They are shown only after a site owner
  * confirms form delivery on the exact origin and records non-sensitive proof.
  * This prevents a successful-looking POST on an unsupported static host.
  */
-// NOTE: Netlify post-processing strips data-netlify attributes from the
-// served HTML once form detection is enabled, so the activation gate must
-// select the (initially hidden) named forms directly. Approval still
-// requires the form name to be listed in the verified configuration.
+// NOTE: Forms POST to the host-independent Web3Forms endpoint. The
+// activation gate selects the (initially hidden) named forms directly.
+// Approval still requires the form name to be listed in the verified
+// configuration.
 const formElements = [...document.querySelectorAll('form[name]')].filter(form => form.hidden);
 
 async function enableVerifiedForms() {
@@ -25,7 +25,7 @@ async function enableVerifiedForms() {
   const configurationVerified =
     config?.schemaVersion === 1 &&
     config?.status === 'verified' &&
-    config?.provider === 'netlify-forms' &&
+    config?.provider === 'web3forms' &&
     config?.verifiedOrigin === location.origin &&
     typeof config?.verifiedAt === 'string' &&
     /^\d{4}-\d{2}-\d{2}T/.test(config.verifiedAt) &&

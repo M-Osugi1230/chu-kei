@@ -6,7 +6,7 @@
   "resolvedCount": 500,
   "detectionCoverage": 0.135648,
   "verifiedOverrideCount": 61,
-  "primaryReviewedOverrideCount": 358,
+  "primaryReviewedOverrideCount": 360,
   "counts": {
     "current": 497,
     "expired": 3,
@@ -6623,20 +6623,30 @@
       "industry": "情報・通信業",
       "status": "current",
       "review": {
-        "checkedAt": "2026-07-20",
-        "sourceUrl": "https://dena.com/jp/ir/investors.html",
-        "sourceTitle": "株主・投資家の皆様へ／2026年3月期決算・中期方針",
-        "sourceType": "first_party_primary",
-        "method": "audited_patch_evidence_v1",
-        "note": "audited patch confirmed formal medium-term plan; period: 2026年3月期～2028年3月期; plan end 2028-03-31"
+        "checkedAt": "2026-11-17",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/24320/140120260227571340.pdf",
+        "sourceTitle": "資本コストや株価を意識した経営の実現に向けた対応について（アップデート）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2027年3月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
-        "assuranceTier": "patch_formal_plan",
-        "period": "2026年3月期～2028年3月期",
-        "planEndDate": "2028-03-31",
-        "planEndBasis": "2028年3月期",
-        "patchFile": "operations/patches/batch61-2432-20260720.json"
+        "referenceDate": "2026-11-17",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "capital_cost_response_disclosing_medium_term_framework",
+        "period": {
+          "startFiscalYear": "2025年3月期",
+          "endFiscalYear": "2027年3月期",
+          "terminalFiscalYear": "2027年3月期",
+          "statement": "今中期戦略期間は2025年3月期～2027年3月期。2027年3月期が最終年度。"
+        },
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2027年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2432-primary-review-v1.json",
+        "publishedDate": "2026-02-27",
+        "supersededByIndependentSeed": false
       }
     },
     {
@@ -22783,20 +22793,30 @@
       "industry": "サービス業",
       "status": "current",
       "review": {
-        "checkedAt": "2026-07-13",
-        "sourceUrl": "https://www.group.dentsu.com/jp/ir/common/pdf/MTMP2025-2027J.pdf",
-        "sourceTitle": "中期経営計画2025-2027",
-        "sourceType": "first_party_primary",
-        "method": "audited_patch_evidence_v1",
-        "note": "audited patch confirmed formal medium-term plan; period: 2025年度〜2027年度; plan end 2028-03-31"
+        "checkedAt": "2026-11-17",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/43240/140120260814520879.pdf",
+        "sourceTitle": "2026年度 第2四半期 決算説明会資料（中期経営計画アップデートを含む）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-12-31 derived from 2028年12月期"
       },
       "derivation": {
-        "referenceDate": "2026-10-04",
-        "assuranceTier": "patch_formal_plan",
-        "period": "2025年度〜2027年度",
-        "planEndDate": "2028-03-31",
-        "planEndBasis": "2027年度",
-        "patchFile": "operations/patches/batch12-4324-20260713.json"
+        "referenceDate": "2026-11-17",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "earnings_presentation_containing_current_plan",
+        "period": {
+          "startFiscalYear": "2026年12月期",
+          "endFiscalYear": "2028年12月期",
+          "terminalFiscalYear": "2028年12月期",
+          "statement": "同社は12月決算。アップデートにより計画は2026ー2028年の計画として再設計され、最終年度は2028年12月期。"
+        },
+        "planEndDate": "2028-12-31",
+        "planEndBasis": "2028年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4324-primary-review-v1.json",
+        "publishedDate": "2026-08-14",
+        "supersededByIndependentSeed": false
       }
     },
     {

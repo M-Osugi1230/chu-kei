@@ -102,11 +102,11 @@ const pricingHtml=text('site/pricing.html');
 const contactHtml=text('site/contact.html');
 const thanksHtml=text('site/thanks.html');
 assert(reportsHtml.includes('name="spot-report-request"'));
-assert(reportsHtml.includes('action="/thanks.html"'));
+assert(reportsHtml.includes('action="https://api.web3forms.com/submit"'));
 assert(pricingHtml.includes('name="product-waitlist"'));
-assert(pricingHtml.includes('action="/thanks.html"'));
+assert(pricingHtml.includes('action="https://api.web3forms.com/submit"'));
 assert(contactHtml.includes('name="general-inquiry"'));
-assert(contactHtml.includes('action="/thanks.html"'));
+assert(contactHtml.includes('action="https://api.web3forms.com/submit"'));
 assert(thanksHtml.includes('送信を受け付けました'));
 for(const offer of offers.offers){
   assert(reportsHtml.includes(offer.id),`report intake must use canonical offer id: ${offer.id}`);

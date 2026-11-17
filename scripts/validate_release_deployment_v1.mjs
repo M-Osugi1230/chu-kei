@@ -9,9 +9,10 @@ const milestone=fs.existsSync(MILESTONE)?JSON.parse(fs.readFileSync(MILESTONE,'u
 const check=(name,ok,detail='')=>{checks.push({name,ok,detail});if(!ok)issues.push({name,detail});};
 const required=['index.html','quality.html','404.html','manifest.webmanifest','robots.txt','_headers','assets/app.js','assets/search-core.js','assets/quality.js','assets/styles.css','data/bundle.manifest.json'];
 for(const file of required)check(`${file} exists`,fs.existsSync(path.join(SITE,file)));
-const netlify=fs.readFileSync(path.join(ROOT,'netlify.toml'),'utf8');
-check('Netlify publish directory is site',/publish\s*=\s*["']site["']/.test(netlify));
-check('Netlify build config has no secret literals',!/(token|password|secret)\s*=\s*["'][^"']+/i.test(netlify));
+const headers=fs.readFileSync(path.join(SITE,'_headers'),'utf8');
+check('security headers are configured',/X-Content-Type-Options/.test(headers)&&/frame-ancestors/.test(headers));
+check('CSP allows the Web3Forms form endpoint',/form-action[^;]*https:\/\/api\.web3forms\.com/.test(headers));
+check('hosting config has no secret literals',!/(token|password|secret)\s*=\s*["'][^"']+/i.test(headers));
 const bundle=JSON.parse(fs.readFileSync(path.join(SITE,'data','bundle.manifest.json'),'utf8'));
 const parts=bundle.parts.map(part=>fs.readFileSync(path.join(SITE,'data',part.file)));
 const compressed=Buffer.concat(parts),digest=crypto.createHash('sha256').update(compressed).digest('hex');

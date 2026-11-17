@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "provider": "netlify-forms",
+  "provider": "web3forms",
   "status": "verified",
   "verifiedOrigin": "https://chu-kei.com",
-  "verifiedAt": "2026-11-15T20:37:25+09:00",
+  "verifiedAt": "2026-11-18T00:45:00+09:00",
   "verifiedFormNames": [
     "general-inquiry",
     "spot-report-request",
     "product-waitlist"
   ],
-  "verificationEvidence": "2026-11-15: Canonical domain switched to chu-kei.com (PR #300, merge commit 4ac328c5) and production verified (canonical, og:url, sitemap and robots all served on chu-kei.com). Test POST submissions on the chu-kei.com origin to general-inquiry, spot-report-request and product-waitlist each returned HTTP 200. Intake on the custom domain approved by the site operator on 2026-11-15."
+  "verificationEvidence": "2026-11-18: Hosting migration from Netlify to Cloudflare Pages (owner-approved 2026-11-17). The Web3Forms access key was created by the site owner with notifications to osugimurata@icloud.com, and an API test submission returned success:true ('Form submitted successfully'). Forms POST to https://api.web3forms.com/submit, which is host-independent, so delivery does not depend on the hosting provider. End-to-end submission from the production origin is re-verified at DNS cutover."
 }

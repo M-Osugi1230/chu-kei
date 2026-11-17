@@ -34,8 +34,12 @@
         <h2>調査依頼</h2>
         <p class="form-note">送信内容は依頼対応のみに利用します。送信時点では契約・課金は成立しません。</p>
         <p class="form-note" data-form-availability-status role="status">受付環境の確認中につき、フォームからの送信は一時停止しています。受信確認が完了した後に利用可能になります。</p>
-        <form hidden name="spot-report-request" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="spot-report-request">
+        <form hidden name="spot-report-request" method="POST" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value="4573d233-d1cd-4877-a750-309a0a41d958">
+          <input type="hidden" name="subject" value="[Chu-kei Insight] スポット調査の依頼">
+          <input type="hidden" name="from_name" value="Chu-kei Insight">
+          <input type="hidden" name="redirect" value="https://chu-kei.com/thanks.html">
+          <input type="checkbox" name="botcheck" style="display:none">
           <p hidden><label>入力しないでください <input name="bot-field"></label></p>
           <div class="form-grid">
             <label><span>氏名 *</span><input name="name" required autocomplete="name"></label>

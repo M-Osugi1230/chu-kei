@@ -1,0 +1,139 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "6517",
+  "name": "デンヨー",
+  "market": "Prime",
+  "industry": "電気機器"
+ },
+ "source": {
+  "title": "中期経営計画「Denyo 2026」",
+  "publishedDate": "2024-05-09",
+  "officialUrl": "https://www2.jpx.co.jp/disc/65170/140120240508584661.pdf",
+  "pdfSha256": "1aadb2f9c9ae41c028d972638f76f7324907df57f781cfff6f31891926c34faf",
+  "pageCount": 25,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "デンヨーの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2024年度",
+   "endFiscalYear": "2026年度",
+   "terminalFiscalYear": "2026年度",
+   "statement": "2024年度〜2026年度の3ヵ年計画。最終年度は2026年度（2027年3月期）。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画「Denyo 2026」",
+   "currentStatus": "current",
+   "statement": "2035年度長期ビジョンの数値（2036年3月期 売上高1,000億円・経常利益120億円・経常利益率12％・ROE8％）は長期ビジョンの目標であり、本中期経営計画の最終年度目標とは分離する。"
+  }
+ },
+ "summary": "2035年度長期ビジョンの達成に向け、成長投資と経営基盤の強化を進める3ヵ年計画。パワーソースの提供を通じた社会貢献と持続可能な社会の実現を目指す。2027年3月期に売上高800億円、経常利益80億円、ROE7％を目指す。脱炭素製品の拡販と株主還元の充実にも取り組む。",
+ "strategyThemes": [
+  {
+   "theme": "長期ビジョン実現に向けた成長投資"
+  },
+  {
+   "theme": "パワーソース事業の競争力強化"
+  },
+  {
+   "theme": "脱炭素製品の開発・拡販"
+  },
+  {
+   "theme": "経営基盤の強化"
+  },
+  {
+   "theme": "持続可能な社会への貢献"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 800,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "経常利益",
+   "target": 80,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "経常利益率",
+   "target": 10,
+   "unit": "%",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 7,
+   "unit": "%",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    2
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "growth_investment_for_long_term_vision",
+  "policy": "2035年度長期ビジョンの達成に向けて成長投資と経営基盤整備を推進する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "total_return_ratio_40pct_guide",
+  "policy": "総還元性向40％を目安とする。"
+ },
+ "nonFinancialTargets": [
+  {
+   "metric": "脱炭素製品売上高",
+   "target": 30,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度"
+  }
+ ],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:20:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

@@ -1,0 +1,135 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "8242",
+  "name": "エイチ・ツー・オー リテイリング",
+  "market": "Prime",
+  "industry": "小売業"
+ },
+ "source": {
+  "title": "中期経営計画 2024-2026",
+  "publishedDate": "2024-05-15",
+  "officialUrl": "https://www2.jpx.co.jp/disc/82420/140120240515597987.pdf",
+  "pdfSha256": "6063f5e1249a495fc559ebd3c358724e64dcba8a50e114da50d22cc94b5e8126",
+  "pageCount": 47,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "エイチ・ツー・オー リテイリングの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2024年度",
+   "endFiscalYear": "2026年度",
+   "terminalFiscalYear": "2026年度",
+   "statement": "2024年度〜2026年度の3か年計画。2026年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画 2024-2026",
+   "currentStatus": "current",
+   "statement": "総額売上高は会計上の営業収益とは異なる同社独自の指標である。2030年度のROE8％以上は長期事業構想に関連する目標であり、本計画の財務目標とは分離する。"
+  }
+ },
+ "summary": "長期事業構想2030の実現に向け、既存事業の深化と新たな成長領域の開拓を推進する。国内顧客・店舗ビジネスの強化、海外顧客ビジネスの拡大、新収益源の開発を重点施策とする。2026年度に総額売上高12,360億円、営業利益320億円、ROE6.6％以上、ROIC5.9％を目指す。資本コストを意識した経営、成長投資、株主還元の強化を並行して進める。",
+ "strategyThemes": [
+  {
+   "theme": "国内顧客・店舗ビジネスの深化"
+  },
+  {
+   "theme": "海外顧客ビジネスの強化"
+  },
+  {
+   "theme": "新たな収益源の開発"
+  },
+  {
+   "theme": "グループインフラの整備と活用"
+  },
+  {
+   "theme": "資本コストを意識した経営"
+  },
+  {
+   "theme": "顧客データ・CRMの高度化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "総額売上高",
+   "target": 12360,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    11
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 320,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    11
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 6.6,
+   "unit": "%以上",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    11
+   ]
+  },
+  {
+   "metric": "ROIC",
+   "target": 5.9,
+   "unit": "%",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    11
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "bs_construction_for_portfolio",
+  "policy": "資産売却等で創出したキャッシュを成長投資やM&Aに活用する。目指す事業ポートフォリオに合わせてバランスシートを構築し、財務健全性を確保する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "doe_1_8pct_and_buyback_300oku",
+  "policy": "原則としてDOE1.8％以上を配当基準とし、業績に応じて機動的に還元する。2024年度から1株当たり配当40円を予定し、3ヵ年で300億円規模の自己株式取得を計画する。3ヵ年累計の総還元性向は60％以上に相当する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:20:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

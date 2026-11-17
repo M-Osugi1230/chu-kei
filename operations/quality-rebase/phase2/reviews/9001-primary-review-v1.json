@@ -1,0 +1,117 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "9001",
+  "name": "東武鉄道",
+  "market": "Prime",
+  "industry": "陸運業"
+ },
+ "source": {
+  "title": "東武グループ中期経営計画 2024～2027",
+  "publishedDate": "2024-04-30",
+  "officialUrl": "https://www2.jpx.co.jp/disc/90010/140120240426578867.pdf",
+  "pdfSha256": "d7c8acdcf34b5ea6375c3fe3af65e4d9df85fffbb2820f1bb29f064a0cdcac3e",
+  "pageCount": 5,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "東武鉄道の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2024年度",
+   "endFiscalYear": "2027年度",
+   "terminalFiscalYear": "2027年度",
+   "statement": "2024年度〜2027年度の4か年計画。2027年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "東武グループ中期経営計画 2024～2027",
+   "currentStatus": "current",
+   "statement": "2027年度の数値は文書上「想定値」として記載されている。ROE8％程度は期間想定であり、最終年度単独の目標ではないため財務目標には含めない。2030年度の環境目標は長期目標として分離する。"
+  }
+ },
+ "summary": "長期経営ビジョン「挑戦と協創で進化させる社会と沿線」の実現に向けた4ヵ年計画。非鉄道事業の拡大、観光需要の取り込み、持続的な事業運営体制の確立を推進する。ホテル開発、沿線まちづくり、日光エリアの観光価値向上、交通サービスの高度化などに取り組む。2027年度の営業利益740億円、有利子負債/EBITDA倍率6倍台を想定する。",
+ "strategyThemes": [
+  {
+   "theme": "観光・インバウンド需要の最大化"
+  },
+  {
+   "theme": "沿線開発とまちづくり"
+  },
+  {
+   "theme": "日光エリアの観光価値向上"
+  },
+  {
+   "theme": "交通サービスの安全性と利便性向上"
+  },
+  {
+   "theme": "デジタル技術による運行効率化"
+  },
+  {
+   "theme": "新規事業育成と人的資本強化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "営業利益（想定値）",
+   "target": 740,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    5
+   ]
+  },
+  {
+   "metric": "有利子負債/EBITDA倍率（想定値）",
+   "target": 6,
+   "unit": "倍台",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    5
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "investment_without_total_disclosed",
+  "policy": "ホテル開発、沿線再開発、輸送サービス高度化、安全設備、デジタル化等への投資を推進する。池袋駅西口再開発や日光エリアの施設更新などを計画する。投資総額の明示は本資料では確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "total_return_ratio_over_30pct",
+  "policy": "計画期間の総還元性向30％以上を想定する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:20:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

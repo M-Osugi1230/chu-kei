@@ -1,0 +1,126 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "9433",
+  "name": "ＫＤＤＩ",
+  "market": "Prime",
+  "industry": "情報・通信業"
+ },
+ "source": {
+  "title": "中期経営戦略「Power-to-Connect 2028」",
+  "publishedDate": "2026-05-12",
+  "officialUrl": "https://www.kddi.com/extlib/files/corporate/ir/library/presentation/2026/pdf/kddi_260512_plan_pvHOPw.pdf",
+  "pdfSha256": "aa99261bd452b5fbb37e04a511d7372e773b6f08155aca553c26cd1d1d8b76ca",
+  "pageCount": 38,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "ＫＤＤＩの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2027年3月期",
+   "endFiscalYear": "2029年3月期",
+   "terminalFiscalYear": "2029年3月期",
+   "statement": "2027年3月期〜2029年3月期の3か年戦略。2029年3月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営戦略「Power-to-Connect 2028」",
+   "currentStatus": "current",
+   "statement": "現行計画は中期経営戦略「Power-to-Connect 2028」。初年度（2027年3月期）の連結業績予想・DPS予想は単年度予想として計画目標と分離する。"
+  }
+ },
+ "summary": "AI前提社会の到来を見据え、通信価値の再定義と新たな成長構造の構築を目指す。通信を核に異分野を融合するFusionを推進し、顧客接点と事業基盤の競争力を高める。テレコムコアの安定成長とパーソナル・ビジネスグロース領域の高成長を両立する。規律ある設備投資と資本効率の向上を進め、持続的成長と経営品質の向上を図る。",
+ "strategyThemes": [
+  {
+   "theme": "AI前提社会に対応した通信価値の再定義"
+  },
+  {
+   "theme": "通信を核とした異分野融合による価値創造"
+  },
+  {
+   "theme": "テレコムコアのLTV重視への構造変革"
+  },
+  {
+   "theme": "パーソナル・ビジネスグロース領域の成長"
+  },
+  {
+   "theme": "AI・データセンター等への次世代投資"
+  },
+  {
+   "theme": "資本効率と経営品質の向上"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "営業利益成長率（CAGR）",
+   "target": 5,
+   "unit": "%",
+   "targetFiscalYear": "2029年3月期",
+   "evidencePdfPages": [
+    28
+   ]
+  },
+  {
+   "metric": "パーソナル・ビジネスグロース領域成長率（CAGR）",
+   "target": "二桁成長",
+   "unit": "%",
+   "targetFiscalYear": "2029年3月期",
+   "evidencePdfPages": [
+    28
+   ]
+  },
+  {
+   "metric": "CAPEX to Sales",
+   "target": 12,
+   "unit": "%以下",
+   "targetFiscalYear": "2029年3月期",
+   "evidencePdfPages": [
+    28
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "capex_discipline_with_leverage_for_growth",
+  "policy": "設備投資はCAPEX to Sales 12％以下を意識して管理する。AI・データセンター等の成長投資に向けてレバレッジを活用し、事業ポートフォリオの見直しも進める。ROEおよびROICスプレッドの維持・向上を目指し、資本効率を経営評価に組み込む。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_over_40pct_with_stable_dividend_growth",
+  "policy": "調整後当期利益ベースで配当性向40%超を掲げる。安定増配を基本とし、自己株式取得は成長投資との比較検討を踏まえて機動的に実施する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:10:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

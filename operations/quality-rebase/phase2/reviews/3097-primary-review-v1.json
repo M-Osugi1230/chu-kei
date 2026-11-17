@@ -1,0 +1,102 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "3097",
+  "name": "物語コーポレーション",
+  "market": "Prime",
+  "industry": "小売業"
+ },
+ "source": {
+  "title": "物語ビジョン2030・中期経営計画（2026年7月期〜2028年6月期）",
+  "publishedDate": "2025-08-08",
+  "officialUrl": "https://www2.jpx.co.jp/disc/30970/140120250808536501.pdf",
+  "pdfSha256": "413e988e3f99215ec9c0a7ccb69fd1e0ba10c26b96366b2df1b5e28a77bef0de",
+  "pageCount": 46,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "物語コーポレーションの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2026年7月期",
+   "endFiscalYear": "2028年6月期",
+   "terminalFiscalYear": "2028年6月期",
+   "statement": "同社は6月決算。2026年7月期〜2028年6月期の3か年計画。2028年6月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "物語ビジョン2030・中期経営計画（2026年7月期〜2028年6月期）",
+   "currentStatus": "current",
+   "statement": "2030年目標（売上高2,600億円）は「物語ビジョン2030」側の数値であり、中期経営計画の最終年度目標とは分離する。営業利益145億円は #288 再確認で記録されたが、画像中心の資料のため本レビューの抽出テキスト照合では確認できなかった。"
+  }
+ },
+ "summary": "「焼肉きんぐ」を中心とした外食事業の3か年計画であり、「物語ビジョン2030」と一体で示されている。2028年6月期に連結売上高1,945億円を目指す。既存ブランドの出店拡大と新規ブランドの開発、DXによる業務効率化を進める。",
+ "strategyThemes": [
+  {
+   "theme": "「焼肉きんぐ」を中心とした出店拡大"
+  },
+  {
+   "theme": "新規ブランドの開発と育成"
+  },
+  {
+   "theme": "既存店舗の収益力強化"
+  },
+  {
+   "theme": "DXによる業務効率化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 1945,
+   "unit": "億円",
+   "targetFiscalYear": "2028年6月期",
+   "evidencePdfPages": [
+    3
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_over_20pct_progressive",
+  "policy": "連結配当性向20.0％以上を目安とし、累進配当を維持する。持続的な利益成長を通じて安定的・持続的な増配を原則とする。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

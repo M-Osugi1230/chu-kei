@@ -1,0 +1,129 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "6651",
+  "name": "日東工業",
+  "market": "Prime",
+  "industry": "電気機器"
+ },
+ "source": {
+  "title": "2026中期経営計画",
+  "publishedDate": "2024-05-15",
+  "officialUrl": "https://www2.jpx.co.jp/disc/66510/140120240515597665.pdf",
+  "pdfSha256": "520fc932a0ca014faa91cda102d383f74a57a2d196aadea1cb0fe4a1e87e7cf8",
+  "pageCount": 32,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "日東工業の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2024年度",
+   "endFiscalYear": "2026年度",
+   "terminalFiscalYear": "2026年度",
+   "statement": "2024年度〜2026年度の3か年計画。最終年度は2026年度（2027年3月期）。公表資料の日付は2024年5月15日。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "2026中期経営計画",
+   "currentStatus": "current",
+   "statement": "現行計画は日東工業グループ2026中期経営計画。"
+  }
+ },
+ "summary": "配電盤・キュービクルなどの電気設備関連事業を中心とする3か年計画。2027年3月期に連結売上高2,000億円、連結営業利益150億円、ROE9.0%以上を目指す。脱炭素・省エネ需要やインフラ更新需要を取り込み、海外売上高200億円（海外比率10%）も掲げる。",
+ "strategyThemes": [
+  {
+   "theme": "脱炭素・省エネ需要やインフラ更新需要の取り込み"
+  },
+  {
+   "theme": "海外事業の拡大"
+  },
+  {
+   "theme": "生産体制の最適化とDX推進"
+  },
+  {
+   "theme": "ROEの持続的向上"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 2000,
+   "unit": "億円",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    17
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 150,
+   "unit": "億円",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    17
+   ]
+  },
+  {
+   "metric": "営業利益率",
+   "target": 7.5,
+   "unit": "%",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    17
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 9.0,
+   "unit": "%以上",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    17
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

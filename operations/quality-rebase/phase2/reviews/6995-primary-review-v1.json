@@ -1,0 +1,139 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "6995",
+  "name": "東海理化電機製作所",
+  "market": "Prime",
+  "industry": "輸送用機器"
+ },
+ "source": {
+  "title": "中期経営計画 TRV 2030",
+  "publishedDate": "2025-05-29",
+  "officialUrl": "https://www2.jpx.co.jp/disc/69950/140120250529571038.pdf",
+  "pdfSha256": "4a41e34b71ffda2f0774156b20089dd6525ba275b83b7e1a87b658f6b0104cbb",
+  "pageCount": 30,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "東海理化電機製作所の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2025年度",
+   "endFiscalYear": "2030年度",
+   "terminalFiscalYear": "2030年度",
+   "statement": "2025年度〜2030年度の6か年計画。2030年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画 TRV 2030",
+   "currentStatus": "current",
+   "statement": "現行計画は中期経営計画 TRV 2030（2025〜2030年度）。キャッシュアロケーション計画は2025〜2027年の3年間分であり、計画期間全体の配分とは分離する。2030年度ROEは目標一覧の10％を採用する（資本政策の説明には10％超との表記もある）。"
+  }
+ },
+ "summary": "TRV（Tokai Rika Vision）2030として、収益性と資本効率を継続的に高める事業体質の構築を目指す。既存車載製品の競争力向上と次世代製品・新事業の具体化を並行して推進する。2030年度に売上高7,000億円、営業利益率7％、ROE10％を目標とする。品質、DX、人財、サステナビリティの強化と資本政策を一体的に推進する。",
+ "strategyThemes": [
+  {
+   "theme": "既存車載事業の収益力向上"
+  },
+  {
+   "theme": "次世代製品の開発と事業化"
+  },
+  {
+   "theme": "新領域・新規事業の収益化"
+  },
+  {
+   "theme": "TPS・DXによる生産性向上"
+  },
+  {
+   "theme": "品質改革と経営基盤強化"
+  },
+  {
+   "theme": "人的資本・サステナビリティの推進"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 7000,
+   "unit": "億円",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    11,
+    26
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 490,
+   "unit": "億円",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    11,
+    26
+   ]
+  },
+  {
+   "metric": "営業利益率",
+   "target": 7.0,
+   "unit": "%",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    11,
+    26
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 10,
+   "unit": "%",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    11,
+    26
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "cash_allocation_2025_2027",
+  "policy": "2025～2027年のキャッシュアロケーションとして、営業CF1,100億円とアセット売却100億円などを成長原資に設定。車載事業、新規事業、未来創造投資、経営基盤強化、株主還元に配分する。政策保有株式の縮減、資本効率の向上、レバレッジの有効活用を推進する。2027年度末の実質資金残高は600億円を目安とする。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "doe_3pct_base",
+  "policy": "DOE3％を基本とし、配当利回りを意識した配当施策と追加的な自己株式取得を検討する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:20:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

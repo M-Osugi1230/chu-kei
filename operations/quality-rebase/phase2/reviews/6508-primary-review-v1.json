@@ -1,0 +1,144 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "6508",
+  "name": "明電舎",
+  "market": "Prime",
+  "industry": "電気機器"
+ },
+ "source": {
+  "title": "中期経営計画 2027",
+  "publishedDate": "2025-05-13",
+  "officialUrl": "https://www2.jpx.co.jp/disc/65080/140120250512543352.pdf",
+  "pdfSha256": "4d0d12b4de8322dee0cc97260aeb0d18b135d776203399f4d7d366d298d328a6",
+  "pageCount": 4,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "明電舎の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2025年度",
+   "endFiscalYear": "2027年度",
+   "terminalFiscalYear": "2027年度",
+   "statement": "2025年度〜2027年度の3か年計画。2027年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画 2027",
+   "currentStatus": "current",
+   "statement": "現行計画は中期経営計画 2027（2025〜2027年度）。前中期経営計画の実績値および2025年度の単年度予想は計画目標と分離する。"
+  }
+ },
+ "summary": "ニーズに対応した着実な成長と未来に向けた変化・挑戦を両立する3年間の計画。製品・事業・技術の3つの成長戦略を推進する。国内外の生産能力増強、海外市場開拓、新技術研究によって既存事業と新規領域の成長を目指す。グリーン戦略、人的資本、社内DXを強化し、持続的な価値創造を進める。",
+ "strategyThemes": [
+  {
+   "theme": "国内外の生産能力増強と製品競争力向上"
+  },
+  {
+   "theme": "変電・半導体分野の海外市場開拓"
+  },
+  {
+   "theme": "データ活用ビジネスと新たな価値提供"
+  },
+  {
+   "theme": "直流・高周波などの指向型研究"
+  },
+  {
+   "theme": "グリーン戦略と脱炭素経営"
+  },
+  {
+   "theme": "人的資本強化と社内DX加速"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "受注高",
+   "target": 3800,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    3
+   ]
+  },
+  {
+   "metric": "売上高",
+   "target": 3700,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    3
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 250,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    3
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 10,
+   "unit": "%",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    3
+   ]
+  },
+  {
+   "metric": "ROIC",
+   "target": 8,
+   "unit": "%",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    3
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "capex_700oku_3years",
+  "policy": "2025～2027年度の3年間で設備投資700億円を計画する。国内の変圧器・電子機器の生産設備増強、米国・ドイツ・シンガポール・インドでの拠点再構築や新工場設立などを進める。資本コストを意識し、成長投資と事業資産効率化を両立する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_30pct_of_net_income",
+  "policy": "安定的かつ継続的な配当と中長期的な株主価値向上の両立を基本方針とする。親会社株主に帰属する当期純利益の30％を配当によって還元する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:15:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

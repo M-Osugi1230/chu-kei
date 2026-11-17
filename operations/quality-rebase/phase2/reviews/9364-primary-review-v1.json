@@ -1,0 +1,129 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "9364",
+  "name": "上組",
+  "market": "Prime",
+  "industry": "倉庫・運輸関連業"
+ },
+ "source": {
+  "title": "中期経営計画2030",
+  "publishedDate": "2025-05-12",
+  "officialUrl": "https://www2.jpx.co.jp/disc/93640/140120250512540581.pdf",
+  "pdfSha256": "8d96e20aee218a61a7d3abc3c04ff65a47261037eff4f4621972b9caa44be824",
+  "pageCount": 36,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "上組の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2026年3月期",
+   "endFiscalYear": "2030年3月期",
+   "terminalFiscalYear": "2030年3月期",
+   "statement": "2026年3月期〜2030年3月期の5か年計画。2030年3月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画2030",
+   "currentStatus": "current",
+   "statement": "現行計画は中期経営計画2030（5か年）。長期ビジョン2035の数値は本計画の目標とは分離する。"
+  }
+ },
+ "summary": "港湾運送事業を中心とする物流事業の5か年計画。2030年3月期に営業収益3,500億円、営業利益380億円、EBITDA550億円、ROE8.0%を目指す。既存事業の収益力強化と新規事業領域への展開、資本効率の向上を進める。",
+ "strategyThemes": [
+  {
+   "theme": "港湾運送事業の競争力強化"
+  },
+  {
+   "theme": "物流事業の多角化と新規領域への展開"
+  },
+  {
+   "theme": "資本効率の向上"
+  },
+  {
+   "theme": "人的資本の強化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "営業収益",
+   "target": 3500,
+   "unit": "億円",
+   "targetFiscalYear": "2030年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 380,
+   "unit": "億円",
+   "targetFiscalYear": "2030年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "EBITDA",
+   "target": 550,
+   "unit": "億円",
+   "targetFiscalYear": "2030年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 8.0,
+   "unit": "%",
+   "targetFiscalYear": "2030年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "equity_ratio_and_cross_shareholding_reduction",
+  "policy": "自己資本比率60％程度以上を維持する。政策保有株式を30％削減する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_70pct_and_buyback",
+  "policy": "連結配当性向70％程度（5年平均・累計）を目安とし、自己株式取得650億円規模を実施する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

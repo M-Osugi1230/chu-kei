@@ -1,0 +1,139 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "7167",
+  "name": "めぶきフィナンシャルグループ",
+  "market": "Prime",
+  "industry": "銀行業"
+ },
+ "source": {
+  "title": "第4次グループ中期経営計画",
+  "publishedDate": "2025-03-17",
+  "officialUrl": "https://www2.jpx.co.jp/disc/71670/140120250317594878.pdf",
+  "pdfSha256": "23e4423b34e89ebf05cec9dec85604774afcfef821be245a6085487fdaa7a343",
+  "pageCount": 16,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "めぶきフィナンシャルグループの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2025年度",
+   "endFiscalYear": "2027年度",
+   "terminalFiscalYear": "2027年度",
+   "statement": "2025年4月〜2028年3月の3か年計画。2027年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "第4次グループ中期経営計画",
+   "currentStatus": "current",
+   "statement": "長期ビジョン2030の数値（2030年度の参考値等）は本計画の2027年度計画値とは分離する。"
+  }
+ },
+ "summary": "長期ビジョン2030の実現に向けた第2フェーズとして、持続的成長への進化を加速する3年間と位置づける。地域産業の成長支援、豊かな暮らしへの貢献、脱炭素社会への貢献などのマテリアリティと基本戦略を統合する。経済的価値と社会的価値の両立を通じて企業価値向上を目指す。2027年度には連結経常利益1,300億円以上、親会社株主に帰属する当期純利益900億円以上、連結ROE9.0％以上を計画する。",
+ "strategyThemes": [
+  {
+   "theme": "地域産業の成長支援"
+  },
+  {
+   "theme": "安心で豊かな暮らしへの貢献"
+  },
+  {
+   "theme": "脱炭素社会・環境保全への貢献"
+  },
+  {
+   "theme": "収益力と資本効率の向上"
+  },
+  {
+   "theme": "DXと経営基盤の高度化"
+  },
+  {
+   "theme": "社会的価値と経済的価値の創造"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "連結経常利益",
+   "target": 1300,
+   "unit": "億円以上",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    11,
+    12
+   ]
+  },
+  {
+   "metric": "親会社株主に帰属する当期純利益",
+   "target": 900,
+   "unit": "億円以上",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    11,
+    12
+   ]
+  },
+  {
+   "metric": "連結ROE（純資産ベース）",
+   "target": 9.0,
+   "unit": "%以上",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    11,
+    12
+   ]
+  },
+  {
+   "metric": "コア業務純益",
+   "target": 1280,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    11,
+    12
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "resource_allocation_to_high_rora",
+  "policy": "高RORAセグメントやDX等の注力分野への経営資源配分を進める。自己資本の増強と収益性の向上を両立させる方針を示す。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の範囲では株主還元の具体的な数値方針を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:20:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

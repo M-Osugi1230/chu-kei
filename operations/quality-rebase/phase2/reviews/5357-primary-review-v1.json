@@ -1,0 +1,120 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "5357",
+  "name": "ヨータイ",
+  "market": "Prime",
+  "industry": "ガラス・土石製品"
+ },
+ "source": {
+  "title": "第二次中期経営計画",
+  "publishedDate": "2024-05-10",
+  "officialUrl": "https://www2.jpx.co.jp/disc/53570/140120240510588554.pdf",
+  "pdfSha256": "1d50a2598d184ab122f56c53109413a3eb1bdc35cc3d04bc411e95c44bfd91e9",
+  "pageCount": 29,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "ヨータイの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2025年3月期",
+   "endFiscalYear": "2027年3月期",
+   "terminalFiscalYear": "2027年3月期",
+   "statement": "2024年度〜2026年度（2025年3月期〜2027年3月期）の3か年計画。最終年度は2027年3月期。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "第二次中期経営計画",
+   "currentStatus": "current",
+   "statement": "2030年3月期の売上高目標380億円は本計画の先の目標として併記されたものであり、最終年度目標とは分離する。"
+  }
+ },
+ "summary": "耐火物事業を中心とする第二次中期経営計画。2027年3月期に売上高320億円、営業利益44億円、経常利益45億円を目指す。製品の高機能化と生産効率の向上、海外事業の維持・拡大と新規需要の開拓を進める。",
+ "strategyThemes": [
+  {
+   "theme": "耐火物製品の高機能化"
+  },
+  {
+   "theme": "生産効率の向上とコスト削減"
+  },
+  {
+   "theme": "海外事業の維持・拡大"
+  },
+  {
+   "theme": "新規需要の開拓"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 320,
+   "unit": "億円",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 44,
+   "unit": "億円",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "経常利益",
+   "target": 45,
+   "unit": "億円",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    2
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

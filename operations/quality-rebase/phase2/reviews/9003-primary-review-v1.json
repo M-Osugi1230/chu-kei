@@ -1,0 +1,135 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "9003",
+  "name": "相鉄ホールディングス",
+  "market": "Prime",
+  "industry": "陸運業"
+ },
+ "source": {
+  "title": "第7次中期経営計画（2025年度～2027年度）",
+  "publishedDate": "2025-04-25",
+  "officialUrl": "https://www2.jpx.co.jp/disc/90030/140120250424522758.pdf",
+  "pdfSha256": "0635e07005714cd69cf13b746be53293d81243d41bab1c2effc9768c92e55f8b",
+  "pageCount": 40,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "相鉄ホールディングスの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2025年度",
+   "endFiscalYear": "2027年度",
+   "terminalFiscalYear": "2027年度",
+   "statement": "2025年度〜2027年度の3か年計画。2027年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "第7次中期経営計画（2025年度～2027年度）",
+   "currentStatus": "current",
+   "statement": "現行計画は第7次中期経営計画。長期ビジョンVision2030の数値は本計画の目標とは分離する。"
+  }
+ },
+ "summary": "長期ビジョンVision2030の実現に向け、選ばれる沿線の創造と事業領域の拡大を両立させる。特に不動産事業の抜本的強化と沿線外・海外への展開拡充を進める。大規模投資に備えた強固な財務基盤の整備と収益力向上を重視する。2027年度に連結営業利益380億円、親会社株主に帰属する当期純利益224億円、ROE10.2％を計画する。",
+ "strategyThemes": [
+  {
+   "theme": "不動産事業を核とする成長戦略"
+  },
+  {
+   "theme": "沿線外・海外への展開拡充"
+  },
+  {
+   "theme": "選ばれる沿線の創造"
+  },
+  {
+   "theme": "事業構造改革の継続"
+  },
+  {
+   "theme": "新たな成長基盤の整備・拡充"
+  },
+  {
+   "theme": "財務基盤の強化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "連結営業利益",
+   "target": 380,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    4
+   ]
+  },
+  {
+   "metric": "親会社株主に帰属する当期純利益",
+   "target": 224,
+   "unit": "億円",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    4
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 10.2,
+   "unit": "%",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    4
+   ]
+  },
+  {
+   "metric": "有利子負債/EBITDA倍率",
+   "target": 6.9,
+   "unit": "倍",
+   "targetFiscalYear": "2027年度",
+   "evidencePdfPages": [
+    4
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "financial_soundness_for_large_investment",
+  "policy": "横浜駅西口大改造等の大規模投資に備えて財務健全性を確保する。不動産取得・開発等の成長投資を進めながら、不動産流動化や資本コストを意識したバランスシート管理、有利子負債のコントロールに取り組む。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_30pct_guide",
+  "policy": "成長投資と財務健全性のバランスを意識し、配当性向30％を目安として安定的な配当を実施する。適切な還元方法について継続検討する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:20:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

@@ -1,0 +1,109 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "6516",
+  "name": "山洋電気",
+  "market": "Prime",
+  "industry": "電気機器"
+ },
+ "source": {
+  "title": "第10次中期経営計画「時間を力に」",
+  "publishedDate": "2026-05-20",
+  "officialUrl": "https://www2.jpx.co.jp/disc/65160/140120260520541777.pdf",
+  "pdfSha256": "21a26947661342d9f907ae61d70b7d6feaa716efe2ea57d5398d49ee1bb3838e",
+  "pageCount": 37,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "山洋電気の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2026年度",
+   "endFiscalYear": "2030年度",
+   "terminalFiscalYear": "2030年度",
+   "statement": "2026年度〜2030年度の5か年計画。2030年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "第10次中期経営計画「時間を力に」",
+   "currentStatus": "current",
+   "statement": "本計画は売上高・利益の最終年度目標を設定しておらず、ROE等の経営指標とキャッシュアロケーションを中心とする計画である（#288 再確認でも売上高目標は確認されなかった）。登録する目標は経営指標のROE10%以上のみとし、存在しない売上高目標を補完しない。"
+  }
+ },
+ "summary": "時間を競争力に変えることをテーマに、持続的な企業価値向上を目指す5年間の計画。グループ全体で887件の施策を推進し、開発、納期、業務品質のスピード向上を図る。AI・データセンター、半導体製造装置、電源インフラなどの成長市場を重点的に開拓する。3つのカンパニーの技術融合、グローバル生産体制強化、研究開発と人的資本への投資を進める。",
+ "strategyThemes": [
+  {
+   "theme": "時間を競争力に変える企業体質への改革"
+  },
+  {
+   "theme": "AI・データセンター向け冷却事業の拡大"
+  },
+  {
+   "theme": "電源インフラ・半導体関連市場の開拓"
+  },
+  {
+   "theme": "カンパニー間の技術融合と新製品開発"
+  },
+  {
+   "theme": "日本・フィリピン・ベトナムの生産体制強化"
+  },
+  {
+   "theme": "生産自動化・AI活用と技術者育成"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "ROE",
+   "target": 10,
+   "unit": "%以上",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    27,
+    28
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "quantified_cash_allocation_5years",
+  "policy": "2026～2030年度の5年間で営業CF660億円以上を想定し、成長投資330億円以上、株主還元300億円以上に配分する。研究開発、未来づくりセンター設立、グローバル生産網強化、生産自動化、設備刷新などを進める。株主資本コストはおおむね7～9％を想定する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_50pct_progressive",
+  "policy": "配当性向50％を目安に引き上げ、累進配当を継続する。機動的な自己株式取得も実施する。5年間の配当総額300億円以上を想定する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:15:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

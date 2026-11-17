@@ -1,0 +1,112 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "9672",
+  "name": "東京都競馬",
+  "market": "Prime",
+  "industry": "サービス業"
+ },
+ "source": {
+  "title": "中期経営計画（2026年12月期〜2030年12月期）",
+  "publishedDate": "2025-12-19",
+  "officialUrl": "https://www2.jpx.co.jp/disc/96720/140120251219522804.pdf",
+  "pdfSha256": "79d20cae955f09666ea1c689b3197a11416f8fc11f29379ae2b0d52db24a3e0a",
+  "pageCount": 21,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "東京都競馬の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2026年12月期",
+   "endFiscalYear": "2030年12月期",
+   "terminalFiscalYear": "2030年12月期",
+   "statement": "同社は12月決算。2026年12月期〜2030年12月期の5か年計画。2030年12月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画（2026年12月期〜2030年12月期）",
+   "currentStatus": "current",
+   "statement": "現行計画は2026年12月期〜2030年12月期の5か年計画。当期純利益・ROEの目標は画像表のため抽出テキストで照合できず、財務目標には含めていない。"
+  }
+ },
+ "summary": "公営競技事業（大井競馬）を中心とする5か年計画。2030年12月期に売上高480億円以上、営業利益190億円以上を目指す。施設の魅力向上とネット投票の拡大、資本効率と財務健全性の両立を進める。",
+ "strategyThemes": [
+  {
+   "theme": "大井競馬場の魅力向上と集客強化"
+  },
+  {
+   "theme": "ネット投票（SPAT4）の拡大"
+  },
+  {
+   "theme": "資本効率の向上と財務健全性の維持"
+  },
+  {
+   "theme": "未来に向けた空間創造投資"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 480,
+   "unit": "億円以上",
+   "targetFiscalYear": "2030年12月期",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 190,
+   "unit": "億円以上",
+   "targetFiscalYear": "2030年12月期",
+   "evidencePdfPages": [
+    2
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "credit_rating_a_maintenance",
+  "policy": "財務健全性として信用格付けA格の維持を掲げる。未来に向けた空間創造投資を推進する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_35pct_base",
+  "policy": "配当性向35％を基準とし、1株当たり配当金137円を目安とする。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認",
+   "当期純利益170億円以上・ROE8%以上は #288 再確認で記録されたが、画像表のため本レビューの抽出テキスト照合では確認できなかった"
+  ]
+ }
+}

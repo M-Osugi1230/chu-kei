@@ -1,0 +1,99 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "6268",
+  "name": "ナブテスコ",
+  "market": "Prime",
+  "industry": "機械"
+ },
+ "source": {
+  "title": "中期経営計画2027",
+  "publishedDate": "2025-02-12",
+  "officialUrl": "https://www2.jpx.co.jp/disc/62680/140120250212569857.pdf",
+  "pdfSha256": "e908954eb0dd106e6885c257c2ebbed23f6bc19cc18d90ad22e1b4e72c6659f6",
+  "pageCount": 8,
+  "documentClassification": "formal_management_plan_adoption_notice_with_full_target_set",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "ナブテスコの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2025年12月期",
+   "endFiscalYear": "2027年12月期",
+   "terminalFiscalYear": "2027年12月期",
+   "statement": "同社は12月決算。2025年度から2027年度の中期経営計画であり、最終年度は2027年12月期。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画2027",
+   "currentStatus": "current",
+   "statement": "正式な計数目標はROIC10%以上（2027年度）等であり、売上高4,000億円・営業利益420億円は計画上の参考値として文書で区別されているため財務目標には含めない。本資料は8ページの策定のお知らせであり計画内容を含む。"
+  }
+ },
+ "summary": "2025年度から2027年度の中期経営計画（中期経営計画2027）の策定のお知らせ。計数目標として2027年度にROIC10%以上を設定し、株主還元はDOE3.5%を目安とした安定配当および機動的な自社株買いとする。売上高・営業利益は参考値として示されている。",
+ "strategyThemes": [
+  {
+   "theme": "計数目標としてのROIC経営の推進"
+  },
+  {
+   "theme": "事業ポートフォリオの最適化"
+  },
+  {
+   "theme": "資本効率の向上"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "ROIC",
+   "target": 10,
+   "unit": "%以上",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    1
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "roic_target",
+  "policy": "計数目標としてROIC10%以上（2027年度）を設定する。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "doe_3_5pct_guide",
+  "policy": "DOE3.5%を目安とした安定配当および機動的な自社株買いを行う。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

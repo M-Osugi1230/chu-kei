@@ -1,0 +1,123 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "3104",
+  "name": "フジボウホールディングス",
+  "market": "Prime",
+  "industry": "ガラス・土石製品"
+ },
+ "source": {
+  "title": "中期経営計画『進化26-30』",
+  "publishedDate": "2026-01-30",
+  "officialUrl": "https://www2.jpx.co.jp/disc/31040/140120260129541599.pdf",
+  "pdfSha256": "f6a293c9e3379e54456302e49f9bddb2df56f45bbca25c24e99e53864d0a88ab",
+  "pageCount": 9,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "フジボウホールディングスの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2026年度",
+   "endFiscalYear": "2030年度",
+   "terminalFiscalYear": "2030年度",
+   "statement": "2026年度〜2030年度の5か年計画。2030年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画『進化26-30』",
+   "currentStatus": "current",
+   "statement": "現行計画は中期経営計画『進化26-30』。ROE・ROICは2030年度に12%以上を目指す旨が文書に明記されている（#288 で記録されたROE15%程度は原文と異なるため採用しない）。2028年度の中間目標は最終年度目標とは分離する。"
+  }
+ },
+ "summary": "研磨材事業と化学工業品事業を中心とする5か年計画。2030年度に連結売上高650億円、営業利益130億円を目指し、ROE・ROICは12%以上を追求する。成長投資と株主還元の両立、資本収益性の追求を進める。",
+ "strategyThemes": [
+  {
+   "theme": "研磨材事業の成長投資と収益性向上"
+  },
+  {
+   "theme": "化学工業品事業の拡大"
+  },
+  {
+   "theme": "新規事業・新規領域の創出"
+  },
+  {
+   "theme": "資本収益性の追求（ROE・ROIC向上）"
+  },
+  {
+   "theme": "成長投資と株主還元の両立"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 650,
+   "unit": "億円",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 130,
+   "unit": "億円",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 12,
+   "unit": "%以上",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    1
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "capex_480oku_cumulative",
+  "policy": "計画期間累計の設備投資は480億円（M&A含む）を計画する。成長投資と株主還元を両立するキャッシュ・フロー運営を行う。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "payout_ratio_40pct_plan_cumulative",
+  "policy": "配当性向は計画累計で40%を目標とする（実績見込35%から引き上げ）。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

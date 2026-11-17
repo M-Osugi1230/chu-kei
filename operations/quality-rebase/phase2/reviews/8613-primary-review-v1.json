@@ -1,0 +1,126 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "8613",
+  "name": "丸三証券",
+  "market": "Prime",
+  "industry": "証券、商品先物取引業"
+ },
+ "source": {
+  "title": "中期経営計画",
+  "publishedDate": "2024-04-26",
+  "officialUrl": "https://www2.jpx.co.jp/disc/86130/140120240426577733.pdf",
+  "pdfSha256": "1f68d17d39dd98f1eaa4704b8e6b32f0827eeb3d4a50c378cfa97c612c89d76f",
+  "pageCount": 21,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "丸三証券の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることと主要数値の一致を確認した。取得バイト列の SHA-256 は #288 記録と一致する。"
+  },
+  "period": {
+   "startFiscalYear": "2024年度",
+   "endFiscalYear": "2028年度",
+   "terminalFiscalYear": "2028年度",
+   "statement": "2024年4月〜2029年3月の5か年計画。2028年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画",
+   "currentStatus": "current",
+   "statement": "預り資産純増・投信純増・日本株純増は5年間の累計増加目標であり、単年度の損益目標ではない。ROE10％は長期目標であり、本計画の中期目標（8％）とは分離する。"
+  }
+ },
+ "summary": "顧客の預り資産拡大と収益基盤の安定化を目的とする5年間の経営計画。投資信託の長期保有促進、推奨日本株の保有拡大、ファンドラップ事業などを推進する。5年間で預り資産純増4,000億円を目指す。ROE8％、販管費カバー率55％を掲げ、普通配当に加え特別配当を継続する。",
+ "strategyThemes": [
+  {
+   "theme": "投資信託残高の積み上げ"
+  },
+  {
+   "theme": "推奨日本株の保有顧客拡大"
+  },
+  {
+   "theme": "信託報酬による安定収益基盤の構築"
+  },
+  {
+   "theme": "ゴールベースアプローチによるファンドラップ事業"
+  },
+  {
+   "theme": "引受主幹事案件の獲得拡大"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "預り資産純増（5年間累計）",
+   "target": 4000,
+   "unit": "億円",
+   "targetFiscalYear": "2028年度",
+   "evidencePdfPages": [
+    1,
+    6
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 8,
+   "unit": "%",
+   "targetFiscalYear": "2028年度",
+   "evidencePdfPages": [
+    1,
+    6
+   ]
+  },
+  {
+   "metric": "販管費カバー率",
+   "target": 55,
+   "unit": "%",
+   "targetFiscalYear": "2028年度",
+   "evidencePdfPages": [
+    1,
+    6
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "roe_and_cost_of_capital_focus",
+  "policy": "ROE向上と資本コストを意識した経営を推進する。具体的な投資金額の配分は本資料では確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "ordinary_plus_special_dividend",
+  "policy": "普通配当に加え、2028年3月期まで特別配当を継続する。特別配当は2024年3月期～2026年3月期に年間30円、2027年3月期に年間20円、2028年3月期に年間10円とする。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:20:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。主要数値は抽出テキストと照合。構造化抽出の下書きは ChatGPT が作成し、Claude が原文で再判定した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

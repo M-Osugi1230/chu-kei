@@ -1,0 +1,114 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "4078",
+  "name": "堺化学工業",
+  "market": "Prime",
+  "industry": "化学"
+ },
+ "source": {
+  "title": "新中期経営計画「変革・BEYOND2030」",
+  "publishedDate": "2024-05-13",
+  "officialUrl": "https://www2.jpx.co.jp/disc/40780/140120240510588783.pdf",
+  "pdfSha256": "9e96c5bd3707cff77d9145cf704371d4c6c86000e7caf17c14c7bf099f6dded2",
+  "pageCount": 27,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "堺化学工業の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2025年3月期",
+   "endFiscalYear": "2027年3月期",
+   "terminalFiscalYear": "2027年3月期",
+   "statement": "2025年3月期〜2027年3月期の3か年計画。2027年3月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "新中期経営計画「変革・BEYOND2030」",
+   "currentStatus": "current",
+   "statement": "2030年のROE12%は計画期間の先の目指す姿であり、本計画の目標（2027年3月期 ROE8%）とは分離する。"
+  }
+ },
+ "summary": "2030年以降の将来像に向けた変革ステージとして位置づけられた中期経営計画。無機化学と有機化学の両輪で成長し、高付加価値品へのシフトによる事業ポートフォリオ転換で高収益体質への転換を目指す。2027年3月期に営業利益90億円、ROE8%を目指す。資本コストを上回るROEの達成とPBR改善に取り組む。",
+ "strategyThemes": [
+  {
+   "theme": "高付加価値品への事業ポートフォリオ転換"
+  },
+  {
+   "theme": "無機化学と有機化学の両輪による成長"
+  },
+  {
+   "theme": "環境・エネルギー分野の強化"
+  },
+  {
+   "theme": "エレクトロニクス分野の強化"
+  },
+  {
+   "theme": "資本効率改善とマテリアリティ推進"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "営業利益",
+   "target": 90,
+   "unit": "億円",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 8,
+   "unit": "%",
+   "targetFiscalYear": "2027年3月期",
+   "evidencePdfPages": [
+    1
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "roe_above_cost_of_capital",
+  "policy": "資本コストを上回るROEの達成とPBR改善を目指す。高付加価値品への事業ポートフォリオ転換を推進する。具体的な投資金額は本資料では確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

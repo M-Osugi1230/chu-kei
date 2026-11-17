@@ -1,0 +1,120 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "9759",
+  "name": "ＮＳＤ",
+  "market": "Prime",
+  "industry": "情報・通信業"
+ },
+ "source": {
+  "title": "新中期経営計画（2027年3月期〜2029年3月期）",
+  "publishedDate": "2026-05-08",
+  "officialUrl": "https://www2.jpx.co.jp/disc/97590/140120260507518715.pdf",
+  "pdfSha256": "986c0672f3fffc470647c16be52d088d42e0adf496b790eb57a9be882cac8e26",
+  "pageCount": 28,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "ＮＳＤの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2027年3月期",
+   "endFiscalYear": "2029年3月期",
+   "terminalFiscalYear": "2029年3月期",
+   "statement": "2027年3月期を初年度とする3か年計画。2029年3月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "新中期経営計画（2027年3月期〜2029年3月期）",
+   "currentStatus": "current",
+   "statement": "現行計画は2027年3月期〜2029年3月期の新中期経営計画。本資料は策定に関するお知らせであり計画本文を含む。"
+  }
+ },
+ "summary": "システム開発事業を中心とするITサービス事業の3か年計画。2029年3月期に連結売上高1,500億円、営業利益234億円、ROE18.5%を目指す。金融・公共分野での受注拡大とDX支援事業の強化、人材育成を進める。",
+ "strategyThemes": [
+  {
+   "theme": "金融・公共分野での受注拡大"
+  },
+  {
+   "theme": "DX支援事業の強化"
+  },
+  {
+   "theme": "人材育成と技術力の向上"
+  },
+  {
+   "theme": "生産性の向上"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 1500,
+   "unit": "億円",
+   "targetFiscalYear": "2029年3月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "営業利益",
+   "target": 234,
+   "unit": "億円",
+   "targetFiscalYear": "2029年3月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 18.5,
+   "unit": "%",
+   "targetFiscalYear": "2029年3月期",
+   "evidencePdfPages": [
+    1
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "total_return_70pct_and_payout_50pct",
+  "policy": "総還元性向70％以上、かつ配当性向50％以上の方針を継続する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

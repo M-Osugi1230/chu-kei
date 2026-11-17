@@ -1,0 +1,123 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "4044",
+  "name": "セントラル硝子",
+  "market": "Prime",
+  "industry": "化学"
+ },
+ "source": {
+  "title": "2025〜2030年度 中期経営計画",
+  "publishedDate": "2025-05-14",
+  "officialUrl": "https://www2.jpx.co.jp/disc/40440/140120250514549928.pdf",
+  "pdfSha256": "38bac86831c20540c2a7d1bea8beeae6e954880b747f84e3c10b8815c9975785",
+  "pageCount": 30,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "セントラル硝子の現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2025年度",
+   "endFiscalYear": "2030年度",
+   "terminalFiscalYear": "2030年度",
+   "statement": "2025〜2030年度の6か年計画。2030年度が最終年度。2025〜2027年度がPhase 1、2028〜2030年度がPhase 2。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "2025〜2030年度 中期経営計画",
+   "currentStatus": "current",
+   "statement": "2030年度の目標は長期ビジョンVISION 2030と共通の目標として文書に明記されている。2027年度のPhase 1目標（営業利益130億円・ROE8.7%・ROIC6.1%）は中間目標として分離する。売上高の最終年度目標は設定されていない。"
+  }
+ },
+ "summary": "長期ビジョンVISION 2030の実現に向けた6年間の中期経営計画。2025〜2027年度を成長基盤強化、2028〜2030年度を本格的な成長軌道への移行期間と位置づける。2030年度に営業利益200億円、ROE10.0%以上、ROIC7.0%を目指す。スペシャリティ製品の拡大とエッセンシャル製品の強化、成長性とROICに基づく経営資源配分を進める。",
+ "strategyThemes": [
+  {
+   "theme": "スペシャリティ製品の拡大"
+  },
+  {
+   "theme": "エッセンシャル製品の強化"
+  },
+  {
+   "theme": "成長性とROICに基づく投資配分"
+  },
+  {
+   "theme": "事業ポートフォリオの最適化"
+  },
+  {
+   "theme": "人的資本経営と環境課題への対応"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "営業利益",
+   "target": 200,
+   "unit": "億円",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 10.0,
+   "unit": "%以上",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    2
+   ]
+  },
+  {
+   "metric": "ROIC",
+   "target": 7.0,
+   "unit": "%",
+   "targetFiscalYear": "2030年度",
+   "evidencePdfPages": [
+    2
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "roic_based_allocation",
+  "policy": "成長性とROICの分析に基づいて経営資源を最適配分する。中長期的な成長投資を重視し、事業ROICのモニタリングを通じて資本効率の改善を図る。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "dividend_floor_170yen",
+  "policy": "2025年度および2027年度の1株当たり年間配当額は170円を下限とする。2030年度の配当方針は改めて検討する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:30:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-04 抽出は原文と大きく異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

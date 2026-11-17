@@ -1,0 +1,120 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "5851",
+  "name": "リョービ",
+  "market": "Prime",
+  "industry": "非鉄金属"
+ },
+ "source": {
+  "title": "中期経営計画（2025-2027）",
+  "publishedDate": "2025-02-13",
+  "officialUrl": "https://www2.jpx.co.jp/disc/58510/140120250213573959.pdf",
+  "pdfSha256": "78602994f738d0053a6ee8bc0b4307cf0f031d87b64407ee4d138753ddcf7429",
+  "pageCount": 31,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "リョービの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2025年12月期",
+   "endFiscalYear": "2027年12月期",
+   "terminalFiscalYear": "2027年12月期",
+   "statement": "同社は12月決算。2025年12月期〜2027年12月期の3か年計画。2027年12月期が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "中期経営計画（2025-2027）",
+   "currentStatus": "current",
+   "statement": "現行計画は2025年から2027年の3か年の中期経営計画。財務目標表の最終年度は2027年12月期。"
+  }
+ },
+ "summary": "ダイカスト事業を中心とする3か年計画。2027年12月期に売上高3,370億円、経常利益150億円、ROE7.0%を目指す。自動車の電動化対応と軽量化ニーズの取り込み、アルミニウムダイカスト製品の高付加価値化と海外拠点の収益改善を進める。",
+ "strategyThemes": [
+  {
+   "theme": "自動車電動化・軽量化への対応"
+  },
+  {
+   "theme": "ダイカスト製品の高付加価値化"
+  },
+  {
+   "theme": "海外拠点の収益改善"
+  },
+  {
+   "theme": "印刷機器・建材事業の収益力強化"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 3370,
+   "unit": "億円",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "経常利益",
+   "target": 150,
+   "unit": "億円",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    1
+   ]
+  },
+  {
+   "metric": "ROE",
+   "target": 7.0,
+   "unit": "%",
+   "targetFiscalYear": "2027年12月期",
+   "evidencePdfPages": [
+    1
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "progressive_dividend",
+  "policy": "累進配当を採用する。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認"
+  ]
+ }
+}

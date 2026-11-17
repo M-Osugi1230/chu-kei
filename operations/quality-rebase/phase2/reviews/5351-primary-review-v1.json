@@ -1,0 +1,103 @@
+{
+ "schemaVersion": "quality-rebase-phase2-primary-review-v1",
+ "company": {
+  "code": "5351",
+  "name": "品川リフラ",
+  "market": "Prime",
+  "industry": "ガラス・土石製品"
+ },
+ "source": {
+  "title": "第6次中期経営計画",
+  "publishedDate": "2024-05-13",
+  "officialUrl": "https://www2.jpx.co.jp/disc/53510/140120240513591401.pdf",
+  "pdfSha256": "9084743c3b7d4f02f43eadeeac2f7bb0fd8d4d040aaa95b46d74a7323a5c8f10",
+  "pageCount": 17,
+  "documentClassification": "formal_management_plan",
+  "pageReferenceBasis": "PDFの1始まりページ番号。",
+  "identityEvidence": {
+   "statement": "品川リフラの現行中期経営計画文書であり、#288 再確認で候補文書そのものが現行計画であることを確認した。取得バイト列の SHA-256 は #288 記録と一致し、登録数値は抽出テキストと照合した。"
+  },
+  "period": {
+   "startFiscalYear": "2024年度",
+   "endFiscalYear": "2026年度",
+   "terminalFiscalYear": "2026年度",
+   "statement": "2024年度〜2026年度の3か年計画。2026年度が最終年度。"
+  },
+  "formalPlanBoundary": {
+   "currentPlan": "第6次中期経営計画",
+   "currentStatus": "current",
+   "statement": "現行計画は第6次中期経営計画。同資料には次の第7次中期経営計画（2027〜2030年度）の枠組みも併記されているが、登録するのは第6次の目標である。営業利益等の数値は抽出テキストで表の対応を確定できなかったため登録しない。"
+  }
+ },
+ "summary": "耐火物を中心とする事業の3か年計画（第6次中期経営計画）。2026年度に売上高1,800億円を目指す。鉄鋼向けを中心とした既存事業の収益力強化と高機能製品の拡充、海外事業の拡大とエンジニアリング事業の強化を進める。",
+ "strategyThemes": [
+  {
+   "theme": "既存事業の収益力強化と高付加価値化"
+  },
+  {
+   "theme": "海外事業の拡大"
+  },
+  {
+   "theme": "エンジニアリング事業の強化"
+  },
+  {
+   "theme": "脱炭素対応製品・技術の開発"
+  }
+ ],
+ "financialTargets": [
+  {
+   "metric": "売上高",
+   "target": 1800,
+   "unit": "億円",
+   "targetFiscalYear": "2026年度",
+   "evidencePdfPages": [
+    13
+   ]
+  }
+ ],
+ "capitalPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では資本政策の具体的な記載を確認できなかった。"
+ },
+ "shareholderReturnPolicy": {
+  "status": "not_confirmed_in_document",
+  "policy": "本資料の抽出テキストの範囲では株主還元方針の具体的な記載を確認できなかった。"
+ },
+ "nonFinancialTargets": [],
+ "definitions": [],
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "publicationDateConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryValidated": true,
+  "currentPlanStatusValidated": true,
+  "fullTextHumanReviewComplete": true,
+  "visualFigureReviewComplete": false,
+  "strategyStructured": true,
+  "metricsValidated": true,
+  "fieldLevelEvidenceLinked": true,
+  "yearValidated": true,
+  "unitValidated": true,
+  "scopeValidated": true,
+  "forecastActualSeparated": true,
+  "longTermTargetsSeparatedFromPlanTargets": true,
+  "templateTextRemaining": false,
+  "independentDoubleCheck": false,
+  "postPublicationLinkAndRenderCheck": false
+ },
+ "review": {
+  "status": "primary_review_complete_independent_review_ready",
+  "reviewedAt": "2026-11-17T09:35:00+09:00",
+  "reviewRole": "primary_reviewer",
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "reviewers": [
+   "Muse (Milestone 1 一次レビュー。公式PDFをローカル取得し SHA-256 が #288 再確認記録と一致することを確認。登録数値はすべて抽出テキストで照合した。ChatGPT の M1-06/M1-07 抽出は原文と異なる箇所が多かったため採用せず、#288 再確認記録と原文テキストから再構築した)"
+  ],
+  "remainingChecks": [
+   "独立確認者による公式PDF全文と図表の原寸再確認",
+   "営業利益・ROE等の目標値は抽出テキストの図表が崩れており数値対応を確定できなかったため未登録"
+  ]
+ }
+}

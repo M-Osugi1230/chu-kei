@@ -11,6 +11,11 @@ Supported source-resolution states:
 4. A formal-plan boundary or document identity is resolved and the primary
    review is already complete. This is accepted only when the canonical ledger,
    review file, evidence flags, and pending independent-review state agree.
+5. An independent-review source resolution reconnects a completion record to
+   its canonical collected source. These records carry their own schema and
+   are additionally cross-validated, in completion context, by the
+   independent-completions validator; here they are checked for identity and
+   canonical-source well-formedness.
 
 This validator never approves a review, infers a fact, or converts a pending
 record into a completed one.
@@ -27,6 +32,7 @@ from urllib.parse import urlparse
 
 LEGACY_SCHEMA = "phase2-source-resolution-v1"
 CORRECTED_SCHEMA = "quality-rebase-phase2-source-resolution-v1"
+INDEPENDENT_SCHEMA = "quality-rebase-phase2-independent-source-resolution-v1"
 FORBIDDEN_TRUE_KEYS = {
     "automaticFactCompletionAllowed",
     "automaticApprovalAllowed",
@@ -426,6 +432,31 @@ def validate_corrected_schema(
     return validate_corrected_official_source(repair, repair_path, completed_records)
 
 
+def validate_independent_resolution(
+    repair: dict[str, Any],
+    repair_path: Path,
+) -> dict[str, Any]:
+    code = company_code(repair, repair_path)
+    expected_name = f"{code}-independent-source-resolution-v1.json"
+    if repair_path.name != expected_name:
+        raise SystemExit(
+            f"independent source resolution filename/code mismatch: {repair_path}"
+        )
+    status = repair.get("resolutionStatus")
+    if not isinstance(status, str) or not status:
+        raise SystemExit(f"resolutionStatus missing: {repair_path}")
+    canonical = repair.get("canonicalSource")
+    if not isinstance(canonical, dict):
+        raise SystemExit(f"canonicalSource missing: {repair_path}")
+    validate_pdf_identity(canonical, f"{repair_path}.canonicalSource")
+    return {
+        "code": code,
+        "mode": "independent_source_resolution",
+        "quarantined": False,
+        "resolutionStatus": status,
+    }
+
+
 def validate_repair(
     repair_path: Path,
     repo_root: Path,
@@ -443,6 +474,8 @@ def validate_repair(
         return validate_corrected_schema(
             repair, repair_path, repo_root, completed_records
         )
+    if schema == INDEPENDENT_SCHEMA:
+        return validate_independent_resolution(repair, repair_path)
     raise SystemExit(f"unexpected schemaVersion: {repair_path}: {schema}")
 
 
@@ -494,6 +527,11 @@ def main() -> None:
                     1
                     for result in results
                     if result["mode"] == "completed_formal_plan_resolution"
+                ),
+                "independentSourceResolutions": sum(
+                    1
+                    for result in results
+                    if result["mode"] == "independent_source_resolution"
                 ),
                 "deepVerificationApproved": 0,
                 "records": results,

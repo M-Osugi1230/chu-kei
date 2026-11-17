@@ -14,7 +14,7 @@ test('all user-data collection forms fail closed before host verification', () =
     const html = read(path);
     assert.ok(html.includes('<form hidden name="' + formName + '"'), path + ': form must begin hidden');
     assert.ok(html.includes('data-form-availability-status'), path + ': pending notice is missing');
-    assert.ok(html.includes('data-netlify="true"'), path + ': Netlify detection attribute is missing');
+    assert.ok(html.includes('action="https://api.web3forms.com/submit"'), path + ': Web3Forms action is missing');
     assert.ok(html.includes('src="./assets/forms-availability.js"'), path + ': activation script is missing');
   }
 });
@@ -23,7 +23,7 @@ test('form delivery status requires explicit proof per origin and form', () => {
   const settings = JSON.parse(read('site/data/forms-availability-v1.json'));
   const known = new Set(formPages.map(([, name]) => name));
   assert.equal(settings.schemaVersion, 1);
-  assert.equal(settings.provider, 'netlify-forms');
+  assert.equal(settings.provider, 'web3forms');
   assert.ok(['unverified', 'verified'].includes(settings.status));
   assert.ok(Array.isArray(settings.verifiedFormNames));
   assert.ok(settings.verifiedFormNames.every(name => known.has(name)));

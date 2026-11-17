@@ -1,36 +1,77 @@
 {
-  "schemaVersion": "phase2-source-resolution-v1",
-  "company": {"code": "6822", "name": "大井電気"},
-  "resolutionStatus": "current_formal_management_plan_confirmed",
-  "currentOfficialDocument": {
-    "pdfUrl": "https://www2.jpx.co.jp/disc/68220/140120260515538497.pdf",
-    "title": "中期経営計画 2026-2028",
-    "publishedDate": "2026-05-15",
-    "securityCode": "6822",
-    "pageCount": 23,
-    "pdfSha256": "ee3f7e6d39ddf62baac678623d7a2e53e7aafddaa47a369863b611dac4aa20d5",
-    "identityConfirmed": true,
-    "planPeriodConfirmed": true
-  },
-  "documentClassification": "formal_management_plan_current_2026_to_2028",
-  "formalPlanBoundary": {
-    "previousPlan": "中期経営計画2023-2025",
-    "currentPlan": "中期経営計画2026-2028",
-    "longTermVision": "大井電気グループ長期ビジョン2035",
-    "singleYearForecast": "FY2026業績予想",
-    "terminalTargets": "FY2028計画",
-    "statement": "前中計実績、FY2026単年度予想、FY2028中計目標、長期ビジョン2035を分離する。",
-    "evidencePdfPages": [2, 6, 8, 10, 12]
-  },
-  "validation": {
-    "companyIdentityConfirmed": true,
-    "securityCodeConfirmed": true,
-    "publicationDateConfirmed": true,
-    "pageCountConfirmed": true,
-    "formalPlanConfirmed": true,
-    "formalPlanBoundaryConfirmed": true,
-    "automaticFactCompletionAllowed": false,
-    "automaticApprovalAllowed": false,
-    "deepVerificationApproved": false
-  }
+ "schemaVersion": "phase2-source-resolution-v1",
+ "company": {
+  "code": "6822",
+  "name": "大井電気"
+ },
+ "resolutionStatus": "current_formal_management_plan_confirmed",
+ "currentOfficialDocument": {
+  "pdfUrl": "https://www2.jpx.co.jp/disc/68220/140120260515538497.pdf",
+  "title": "中期経営計画 2026-2028",
+  "publishedDate": "2026-05-15",
+  "securityCode": "6822",
+  "pageCount": 23,
+  "pdfSha256": "ee3f7e6d39ddf62baac678623d7a2e53e7aafddaa47a369863b611dac4aa20d5",
+  "identityConfirmed": true,
+  "planPeriodConfirmed": true,
+  "pageCountConfirmed": true,
+  "publicationDateConfirmed": true,
+  "binaryHashConfirmed": true
+ },
+ "documentClassification": "formal_management_plan_current_2026_to_2028",
+ "formalPlanBoundary": {
+  "previousPlan": "中期経営計画2023-2025",
+  "currentPlan": "中期経営計画2026-2028",
+  "longTermVision": "大井電気グループ長期ビジョン2035",
+  "singleYearForecast": "FY2026業績予想",
+  "terminalTargets": "FY2028計画",
+  "statement": "前中計実績、FY2026単年度予想、FY2028中計目標、長期ビジョン2035を分離する。",
+  "evidencePdfPages": [
+   2,
+   6,
+   8,
+   10,
+   12
+  ]
+ },
+ "validation": {
+  "companyIdentityConfirmed": true,
+  "securityCodeConfirmed": true,
+  "publicationDateConfirmed": true,
+  "pageCountConfirmed": true,
+  "formalPlanConfirmed": true,
+  "formalPlanBoundaryConfirmed": true,
+  "automaticFactCompletionAllowed": false,
+  "automaticApprovalAllowed": false,
+  "deepVerificationApproved": false,
+  "pdfSha256Confirmed": true,
+  "fullTextRepositoryReviewComplete": true,
+  "visualFigureReviewComplete": true,
+  "independentDoubleCheck": false
+ },
+ "primaryReviewComplete": true,
+ "independentReviewReady": true,
+ "primaryReviewFile": "operations/quality-rebase/phase2/reviews/6822-primary-review-v1.json",
+ "automaticFactCompletionAllowed": false,
+ "automaticApprovalAllowed": false,
+ "deepVerificationApproved": false,
+ "recordReconciliation": {
+  "date": "2026-11-17T16:00:13+09:00",
+  "basis": "各社の一次レビューファイル・正本台帳・公式資料との照合（2026-11-17 CI是正）",
+  "changes": [
+   "primaryReviewComplete を実態（一次レビュー完了）に合わせて true へ",
+   "independentReviewReady をレビュー状態に合わせて true へ",
+   "primaryReviewFile を正本台帳の参照先に設定",
+   "automaticFactCompletionAllowed を false で明示",
+   "automaticApprovalAllowed を false で明示",
+   "deepVerificationApproved を false で明示",
+   "currentOfficialDocument.pageCountConfirmed を実態に合わせて設定",
+   "currentOfficialDocument.publicationDateConfirmed を実態に合わせて設定",
+   "currentOfficialDocument.binaryHashConfirmed を実態に合わせて設定",
+   "validation.pdfSha256Confirmed をレビュー検証実績に合わせて設定",
+   "validation.fullTextRepositoryReviewComplete をレビュー検証実績に合わせて設定",
+   "validation.visualFigureReviewComplete をレビュー検証実績に合わせて設定",
+   "validation.independentDoubleCheck をレビュー検証実績に合わせて設定"
+  ]
+ }
 }

@@ -1,6 +1,6 @@
 {
   "version": "plan-detection-primary-reviewed-overrides-v1",
-  "generatedAt": "2026-11-17T00:27:46.020Z",
+  "generatedAt": "2026-11-17T00:42:53.660Z",
   "referenceDate": "2026-11-17",
   "sourceReviewDirectories": [
     "operations/quality-rebase/phase1/reviews",
@@ -22,11 +22,11 @@
     "unresolvedEvidenceRemainsNotChecked": true
   },
   "counts": {
-    "reviewFilesScanned": 630,
-    "uniqueEligiblePrimaryReviewedCompanies": 418,
+    "reviewFilesScanned": 632,
+    "uniqueEligiblePrimaryReviewedCompanies": 420,
     "supersededByIndependentSeed": 60,
-    "primaryOverrides": 358,
-    "current": 357,
+    "primaryOverrides": 360,
+    "current": 359,
     "expired": 1,
     "rejectedReviewFiles": 211
   },
@@ -2460,6 +2460,37 @@
       }
     },
     {
+      "code": "2432",
+      "name": "ディー・エヌ・エー",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-17",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/24320/140120260227571340.pdf",
+        "sourceTitle": "資本コストや株価を意識した経営の実現に向けた対応について（アップデート）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2027年3月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-17",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "capital_cost_response_disclosing_medium_term_framework",
+        "period": {
+          "startFiscalYear": "2025年3月期",
+          "endFiscalYear": "2027年3月期",
+          "terminalFiscalYear": "2027年3月期",
+          "statement": "今中期戦略期間は2025年3月期～2027年3月期。2027年3月期が最終年度。"
+        },
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2027年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/2432-primary-review-v1.json",
+        "publishedDate": "2026-02-27",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
       "code": "2461",
       "name": "ファンコミュニケーションズ",
       "status": "expired",
@@ -4810,6 +4841,37 @@
         "planEndPrecision": "month_end",
         "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4293-primary-review-v1.json",
         "publishedDate": "2026-02-12",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "4324",
+      "name": "電通グループ",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-17",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/43240/140120260814520879.pdf",
+        "sourceTitle": "2026年度 第2四半期 決算説明会資料（中期経営計画アップデートを含む）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-12-31 derived from 2028年12月期"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-17",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "earnings_presentation_containing_current_plan",
+        "period": {
+          "startFiscalYear": "2026年12月期",
+          "endFiscalYear": "2028年12月期",
+          "terminalFiscalYear": "2028年12月期",
+          "statement": "同社は12月決算。アップデートにより計画は2026ー2028年の計画として再設計され、最終年度は2028年12月期。"
+        },
+        "planEndDate": "2028-12-31",
+        "planEndBasis": "2028年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/reviews/4324-primary-review-v1.json",
+        "publishedDate": "2026-08-14",
         "supersededByIndependentSeed": false
       }
     },

@@ -3,7 +3,7 @@
   "reviewStatus": "VERIFIED",
   "publicCandidate": {
     "url": "https://chu-kei.com/",
-    "origin": "Cloudflare Pages production deployment (Direct Upload of GitHub main site/) served on the verified custom domain chu-kei.com (domain ownership verified 2026-11-15: RDAP status active, HTTPS 200 with valid certificate; DNS moved from Netlify DNS to Cloudflare on 2026-11-18, www serves the site directly until the www-to-apex redirect rule is added; canonical switched from the Netlify subdomain on 2026-11-15)",
+    "origin": "Cloudflare Pages production deployment (Direct Upload of GitHub main site/) served on the verified custom domain chu-kei.com (domain ownership verified 2026-11-15: RDAP status active, HTTPS 200 with valid certificate; DNS moved from Netlify DNS to Cloudflare on 2026-11-18, www redirects to apex via a zone Page Rule (added 2026-11-18); canonical switched from the Netlify subdomain on 2026-11-15)",
     "hosting": "Cloudflare Pages",
     "sourceLinkage": "verified_github_main_direct_upload"
   },

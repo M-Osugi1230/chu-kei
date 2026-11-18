@@ -1,7 +1,3 @@
-/contact /contact.html 200
-/privacy /privacy.html 200
-/reports /reports.html 200
-/pricing /pricing.html 200
-/quality /quality.html 200
-/history /history.html 200
-/release /release.html 200
+# Cloudflare Pages serves clean URLs natively (e.g. /contact -> contact.html).
+# Do NOT add "200" rewrite rules like "/contact /contact.html 200" here:
+# on Pages they loop (the rewritten .html path is redirected back to the clean URL).

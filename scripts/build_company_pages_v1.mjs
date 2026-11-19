@@ -149,6 +149,7 @@ ${table}
 <footer>
   <p><a href="/">Chu-kei Insight トップ</a> / <a href="/pricing.html">料金</a> / <a href="/contact.html">問い合わせ</a> / <a href="/privacy.html">プライバシー</a></p>
 </footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a43b478d115f4ce1af2a08b6335eea73"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
 `;

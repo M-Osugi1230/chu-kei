@@ -39,10 +39,12 @@ function captureErrors(page) {
   const pageErrors = [];
   page.on('console', message => {
     if (message.type() !== 'error') return;
-    // 承認済み計測ビーコン（Cloudflare Web Analytics）の読み込み失敗だけは対象外とする。
-    // CI環境では外部ネットワークへ到達できず ERR_FAILED になるが、サイト自身のエラーではない。
+    // 承認済み計測ビーコン（Cloudflare Web Analytics）由来のコンソールエラーだけは対象外とする。
+    // テスト環境（127.0.0.1）では送信先が登録オリジンでないため CORS で遮断され、
+    // 本番では発生しないエラーが記録される。サイト自身のエラーは引き続き全て検出する。
     const url = message.location()?.url || '';
-    if (url.startsWith('https://static.cloudflareinsights.com/') || url.startsWith('https://cloudflareinsights.com/')) return;
+    if (url.startsWith('https://static.cloudflareinsights.com/') || url.startsWith('https://cloudflareinsights.com/')
+      || message.text().includes('cloudflareinsights.com')) return;
     consoleErrors.push(message.text());
   });
   page.on('pageerror', error => pageErrors.push(error.message));

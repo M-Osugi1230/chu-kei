@@ -1,0 +1,39 @@
+name: detection-watch-tdnet
+
+# TDnet の中計関連開示を毎日検知し、operations/detection/inbox-v1.json に起票する。
+# registry や公開データは変更しない（operations/detection/ 配下のみ）。
+
+on:
+  schedule:
+    - cron: '30 21 * * *' # 06:30 JST daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: detection-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Watch TDnet disclosures
+        run: node scripts/detection/watch_tdnet_v1.mjs
+      - name: Commit detection state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add operations/detection/
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore(detection): tdnet watch $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

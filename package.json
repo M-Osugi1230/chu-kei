@@ -32,7 +32,10 @@
     "quality:live-parity:offline": "node scripts/audit_live_deployment_parity_v1.mjs --offline",
     "quality:live-parity": "node scripts/audit_live_deployment_parity_v1.mjs",
     "quality:forms:delivery": "node --test tests/forms-availability.test.mjs",
-    "seo:company-pages": "node scripts/build_company_pages_v1.mjs"
+    "seo:company-pages": "node scripts/build_company_pages_v1.mjs",
+    "seo:theme-pages": "node scripts/build_theme_pages_v1.mjs",
+    "seo:all-pages": "npm run seo:theme-pages && npm run seo:company-pages && npm run test:theme-pages",
+    "test:theme-pages": "node --test tests/theme-pages.test.mjs"
   },
   "engines": {
     "node": ">=20"

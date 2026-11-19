@@ -93,7 +93,10 @@ const html = shellFiles.filter(file => file.endsWith('.html')).map(file => fs.re
 const scripts = shellFiles.filter(file => file.endsWith('.js')).map(file => fs.readFileSync(path.join(SITE, file), 'utf8')).join('\n');
 const css = shellFiles.filter(file => file.endsWith('.css')).map(file => fs.readFileSync(path.join(SITE, file), 'utf8')).join('\n');
 const externalStylesheet = /<link(?=[^>]*\brel=["']stylesheet["'])(?=[^>]*\bhref=["']https?:\/\/)[^>]*>/i;
-check('no external script dependency', !/<script[^>]+src=["']https?:\/\//i.test(html));
+// Cloudflare Web Analytics のビーコン（オーナー承認済み、CSPでも明示許可した計測専用スクリプト）のみを
+// 外部スクリプト禁止の対象外とする。それ以外の外部スクリプト依存は引き続き禁止する。
+const approvedBeacon = /<script[^>]+src=["']https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js["'][^>]*><\/script>/gi;
+check('no external script dependency', !/<script[^>]+src=["']https?:\/\//i.test(html.replace(approvedBeacon, '')));
 check('no external stylesheet dependency', !externalStylesheet.test(html));
 check('no remote CSS imports', !/@import\s+(?:url\()?['"]?https?:\/\//i.test(css));
 check('no eval usage', !/\beval\s*\(/.test(scripts));

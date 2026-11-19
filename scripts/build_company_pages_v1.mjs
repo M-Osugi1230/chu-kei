@@ -21,6 +21,17 @@ const STATUS_LABEL = {
 };
 const MARKET_LABEL = { Prime: '東証プライム', Standard: '東証スタンダード', Growth: '東証グロース' };
 
+// テーマページの固定URL。存在する生成ページに限ってリンク化する。
+const THEME_SLUGS = new Map([
+  ['人的資本', 'human-capital'], ['サステナビリティ', 'sustainability'],
+  ['株主還元', 'shareholder-return'], ['資本効率', 'capital-efficiency'],
+  ['海外', 'overseas'], ['DX', 'dx'], ['AI', 'ai'],
+  ['事業成長', 'business-growth'], ['生産性', 'productivity'],
+  ['M&A', 'ma'], ['商品・サービス', 'products-services'],
+  ['設備投資', 'capex'], ['事業再編', 'restructuring'],
+  ['事業ポートフォリオ', 'business-portfolio'], ['研究開発', 'rd'],
+]);
+
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const hasText = (v) => typeof v === 'string' && v.trim() !== '';
 
@@ -61,6 +72,14 @@ function page(c, d = null) {
   const desc = `${c.name}（証券コード${c.code}、${market}、${c.industry || ''}）の中期経営計画の確認状況と概要。${status}。一次情報に基づく確認日と品質レベルを掲載。`;
   const url = `${SITE_ORIGIN}/company/${c.code}.html`;
   const summary = hasText(d?.summary) ? d.summary : c.summary;
+  const themeLinks = Array.isArray(c.themes) ? [...new Set(c.themes)].map((name) => {
+    const slug = THEME_SLUGS.get(name);
+    if (slug && ['current', 'expired'].includes(c.planStatus)
+        && existsSync(join(root, 'site/themes', `${slug}.html`))) {
+      return `<a href="/themes/${slug}.html">${esc(name)}</a>`;
+    }
+    return esc(name);
+  }).join('、') : '';
   const rows = [
     ['証券コード', c.code],
     ['市場', market],
@@ -74,7 +93,7 @@ function page(c, d = null) {
     ['テーマ', Array.isArray(c.themes) && c.themes.length ? c.themes.join('、') : null],
     ['品質レベル', c.quality?.label],
   ].filter(([, v]) => v != null && v !== '');
-  const table = rows.map(([k, v]) => `        <tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('\n');
+  const table = rows.map(([k, v]) => `        <tr><th scope="row">${esc(k)}</th><td>${k === 'テーマ' ? themeLinks : esc(v)}</td></tr>`).join('\n');
   const ld = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -159,14 +178,22 @@ for (const c of companies) {
   writeFileSync(join(root, 'site/company', `${c.code}.html`), page(c, getDetail(c)));
 }
 
-// sitemap: 既存の基幹URLを保持し、企業URLを差し替える
+// sitemap: 基幹URL（テーマページを含む）を保持し、企業URLだけを再生成する。
 const sitemapPath = join(root, 'site/sitemap.xml');
 let core = [];
 if (existsSync(sitemapPath)) {
   const xml = readFileSync(sitemapPath, 'utf8');
-  core = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]).filter((u) => !u.includes('/company/'));
+  core = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
+    .filter((u) => !u.startsWith(`${SITE_ORIGIN}/company/`)
+      && u !== `${SITE_ORIGIN}/themes.html`
+      && !u.startsWith(`${SITE_ORIGIN}/themes/`));
 }
-const urls = [...core, ...companies.map((c) => `${SITE_ORIGIN}/company/${c.code}.html`)];
+const themesIndex = existsSync(join(root, 'site/themes.html')) ? [`${SITE_ORIGIN}/themes.html`] : [];
+const themeUrls = [...THEME_SLUGS.values()]
+  .filter((slug) => existsSync(join(root, 'site/themes', `${slug}.html`)))
+  .map((slug) => `${SITE_ORIGIN}/themes/${slug}.html`);
+const urls = [...new Set([...core, ...themesIndex, ...themeUrls,
+  ...companies.map((c) => `${SITE_ORIGIN}/company/${c.code}.html`)])];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`;
 writeFileSync(sitemapPath, sitemap);
 

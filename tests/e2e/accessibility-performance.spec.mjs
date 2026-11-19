@@ -42,7 +42,7 @@ function captureErrors(page) {
     // 本番では発生しないエラーが記録される。サイト自身のエラーは引き続き全て検出する。
     const url = message.location()?.url || '';
     if (url.startsWith('https://static.cloudflareinsights.com/') || url.startsWith('https://cloudflareinsights.com/')
-      || message.text().includes('cloudflareinsights.com')) return;
+      || message.text().includes('cloudflareinsights.com') || url.includes('clarity.ms') || url.startsWith('https://c.bing.com/') || message.text().includes('clarity.ms')) return;
     consoleErrors.push(message.text());
   });
   page.on('pageerror', error => pageErrors.push(error.message));

@@ -1,0 +1,40 @@
+name: detection-watch-sources
+
+# 解決済み500社の一次資料 URL の内容変化を週1回検知し、
+# operations/detection/inbox-v1.json に起票する。
+# registry や公開データは変更しない（operations/detection/ 配下のみ）。
+
+on:
+  schedule:
+    - cron: '0 22 * * 0' # Mon 07:00 JST weekly
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: detection-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Watch source documents
+        run: node scripts/detection/watch_sources_v1.mjs
+      - name: Commit detection state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add operations/detection/
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore(detection): source watch $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

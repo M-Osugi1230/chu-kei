@@ -36,7 +36,12 @@ function captureErrors(page) {
   const consoleErrors = [];
   const pageErrors = [];
   page.on('console', message => {
-    if (message.type() === 'error') consoleErrors.push(message.text());
+    if (message.type() !== 'error') return;
+    // 承認済み計測ビーコン（Cloudflare Web Analytics）の読み込み失敗だけは対象外とする。
+    // CI環境では外部ネットワークへ到達できず ERR_FAILED になるが、サイト自身のエラーではない。
+    const url = message.location()?.url || '';
+    if (url.startsWith('https://static.cloudflareinsights.com/') || url.startsWith('https://cloudflareinsights.com/')) return;
+    consoleErrors.push(message.text());
   });
   page.on('pageerror', error => pageErrors.push(error.message));
   return { consoleErrors, pageErrors };

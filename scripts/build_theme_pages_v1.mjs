@@ -99,6 +99,10 @@ function shell(title, description, url, main, breadcrumb) {
 <main id="main" class="section">
 <nav aria-label="パンくず"><a href="/">トップ</a> / <a href="/themes.html">テーマ一覧</a>${breadcrumb.length === 3 ? ` / ${esc(breadcrumb[2][0])}` : ''}</nav>
 ${main}
+<section>
+  <h2>更新アラート（準備中）</h2>
+  <p>中期経営計画の新規公表・改定をお知らせする「進捗・更新アラート」を、Pro の Early access として準備しています。関心のある方は<a href="/pricing.html#waitlist">先行利用の登録</a>からお知らせください。登録は需要の把握が目的で、契約・課金は発生しません。</p>
+</section>
 </main>
 <footer><p><a href="/">Chu-kei Insight トップ</a> / <a href="/quality.html">品質</a> / <a href="/contact.html">問い合わせ</a></p></footer>
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a43b478d115f4ce1af2a08b6335eea73"}'></script>

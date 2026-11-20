@@ -6,23 +6,45 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import html
+import http.client
 import io
 import json
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
 from typing import Iterable, Sequence
 
 SOURCE_PAGE = "https://www.jpx.co.jp/markets/statistics-equities/misc/01.html"
-USER_AGENT = "chu-kei-data-pipeline/1.0 (+https://github.com/M-Osugi1230/chu-kei)"
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+)
+
+FETCH_RETRY_DELAYS = (2, 5)
+TRANSIENT_FETCH_ERRORS = (
+    http.client.IncompleteRead,
+    urllib.error.URLError,
+    TimeoutError,
+    ConnectionError,
+)
 
 
 def fetch_bytes(url: str) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=60) as response:
-        return response.read()
+    last_error: Exception | None = None
+    for attempt in range(len(FETCH_RETRY_DELAYS) + 1):
+        try:
+            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(request, timeout=60) as response:
+                return response.read()
+        except TRANSIENT_FETCH_ERRORS as error:
+            last_error = error
+            if attempt < len(FETCH_RETRY_DELAYS):
+                time.sleep(FETCH_RETRY_DELAYS[attempt])
+    raise RuntimeError(f"Failed to fetch {url} after retries") from last_error
 
 
 def discover_workbook_url(page_url: str, page: bytes) -> str:

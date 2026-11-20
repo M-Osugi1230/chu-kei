@@ -1,7 +1,7 @@
 {
   "version": "chu-kei-research-priority-v1",
-  "generatedAt": "2026-11-20T18:26:51.635Z",
-  "universeGeneratedAt": "2026-11-20T18:26:45.262Z",
+  "generatedAt": "2026-11-20T18:38:36.526Z",
+  "universeGeneratedAt": "2026-11-20T18:38:22.634Z",
   "sourceBundleSha256": "a7fce63914a20f539f2d914e6fce8cc2d75648a6bc165f52d38bffda81eff3e6",
   "policy": {
     "productGoal": "企業数の網羅性を維持しながら、企業発見・比較能力を最大化する",
@@ -18,11 +18,11 @@
   "counts": {
     "universe": 3686,
     "sourceBundleCompanies": 3000,
-    "planResolved": 1362,
-    "planPending": 2324,
-    "planCandidateHinted": 1608,
-    "currentOrUnstructuredPlan": 1352,
-    "comparisonCoreQueued": 1277,
+    "planResolved": 1363,
+    "planPending": 2323,
+    "planCandidateHinted": 1607,
+    "currentOrUnstructuredPlan": 1353,
+    "comparisonCoreQueued": 1278,
     "noCurrentCoreRequired": 10
   },
   "comparisonCoreDefinition": [
@@ -13788,29 +13788,6 @@
         "name": "アジア航測",
         "market": "Standard",
         "industry": "空運業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9539",
-        "name": "京葉瓦斯",
-        "market": "Standard",
-        "industry": "電気・ガス業",
         "priorityBand": "P0",
         "priorityScore": 1100,
         "candidateHintScore": 100,
@@ -84391,6 +84368,35 @@
         "code": "9536",
         "name": "西部ガスホールディングス",
         "market": "Prime",
+        "industry": "電気・ガス業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9539",
+        "name": "京葉瓦斯",
+        "market": "Standard",
         "industry": "電気・ガス業",
         "planStatus": "current",
         "priorityBand": "P1",

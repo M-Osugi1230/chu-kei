@@ -1,6 +1,6 @@
 {
   "version": "plan-detection-primary-reviewed-overrides-v1",
-  "generatedAt": "2026-11-20T18:26:50.467Z",
+  "generatedAt": "2026-11-20T18:38:33.660Z",
   "referenceDate": "2026-11-21",
   "sourceReviewDirectories": [
     "operations/quality-rebase/phase1/reviews",
@@ -22,11 +22,11 @@
     "unresolvedEvidenceRemainsNotChecked": true
   },
   "counts": {
-    "reviewFilesScanned": 1511,
-    "uniqueEligiblePrimaryReviewedCompanies": 1297,
+    "reviewFilesScanned": 1512,
+    "uniqueEligiblePrimaryReviewedCompanies": 1298,
     "supersededByIndependentSeed": 60,
-    "primaryOverrides": 1237,
-    "current": 1228,
+    "primaryOverrides": 1238,
+    "current": 1229,
     "expired": 9,
     "rejectedReviewFiles": 212
   },
@@ -32486,6 +32486,32 @@
         "planEndPrecision": "fiscal_year",
         "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/9536-m2b11-primary-review-v1.json",
         "publishedDate": "2025-03-27",
+        "supersededByIndependentSeed": false
+      }
+    },
+    {
+      "code": "9539",
+      "name": "京葉瓦斯",
+      "status": "current",
+      "review": {
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/95390/140120241128530839.pdf",
+        "sourceTitle": "中期経営計画2025-2027",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
+      },
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年度～2027年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/9539-m2b20-primary-review-v1.json",
+        "publishedDate": "2024-11-28",
         "supersededByIndependentSeed": false
       }
     },

@@ -1,18 +1,18 @@
 {
   "version": "plan-detection-registry-v1",
-  "universeGeneratedAt": "2026-11-20T18:26:45.262Z",
+  "universeGeneratedAt": "2026-11-20T18:38:22.634Z",
   "sourceFetchedAt": "2026-11-20T18:26:44.113574Z",
   "companyCount": 3686,
-  "resolvedCount": 1362,
-  "detectionCoverage": 0.369506,
+  "resolvedCount": 1363,
+  "detectionCoverage": 0.369778,
   "verifiedOverrideCount": 61,
-  "primaryReviewedOverrideCount": 1237,
+  "primaryReviewedOverrideCount": 1238,
   "counts": {
-    "current": 1352,
+    "current": 1353,
     "expired": 10,
     "no_formal_plan": 0,
     "found_unstructured": 0,
-    "not_checked": 2324
+    "not_checked": 2323
   },
   "companies": [
     {
@@ -72974,16 +72974,28 @@
       "name": "京葉瓦斯",
       "market": "Standard",
       "industry": "電気・ガス業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/95390/140120241128530839.pdf",
+        "sourceTitle": "中期経営計画2025-2027",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年度～2027年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/9539-m2b20-primary-review-v1.json",
+        "publishedDate": "2024-11-28",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "9543",

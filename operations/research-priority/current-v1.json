@@ -1,7 +1,7 @@
 {
   "version": "chu-kei-research-priority-v1",
-  "generatedAt": "2026-11-20T16:18:06.571Z",
-  "universeGeneratedAt": "2026-11-20T16:18:02.278Z",
+  "generatedAt": "2026-11-20T16:29:39.282Z",
+  "universeGeneratedAt": "2026-11-20T16:29:37.454Z",
   "sourceBundleSha256": "a7fce63914a20f539f2d914e6fce8cc2d75648a6bc165f52d38bffda81eff3e6",
   "policy": {
     "productGoal": "企業数の網羅性を維持しながら、企業発見・比較能力を最大化する",
@@ -18,11 +18,11 @@
   "counts": {
     "universe": 3686,
     "sourceBundleCompanies": 3000,
-    "planResolved": 897,
-    "planPending": 2789,
-    "planCandidateHinted": 2073,
-    "currentOrUnstructuredPlan": 891,
-    "comparisonCoreQueued": 822,
+    "planResolved": 944,
+    "planPending": 2742,
+    "planCandidateHinted": 2026,
+    "currentOrUnstructuredPlan": 938,
+    "comparisonCoreQueued": 868,
     "noCurrentCoreRequired": 6
   },
   "comparisonCoreDefinition": [
@@ -10518,192 +10518,8 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "8377",
-        "name": "ほくほくフィナンシャルグループ",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8381",
-        "name": "山陰合同銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8387",
-        "name": "四国銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8388",
-        "name": "阿波銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8392",
-        "name": "大分銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8395",
-        "name": "佐賀銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8399",
-        "name": "琉球銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "8411",
         "name": "みずほフィナンシャルグループ",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8418",
-        "name": "山口フィナンシャルグループ",
         "market": "Prime",
         "industry": "銀行業",
         "priorityBand": "P0",
@@ -10771,240 +10587,10 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "8511",
-        "name": "日本証券金融",
-        "market": "Prime",
-        "industry": "その他金融業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8522",
-        "name": "名古屋銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8541",
-        "name": "愛媛銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8544",
-        "name": "京葉銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8551",
-        "name": "北日本銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8558",
-        "name": "東和銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8570",
-        "name": "イオンフィナンシャルサービス",
-        "market": "Prime",
-        "industry": "その他金融業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "8584",
         "name": "ジャックス",
         "market": "Prime",
         "industry": "その他金融業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8585",
-        "name": "オリエントコーポレーション",
-        "market": "Prime",
-        "industry": "その他金融業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8593",
-        "name": "三菱ＨＣキャピタル",
-        "market": "Prime",
-        "industry": "その他金融業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8609",
-        "name": "岡三証券グループ",
-        "market": "Prime",
-        "industry": "証券、商品先物取引業",
         "priorityBand": "P0",
         "priorityScore": 1100,
         "candidateHintScore": 100,
@@ -11070,169 +10656,8 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "8622",
-        "name": "水戸証券",
-        "market": "Prime",
-        "industry": "証券、商品先物取引業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "8630",
         "name": "ＳＯＭＰＯホールディングス",
-        "market": "Prime",
-        "industry": "保険業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8697",
-        "name": "日本取引所グループ",
-        "market": "Prime",
-        "industry": "その他金融業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8707",
-        "name": "岩井コスモホールディングス",
-        "market": "Prime",
-        "industry": "証券、商品先物取引業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8708",
-        "name": "アイザワ証券グループ",
-        "market": "Prime",
-        "industry": "証券、商品先物取引業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8713",
-        "name": "フィデアホールディングス",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8714",
-        "name": "池田泉州ホールディングス",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8715",
-        "name": "アニコム ホールディングス",
         "market": "Prime",
         "industry": "保険業",
         "priorityBand": "P0",
@@ -11277,100 +10702,8 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "8750",
-        "name": "第一ライフグループ",
-        "market": "Prime",
-        "industry": "保険業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8771",
-        "name": "イー・ギャランティ",
-        "market": "Prime",
-        "industry": "その他金融業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "8802",
         "name": "三菱地所",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8803",
-        "name": "平和不動産",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8818",
-        "name": "京阪神ビルディング",
         "market": "Prime",
         "industry": "不動産業",
         "priorityBand": "P0",
@@ -11415,194 +10748,10 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "8848",
-        "name": "レオパレス２１",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8860",
-        "name": "フジ住宅",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8881",
-        "name": "日神グループホールディングス",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8892",
-        "name": "エスコン",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8919",
-        "name": "カチタス",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8923",
-        "name": "トーセイ",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8934",
-        "name": "サンフロンティア不動産",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "8999",
         "name": "グランディハウス",
         "market": "Prime",
         "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9006",
-        "name": "京浜急行電鉄",
-        "market": "Prime",
-        "industry": "陸運業",
         "priorityBand": "P0",
         "priorityScore": 1100,
         "candidateHintScore": 100,
@@ -11670,190 +10819,6 @@
         "layer": "L1_PLAN_DETECTION",
         "code": "9024",
         "name": "西武ホールディングス",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9025",
-        "name": "鴻池運輸",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9031",
-        "name": "西日本鉄道",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9037",
-        "name": "ハマキョウレックス",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9041",
-        "name": "近鉄グループホールディングス",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9048",
-        "name": "名古屋鉄道",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9052",
-        "name": "山陽電気鉄道",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9064",
-        "name": "ヤマトホールディングス",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9065",
-        "name": "山九",
         "market": "Prime",
         "industry": "陸運業",
         "priorityBand": "P0",
@@ -32908,52 +31873,8 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "9020",
-        "name": "東日本旅客鉄道",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "9039",
         "name": "サカイ引越センター",
-        "market": "Prime",
-        "industry": "陸運業",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "9042",
-        "name": "阪急阪神ホールディングス",
         "market": "Prime",
         "industry": "陸運業",
         "priorityBand": "P0",
@@ -81286,8 +80207,153 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "8377",
+        "name": "ほくほくフィナンシャルグループ",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8381",
+        "name": "山陰合同銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "8386",
         "name": "百十四銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8387",
+        "name": "四国銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8388",
+        "name": "阿波銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8392",
+        "name": "大分銀行",
         "market": "Prime",
         "industry": "銀行業",
         "planStatus": "current",
@@ -81344,10 +80410,155 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "8395",
+        "name": "佐賀銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8399",
+        "name": "琉球銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8418",
+        "name": "山口フィナンシャルグループ",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "8439",
         "name": "東京センチュリー",
         "market": "Prime",
         "industry": "その他金融業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8511",
+        "name": "日本証券金融",
+        "market": "Prime",
+        "industry": "その他金融業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8522",
+        "name": "名古屋銀行",
+        "market": "Prime",
+        "industry": "銀行業",
         "planStatus": "current",
         "priorityBand": "P1",
         "priorityScore": 503,
@@ -81402,8 +80613,211 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "8541",
+        "name": "愛媛銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8544",
+        "name": "京葉銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8551",
+        "name": "北日本銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8558",
+        "name": "東和銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8570",
+        "name": "イオンフィナンシャルサービス",
+        "market": "Prime",
+        "industry": "その他金融業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8585",
+        "name": "オリエントコーポレーション",
+        "market": "Prime",
+        "industry": "その他金融業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "8591",
         "name": "オリックス",
+        "market": "Prime",
+        "industry": "その他金融業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8593",
+        "name": "三菱ＨＣキャピタル",
         "market": "Prime",
         "industry": "その他金融業",
         "planStatus": "current",
@@ -81460,10 +80874,97 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "8609",
+        "name": "岡三証券グループ",
+        "market": "Prime",
+        "industry": "証券、商品先物取引業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "8613",
         "name": "丸三証券",
         "market": "Prime",
         "industry": "証券、商品先物取引業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8622",
+        "name": "水戸証券",
+        "market": "Prime",
+        "industry": "証券、商品先物取引業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8697",
+        "name": "日本取引所グループ",
+        "market": "Prime",
+        "industry": "その他金融業",
         "planStatus": "current",
         "priorityBand": "P1",
         "priorityScore": 503,
@@ -81518,8 +81019,269 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "8707",
+        "name": "岩井コスモホールディングス",
+        "market": "Prime",
+        "industry": "証券、商品先物取引業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8708",
+        "name": "アイザワ証券グループ",
+        "market": "Prime",
+        "industry": "証券、商品先物取引業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8713",
+        "name": "フィデアホールディングス",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8714",
+        "name": "池田泉州ホールディングス",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8715",
+        "name": "アニコム ホールディングス",
+        "market": "Prime",
+        "industry": "保険業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8750",
+        "name": "第一ライフグループ",
+        "market": "Prime",
+        "industry": "保険業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8771",
+        "name": "イー・ギャランティ",
+        "market": "Prime",
+        "industry": "その他金融業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8803",
+        "name": "平和不動産",
+        "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "8804",
         "name": "東京建物",
+        "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8818",
+        "name": "京阪神ビルディング",
         "market": "Prime",
         "industry": "不動産業",
         "planStatus": "current",
@@ -81576,6 +81338,64 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "8848",
+        "name": "レオパレス２１",
+        "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8860",
+        "name": "フジ住宅",
+        "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "8876",
         "name": "リログループ",
         "market": "Prime",
@@ -81605,8 +81425,153 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "8881",
+        "name": "日神グループホールディングス",
+        "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8892",
+        "name": "エスコン",
+        "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "8897",
         "name": "ＭＩＲＡＲＴＨホールディングス",
+        "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8919",
+        "name": "カチタス",
+        "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8923",
+        "name": "トーセイ",
+        "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8934",
+        "name": "サンフロンティア不動産",
         "market": "Prime",
         "industry": "不動産業",
         "planStatus": "current",
@@ -81665,6 +81630,35 @@
         "layer": "L2_COMPARISON_CORE",
         "code": "9003",
         "name": "相鉄ホールディングス",
+        "market": "Prime",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9006",
+        "name": "京浜急行電鉄",
         "market": "Prime",
         "industry": "陸運業",
         "planStatus": "current",
@@ -81808,6 +81802,151 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "9020",
+        "name": "東日本旅客鉄道",
+        "market": "Prime",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9025",
+        "name": "鴻池運輸",
+        "market": "Prime",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9031",
+        "name": "西日本鉄道",
+        "market": "Prime",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9037",
+        "name": "ハマキョウレックス",
+        "market": "Prime",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9041",
+        "name": "近鉄グループホールディングス",
+        "market": "Prime",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "9044",
         "name": "ＮＡＮＫＡＩ",
         "market": "Prime",
@@ -81866,9 +82005,125 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "9048",
+        "name": "名古屋鉄道",
+        "market": "Prime",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "9049",
         "name": "京福電気鉄道",
         "market": "Standard",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9052",
+        "name": "山陽電気鉄道",
+        "market": "Prime",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9064",
+        "name": "ヤマトホールディングス",
+        "market": "Prime",
+        "industry": "陸運業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9065",
+        "name": "山九",
+        "market": "Prime",
         "industry": "陸運業",
         "planStatus": "current",
         "priorityBand": "P1",

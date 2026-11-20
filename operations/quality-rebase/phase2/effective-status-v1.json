@@ -1,6 +1,6 @@
 {
   "schemaVersion": "quality-rebase-phase2-effective-status-v1",
-  "updatedAt": "2026-11-21T01:18:18+09:00",
+  "updatedAt": "2026-11-21",
   "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
   "independentReviewStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
   "completionLedgerAuditFile": "operations/quality-rebase/phase2/completion-ledger-audit-v1.json",
@@ -58,8 +58,8 @@
   ],
   "targets": {
     "phase1": 50,
-    "phase2Additional": 981,
-    "totalIncludingPhase1": 1031
+    "phase2Additional": 1028,
+    "totalIncludingPhase1": 1078
   },
   "assignment": {
     "primaryReviewWavesAssigned": 39,
@@ -74,8 +74,8 @@
   },
   "review": {
     "phase1PrimaryReviewComplete": 50,
-    "phase2PrimaryReviewComplete": 981,
-    "primaryReviewCompleteIncludingPhase1": 1031,
+    "phase2PrimaryReviewComplete": 1028,
+    "primaryReviewCompleteIncludingPhase1": 1078,
     "phase2PrimaryReviewCompletionRatePercent": 100.0,
     "totalPrimaryReviewCompletionRatePercent": 100.0,
     "independentReviewReady": 61,
@@ -94,16 +94,16 @@
   },
   "reconciliation": {
     "companyCodeIsCountingUnit": true,
-    "canonicalPhase2PrimaryReviewArtifacts": 981,
+    "canonicalPhase2PrimaryReviewArtifacts": 1028,
     "previousDeclaredPhase2PrimaryReviewComplete": 450,
     "previousDeclaredMinusCanonicalGap": -129,
-    "currentAuditUniqueCompanies": 981,
-    "reviewedWithinCurrentAudit": 981,
+    "currentAuditUniqueCompanies": 1028,
+    "reviewedWithinCurrentAudit": 1028,
     "remainingWithinCurrentAudit": 0,
     "normalPrimaryCandidatesRemaining": 0,
     "exceptionCandidatesRemaining": 0,
     "automaticCountInflationForbidden": true,
-    "note": "2026-08-23にcanonical一次レビュー成果物を実ファイル基準で再照合し450/450へ同期した（経緯は従前の記録のとおり）。その後、後続のレビュー登録（ADE期の追加ウェーブ、PR-03の後継差し替え、Milestone 1の68社、繰り越し是正の2社等）によりcanonical成果物は579社分まで増えたため、2026-11-17に台帳を実ファイル基準で再同期した。当初のPhase 2目標（追加450社・Phase 1込み500社）は成果物プールの拡大により置き換えられたものであり、目標自体が579だったわけではない。独立ビジュアル検証とDeep Verification承認は別工程のため自動完了しない。 2026-11-20にMilestone 2バッチ1の一次レビュー32社分が追加されcanonical成果物は611社分となったため、台帳を実ファイル基準で再同期した。 2026-11-20にMilestone 2バッチ2の一次レビュー49社分が追加されcanonical成果物は660社分となったため、台帳を実ファイル基準で再同期した（うち3480 ジェイ・エス・ビーは上場廃止のためユニバース外）。 2026-11-20にMilestone 2バッチ3の一次レビュー47社分が追加されcanonical成果物は707社分となったため、台帳を実ファイル基準で再同期した。 2026-11-20にMilestone 2バッチ4の一次レビュー45社分が追加されcanonical成果物は752社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ5の一次レビュー45社分が追加されcanonical成果物は797社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ6の一次レビュー47社分が追加されcanonical成果物は844社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ7の一次レビュー45社分が追加されcanonical成果物は889社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ8の一次レビュー47社分が追加されcanonical成果物は935社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ9の一次レビュー46社分が追加されcanonical成果物は981社分となったため、台帳を実ファイル基準で再同期した。"
+    "note": "2026-08-23にcanonical一次レビュー成果物を実ファイル基準で再照合し450/450へ同期した（経緯は従前の記録のとおり）。その後、後続のレビュー登録（ADE期の追加ウェーブ、PR-03の後継差し替え、Milestone 1の68社、繰り越し是正の2社等）によりcanonical成果物は579社分まで増えたため、2026-11-17に台帳を実ファイル基準で再同期した。当初のPhase 2目標（追加450社・Phase 1込み500社）は成果物プールの拡大により置き換えられたものであり、目標自体が579だったわけではない。独立ビジュアル検証とDeep Verification承認は別工程のため自動完了しない。 2026-11-20にMilestone 2バッチ1の一次レビュー32社分が追加されcanonical成果物は611社分となったため、台帳を実ファイル基準で再同期した。 2026-11-20にMilestone 2バッチ2の一次レビュー49社分が追加されcanonical成果物は660社分となったため、台帳を実ファイル基準で再同期した（うち3480 ジェイ・エス・ビーは上場廃止のためユニバース外）。 2026-11-20にMilestone 2バッチ3の一次レビュー47社分が追加されcanonical成果物は707社分となったため、台帳を実ファイル基準で再同期した。 2026-11-20にMilestone 2バッチ4の一次レビュー45社分が追加されcanonical成果物は752社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ5の一次レビュー45社分が追加されcanonical成果物は797社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ6の一次レビュー47社分が追加されcanonical成果物は844社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ7の一次レビュー45社分が追加されcanonical成果物は889社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ8の一次レビュー47社分が追加されcanonical成果物は935社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ9の一次レビュー46社分が追加されcanonical成果物は981社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ10の一次レビュー47社分が追加されcanonical成果物は1,028社分となったため、台帳を実ファイル基準で再同期した。"
   },
   "activeWave": {
     "wave": 39,

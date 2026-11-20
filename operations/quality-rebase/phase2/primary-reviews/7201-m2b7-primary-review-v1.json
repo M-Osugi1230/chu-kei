@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "wave": "m2-batch7",
+  "company": {
+    "code": "7201",
+    "name": "日産自動車"
+  },
+  "document": {
+    "title": "経営再建計画「Re:Nissan」",
+    "publishedDate": "2025-05-13",
+    "sourceUrl": "https://www2.nissan-global.com/JP/COMPANY/PLAN/RENISSAN/",
+    "documentType": "formal_restructuring_plan",
+    "documentClassification": "formal_restructuring_plan_with_quantified_targets",
+    "formalPlanConfirmed": true,
+    "fullTextHumanReviewComplete": true
+  },
+  "structuredAnalysis": {
+    "period": "2025年度～2026年度",
+    "summary": "新経営体制のもと2025年5月13日に発表した経営再建計画。2026年度までに自動車事業の営業利益とフリーキャッシュフローの黒字化を目指し、2024年度実績比で総額5,000億円のコスト削減（固定費2,500億円・変動費2,500億円）を実施する。車両工場は2027年度までに17拠点から10拠点へ統廃合し、人員は2024年度から2027年度にかけて合計2万人を削減する。3つの柱は「コスト構造の改善」「市場戦略と商品戦略の再定義」「パートナーシップの強化」。",
+    "strategyThemes": [
+      "コスト構造の改善",
+      "市場戦略と商品戦略の再定義",
+      "パートナーシップの強化"
+    ],
+    "financialTargets": [
+      {
+        "fiscalYear": "2026年度",
+        "metric": "総コスト削減額（2024年度実績比）",
+        "value": 5000,
+        "unit": "億円",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2026年度",
+        "metric": "固定費削減額（2024年度実績比）",
+        "value": 2500,
+        "unit": "億円",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2026年度",
+        "metric": "変動費削減額（2024年度実績比）",
+        "value": 2500,
+        "unit": "億円",
+        "classification": "formal_plan_terminal_target"
+      }
+    ],
+    "capitalPolicy": "先行開発および2027年度以降の商品活動の一部を一時停止し、3,000人をコスト削減施策へ振り向けるなど、経営資源を再建施策に集中させる。北九州市で計画していたEV用リン酸鉄リチウムイオン電池工場は建設を断念した。",
+    "shareholderReturnPolicy": "本計画では株主還元方針は示されていない。",
+    "nonFinancialTargets": [
+      {
+        "targetFiscalYear": "2027年度",
+        "metric": "車両工場数",
+        "value": "10拠点（17拠点から統廃合）"
+      },
+      {
+        "targetFiscalYear": "2027年度",
+        "metric": "人員削減",
+        "value": "20,000人（2024年度比、発表済みの9,000人を含む）"
+      }
+    ]
+  },
+  "formalPlanBoundary": {
+    "status": "formal_restructuring_plan_confirmed",
+    "reason": "2025年5月13日に公式発表された経営再建計画であり、対象期間（2025年度～2026年度、構造改革施策は2027年度まで）と定量目標（コスト削減総額5,000億円、自動車事業の営業利益・フリーキャッシュフローの黒字化）が公式計画ページおよび公式発表リリースに明示されているため、正式な再建計画として確認した。中期経営計画「The Arc」に代わる現行の公式計画であるが、売上高・営業利益額の水準目標は示されておらず、目標はコスト削減と黒字化に置かれている。出典は公式計画ページ（HTML）であり、数値は公式発表リリースでも照合した。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "formalPlanExistenceWithinGrowthDocumentChecked": true,
+    "visualFigureReviewComplete": false,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "planIdentityPages": [
+      1
+    ],
+    "strategyPages": [
+      1
+    ],
+    "financialTargetsPage": 1,
+    "capitalAndShareholderReturnPage": 1
+  },
+  "review": {
+    "status": "primary_review_complete_formal_plan_confirmed_independent_visual_review_pending",
+    "reviewedAt": "2026-11-21T00:55:00+09:00",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": [
+      "Muse primary review 2026-11-21"
+    ]
+  }
+}

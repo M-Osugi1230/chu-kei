@@ -1,18 +1,18 @@
 {
   "version": "plan-detection-registry-v1",
-  "universeGeneratedAt": "2026-11-20T16:40:19.006Z",
-  "sourceFetchedAt": "2026-11-20T16:40:18.606176Z",
+  "universeGeneratedAt": "2026-11-20T16:51:19.891Z",
+  "sourceFetchedAt": "2026-11-20T16:51:19.505327Z",
   "companyCount": 3686,
-  "resolvedCount": 992,
-  "detectionCoverage": 0.269126,
+  "resolvedCount": 1036,
+  "detectionCoverage": 0.281063,
   "verifiedOverrideCount": 61,
-  "primaryReviewedOverrideCount": 858,
+  "primaryReviewedOverrideCount": 904,
   "counts": {
-    "current": 986,
-    "expired": 6,
+    "current": 1029,
+    "expired": 7,
     "no_formal_plan": 0,
     "found_unstructured": 0,
-    "not_checked": 2694
+    "not_checked": 2650
   },
   "companies": [
     {
@@ -250,16 +250,28 @@
       "name": "秋川牧園",
       "market": "Standard",
       "industry": "水産・農林業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/13800/140120240513593590.pdf",
+        "sourceTitle": "中期経営計画の策定に関するお知らせ（第5期中期経営計画）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2027年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年3月期～2027年3月期",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2027年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1380-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-05-15",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1381",
@@ -298,16 +310,28 @@
       "name": "ベルグアース",
       "market": "Standard",
       "industry": "水産・農林業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/13830/140120231213502588.pdf",
+        "sourceTitle": "2024-2028中期経営計画",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2024年度～2028年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1383-m2b12-primary-review-v1.json",
+        "publishedDate": "2023-12-13",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1384",
@@ -504,16 +528,28 @@
       "name": "サンヨーホームズ",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/14200/140120240529513240.pdf",
+        "sourceTitle": "中期経営計画策定に関するお知らせ（中期経営計画）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2027年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年3月期～2027年3月期",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2027年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1420-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-05-30",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1429",
@@ -564,32 +600,56 @@
       "name": "ファーストコーポレーション",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www.1st-corp.com/ir/plan/",
+        "sourceTitle": "中長期ビジョン「First VISION 2031」",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-05-31 derived from 2031年5月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_long_term_management_vision_with_midterm_targets",
+        "period": "2026年5月期～2031年5月期",
+        "planEndDate": "2031-05-31",
+        "planEndBasis": "2031年5月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1430-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-01-14",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1431",
       "name": "Ｌｉｂ Ｗｏｒｋ",
       "market": "Growth",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/14310/140120260820523657.pdf",
+        "sourceTitle": "中期経営計画「Lib Earth Shot 2029」策定のお知らせ（2026/7～2029/6）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-06-30 derived from 2029年6月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2027年6月期～2029年6月期",
+        "planEndDate": "2029-06-30",
+        "planEndBasis": "2029年6月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1431-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-08-21",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1433",
@@ -624,32 +684,56 @@
       "name": "ＪＥＳＣＯホールディングス",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/14340/140120250819544116.pdf",
+        "sourceTitle": "中期経営計画（2026/8期～2028/8期）策定のお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-08-31 derived from 2028年8月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年8月期～2028年8月期",
+        "planEndDate": "2028-08-31",
+        "planEndBasis": "2028年8月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1434-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-08-19",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1435",
       "name": "ｒｏｂｏｔ ｈｏｍｅ",
       "market": "Standard",
       "industry": "不動産業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/14350/140120260211555115.pdf",
+        "sourceTitle": "中期経営計画2028の策定に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-12-31 derived from 2028年12月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年12月期～2028年12月期",
+        "planEndDate": "2028-12-31",
+        "planEndBasis": "2028年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1435-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-02-12",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1436",
@@ -825,16 +909,28 @@
       "name": "コロンビア・ワークス",
       "market": "Standard",
       "industry": "不動産業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/146A0/140120260812517907.pdf",
+        "sourceTitle": "中期経営計画（～2030年）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2030-12-31 derived from 2030年12月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年12月期～2030年12月期",
+        "planEndDate": "2030-12-31",
+        "planEndBasis": "2030年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/146A-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-08-12",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "147A",
@@ -905,32 +1001,56 @@
       "name": "ＪＳＨ",
       "market": "Growth",
       "industry": "サービス業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/150A0/140120260710591578.pdf",
+        "sourceTitle": "第11期連結業績予想修正と中期事業計画開示に関する説明資料（事業計画及び成長可能性に関する事項）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-06-30 derived from 2028年6月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_business_plan_disclosed_in_growth_market_document",
+        "period": "2026年6月期～2028年6月期",
+        "planEndDate": "2028-06-30",
+        "planEndBasis": "2028年6月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/150A-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-07-15",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1514",
       "name": "住石ホールディングス",
       "market": "Standard",
       "industry": "鉱業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/15140/140120250515552661.pdf",
+        "sourceTitle": "中期経営計画の策定に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan",
+        "period": "2025年度～2027年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1514-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-05-15",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1515",
@@ -1249,32 +1369,56 @@
       "name": "ＳＤＳホールディングス",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "expired",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/17110/140120240515598939.pdf",
+        "sourceTitle": "中期経営計画の数値目標の修正に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2026-03-31 derived from 2026年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan",
+        "period": "2024年3月期～2026年3月期",
+        "planEndDate": "2026-03-31",
+        "planEndBasis": "2026年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1711-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-05-15",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1716",
       "name": "第一カッター興業",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/17160/140120241216539245.pdf",
+        "sourceTitle": "中期経営計画策定に関するお知らせ（中期経営計画 2025年6月期-2027年6月期）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-06-30 derived from 2027年6月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan",
+        "period": "2025年6月期～2027年6月期",
+        "planEndDate": "2027-06-30",
+        "planEndBasis": "2027年6月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1716-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-12-16",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1717",
@@ -1297,16 +1441,28 @@
       "name": "美樹工業",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/17180/140120240702543070.pdf",
+        "sourceTitle": "中期経営計画策定に関するお知らせ（中期経営計画2024-2028 ならびに新・成長ビジョンMNC500について）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-12-31 derived from 2028年12月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan",
+        "period": "2024年12月期～2028年12月期",
+        "planEndDate": "2028-12-31",
+        "planEndBasis": "2028年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1718-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-07-02",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1719",
@@ -1388,16 +1544,28 @@
       "name": "日本電技",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/17230/140120241030506763.pdf",
+        "sourceTitle": "中期経営計画（財務目標）および長期経営指針（業績目標）の修正に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_plan_with_long_term_guideline",
+        "period": "2024年度～2027年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1723-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-11-05",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1724",
@@ -1420,16 +1588,28 @@
       "name": "オーテック",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/17360/140120251029581005.pdf",
+        "sourceTitle": "通期業績予想及び中期経営計画の修正に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2028年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan",
+        "period": "2028年3月期を最終年度とする中期経営計画（2025年3月31日公表）",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2028年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1736-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-11-10",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "173A",
@@ -1452,16 +1632,28 @@
       "name": "太洋基礎工業",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/17580/140120250314593701.pdf",
+        "sourceTitle": "中期経営計画 第59期～第61期（2025年2月～2028年1月）の策定について",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-01-31 derived from 2028年1月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年2月～2028年1月期",
+        "planEndDate": "2028-01-31",
+        "planEndBasis": "2028年1月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1758-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-03-14",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "175A",
@@ -1533,16 +1725,28 @@
       "name": "工藤建設",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/17640/140120240627539959.pdf",
+        "sourceTitle": "中期経営計画（2024年度－2026年度）の策定に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2024年度～2026年度",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2026年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1764-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-06-28",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1766",
@@ -1717,16 +1921,28 @@
       "name": "大本組",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/17930/140120240511590941.pdf",
+        "sourceTitle": "「中期経営計画（2024～2026年度）」の策定に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2024年度～2026年度",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2026年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1793-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-05-14",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1795",
@@ -1781,16 +1997,28 @@
       "name": "第一建設工業",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/17990/140120260514535487.pdf",
+        "sourceTitle": "中期経営計画「変革2030」（2026年度～2030年度）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-03-31 derived from 2031年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年度～2031年3月期",
+        "planEndDate": "2031-03-31",
+        "planEndBasis": "2031年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1799-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-05-14",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1801",
@@ -1881,16 +2109,28 @@
       "name": "佐藤渡辺",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/18070/140120240509587547.pdf",
+        "sourceTitle": "「佐藤渡辺グループ中期経営計画（2024～2026年度）」の策定に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2024年度～2026年度",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2026年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1807-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-05-10",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1808",
@@ -1925,16 +2165,28 @@
       "name": "松井建設",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/18100/140120250512541517.pdf",
+        "sourceTitle": "「中期経営計画〈2025-2027〉」の策定について",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年度～2027年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1810-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-05-13",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1811",
@@ -2090,64 +2342,112 @@
       "name": "大豊建設",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/18220/140120250509536677.pdf",
+        "sourceTitle": "中期経営計画(2023-27年度)の策定に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan_adjusted",
+        "period": "2023年度～2027年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1822-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-05-09",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1826",
       "name": "佐田建設",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/18260/140120250207567265.pdf",
+        "sourceTitle": "佐田建設グループ「中期経営計画（2025.4-2028.3）」",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2028年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年3月期～2028年3月期",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2028年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1826-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-02-10",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1827",
       "name": "ナカノフドー建設",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/18270/140120250328503061.pdf",
+        "sourceTitle": "中期経営計画「中計86」",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2028年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年3月期～2028年3月期",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2028年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1827-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-03-28",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1828",
       "name": "田辺工業",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/18280/140120241106512127.pdf",
+        "sourceTitle": "中期経営計画「TRY2030」（FY2024-FY2029）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2030-03-31 derived from 2030年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年3月期～2030年3月期",
+        "planEndDate": "2030-03-31",
+        "planEndBasis": "2030年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1828-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-11-06",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1833",
@@ -2210,16 +2510,28 @@
       "name": "土屋ホールディングス",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/18400/140120241224543573.pdf",
+        "sourceTitle": "中期経営計画2027",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-10-31 derived from 2027年10月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年10月期～2027年10月期",
+        "planEndDate": "2027-10-31",
+        "planEndBasis": "2027年10月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1840-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-12-23",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1844",
@@ -2302,16 +2614,28 @@
       "name": "南海辰村建設",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/18500/140120250328503101.pdf",
+        "sourceTitle": "3カ年経営計画（2025～2027）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年度～2027年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1850-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-03-28",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1852",
@@ -2834,16 +3158,28 @@
       "name": "テノックス",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/19050/140120240510589678.pdf",
+        "sourceTitle": "中期経営計画（2024-2026年度）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2026年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2024年度～2026年度",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2026年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1905-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-05-10",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "190A",
@@ -2894,32 +3230,56 @@
       "name": "日本基礎技術",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/19140/140120260603561959.pdf",
+        "sourceTitle": "第７次中期経営計画（2026年度～2028年度）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan",
+        "period": "2026年度～2028年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1914-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-06-03",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1921",
       "name": "巴コーポレーション",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/19210/140120250527566706.pdf",
+        "sourceTitle": "第３期中期経営計画『ＴＯＭＯＥ ＢＵＩＬＤ up ５』【修正版】",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-03-31 derived from 2027年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan_revised",
+        "period": "2023年度～2027年度",
+        "planEndDate": "2028-03-31",
+        "planEndBasis": "2027年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1921-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-05-30",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1925",
@@ -3446,16 +3806,28 @@
       "name": "サンテック",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/19600/140120260309578564.pdf",
+        "sourceTitle": "第14次中期経営計画（2026.04 – 2029.03）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan",
+        "period": "2026年4月～2029年3月期",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1960-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-03-27",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1961",
@@ -3566,16 +3938,28 @@
       "name": "ヤマト",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/19670/140120260325588173.pdf",
+        "sourceTitle": "中期経営計画（2026～2028）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan",
+        "period": "2026年度～2028年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1967-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-03-25",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1968",
@@ -3752,16 +4136,28 @@
       "name": "タウンズ",
       "market": "Standard",
       "industry": "医薬品",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/197A0/140120260715594265.pdf",
+        "sourceTitle": "中期経営計画（2027年6月期-2031年6月期）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2031-06-30 derived from 2031年6月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_midterm_management_plan",
+        "period": "2027年6月期～2031年6月期",
+        "planEndDate": "2031-06-30",
+        "planEndBasis": "2031年6月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/197A-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-07-15",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1980",
@@ -3860,16 +4256,28 @@
       "name": "神田通信機",
       "market": "Standard",
       "industry": "建設業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/19920/140120240603518874.pdf",
+        "sourceTitle": "中期経営計画「Change ＆ Challenge 80th」策定に関するお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2027年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年3月期～2027年3月期",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2027年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/1992-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-06-03",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "1994",
@@ -3952,16 +4360,28 @@
       "name": "日東富士製粉",
       "market": "Standard",
       "industry": "食料品",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/20030/140120260520541747.pdf",
+        "sourceTitle": "中期経営計画 Rolling Plan（ローリング計画）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年度～2028年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2003-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-05-20",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2004",
@@ -3996,16 +4416,28 @@
       "name": "鳥越製粉",
       "market": "Standard",
       "industry": "食料品",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/20090/140120231218504628.pdf",
+        "sourceTitle": "鳥越製粉グループ 中期経営計画「TTC150 Stage3」策定のお知らせ",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2026-12-31 derived from 2026年12月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2024年12月期～2026年12月期",
+        "planEndDate": "2026-12-31",
+        "planEndBasis": "2026年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2009-m2b12-primary-review-v1.json",
+        "publishedDate": "2023-12-18",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2053",
@@ -4208,16 +4640,28 @@
       "name": "フジ日本",
       "market": "Standard",
       "industry": "食料品",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/21140/140120240520502186.pdf",
+        "sourceTitle": "中期経営計画「CHANGE 2028」（FY2024-2028）訂正後全文",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2024年度～2028年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2114-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-05-21",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2117",
@@ -4781,16 +5225,28 @@
       "name": "博展",
       "market": "Growth",
       "industry": "サービス業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/21730/140120260317583178.pdf",
+        "sourceTitle": "中期経営計画（FY2026-FY2028）（事業計画及び成長可能性に関する事項）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2028年度"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年度～2028年度",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2028年度",
+        "planEndPrecision": "fiscal_year",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2173-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-03-17",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2175",
@@ -5058,16 +5514,28 @@
       "name": "ブルボン",
       "market": "Standard",
       "industry": "食料品",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/22080/140120260428512948.pdf",
+        "sourceTitle": "中期3か年経営計画（2027年3月期～2029年3月期）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2029-03-31 derived from 2029年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2027年3月期～2029年3月期",
+        "planEndDate": "2029-03-31",
+        "planEndBasis": "2029年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2208-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-04-28",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2209",
@@ -5662,16 +6130,28 @@
       "name": "きょくとう",
       "market": "Standard",
       "industry": "サービス業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/23000/140120250415516243.pdf",
+        "sourceTitle": "中期経営計画「NBM2025～2027」",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-02-29 derived from 2028年2月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年2月期～2028年2月期",
+        "planEndDate": "2028-02-29",
+        "planEndBasis": "2028年2月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2300-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-04-15",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2301",
@@ -5780,16 +6260,28 @@
       "name": "エプコ",
       "market": "Standard",
       "industry": "サービス業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/23110/140120250213571996.pdf",
+        "sourceTitle": "中期経営計画（2025-2027）～変化への挑戦～",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-12-31 derived from 2027年12月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年12月期～2027年12月期",
+        "planEndDate": "2027-12-31",
+        "planEndBasis": "2027年12月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2311-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-02-13",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2315",
@@ -6032,16 +6524,28 @@
       "name": "クエスト",
       "market": "Standard",
       "industry": "情報・通信業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/23320/140120240624535295.pdf",
+        "sourceTitle": "第2期・中期経営計画（2024～2026年度）Quest Vision2030",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2027-03-31 derived from 2027年3月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2025年3月期～2027年3月期",
+        "planEndDate": "2027-03-31",
+        "planEndBasis": "2027年3月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2332-m2b12-primary-review-v1.json",
+        "publishedDate": "2024-06-24",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2334",
@@ -6140,16 +6644,28 @@
       "name": "アルバイトタイムス",
       "market": "Standard",
       "industry": "サービス業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/23410/140120250409511782.pdf",
+        "sourceTitle": "中期経営計画（2026年2月期～2028年2月期）",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-02-29 derived from 2028年2月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年2月期～2028年2月期",
+        "planEndDate": "2028-02-29",
+        "planEndBasis": "2028年2月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2341-m2b12-primary-review-v1.json",
+        "publishedDate": "2025-04-10",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2342",
@@ -6172,16 +6688,28 @@
       "name": "ＨＯＤＬ１",
       "market": "Standard",
       "industry": "情報・通信業",
-      "status": "not_checked",
+      "status": "current",
       "review": {
-        "checkedAt": null,
-        "sourceUrl": null,
-        "sourceTitle": null,
-        "sourceType": null,
-        "method": null,
-        "note": null
+        "checkedAt": "2026-11-21",
+        "sourceUrl": "https://www2.jpx.co.jp/disc/23450/140120260501516517.pdf",
+        "sourceTitle": "中期経営計画「HODL & BUIDL 2028」",
+        "sourceType": "first_party_primary_reviewed",
+        "method": "quality_rebase_primary_review_l1_seed_v1",
+        "note": "primary human review confirmed formal plan; plan end 2028-10-31 derived from 2028年10月期"
       },
-      "derivation": null
+      "derivation": {
+        "referenceDate": "2026-11-21",
+        "assuranceTier": "primary_human_review",
+        "formalPlanConfirmed": true,
+        "classification": "formal_mid_term_management_plan",
+        "period": "2026年10月期～2028年10月期",
+        "planEndDate": "2028-10-31",
+        "planEndBasis": "2028年10月期",
+        "planEndPrecision": "month_end",
+        "primaryReviewFile": "operations/quality-rebase/phase2/primary-reviews/2345-m2b12-primary-review-v1.json",
+        "publishedDate": "2026-05-01",
+        "supersededByIndependentSeed": false
+      }
     },
     {
       "code": "2349",

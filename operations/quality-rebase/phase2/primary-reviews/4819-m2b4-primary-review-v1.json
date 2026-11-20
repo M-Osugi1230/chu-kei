@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "wave": "m2-batch4",
+  "company": {
+    "code": "4819",
+    "name": "デジタルガレージ"
+  },
+  "document": {
+    "title": "中期経営計画（2024年3月期～2028年3月期）",
+    "publishedDate": "2023-05-11",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/48190/140120230510564635.pdf",
+    "documentType": "formal_midterm_management_plan",
+    "documentClassification": "formal_midterm_management_plan",
+    "formalPlanConfirmed": true,
+    "fullTextHumanReviewComplete": true
+  },
+  "structuredAnalysis": {
+    "period": "2024年3月期～2028年3月期",
+    "summary": "決済プラットフォームを軸とした「DG FinTech Shift」戦略を継続し収益のリカーリング化を強化するとともに、web3・生成AI等の次世代テクノロジーの社会実装による非連続な事業創出を目指す5ヵ年の中期経営計画。定量目標（KPI）は、税引前利益成長率（5年CAGR）20%以上、2028年3月期の決済取扱高15兆円以上、投資事業収入（5ヵ年累計）300億円以上。",
+    "strategyThemes": [
+      "決済プラットフォームを軸としたDG FinTech Shiftの継続と収益のリカーリング化",
+      "次世代テクノロジー（web3・生成AI）の社会実装による非連続な事業創出",
+      "カカクコムグループとの協業によるフィンテック事業の共同開発",
+      "グローバル投資・スタートアップインキュベーションの強化"
+    ],
+    "financialTargets": [
+      {
+        "fiscalYear": "2028年3月期",
+        "metric": "決済取扱高",
+        "value": 15,
+        "unit": "兆円以上",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2028年3月期",
+        "metric": "税引前利益成長率（5年CAGR、投資事業及びカカクコム持分法損益除く）",
+        "value": 20,
+        "unit": "%以上",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2028年3月期",
+        "metric": "投資事業収入（5ヵ年累計）",
+        "value": 300,
+        "unit": "億円以上",
+        "classification": "formal_plan_terminal_target"
+      }
+    ],
+    "capitalPolicy": "基礎事業キャッシュフローと投資事業キャッシュフローを分離して配分するキャッシュアロケーションを採用。基礎事業CFは既存・新規事業の成長投資、財務体質の改善、株主還元に充当し、投資事業CFは成長投資・追加還元等に戦略的に配分する。投資事業収入の30%を上限にスタートアップへの再投資（ファンド出資）を行う。",
+    "shareholderReturnPolicy": "5年間の配当総額100億円以上、基礎事業キャッシュフローに対する配当性向20%以上を掲げ、安定配当に加えて事業の進捗状況を踏まえた機動的な追加還元を検討する。",
+    "nonFinancialTargets": []
+  },
+  "formalPlanBoundary": {
+    "status": "formal_midterm_management_plan_confirmed",
+    "reason": "2023年5月公表の5ヵ年中期経営計画の計画資料そのものであり、計画期間（2024年3月期～2028年3月期）、戦略、定量目標（KPI）、キャッシュアロケーションと株主還元方針が明示されている。公表日は資料表紙の2023年5月11日を採用した（TDnet開示は2023年5月10日）。定量目標ページ（p.8）は画像のためpdftoppmで画像化して目視検証した（visualFigureReviewCompleteは方針どおりfalseのまま）。再検証レコードの転記にあった「2028年3月期 営業利益250億円」という目標は本文に存在せず、本文のKPI（決済取扱高・税引前利益成長率・投資事業収入）を採用した。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "formalPlanExistenceWithinGrowthDocumentChecked": true,
+    "visualFigureReviewComplete": false,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "planIdentityPages": [
+      1
+    ],
+    "strategyPages": [
+      5,
+      7
+    ],
+    "financialTargetsPage": 8,
+    "capitalAndShareholderReturnPage": 15
+  },
+  "review": {
+    "status": "primary_review_complete_formal_plan_confirmed_independent_visual_review_pending",
+    "reviewedAt": "2026-11-20T23:50:00+09:00",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": [
+      "Muse primary review 2026-11-20"
+    ]
+  }
+}

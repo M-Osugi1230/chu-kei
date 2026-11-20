@@ -156515,5 +156515,33 @@
     "reviewDecisionId": "review-6194-20260722-quality-recheck",
     "detectedAt": "2026-07-22T12:29:00.000Z",
     "correctedAt": "2026-07-22T12:49:00.000Z"
+  },
+  {
+    "id": "correction-1301-20261120-batch70-mixing",
+    "companyCode": "1301",
+    "fieldPath": "document,sourceUrl,revenue,profit,margin,capital,returnPolicy,highlights,warnings",
+    "before": "中期経営計画 Gear Up Kyokuyo 2027／2026年3月期決算（売上高3,500億円・営業利益130億円）",
+    "after": "新中期経営計画『Gear Up Kyokuyo 2027』（売上高4,000億円・営業利益135億円・経常利益135億円）",
+    "reason": "batch70が計画Webページと決算資料を合成し、会社予想（2026年3月期売上高3,500億円等）を計画の最終年度目標として記録した誤りを、一次レビュー（1301-wave38、計画PDFで検証済み）の値に修正する。",
+    "sourceUrl": "https://www.kyokuyo.co.jp/files/gearupkyokuyo2027.pdf",
+    "sourcePage": "中期経営計画PDF p.6-7",
+    "status": "corrected",
+    "reviewDecisionId": "correction-1301-20261120-batch70-mixing",
+    "detectedAt": "2026-11-20T06:00:00.000Z",
+    "correctedAt": "2026-11-20T09:50:00.000Z"
+  },
+  {
+    "id": "correction-1417-20261120-batch70-mixing",
+    "companyCode": "1417",
+    "fieldPath": "document,planPublishedDate,summary,revenue,profit,highlights,warnings,evidenceRefs",
+    "before": "第5次中期経営計画 2022-2026／2026年度計画更新（営業利益率7.5%以上、増額修正の記述、公表日2026-05-28）",
+    "after": "第5次中期経営計画 2022-2026（営業利益率6.5%以上、公表日2022-05-13）",
+    "reason": "batch70が2026年度の会社予想・通期計画の文脈を計画の更新と誤認し、一次レビューで検証済みの最終目標（営業利益率6.5%以上）と異なる7.5%や増額修正の記述を記録した誤りを修正する。",
+    "sourceUrl": "https://www.mirait-one.com/corporate/management/?imgsize=2",
+    "sourcePage": "公式中計ページ（2022-2026中期目標）",
+    "status": "corrected",
+    "reviewDecisionId": "correction-1417-20261120-batch70-mixing",
+    "detectedAt": "2026-11-20T09:33:00.000Z",
+    "correctedAt": "2026-11-20T09:50:00.000Z"
   }
 ]

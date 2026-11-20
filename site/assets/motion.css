@@ -71,6 +71,9 @@
     transform: translate3d(0, 0, 0);
     transition-delay: 0ms;
   }
+  html.motion-ready .reveal.motion-settled {
+    transition: none;
+  }
 
   /* 4. Interaction feedback (border/shadow transitions preserved from base styles) */
   .strategy-card,

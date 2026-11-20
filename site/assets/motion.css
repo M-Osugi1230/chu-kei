@@ -1,0 +1,196 @@
+/*
+ * Chu-kei Insight Motion System v1.0
+ * Motion only: transform / opacity
+ * Load after all existing stylesheets.
+ */
+
+:root {
+  --motion-instant: 110ms;
+  --motion-fast: 170ms;
+  --motion-standard: 300ms;
+  --motion-slow: 380ms;
+  --motion-hero: 520ms;
+
+  --motion-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --motion-ease-press: cubic-bezier(0.2, 0, 0, 1);
+
+  --motion-stagger: 35ms;
+  --motion-distance: 12px;
+}
+
+/* State protection: hidden always wins. */
+[hidden] {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* 1. Hero choreography (enabled only after JS initialization) */
+  html.motion-ready .hero-copy > .eyebrow,
+  html.motion-ready .hero-copy > h1,
+  html.motion-ready .hero-copy > p:last-of-type,
+  html.motion-ready .hero-copy > .hero-actions {
+    animation: ck-hero-in var(--motion-hero) var(--motion-ease-out) both;
+  }
+  html.motion-ready .hero-copy > .eyebrow { animation-delay: 0ms; }
+  html.motion-ready .hero-copy > h1 { animation-delay: 70ms; }
+  html.motion-ready .hero-copy > p:last-of-type { animation-delay: 140ms; }
+  html.motion-ready .hero-copy > .hero-actions { animation-delay: 210ms; }
+
+  @keyframes ck-hero-in {
+    from { opacity: 0; transform: translate3d(0, 12px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+
+  /* 2. Summary tiles */
+  html.motion-ready .hero .summary-grid > div {
+    animation: ck-summary-in var(--motion-standard) var(--motion-ease-out) both;
+  }
+  html.motion-ready .hero .summary-grid > div:nth-child(1) { animation-delay: 180ms; }
+  html.motion-ready .hero .summary-grid > div:nth-child(2) { animation-delay: 225ms; }
+  html.motion-ready .hero .summary-grid > div:nth-child(3) { animation-delay: 270ms; }
+  html.motion-ready .hero .summary-grid > div:nth-child(4) { animation-delay: 315ms; }
+
+  @keyframes ck-summary-in {
+    from { opacity: 0; transform: translate3d(0, 8px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+
+  /* 3. IntersectionObserver reveals (--i is capped by motion.js) */
+  html.motion-ready .reveal {
+    opacity: 0;
+    transform: translate3d(0, var(--motion-distance), 0);
+    transition:
+      opacity var(--motion-standard) var(--motion-ease-out),
+      transform var(--motion-standard) var(--motion-ease-out);
+    transition-delay: calc(var(--i, 0) * var(--motion-stagger));
+  }
+  html.motion-ready .reveal.is-inview {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0ms;
+  }
+
+  /* 4. Interaction feedback (border/shadow transitions preserved from base styles) */
+  .strategy-card,
+  .preset-button,
+  .company-card,
+  .primary-button,
+  .secondary-button,
+  .save-button,
+  .load-more,
+  .icon-button {
+    transition:
+      transform var(--motion-fast) var(--motion-ease-out),
+      opacity var(--motion-fast) var(--motion-ease-out),
+      border-color var(--motion-fast) var(--motion-ease-out),
+      box-shadow var(--motion-fast) var(--motion-ease-out),
+      background-color var(--motion-fast) var(--motion-ease-out);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .strategy-card:hover,
+    .preset-button:hover,
+    .company-card:hover {
+      transform: translate3d(0, -2px, 0);
+    }
+    .primary-button:hover,
+    .secondary-button:hover,
+    .save-button:hover,
+    .load-more:hover {
+      transform: translate3d(0, -1px, 0);
+    }
+  }
+
+  .strategy-card:active,
+  .preset-button:active,
+  .primary-button:active,
+  .secondary-button:active,
+  .save-button:active,
+  .load-more:active,
+  .icon-button:active {
+    transform: scale(0.985);
+    transition-duration: var(--motion-instant);
+    transition-timing-function: var(--motion-ease-press);
+  }
+
+  /* 5. Compare tray (preserve the existing translateX(-50%) centering) */
+  .compare-tray:not([hidden]) {
+    animation: ck-tray-in var(--motion-slow) var(--motion-ease-out) both;
+  }
+  @keyframes ck-tray-in {
+    from { opacity: 0; transform: translate3d(-50%, 16px, 0); }
+    to { opacity: 1; transform: translate3d(-50%, 0, 0); }
+  }
+
+  /* 6. Native dialog */
+  .dialog[open] {
+    animation: ck-dialog-in var(--motion-slow) var(--motion-ease-out) both;
+  }
+  .dialog[open]::backdrop {
+    animation: ck-backdrop-in var(--motion-standard) var(--motion-ease-out) both;
+  }
+  @keyframes ck-dialog-in {
+    from { opacity: 0; transform: translate3d(0, 12px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+  }
+  @keyframes ck-backdrop-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* 7. Toast */
+  .toast:not([hidden]) {
+    animation: ck-toast-in var(--motion-standard) var(--motion-ease-out) both;
+  }
+  @keyframes ck-toast-in {
+    from { opacity: 0; transform: translate3d(-50%, 8px, 0); }
+    to { opacity: 1; transform: translate3d(-50%, 0, 0); }
+  }
+
+  /* 8. Focus visibility is immediate, not animated */
+  html.motion-ready .reveal:focus-within {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0ms;
+  }
+  html.motion-ready .strategy-card:focus-visible,
+  html.motion-ready .preset-button:focus-visible,
+  html.motion-ready .company-card:focus-visible,
+  html.motion-ready .primary-button:focus-visible,
+  html.motion-ready .secondary-button:focus-visible,
+  html.motion-ready .save-button:focus-visible,
+  html.motion-ready .load-more:focus-visible {
+    transform: none;
+    transition: none;
+  }
+
+  /* 9. Fixed-width numerals reduce visual jitter */
+  .summary-grid [data-countup] {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Accessibility: all animations and transitions disabled under reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    animation-delay: 0ms !important;
+    transition-delay: 0ms !important;
+  }
+  html.motion-ready .reveal,
+  html.motion-ready .reveal.is-inview,
+  html.motion-ready .strategy-card,
+  html.motion-ready .preset-button,
+  html.motion-ready .company-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

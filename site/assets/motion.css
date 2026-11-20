@@ -57,17 +57,17 @@
     to { opacity: 1; transform: translate3d(0, 0, 0); }
   }
 
-  /* 3. IntersectionObserver reveals (--i is capped by motion.js) */
+  /* 3. IntersectionObserver reveals (--i is capped by motion.js).
+     Transform only: an opacity fade leaves text in a transient
+     low-contrast state that fails WCAG contrast checks (and is worse
+     for low-vision users), so reveals slide without fading. */
   html.motion-ready .reveal {
-    opacity: 0;
     transform: translate3d(0, var(--motion-distance), 0);
     transition:
-      opacity var(--motion-standard) var(--motion-ease-out),
       transform var(--motion-standard) var(--motion-ease-out);
     transition-delay: calc(var(--i, 0) * var(--motion-stagger));
   }
   html.motion-ready .reveal.is-inview {
-    opacity: 1;
     transform: translate3d(0, 0, 0);
     transition-delay: 0ms;
   }

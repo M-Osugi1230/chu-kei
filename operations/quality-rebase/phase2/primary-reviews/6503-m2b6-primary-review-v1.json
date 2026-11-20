@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "wave": "m2-batch6",
+  "company": {
+    "code": "6503",
+    "name": "三菱電機"
+  },
+  "document": {
+    "title": "新中期経営戦略",
+    "publishedDate": "2026-05-29",
+    "sourceUrl": "https://www.mitsubishielectric.co.jp/ja/pr/2026/pdf/0529_co1.pdf",
+    "documentType": "formal_mid_term_management_strategy",
+    "documentClassification": "formal_mid_term_management_plan",
+    "formalPlanConfirmed": true,
+    "fullTextHumanReviewComplete": true
+  },
+  "structuredAnalysis": {
+    "period": "2026年度～2030年度",
+    "summary": "2026年5月29日公表の新中期経営戦略。収益性と資本効率の向上を最重視し、注力領域でのソリューションとコンポーネントの両輪強化（事業戦略）、積極的な成長投資と株主還元拡大（財務戦略）、人財戦略を柱とする。2030年度（自動車機器事業を除く）に調整後営業利益率12%+・ROE12%・売上高成長率CAGR（2025-30年度）3～5%を目指す。",
+    "strategyThemes": [
+      "ソリューションとコンポーネントの両輪での強化",
+      "収益性向上",
+      "資本効率向上",
+      "成長投資と株主還元の拡大",
+      "人財の育成・獲得"
+    ],
+    "financialTargets": [
+      {
+        "fiscalYear": "2030年度",
+        "metric": "調整後営業利益率",
+        "value": 12,
+        "unit": "%以上",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2030年度",
+        "metric": "ROE",
+        "value": 12,
+        "unit": "%",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2030年度",
+        "metric": "売上高成長率（CAGR・2025年度～2030年度）",
+        "value": "3～5",
+        "unit": "%",
+        "classification": "formal_plan_terminal_target"
+      }
+    ],
+    "capitalPolicy": "2026～2030年度はCF創出力と強固な財務基盤にレバレッジも活用し（DEレシオ0.3倍を目安）、成長投資（設備投資・M&A・出資）と株主還元をバランス良く実行する。総還元性向は2026-30年度で60%～を掲げる。",
+    "shareholderReturnPolicy": "調整後DOE3%を基準とする安定的な配当を基本に、機動的な自己株式取得を行い株主還元を拡大する。",
+    "nonFinancialTargets": [
+      {
+        "targetFiscalYear": "2030年度",
+        "metric": "DX・AX人財（グループ・グローバル）",
+        "value": "2万人"
+      },
+      {
+        "targetFiscalYear": "2030年度",
+        "metric": "従業員エンゲージメントスコア",
+        "value": "70%以上"
+      }
+    ]
+  },
+  "formalPlanBoundary": {
+    "status": "formal_mid_term_management_plan_confirmed",
+    "reason": "2026年5月29日公表の新中期経営戦略そのもの（全29ページ）であり、2030年度財務目標・事業戦略・財務戦略が明示された正式な中期経営計画として確認した。再検証時に論点となった調整後営業利益率の2030年度目標は、原表（PDF p.6）を画像化して目視確認し「12%+」が正しいことを確定した（8.5%は2025年度実績の値であり、ChatGPT転記の12%が正しかった）。なお30年度目標は自動車機器事業を除くベースである。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "formalPlanExistenceWithinGrowthDocumentChecked": true,
+    "visualFigureReviewComplete": false,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "planIdentityPages": [
+      1
+    ],
+    "strategyPages": [
+      7
+    ],
+    "financialTargetsPage": 6,
+    "capitalAndShareholderReturnPage": 20
+  },
+  "review": {
+    "status": "primary_review_complete_formal_plan_confirmed_independent_visual_review_pending",
+    "reviewedAt": "2026-11-21T00:50:00+09:00",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": [
+      "Muse primary review 2026-11-21"
+    ]
+  }
+}

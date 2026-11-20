@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "wave": "m2-batch3",
+  "company": {
+    "code": "4362",
+    "name": "日本精化"
+  },
+  "document": {
+    "title": "第14次中期経営計画（2023～2026年度）見直し説明資料（一部訂正版）",
+    "publishedDate": "2025-06-03",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/43620/140120250603579189.pdf",
+    "documentType": "formal_midterm_management_plan",
+    "documentClassification": "formal_midterm_management_plan",
+    "formalPlanConfirmed": true,
+    "fullTextHumanReviewComplete": true
+  },
+  "structuredAnalysis": {
+    "period": "2023年度～2026年度",
+    "summary": "第14次中期経営計画（2023年5月12日公表、計画期間2023～2026年度）の見直し説明資料の一部訂正版。基本方針「積極的な投資による成長基盤強化ステージ」は変更なし。2026年度の見直し後目標は売上高380億円・営業利益58億円で、2030年度のありたい姿として売上高480億円・営業利益82億円を掲げる。",
+    "strategyThemes": [
+      "戦略品目の設定（リン脂質・ペロブスカイト太陽電池用素材）",
+      "事業ポートフォリオ見直し（セグメント再構築）",
+      "ビューティケア分野の海外展開"
+    ],
+    "financialTargets": [
+      {
+        "fiscalYear": "2026年度",
+        "metric": "売上高",
+        "value": 380,
+        "unit": "億円",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2026年度",
+        "metric": "営業利益",
+        "value": 58,
+        "unit": "億円",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2026年度",
+        "metric": "EBITDA",
+        "value": 75.1,
+        "unit": "億円",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2026年度",
+        "metric": "ROIC",
+        "value": 8.0,
+        "unit": "%",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2026年度",
+        "metric": "親会社株主に帰属する当期純利益",
+        "value": 49,
+        "unit": "億円",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2030年度",
+        "metric": "売上高",
+        "value": 480,
+        "unit": "億円",
+        "classification": "formal_policy_intermediate_target"
+      },
+      {
+        "fiscalYear": "2030年度",
+        "metric": "営業利益",
+        "value": 82,
+        "unit": "億円",
+        "classification": "formal_policy_intermediate_target"
+      },
+      {
+        "fiscalYear": "2030年度",
+        "metric": "EBITDA",
+        "value": 111,
+        "unit": "億円",
+        "classification": "formal_policy_intermediate_target"
+      },
+      {
+        "fiscalYear": "2030年度",
+        "metric": "ROIC",
+        "value": 10.0,
+        "unit": "%",
+        "classification": "formal_policy_intermediate_target"
+      }
+    ],
+    "capitalPolicy": "設備投資を4年間で120億円から160億円へ見直した（化粧品用機能性油剤プラントの新設 約86億円を含む）。政策保有株式比率の縮減を進める。",
+    "shareholderReturnPolicy": "DOEおよび一株当たりの配当額を見直した。総還元性向は第14次中期経営計画の期間中で平均50%以上を目標とする。"
+  },
+  "formalPlanBoundary": {
+    "status": "formal_midterm_management_plan_confirmed",
+    "reason": "2025年6月3日の一部訂正お知らせに添付された訂正後の見直し説明資料であり、見直し後の現行計画の経営指標（2026年度目標および2030年度のありたい姿）を含む。経営指標表は列の対応付けがテキスト抽出では判別しにくいため、該当ページ（PDF p.8）を pdftoppm で画像化して目視で検証した（validation の visualFigureReviewComplete は false のまま）。再検証レコードの転記（2028年3月期 売上高46,000百万円・営業利益4,400百万円）は本文に存在せず、本文の見直し後目標を採用した。計画期間は2026年度までで、次期計画の公表は検索1回の範囲では確認できなかった。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "formalPlanExistenceWithinGrowthDocumentChecked": true,
+    "visualFigureReviewComplete": false,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "planIdentityPages": [
+      1,
+      2
+    ],
+    "strategyPages": [
+      7
+    ],
+    "financialTargetsPage": 8,
+    "capitalAndShareholderReturnPage": 23
+  },
+  "review": {
+    "status": "primary_review_complete_formal_plan_confirmed_independent_visual_review_pending",
+    "reviewedAt": "2026-11-20T23:35:00+09:00",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": [
+      "Muse primary review 2026-11-20"
+    ]
+  }
+}

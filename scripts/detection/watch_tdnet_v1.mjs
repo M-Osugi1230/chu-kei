@@ -79,7 +79,8 @@ for (const c of registry.companies) {
 function matchCompany(title) {
   const sep = title.search(/[:：]/);
   if (sep < 0) return null;
-  const prefix = normalize(title.slice(0, sep));
+  // TDnet のタイトルには市場区分プレフィックス（Ｇ－ / Ｐ－ / Ｓ－）が付くことがある
+  const prefix = normalize(title.slice(0, sep)).replace(/^[GPS]-/, '');
   if (nameIndex.has(prefix)) return nameIndex.get(prefix);
   for (const [n, c] of nameIndex) {
     if (n.length >= 2 && (prefix.startsWith(n) || n.startsWith(prefix))) return c;

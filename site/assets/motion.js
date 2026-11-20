@@ -12,9 +12,12 @@
     '.section-heading',
     '.strategy-card',
     '.preset-button',
-    '.company-card',
     '.progress-card'
   ].join(',');
+  // NOTE: '.company-card' is intentionally not a reveal target. Portal cards
+  // render from async data and re-render on every search/filter, so an
+  // entrance fade repeatedly leaves them in a mid-fade, low-contrast state
+  // (which the WCAG audit samples). Data lists appear instantly instead.
 
   const gridSelector = [
     '.strategy-grid',

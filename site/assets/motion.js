@@ -136,10 +136,12 @@
 
     if (!observer) {
       node.classList.add('is-inview');
-    } else if (immediate && inViewport(node)) {
-      // Dynamically added nodes that are already visible (e.g. search
-      // re-renders) must not replay the entrance animation.
-      node.classList.add('is-inview');
+    } else if (inViewport(node)) {
+      // Nodes that are already visible when prepared (initial viewport or
+      // dynamically added, e.g. search re-renders) must not replay the
+      // entrance animation: settle them instantly so content is never left
+      // in a mid-fade, low-contrast state.
+      node.classList.add('is-inview', 'motion-settled');
     } else {
       observer.observe(node);
     }

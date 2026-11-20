@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "deep-verification-primary-review-v1",
+  "wave": "m2-batch3",
+  "company": {
+    "code": "4251",
+    "name": "恵和"
+  },
+  "document": {
+    "title": "中期経営計画の見直しに関するお知らせ（新・中期経営計画 FY2026-FY2028）",
+    "publishedDate": "2025-08-14",
+    "sourceUrl": "https://www2.jpx.co.jp/disc/42510/140120250814541956.pdf",
+    "documentType": "formal_midterm_management_plan",
+    "documentClassification": "formal_midterm_management_plan",
+    "formalPlanConfirmed": true,
+    "fullTextHumanReviewComplete": true
+  },
+  "structuredAnalysis": {
+    "period": "2026年12月期～2028年12月期",
+    "summary": "2025年2月に公表した中期経営計画を、地球の絆創膏事業の撤退等の事業環境の変化を踏まえて見直した現行計画。光学製品事業と機能製品事業に経営資源を集中し、FY2028に連結売上高270億円・連結営業利益59億円を目指す。",
+    "strategyThemes": [
+      "光学製品事業の拡大（ハイパー液晶向け製品・車載用途拡大）",
+      "機能製品事業の成長（クリーンエネルギー・医療分野）",
+      "設備投資の最優先実行"
+    ],
+    "financialTargets": [
+      {
+        "fiscalYear": "2028年12月期",
+        "metric": "連結売上高",
+        "value": 270,
+        "unit": "億円",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2028年12月期",
+        "metric": "連結営業利益",
+        "value": 59,
+        "unit": "億円",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2028年12月期",
+        "metric": "一株当たり当期利益",
+        "value": 231.0,
+        "unit": "円",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2028年12月期",
+        "metric": "ROIC",
+        "value": 13.5,
+        "unit": "%",
+        "classification": "formal_plan_terminal_target"
+      },
+      {
+        "fiscalYear": "2028年12月期",
+        "metric": "ROE",
+        "value": 12.9,
+        "unit": "%",
+        "classification": "formal_plan_terminal_target"
+      }
+    ],
+    "capitalPolicy": "3年間の営業キャッシュフローを原資に設備投資140億円を最優先で実行する。財務体質強化としてD/Eレシオ0.3を目安に管理・最適化を図る。",
+    "shareholderReturnPolicy": "安定的な配当を基本とし、中期経営計画期間中は1株当たり年間配当金の下限を35円とする。自己株式の取得は、株価水準・資金状況・市場環境等を総合的に勘案し機動的に実施する。"
+  },
+  "formalPlanBoundary": {
+    "status": "formal_midterm_management_plan_confirmed",
+    "reason": "2025年8月14日開催の取締役会で目標値等の見直しが決議された中期経営計画の見直し資料であり、見直し後の計画（新・中期経営計画 FY2026-FY2028）の目標指標を含む現行版である。数値目標は図表のみで提示されているため、目標指標ページ（PDF p.9）・計画概要ページ（PDF p.10）・財務方針ページ（PDF p.18）を pdftoppm で画像化し目視で検証した（validation の visualFigureReviewComplete は false のまま）。"
+  },
+  "validation": {
+    "companyIdentityConfirmed": true,
+    "publicationDateConfirmed": true,
+    "strategyStructured": true,
+    "metricsValidated": true,
+    "fieldLevelEvidenceLinked": true,
+    "yearValidated": true,
+    "unitValidated": true,
+    "scopeValidated": true,
+    "forecastActualSeparated": true,
+    "formalPlanExistenceWithinGrowthDocumentChecked": true,
+    "visualFigureReviewComplete": false,
+    "templateTextRemaining": false,
+    "independentDoubleCheck": false,
+    "postPublicationLinkAndRenderCheck": false
+  },
+  "evidence": {
+    "planIdentityPages": [
+      1
+    ],
+    "strategyPages": [
+      13,
+      16
+    ],
+    "financialTargetsPage": 9,
+    "capitalAndShareholderReturnPage": 18
+  },
+  "review": {
+    "status": "primary_review_complete_formal_plan_confirmed_independent_visual_review_pending",
+    "reviewedAt": "2026-11-20T23:35:00+09:00",
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "deepVerificationApproved": false,
+    "reviewers": [
+      "Muse primary review 2026-11-20"
+    ]
+  }
+}

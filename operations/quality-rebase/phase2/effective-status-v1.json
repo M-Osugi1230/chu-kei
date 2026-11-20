@@ -1,342 +1,342 @@
 {
- "schemaVersion": "quality-rebase-phase2-effective-status-v1",
- "updatedAt": "2026-11-21T00:20:00+09:00",
- "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
- "independentReviewStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
- "completionLedgerAuditFile": "operations/quality-rebase/phase2/completion-ledger-audit-v1.json",
- "queueCoverageAuditFile": "operations/quality-rebase/phase2/queue-coverage-audit-v1.json",
- "appliedOverlays": [
-  "operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave08-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave09-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave10-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave11-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave12-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave13-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave14-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave15-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave16-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave17-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave18-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave19-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave20-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave21-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave22-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave23-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave24-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave25-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave25-primary-completion-batch02-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave26-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave26-primary-completion-batch02-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave27-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave28-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave29-primary-completion-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave30-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave30-primary-completion-batch02-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave31-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave31-primary-completion-batch02-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave31-primary-completion-batch03-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave31-primary-completion-batch04-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave32-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave32-primary-completion-batch02-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave32-primary-completion-batch03-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave33-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave33-primary-completion-batch02-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave34-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave34-primary-completion-batch02-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave35-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave36-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave37-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave38-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/wave39-primary-completion-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch01-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch02-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch03-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch04-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch05-v1.json",
-  "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch06-v1.json"
- ],
- "targets": {
-  "phase1": 50,
-  "phase2Additional": 797,
-  "totalIncludingPhase1": 847
- },
- "assignment": {
-  "primaryReviewWavesAssigned": 39,
-  "phase2CompaniesAssignedTotal": 361,
-  "historicalAssignmentRows": 376,
-  "assignmentRowsMayContainRemapsOrDuplicates": true,
-  "currentWaveFile": "operations/quality-rebase/phase2/primary-review-wave39-v1.json",
-  "normalPrimaryReviewCandidatesRemaining": 0,
-  "exceptionCandidatesRemaining": 0,
-  "activeQueue": "phase2_primary_review_complete",
-  "nextExceptionQueue": "none"
- },
- "review": {
-  "phase1PrimaryReviewComplete": 50,
-  "phase2PrimaryReviewComplete": 797,
-  "primaryReviewCompleteIncludingPhase1": 847,
-  "phase2PrimaryReviewCompletionRatePercent": 100.0,
-  "totalPrimaryReviewCompletionRatePercent": 100.0,
-  "independentReviewReady": 61,
-  "independentReviewComplete": 61,
-  "independentReviewPending": 0,
-  "independentReviewBlockedSourceIdentity": 0,
-  "independentVisualReviewPending": 396,
-  "additionalSourceMappingRequired": 0,
-  "remainingPhase2PrimaryReviews": 0,
-  "deepVerificationApproved": 0,
-  "growthDocumentClassifications": {
-   "formalPlanEmbedded": 33,
-   "notFormalManagementPlan": 99,
-   "sourceRemapOrExclusionRequired": 1
+  "schemaVersion": "quality-rebase-phase2-effective-status-v1",
+  "updatedAt": "2026-11-21T00:40:00+09:00",
+  "baseStatusFile": "operations/quality-rebase/phase2/current-status-v1.json",
+  "independentReviewStatusFile": "operations/quality-rebase/phase2/independent-review-status-v1.json",
+  "completionLedgerAuditFile": "operations/quality-rebase/phase2/completion-ledger-audit-v1.json",
+  "queueCoverageAuditFile": "operations/quality-rebase/phase2/queue-coverage-audit-v1.json",
+  "appliedOverlays": [
+    "operations/quality-rebase/phase2/review-state-overlays/wave07-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave08-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave09-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave10-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave11-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave12-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave13-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave14-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave15-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave16-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave17-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave18-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave19-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave20-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave21-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave22-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave23-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave24-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave25-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave25-primary-completion-batch02-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave26-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave26-primary-completion-batch02-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave27-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave28-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave29-primary-completion-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave30-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave30-primary-completion-batch02-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave31-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave31-primary-completion-batch02-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave31-primary-completion-batch03-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave31-primary-completion-batch04-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave32-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave32-primary-completion-batch02-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave32-primary-completion-batch03-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave33-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave33-primary-completion-batch02-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave34-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave34-primary-completion-batch02-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave35-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave36-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave37-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave38-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/wave39-primary-completion-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch01-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch02-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch03-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch04-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch05-v1.json",
+    "operations/quality-rebase/phase2/review-state-overlays/exception-remediation-batch06-v1.json"
+  ],
+  "targets": {
+    "phase1": 50,
+    "phase2Additional": 844,
+    "totalIncludingPhase1": 894
+  },
+  "assignment": {
+    "primaryReviewWavesAssigned": 39,
+    "phase2CompaniesAssignedTotal": 361,
+    "historicalAssignmentRows": 376,
+    "assignmentRowsMayContainRemapsOrDuplicates": true,
+    "currentWaveFile": "operations/quality-rebase/phase2/primary-review-wave39-v1.json",
+    "normalPrimaryReviewCandidatesRemaining": 0,
+    "exceptionCandidatesRemaining": 0,
+    "activeQueue": "phase2_primary_review_complete",
+    "nextExceptionQueue": "none"
+  },
+  "review": {
+    "phase1PrimaryReviewComplete": 50,
+    "phase2PrimaryReviewComplete": 844,
+    "primaryReviewCompleteIncludingPhase1": 894,
+    "phase2PrimaryReviewCompletionRatePercent": 100.0,
+    "totalPrimaryReviewCompletionRatePercent": 100.0,
+    "independentReviewReady": 61,
+    "independentReviewComplete": 61,
+    "independentReviewPending": 0,
+    "independentReviewBlockedSourceIdentity": 0,
+    "independentVisualReviewPending": 396,
+    "additionalSourceMappingRequired": 0,
+    "remainingPhase2PrimaryReviews": 0,
+    "deepVerificationApproved": 0,
+    "growthDocumentClassifications": {
+      "formalPlanEmbedded": 33,
+      "notFormalManagementPlan": 99,
+      "sourceRemapOrExclusionRequired": 1
+    }
+  },
+  "reconciliation": {
+    "companyCodeIsCountingUnit": true,
+    "canonicalPhase2PrimaryReviewArtifacts": 844,
+    "previousDeclaredPhase2PrimaryReviewComplete": 450,
+    "previousDeclaredMinusCanonicalGap": -129,
+    "currentAuditUniqueCompanies": 844,
+    "reviewedWithinCurrentAudit": 844,
+    "remainingWithinCurrentAudit": 0,
+    "normalPrimaryCandidatesRemaining": 0,
+    "exceptionCandidatesRemaining": 0,
+    "automaticCountInflationForbidden": true,
+    "note": "2026-08-23にcanonical一次レビュー成果物を実ファイル基準で再照合し450/450へ同期した（経緯は従前の記録のとおり）。その後、後続のレビュー登録（ADE期の追加ウェーブ、PR-03の後継差し替え、Milestone 1の68社、繰り越し是正の2社等）によりcanonical成果物は579社分まで増えたため、2026-11-17に台帳を実ファイル基準で再同期した。当初のPhase 2目標（追加450社・Phase 1込み500社）は成果物プールの拡大により置き換えられたものであり、目標自体が579だったわけではない。独立ビジュアル検証とDeep Verification承認は別工程のため自動完了しない。 2026-11-20にMilestone 2バッチ1の一次レビュー32社分が追加されcanonical成果物は611社分となったため、台帳を実ファイル基準で再同期した。 2026-11-20にMilestone 2バッチ2の一次レビュー49社分が追加されcanonical成果物は660社分となったため、台帳を実ファイル基準で再同期した（うち3480 ジェイ・エス・ビーは上場廃止のためユニバース外）。 2026-11-20にMilestone 2バッチ3の一次レビュー47社分が追加されcanonical成果物は707社分となったため、台帳を実ファイル基準で再同期した。 2026-11-20にMilestone 2バッチ4の一次レビュー45社分が追加されcanonical成果物は752社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ5の一次レビュー45社分が追加されcanonical成果物は797社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ6の一次レビュー47社分が追加されcanonical成果物は844社分となったため、台帳を実ファイル基準で再同期した。"
+  },
+  "activeWave": {
+    "wave": 39,
+    "assigned": 4,
+    "primaryReviewComplete": 4,
+    "formalManagementPlanConfirmed": 1,
+    "formalPlanEmbedded": 0,
+    "growthDocumentNotFormalManagementPlan": 0,
+    "currentPolicyNotFormalManagementPlan": 3,
+    "sourceCorrectionsApplied": 0,
+    "sourceMappingFollowupRequired": 0,
+    "independentReviewReady": 0,
+    "independentVisualReviewPending": 4,
+    "remaining": 0,
+    "status": "primary_review_complete_management_policy_boundaries_confirmed_independent_visual_review_pending"
+  },
+  "activeExceptionRemediation": {
+    "queue": "source_recovery_required",
+    "batch": 7,
+    "completed": 6,
+    "formalManagementPlanOrStrategyConfirmed": 6,
+    "sourceCorrectionsApplied": 2,
+    "independentVisualReviewPending": 6,
+    "remainingInQueue": 0,
+    "remainingExceptionsTotal": 0,
+    "nextQueue": "none",
+    "status": "phase2_primary_review_complete_independent_visual_review_pending"
+  },
+  "openVisualFollowups": [
+    {
+      "wave": 7,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 5,
+      "independentVisualReviewPending": 5
+    },
+    {
+      "wave": 8,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 9,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 10,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 11,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 12,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 13,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 14,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 15,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 16,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 17,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 18,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 19,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 20,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 21,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 22,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 23,
+      "primaryReviewComplete": 8,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 8
+    },
+    {
+      "wave": 24,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 25,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 26,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 27,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 28,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 29,
+      "primaryReviewComplete": 4,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 4
+    },
+    {
+      "wave": 30,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 31,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 32,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 33,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 1,
+      "independentVisualReviewPending": 9
+    },
+    {
+      "wave": 34,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 35,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 36,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 37,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 38,
+      "primaryReviewComplete": 10,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 10
+    },
+    {
+      "wave": 39,
+      "primaryReviewComplete": 4,
+      "independentReviewReady": 0,
+      "independentVisualReviewPending": 4
+    }
+  ],
+  "approvalSafety": {
+    "automaticFactCompletionAllowed": false,
+    "automaticApprovalAllowed": false,
+    "primaryReviewerMaySelfApprove": false,
+    "growthDocumentMayBePromotedWithoutFormalPlanEvidence": false,
+    "deepVerificationApproved": false
   }
- },
- "reconciliation": {
-  "companyCodeIsCountingUnit": true,
-  "canonicalPhase2PrimaryReviewArtifacts": 797,
-  "previousDeclaredPhase2PrimaryReviewComplete": 450,
-  "previousDeclaredMinusCanonicalGap": -129,
-  "currentAuditUniqueCompanies": 797,
-  "reviewedWithinCurrentAudit": 797,
-  "remainingWithinCurrentAudit": 0,
-  "normalPrimaryCandidatesRemaining": 0,
-  "exceptionCandidatesRemaining": 0,
-  "automaticCountInflationForbidden": true,
-  "note": "2026-08-23にcanonical一次レビュー成果物を実ファイル基準で再照合し450/450へ同期した（経緯は従前の記録のとおり）。その後、後続のレビュー登録（ADE期の追加ウェーブ、PR-03の後継差し替え、Milestone 1の68社、繰り越し是正の2社等）によりcanonical成果物は579社分まで増えたため、2026-11-17に台帳を実ファイル基準で再同期した。当初のPhase 2目標（追加450社・Phase 1込み500社）は成果物プールの拡大により置き換えられたものであり、目標自体が579だったわけではない。独立ビジュアル検証とDeep Verification承認は別工程のため自動完了しない。 2026-11-20にMilestone 2バッチ1の一次レビュー32社分が追加されcanonical成果物は611社分となったため、台帳を実ファイル基準で再同期した。 2026-11-20にMilestone 2バッチ2の一次レビュー49社分が追加されcanonical成果物は660社分となったため、台帳を実ファイル基準で再同期した（うち3480 ジェイ・エス・ビーは上場廃止のためユニバース外）。 2026-11-20にMilestone 2バッチ3の一次レビュー47社分が追加されcanonical成果物は707社分となったため、台帳を実ファイル基準で再同期した。 2026-11-20にMilestone 2バッチ4の一次レビュー45社分が追加されcanonical成果物は752社分となったため、台帳を実ファイル基準で再同期した。 2026-11-21にMilestone 2バッチ5の一次レビュー45社分が追加されcanonical成果物は797社分となったため、台帳を実ファイル基準で再同期した。"
- },
- "activeWave": {
-  "wave": 39,
-  "assigned": 4,
-  "primaryReviewComplete": 4,
-  "formalManagementPlanConfirmed": 1,
-  "formalPlanEmbedded": 0,
-  "growthDocumentNotFormalManagementPlan": 0,
-  "currentPolicyNotFormalManagementPlan": 3,
-  "sourceCorrectionsApplied": 0,
-  "sourceMappingFollowupRequired": 0,
-  "independentReviewReady": 0,
-  "independentVisualReviewPending": 4,
-  "remaining": 0,
-  "status": "primary_review_complete_management_policy_boundaries_confirmed_independent_visual_review_pending"
- },
- "activeExceptionRemediation": {
-  "queue": "source_recovery_required",
-  "batch": 7,
-  "completed": 6,
-  "formalManagementPlanOrStrategyConfirmed": 6,
-  "sourceCorrectionsApplied": 2,
-  "independentVisualReviewPending": 6,
-  "remainingInQueue": 0,
-  "remainingExceptionsTotal": 0,
-  "nextQueue": "none",
-  "status": "phase2_primary_review_complete_independent_visual_review_pending"
- },
- "openVisualFollowups": [
-  {
-   "wave": 7,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 5,
-   "independentVisualReviewPending": 5
-  },
-  {
-   "wave": 8,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 9,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 10,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 11,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 12,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 13,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 14,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 15,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 16,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 17,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 18,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 19,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 20,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 21,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 22,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 23,
-   "primaryReviewComplete": 8,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 8
-  },
-  {
-   "wave": 24,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 25,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 26,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 27,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 28,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 29,
-   "primaryReviewComplete": 4,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 4
-  },
-  {
-   "wave": 30,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 31,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 32,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 33,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 1,
-   "independentVisualReviewPending": 9
-  },
-  {
-   "wave": 34,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 35,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 36,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 37,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 38,
-   "primaryReviewComplete": 10,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 10
-  },
-  {
-   "wave": 39,
-   "primaryReviewComplete": 4,
-   "independentReviewReady": 0,
-   "independentVisualReviewPending": 4
-  }
- ],
- "approvalSafety": {
-  "automaticFactCompletionAllowed": false,
-  "automaticApprovalAllowed": false,
-  "primaryReviewerMaySelfApprove": false,
-  "growthDocumentMayBePromotedWithoutFormalPlanEvidence": false,
-  "deepVerificationApproved": false
- }
 }

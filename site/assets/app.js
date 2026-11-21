@@ -372,7 +372,15 @@ function renderCompareTray() {
   const companies = [...state.compare].map(companyByCode).filter(Boolean);
   $('#compare-tray').hidden = !companies.length;
   $('#compare-count').textContent = companies.length;
-  $('#compare-names').textContent = companies.map(c => c.name).join('、');
+  $('#compare-names').innerHTML = companies.map(company => `
+    <span class="compare-company-chip">
+      <span class="compare-company-chip-name">${escapeHtml(company.name)}</span>
+      <span class="compare-company-chip-code">${escapeHtml(company.code)}</span>
+      <button class="compare-company-remove" type="button" data-remove-compare="${escapeHtml(company.code)}" aria-label="${escapeHtml(company.name)}を比較から解除">×</button>
+    </span>`).join('');
+  document.querySelectorAll('[data-remove-compare]').forEach(button => {
+    button.addEventListener('click', () => toggleCompare(button.dataset.removeCompare));
+  });
 }
 
 function latestActualText(company) {
@@ -402,7 +410,7 @@ async function openCompare() {
     ['資料公表日', c => c.planPublishedDate || '未確認'],
     ['最終確認日', c => c.lastVerifiedDate || '未確認'],
   ];
-  $('#compare-detail').innerHTML = `<article class="dialog-card"><div class="dialog-head"><div><p class="eyebrow">Company Comparison</p><h2>中計比較</h2><p>${companies.length}社の戦略・目標・資本政策・進捗を同じ軸で確認します。</p></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div><div class="detail-actions"><button class="text-button" type="button" data-share-compare-dialog>比較リンクをコピー</button></div><div class="compare-table-wrap" tabindex="0" role="region" aria-label="中計比較表"><table class="compare-table"><thead><tr><th scope="col">比較項目</th>${companies.map(c => `<th scope="col">${escapeHtml(c.name)}</th>`).join('')}</tr></thead><tbody>${rows.map(([label, getter]) => `<tr><th scope="row">${label}</th>${companies.map(c => `<td>${escapeHtml(getter(c) || '未抽出')}</td>`).join('')}</tr>`).join('')}</tbody></table></div></article>`;
+  $('#compare-detail').innerHTML = `<article class="dialog-card"><div class="dialog-head"><div><p class="eyebrow">Company Comparison</p><h2>中計比較</h2><p>${companies.length}社の戦略・目標・資本政策・進捗を同じ軸で確認します。</p></div><button class="icon-button" data-close type="button" aria-label="閉じる">×</button></div><div class="detail-actions"><button class="text-button" type="button" data-share-compare-dialog>比較リンクをコピー</button></div><div class="compare-table-wrap" tabindex="0" role="region" aria-label="中計比較表"><table class="compare-table"><thead><tr><th scope="col" class="compare-row-heading">比較項目</th>${companies.map(c => `<th scope="col">${escapeHtml(c.name)}</th>`).join('')}</tr></thead><tbody>${rows.map(([label, getter]) => `<tr><th scope="row" class="compare-row-heading">${label}</th>${companies.map(c => `<td>${escapeHtml(getter(c) || '未抽出')}</td>`).join('')}</tr>`).join('')}</tbody></table></div></article>`;
   $('[data-share-compare-dialog]', $('#compare-dialog'))?.addEventListener('click', () => shareWorkspace('', '比較リンクをコピーしました。'));
   bindClose($('#compare-dialog'));
   $('#compare-dialog').showModal();

@@ -1,7 +1,7 @@
 {
   "version": "chu-kei-research-priority-v1",
-  "generatedAt": "2026-11-20T18:38:36.526Z",
-  "universeGeneratedAt": "2026-11-20T18:38:22.634Z",
+  "generatedAt": "2026-11-21T03:30:10.622Z",
+  "universeGeneratedAt": "2026-11-21T03:29:40.914Z",
   "sourceBundleSha256": "a7fce63914a20f539f2d914e6fce8cc2d75648a6bc165f52d38bffda81eff3e6",
   "policy": {
     "productGoal": "企業数の網羅性を維持しながら、企業発見・比較能力を最大化する",
@@ -18,12 +18,12 @@
   "counts": {
     "universe": 3686,
     "sourceBundleCompanies": 3000,
-    "planResolved": 1363,
-    "planPending": 2323,
-    "planCandidateHinted": 1607,
-    "currentOrUnstructuredPlan": 1353,
-    "comparisonCoreQueued": 1278,
-    "noCurrentCoreRequired": 10
+    "planResolved": 1398,
+    "planPending": 2288,
+    "planCandidateHinted": 1572,
+    "currentOrUnstructuredPlan": 1386,
+    "comparisonCoreQueued": 1310,
+    "noCurrentCoreRequired": 12
   },
   "comparisonCoreDefinition": [
     {
@@ -908,29 +908,6 @@
         "name": "オプロ",
         "market": "Growth",
         "industry": "情報・通信業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "2334",
-        "name": "イオレ",
-        "market": "Growth",
-        "industry": "サービス業",
         "priorityBand": "P0",
         "priorityScore": 1100,
         "candidateHintScore": 100,
@@ -6953,52 +6930,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "3176",
-        "name": "三洋貿易",
-        "market": "Prime",
-        "industry": "卸売業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "3193",
-        "name": "エターナルホスピタリティグループ",
-        "market": "Prime",
-        "industry": "小売業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "3276",
         "name": "ＪＰＭＣ",
         "market": "Prime",
@@ -7210,29 +7141,6 @@
         "name": "アイル",
         "market": "Prime",
         "industry": "情報・通信業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "3877",
-        "name": "中越パルプ工業",
-        "market": "Prime",
-        "industry": "パルプ・紙",
         "priorityBand": "P0",
         "priorityScore": 1100,
         "candidateHintScore": 100,
@@ -7896,29 +7804,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "4611",
-        "name": "大日本塗料",
-        "market": "Prime",
-        "industry": "化学",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "4634",
         "name": "ａｒｔｉｅｎｃｅ",
         "market": "Prime",
@@ -8360,29 +8245,6 @@
         "name": "日本冶金工業",
         "market": "Prime",
         "industry": "鉄鋼",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "5702",
-        "name": "大紀アルミニウム工業所",
-        "market": "Prime",
-        "industry": "非鉄金属",
         "priorityBand": "P0",
         "priorityScore": 1100,
         "candidateHintScore": 100,
@@ -8908,29 +8770,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "6702",
-        "name": "富士通",
-        "market": "Prime",
-        "industry": "電気機器",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "6753",
         "name": "シャープ",
         "market": "Prime",
@@ -9253,54 +9092,8 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "7313",
-        "name": "テイ・エス テック",
-        "market": "Prime",
-        "industry": "輸送用機器",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "7350",
         "name": "おきなわフィナンシャルグループ",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "7381",
-        "name": "ＣＣＩグループ",
         "market": "Prime",
         "industry": "銀行業",
         "priorityBand": "P0",
@@ -9598,29 +9391,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "7936",
-        "name": "アシックス",
-        "market": "Prime",
-        "industry": "その他製品",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "7944",
         "name": "ローランド",
         "market": "Prime",
@@ -9761,29 +9531,6 @@
         "layer": "L1_PLAN_DETECTION",
         "code": "8136",
         "name": "サンリオ",
-        "market": "Prime",
-        "industry": "卸売業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8158",
-        "name": "ソーダニッカ",
         "market": "Prime",
         "industry": "卸売業",
         "priorityBand": "P0",
@@ -9989,29 +9736,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "8361",
-        "name": "大垣共立銀行",
-        "market": "Prime",
-        "industry": "銀行業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "8367",
         "name": "南都銀行",
         "market": "Prime",
@@ -10083,29 +9807,6 @@
         "layer": "L1_PLAN_DETECTION",
         "code": "8425",
         "name": "みずほリース",
-        "market": "Prime",
-        "industry": "その他金融業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8584",
-        "name": "ジャックス",
         "market": "Prime",
         "industry": "その他金融業",
         "priorityBand": "P0",
@@ -10244,29 +9945,6 @@
         "layer": "L1_PLAN_DETECTION",
         "code": "8830",
         "name": "住友不動産",
-        "market": "Prime",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "8999",
-        "name": "グランディハウス",
         "market": "Prime",
         "industry": "不動産業",
         "priorityBand": "P0",
@@ -10840,29 +10518,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "2393",
-        "name": "日本ケアサプライ",
-        "market": "Standard",
-        "industry": "サービス業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "2445",
         "name": "タカミヤ",
         "market": "Standard",
@@ -10936,29 +10591,6 @@
         "name": "イメージ ワン",
         "market": "Standard",
         "industry": "卸売業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "2762",
-        "name": "ＳＡＮＫＯ ＭＡＲＫＥＴＩＮＧ ＦＯＯＤＳ",
-        "market": "Standard",
-        "industry": "小売業",
         "priorityBand": "P0",
         "priorityScore": 1100,
         "candidateHintScore": 100,
@@ -11576,29 +11208,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "3299",
-        "name": "ムゲンエステート",
-        "market": "Standard",
-        "industry": "不動産業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "3355",
         "name": "クリヤマホールディングス",
         "market": "Standard",
@@ -11693,29 +11302,6 @@
         "layer": "L1_PLAN_DETECTION",
         "code": "3426",
         "name": "アトムリビンテック",
-        "market": "Standard",
-        "industry": "金属製品",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "3446",
-        "name": "ジェイテックコーポレーション",
         "market": "Standard",
         "industry": "金属製品",
         "priorityBand": "P0",
@@ -12059,29 +11645,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "3842",
-        "name": "ネクストジェン",
-        "market": "Standard",
-        "industry": "情報・通信業",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "3858",
         "name": "ユビキタスＡＩ",
         "market": "Standard",
@@ -12268,29 +11831,6 @@
         "layer": "L1_PLAN_DETECTION",
         "code": "4031",
         "name": "片倉コープアグリ",
-        "market": "Standard",
-        "industry": "化学",
-        "priorityBand": "P0",
-        "priorityScore": 1100,
-        "candidateHintScore": 100,
-        "candidateHints": [
-          "plan_like_document_title",
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "4094",
-        "name": "日本化学産業",
         "market": "Standard",
         "industry": "化学",
         "priorityBand": "P0",
@@ -14182,28 +13722,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "1852",
-        "name": "淺沼組",
-        "market": "Prime",
-        "industry": "建設業",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "1873",
         "name": "日本ハウスホールディングス",
         "market": "Prime",
@@ -14292,52 +13810,8 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "1939",
-        "name": "四電工",
-        "market": "Prime",
-        "industry": "建設業",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "1964",
         "name": "中外炉工業",
-        "market": "Prime",
-        "industry": "建設業",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "1968",
-        "name": "太平電業",
         "market": "Prime",
         "industry": "建設業",
         "priorityBand": "P0",
@@ -14600,28 +14074,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "2206",
-        "name": "江崎グリコ",
-        "market": "Prime",
-        "industry": "食料品",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "2211",
         "name": "不二家",
         "market": "Prime",
@@ -14668,50 +14120,6 @@
         "layer": "L1_PLAN_DETECTION",
         "code": "2222",
         "name": "寿スピリッツ",
-        "market": "Prime",
-        "industry": "食料品",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "2229",
-        "name": "カルビー",
-        "market": "Prime",
-        "industry": "食料品",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "2281",
-        "name": "プリマハム",
         "market": "Prime",
         "industry": "食料品",
         "priorityBand": "P0",
@@ -15480,28 +14888,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "3028",
-        "name": "アルペン",
-        "market": "Prime",
-        "industry": "小売業",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "3046",
         "name": "ジンズホールディングス",
         "market": "Prime",
@@ -15594,28 +14980,6 @@
         "name": "ブロンコビリー",
         "market": "Prime",
         "industry": "小売業",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "3116",
-        "name": "トヨタ紡織",
-        "market": "Prime",
-        "industry": "輸送用機器",
         "priorityBand": "P0",
         "priorityScore": 1060,
         "candidateHintScore": 60,
@@ -18912,28 +18276,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "5947",
-        "name": "リンナイ",
-        "market": "Prime",
-        "industry": "金属製品",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "5970",
         "name": "ジーテクト",
         "market": "Prime",
@@ -19198,28 +18540,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "6136",
-        "name": "オーエスジー",
-        "market": "Prime",
-        "industry": "機械",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "6141",
         "name": "ＤＭＧ森精機",
         "market": "Prime",
@@ -19396,28 +18716,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "6272",
-        "name": "レオン自動機",
-        "market": "Prime",
-        "industry": "機械",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "6273",
         "name": "ＳＭＣ",
         "market": "Prime",
@@ -19486,28 +18784,6 @@
         "layer": "L1_PLAN_DETECTION",
         "code": "6284",
         "name": "日精エー・エス・ビー機械",
-        "market": "Prime",
-        "industry": "機械",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "6305",
-        "name": "日立建機",
         "market": "Prime",
         "industry": "機械",
         "priorityBand": "P0",
@@ -21578,28 +20854,6 @@
         "name": "薬王堂ホールディングス",
         "market": "Prime",
         "industry": "小売業",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "7701",
-        "name": "島津製作所",
-        "market": "Prime",
-        "industry": "精密機器",
         "priorityBand": "P0",
         "priorityScore": 1060,
         "candidateHintScore": 60,
@@ -25886,28 +25140,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "2806",
-        "name": "ユタカフーズ",
-        "market": "Standard",
-        "industry": "食料品",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "2816",
         "name": "ダイショー",
         "market": "Standard",
@@ -28748,28 +27980,6 @@
         "layer": "L1_PLAN_DETECTION",
         "code": "3947",
         "name": "ダイナパック",
-        "market": "Standard",
-        "industry": "パルプ・紙",
-        "priorityBand": "P0",
-        "priorityScore": 1060,
-        "candidateHintScore": 60,
-        "candidateHints": [
-          "source_url_present",
-          "plan_published_date_present",
-          "evidence_refs_present",
-          "existing_structured_record"
-        ],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
-        "code": "3953",
-        "name": "大村紙業",
         "market": "Standard",
         "industry": "パルプ・紙",
         "priorityBand": "P0",
@@ -49971,6 +49181,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "1852",
+        "name": "淺沼組",
+        "market": "Prime",
+        "industry": "建設業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "1860",
         "name": "戸田建設",
         "market": "Prime",
@@ -50580,6 +49819,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "1939",
+        "name": "四電工",
+        "market": "Prime",
+        "industry": "建設業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "1941",
         "name": "中電工",
         "market": "Prime",
@@ -50960,6 +50228,35 @@
         "code": "1967",
         "name": "ヤマト",
         "market": "Standard",
+        "industry": "建設業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "1968",
+        "name": "太平電業",
+        "market": "Prime",
         "industry": "建設業",
         "planStatus": "current",
         "priorityBand": "P1",
@@ -51711,6 +51008,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "2206",
+        "name": "江崎グリコ",
+        "market": "Prime",
+        "industry": "食料品",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "2207",
         "name": "ｍｅｉｔｏ",
         "market": "Prime",
@@ -51856,6 +51182,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "2229",
+        "name": "カルビー",
+        "market": "Prime",
+        "industry": "食料品",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "2264",
         "name": "森永乳業",
         "market": "Prime",
@@ -51887,6 +51242,35 @@
         "layer": "L2_COMPARISON_CORE",
         "code": "2266",
         "name": "六甲バター",
+        "market": "Prime",
+        "industry": "食料品",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "2281",
+        "name": "プリマハム",
         "market": "Prime",
         "industry": "食料品",
         "planStatus": "current",
@@ -52208,6 +51592,35 @@
         "name": "クエスト",
         "market": "Standard",
         "industry": "情報・通信業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "2334",
+        "name": "イオレ",
+        "market": "Growth",
+        "industry": "サービス業",
         "planStatus": "current",
         "priorityBand": "P1",
         "priorityScore": 503,
@@ -54205,6 +53618,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "2806",
+        "name": "ユタカフーズ",
+        "market": "Standard",
+        "industry": "食料品",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "2809",
         "name": "キユーピー",
         "market": "Prime",
@@ -55075,6 +54517,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "3028",
+        "name": "アルペン",
+        "market": "Prime",
+        "industry": "小売業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "3030",
         "name": "ハブ",
         "market": "Standard",
@@ -55597,6 +55068,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "3116",
+        "name": "トヨタ紡織",
+        "market": "Prime",
+        "industry": "輸送用機器",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "3123",
         "name": "サイボー",
         "market": "Standard",
@@ -55945,6 +55445,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "3176",
+        "name": "三洋貿易",
+        "market": "Prime",
+        "industry": "卸売業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "3179",
         "name": "シュッピン",
         "market": "Prime",
@@ -56005,6 +55534,35 @@
         "layer": "L2_COMPARISON_CORE",
         "code": "3191",
         "name": "ジョイフル本田",
+        "market": "Prime",
+        "industry": "小売業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "3193",
+        "name": "エターナルホスピタリティグループ",
         "market": "Prime",
         "industry": "小売業",
         "planStatus": "current",
@@ -56412,6 +55970,35 @@
         "code": "3289",
         "name": "東急不動産ホールディングス",
         "market": "Prime",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "3299",
+        "name": "ムゲンエステート",
+        "market": "Standard",
         "industry": "不動産業",
         "planStatus": "current",
         "priorityBand": "P1",
@@ -57224,6 +56811,35 @@
         "code": "3443",
         "name": "川田テクノロジーズ",
         "market": "Prime",
+        "industry": "金属製品",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "3446",
+        "name": "ジェイテックコーポレーション",
+        "market": "Standard",
         "industry": "金属製品",
         "planStatus": "current",
         "priorityBand": "P1",
@@ -59135,6 +58751,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "3842",
+        "name": "ネクストジェン",
+        "market": "Standard",
+        "industry": "情報・通信業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "3843",
         "name": "フリービット",
         "market": "Prime",
@@ -59340,6 +58985,35 @@
         "layer": "L2_COMPARISON_CORE",
         "code": "3865",
         "name": "北越コーポレーション",
+        "market": "Prime",
+        "industry": "パルプ・紙",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "3877",
+        "name": "中越パルプ工業",
         "market": "Prime",
         "industry": "パルプ・紙",
         "planStatus": "current",
@@ -59659,6 +59333,35 @@
         "layer": "L2_COMPARISON_CORE",
         "code": "3951",
         "name": "朝日印刷",
+        "market": "Standard",
+        "industry": "パルプ・紙",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "3953",
+        "name": "大村紙業",
         "market": "Standard",
         "industry": "パルプ・紙",
         "planStatus": "current",
@@ -60240,6 +59943,35 @@
         "code": "4091",
         "name": "日本酸素ホールディングス",
         "market": "Prime",
+        "industry": "化学",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "4094",
+        "name": "日本化学産業",
+        "market": "Standard",
         "industry": "化学",
         "planStatus": "current",
         "priorityBand": "P1",
@@ -62590,6 +62322,35 @@
         "name": "大塚ホールディングス",
         "market": "Prime",
         "industry": "医薬品",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "4611",
+        "name": "大日本塗料",
+        "market": "Prime",
+        "industry": "化学",
         "planStatus": "current",
         "priorityBand": "P1",
         "priorityScore": 503,
@@ -66182,6 +65943,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "5702",
+        "name": "大紀アルミニウム工業所",
+        "market": "Prime",
+        "industry": "非鉄金属",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "5703",
         "name": "日本軽金属ホールディングス",
         "market": "Prime",
@@ -67055,6 +66845,35 @@
         "code": "5945",
         "name": "天龍製鋸",
         "market": "Standard",
+        "industry": "金属製品",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "5947",
+        "name": "リンナイ",
+        "market": "Prime",
         "industry": "金属製品",
         "planStatus": "current",
         "priorityBand": "P1",
@@ -68067,6 +67886,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "6136",
+        "name": "オーエスジー",
+        "market": "Prime",
+        "industry": "機械",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "6137",
         "name": "小池酸素工業",
         "market": "Standard",
@@ -68850,6 +68698,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "6272",
+        "name": "レオン自動機",
+        "market": "Prime",
+        "industry": "機械",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "6276",
         "name": "シリウスビジョン",
         "market": "Standard",
@@ -69142,6 +69019,35 @@
         "layer": "L2_COMPARISON_CORE",
         "code": "6302",
         "name": "住友重機械工業",
+        "market": "Prime",
+        "industry": "機械",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "6305",
+        "name": "日立建機",
         "market": "Prime",
         "industry": "機械",
         "planStatus": "current",
@@ -74302,6 +74208,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "7313",
+        "name": "テイ・エス テック",
+        "market": "Prime",
+        "industry": "輸送用機器",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "7314",
         "name": "小田原機器",
         "market": "Standard",
@@ -74480,6 +74415,35 @@
         "name": "アイ・パートナーズフィナンシャル",
         "market": "Growth",
         "industry": "その他金融業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "7381",
+        "name": "ＣＣＩグループ",
+        "market": "Prime",
+        "industry": "銀行業",
         "planStatus": "current",
         "priorityBand": "P1",
         "priorityScore": 503,
@@ -75524,6 +75488,35 @@
         "name": "スギホールディングス",
         "market": "Prime",
         "industry": "小売業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "7701",
+        "name": "島津製作所",
+        "market": "Prime",
+        "industry": "精密機器",
         "planStatus": "current",
         "priorityBand": "P1",
         "priorityScore": 503,
@@ -77031,6 +77024,35 @@
         "code": "7932",
         "name": "ニッピ",
         "market": "Standard",
+        "industry": "その他製品",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "7936",
+        "name": "アシックス",
+        "market": "Prime",
         "industry": "その他製品",
         "planStatus": "current",
         "priorityBand": "P1",
@@ -78797,6 +78819,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "8158",
+        "name": "ソーダニッカ",
+        "market": "Prime",
+        "industry": "卸売業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "8159",
         "name": "立花エレテック",
         "market": "Prime",
@@ -79783,6 +79834,35 @@
       },
       {
         "layer": "L2_COMPARISON_CORE",
+        "code": "8361",
+        "name": "大垣共立銀行",
+        "market": "Prime",
+        "industry": "銀行業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
         "code": "8362",
         "name": "福井銀行",
         "market": "Prime",
@@ -80684,6 +80764,35 @@
         "layer": "L2_COMPARISON_CORE",
         "code": "8570",
         "name": "イオンフィナンシャルサービス",
+        "market": "Prime",
+        "industry": "その他金融業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8584",
+        "name": "ジャックス",
         "market": "Prime",
         "industry": "その他金融業",
         "planStatus": "current",
@@ -81845,6 +81954,35 @@
         "code": "8946",
         "name": "ＡＳＩＡＮ ＳＴＡＲ",
         "market": "Standard",
+        "industry": "不動産業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 503,
+        "comparisonReadiness": 0.9167,
+        "availableFields": [
+          "period",
+          "revenue",
+          "profit",
+          "margin",
+          "capital",
+          "returnPolicy",
+          "strategy",
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "8999",
+        "name": "グランディハウス",
+        "market": "Prime",
         "industry": "不動産業",
         "planStatus": "current",
         "priorityBand": "P1",
@@ -85278,6 +85416,12 @@
       "checkedAt": "2026-07-20"
     },
     {
+      "code": "2393",
+      "name": "日本ケアサプライ",
+      "status": "expired",
+      "checkedAt": "2026-11-21"
+    },
+    {
       "code": "2461",
       "name": "ファンコミュニケーションズ",
       "status": "expired",
@@ -85288,6 +85432,12 @@
       "name": "ライフドリンク カンパニー",
       "status": "expired",
       "checkedAt": "2026-11-20"
+    },
+    {
+      "code": "2762",
+      "name": "ＳＡＮＫＯ ＭＡＲＫＥＴＩＮＧ ＦＯＯＤＳ",
+      "status": "expired",
+      "checkedAt": "2026-11-21"
     },
     {
       "code": "3038",

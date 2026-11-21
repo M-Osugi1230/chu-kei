@@ -167,7 +167,9 @@
   color: #102a43;
   vertical-align: middle;
 }
-.compare-company-chip-name {
+.compare-tray .compare-company-chip-name {
+  display: inline;
+  margin: 0;
   max-width: 180px;
   overflow: hidden;
   color: #102a43;
@@ -176,7 +178,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.compare-company-chip-code {
+.compare-tray .compare-company-chip-code {
+  display: inline;
+  margin: 0;
   color: #52667a;
   font-size: .7rem;
   font-variant-numeric: tabular-nums;
@@ -230,11 +234,11 @@
   .theme-company-heading { gap: 9px; }
   .theme-company-heading h2 { font-size: 1.05rem; }
   .compare-tray { gap: 10px; }
-  .compare-company-chip-name { max-width: 125px; }
+  .compare-tray .compare-company-chip-name { max-width: 125px; }
   .compare-table-wrap { max-height: 62vh; }
 }
 @media (max-width: 420px) {
   .theme-company-heading { flex-wrap: wrap; }
   .compare-company-chip { margin-right: 3px; }
-  .compare-company-chip-name { max-width: 105px; }
+  .compare-tray .compare-company-chip-name { max-width: 105px; }
 }

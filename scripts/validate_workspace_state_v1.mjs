@@ -5,7 +5,7 @@ const validStrategies = new Set(['ma', 'progress']);
 const validCodes = new Set(['7011', '6501', '9432', '2282', '9999']);
 
 const parsed = parseWorkspaceUrl(
-  'https://example.test/?q=ROIC%20海外&market=Prime&stage=core&strategy=ma&sort=quality&saved=1&compare=7011,6501,7011,XXXX,9432,2282,9999#company=7011',
+  'https://example.test/?q=ROIC%20海外&market=Prime&stage=core&strategy=ma&sort=market&saved=1&compare=7011,6501,7011,XXXX,9432,2282,9999#company=7011',
   { validStrategies, validCodes },
 );
 assert.deepEqual(parsed, {
@@ -13,7 +13,7 @@ assert.deepEqual(parsed, {
   market: 'Prime',
   stage: 'core',
   strategy: 'ma',
-  sort: 'quality',
+  sort: 'market',
   savedOnly: true,
   compare: ['7011', '6501', '9432', '2282'],
   company: '7011',
@@ -35,7 +35,7 @@ const built = buildWorkspaceUrl('https://example.test/old?unused=1#old', {
   market: 'Growth',
   stage: 'detailed_extracted',
   strategy: 'progress',
-  sort: 'verified',
+  sort: 'market',
   savedOnly: true,
   compare: new Set(['9432', '7011', '9432']),
   company: '9432',
@@ -47,7 +47,7 @@ assert.equal(url.searchParams.get('q'), 'M&A');
 assert.equal(url.searchParams.get('market'), 'Growth');
 assert.equal(url.searchParams.get('stage'), 'detailed_extracted');
 assert.equal(url.searchParams.get('strategy'), 'progress');
-assert.equal(url.searchParams.get('sort'), 'verified');
+assert.equal(url.searchParams.get('sort'), 'market');
 assert.equal(url.searchParams.get('saved'), '1');
 assert.equal(url.searchParams.get('compare'), '9432,7011');
 assert.equal(url.hash, '#company=9432');

@@ -212,12 +212,12 @@ function zeroResultReasons() {
 }
 
 function renderZeroResults() {
-  if (state.savedOnly && !state.saved.size) return '<div class="status-panel zero-results"><strong>保存した企業はまだありません。</strong><p>企業カードの「保存」から調査候補を追加できます。</p></div>';
+  if (state.savedOnly && !state.saved.size) return '<div class="status-panel zero-results" role="status" aria-live="polite"><strong>保存した企業はまだありません。</strong><p>企業カードの「保存」から調査候補を追加できます。</p></div>';
   const reasons = zeroResultReasons();
   const suggestions = reasons.length
     ? `<p>次の条件を1つ解除すると、該当企業が見つかります。</p><ul>${reasons.map(item => `<li><button class="filter-chip" type="button" data-clear-filter="${item.key}">${escapeHtml(item.label)}を解除</button><span>${item.count}社が候補になります</span></li>`).join('')}</ul>`
     : '<p>条件の組み合わせが厳しすぎる可能性があります。検索語・市場・品質・戦略テーマを個別に見直してください。</p>';
-  return `<div class="status-panel zero-results"><strong>条件に一致する企業がありません。</strong>${suggestions}</div>`;
+  return `<div class="status-panel zero-results" role="status" aria-live="polite"><strong>条件に一致する企業がありません。</strong>${suggestions}</div>`;
 }
 
 function renderCompanies() {

@@ -148,7 +148,6 @@ function page(c, d = null) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/assets/styles.css">
-<link rel="stylesheet" href="/assets/motion.css">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
@@ -159,7 +158,7 @@ function page(c, d = null) {
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 </head>
 <body class="company-page">
-<header class="site-header company-site-header"><div class="header-inner"><a class="brand" href="/">Chu-kei</a><span class="subtitle">日本上場企業 中期経営計画ポータル</span></div></header>
+<header class="site-header company-site-header"><div class="header-inner"><a class="brand" href="/">Chu-kei Insight</a><span class="subtitle">日本上場企業 中期経営計画ポータル</span></div></header>
 <main id="main" class="company-page-main">
   <nav class="company-breadcrumb" aria-label="パンくず"><a href="/">トップ</a><span aria-hidden="true"> / </span>企業詳細</nav>
   <header class="company-profile-header">

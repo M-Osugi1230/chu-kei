@@ -239,8 +239,8 @@ function renderCompanies() {
   $('#load-more').hidden = state.visible >= state.filtered.length;
   $$('[data-detail]').forEach(button => button.addEventListener('click', () => openCompany(button.dataset.detail)));
   $$('[data-compare]').forEach(button => button.addEventListener('click', () => toggleCompare(button.dataset.compare)));
-  $('[data-save]').forEach(button => button.addEventListener('click', () => toggleSaved(button.dataset.save)));
-  $('[data-clear-filter]', $('#company-grid')).forEach(button => button.addEventListener('click', () => clearFilter(button.dataset.clearFilter)));
+  document.querySelectorAll('[data-save]').forEach(button => button.addEventListener('click', () => toggleSaved(button.dataset.save)));
+  document.querySelectorAll('#company-grid [data-clear-filter]').forEach(button => button.addEventListener('click', () => clearFilter(button.dataset.clearFilter)));
 }
 
 function renderSavedSummary() {

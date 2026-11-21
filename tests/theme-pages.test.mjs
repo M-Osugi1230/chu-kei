@@ -47,6 +47,9 @@ test('15テーマを生成し、resolvedのみ集計・metricCount正本を転�
     for (const slug of slugs) assert.ok(existsSync(join(dir, `site/themes/${slug}.html`)), slug);
     const html = readFileSync(join(dir, 'site/themes/human-capital.html'), 'utf8');
     assert.match(html, /該当企業数：16社/);
+    assert.match(html, /theme-company-card/);
+    assert.match(html, /theme-company-code/);
+    assert.ok(html.indexOf('/company/1014.html') < html.indexOf('/company/1015.html'));
     assert.match(html, /指標件数：0件/);
     assert.match(html, /指標件数：15件/);
     assert.ok(!html.includes('除外社'));
@@ -68,7 +71,8 @@ test('企業ページ生成後もテーマURLが消えず、再実行でもsitem
     const html = readFileSync(join(dir, 'site/company/1000.html'), 'utf8');
     assert.match(html, /\/themes\/human-capital.html/);
     assert.match(html, /\/themes\/ma.html/);
-    assert.ok(!html.includes('<link rel="stylesheet"'));
+    // P0（2026-11-21）で会社詳細ページは共通 styles.css を読み込む仕様に変更された
+    assert.ok(html.includes('<link rel="stylesheet" href="/assets/styles.css">'));
     const sitemap = readFileSync(join(dir, 'site/sitemap.xml'), 'utf8');
     // 内訳: 基幹2 + テーマ16 + 企業17（企業側は既存仕様で no_formal_plan も生成対象）
     assert.equal(urls(dir).length, 35);

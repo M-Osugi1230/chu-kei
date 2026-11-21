@@ -65,7 +65,7 @@ function excerpt(value, limit = 180) {
   const chars = Array.from(s);
   return chars.length > limit ? `${chars.slice(0, limit).join('')}…` : s;
 }
-function shell(title, description, url, main, breadcrumb) {
+function shell(title, description, url, main, breadcrumb, ogImage = `${origin}/og/default.jpg`) {
   const ld = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -92,6 +92,15 @@ function shell(title, description, url, main, breadcrumb) {
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${esc(url)}">
+<meta property="og:image" content="${esc(ogImage)}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(title)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(description)}">
+<meta name="twitter:image" content="${esc(ogImage)}">
+<meta name="twitter:image:alt" content="${esc(title)}">
 <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>
 </head>
 <body>
@@ -143,7 +152,8 @@ for (const theme of active) {
 <div class="company-grid">${cards.join('\n')}</div>
 <p>本一覧は既存のテーマ分類に基づく情報整理であり、取組の水準や投資価値を評価するものではありません。</p>`;
   writeFileSync(join(site, 'themes', `${theme.slug}.html`), shell(title, description, url, main,
-    [['トップ', `${origin}/`], ['テーマ一覧', `${origin}/themes.html`], [theme.name, url]]));
+    [['トップ', `${origin}/`], ['テーマ一覧', `${origin}/themes.html`], [theme.name, url]],
+    `${origin}/og/theme-${theme.slug}.jpg`));
 }
 // 計画変更で閾値を下回ったテーマの古い生成HTMLは残さない。
 const live = new Set(active.map((t) => t.slug));

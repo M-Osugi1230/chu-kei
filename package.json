@@ -34,7 +34,8 @@
     "quality:forms:delivery": "node --test tests/forms-availability.test.mjs",
     "seo:company-pages": "node scripts/build_company_pages_v1.mjs",
     "seo:theme-pages": "node scripts/build_theme_pages_v1.mjs",
-    "seo:all-pages": "npm run seo:theme-pages && npm run seo:company-pages && npm run test:theme-pages",
+    "seo:og-images": "python3 scripts/build_og_images_v1.py",
+    "seo:all-pages": "npm run seo:og-images && npm run seo:theme-pages && npm run seo:company-pages && npm run test:theme-pages",
     "test:theme-pages": "node --test tests/theme-pages.test.mjs"
   },
   "engines": {

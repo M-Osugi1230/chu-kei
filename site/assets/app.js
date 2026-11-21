@@ -36,7 +36,7 @@ const planStatusLabels = {
   found_unstructured: '中計あり・未構造化',
   not_checked: '中計未確認',
 };
-const sortLabels = { relevance: '検索との関連順', quality: '品質の高い順', verified: '最終確認日の新しい順', code: '証券コード順' };
+const sortLabels = { relevance: '検索との関連順', quality: '品質の高い順', verified: '最終確認日の新しい順', market: '市場順', code: '証券コード順' };
 const strategies = [
   ['ma', 'M&A活用型', '買収・提携を成長手段として明示'],
   ['capitalEfficiency', '資本効率・ROIC型', 'ROIC・ROE・資本コストを重視'],
@@ -152,6 +152,12 @@ function sortCompanies(companies) {
       || (b.quality?.stars ?? 0) - (a.quality?.stars ?? 0)
       || String(a.code).localeCompare(String(b.code), 'ja'));
   }
+  if (state.sort === 'market') {
+    const marketOrder = { Prime: 0, Standard: 1, Growth: 2 };
+    return rows.sort((a, b) => (marketOrder[a.market] ?? 9) - (marketOrder[b.market] ?? 9)
+      || (b.quality?.stars ?? 0) - (a.quality?.stars ?? 0)
+      || String(a.code).localeCompare(String(b.code), 'ja'));
+  }
   if (state.sort === 'code') return rows.sort((a, b) => String(a.code).localeCompare(String(b.code), 'ja'));
   return rows;
 }
@@ -191,6 +197,29 @@ function researchStatus(company) {
   return `構造化項目 ${count}/5${progress ? `・${progress}` : ''}`;
 }
 
+function zeroResultReasons() {
+  const filters = { query: $('#search').value, market: $('#market').value, stage: $('#stage').value, strategy: state.strategy };
+  const definitions = [['query', '検索語'], ['market', '市場'], ['stage', '品質'], ['strategy', '戦略テーマ']].filter(([key]) => filters[key]);
+  if (state.savedOnly) definitions.push(['saved', '保存企業のみ']);
+  return definitions.map(([key, label]) => {
+    const relaxed = { ...filters };
+    if (key === 'saved') return { key, label, count: filterAndRankCompanies(state.data.companies, filters).length };
+    relaxed[key] = '';
+    let rows = filterAndRankCompanies(state.data.companies, relaxed);
+    if (state.savedOnly) rows = rows.filter(company => state.saved.has(company.code));
+    return { key, label, count: rows.length };
+  }).filter(item => item.count > 0);
+}
+
+function renderZeroResults() {
+  if (state.savedOnly && !state.saved.size) return '<div class="status-panel zero-results"><strong>保存した企業はまだありません。</strong><p>企業カードの「保存」から調査候補を追加できます。</p></div>';
+  const reasons = zeroResultReasons();
+  const suggestions = reasons.length
+    ? `<p>次の条件を1つ解除すると、該当企業が見つかります。</p><ul>${reasons.map(item => `<li><button class="filter-chip" type="button" data-clear-filter="${item.key}">${escapeHtml(item.label)}を解除</button><span>${item.count}社が候補になります</span></li>`).join('')}</ul>`
+    : '<p>条件の組み合わせが厳しすぎる可能性があります。検索語・市場・品質・戦略テーマを個別に見直してください。</p>';
+  return `<div class="status-panel zero-results"><strong>条件に一致する企業がありません。</strong>${suggestions}</div>`;
+}
+
 function renderCompanies() {
   const list = state.filtered.slice(0, state.visible);
   const savedLabel = state.savedOnly ? '・保存企業のみ' : '';
@@ -199,18 +228,19 @@ function renderCompanies() {
     const saved = state.saved.has(company.code);
     const compared = state.compare.has(company.code);
     return `<article class="company-card">
-      <div class="card-head"><div><span class="stage-badge">${escapeHtml(stageLabels[company.stage] || company.tier)}</span><h3>${escapeHtml(company.name)}</h3><div class="meta">${escapeHtml(company.code)}・${escapeHtml(company.market)}・${escapeHtml(company.industry)}</div></div><div class="card-tools"><button class="save-button" type="button" data-save="${escapeHtml(company.code)}" aria-pressed="${saved}" aria-label="${escapeHtml(company.name)}を${saved ? '保存から外す' : '保存する'}">${saved ? '保存済み' : '保存'}</button><div class="quality-meta">${escapeHtml(qualityText(company))}</div></div></div>
+      <div class="card-identity"><div class="card-identity-main"><h3>${escapeHtml(company.name)}</h3><div class="meta">${escapeHtml(company.code)}・${escapeHtml(company.market)}・${escapeHtml(company.industry)}</div></div><button class="save-button" type="button" data-save="${escapeHtml(company.code)}" aria-pressed="${saved}" aria-label="${escapeHtml(company.name)}を${saved ? '保存から外す' : '保存する'}">${saved ? '保存済み' : '保存'}</button></div>
+      <div class="card-status-row"><span class="stage-badge">${escapeHtml(planStatusText(company))}</span><span class="quality-meta">${escapeHtml(qualityText(company))}</span><span class="card-stage-meta">${escapeHtml(stageLabels[company.stage] || company.tier)}</span></div>
       <p class="summary">${escapeHtml(company.summary || '中計本文の詳細は未抽出です。')}</p>
       <div class="tags">${(company.themes || []).slice(0, 5).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
-      <div class="research-status"><span>中計状態: ${escapeHtml(planStatusText(company))}</span><span>${escapeHtml(researchStatus(company))}</span></div>
-      <div class="meta">${verificationDateLabel(company)}: ${escapeHtml(company.lastVerifiedDate || '未確認')}</div>
+      <div class="research-status"><span>${escapeHtml(researchStatus(company))}</span><span>${verificationDateLabel(company)}: ${escapeHtml(company.lastVerifiedDate || '未確認')}</span></div>
       <div class="card-actions"><button class="secondary-button" type="button" data-detail="${escapeHtml(company.code)}">詳細を見る</button><button class="primary-button" type="button" data-compare="${escapeHtml(company.code)}" aria-pressed="${compared}">${compared ? '比較から外す' : '比較に追加'}</button></div>
     </article>`;
-  }).join('') || `<div class="status-panel"><strong>${state.savedOnly && !state.saved.size ? '保存した企業はまだありません。' : '条件に一致する企業がありません。'}</strong><p>${state.savedOnly && !state.saved.size ? '企業カードの「保存」から調査候補を追加できます。' : '検索語や絞り込み条件を変更してください。'}</p></div>`;
+  }).join('') || renderZeroResults();
   $('#load-more').hidden = state.visible >= state.filtered.length;
   $$('[data-detail]').forEach(button => button.addEventListener('click', () => openCompany(button.dataset.detail)));
   $$('[data-compare]').forEach(button => button.addEventListener('click', () => toggleCompare(button.dataset.compare)));
-  $$('[data-save]').forEach(button => button.addEventListener('click', () => toggleSaved(button.dataset.save)));
+  $('[data-save]').forEach(button => button.addEventListener('click', () => toggleSaved(button.dataset.save)));
+  $('[data-clear-filter]', $('#company-grid')).forEach(button => button.addEventListener('click', () => clearFilter(button.dataset.clearFilter)));
 }
 
 function renderSavedSummary() {

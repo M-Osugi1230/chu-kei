@@ -157,10 +157,18 @@ test.describe('Chu-kei portal', () => {
     await compareButtons.nth(0).click();
     await compareButtons.nth(1).click();
     await expect(page.locator('#compare-count')).toHaveText('2');
+    await expect(page.locator('#compare-names .compare-company-chip')).toHaveCount(2);
+    await page.locator('#compare-names [data-remove-compare]').first().click();
+    await expect(page.locator('#compare-count')).toHaveText('1');
+    await expect(page.locator('#compare-names .compare-company-chip')).toHaveCount(1);
+    await page.locator('[data-compare]').first().click();
+    await expect(page.locator('#compare-count')).toHaveText('2');
     await page.locator('#open-compare').click();
     await expect(page.locator('#compare-dialog')).toBeVisible();
     await expect(page.locator('#compare-dialog thead th')).toHaveCount(3);
     await expect(page.locator('#compare-dialog')).toContainText('進捗データ');
+    await expect(page.locator('#compare-dialog thead th').first()).toHaveCSS('position', 'sticky');
+    await expect(page.locator('#compare-dialog tbody th').first()).toHaveCSS('position', 'sticky');
     await page.locator('#compare-dialog [data-close]').click();
 
     if (testInfo.project.name === 'mobile') {

@@ -127,8 +127,11 @@ for (const theme of active) {
     const market = text(marketLabels[c.market] || c.market) || '未確認';
     const industry = text(c.industry) || '未確認';
     const published = text(c.planPublishedDate) || '未確認';
-    return `<article class="company-card">
-<h3><a href="/company/${encodeURIComponent(String(c.code))}.html">${esc(text(c.name) || '未確認')}（${esc(c.code)}）</a></h3>
+    return `<article class="company-card theme-company-card">
+<div class="theme-company-heading">
+<h2><a href="/company/${encodeURIComponent(String(c.code))}.html">${esc(text(c.name) || '未確認')}</a></h2>
+<span class="theme-company-code">${esc(c.code)}</span>
+</div>
 <p class="meta">市場：${esc(market)} / 業種：${esc(industry)} / 中計公表日：${esc(published)} / 指標件数：${c.metricCount}件</p>
 <p class="summary">${esc(summary)}</p>
 </article>`;
@@ -152,7 +155,7 @@ const listTitle = '中期経営計画のテーマ別企業一覧｜Chu-kei Insig
 const listDesc = `中期経営計画で分類された${active.length}テーマから企業を探せます。各テーマに15社以上の企業を掲載しています。`;
 const listMain = `<p class="eyebrow">テーマから探す</p><h1>中期経営計画のテーマ別企業一覧</h1>
 <p class="section-description">${esc(listDesc)}</p>
-<div class="company-grid">${active.map((t) => `<article class="company-card"><h2><a href="/themes/${t.slug}.html">${esc(t.name)}</a></h2><p class="meta">${t.companies.length}社</p></article>`).join('\n')}</div>
+<div class="company-grid">${active.map((t) => `<article class="company-card theme-index-card"><h2><a href="/themes/${t.slug}.html">${esc(t.name)}</a></h2><p class="meta">${t.companies.length}社</p></article>`).join('\n')}</div>
 <p>該当数は現行・期限終了の計画を持つ登録企業のテーマ分類から集計しています。1社に複数のテーマが登録される場合があります。</p>`;
 writeFileSync(join(site, 'themes.html'), shell(listTitle, listDesc, `${origin}/themes.html`, listMain,
   [['トップ', `${origin}/`], ['テーマ一覧', `${origin}/themes.html`]]));

@@ -228,12 +228,12 @@ function renderCompanies() {
     const saved = state.saved.has(company.code);
     const compared = state.compare.has(company.code);
     return `<article class="company-card">
-      <div class="card-identity"><div class="card-identity-main"><h3>${escapeHtml(company.name)}</h3><div class="meta">${escapeHtml(company.code)}・${escapeHtml(company.market)}・${escapeHtml(company.industry)}</div></div><button class="save-button" type="button" data-save="${escapeHtml(company.code)}" aria-pressed="${saved}" aria-label="${escapeHtml(company.name)}を${saved ? '保存から外す' : '保存する'}">${saved ? '保存済み' : '保存'}</button></div>
+      <div class="card-identity"><div class="card-identity-main"><h3>${escapeHtml(company.name)}</h3><div class="meta">${escapeHtml(company.code)}・${escapeHtml(company.market)}・${escapeHtml(company.industry)}</div></div></div>
       <div class="card-status-row"><span class="stage-badge">${escapeHtml(planStatusText(company))}</span><span class="quality-meta">${escapeHtml(qualityText(company))}</span><span class="card-stage-meta">${escapeHtml(stageLabels[company.stage] || company.tier)}</span></div>
       <p class="summary">${escapeHtml(company.summary || '中計本文の詳細は未抽出です。')}</p>
       <div class="tags">${(company.themes || []).slice(0, 5).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
       <div class="research-status"><span>${escapeHtml(researchStatus(company))}</span><span>${verificationDateLabel(company)}: ${escapeHtml(company.lastVerifiedDate || '未確認')}</span></div>
-      <div class="card-actions"><button class="secondary-button" type="button" data-detail="${escapeHtml(company.code)}">詳細を見る</button><button class="primary-button" type="button" data-compare="${escapeHtml(company.code)}" aria-pressed="${compared}">${compared ? '比較から外す' : '比較に追加'}</button></div>
+      <div class="card-actions"><button class="save-button" type="button" data-save="${escapeHtml(company.code)}" aria-pressed="${saved}" aria-label="${escapeHtml(company.name)}を${saved ? '保存から外す' : '保存する'}">${saved ? '保存済み' : '保存'}</button><button class="secondary-button" type="button" data-detail="${escapeHtml(company.code)}">詳細を見る</button><button class="primary-button" type="button" data-compare="${escapeHtml(company.code)}" aria-pressed="${compared}">${compared ? '比較から外す' : '比較に追加'}</button></div>
     </article>`;
   }).join('') || renderZeroResults();
   $('#load-more').hidden = state.visible >= state.filtered.length;

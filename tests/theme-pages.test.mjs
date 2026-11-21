@@ -47,6 +47,9 @@ test('15テーマを生成し、resolvedのみ集計・metricCount正本を転�
     for (const slug of slugs) assert.ok(existsSync(join(dir, `site/themes/${slug}.html`)), slug);
     const html = readFileSync(join(dir, 'site/themes/human-capital.html'), 'utf8');
     assert.match(html, /該当企業数：16社/);
+    assert.match(html, /theme-company-card/);
+    assert.match(html, /theme-company-code/);
+    assert.ok(html.indexOf('/company/1014.html') < html.indexOf('/company/1015.html'));
     assert.match(html, /指標件数：0件/);
     assert.match(html, /指標件数：15件/);
     assert.ok(!html.includes('除外社'));

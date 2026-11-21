@@ -176,6 +176,10 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('#compare-dialog')).toContainText('進捗データ');
     await expect(page.locator('#compare-dialog thead th').first()).toHaveCSS('position', 'sticky');
     await expect(page.locator('#compare-dialog tbody th').first()).toHaveCSS('position', 'sticky');
+    if (testInfo.project.name !== 'desktop') {
+      const tableOverflow = await page.locator('#compare-dialog .compare-table-wrap').evaluate(node => node.scrollWidth > node.clientWidth);
+      expect(tableOverflow).toBe(true);
+    }
     await page.locator('#compare-dialog [data-close]').click();
 
     if (testInfo.project.name === 'mobile') {

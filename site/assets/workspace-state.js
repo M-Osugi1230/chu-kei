@@ -1,4 +1,4 @@
-export const SORT_OPTIONS = new Set(['relevance', 'quality', 'verified', 'code']);
+export const SORT_OPTIONS = new Set(['relevance', 'quality', 'verified', 'market', 'code']);
 
 function allowed(value, values) {
   return values?.has(value) ? value : '';

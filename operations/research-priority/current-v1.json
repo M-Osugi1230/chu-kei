@@ -1,7 +1,7 @@
 {
   "version": "chu-kei-research-priority-v1",
-  "generatedAt": "2026-11-21T03:30:10.622Z",
-  "universeGeneratedAt": "2026-11-21T03:29:40.914Z",
+  "generatedAt": "2026-11-21T22:20:16.572Z",
+  "universeGeneratedAt": "2026-11-21T22:20:16.174Z",
   "sourceBundleSha256": "a7fce63914a20f539f2d914e6fce8cc2d75648a6bc165f52d38bffda81eff3e6",
   "policy": {
     "productGoal": "企業数の網羅性を維持しながら、企業発見・比較能力を最大化する",
@@ -18,11 +18,11 @@
   "counts": {
     "universe": 3686,
     "sourceBundleCompanies": 3000,
-    "planResolved": 1398,
-    "planPending": 2288,
+    "planResolved": 1399,
+    "planPending": 2287,
     "planCandidateHinted": 1572,
-    "currentOrUnstructuredPlan": 1386,
-    "comparisonCoreQueued": 1310,
+    "currentOrUnstructuredPlan": 1387,
+    "comparisonCoreQueued": 1311,
     "noCurrentCoreRequired": 12
   },
   "comparisonCoreDefinition": [
@@ -46730,23 +46730,6 @@
       },
       {
         "layer": "L1_PLAN_DETECTION",
-        "code": "9823",
-        "name": "マミーマートホールディングス",
-        "market": "Standard",
-        "industry": "小売業",
-        "priorityBand": "P0",
-        "priorityScore": 1000,
-        "candidateHintScore": 0,
-        "candidateHints": [],
-        "researchTask": "一次情報で現行中計・過去中計・正式中計なし・未構造化のいずれかを確認する",
-        "completionRequires": [
-          "checkedAt",
-          "sourceUrl",
-          "explicit_status"
-        ]
-      },
-      {
-        "layer": "L1_PLAN_DETECTION",
         "code": "9827",
         "name": "リリカラ",
         "market": "Standard",
@@ -47410,6 +47393,63 @@
       }
     ],
     "comparisonCore": [
+      {
+        "layer": "L2_COMPARISON_CORE",
+        "code": "9823",
+        "name": "マミーマートホールディングス",
+        "market": "Standard",
+        "industry": "小売業",
+        "planStatus": "current",
+        "priorityBand": "P1",
+        "priorityScore": 531,
+        "comparisonReadiness": 0.1389,
+        "availableFields": [
+          "evidence"
+        ],
+        "missingFields": [
+          {
+            "key": "period",
+            "label": "計画期間",
+            "impactWeight": 5
+          },
+          {
+            "key": "revenue",
+            "label": "売上目標",
+            "impactWeight": 4
+          },
+          {
+            "key": "profit",
+            "label": "利益目標",
+            "impactWeight": 5
+          },
+          {
+            "key": "margin",
+            "label": "収益性",
+            "impactWeight": 3
+          },
+          {
+            "key": "capital",
+            "label": "資本効率",
+            "impactWeight": 4
+          },
+          {
+            "key": "returnPolicy",
+            "label": "株主還元",
+            "impactWeight": 3
+          },
+          {
+            "key": "strategy",
+            "label": "成長戦略",
+            "impactWeight": 4
+          },
+          {
+            "key": "progress",
+            "label": "最新進捗",
+            "impactWeight": 3
+          }
+        ],
+        "researchTask": "比較を成立させるCore欠損だけを一次情報から補完する"
+      },
       {
         "layer": "L2_COMPARISON_CORE",
         "code": "1301",

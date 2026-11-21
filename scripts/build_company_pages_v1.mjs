@@ -37,8 +37,14 @@ const hasText = (v) => typeof v === 'string' && v.trim() !== '';
 
 const indexGz = readFileSync(join(root, 'site/data/frontend/company-index.json.gz'));
 const index = JSON.parse(gunzipSync(indexGz).toString('utf8'));
-const companies = (index.companies || []).filter((c) => RESOLVED.has(c.planStatus));
+const previewCode = process.env.COMPANY_PAGE_PREVIEW_CODE || '';
+let companies = (index.companies || []).filter((c) => RESOLVED.has(c.planStatus));
 companies.sort((a, b) => String(a.code).localeCompare(String(b.code)));
+if (previewCode) {
+  if (!/^[0-9A-Za-z]+$/.test(previewCode)) throw new Error('COMPANY_PAGE_PREVIEW_CODE が不正です');
+  companies = companies.filter((c) => String(c.code) === previewCode);
+  if (!companies.length) throw new Error('プレビュー対象企業が見つかりません: ' + previewCode);
+}
 
 // 詳細シャードの読み込み（同一シャードは1回だけ読む）
 const detailCache = new Map();
@@ -141,6 +147,8 @@ function page(c, d = null) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/motion.css">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
@@ -181,6 +189,11 @@ ${table}
 
 for (const c of companies) {
   writeFileSync(join(root, 'site/company', `${c.code}.html`), page(c, getDetail(c)));
+}
+
+if (previewCode) {
+  console.log('company page preview: ' + previewCode);
+  process.exit(0);
 }
 
 // sitemap: 基幹URL（テーマページを含む）を保持し、企業URLだけを再生成する。

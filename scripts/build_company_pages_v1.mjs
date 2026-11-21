@@ -121,24 +121,24 @@ function page(c, d = null) {
     ['収益性・資本効率', d?.margin],
   ].filter(([, v]) => hasText(v));
   if (targets.length) {
-    sections.push(`  <section>\n    <h2>数値目標</h2>\n${targets.map(([label, v]) => `    <h3>${esc(label)}</h3>\n    <p>${esc(v)}</p>`).join('\n')}\n  </section>`);
+    sections.push(`  <section class="company-detail-section company-targets">\n    <h2>数値目標</h2>\n${targets.map(([label, v]) => `    <div class="company-target-block"><h3>${esc(label)}</h3>\n    <p>${esc(v)}</p></div>`).join('\n')}\n  </section>`);
   }
   if (hasText(d?.capital)) {
-    sections.push(`  <section>\n    <h2>資本政策</h2>\n    <p>${esc(d.capital)}</p>\n  </section>`);
+    sections.push(`  <section class="company-detail-section company-policy">\n    <h2>資本政策</h2>\n    <p>${esc(d.capital)}</p>\n  </section>`);
   }
   if (hasText(d?.returnPolicy)) {
-    sections.push(`  <section>\n    <h2>株主還元</h2>\n    <p>${esc(d.returnPolicy)}</p>\n  </section>`);
+    sections.push(`  <section class="company-detail-section company-policy">\n    <h2>株主還元</h2>\n    <p>${esc(d.returnPolicy)}</p>\n  </section>`);
   }
   const highlights = Array.isArray(d?.highlights) ? d.highlights.filter((v) => hasText(v)) : [];
   if (highlights.length) {
-    sections.push(`  <section>\n    <h2>ハイライト</h2>\n    <ul>\n${highlights.map((v) => `      <li>${esc(v)}</li>`).join('\n')}\n    </ul>\n  </section>`);
+    sections.push(`  <section class="company-detail-section company-highlights">\n    <h2>ハイライト</h2>\n    <ul>\n${highlights.map((v) => `      <li>${esc(v)}</li>`).join('\n')}\n    </ul>\n  </section>`);
   }
   if (hasText(d?.sourceUrl) || hasText(d?.document)) {
     const linkText = hasText(d?.document) ? `公式資料（${d.document}）` : '公式資料';
     const sourceBody = hasText(d?.sourceUrl)
       ? `<a href="${esc(d.sourceUrl)}">${esc(linkText)}</a>`
       : esc(d.document);
-    sections.push(`  <section>\n    <h2>出典</h2>\n    <p>${sourceBody}</p>\n  </section>`);
+    sections.push(`  <section class="company-detail-section company-sources">\n    <h2>出典</h2>\n    <p>${sourceBody}</p>\n  </section>`);
   }
   const extraSections = sections.length ? `\n${sections.join('\n')}` : '';
 
@@ -158,18 +158,20 @@ function page(c, d = null) {
 <meta property="og:url" content="${url}">
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 </head>
-<body>
-<header>
-  <p><a href="/">Chu-kei Insight</a> — 上場企業の中期経営計画データベース</p>
-</header>
-<main>
-  <h1>${esc(c.name)}（${esc(c.code)}）の中期経営計画</h1>
-  <p>${esc(summary || '')}</p>
-${overviewHeading}  <table>
+<body class="company-page">
+<header class="site-header company-site-header"><div class="header-inner"><a class="brand" href="/">Chu-kei</a><span class="subtitle">日本上場企業 中期経営計画ポータル</span></div></header>
+<main id="main" class="company-page-main">
+  <nav class="company-breadcrumb" aria-label="パンくず"><a href="/">トップ</a><span aria-hidden="true"> / </span>企業詳細</nav>
+  <header class="company-profile-header">
+    <p class="company-page-eyebrow">COMPANY RESEARCH</p>
+    <h1>${esc(c.name)}（${esc(c.code)}）の中期経営計画</h1>
+    <p class="company-lead">${esc(summary || '')}</p>
+  </header>
+${overviewHeading}  <section class="company-overview" aria-label="企業・計画情報"><table class="company-facts-table">
     <tbody>
 ${table}
     </tbody>
-  </table>${extraSections}
+  </table></section>${extraSections}
   <p><a href="/?company=${encodeURIComponent(c.code)}">この企業の詳細・数値目標・比較をワークスペースで見る</a></p>
   <section>
     <h2>更新アラート（準備中）</h2>

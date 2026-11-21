@@ -129,6 +129,19 @@
     from { opacity: 0; transform: translate3d(-50%, 16px, 0); }
     to { opacity: 1; transform: translate3d(-50%, 0, 0); }
   }
+  /* Small screens: styles.css pins the tray to left/right 8px instead of the
+     left:50% centering, so the entrance must not translate on the X axis.
+     Without this, the retained final keyframe shifts the tray half its width
+     off-screen (found by the mobile E2E in PR #362). */
+  @media (max-width: 600px) {
+    .compare-tray:not([hidden]) {
+      animation-name: ck-tray-in-mobile;
+    }
+    @keyframes ck-tray-in-mobile {
+      from { opacity: 0; transform: translate3d(0, 16px, 0); }
+      to { opacity: 1; transform: translate3d(0, 0, 0); }
+    }
+  }
 
   /* 6. Native dialog */
   .dialog[open] {

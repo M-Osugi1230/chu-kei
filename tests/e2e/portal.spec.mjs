@@ -103,6 +103,9 @@ test.describe('Chu-kei portal', () => {
       `${qualityRebase.counts.actualConnectedCompanies}社 / ${qualityRebase.counts.actualConnectedRecords}件`,
     );
     await expect(page.locator('.company-card')).toHaveCount(50);
+    const initialColumns = await page.locator('.company-grid').evaluate(node => getComputedStyle(node).gridTemplateColumns.split(' ').length);
+    if (testInfo.project.name === 'tablet') expect(initialColumns).toBe(2);
+    if (testInfo.project.name === 'mobile') expect(initialColumns).toBe(1);
 
     await page.locator('#search').fill('三菱重工業');
     await expect(page.locator('.company-card')).toHaveCount(1);
@@ -158,6 +161,10 @@ test.describe('Chu-kei portal', () => {
     await compareButtons.nth(1).click();
     await expect(page.locator('#compare-count')).toHaveText('2');
     await expect(page.locator('#compare-names .compare-company-chip')).toHaveCount(2);
+    if (testInfo.project.name !== 'desktop') {
+      const trayBounds = await page.locator('#compare-tray').boundingBox();
+      expect(trayBounds.width).toBeLessThanOrEqual(testInfo.project.name === 'tablet' ? 736 : 374);
+    }
     await page.locator('#compare-names [data-remove-compare]').first().click();
     await expect(page.locator('#compare-count')).toHaveText('1');
     await expect(page.locator('#compare-names .compare-company-chip')).toHaveCount(1);
@@ -169,6 +176,10 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('#compare-dialog')).toContainText('進捗データ');
     await expect(page.locator('#compare-dialog thead th').first()).toHaveCSS('position', 'sticky');
     await expect(page.locator('#compare-dialog tbody th').first()).toHaveCSS('position', 'sticky');
+    if (testInfo.project.name !== 'desktop') {
+      const tableOverflow = await page.locator('#compare-dialog .compare-table-wrap').evaluate(node => node.scrollWidth > node.clientWidth);
+      expect(tableOverflow).toBe(true);
+    }
     await page.locator('#compare-dialog [data-close]').click();
 
     if (testInfo.project.name === 'mobile') {
@@ -184,6 +195,9 @@ test.describe('Chu-kei portal', () => {
     await expect(page.locator('#company-dialog')).toBeVisible();
     await expect(page.locator('#company-dialog h2')).not.toBeEmpty();
     await expect(page.locator('.progress-card')).toHaveCount(3);
+    const valueColumns = await page.locator('.progress-values').first().evaluate(node => getComputedStyle(node).gridTemplateColumns.split(' ').length);
+    if (testInfo.project.name === 'mobile') expect(valueColumns).toBe(1);
+    if (testInfo.project.name === 'tablet') expect(valueColumns).toBe(2);
     await expect(page.locator('.progress-section')).toContainText('3目標・実績3件');
     await expect(page.locator('.progress-section')).toContainText('実績接続済み');
     await expect(page.locator('.progress-section')).toContainText('FY2030');

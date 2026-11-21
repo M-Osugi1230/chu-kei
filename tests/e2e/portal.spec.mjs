@@ -119,6 +119,25 @@ test.describe('Chu-kei portal', () => {
     await page.getByRole('button', { name: '条件をリセット' }).click();
     await expect(page.locator('.company-card')).toHaveCount(50);
 
+    await page.locator('#search').fill('no-such-company-p1-check');
+    await expect(page.locator('.company-card')).toHaveCount(0);
+    await expect(page.locator('.zero-results')).toContainText('条件に一致する企業がありません。');
+    await expect(page.locator('.zero-results [data-clear-filter="query"]')).toBeVisible();
+    await page.locator('.zero-results [data-clear-filter="query"]').click();
+    await expect(page.locator('.company-card')).toHaveCount(50);
+
+    await page.locator('#sort').selectOption('market');
+    await expect(page.locator('.company-card').first()).toContainText('Prime');
+    await expect(page).toHaveURL(/sort=market/);
+    await page.locator('#sort').selectOption('relevance');
+
+    const firstCardOrder = await page.locator('.company-card').first().evaluate(card => [...card.children].map(node => node.className));
+    expect(firstCardOrder.indexOf('card-identity')).toBeLessThan(firstCardOrder.indexOf('card-status-row'));
+    expect(firstCardOrder.indexOf('card-status-row')).toBeLessThan(firstCardOrder.indexOf('summary'));
+    expect(firstCardOrder.indexOf('summary')).toBeLessThan(firstCardOrder.indexOf('tags'));
+    expect(firstCardOrder.indexOf('tags')).toBeLessThan(firstCardOrder.indexOf('research-status'));
+    expect(firstCardOrder.indexOf('research-status')).toBeLessThan(firstCardOrder.indexOf('card-actions'));
+
     const maCard = page.locator('[data-strategy="ma"]');
     const maCountText = await maCard.locator('span').textContent();
     const maCount = Number(maCountText.replace(/[^0-9]/g, ''));

@@ -242,3 +242,167 @@
   .compare-company-chip { margin-right: 3px; }
   .compare-tray .compare-company-chip-name { max-width: 105px; }
 }
+
+
+/* P2: responsive layout refinements. Existing desktop geometry remains unchanged. */
+@media (min-width: 601px) and (max-width: 800px) {
+  .strategy-grid,
+  .company-grid,
+  .detail-grid,
+  .progress-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .compare-tray {
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+    padding: 10px 12px;
+  }
+  .compare-tray > div:first-child { min-width: 0; flex: 1 1 auto; }
+  .compare-tray #compare-names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    max-height: 62px;
+    overflow-y: auto;
+  }
+  .compare-tray .compare-company-chip { margin: 2px 3px 2px 0; }
+  .compare-tray .tray-actions { flex: 0 0 auto; gap: 4px; }
+  .compare-tray .tray-actions > * { min-height: 40px; padding: 8px 10px; }
+  .compare-table-wrap { max-height: 64vh; }
+  .compare-table th.compare-row-heading { min-width: 132px; }
+  .compare-table thead th:not(.compare-row-heading) { min-width: 160px; }
+}
+
+/* Phone layout: one content column, stacked target/actual values, compact compare dock. */
+@media (max-width: 600px) {
+  .strategy-grid,
+  .company-grid,
+  .detail-grid,
+  .progress-grid,
+  .summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero { padding: 34px 14px 28px; gap: 22px; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.4rem); }
+  .section { padding: 26px 14px; }
+  .company-card { padding: 16px; }
+  .progress-card { padding: 13px; }
+  .progress-card-head { gap: 8px; }
+  .progress-card-head h4 { font-size: .95rem; }
+  .progress-card-head > strong { max-width: 42%; overflow-wrap: anywhere; }
+  .progress-values { grid-template-columns: minmax(0, 1fr); gap: 8px; margin: 10px 0; }
+  .progress-values div { padding-top: 7px; }
+  .progress-values dd { overflow-wrap: anywhere; }
+  .progress-evidence p { font-size: .72rem; line-height: 1.6; }
+  .company-target-block { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .company-target-block h3,
+  .company-target-block p { min-width: 0; overflow-wrap: anywhere; }
+  .company-facts-table th,
+  .company-facts-table td { overflow-wrap: anywhere; }
+  .compare-tray {
+    left: 8px;
+    right: 8px;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    width: auto;
+    max-width: none;
+    transform: none;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 7px;
+    padding: 8px 10px;
+    border-radius: 13px;
+  }
+  .compare-tray > div:first-child {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
+  .compare-tray > div:first-child > strong {
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: .8rem;
+    white-space: nowrap;
+  }
+  .compare-tray #compare-names {
+    display: flex;
+    min-width: 0;
+    max-width: 100%;
+    flex: 1 1 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 3px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1px 0 4px;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+  .compare-tray .compare-company-chip {
+    display: inline-flex;
+    flex: 0 0 auto;
+    margin: 1px 2px 1px 0;
+    padding: 3px 5px 3px 8px;
+    gap: 5px;
+  }
+  .compare-tray .compare-company-chip-name { max-width: 108px; font-size: .74rem; }
+  .compare-tray .compare-company-chip-code { font-size: .66rem; }
+  .compare-tray .compare-company-remove { width: 24px; height: 24px; }
+  .compare-tray .tray-actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 6px;
+  }
+  .compare-tray .tray-actions > * {
+    min-width: 0;
+    min-height: 38px;
+    justify-content: center;
+    padding: 7px 5px;
+    font-size: .72rem;
+    white-space: nowrap;
+  }
+  .compare-table-wrap {
+    max-width: 100%;
+    max-height: 60vh;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+  .compare-table { min-width: 690px; table-layout: fixed; }
+  .compare-table th,
+  .compare-table td { padding: 10px 9px; font-size: .8rem; overflow-wrap: anywhere; }
+  .compare-table th.compare-row-heading {
+    min-width: 112px;
+    width: 112px;
+    max-width: 112px;
+    white-space: normal;
+  }
+  .compare-table thead th:not(.compare-row-heading) {
+    min-width: 190px;
+    width: 190px;
+    max-width: 190px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .compare-table td { min-width: 190px; }
+  .dialog.wide { width: calc(100% - 16px); max-height: 92vh; }
+  .dialog-card { padding: 17px 14px; }
+  .dialog-head { gap: 10px; }
+  .dialog-head h2 { font-size: 1.45rem; }
+  .toast { bottom: 145px; max-width: calc(100% - 24px); }
+  footer { margin-bottom: 150px; }
+}
+
+@media (max-width: 360px) {
+  .compare-tray .compare-company-chip-name { max-width: 82px; }
+  .compare-tray .tray-actions > * { font-size: .67rem; }
+  .compare-table th.compare-row-heading { min-width: 104px; width: 104px; max-width: 104px; }
+  .compare-table thead th:not(.compare-row-heading),
+  .compare-table td { min-width: 176px; width: 176px; max-width: 176px; }
+}

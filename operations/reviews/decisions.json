@@ -256157,5 +256157,31 @@
     "decisionReason": "公式中計ページの現行計画は中期経営計画（2024年3月期～2028年3月期）であり、定量目標は2028年3月期の売上収益420億円超・コアEBITDAマージン18%前後・ROIC10%前後・海外売上収益比率6-7%前後。公表日はTDnet開示（2023-12-19）で確認した。バンドルの2030年計画・574億円・509億円等は会社公式の一次資料に存在しない。",
     "createdAt": "2026-11-26T11:30:00.000Z",
     "reviewedAt": "2026-11-26T11:35:00.000Z"
+  },
+  {
+    "id": "review-4369-20261126-forecast-mixing",
+    "companyCode": "4369",
+    "fromStage": "core",
+    "targetStage": "core",
+    "status": "changes_requested",
+    "checklist": {
+      "officialSource": true,
+      "publicationDate": true,
+      "pageEvidence": true,
+      "numbersUnitsYears": true,
+      "strategyClassification": true,
+      "comparisonDisplay": true,
+      "mobileDisplay": true
+    },
+    "author": "claude-primary-review",
+    "reviewer": "claude-primary-review",
+    "sourceUrl": "https://www.trichemical.com/ir/pdf/2026031302.pdf",
+    "sourcePages": [
+      "中期経営計画策定に関するお知らせ p.2"
+    ],
+    "note": "構造化拡張が決算短信を中期経営計画の開示と取り違え、単年度の会社予想を計画レコードとして登録したため、一次レビュー（m2b3）で検証済みの計画値へ修正する。",
+    "decisionReason": "正式な中期経営計画は2026-03-13策定の2027年1月期～2029年1月期の計画であり、最終年度目標は売上高317億円・営業利益86.5億円・経常利益88.3億円・当期純利益61.2億円。バンドルの270億円・60億円・63億円は決算短信の2027年1月期会社予想である。",
+    "createdAt": "2026-11-26T12:52:00.000Z",
+    "reviewedAt": "2026-11-26T12:58:00.000Z"
   }
 ]

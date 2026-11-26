@@ -156557,5 +156557,19 @@
     "reviewDecisionId": "review-1375-20261126-external-research-mixing",
     "detectedAt": "2026-11-26T11:15:00.000Z",
     "correctedAt": "2026-11-26T11:35:00.000Z"
+  },
+  {
+    "id": "correction-4369-20261126-forecast-mixing",
+    "companyCode": "4369",
+    "fieldPath": "category,sourceUrl,document,period,themes,summary,revenue,profit,margin,capital,returnPolicy,highlights,warnings,evidenceRefs,progressAssessment",
+    "before": "2026年1月期決算・2027年1月期業績予想（2027年1月期 売上高270億円・営業利益60億円・経常利益63億円）",
+    "after": "中期経営計画策定に関するお知らせ（2029年1月期 売上高317億円・営業利益86.5億円・経常利益88.3億円・親会社株主に帰属する当期純利益61.2億円）",
+    "reason": "構造化拡張が同じ2026-03-13開示の決算短信（2026031301.pdf）を中期経営計画の策定開示（2026031302.pdf）と取り違え、単年度の会社予想を計画レコードとして登録した誤りを、一次レビュー（m2b3）で検証済みの計画値に修正する。計画開示PDFの経営数値目標表とも一致を確認した。",
+    "sourceUrl": "https://www.trichemical.com/ir/pdf/2026031302.pdf",
+    "sourcePage": "中期経営計画策定に関するお知らせ p.2（経営数値目標）",
+    "status": "corrected",
+    "reviewDecisionId": "review-4369-20261126-forecast-mixing",
+    "detectedAt": "2026-11-26T12:45:00.000Z",
+    "correctedAt": "2026-11-26T12:58:00.000Z"
   }
 ]
